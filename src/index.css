@@ -1,13 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root,
+[data-bs-theme=light] {
+  /* Background color */
+  --bs-primary-color: #4676a0;
+  --bs-secondary-color: #eb6329;
+  --bs-white-color: #fff;
+  --bs-sky-500: #405189;
+  --bs-sky-300: #7dd3fc;
+  --bs-yellow-color: #d19b3d;
+  --bs-lightblack-color: #2e353d;
+
+  /* Text Color */
+  --bs-text-grey-color: #abb9e8;
+  --bs-text-white-color: #fff;
+  --text-color: #000;
+
+  /* font-size */
+  --bs-font-size-xs: 12px;
+  --bs-font-size-s: 0.813rem;
+  --bs-font-size-m: 0.9375rem;
+  --bs-font-size-l: 18px;
+  --bs-font-size-xl: 20px;
+
+  /* font-weight */
+  --bs-font-weight-thin: 100;
+  --bs-font-weight-light: 300;
+  --bs-font-weight-regular: 400;
+  --bs-font-weight-medium: 500;
+  --bs-font-weight-bold: 700;
+
+  /* line-height */
+  --bs-font-xs-light-lh: 12px 300 1.2; /* Extra Small, Light, Line Height 1.2 */
+  --bs-font-s-regular-lh: 14px 400 1.5; /* Small, Regular, Line Height 1.5 */
+  --bs-font-m-medium-lh: 16px 500 1.6; /* Medium, Medium, Line Height 1.6 */
+  --bs-font-l-bold-lh: 18px 700 1.8; /* Large, Bold, Line Height 1.8 */
+  --bs-font-xl-bold-lh: 20px 700 2; /* Extra Large, Bold, Line Height 2.0 */
+}
+
+/* Dark mode colors */
+.darkMode,
+[data-bs-theme=dark] 
+{
+  color-scheme: dark;
+  --bs-white-color: #000;
+  --bs-text-grey-color: #abb9e8;
+  --bs-text-white-color: #fff;
+  --bs-sky-500: #13161d;
+  --bs-sky-300: #7dd3fc;
+  --text-color: #fff;
+}
+
+.wrap {
+  background-color: var(--bs-white-color);
+  width: 100vw;
+  height: 100vh;
+}
+
+.font-size-m{
+  font-size: var(--bs-font-size-m);
+}
+.font-weight-400{
+  font-weight: var(--bs-font-weight-regular);
+}
+
+.main_menu i {
+    display: inline-block;
+    min-width: 1.75rem;
+    font-size: 18px;
+    line-height: inherit;
 }
