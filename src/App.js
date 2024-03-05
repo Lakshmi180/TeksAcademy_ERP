@@ -10,8 +10,8 @@ import { Login } from "./components/Auth/Login";
 function App() {
   return (
     <div className="App">
-      <Sidemenu />
-      {/* <Login /> */}
+      {/* <Sidemenu /> */}
+      <Login />
     </div>
   );
 }
