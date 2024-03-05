@@ -20,7 +20,7 @@ export const Login = () => {
                     <img
                       src="https://teksacademy.com/assets/img/logo/mainlogo.svg"
                       alt="Login page logo"
-                      height="40"
+                      height="60"
                     />
                   </a>
                 </div>
