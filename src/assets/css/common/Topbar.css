@@ -1,0 +1,87 @@
+.navbar-header {
+  padding: 0.5rem 1.5rem 0 0.75rem;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-main {
+  display: flex;
+  justify-content: end;
+}
+
+.icons {
+  font-size: 1.475rem;
+  color: #878a99;
+  cursor: pointer;
+  font-weight: var(--bs-font-weight-regular);
+}
+
+.navbar_username {
+  font-size: 0.9rem;
+  font-weight: var(--bs-font-weight-medium);
+}
+
+.navbar_userrole {
+  font-size: var(--bs-font-size-xs);
+  color: #495057;
+  letter-spacing: 1px;
+}
+
+.profile-item {
+  cursor: pointer;
+}
+
+.avatar {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+}
+
+.dropdown-card {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 150px;
+  border-radius: 4px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  margin-top: 10px;
+  padding: 0 10px 0 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.35s ease-in-out;
+}
+
+.dropdown-card .small-text {
+  font-size: var(--bs-font-size-xs);
+  color: #878a99;
+  font-weight: 500;
+}
+
+.menu-items a {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  gap: 5px;
+}
+.menu-items a .dropdown-icon {
+  font-size: 16px;
+  color: #878a99;
+}
+
+.dropdown-card.show {
+  opacity: 1;
+  visibility: visible;
+  animation: popover 0.5s linear forwards;
+}
+
+@keyframes popover {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+}
