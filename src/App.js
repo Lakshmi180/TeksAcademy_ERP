@@ -11,15 +11,13 @@ import PublicAuth from "./components/Layout/PublicAuth";
 
 import { Login } from "./components/Auth/Login";
 
-
 function App() {
   return (
     <div className="App">
-      <Sidemenu />
+      {/* <Sidemenu /> */}
+      <Login />
 
-   
-
-    {/* <Routes>
+      {/* <Routes>
       <Route element={<ReqireAuth/>}>
 
      
@@ -31,17 +29,8 @@ function App() {
 
     </Routes> */}
 
-
-
       {/* <Login /> */}
     </div>
-
-
-  
-
-
-
-
   );
 }
 
