@@ -8,6 +8,7 @@ import { CgWebsite } from "react-icons/cg";
 import { TbReportAnalytics } from "react-icons/tb";
 import { FcBriefcase } from "react-icons/fc";
 import "../../../assets/css/common/Sidemenu.css";
+import { Topbar } from "../topbar/Topbar";
 export const Sidemenu = () => {
     const [open, setOpen] = useState(true);
     const width = window.innerWidth;
@@ -322,7 +323,7 @@ export const Sidemenu = () => {
             </aside>
 
             <div className="main">
-                <nav className="navbar navbar-expand px-3 border-bottom">
+                {/* <nav className="navbar navbar-expand px-3 border-bottom">
                     <button
                         className="btn"
                         id="sidebar-toggle"
@@ -360,7 +361,8 @@ export const Sidemenu = () => {
                             </li>
                         </ul>
                     </div>
-                </nav>
+                </nav> */}
+                <Topbar open={open} setOpen={setOpen} />
             </div>
         </div>
     );
