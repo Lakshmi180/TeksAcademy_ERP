@@ -1,6 +1,5 @@
 
 import React, { useEffect, useState } from "react";
-
 import { MdDashboard, MdLeaderboard } from "react-icons/md";
 import { FaUsers, FaWarehouse } from "react-icons/fa6";
 import { PiStudentFill } from "react-icons/pi";
@@ -9,6 +8,7 @@ import { CgWebsite } from "react-icons/cg";
 import { TbReportAnalytics } from "react-icons/tb";
 import { FcBriefcase } from "react-icons/fc";
 import "../../../assets/css/common/Sidemenu.css";
+import { Topbar } from "../topbar/Topbar";
 export const Sidemenu = () => {
     const [open, setOpen] = useState(true);
     const width = window.innerWidth;
@@ -323,7 +323,7 @@ export const Sidemenu = () => {
             </aside>
 
             <div className="main">
-                <nav className="navbar navbar-expand px-3 border-bottom">
+                {/* <nav className="navbar navbar-expand px-3 border-bottom">
                     <button
                         className="btn"
                         id="sidebar-toggle"
@@ -361,7 +361,8 @@ export const Sidemenu = () => {
                             </li>
                         </ul>
                     </div>
-                </nav>
+                </nav> */}
+                <Topbar open={open} setOpen={setOpen} />
             </div>
         </div>
     );
