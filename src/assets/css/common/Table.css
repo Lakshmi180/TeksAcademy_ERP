@@ -1,0 +1,109 @@
+ table{
+    font-family: Poppins, sans-serif;
+
+ }
+
+.td-name{
+   
+    font-size: 14px ;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #495057;
+}
+.td-sub-name{
+    color: #878a99;
+    white-space: nowrap;
+  
+    font-size: 13px;
+}
+.tbl-card-header {
+   
+    font-size: 16px;
+}
+
+
+.product-img{
+    width: 40px;
+}
+.sort-by{
+    font-size: 12px;
+}
+.day-dropdown{
+    font-size: 12px;
+    color: #878a99;
+    font-family: Poppins, sans-serif;
+}
+.pagination-text{
+    font-size: 14px;
+    color: #878a99;
+  
+}
+.tbl-user-img{
+    width: 30px;
+}
+
+.general-report{
+    font-size: 12px;
+}
+.order-code{
+    font-size: 13px;
+}
+a{
+    color:#405189;
+}
+.page-link{
+    color: #405189;
+    background-color: white;
+   
+}
+.active>.page-link, .page-link.active {
+  color:white;
+  background-color: #405189;
+  border-color: #405189;
+}
+.text-muted{
+    color: #878a99 !important;
+}
+
+thead th {
+font-weight: 500;
+ font-size: 13px;
+
+ color: #878a99;
+}
+.text-danger{
+ color: #f06548 !important;
+ 
+}
+.link-primary{
+    color: rgb(64, 81, 137);
+}
+.votes{
+    font-size: 11px;
+}
+tr{
+    display: table-row;
+    vertical-align: inherit;
+}
+.text-success{
+    color:#0ab39c !important;
+}
+.tbl-amount{
+    font-size: 14px;
+}
+.badge {
+    line-height: .95 !important;
+    font-size:  10px;
+}
+.bg-success-subtle{
+    background-color: #daf4f0;
+}
+.btn-soft-info{
+    color:#299cdb !important;
+    background-color: #dff0fa !important;
+    border: transparent !important;
+}
+img{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
