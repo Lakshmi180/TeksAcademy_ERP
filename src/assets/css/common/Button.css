@@ -1,0 +1,25 @@
+.btn-primary {
+    background-color: #405189;
+    border: #405189;
+
+}
+
+.btn-outline-primary {
+    color: #405189;
+    border-color: #405189;
+}
+
+.btn-outline-primary:hover {
+    background-color: #405189;
+    border: #405189;
+
+}
+
+.btn-primary:hover {
+    background-color: #405189;
+}
+
+.btn-load .spinner-border {
+    height: 19px;
+    width: 19px;
+}
