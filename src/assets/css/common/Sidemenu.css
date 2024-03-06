@@ -57,6 +57,7 @@ a.sidebar-link {
 .sidebar-item a {
   font-size: 1rem;
   color: #abb9e8;
+  text-align: left;
 }
 
 .sidebar-link[data-bs-toggle="collapse"]::after {
