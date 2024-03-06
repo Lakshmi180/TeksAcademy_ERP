@@ -16,4 +16,4 @@ function PublicAuth() {
   )
 }
 
-export default PublicAuth
+export default PublicAuth;

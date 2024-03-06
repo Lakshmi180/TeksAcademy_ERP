@@ -13,7 +13,7 @@ import Table from "./components/common/design/Table";
 import { Login } from "./components/Auth/Login";
 
 import Forms from "./components/common/design/Forms";
-import Card from "./components/common/design/Card";
+
 import Button from "./components/common/design/Button";
 
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
@@ -45,7 +45,7 @@ function App() {
       {/* <Login /> */}
       <ForgotPassword />
 
-      {/* <Routes>
+       <Routes>
       <Route element={<ReqireAuth/>}>
         <Route path="/" element={<Dashboard/>} />
       </Route>
@@ -55,18 +55,12 @@ function App() {
         <Route path="/login" element={<Login/>}/>
       </Route>
 
-    </Routes>
+     </Routes>
 
 
 
      
-      </Route>
-      <Route element={<PublicAuth/>}>
-
-
-      </Route>
-
-    </Routes> */}
+    
 
       {/* <Login /> */}
     </div>
