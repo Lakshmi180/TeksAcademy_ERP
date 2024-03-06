@@ -20,8 +20,6 @@ import Button from "./components/common/design/Button";
 import { Route, Routes } from "react-router-dom";
 import ReqireAuth from "./components/Layout/ReqireAuth";
 import PublicAuth from "./components/Layout/PublicAuth";
-
-import { Login } from "./components/Auth/Login";
 import Dashboard from "./components/pages/dashboard/Dashboard";
 import PublicLayout from "./components/Layout/PublicLayout";
 
