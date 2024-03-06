@@ -12,63 +12,63 @@ import { AuthContext } from '../../context/AuthContext/AuthContextProvider';
 
 export const Login = () => {
 
-    const {LoginAdmin,AuthState} = useContext(AuthContext)
+    const { LoginAdmin, AuthState } = useContext(AuthContext)
 
     console.log(AuthState, "AuthState")
-    
+
 
     const [values, setValues] = useState({
         email: "",
         password: "",
-      });
+    });
 
-  
 
-      const handleInput = (event) => {
+
+    const handleInput = (event) => {
         setValues((prev) => ({ ...prev, [event.target.name]: event.target.value }));
-      };
+    };
 
-      const [errors, seterrors] = useState({
-        email:"",
-        password:"",
-      })
+    const [errors, seterrors] = useState({
+        email: "",
+        password: "",
+    })
 
-      useEffect(()=>{
+    useEffect(() => {
         const email_pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        if(values.email){
-            seterrors({...errors,email:""})
+        if (values.email) {
+            seterrors({ ...errors, email: "" })
         }
-        else if(email_pattern.test(values.email)){
-            seterrors({...errors,email:""})
+        else if (email_pattern.test(values.email)) {
+            seterrors({ ...errors, email: "" })
         }
-        if(values.password){
-            seterrors({...errors,password:""})
+        if (values.password) {
+            seterrors({ ...errors, password: "" })
         }
 
-      },[values.email,values.password])
+    }, [values.email, values.password])
 
-      const handleSubmit=(e)=>{
+    const handleSubmit = (e) => {
         e.preventDefault();
         console.log(values, "values")
         const email_pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-        if(!values.email){
-            seterrors((prev) => ({...prev, email:"Email is required"}))
+        if (!values.email) {
+            seterrors((prev) => ({ ...prev, email: "Email is required" }))
             return false
         }
-        else if(!email_pattern.test(values.email)){
-            seterrors((prev) => ({...prev, email:"Invalid email"}))
+        else if (!email_pattern.test(values.email)) {
+            seterrors((prev) => ({ ...prev, email: "Invalid email" }))
             return false
         }
-        if(!values.password){
-            seterrors((prev) => ({...prev, password:"Password is required"}))
+        if (!values.password) {
+            seterrors((prev) => ({ ...prev, password: "Password is required" }))
             return false
         }
 
-        if(!errors.email && !errors.password && values.email && values.password){
+        if (!errors.email && !errors.password && values.email && values.password) {
             LoginAdmin(values);
         }
 
-      }
+    }
 
     return (
         <div>
@@ -96,45 +96,39 @@ export const Login = () => {
                                     <div className="p-2 mt-4">
                                         <form action="#" className="text-start">
                                             <div className="mb-3">
-                                                <label for="email" className="form-label form-label font-size-sm font-weight-500">Email</label>
-
-                                                <input 
-                                                name="email" 
-                                                placeholder="Enter email"
-                                                type="email" 
-                                                className="form-control form-control"
-                                                aria-invalid="false"
-        
-                                                onChange={handleInput}
-                                                
+                                                <label for="email" className="form-label form-label font-size-s font-weight-500">Email</label>
+                                                <input
+                                                    name="email"
+                                                    placeholder="Enter email"
+                                                    type="email"
+                                                    className="form-control form-control font-size-s"
+                                                    aria-invalid="false"
+                                                    onChange={handleInput}
                                                 />
                                                 {
                                                     errors.email && (
                                                         <span className="text-danger text-start mail">{errors.email}</span>
                                                     )
                                                 }
-                                                
-                                                
                                             </div>
                                             <div className="mb-3">
                                                 <div className="float-end">
-                                                    <a className="text-mute font-size-sm" href="">Forgot password?</a>
+                                                    <a className="text-mute font-size-s" href="">Forgot password?</a>
                                                 </div>
-                                                <label for="password-input" className="form-label form-label font-size-sm font-weight-500">Password</label><div className="position-relative auth-pass-inputgroup mb-3">
+                                                <label for="password-input" className="form-label form-label font-size-s font-weight-500">Password</label><div className="position-relative auth-pass-inputgroup mb-3">
                                                     <input
-                                                    name="password"
-                                                    placeholder="Enter Password"
-                                                    type="password" 
-                                                    className="form-control pe-5 form-control"
-                                                    aria-invalid="false"
-                                                    onChange={handleInput}
-                                                     />
-                                                      {
-                                                    errors.password && (
-                                                        <span className="text-danger text-start mail">{errors.password}</span>
-                                                    )
-                                                }
-
+                                                        name="password"
+                                                        placeholder="Enter Password"
+                                                        type="password"
+                                                        className="form-control pe-5 form-control font-size-s"
+                                                        aria-invalid="false"
+                                                        onChange={handleInput}
+                                                    />
+                                                    {
+                                                        errors.password && (
+                                                            <span className="text-danger text-start mail">{errors.password}</span>
+                                                        )
+                                                    }
                                                     <button className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted" type="button" id="password-addon">
                                                         <i className="ri-eye-fill align-middle"></i>
                                                     </button>
@@ -142,25 +136,25 @@ export const Login = () => {
                                             </div>
                                             <div className="form-check">
                                                 <input
-                                                 id="auth-remember-check" 
-                                                 type="checkbox"
-                                                className="form-check-input form-check-input"
-                                                 value=""
-                                                    />
-                                                <label for="auth-remember-check" className="form-check-label form-label font-size-sm font-weight-500">Remember me</label>
+                                                    id="auth-remember-check"
+                                                    type="checkbox"
+                                                    className="form-check-input form-check-input"
+                                                    value=""
+                                                />
+                                                <label for="auth-remember-check" className="form-check-label form-label font-size-s font-weight-500">Remember me</label>
                                             </div>
                                             <div className="mt-4">
                                                 <button
-                                                 type="submit"
-                                                 className="btn btn-success w-100 btn btn-success font-size-smfont-weight-500"
-                                                 onClick={handleSubmit}
+                                                    type="submit"
+                                                    className="btn btn-success w-100 btn btn-success font-size-s font-weight-500"
+                                                    onClick={handleSubmit}
                                                 >
-                                                 Log In
+                                                    Log In
                                                 </button>
                                             </div>
                                             <div className="mt-4 text-center">
                                                 <div className="signin-other-title">
-                                                    <h5 className="fs-13 mb-4 title font-size-sm font-weight-500">Sign In with</h5>
+                                                    <h5 className="fs-13 mb-4 title font-size-s font-weight-500">Sign In with</h5>
                                                 </div>
                                                 <div>
                                                     <a className="btn btn-primary btn-icon me-1" href="/velzon/react/default/login">

@@ -2,6 +2,9 @@ import { React } from "react";
 import "../../../assets/css/common/Table.css";
 import { TiChartBar } from "react-icons/ti";
 import { BiSolidReport } from "react-icons/bi";
+import { MdOutlineFileDownload } from "react-icons/md";
+import { FaRegCheckCircle } from "react-icons/fa";
+import { RxCrossCircled } from "react-icons/rx";
 
 function Table() {
   return (
@@ -34,32 +37,32 @@ function Table() {
                     <ul className="dropdown-menu">
                       <li>
                         <a className="dropdown-item" href="#">
-                         Today
+                          Today
                         </a>
                       </li>
                       <li>
                         <a className="dropdown-item" href="#">
-                         Yesterday
+                          Yesterday
                         </a>
                       </li>
                       <li>
                         <a className="dropdown-item" href="#">
-                        Last 7 day
+                          Last 7 day
                         </a>
                       </li>
                       <li>
                         <a className="dropdown-item" href="#">
-                       Last 30 days
+                          Last 30 days
                         </a>
                       </li>
                       <li>
                         <a className="dropdown-item" href="#">
-                      This Month
+                          This Month
                         </a>
                       </li>
                       <li>
                         <a className="dropdown-item" href="#">
-                    Last Month
+                          Last Month
                         </a>
                       </li>
                     </ul>
@@ -430,17 +433,17 @@ function Table() {
                     <ul className="dropdown-menu">
                       <li>
                         <a className="dropdown-item" href="#">
-                        Download Report
+                          Download Report
                         </a>
                       </li>
                       <li>
                         <a className="dropdown-item" href="#">
-                         Export
+                          Export
                         </a>
                       </li>
                       <li>
                         <a className="dropdown-item" href="#">
-                         Import
+                          Import
                         </a>
                       </li>
                     </ul>
@@ -767,15 +770,17 @@ function Table() {
           </div>
         </div>
 
-        <div className="row m-3">
+        <div className="row mt-3">
           <div className="col-xl-8">
             <div className="card">
               <div className="card-header align-items-center  d-flex justify-content-between bg-transparent p-3">
                 <div>
-                <h4 className="card-title mb-0 flex-grow-1 tbl-card-header">Recent Orders</h4>
+                  <h4 className="card-title mb-0 flex-grow-1 tbl-card-header">
+                    Recent Orders
+                  </h4>
                 </div>
                 <div className="flex-shrink-0">
-                <button
+                  <button
                     type="button"
                     className=" btn text-primary bg-primary-subtle border-0 rounded general-report"
                   >
@@ -788,18 +793,51 @@ function Table() {
               <div className="card-body p-0">
                 <div className="table-responsive table-card">
                   <table className="table table-borderless table-centered align-middle table-nowrap mb-0">
-                  <thead className="  table-light ">
-                      <tr
-                        className="shadow-sm bg-body-tertiary rounded  border-bottom  "
-                      
-                      >
-                        <th scope="col" className="text-muted recent-order-sub-name text-start ">Order ID</th>
-                        <th scope="col" className="text-muted recent-order-sub-name text-start ">Customer</th>
-                        <th scope="col" className="text-muted recent-order-sub-name text-start  ">Product</th>
-                        <th scope="col" className="text-muted recent-order-sub-name text-start ">Amount</th>
-                        <th scope="col" className="text-muted recent-order-sub-name text-start "> Vendor</th>
-                        <th scope="col" className="text-muted recent-order-sub-name text-start ">Status</th>
-                        <th scope="col" className="text-muted recent-order-sub-name text-start ">Rating</th>
+                    <thead className="  table-light ">
+                      <tr className="shadow-sm bg-body-tertiary rounded  border-bottom  ">
+                        <th
+                          scope="col"
+                          className="text-muted recent-order-sub-name text-start "
+                        >
+                          Order ID
+                        </th>
+                        <th
+                          scope="col"
+                          className="text-muted recent-order-sub-name text-start "
+                        >
+                          Customer
+                        </th>
+                        <th
+                          scope="col"
+                          className="text-muted recent-order-sub-name text-start  "
+                        >
+                          Product
+                        </th>
+                        <th
+                          scope="col"
+                          className="text-muted recent-order-sub-name text-start "
+                        >
+                          Amount
+                        </th>
+                        <th
+                          scope="col"
+                          className="text-muted recent-order-sub-name text-start "
+                        >
+                          {" "}
+                          Vendor
+                        </th>
+                        <th
+                          scope="col"
+                          className="text-muted recent-order-sub-name text-start "
+                        >
+                          Status
+                        </th>
+                        <th
+                          scope="col"
+                          className="text-muted recent-order-sub-name text-start "
+                        >
+                          Rating
+                        </th>
                       </tr>
                     </thead>
                     <tbody>
@@ -821,14 +859,20 @@ function Table() {
                                 className="avatar-xs rounded-circle tbl-user-img"
                               />
                             </div>
-                            <div className="flex-grow-1 td-sub-name text-black text-start ">Alex Smith</div>
+                            <div className="flex-grow-1 td-sub-name text-black text-start ">
+                              Alex Smith
+                            </div>
                           </div>
                         </td>
                         <td className="td-sub-name text-start ">Clothes</td>
                         <td>
-                          <span className="text-success text-start tbl-amount">$109.00</span>
+                          <span className="text-success text-start tbl-amount">
+                            $109.00
+                          </span>
                         </td>
-                        <td className="td-sub-name text-start ">Zoetic Fashion</td>
+                        <td className="td-sub-name text-start ">
+                          Zoetic Fashion
+                        </td>
                         <td className="text-start">
                           <span className="badge bg-success-subtle fw-medium text-success text-start ">
                             Paid
@@ -838,7 +882,7 @@ function Table() {
                           <h5 className="fs-14 fw-medium mb-0 td-name text-black text-start ">
                             5.0
                             <span className="text-muted fs-11 ms-1 votes text-start ">
-                              (61 votes) 
+                              (61 votes)
                             </span>
                           </h5>
                         </td>
@@ -861,14 +905,22 @@ function Table() {
                                 className="avatar-xs rounded-circle tbl-user-img"
                               />
                             </div>
-                            <div className="flex-grow-1 td-sub-name text-black text-start ">Jansh Brown</div>
+                            <div className="flex-grow-1 td-sub-name text-black text-start ">
+                              Jansh Brown
+                            </div>
                           </div>
                         </td>
-                        <td className="td-sub-name text-start ">Kitchen Storage</td>
-                        <td>
-                          <span className="text-success text-start tbl-amount">$149.00</span>
+                        <td className="td-sub-name text-start ">
+                          Kitchen Storage
                         </td>
-                        <td className="td-sub-name text-start ">Micro Design</td>
+                        <td>
+                          <span className="text-success text-start tbl-amount">
+                            $149.00
+                          </span>
+                        </td>
+                        <td className="td-sub-name text-start ">
+                          Micro Design
+                        </td>
                         <td className="text-start">
                           <span className="badge bg-warning-subtle fw-medium text-warning text-start ">
                             Pending
@@ -901,14 +953,22 @@ function Table() {
                                 className="avatar-xs rounded-circle tbl-user-img"
                               />
                             </div>
-                            <div className="flex-grow-1 td-sub-name text-black text-start ">Ayaan Bowen</div>
+                            <div className="flex-grow-1 td-sub-name text-black text-start ">
+                              Ayaan Bowen
+                            </div>
                           </div>
                         </td>
-                        <td className="td-sub-name text-start " >Bike Accessories</td>
-                        <td>
-                          <span className="text-success text-start tbl-amount ">$215.00</span>
+                        <td className="td-sub-name text-start ">
+                          Bike Accessories
                         </td>
-                        <td className="td-sub-name text-start ">Nesta Technologies</td>
+                        <td>
+                          <span className="text-success text-start tbl-amount ">
+                            $215.00
+                          </span>
+                        </td>
+                        <td className="td-sub-name text-start ">
+                          Nesta Technologies
+                        </td>
                         <td className="text-start">
                           <span className="badge bg-success-subtle fw-medium text-success text-start ">
                             Paid
@@ -941,14 +1001,20 @@ function Table() {
                                 className="avatar-xs rounded-circle tbl-user-img"
                               />
                             </div>
-                            <div className="flex-grow-1 td-sub-name text-black  text-start ">Prezy Mark</div>
+                            <div className="flex-grow-1 td-sub-name text-black  text-start ">
+                              Prezy Mark
+                            </div>
                           </div>
                         </td>
                         <td className="td-sub-name text-start ">Furniture</td>
                         <td>
-                          <span className="text-success tbl-amount text-start ">$199.00</span>
+                          <span className="text-success tbl-amount text-start ">
+                            $199.00
+                          </span>
                         </td>
-                        <td className="td-sub-name text-start ">Syntyce Solutions</td>
+                        <td className="td-sub-name text-start ">
+                          Syntyce Solutions
+                        </td>
                         <td className="text-start">
                           <span className="badge bg-danger-subtle fw-medium text-danger text-start ">
                             Unpaid
@@ -981,14 +1047,22 @@ function Table() {
                                 className="avatar-xs rounded-circle tbl-user-img"
                               />
                             </div>
-                            <div className="flex-grow-1 td-sub-name text-black text-start ">Vihan Hudda</div>
+                            <div className="flex-grow-1 td-sub-name text-black text-start ">
+                              Vihan Hudda
+                            </div>
                           </div>
                         </td>
-                        <td className="td-sub-name text-start ">Bags and Wallets</td>
-                        <td>
-                          <span className="text-success tbl-amount text-start">$330.00</span>
+                        <td className="td-sub-name text-start ">
+                          Bags and Wallets
                         </td>
-                        <td className="td-sub-name  text-start">iTest Factory</td>
+                        <td>
+                          <span className="text-success tbl-amount text-start">
+                            $330.00
+                          </span>
+                        </td>
+                        <td className="td-sub-name  text-start">
+                          iTest Factory
+                        </td>
                         <td className="text-start">
                           <span className="badge bg-success-subtle fw-medium text-success  text-start">
                             Paid
@@ -1005,6 +1079,527 @@ function Table() {
                       </tr>
                     </tbody>
                   </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="row mt-3">
+          <div className="col-lg-12">
+            <div className="card card-hover">
+              <div className="card-header align-items-center d-flex">
+                <h4 className="card-title mb-0 flex-grow-1 tbl-card-header">
+                  Hoverable Rows
+                </h4>
+                <div className="flex-shrink-0">
+                  <div className="form-check form-switch form-switch-right form-switch-md">
+                    <label
+                      for="hover-rows-showcode"
+                      className="form-label text-muted toggle-showcode"
+                    >
+                      Show Code
+                    </label>
+                    <input
+                      className="form-check-input code-switcher"
+                      type="checkbox"
+                      id="hover-rows-showcode"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="card-body">
+                <p className="text-muted instruction-line">
+                  {" "}
+                  Use <code>table hover</code> class to enable hover state on
+                  table row with tbody
+                </p>
+                <div className="live-preview">
+                  <div className="row">
+                    <div className="col-xl-6 ">
+                      <div className="table-responsive">
+                        <table className="table table-hover align-midle table-nowrap mb-0">
+                          <thead>
+                            <tr>
+                              <th scope="col">
+                                <div className="form-check">
+                                  <input
+                                    className="form-check-input"
+                                    type="checkbox"
+                                    id="checkAll"
+                                    value="option1"
+                                  />
+                                </div>
+                              </th>
+                              <th scope="col" className="td-name">
+                                Order ID
+                              </th>
+                              <th scope="col" className="td-name">
+                                Shop
+                              </th>
+                              <th scope="col" className="td-name">
+                                Customer
+                              </th>
+                              <th scope="col" className="td-name">
+                                Price
+                              </th>
+                              <th scope="col" className="td-name">
+                                Action
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th scope="row">
+                                <div className="form-check">
+                                  <input
+                                    className="form-check-input"
+                                    type="checkbox"
+                                    id="checkAll"
+                                    value="option1"
+                                  />
+                                </div>
+                              </th>
+                              <td className="td-sub-name">#541254265</td>
+                              <td className="td-sub-name">Amazon</td>
+                              <td className="td-sub-name">Cleo Carson</td>
+                              <td className="td-sub-name">$4,521</td>
+                              <td>
+                                <a href="" className="download-icon ">
+                                  <MdOutlineFileDownload />
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">
+                                <div className="form-check">
+                                  <input
+                                    className="form-check-input"
+                                    type="checkbox"
+                                    id="checkAll"
+                                    value="option1"
+                                  />
+                                </div>
+                              </th>
+                              <td className="td-sub-name">#744145235</td>
+                              <td className="td-sub-name"> Shoppers</td>
+                              <td className="td-sub-name"> Juston Eichmann</td>
+                              <td className="td-sub-name">$7,546</td>
+                              <td>
+                                <a href="" className="download-icon ">
+                                  <MdOutlineFileDownload />
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">
+                                <div className="form-check">
+                                  <input
+                                    className="form-check-input"
+                                    type="checkbox"
+                                    id="checkAll"
+                                    value="option1"
+                                  />
+                                </div>
+                              </th>
+                              <td className="td-sub-name">#9855126598</td>
+                              <td className="td-sub-name"> Flipkart</td>
+                              <td className="td-sub-name"> Bettie Johson</td>
+                              <td className="td-sub-name"> $1,350</td>
+                              <td>
+                                <a href="" className="download-icon">
+                                  <MdOutlineFileDownload />
+                                </a>
+                              </td>
+                            </tr>
+                            <tr>
+                              <th scope="row">
+                                <div className="form-check">
+                                  <input
+                                    className="form-check-input"
+                                    type="checkbox"
+                                    id="checkAll"
+                                    value="option1"
+                                  />
+                                </div>
+                              </th>
+                              <td className="td-sub-name">#847512653</td>
+                              <td className="td-sub-name">Shoppers</td>
+                              <td className="td-sub-name">Maritza Blanda</td>
+                              <td className="td-sub-name">$4,521</td>
+                              <td>
+                                <a href="" className="download-icon ">
+                                  <MdOutlineFileDownload />
+                                </a>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div className="col-xl-6 ">
+                      <div className="table-responsive mt-2 ">
+                        <table className="table table-hover align-midle table-nowrap mb-0">
+                          <thead>
+                            <tr>
+                              <th scope="col" className="td-name">
+                                {" "}
+                                ID
+                              </th>
+                              <th scope="col" className="td-name">
+                                Invoice
+                              </th>
+                              <th scope="col" className="td-name">
+                                Amount
+                              </th>
+                              <th scope="col" className="td-name">
+                                Date
+                              </th>
+                              <th scope="col" className="td-name">
+                                Status
+                              </th>
+                              <th scope="col" className="td-name">
+                                Action
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td className="fw-medium td-sub-name">01</td>
+                              <td className="td-sub-name">Basic Plan </td>
+                              <td className="td-sub-name">$860</td>
+                              <td className="td-sub-name">Nov 22, 2021</td>
+                              <td className="td-sub-name">
+                                {" "}
+                                <span className="text-success f-12 me-1">
+                                  <FaRegCheckCircle />
+                                </span>{" "}
+                                Subscribed
+                              </td>
+                              <td className="td-sub-name">
+                                <div className="form-check form-switch">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    role="switch"
+                                    id="SwitchCheck1"
+                                  />
+                                  <label
+                                    className="form-check-label ms-2 fw-medium"
+                                    for="SwitchCheck1"
+                                  >
+                                    Yes/No
+                                  </label>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td className="fw-medium td-sub-name">02</td>
+                              <td className="td-sub-name">Premium Plan </td>
+                              <td className="td-sub-name">$1200</td>
+                              <td className="td-sub-name">Nov 22, 2021</td>
+                              <td className="td-sub-name">
+                                <span className="text-danger me-1">
+                                  <RxCrossCircled />
+                                </span>
+                                Unsubscribed
+                              </td>
+                              <td className="td-sub-name">
+                                <div className="form-check form-switch">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    role="switch"
+                                    id="SwitchCheck1"
+                                  />
+                                  <label
+                                    className="form-check-label ms-2 fw-medium"
+                                    for="SwitchCheck1"
+                                  >
+                                    Yes/No
+                                  </label>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td className="fw-medium td-sub-name">03</td>
+                              <td className="td-sub-name">Basic Plan </td>
+                              <td className="td-sub-name">$860</td>
+                              <td className="td-sub-name">Nov 22, 2021</td>
+                              <td className="td-sub-name">
+                                <span className="text-success f-12 me-1">
+                                  <FaRegCheckCircle />
+                                </span>{" "}
+                                Subscribed
+                              </td>
+                              <td className="td-sub-name">
+                                <div className="form-check form-switch">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    role="switch"
+                                    id="SwitchCheck1"
+                                  />
+                                  <label
+                                    className="form-check-label ms-2 fw-medium"
+                                    for="SwitchCheck1"
+                                  >
+                                    Yes/No
+                                  </label>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td className="fw-medium td-sub-name">04</td>
+                              <td className="td-sub-name">Corporate Plan </td>
+                              <td className="td-sub-name">$1599</td>
+                              <td className="td-sub-name">Nov 22, 2021</td>
+                              <td className="td-sub-name ">
+                                {" "}
+                                <span className="text-success f-12 me-1">
+                                  <FaRegCheckCircle />
+                                </span>{" "}
+                                Subscribed
+                              </td>
+                              <td className="td-sub-name">
+                                <div className="form-check form-switch">
+                                  <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    role="switch"
+                                    id="SwitchCheck1"
+                                  />
+                                  <label
+                                    className="form-check-label ms-2 fw-medium"
+                                    for="SwitchCheck1"
+                                  >
+                                    Yes/No
+                                  </label>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="row mt-3">
+            <div className="col-xl-12">
+              <div className="card">
+                <div className="card-header align-items-center d-flex">
+                  <h4 className="card-title mb-0 flex-grow-1 tbl-card-header">
+                    Card Tables
+                  </h4>
+                  <div className="flex-shrink-0">
+                    <div className="form-check form-switch form-switch-right form-switch-md">
+                      <label
+                        for="hover-rows-showcode"
+                        className="form-label text-muted toggle-showcode"
+                      >
+                        Show Code
+                      </label>
+                      <input
+                        className="form-check-input code-switcher"
+                        type="checkbox"
+                        id="hover-rows-showcode"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="card-body ">
+                  <p className="text-muted instruction-line">
+                    {" "}
+                    Use <code>table-cards</code> class to show class based table
+                    within a tbody
+                  </p>
+                </div>
+                <div className="live-preview">
+                  <div className="table table-responsive table-card ">
+                    <table className="table align-middle table-nowrap mb-0">
+                      <thead className="table-light">
+                        <tr>
+                          <th scope="col">
+                            <div className="form-check">
+                              <input
+                                className="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="cardtableCheck"
+                              />
+                              <label
+                                className="form-check-label"
+                                for="cardtableCheck"
+                              ></label>
+                            </div>
+                          </th>
+                          <th scope="col" className="td-name">
+                            ID
+                          </th>
+                          <th scope="col" className="td-name">
+                            Name
+                          </th>
+                          <th scope="col" className="td-name">
+                            Date
+                          </th>
+                          <th scope="col" className="td-name">
+                            Total
+                          </th>
+                          <th scope="col" className="td-name">
+                            Status
+                          </th>
+                          <th scope="col" className="td-name">
+                            Action
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input
+                                className="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="cardtableCheck01"
+                              />
+                              <label
+                                className="form-check-label"
+                                for="cardtableCheck01"
+                              ></label>
+                            </div>
+                          </td>
+                          <td>
+                            <a href="#" className="fw-medium order-code">
+                              #VL2110
+                            </a>
+                          </td>
+                          <td className="td-sub-name">William Elmore</td>
+                          <td className="td-sub-name">07 Oct, 2021</td>
+                          <td className="td-sub-name">$24.05</td>
+                          <td>
+                            <span className="badge bg-success">Paid</span>
+                          </td>
+                          <td>
+                            <button
+                              type="button"
+                              className="btn btn-sm btn-light detail-btn "
+                            >
+                              Details
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input
+                                className="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="cardtableCheck01"
+                              />
+                              <label
+                                className="form-check-label"
+                                for="cardtableCheck01"
+                              ></label>
+                            </div>
+                          </td>
+                          <td>
+                            <a href="#" className="fw-medium order-code">
+                              #VL2109
+                            </a>
+                          </td>
+                          <td className="td-sub-name"> Georgie Winters</td>
+                          <td className="td-sub-name">07 Oct, 2021</td>
+                          <td className="td-sub-name">$26.15</td>
+                          <td>
+                            <span className="badge bg-success">Paid</span>
+                          </td>
+                          <td>
+                            <button
+                              type="button"
+                              className="btn btn-sm btn-light detail-btn"
+                            >
+                              Details
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input
+                                className="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="cardtableCheck01"
+                              />
+                              <label
+                                className="form-check-label"
+                                for="cardtableCheck01"
+                              ></label>
+                            </div>
+                          </td>
+                          <td>
+                            <a href="#" className="fw-medium order-code">
+                              #VL2108
+                            </a>
+                          </td>
+                          <td className="td-sub-name"> Whitney Meier</td>
+                          <td className="td-sub-name">06 Oct, 2021</td>
+                          <td className="td-sub-name">$21.25</td>
+                          <td>
+                            <span className="badge bg-danger">Refund</span>
+                          </td>
+                          <td>
+                            <button
+                              type="button"
+                              className="btn btn-sm btn-light detail-btn"
+                            >
+                              Details
+                            </button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-check">
+                              <input
+                                className="form-check-input"
+                                type="checkbox"
+                                value=""
+                                id="cardtableCheck01"
+                              />
+                              <label
+                                className="form-check-label"
+                                for="cardtableCheck01"
+                              ></label>
+                            </div>
+                          </td>
+                          <td>
+                            <a href="#" className="fw-medium order-code">
+                              #VL2107
+                            </a>
+                          </td>
+                          <td className="td-sub-name">Justin Maier</td>
+                          <td className="td-sub-name">05 Oct, 2021</td>
+                          <td className="td-sub-name">$25.03</td>
+                          <td>
+                            <span className="badge bg-success">Paid</span>
+                          </td>
+                          <td>
+                            <button
+                              type="button"
+                              className="btn btn-sm btn-light detail-btn"
+                            >
+                              Details
+                            </button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>
