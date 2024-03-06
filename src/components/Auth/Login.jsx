@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { GrTwitter } from "react-icons/gr";
@@ -6,7 +6,69 @@ import { GrTwitter } from "react-icons/gr";
 
 
 import '../../assets/css/common/Login.css';
+import Loginvalidation from './LoginValidation';
+import { AuthContext } from '../../context/AuthContext/AuthContextProvider';
+
+
 export const Login = () => {
+
+    const {LoginAdmin,AuthState} = useContext(AuthContext)
+
+    console.log(AuthState, "AuthState")
+    
+
+    const [values, setValues] = useState({
+        email: "",
+        password: "",
+      });
+
+  
+
+      const handleInput = (event) => {
+        setValues((prev) => ({ ...prev, [event.target.name]: event.target.value }));
+      };
+
+      const [errors, seterrors] = useState({
+        email:"",
+        password:"",
+      })
+
+      useEffect(()=>{
+        const email_pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if(values.email){
+            seterrors({...errors,email:""})
+        }
+        else if(email_pattern.test(values.email)){
+            seterrors({...errors,email:""})
+        }
+        if(values.password){
+            seterrors({...errors,password:""})
+        }
+
+      },[values.email,values.password])
+
+      const handleSubmit=(e)=>{
+        e.preventDefault();
+        console.log(values, "values")
+        const email_pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if(!values.email){
+            seterrors((prev) => ({...prev, email:"*Email is required"}))
+            return false
+        }
+        else if(!email_pattern.test(values.email)){
+            seterrors((prev) => ({...prev, email:"*Enter the Invalid email"}))
+            return false
+        }
+        if(!values.password){
+            seterrors((prev) => ({...prev, password:"*Password is required"}))
+            return false
+        }
+
+        if(!errors.email && !errors.password && values.email && values.password){
+            LoginAdmin(values);
+        }
+      }
+
     return (
         <div>
             <div className='login_bg_image'>
@@ -34,25 +96,66 @@ export const Login = () => {
                                         <form action="#" className="text-start">
                                             <div className="mb-3">
                                                 <label for="email" className="form-label form-label font-size-sm font-weight-500">Email</label>
-                                                <input name="email" placeholder="Enter email" type="email" className="form-control form-control" aria-invalid="false" value="admin@themesbrand.com" />
+
+                                                <input 
+                                                name="email" 
+                                                placeholder="Enter email"
+                                                type="email" 
+                                                className="form-control form-control"
+                                                aria-invalid="false"
+        
+                                                onChange={handleInput}
+                                                
+                                                />
+                                                {
+                                                    errors.email && (
+                                                        <span className="text-danger text-start mail">{errors.email}</span>
+                                                    )
+                                                }
+                                                
+                                                
                                             </div>
                                             <div className="mb-3">
                                                 <div className="float-end">
                                                     <a className="text-mute font-size-sm" href="">Forgot password?</a>
                                                 </div>
                                                 <label for="password-input" className="form-label form-label font-size-sm font-weight-500">Password</label><div className="position-relative auth-pass-inputgroup mb-3">
-                                                    <input name="password" placeholder="Enter Password" type="password" className="form-control pe-5 form-control" aria-invalid="false" value="123456" />
+                                                    <input
+                                                    name="password"
+                                                    placeholder="Enter Password"
+                                                    type="password" 
+                                                    className="form-control pe-5 form-control"
+                                                    aria-invalid="false"
+                                                    onChange={handleInput}
+                                                     />
+                                                      {
+                                                    errors.password && (
+                                                        <span className="text-danger text-start mail">{errors.password}</span>
+                                                    )
+                                                }
+
                                                     <button className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted" type="button" id="password-addon">
                                                         <i className="ri-eye-fill align-middle"></i>
                                                     </button>
                                                 </div>
                                             </div>
                                             <div className="form-check">
-                                                <input id="auth-remember-check" type="checkbox" className="form-check-input form-check-input" value="" />
+                                                <input
+                                                 id="auth-remember-check" 
+                                                 type="checkbox"
+                                                className="form-check-input form-check-input"
+                                                 value=""
+                                                    />
                                                 <label for="auth-remember-check" className="form-check-label form-label font-size-sm font-weight-500">Remember me</label>
                                             </div>
                                             <div className="mt-4">
-                                                <button type="submit" className="btn btn-success w-100 btn btn-success font-size-sm font-weight-500">Sign In</button>
+                                                <button
+                                                 type="submit"
+                                                 className="btn btn-success w-100 btn btn-success font-size-smfont-weight-500"
+                                                 onClick={handleSubmit}
+                                                >
+                                                 Log In
+                                                </button>
                                             </div>
                                             <div className="mt-4 text-center">
                                                 <div className="signin-other-title">

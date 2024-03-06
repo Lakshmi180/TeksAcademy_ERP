@@ -11,28 +11,32 @@ import ReqireAuth from "./components/Layout/ReqireAuth";
 import PublicAuth from "./components/Layout/PublicAuth";
 
 import { Login } from "./components/Auth/Login";
+import Dashboard from "./components/pages/dashboard/Dashboard";
+import PublicLayout from "./components/Layout/PublicLayout";
 
 
 function App() {
   return (
     <div className="App">
-      <Sidemenu />
+   
    
 
-    {/* <Routes>
+    <Routes>
+
       <Route element={<ReqireAuth/>}>
+        <Route path="/" element={<Dashboard/>} />
+      </Route>
+
+
+      <Route element={<PublicLayout/>}>
+        <Route path="/login" element={<Login/>}/>
+      </Route>
+
+    </Routes>
+
+
 
      
-      </Route>
-      <Route element={<PublicAuth/>}>
-
-
-      </Route>
-
-    </Routes> */}
-
-
-      {/* <Login /> */}
     </div>
 
 

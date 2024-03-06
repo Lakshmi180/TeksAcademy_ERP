@@ -7,29 +7,21 @@ import { ThemeProvider } from "./context/ThemeContext/ThemeContext";
 import { ToastContainer } from "react-toastify";
 import AuthContextProvider from "./context/AuthContext/AuthContextProvider";
 import { BrowserRouter } from "react-router-dom";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <BrowserRouter> */}
+    <BrowserRouter>
     <AuthContextProvider>
     <ThemeProvider>
-      <ToastContainer
-        position="top-right"
-        autoClose={1000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
+      <ToastContainer/>
       <App />
     </ThemeProvider>
     </AuthContextProvider>
-    {/* </BrowserRouter> */}
+    </BrowserRouter>
   </React.StrictMode>
 );
 
