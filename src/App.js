@@ -6,7 +6,7 @@ import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.mi
 // components
 import { Sidemenu } from "./components/common/sidemenu/Sidemenu";
 import Table from "./components/common/design/Table";
-import Card from "./components/common/design/Card";
+// import Card from "./components/common/design/Card";
 import Forms from "./components/common/design/Forms";
 import Card from "./components/common/design/Card";
 import Button from "./components/common/design/Button";
@@ -20,14 +20,14 @@ import { Login } from "./components/Auth/Login";
 function App() {
   return (
     <div className="App">
-      <Sidemenu />
-     <Table />
-     <Card />
-      <Forms />
-    <Card/>
-    <Button/>
       {/* <Sidemenu /> */}
-      <Login />
+     <Table />
+     {/* <Card /> */}
+      {/* <Forms /> */}
+    {/* <Card/> */}
+    {/* <Button/> */}
+      {/* <Sidemenu /> */}
+      {/* <Login /> */}
 
       {/* <Routes>
       <Route element={<ReqireAuth/>}>
