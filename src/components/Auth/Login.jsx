@@ -52,21 +52,22 @@ export const Login = () => {
         console.log(values, "values")
         const email_pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if(!values.email){
-            seterrors((prev) => ({...prev, email:"*Email is required"}))
+            seterrors((prev) => ({...prev, email:"Email is required"}))
             return false
         }
         else if(!email_pattern.test(values.email)){
-            seterrors((prev) => ({...prev, email:"*Enter the Invalid email"}))
+            seterrors((prev) => ({...prev, email:"Invalid email"}))
             return false
         }
         if(!values.password){
-            seterrors((prev) => ({...prev, password:"*Password is required"}))
+            seterrors((prev) => ({...prev, password:"Password is required"}))
             return false
         }
 
         if(!errors.email && !errors.password && values.email && values.password){
             LoginAdmin(values);
         }
+
       }
 
     return (
