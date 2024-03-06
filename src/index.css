@@ -67,7 +67,7 @@ body {
   height: 100vh;
 }
 
-.font-size-sm {
+.font-size-s {
   font-size: var(--erp-font-size-s);
 }
 .font-size-m {
@@ -108,4 +108,30 @@ a {
 
 .text-mute {
   color: var(--erp--text-mute) !important;
+}
+
+.form-control {
+  -webkit-appearance: none;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid #ced4da !important;
+  border-radius: 0.25rem !important;
+  color: #212529;
+  display: block;
+  font-size: var(--erp-font-size-s) !important;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.5rem 0.9rem !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+  width: 100%;
+}
+
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: #86b7fe;
+  outline: 0;
+  font-size: var(--erp-font-size-s) !important;
+  box-shadow: none !important;
 }
