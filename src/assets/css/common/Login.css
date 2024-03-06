@@ -64,4 +64,15 @@
 .card {
   box-shadow: 0 1px 2px #38414a26;
   /* margin-bottom: 1.5rem; */
+  border-radius: 4px !important;
+}
+
+.error-text {
+  font-size: 13px;
+}
+
+.reset-password-message {
+  font-size: 13px;
+  color: #d29c40;
+  font-weight: 500;
 }

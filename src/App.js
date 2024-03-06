@@ -10,7 +10,6 @@ import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.mi
 import { Sidemenu } from "./components/common/sidemenu/Sidemenu";
 import Table from "./components/common/design/Table";
 // import Card from "./components/common/design/Card";
-import { BrowserRouter as Router } from "react-router-dom";
 import { Login } from "./components/Auth/Login";
 
 import Forms from "./components/common/design/Forms";
@@ -22,6 +21,7 @@ import ReqireAuth from "./components/Layout/ReqireAuth";
 import PublicAuth from "./components/Layout/PublicAuth";
 import Dashboard from "./components/pages/dashboard/Dashboard";
 import PublicLayout from "./components/Layout/PublicLayout";
+import { ForgotPassword } from "./components/Auth/ForgotPassword";
 
 function App() {
   const krishna = () => {
@@ -36,13 +36,14 @@ function App() {
   return (
     <div className="App">
       {/* <Sidemenu /> */}
-     <Table />
-     {/* <Card /> */}
+      {/* <Table /> */}
+      {/* <Card /> */}
       {/* <Forms /> */}
-    {/* <Card/> */}
-    {/* <Button/> */}
+      {/* <Card/> */}
+      {/* <Button/> */}
       {/* <Sidemenu /> */}
       {/* <Login /> */}
+      <ForgotPassword />
 
       {/* <Routes>
       <Route element={<ReqireAuth/>}>
