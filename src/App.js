@@ -9,7 +9,7 @@ import { Sidemenu } from "./components/common/sidemenu/Sidemenu";
 import Table from "./components/common/design/Table";
 import Card from "./components/common/design/Card";
 import Forms from "./components/common/design/Forms";
-import Card from "./components/common/design/Card";
+
 import Button from "./components/common/design/Button";
 
 import { Route, Routes } from "react-router-dom";
@@ -23,16 +23,16 @@ import PublicLayout from "./components/Layout/PublicLayout";
 function App() {
   return (
     <div className="App">
-      <Sidemenu />
+      {/* <Sidemenu />
      <Table />
      <Card />
       <Forms />
     <Card/>
     <Button/>
-      {/* <Sidemenu /> */}
-      <Login />
+      <Sidemenu />
+      <Login /> */}
 
-      {/* <Routes>
+       <Routes>
       <Route element={<ReqireAuth/>}>
         <Route path="/" element={<Dashboard/>} />
       </Route>
@@ -42,18 +42,12 @@ function App() {
         <Route path="/login" element={<Login/>}/>
       </Route>
 
-    </Routes>
+     </Routes>
 
 
 
      
-      </Route>
-      <Route element={<PublicAuth/>}>
-
-
-      </Route>
-
-    </Routes> */}
+    
 
       {/* <Login /> */}
     </div>

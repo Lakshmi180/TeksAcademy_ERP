@@ -23,9 +23,11 @@ const RoleContextProvider=({children})=>{
     const createRole=async(rolestate)=>{
         try{
             const {data, status} = await axios.post();
-            if(status=="200"){
-                getAllRoles()
-                navigate("/roletable")
+            if(status===200){
+                DispatchRoleState({type:"CREATE_ROLE", payload:data})
+                getAllRoles();
+
+                // navigate("/roletable")
             } 
             
         }catch(error){
