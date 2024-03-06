@@ -8,67 +8,81 @@ import { toast } from "react-toastify";
 export const AuthContext = createContext();
 const AuthContextProvider=({children})=>{
 
-    // const navigate=useNavigate();
+    const navigate=useNavigate();
 
 
     const localStrogeData =JSON.parse(localStorage.getItem("data"))
 
     const  InitialState={
-        user: localStrogeData.user || {},
-        token: localStrogeData.token || "",
-        role: localStrogeData.role || {},
+        user: localStrogeData?.user || {},
+        token: localStrogeData?.token || "",
+        role: localStrogeData?.role || {},
     }
 
     const [AuthState, DispatchAuth] = useReducer(AuthReducer,InitialState)
+    console.log(AuthState, "AthuState99")
     
-    // const LoginAdmin =async(logindata)=>{
-    //     const {data, status} = await axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata);  // here add the add the api and toast
-    //     if(status === 200){
-    //         localStorage.setItem(
-    //             "data",
-    //             JSON.stringify({
-    //                 user: data?.user,
-    //                 token: data?.token,
-    //                 role: data?.role,
-    //             })
-    //         )
-    //         DispatchAuth({type:"SET_USER", payload:data})
-    //         DispatchAuth({type:"SET_TOKEN", payload:data?.token})
-    //         DispatchAuth({type:"SET_ROLE", payload:data?.role})
-    //     }
-    // }
-
     const LoginAdmin =async(logindata)=>{
-        try{
-            const {data, status} = await toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata),
-            {
-                pending: 'Logging In...',
-                success: `Login Successful`,
-                error: 'Wrong Credentials 🤯',
-              }
+        console.log(logindata , "logindatahere")
+        // const {data, Status} = await axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata); 
+
+        const {data, Status}= await toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata),{
+            loading: "Loading...",
+            success: "Login Successfully",
+            error: "Something went wrong"
+        })
+       
+        
+        if(data.Status === "Success"){
+            console.log(data, "gggfgfchg")
+            localStorage.setItem(
+                "data",
+                JSON.stringify({
+                    user: data?.adminData,
+                    token: data?.token,
+                    role: data?.adminData?.profile,
+                })
             )
-
-            if(status == 200){
-                localStorage.setItem(
-                    "data",
-                    JSON.stringify({
-                        user: data?.adminData,
-                        token: data?.token,
-                        role: data?.adminData.profile,
-                    })
-                )
-                DispatchAuth({type:"SET_USER", payload:data?.adminData})
-                DispatchAuth({type:"SET_TOKEN", payload:data?.token})
-                DispatchAuth({type:"SET_ROLE", payload:data?.adminData?.profile})
-                // navigate("/");
-                // window.location.reload();
-            }
+            DispatchAuth({type:"SET_USER", payload:data?.adminData})
+            DispatchAuth({type:"SET_TOKEN", payload:data?.token})
+            DispatchAuth({type:"SET_ROLE", payload:data?.role})
+            navigate("/");
+          
         }
-        catch (error){
-            console.log(error);
-        }
-
     }
+
+    // const LoginAdmin =async(logindata)=>{
+    //     try{
+    //         const {data, status} = await toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata),
+    //         {
+    //             pending: 'Logging In...',
+    //             success: `Login Successful`,
+    //             error: 'Wrong Credentials 🤯',
+    //           }
+    //         )
+
+    //         if(status === "Success"){
+    //             localStorage.setItem(
+    //                 "data",
+    //                 JSON.stringify({
+    //                     user: data?.adminData,
+    //                     token: data?.token,
+    //                     role: data?.adminData.profile,
+    //                 })
+    //             )
+    //             DispatchAuth({type:"SET_USER", payload:data?.adminData})
+    //             DispatchAuth({type:"SET_TOKEN", payload:data?.token})
+    //             DispatchAuth({type:"SET_ROLE", payload:data?.adminData?.profile})
+
+    //              navigate("/");
+    //             // window.location.reload();
+    //         }
+    //     }
+    //     catch (error){
+    //         console.log(error);
+    //     }
+
+    // }
 
     
     const changePassword =async({email})=>{
@@ -105,10 +119,13 @@ const AuthContextProvider=({children})=>{
     }
 
     const userLogout=async()=>{
-        localStorage.removeItem("data")
+        console.log("hello")
+       
+        // localStorage.removeItem("data")
         DispatchAuth({type:"SET_USER", payload:{}})
         DispatchAuth({type:"SET_TOKEN", payload:""})
-        // return redirect("/")
+        return redirect("/")
+      
     }
 
     useEffect(()=>{

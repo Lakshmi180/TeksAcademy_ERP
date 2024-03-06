@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { MdFullscreen } from "react-icons/md";
 import { IoMdNotificationsOutline, IoIosSettings } from "react-icons/io";
 
@@ -10,8 +10,12 @@ import { FaLock } from "react-icons/fa";
 
 import "../../../assets/css/common/Topbar.css";
 import { Button } from "../design/Button";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../../context/AuthContext/AuthContextProvider";
 
 export const Topbar = ({ setOpen, open }) => {
+const {userLogout}= useContext(AuthContext)
+
     const [isDropdownActive, setIsDropdownActive] = useState(false);
 
     const dropdownHandler = () => {
@@ -89,8 +93,14 @@ export const Topbar = ({ setOpen, open }) => {
                                                 Lockscreen
                                             </a>
                                             <a href="#" className="dropdown-item mb-3 align-middle">
-                                                <HiOutlineLogout className="dropdown-icon" />
-                                                Logout
+                                                <HiOutlineLogout className="dropdown-icon"
+                                                />
+                                            <span  onClick={userLogout}>
+                                            Logout
+                                            </span>
+                                           
+                                            
+                                              
                                             </a>
                                         </div>
                                     </div>

@@ -9,7 +9,6 @@ const RoleContextProvider=({children})=>{
 
     const [RoleState, DispatchRoleState] = useReducer(RoleReducer, {roles:[]})
 
-
     const getAllRoles=async()=>{
         try{
             const {data, status} = await axios.get();
