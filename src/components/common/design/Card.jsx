@@ -6,9 +6,12 @@ import { FaBagShopping } from "react-icons/fa6";
 import { GoArrowDownRight } from "react-icons/go";
 import { FaRegUserCircle } from "react-icons/fa";
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
+import { IoIosArrowForward } from "react-icons/io"
+import "../../../assets/css/common/Card.css"
 
 function Card() {
   return (
+    <div>
       <div className='container'>
     <div className="row d-flex ">
     <div className="col-xl-3 col-md-6  mb-4 ">
@@ -118,14 +121,6 @@ function Card() {
     </div>
   </div>
   </div>
-  )
-}
-
-export default Card
-import { IoIosArrowForward } from "react-icons/io"
-import "../../../assets/css/common/Card.css"
-export default function () {
-    return (
         <div>
             <div class="container">
                 <div class="row text-start fsize">
@@ -372,6 +367,7 @@ export default function () {
                 </div>
 
             </div>
+        </div>
         </div>
     )
 }
