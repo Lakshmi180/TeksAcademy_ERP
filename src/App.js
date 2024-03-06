@@ -9,10 +9,8 @@ import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.mi
 // components
 import { Sidemenu } from "./components/common/sidemenu/Sidemenu";
 import Table from "./components/common/design/Table";
+// import Card from "./components/common/design/Card";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Route, Routes } from "react-router-dom";
-import ReqireAuth from "./components/Layout/ReqireAuth";
-import PublicAuth from "./components/Layout/PublicAuth";
 import { Login } from "./components/Auth/Login";
 
 import Forms from "./components/common/design/Forms";
@@ -30,14 +28,14 @@ import PublicLayout from "./components/Layout/PublicLayout";
 function App() {
   return (
     <div className="App">
-      <Sidemenu />
-     <Table />
-     <Card />
-      <Forms />
-    <Card/>
-    <Button/>
       {/* <Sidemenu /> */}
-      <Login />
+     <Table />
+     {/* <Card /> */}
+      {/* <Forms /> */}
+    {/* <Card/> */}
+    {/* <Button/> */}
+      {/* <Sidemenu /> */}
+      {/* <Login /> */}
 
       {/* <Routes>
       <Route element={<ReqireAuth/>}>
