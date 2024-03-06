@@ -6,3 +6,13 @@ body{
     font-size: 0.8125rem;
     font-weight: 500;
 }
+
+.dropdown-menu {
+    max-height: 200px; 
+    overflow-y: auto;
+    scrollbar-width: thin; 
+}
+
+  .select-scrl{
+    scrollbar-width: thin; 
+  }

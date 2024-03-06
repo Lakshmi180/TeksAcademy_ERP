@@ -1,6 +1,33 @@
 import React from 'react'
+import { useState } from 'react';
 import "../../../assets/css/common/Forms.css"
 export default function Form() {
+    const [searchTerm, setSearchTerm] = useState('');
+    const [selectedCity, setSelectedCity] = useState('');
+    const cities = [
+        "Montreal", "Toronto", "Vancouver",
+        "Lyon", "Marseille", "Paris",
+        "Barcelona", "Madrid", "Malaga",
+        "Liverpool", "London", "Manchester",
+        "Michigan", "New York", "Washington"
+    ];
+   
+   
+
+    const handleInputChange = (event) => {
+        setSearchTerm(event.target.value);
+    };
+
+    const handleCitySelect = (city) => {
+        setSelectedCity(city);
+        setSearchTerm(city);
+    };
+
+    const filteredCities = cities.filter(city =>
+        city.toLowerCase().includes(searchTerm.toLowerCase()) 
+    );
+
+
     return (
         <div>
             <div class="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg-white">
@@ -646,6 +673,80 @@ export default function Form() {
 
                 </div>
             </div>
+            <div class="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg-white">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-body">
+                            <div class="col-lg-6">
+                                <select class="form-select mb-3" aria-label="Default select example">
+                                    <option selected="">Select your Status </option>
+                                    <option value="1">Declined Payment</option>
+                                    <option value="2">Delivery Error</option>
+                                    <option value="3">Wrong Amount</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6">
+                        <select class="form-select select-scrl" size="3" aria-label="size 3 select example">
+                            <option selected="">Open this select menu (select menu size)</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                            <option value="4">Four</option>
+                            <option value="5">Five</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-md-6 w-100">
+                                <div className="container mt-5">
+                                    <div className="row">
+                                        <div className="col-md-6 ">
+                                            <div className="dropdown">
+                                                <input
+                                                    type="search"
+                                                    className="form-control dropdown-toggle p-2 rounded"
+                                                    placeholder="Choose a city"
+                                                    value={searchTerm}
+                                                    onChange={handleInputChange}
+                                                    data-bs-toggle="dropdown"
+                                                />
+                                                <ul className=" form-select dropdown-menu px-3" size="3"  aria-label="size 3 select example">
+                                                    {filteredCities.map((city, index) => (
+                                                        <li key={index}>
+                                                            <a
+                                                                className="dropdown-item"
+                                                                onClick={() => handleCitySelect(city)}
+                                                            >
+                                                                {city}
+                                                             
+                                                            </a>
+                                                            </li>
+                                                    ))}
+                                                    {filteredCities.length === 0 && (
+                                                        <li>
+                                                            <span className="dropdown-item">No results found</span>
+                                                        </li>
+                                                    )}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
         </div>
+
     )
 }

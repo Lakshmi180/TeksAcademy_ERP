@@ -18,12 +18,12 @@ import { Login } from "./components/Auth/Login";
 function App() {
   return (
     <div className="App">
-      <Sidemenu />
+      {/* <Sidemenu /> */}
       <Forms />
     <Card/>
     <Button/>
       {/* <Sidemenu /> */}
-      <Login />
+      {/* <Login /> */}
 
       {/* <Routes>
       <Route element={<ReqireAuth/>}>
