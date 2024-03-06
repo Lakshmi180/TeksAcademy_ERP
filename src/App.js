@@ -9,17 +9,12 @@ import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.mi
 // components
 import { Sidemenu } from "./components/common/sidemenu/Sidemenu";
 import Table from "./components/common/design/Table";
-import { BrowserRouter as Router } from "react-router-dom";
-import { Route, Routes } from "react-router-dom";
-import ReqireAuth from "./components/Layout/ReqireAuth";
-import PublicAuth from "./components/Layout/PublicAuth";
-import { Login } from "./components/Auth/Login";
 
 import Forms from "./components/common/design/Forms";
 import Card from "./components/common/design/Card";
 import Button from "./components/common/design/Button";
 
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import ReqireAuth from "./components/Layout/ReqireAuth";
 import PublicAuth from "./components/Layout/PublicAuth";
 
@@ -28,14 +23,28 @@ import Dashboard from "./components/pages/dashboard/Dashboard";
 import PublicLayout from "./components/Layout/PublicLayout";
 
 function App() {
+  const krishna = () => {
+    console.log(`krishna`);
+  };
+  const Vishakha = () => {
+    console.log(`vishakha`);
+  };
+  const vaibhav = () => {
+    console.log(`vaibhav`);
+  };
   return (
     <div className="App">
-      <Sidemenu />
-     <Table />
-     <Card />
+      {/* <Sidemenu /> */}
+      {/* <Table />
+      <Card />
       <Forms />
-    <Card/>
-    <Button/>
+      <Card /> */}
+      {/* <Button type={"submit"} click={krishna}>
+        Krishna
+      </Button>
+      <Button click={vaibhav}>Vaibhav</Button>
+      <Button click={Vishakha}>Vishakha</Button> */}
+
       {/* <Sidemenu /> */}
       <Login />
 
