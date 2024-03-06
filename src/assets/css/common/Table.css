@@ -107,3 +107,22 @@ img{
     overflow-clip-margin: content-box;
     overflow: clip;
 }
+/* Hoverable Table css start*/
+.toggle-showcode{
+    font-size: 14px;
+}
+.instruction-line{
+    font-size: 13px;
+}
+.download-icon{
+    font-size: 16px;
+}
+.detail-btn{
+    font-size: 13px;
+}
+.bg-success{
+    background-color: #0ab39c !important;
+}
+.bg-danger{
+    background-color: #f06548 !important;
+}

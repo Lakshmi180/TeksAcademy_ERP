@@ -9,6 +9,7 @@ a {
 
 .sidebar {
   background: var(--bs-dark);
+  background-color: #405189;
   transition: all 0.15s ease-in-out;
 }
 
@@ -55,8 +56,27 @@ a.sidebar-link {
 }
 
 .sidebar-item a {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   color: #abb9e8;
+  text-align: left;
+}
+
+.sidebar-item a:hover {
+  color: #fff;
+}
+
+.sidebar-dropdown {
+  position: relative;
+}
+
+.sidebar-dropdown:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: red;
+  width: 50%;
 }
 
 .sidebar-link[data-bs-toggle="collapse"]::after {
@@ -69,6 +89,12 @@ a.sidebar-link {
   right: 1.5rem;
   transform: rotate(-135deg);
   transition: all 0.2s ease-out;
+}
+
+.sidebar-logo img {
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
 }
 
 .sidebar-link.hide-after::after {
