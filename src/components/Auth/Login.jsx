@@ -19,7 +19,7 @@ export const Login = () => {
     email: "",
     password: "",
   });
-  
+
 
   const handleInput = (event) => {
     setValues((prev) => ({ ...prev, [event.target.name]: event.target.value }));
@@ -96,7 +96,7 @@ export const Login = () => {
                   <div className="text-center mt-2">
                     <h5 className="login_welcome_text">Welcome Back!</h5>
                     <p className="text-mute login_welcome_description">
-                      Sign in to continue to Velzon.
+                      Sign in to continue to TeksAcademy.
                     </p>
                   </div>
                   <div className="p-2 mt-4">

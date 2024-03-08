@@ -47,7 +47,7 @@ function App() {
 
 
       <Route element={<PublicLayout/>}>
-        
+
         <Route path="/login" element={<Login/>}/>
         <Route path="/forgotpassword" element={<ForgotPassword/>}/>
 
