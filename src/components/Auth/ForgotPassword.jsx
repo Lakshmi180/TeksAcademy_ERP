@@ -8,7 +8,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import "../../assets/css/common/Login.css";
 import Loginvalidation from "./LoginValidation";
 import { AuthContext } from "../../context/AuthContext/AuthContextProvider";
-
+import gif from "../../images/GIF_01.gif";
 export const ForgotPassword = () => {
   const { LoginAdmin, AuthState } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
@@ -67,7 +67,7 @@ export const ForgotPassword = () => {
 
   return (
     <div>
-      <div className="login_bg_image">
+      <div className="login_bg_image vh-100">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -101,7 +101,8 @@ export const ForgotPassword = () => {
                     <form action="#" className="text-start">
                       <div className="mb-3 text-center d-flex flex-column align-items-center gap-2">
                         <img
-                          src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXlobThnb2o2NTYzd203Z2VncDN3eGlkY2F6MjRrM2hlbWI3aWIyYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f0tufxEr372ZLuA07V/giphy.gif"
+                          //   src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXlobThnb2o2NTYzd203Z2VncDN3eGlkY2F6MjRrM2hlbWI3aWIyYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f0tufxEr372ZLuA07V/giphy.gif"
+                          src={gif}
                           width={100}
                           height="auto"
                           alt=""
@@ -114,7 +115,7 @@ export const ForgotPassword = () => {
                       <div className="mb-3">
                         <label
                           for="email"
-                          className="form-label form-label font-size-s font-weight-500"
+                          className="form-label font-size-s font-weight-500"
                         >
                           Email
                         </label>
@@ -123,16 +124,20 @@ export const ForgotPassword = () => {
                           placeholder="Enter email"
                           type="email"
                           className="form-control form-control font-size-s"
-                          aria-invalid="false"
+                          aria-invalid={errors.email ? "true" : "false"}
                           onChange={handleInput}
                         />
                         {errors.email && (
-                          <span className="text-danger text-start mail error-text">
+                          <span
+                            className={`text-danger text-start mail error-text ${
+                              errors.email ? "visible" : "invisible"
+                            }`}
+                          >
                             {errors.email}
                           </span>
                         )}
                       </div>
-                      <div className="mt-4">
+                      <div className="mt-4 ">
                         <button
                           type="submit"
                           className="btn btn-success w-100 btn btn-success fs-13 font-size-s  font-weight-500"
