@@ -8,21 +8,16 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import "../../assets/css/common/Login.css";
 import Loginvalidation from "./LoginValidation";
 import { AuthContext } from "../../context/AuthContext/AuthContextProvider";
+import { useParams } from "react-router-dom";
 
 export const ChangePassword = () => {
-  const { LoginAdmin, AuthState } = useContext(AuthContext);
+  const { AuthState,ChangePasswordfun } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const [showRePassword, setShowRePassword] = useState(false);
-  console.log(AuthState, "AuthState");
+ 
 
-  const [values, setValues] = useState({
-    email: "",
-    password: "",
-  });
 
-  const handleInput = (event) => {
-    setValues((prev) => ({ ...prev, [event.target.name]: event.target.value }));
-  };
+
 
   const toggleShowPassword = () => {
     setShowPassword((prev) => !prev);
@@ -32,42 +27,96 @@ export const ChangePassword = () => {
     setShowRePassword((prev) => !prev);
   };
 
-  const [errors, seterrors] = useState({
-    email: "",
+ 
+  const [values, setValues] = useState({
     password: "",
+    confirmpassword: "",
   });
 
-  useEffect(() => {
-    const email_pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (values.email) {
-      seterrors({ ...errors, email: "" });
-    } else if (email_pattern.test(values.email)) {
-      seterrors({ ...errors, email: "" });
+  const handleInput = (event) => {
+    setValues((prev) => ({ ...prev, [event.target.name]: event.target.value }));
+  };
+
+  
+
+ 
+
+  const [errors, seterrors] = useState({
+    password: "",
+    confirmpassword: "",
+  });
+
+  useEffect(()=>{
+    if(values.password){
+        seterrors((prev)=>({
+            ...prev,
+              password:"",
+        }))
+       
     }
-    if (values.password) {
-      seterrors({ ...errors, password: "" });
+    if(values.confirmpassword){
+        seterrors((prev)=>({
+          ...prev,
+              confirmpassword:"",
+        }))
     }
-  }, [values.email, values.password]);
+
+  },[values.password, values.confirmpassword])
+
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(values, "values");
-    const email_pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!values.email) {
-      seterrors((prev) => ({ ...prev, email: "Email is required" }));
-      return false;
-    } else if (!email_pattern.test(values.email)) {
-      seterrors((prev) => ({ ...prev, email: "Invalid email" }));
-      return false;
+
+    if(!values.password){
+        seterrors((prev) => ({...prev, password: "Password is required" }));
+        return false;
     }
-    if (!values.password) {
-      seterrors((prev) => ({ ...prev, password: "Password is required" }));
-      return false;
+    else if (values.password.length <8){
+        seterrors((prev)=>({...prev, password:"Password should be at least 8 characters"}))
+       return false ;
+    }
+    else if(!/(?=.*[A-Z])/.test(values.password)){
+        seterrors((prev)=>({...prev, password:"Password should contain at least one uppercase letter"}))
+       return false ;
+    }
+    else if(!/(?=.*[a-z])/.test(values.password)){
+        seterrors((prev)=>({...prev, password:"Password should contain at least one lowercase letter"}))
+       return false ;
+    }
+    else if(!/(?=.*\d)/.test(values.password)){
+        seterrors((prev)=>({...prev, password:"Password should contain at least one number"}))
+        return false;
+    }
+    else if(!/[!@#$%^&*(),.?":{}|<>]/.test(values.password)){
+        seterrors((prev)=>({...prev, password:"Password should contain at least one special character"}))
+        return false;
+    }
+    if(!values.confirmpassword){
+        seterrors((prev) => ({...prev, confirmpassword: "Confirm password is required" }));
+        return false;
     }
 
-    if (!errors.email && !errors.password && values.email && values.password) {
-      LoginAdmin(values);
+    else if(values.password !== values.confirmpassword){
+        seterrors((prev)=>({
+            ...prev, confirmpassword:"password must be match"
+        }))
     }
+
+    if(values.password === values.confirmpassword){
+
+       // here the add the user id ..
+       //giving fake id 
+
+
+        const id =null;
+        const password = values.password;
+         const updatedpassword={password}
+        ChangePasswordfun(id,updatedpassword )
+
+    }
+
+
   };
 
   return (
@@ -141,7 +190,7 @@ export const ChangePassword = () => {
                             id="passwordInput"
                             class="form-text mb-3 custom-password-length-text"
                           >
-                            Must be at least 8 characters.
+                          
                           </div>
                         </div>
                       </div>
@@ -154,16 +203,16 @@ export const ChangePassword = () => {
                         </label>
                         <div className="position-relative auth-pass-inputgroup mb-3">
                           <input
-                            name="password"
+                            name="confirmpassword"
                             placeholder="Confirm Password"
                             type={showRePassword ? "text" : "password"}
                             className="form-control pe-5 form-control font-size-s"
                             aria-invalid="false"
                             onChange={handleInput}
                           />
-                          {errors.password && (
+                          {errors.confirmpassword && (
                             <span className="text-danger text-start mail error-text">
-                              {errors.password}
+                              {errors.confirmpassword}
                             </span>
                           )}
                           <button

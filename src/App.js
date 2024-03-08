@@ -23,6 +23,7 @@ import Dashboard from "./components/pages/dashboard/Dashboard";
 import PublicLayout from "./components/Layout/PublicLayout";
 import { ForgotPassword } from "./components/Auth/ForgotPassword";
 import { AllRoutes } from "./router";
+import { ChangePassword } from "./components/Auth/ChangePassword";
 
 function App() {
 
@@ -50,6 +51,7 @@ function App() {
 
         <Route path="/login" element={<Login/>}/>
         <Route path="/forgotpassword" element={<ForgotPassword/>}/>
+        <Route path="/changepassword" element={<ChangePassword/>} />
 
       </Route>
      </Routes>

@@ -150,13 +150,29 @@ const AuthContextProvider = ({ children }) => {
     }
 
 
-    const ResetPassword = async ({ id, password }) => {
+    const ChangePasswordfun = async (id, updatedpassword ) => {
+
+        //axios.put(`${process.env.REACT_APP_API_URL}/resetpassword/${id}`, updatedpassword
+        console.log(updatedpassword, "changepasswordcontext")
         try {
-            const { status, data } = await axios.put()
-            //put the  reset password here and add toast
-            if (status == "200") {
-                return redirect("/login")
-            }
+            const {data, status}= await toast.promise(axios.put(`${process.env.REACT_APP_API_URL}/resetpassword/${id}`, updatedpassword),{
+                loading: "Loading...",
+                success: "Password Changed Successfully",
+                error: "Something went wrong...🤯.        Please try again"
+            })
+
+            // if(status==="200pass"){
+            //     userLogout();
+            //     Swal.fire({
+            //         title: 'Reset Password Success!',
+            //         text: 'Check your email for reset instructions.',
+            //         icon:'success',
+            //     });
+            //     navigate("/login")
+            // }
+            userLogout();
+            // navigate("/login")
+        
         }
         catch (error) {
             console.log(error)
@@ -170,7 +186,7 @@ const AuthContextProvider = ({ children }) => {
         DispatchAuth({ type: "SET_TOKEN", payload: "" })
         DispatchAuth({ type: "SET_ROLE", payload: {} })
         DispatchAuth({ type: "SET_PASSWORD_LOCALSTORAGE", payload: "" })
-        return redirect("/")
+        toast.success("logout successfully") 
     }
 
 
@@ -182,7 +198,7 @@ const AuthContextProvider = ({ children }) => {
     }, [])
 
     return (
-        <AuthContext.Provider value={{ AuthState, DispatchAuth, Forgotpassword, LoginAdmin, ResetPassword, userLogout, LockTheScreen }}>
+        <AuthContext.Provider value={{ AuthState, DispatchAuth, Forgotpassword, LoginAdmin, ChangePasswordfun, userLogout, LockTheScreen }}>
             {children}
         </AuthContext.Provider>
     )
