@@ -22,6 +22,7 @@ import PublicAuth from "./components/Layout/PublicAuth";
 import Dashboard from "./components/pages/dashboard/Dashboard";
 import PublicLayout from "./components/Layout/PublicLayout";
 import { ForgotPassword } from "./components/Auth/ForgotPassword";
+import { ChangePassword } from "./components/Auth/ChangePassword";
 
 function App() {
   const krishna = () => {
@@ -42,8 +43,9 @@ function App() {
       {/* <Card/> */}
       {/* <Button/> */}
       {/* <Sidemenu /> */}
-      {/* <Login /> */}
+      <Login />
       <ForgotPassword />
+      <ChangePassword />
 
       {/* <Routes>
       <Route element={<ReqireAuth/>}>
