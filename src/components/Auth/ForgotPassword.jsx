@@ -100,13 +100,7 @@ export const ForgotPassword = () => {
                   <div className="p-2 mt-4">
                     <form action="#" className="text-start">
                       <div className="mb-3 text-center d-flex flex-column align-items-center gap-2">
-                        <img
-                          //   src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXlobThnb2o2NTYzd203Z2VncDN3eGlkY2F6MjRrM2hlbWI3aWIyYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/f0tufxEr372ZLuA07V/giphy.gif"
-                          src={gif}
-                          width={100}
-                          height="auto"
-                          alt=""
-                        />
+                        <img src={gif} width={100} height="auto" alt="" />
                         <span className="reset-password-message mt-3">
                           Enter your email and instructions will be sent to you!
                         </span>
@@ -148,8 +142,8 @@ export const ForgotPassword = () => {
                       </div>
                       <div className="mt-4 text-center">
                         <div className="signin-other-title">
-                          <h5 className="fs-13  title font-size-s font-weight-500">
-                            Wait, I remember my password...{" "}
+                          <h5 className="fs-13  title font-size-s font-weight-500 custom-href">
+                            Wait, I remember my password{" "}
                             <a href="#">Click here</a>
                           </h5>
                         </div>
