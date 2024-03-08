@@ -24,9 +24,18 @@ import PublicLayout from "./components/Layout/PublicLayout";
 import { ForgotPassword } from "./components/Auth/ForgotPassword";
 import { AllRoutes } from "./router";
 import { ChangePassword } from "./components/Auth/ChangePassword";
+import { LockScreen } from "./components/Auth/LockScreen";
 
 function App() {
-
+  const krishna = () => {
+    console.log(`krishna`);
+  };
+  const Vishakha = () => {
+    console.log(`vishakha`);
+  };
+  const vaibhav = () => {
+    console.log(`vaibhav`);
+  };
   return (
     <div className="App">
       
@@ -37,23 +46,20 @@ function App() {
       {/* <Card/> */}
       {/* <Button/> */}
       {/* <Sidemenu /> */}
-      {/* <Login /> */}
-      {/* <ForgotPassword /> */}
-      
-       <Routes>
+      <Login />
+      <ForgotPassword />
+      <ChangePassword />
 
+       <Routes>
       <Route element={<ReqireAuth/>}>
         <Route path="/" element={<Dashboard/>} />
       </Route>
 
 
       <Route element={<PublicLayout/>}>
-
         <Route path="/login" element={<Login/>}/>
-        <Route path="/forgotpassword" element={<ForgotPassword/>}/>
-        <Route path="/changepassword" element={<ChangePassword/>} />
-
       </Route>
+
      </Routes>
 
 

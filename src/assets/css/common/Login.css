@@ -7,6 +7,10 @@
   width: 100%;
   height: 100%;
 }
+.form-control:focus {
+  border: 1px solid #b3b9d0 !important;
+}
+
 .login_welcome_text {
   color: rgb(64, 81, 137);
   font-size: 16.25px;
@@ -80,4 +84,15 @@
 .custom-password-length-text {
   color: #878a99 !important;
   font-size: 0.775rem !important;
+}
+
+.custom-href > a {
+  text-decoration: underline !important;
+}
+
+/* Lockscreen */
+.lock-screen-username {
+  color: #495057;
+  font-size: 1rem !important;
+  font-weight: 500;
 }

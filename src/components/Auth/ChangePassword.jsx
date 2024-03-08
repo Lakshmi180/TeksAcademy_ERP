@@ -1,7 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import { FaFacebookF, FaGoogle, FaGithub } from "react-icons/fa";
-import { FaSquareXTwitter } from "react-icons/fa6";
-import { GrTwitter } from "react-icons/gr";
 
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
@@ -228,19 +225,6 @@ export const ChangePassword = () => {
                           </button>
                         </div>
                       </div>
-                      {/* <div className="form-check">
-                        <input
-                          id="auth-remember-check"
-                          type="checkbox"
-                          className="form-check-input"
-                        />
-                        <label
-                          for="auth-remember-check"
-                          className="form-check-label form-label font-size-s font-weight-500"
-                        >
-                          Remember me
-                        </label>
-                      </div> */}
                       <div className="mt-4">
                         <button
                           type="submit"
@@ -252,8 +236,8 @@ export const ChangePassword = () => {
                       </div>
                       <div className="mt-4 text-center">
                         <div className="signin-other-title">
-                          <h5 className="fs-13  title font-size-s font-weight-500">
-                            Wait, I remember my password...{" "}
+                          <h5 className="fs-13  title font-size-s font-weight-500 custom-href">
+                            Wait, I remember my password{" "}
                             <a href="#">Click here</a>
                           </h5>
                         </div>
