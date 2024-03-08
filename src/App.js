@@ -22,19 +22,13 @@ import PublicAuth from "./components/Layout/PublicAuth";
 import Dashboard from "./components/pages/dashboard/Dashboard";
 import PublicLayout from "./components/Layout/PublicLayout";
 import { ForgotPassword } from "./components/Auth/ForgotPassword";
+import { AllRoutes } from "./router";
 
 function App() {
-  const krishna = () => {
-    console.log(`krishna`);
-  };
-  const Vishakha = () => {
-    console.log(`vishakha`);
-  };
-  const vaibhav = () => {
-    console.log(`vaibhav`);
-  };
+
   return (
     <div className="App">
+      
       {/* <Sidemenu /> */}
       {/* <Table /> */}
       {/* <Card /> */}
@@ -43,18 +37,21 @@ function App() {
       {/* <Button/> */}
       {/* <Sidemenu /> */}
       {/* <Login /> */}
-      <ForgotPassword />
-
+      {/* <ForgotPassword /> */}
+      
        <Routes>
+
       <Route element={<ReqireAuth/>}>
         <Route path="/" element={<Dashboard/>} />
       </Route>
 
 
       <Route element={<PublicLayout/>}>
+        
         <Route path="/login" element={<Login/>}/>
-      </Route>
+        <Route path="/forgotpassword" element={<ForgotPassword/>}/>
 
+      </Route>
      </Routes>
 
 

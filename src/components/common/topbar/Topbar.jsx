@@ -14,9 +14,10 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext/AuthContextProvider";
 
 export const Topbar = ({ setOpen, open }) => {
-const {userLogout}= useContext(AuthContext)
+const {userLogout,LockTheScreen}= useContext(AuthContext)
 
     const [isDropdownActive, setIsDropdownActive] = useState(false);
+   
 
     const dropdownHandler = () => {
         setIsDropdownActive((dropdown) => !dropdown);
@@ -90,7 +91,10 @@ const {userLogout}= useContext(AuthContext)
                                             </a>
                                             <a href="#" className="dropdown-item mb-3 align-middle">
                                                 <FaLock className="dropdown-icon" />
+                                                <span onClick={LockTheScreen}>
                                                 Lockscreen
+                                                </span>
+                                                
                                             </a>
                                             <a href="#" className="dropdown-item mb-3 align-middle">
                                                 <HiOutlineLogout className="dropdown-icon"

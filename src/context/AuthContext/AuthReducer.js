@@ -16,6 +16,17 @@ const AuthReducer = (state, action) => {
                 ...state,
                 role: action.payload
             }
+        case "SET_LOCK":
+            return{
+                ...state,
+                password: action.payload
+            }
+        case "SET_PASSWORD_LOCALSTORAGE":{
+            return{
+              ...state,
+                password: action.payload
+            }
+        }
         default:
             return state
     }

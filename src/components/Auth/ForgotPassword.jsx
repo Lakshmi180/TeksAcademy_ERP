@@ -10,64 +10,55 @@ import Loginvalidation from "./LoginValidation";
 import { AuthContext } from "../../context/AuthContext/AuthContextProvider";
 
 export const ForgotPassword = () => {
-  const { LoginAdmin, AuthState } = useContext(AuthContext);
-  const [showPassword, setShowPassword] = useState(false);
-  console.log(AuthState, "AuthState");
+  const {  AuthState,Forgotpassword } = useContext(AuthContext);
+
+  
 
   const [values, setValues] = useState({
     email: "",
-    password: "",
   });
 
   const handleInput = (event) => {
     setValues((prev) => ({ ...prev, [event.target.name]: event.target.value }));
   };
 
-  const toggleShowPassword = () => {
-    setShowPassword((prev) => !prev);
-  };
+  const[errors, seterrors]=useState({
+    email:"",
+  }) 
 
-  const [errors, seterrors] = useState({
-    email: "",
-    password: "",
-  });
-
-  useEffect(() => {
-    const email_pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (values.email) {
-      seterrors({ ...errors, email: "" });
-    } else if (email_pattern.test(values.email)) {
-      seterrors({ ...errors, email: "" });
+  useEffect(()=>{
+    if(values.email){
+      seterrors((prev)=>({
+        ...prev,
+        email:"",
+      }))
     }
-    if (values.password) {
-      seterrors({ ...errors, password: "" });
-    }
-  }, [values.email, values.password]);
+  },[values.email])
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(values, "values");
     const email_pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!values.email) {
-      seterrors((prev) => ({ ...prev, email: "Email is required" }));
-      return false;
-    } else if (!email_pattern.test(values.email)) {
-      seterrors((prev) => ({ ...prev, email: "Invalid email" }));
+    if(!values.email){
+      seterrors((prev) => ({...prev, email: "Email is required" }));
       return false;
     }
-    if (!values.password) {
-      seterrors((prev) => ({ ...prev, password: "Password is required" }));
+    else if(!email_pattern.test(values.email)){
+      seterrors((prev) => ({...prev, email: "Enter valid email" }));
       return false;
     }
 
-    if (!errors.email && !errors.password && values.email && values.password) {
-      LoginAdmin(values);
+    if(!errors.email && values.email){
+
+      const email=values.email;
+      
+        Forgotpassword({email})
     }
+    
   };
 
   return (
     <div>
-      <div className="login_bg_image">
+      <div className="login_bg_image w-full vh-100">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -126,11 +117,14 @@ export const ForgotPassword = () => {
                           aria-invalid="false"
                           onChange={handleInput}
                         />
-                        {errors.email && (
-                          <span className="text-danger text-start mail error-text">
-                            {errors.email}
-                          </span>
-                        )}
+                        {
+                          errors.email && (
+                            <span className="text-danger text-start mail error-text">
+                              {errors.email}
+                            </span>
+                          )
+                        }
+                        
                       </div>
                       <div className="mt-4">
                         <button

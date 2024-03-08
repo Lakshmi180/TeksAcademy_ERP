@@ -6,8 +6,12 @@ import DepartmentReducer from './DepartmentReducer';
 export const DepartmentContext = createContext();
 
 const DepartmentContextProvider=({children})=> {
+    
+    const initialState={
+        departments:[]
+    }
 
-    const[DepartmentState, DispatchDepartment]= useReducer(DepartmentReducer, {departments:[]} )
+    const[DepartmentState, DispatchDepartment]= useReducer(DepartmentReducer, initialState )
 
     const CreateDepartment=async(department)=>{
         try{
