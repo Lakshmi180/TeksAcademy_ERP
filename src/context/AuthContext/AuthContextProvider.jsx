@@ -26,29 +26,34 @@ const AuthContextProvider=({children})=>{
         console.log(logindata , "logindatahere")
         // const {data, Status} = await axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata); 
 
-        const {data, Status}= await toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata),{
-            loading: "Loading...",
-            success: "Login Successfully",
-            error: "Something went wrong"
-        })
-       
-        
-        if(data.Status === "Success"){
-            console.log(data, "gggfgfchg")
-            localStorage.setItem(
-                "data",
-                JSON.stringify({
-                    user: data?.adminData,
-                    token: data?.token,
-                    role: data?.adminData?.profile,
-                })
-            )
-            DispatchAuth({type:"SET_USER", payload:data?.adminData})
-            DispatchAuth({type:"SET_TOKEN", payload:data?.token})
-            DispatchAuth({type:"SET_ROLE", payload:data?.role})
-            navigate("/");
-          
+        try{
+            const {data, Status}= await toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata),{
+                loading: "Loading...",
+                success: "Login Successfully",
+                error: "Wrong Credentials 🤯"
+            })
+            if(data.Status === "Success"){
+                console.log(data, "gggfgfchg")
+                localStorage.setItem(
+                    "data",
+                    JSON.stringify({
+                        user: data?.adminData,
+                        token: data?.token,
+                        role: data?.adminData?.profile,
+                    })
+                )
+                DispatchAuth({type:"SET_USER", payload:data?.adminData})
+                DispatchAuth({type:"SET_TOKEN", payload:data?.token})
+                DispatchAuth({type:"SET_ROLE", payload:data?.role})
+                navigate("/");
+            }
+            
+
         }
+        catch(error){
+            console.log(error)
+        }
+    
     }
 
     // const LoginAdmin =async(logindata)=>{
