@@ -12,7 +12,7 @@ function Accordian() {
                         </button>
                     </h2>
                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#default-accordion-example">
-                        <div class="accordion-body">
+                        <div class="accordion-body fsize">
                             Although you probably won’t get into any legal trouble if you do it just once, why risk it? If you made your subscribers a promise, you should honor that. If not, you run the risk of a drastic increase in opt outs, which will only hurt you in the long run.
                         </div>
                     </div>
@@ -24,7 +24,7 @@ function Accordian() {
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#default-accordion-example">
-                        <div class="accordion-body">
+                        <div class="accordion-body fsize">
                             No charges are put in place by SlickText when subscribers join your text list. This does not mean however that charges 100% will not occur. Charges that may occur fall under part of the compliance statement stating "Message and Data rates may apply."
                         </div>
                     </div>
@@ -36,7 +36,7 @@ function Accordian() {
                         </button>
                     </h2>
                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#default-accordion-example">
-                        <div class="accordion-body">
+                        <div class="accordion-body fsize">
                             Now that you have a general idea of the amount of texts you will need per month, simply find a plan size that allows you to have this allotment, plus some extra for growth. Don't worry, there are no mistakes to be made here. You can always upgrade and downgrade.
                         </div>
                     </div>
@@ -54,7 +54,7 @@ function Accordian() {
 
                         </h2>
                         <div id="accor_plusExamplecollapse1" class="accordion-collapse collapse show " aria-labelledby="accordionwithplusExample1" data-bs-parent="#accordionWithplusicon">
-                            <div class="accordion-body">
+                            <div class="accordion-body fsize">
                                 Big July earthquakes confound zany experimental vow. My girl wove six dozen plaid jackets before she quit. Six big devils from Japan quickly forgot how to waltz. try again until it looks right, and each assumenda labore aes Homo nostrud organic, assumenda labore aesthetic magna elements, buttons, everything.
                             </div>
                         </div>
@@ -66,7 +66,7 @@ function Accordian() {
                             </button>
                         </h2>
                         <div id="accor_plusExamplecollapse2" class="accordion-collapse collapse" aria-labelledby="accordionwithplusExample2" data-bs-parent="#accordionWithplusicon">
-                            <div class="accordion-body">
+                            <div class="accordion-body fsize">
                                 It makes a statement, it’s impressive graphic design. Increase or decrease the letter spacing depending on the situation and try, try again until it looks right, and each letter has the perfect spot of its own. commodo enim craft beer mlkshk aliquip jean shorts ullamco.
                             </div>
                         </div>
@@ -78,14 +78,14 @@ function Accordian() {
                             </button>
                         </h2>
                         <div id="accor_plusExamplecollapse3" class="accordion-collapse collapse" aria-labelledby="accordionwithplusExample3" data-bs-parent="#accordionWithplusicon">
-                            <div class="accordion-body">
+                            <div class="accordion-body fsize">
                                 Spacing depending on the situation and try, try again until it looks right, and each. next level wes anderson artisan four loko farm-to-table craft beer twee. commodo enim craft beer mlkshk aliquip jean shorts ullamco. omo nostrud organic, assumenda labore aesthetic magna delectus. pposites attract, and that’s a fact.
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
     )
 }
 
