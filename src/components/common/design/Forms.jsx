@@ -15,7 +15,7 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import { RiCheckboxMultipleBlankFill } from "react-icons/ri";
 import "../../../assets/css/common/Forms.css"
 
-export default function Form() {
+ function Form() {
 
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCity, setSelectedCity] = useState('');
