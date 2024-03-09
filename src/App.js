@@ -11,8 +11,11 @@ import Button from "./components/common/design/Button";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import ReqireAuth from "./components/Layout/ReqireAuth";
 import PublicAuth from "./components/Layout/PublicAuth";
+
+// import { Login } from "./components/Auth/Login";
 import Dashboard from "./components/pages/dashboard/Dashboard";
 import PublicLayout from "./components/Layout/PublicLayout";
+import WhatsppChat from "./components/common/design/WhatsappChat";
 import Page from "./components/common/design/Page";
 
 import Modal from "./components/common/design/Modal";
@@ -34,20 +37,50 @@ function App() {
   return (
     <div className="App">
       {/* <Sidemenu /> */}
+     <Table />
+  
+       {/* <Forms />  */}
+    {/* <Card/> */}
+    {/* <Button/> */}
+      {/* <Sidemenu /> */}
+      {/* <Login /> */}
+        {/* <WhatsppChat /> */}
+      {/* <Routes>
+      <Route element={<ReqireAuth/>}>
+        <Route path="/" element={<Dashboard/>} />
+      </Route>
+
+
+      <Route element={<PublicLayout/>}>
+        <Route path="/login" element={<Login/>}/>
+      </Route>
+
+    </Routes>
+
+
+
+     
+      </Route>
+      <Route element={<PublicAuth/>}>
+
+
+      </Route>
+
+    </Routes> */}
+
+      {/* <Login /> */}
      {/* <Table />
      <Card /> */}
-      <Forms />
+      {/* <Forms />
     <Card/>
     <Page/>
     <Modal/>
     <Tab/>
-    <Accordian/>
-    <Button/>
-      {/* <Sidemenu />
+
       <Login /> */}
       {/* <Table /> */}
       {/* <Card /> */}
-      {/* <Forms /> */}
+      <Forms />
       {/* <Card/> */}
       {/* <Button/> */}
       {/* <Sidemenu /> */}

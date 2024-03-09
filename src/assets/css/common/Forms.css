@@ -6,6 +6,30 @@ body {
     font-size: var(--erp-font-size-s);
     font-weight: var(--erp-font-weight-medium);
 }
+.dropone-border {
+    min-height: 230px;
+    border: 2px  #e9ebec dashed;
+    background: #fff;
+    border-radius: 6px;
+}
+.filepond{
+  
+    border: 2px dashed #e9ebec;
+    background: #fff;
+    border-radius: 6px;
+}
+.filepond-profile-picture {
+    border: 2px dashed #e9ebec;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.img-box-fsize {
+    font-size: 14px;
+}
+.form-fsize{
+    font-size: 14px;
+}
 
 .dropdown-menu {
     max-height: 200px;
