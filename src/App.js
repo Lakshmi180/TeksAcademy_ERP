@@ -27,16 +27,6 @@ import { ChangePassword } from "./components/Auth/ChangePassword";
 import { LockScreen } from "./components/Auth/LockScreen";
 
 function App() {
-  const krishna = () => {
-    console.log(`krishna`);
-  };
-  const Vishakha = () => {
-    console.log(`vishakha`);
-  };
-  const vaibhav = () => {
-    console.log(`vaibhav`);
-  };
-  const [isExpanded, setIsExpanded] = useState(true);
 
   const toggleSidebar = () => {
     setIsExpanded(!isExpanded);
