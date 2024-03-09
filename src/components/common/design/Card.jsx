@@ -7,7 +7,7 @@ import { GoArrowDownRight } from "react-icons/go";
 import { FaRegUserCircle } from "react-icons/fa";
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io"
-import "../../../assets/css/common/Card.css"
+// import "../../../assets/css/common/Card.css"
 
 function Card() {
   return (

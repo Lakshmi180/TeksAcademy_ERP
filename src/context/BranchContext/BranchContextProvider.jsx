@@ -26,8 +26,10 @@ const BranchContextProvider=({children})=>{
         try{
             const{status, data}= await axios.post() 
             if(status==200){
-                DispatchBranch({type:"SET_BRANCHES",payload:data})
+                DispatchBranch({type:"CREATE_BRANCHES",payload:data})
                 getAllBranches();
+
+                // navigate to role table 
             }
         }
         catch(error){

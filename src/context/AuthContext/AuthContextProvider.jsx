@@ -26,16 +26,14 @@ const AuthContextProvider=({children})=>{
         console.log(logindata , "logindatahere")
         // const {data, Status} = await axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata);
 
-        try {
-            const { data, Status } = await toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata), {
+        try{
+            const {data, Status}= await toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata),{
                 loading: "Loading...",
                 success: "Login Successfully",
-                error: "Something went wrong"
+                error: "Wrong Credentials 🤯"
             })
-
-
-            if (data.Status === "Success") {
-                console.log(data, "here")
+            if(data.Status === "Success"){
+                console.log(data, "gggfgfchg")
                 localStorage.setItem(
                     "data",
                     JSON.stringify({
@@ -44,19 +42,18 @@ const AuthContextProvider=({children})=>{
                         role: data?.adminData?.profile,
                     })
                 )
-                DispatchAuth({ type: "SET_USER", payload: data?.adminData })
-                DispatchAuth({ type: "SET_TOKEN", payload: data?.token })
-                DispatchAuth({ type: "SET_ROLE", payload: data?.role })
+                DispatchAuth({type:"SET_USER", payload:data?.adminData})
+                DispatchAuth({type:"SET_TOKEN", payload:data?.token})
+                DispatchAuth({type:"SET_ROLE", payload:data?.role})
                 navigate("/");
-
             }
             
+
         }
-        catch (error) {
+        catch(error){
             console.log(error)
         }
-
-        
+    
     }
 
     // const LoginAdmin =async(logindata)=>{
