@@ -3,7 +3,7 @@ import "./App.css";
 // components
 import { Sidemenu } from "./components/common/sidemenu/Sidemenu";
 import Table from "./components/common/design/Table";
-// import Card from "./components/common/design/Card";
+import Card from "./components/common/design/Card";
 import { Login } from "./components/Auth/Login";
 import Forms from "./components/common/design/Forms";
 
@@ -42,8 +42,8 @@ function App() {
     <Modal/>
     <Tab/>
     <Accordian/>
-    {/* <Button/>
-      <Sidemenu />
+    <Button/>
+      {/* <Sidemenu />
       <Login /> */}
       {/* <Table /> */}
       {/* <Card /> */}
@@ -55,7 +55,7 @@ function App() {
       <ForgotPassword />
       <ChangePassword /> */}
 
-      <div className="app">
+      {/* <div className="app">
         <Sidemenu
           isExpanded={isExpanded}
           setIsExpanded={setIsExpanded}
@@ -68,8 +68,8 @@ function App() {
             toggleSidebar={toggleSidebar}
           />
         </main>
-      </div>
-      <Routes>
+      </div> */}
+      {/* <Routes>
         <Route element={<ReqireAuth />}>
           <Route path="/" element={<Dashboard />} />
         </Route>
@@ -79,7 +79,7 @@ function App() {
           <Route path="/changepassword" element={<ChangePassword />} />
           <Route path="/lockscreen" element={<LockScreen />} />
         </Route>
-      </Routes>
+      </Routes> */}
     </div>
   );
 }
