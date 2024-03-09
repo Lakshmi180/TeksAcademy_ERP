@@ -24,9 +24,11 @@ const AuthContextProvider = ({ children }) => {
     const [AuthState, DispatchAuth] = useReducer(AuthReducer, InitialState)
     console.log(AuthState, "AthuState99")
 
-    const LoginAdmin = async (logindata) => {
-        console.log(logindata, "logindatahere")
-        // const {data, Status} = await axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata); 
+   
+    
+    const LoginAdmin =async(logindata)=>{
+        console.log(logindata , "logindatahere")
+        // const {data, Status} = await axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata);
 
         try {
             const { data, Status } = await toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata), {
@@ -202,6 +204,7 @@ const AuthContextProvider = ({ children }) => {
             {children}
         </AuthContext.Provider>
     )
+    
 }
 
 export default AuthContextProvider;

@@ -173,7 +173,7 @@ export const ChangePassword = () => {
                             </span>
                           )}
                           <button
-                            className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted"
+                            className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-mute"
                             type="button"
                             id="password-addon"
                           >
@@ -204,7 +204,7 @@ export const ChangePassword = () => {
                             placeholder="Confirm Password"
                             type={showRePassword ? "text" : "password"}
                             className="form-control pe-5 form-control font-size-s"
-                            aria-invalid="false"
+                            aria-invalid={"false"}
                             onChange={handleInput}
                           />
                           {errors.confirmpassword && (
@@ -213,7 +213,7 @@ export const ChangePassword = () => {
                             </span>
                           )}
                           <button
-                            className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted"
+                            className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-mute"
                             type="button"
                             id="password-addon"
                           >

@@ -77,90 +77,138 @@ export const LockScreen = () => {
                                     </a>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div className="justify-content-center row">
-                        <div className="col-md-8 col-lg-6 col-xl-5">
-                            <div className="mt-5 card">
-                                <div className="p-4 card-body">
-                                    <div className="text-center mt-2">
-                                        <h5 className="login_welcome_text">Lock Screen</h5>
-                                        <p className="text-mute login_welcome_description">
-                                            Enter your password to unlock the screen!
-                                        </p>
-                                    </div>
-                                    <div className="p-2 mt-4">
-                                        <form action="#" className="text-start">
-                                            <div className="mb-3 text-center d-flex flex-column align-items-center gap-2">
-                                                <img
-                                                    src="https://images.unsplash.com/photo-1640960543409-dbe56ccc30e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8"
-                                                    width={80}
-                                                    height="auto"
-                                                    alt=""
-                                                    className="rounded-circle"
-                                                />
+                            <label
+                                for="password-input"
+                                className="form-label form-label font-size-s font-weight-500"
+                            >
+                                Password
+                            </label>
+                            <div className="position-relative auth-pass-inputgroup mb-3">
+                                <input
+                                    name="password"
+                                    placeholder="Enter Password"
+                                    type={showPassword ? "text" : "password"}
+                                    className="form-control pe-5 form-control font-size-s"
+                                    aria-invalid="false"
+                                    onChange={handleInput}
+                                />
+                                {errors.password && (
+                                    <span className="text-danger text-start mail error-text">
+                                        {errors.password}
+                                    </span>
+                                )}
+                                <button
+                                    className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-mute"
+                                    type="button"
+                                    id="password-addon"
+                                >
+                                    {showPassword ? (
+                                        <FaRegEyeSlash onClick={toggleShowPassword} />
+                                    ) : (
+                                        <FaRegEye onClick={toggleShowPassword} />
+                                    )}
+                                </button>
+                            </div>
+                            <div className="mt-4 ">
+                                <button
+                                    type="submit"
+                                    className="btn btn-success w-100 btn btn-success fs-13 font-size-s  font-weight-500"
+                                    onClick={handleSubmit}
+                                >
+                                    Unlock
+                                </button>
+                            </div>
+                            <div className="mt-4 text-center">
+                                <div className="signin-other-title">
+                                    <h5 className="fs-13  title font-size-s font-weight-500 custom-href">
+                                        Not you? <a href="#">Signin</a>
+                                    </h5>
+                                </div>
+                            </div>
+                            <div className="justify-content-center row">
+                                <div className="col-md-8 col-lg-6 col-xl-5">
+                                    <div className="mt-5 card">
+                                        <div className="p-4 card-body">
+                                            <div className="text-center mt-2">
+                                                <h5 className="login_welcome_text">Lock Screen</h5>
+                                                <p className="text-mute login_welcome_description">
+                                                    Enter your password to unlock the screen!
+                                                </p>
+                                            </div>
+                                            <div className="p-2 mt-4">
+                                                <form action="#" className="text-start">
+                                                    <div className="mb-3 text-center d-flex flex-column align-items-center gap-2">
+                                                        <img
+                                                            src="https://images.unsplash.com/photo-1640960543409-dbe56ccc30e2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEyfHx8ZW58MHx8fHx8"
+                                                            width={80}
+                                                            height="auto"
+                                                            alt=""
+                                                            className="rounded-circle"
+                                                        />
 
-                                                {
-                                                    AuthState.user.email && AuthState.user.email?(
-                                                        <h5 className="lock-screen-username ">             
-                                                    {AuthState.user.email}
-                                                    </h5>
-                                                    ):(
-                                                        <h5 className="lock-screen-username ">No User Found</h5>
-                                                    )
-                                                }
-                                                
-                                            </div>
+                                                        {
+                                                            AuthState.user.email && AuthState.user.email ? (
+                                                                <h5 className="lock-screen-username ">
+                                                                    {AuthState.user.email}
+                                                                </h5>
+                                                            ) : (
+                                                                <h5 className="lock-screen-username ">No User Found</h5>
+                                                            )
+                                                        }
 
-                                            <label
-                                                for="password-input"
-                                                className="form-label form-label font-size-s font-weight-500"
-                                            >
-                                                Password
-                                            </label>
-                                            <div className="position-relative auth-pass-inputgroup mb-3">
-                                                <input
-                                                    name="password"
-                                                    placeholder="Enter Password"
-                                                    type={showPassword ? "text" : "password"}
-                                                    className="form-control pe-5 form-control font-size-s"
-                                                    aria-invalid="false"
-                                                    onChange={handleInput}
-                                                />
-                                                {errors.password && (
-                                                    <span className="text-danger text-start mail error-text">
-                                                        {errors.password}
-                                                    </span>
-                                                )}
-                                                <button
-                                                    className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted"
-                                                    type="button"
-                                                    id="password-addon"
-                                                >
-                                                    {showPassword ? (
-                                                        <FaRegEyeSlash onClick={toggleShowPassword} />
-                                                    ) : (
-                                                        <FaRegEye onClick={toggleShowPassword} />
-                                                    )}
-                                                </button>
+                                                    </div>
+
+                                                    <label
+                                                        for="password-input"
+                                                        className="form-label form-label font-size-s font-weight-500"
+                                                    >
+                                                        Password
+                                                    </label>
+                                                    <div className="position-relative auth-pass-inputgroup mb-3">
+                                                        <input
+                                                            name="password"
+                                                            placeholder="Enter Password"
+                                                            type={showPassword ? "text" : "password"}
+                                                            className="form-control pe-5 form-control font-size-s"
+                                                            aria-invalid="false"
+                                                            onChange={handleInput}
+                                                        />
+                                                        {errors.password && (
+                                                            <span className="text-danger text-start mail error-text">
+                                                                {errors.password}
+                                                            </span>
+                                                        )}
+                                                        <button
+                                                            className="btn btn-link position-absolute end-0 top-0 text-decoration-none text-muted"
+                                                            type="button"
+                                                            id="password-addon"
+                                                        >
+                                                            {showPassword ? (
+                                                                <FaRegEyeSlash onClick={toggleShowPassword} />
+                                                            ) : (
+                                                                <FaRegEye onClick={toggleShowPassword} />
+                                                            )}
+                                                        </button>
+                                                    </div>
+                                                    <div className="mt-4 ">
+                                                        <button
+                                                            type="submit"
+                                                            className="btn btn-success w-100 btn btn-success fs-13 font-size-s  font-weight-500"
+                                                            onClick={handleSubmit}
+                                                        >
+                                                            Unlock
+                                                        </button>
+                                                    </div>
+                                                    <div className="mt-4 text-center">
+                                                        <div className="signin-other-title">
+                                                            <h5 className="fs-13  title font-size-s font-weight-500 custom-href">
+                                                                Not you? <a href="#">Signin</a>
+                                                            </h5>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                             </div>
-                                            <div className="mt-4 ">
-                                                <button
-                                                    type="submit"
-                                                    className="btn btn-success w-100 btn btn-success fs-13 font-size-s  font-weight-500"
-                                                    onClick={handleSubmit}
-                                                >
-                                                    Unlock
-                                                </button>
-                                            </div>
-                                            <div className="mt-4 text-center">
-                                                <div className="signin-other-title">
-                                                    <h5 className="fs-13  title font-size-s font-weight-500 custom-href">
-                                                        Not you? <a href="#">Signin</a>
-                                                    </h5>
-                                                </div>
-                                            </div>
-                                        </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

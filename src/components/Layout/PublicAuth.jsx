@@ -6,11 +6,12 @@ import { Topbar } from '../common/topbar/Topbar'
 function PublicAuth() {
   return (
     <div className='app'>
-      <Sidemenu/>
+     
+      {/* <Sidemenu/>
       <main>
         <Topbar/>
         <Outlet/>
-      </main>
+      </main> */}
       
     </div>
   )
