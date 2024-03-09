@@ -6,13 +6,18 @@ import BranchReducer from "./BranchReducer";
 
 export const BranchContext = createContext();
 const BranchContextProvider=({children})=>{
-    const [BranchState, DispatchBranch]=useReducer(BranchReducer, {branches:[]})
+
+    const intialState={
+        branches:[],
+    }
+
+    const [BranchState, DispatchBranch]=useReducer(BranchReducer, intialState)
     
     const getAllBranches=async()=>{
 
         try{
             const{status, data}= await axios.get() 
-            if(status==200){
+            if(status===200){
                 DispatchBranch({type:"SET_BRANCHES",payload:data})
             }
         }
@@ -25,9 +30,11 @@ const BranchContextProvider=({children})=>{
     const createBranch  =async(branch)=>{
         try{
             const{status, data}= await axios.post() 
-            if(status==200){
-                DispatchBranch({type:"SET_BRANCHES",payload:data})
+            if(status===200){
+                DispatchBranch({type:"CREATE_BRANCHES",payload:data})
                 getAllBranches();
+
+                // navigate to role table 
             }
         }
         catch(error){
