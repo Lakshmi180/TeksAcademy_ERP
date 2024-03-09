@@ -222,7 +222,7 @@ export const Sidemenu = ({ isExpanded }) => {
                                 </li>
 
                                 <li className="sidebar-item">
-                                    <Link to="whatsapp" className="sidebar-link">
+                                    <Link to="/whatsapp" className="sidebar-link">
                                         <AiOutlineLine className="sub_icon" />Whatsapp Chat
                                     </Link>
                                 </li>

@@ -16,7 +16,7 @@ import { LockScreen } from "./components/Auth/LockScreen";
 import Card from "./components/common/design/Card";
 import Table from "./components/common/design/Table";
 import Forms from "./components/common/design/Forms";
-// import Whatsapp from "./components/common/design/Whatsapp";
+import WhatsappChat from "./components/common/design/WhatsappChat";
 import Accordian from "./components/common/design/Accordian";
 import Tab from "./components/common/design/Tab";
 import Modal from "./components/common/design/Modal";
@@ -49,7 +49,7 @@ function App() {
             <Route path="/table" element={<Table />} />
             <Route path="/card" element={<Card />} />
             <Route path="/forms" element={<Forms />} />
-            {/* <Route path="/whatsapp" element={<Whatsapp />} /> */}
+            <Route path="/whatsapp" element={<WhatsappChat/>} />
             <Route path="/accordian" element={<Accordian />} />
             <Route path="/tabs" element={<Tab />} />
             <Route path="/modal" element={<Modal />} />
