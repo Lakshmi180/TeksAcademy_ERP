@@ -1,0 +1,15 @@
+.custom-accordionwithicon-plus .accordion-button::after {
+    background-image: none !important;
+    font-family: "Material Design Icons";
+    content: "+";
+    font-size: 1.5rem;
+    vertical-align: middle;
+    line-height: .8;
+}
+
+.custom-accordionwithicon-plus .accordion-button:not(.collapsed)::after {
+    background-image: none !important;
+    content: "-";
+    margin-right: -3px;
+    font-size: 1.5rem;
+}

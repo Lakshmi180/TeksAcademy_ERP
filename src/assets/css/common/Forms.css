@@ -1,8 +1,53 @@
-body{
+body {
     background-color: #f3f3f9;
     font-family: "Poppins", sans-serif;
 }
-.fsize{
+
+.fsize {
     font-size: 0.8125rem;
     font-weight: 500;
 }
+
+.dropdown-menu {
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.select-scrl {
+    scrollbar-width: thin;
+}
+
+
+.btn-soft-primary:hover {
+    color: white;
+    background-color: #405189;
+}
+
+.btn-soft-primary {
+    color: #405189;
+    background-color: #e2e5ed;
+}
+
+/* .acc-plus::after {
+    display: none;
+} */
+
+
+.date-pic {
+    width: 300px !important;
+}
+
+.react-datepicker__header {
+    background-color: #405189;
+}
+
+.react-datepicker__current-month {
+    color: white;
+}
+
+.react-datepicker__day-name {
+    color: white;
+}
+
+/* page*/
