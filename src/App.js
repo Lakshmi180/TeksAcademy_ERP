@@ -21,33 +21,16 @@ import { ChangePassword } from "./components/Auth/ChangePassword";
 import { LockScreen } from "./components/Auth/LockScreen";
 
 function App() {
-  const krishna = () => {
-    console.log(`krishna`);
-  };
-  const Vishakha = () => {
-    console.log(`vishakha`);
-  };
-  const vaibhav = () => {
-    console.log(`vaibhav`);
-  };
-  const [isExpanded, setIsExpanded] = useState(true);
 
-   const toggleSidebar = () => {
-     setIsExpanded(!isExpanded);
-   };
+  // const [isExpanded, setIsExpanded] = useState(true);
+
+  //  const toggleSidebar = () => {
+  //    setIsExpanded(!isExpanded);
+  //  };
   return (
     <div className="App">
       
-      {/* <Sidemenu /> */}
-      {/* <Table /> */}
-      {/* <Card /> */}
-      {/* <Forms /> */}
-      {/* <Card/> */}
-      {/* <Button/> */}
-      {/* <Sidemenu /> */}
-      {/* <Login />
-      <ForgotPassword />
-      <ChangePassword /> */}
+    
 
        <Routes>
       <Route element={<ReqireAuth/>}>
@@ -60,9 +43,7 @@ function App() {
         <Route path="/forgotpassword" element={<ForgotPassword/>}/>
         <Route path="/changepassword" element={<ChangePassword/>}/>
         <Route path="/lockscreen" element={<LockScreen/>}/>
-
       </Route>
-
      </Routes>
 
 
@@ -70,9 +51,9 @@ function App() {
      
     
 
-      {/* <Login /> */}
+    
   
-    <div className="app">
+    {/* <div className="app">
       <Sidemenu
         isExpanded={isExpanded}
         setIsExpanded={setIsExpanded}
@@ -85,7 +66,9 @@ function App() {
           toggleSidebar={toggleSidebar}
         />
       </main>
-    </div>
+    </div> */}
+
+    
     </div>
   );
 }
