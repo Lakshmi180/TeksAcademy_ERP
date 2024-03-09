@@ -5,13 +5,14 @@
   position: fixed;
   right: 0px;
   top: 0px;
+  background-color: #fff;
 }
 
 .navbar-header-max {
-  width: 95.5%;
+  width: 95%;
 }
 .navbar-header-min {
-  width: 83%;
+  width: 81%;
 }
 
 .navbar-main {
