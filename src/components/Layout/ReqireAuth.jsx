@@ -3,19 +3,65 @@ import { AuthContext } from '../../context/AuthContext/AuthContextProvider'
 import { Navigate, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import PublicAuth from './PublicAuth';
 
-const ReqireAuth = () => {
+// const ReqireAuth = () => {
+//   const { AuthState } = useContext(AuthContext);
+//   console.log('ReqireAuth', AuthState);
+//   const location = useLocation();
+
+
+//   return (AuthState.token && AuthState.password)?(
+//     <div>
+//       <PublicAuth>
+//         <Outlet/>
+//       </PublicAuth>
+//     </div>
+//   ) :(
+//       <div>
+//         <Navigate
+//           to='/login'
+//           state={{ from: location }}
+//           replace
+//         />
+//       </div>
+//     )
+
+
+// }
+
+
+
+
+const ReqireAuth=()=>{
   const { AuthState } = useContext(AuthContext);
-  console.log('ReqireAuth', AuthState);
+ 
   const location = useLocation();
 
+  console.log(AuthState, "kfhkhkg")
 
-  return AuthState.token?(
-    <div>
+  if(AuthState.token && !AuthState.password){
+    return (
+      <div>
+        <Navigate
+          to='/lockscreen'
+          state={{ from: location }}
+          replace
+        />
+      </div>
+    )
+  }
+
+
+  if(AuthState.token && AuthState.password){
+    return(
+      <div>
       <PublicAuth>
         <Outlet/>
       </PublicAuth>
     </div>
-  ) :(
+    )
+  }
+  else{
+    return(
       <div>
         <Navigate
           to='/login'
@@ -24,8 +70,8 @@ const ReqireAuth = () => {
         />
       </div>
     )
+  }
 
 
 }
-
-export default ReqireAuth
+export default ReqireAuth;

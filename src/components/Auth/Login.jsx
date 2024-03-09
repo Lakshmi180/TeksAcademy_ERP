@@ -8,6 +8,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import "../../assets/css/common/Login.css";
 import Loginvalidation from "./LoginValidation";
 import { AuthContext } from "../../context/AuthContext/AuthContextProvider";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   const { LoginAdmin, AuthState } = useContext(AuthContext);
@@ -18,6 +19,7 @@ export const Login = () => {
     email: "",
     password: "",
   });
+
 
   const handleInput = (event) => {
     setValues((prev) => ({ ...prev, [event.target.name]: event.target.value }));
@@ -67,7 +69,7 @@ export const Login = () => {
 
   return (
     <div>
-      <div className="login_bg_image vh-100">
+      <div className="login_bg_image w-full vh-100">
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
@@ -123,7 +125,10 @@ export const Login = () => {
                       <div className="mb-3">
                         <div className="float-end">
                           <a className="text-mute font-size-s" href="">
+                            <Link to="/forgotpassword" style={{cursor:"pointer"}}>
                             Forgot password?
+                            </Link>
+                           
                           </a>
                         </div>
                         <label
