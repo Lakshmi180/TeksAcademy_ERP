@@ -37,7 +37,7 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
                     <div>
                         <div className={`sidebar ${isExpanded ? 'expand' : ''}`}>
                             <button id='toggle-btn' type='button' onClick={toggleSidebar}>
-                                <RiMenu2Fill className="navbar_icons" />
+                                <MdFullscreen className="navbar_icons" />
                             </button>
                         </div>
                     </div>
