@@ -3,6 +3,7 @@ import { AuthContext } from '../../context/AuthContext/AuthContextProvider'
 import { Navigate, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import PublicAuth from './PublicAuth';
 
+
 // const ReqireAuth = () => {
 //   const { AuthState } = useContext(AuthContext);
 //   console.log('ReqireAuth', AuthState);
@@ -53,13 +54,15 @@ const ReqireAuth=()=>{
 
   if(AuthState.token && AuthState.password){
     return(
-      <div>
+      <div className='app'>
       <PublicAuth>
         <Outlet/>
       </PublicAuth>
     </div>
     )
   }
+
+
   else{
     return(
       <div>

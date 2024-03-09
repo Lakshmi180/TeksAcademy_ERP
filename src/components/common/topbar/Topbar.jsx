@@ -12,6 +12,7 @@ import "../../../assets/css/common/Topbar.css";
 import { Button } from "../design/Button";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext/AuthContextProvider";
+import { RiMenu2Fill } from "react-icons/ri";
 
 
 // export const Topbar = ({ setOpen, open }) => {
@@ -30,7 +31,7 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
 
 
     return (
-        <div className="">
+        <div className=" ">
             <nav className={`navbar-header ${isExpanded ? 'navbar-header-min' : 'navbar-header-max'}`} >
                 <div className="d-flex justify-content-between">
                     {/* left */}
@@ -88,21 +89,20 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
                                                 <IoIosSettings className="dropdown-icon" />
                                                 Settings
                                             </a>
-                                            <a href="#" className="dropdown-item mb-3">
+                                         
+                                               <span>
+                                                <Link to="/changepassword" className="dropdown-item mb-3">
                                                 <HiUserCircle className="dropdown-icon align-middle" />
-                                                <Link to="/changepassword">
-                                                change password
+                                                  Change <br /> password
                                                 </Link>
-                                              
-                                            </a>
+                                                </span>
+                                           
                                             <a href="#" className="dropdown-item mb-3 align-middle">
                                                 <FaLock className="dropdown-icon" />
                                                 <span onClick={LockTheScreen}>
                                                 Lockscreen
                                                 </span>
-                                                <span >
-                                                    Lockscreen
-                                                </span>
+                                                
 
                                             </a>
                                             <a href="#" className="dropdown-item mb-3 align-middle">
