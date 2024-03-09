@@ -1,11 +1,10 @@
 body {
-    background-color: #f3f3f9;
     font-family: "Poppins", sans-serif;
 }
 
 .fsize {
-    font-size: 0.8125rem;
-    font-weight: 500;
+    font-size: var(--erp-font-size-s);
+    font-weight: var(--erp-font-weight-medium);
 }
 .dropone-border {
     min-height: 230px;
@@ -44,13 +43,13 @@ body {
 
 
 .btn-soft-primary:hover {
-    color: white;
-    background-color: #405189;
+    color: var(--erp-white-color);
+    background-color: var(--erp-sky-500);
 }
 
 .btn-soft-primary {
-    color: #405189;
-    background-color: #e2e5ed;
+    color: var(--erp-sky-500);
+    background-color: var(--erp-gray-200);
 }
 
 /* .acc-plus::after {
@@ -63,15 +62,15 @@ body {
 }
 
 .react-datepicker__header {
-    background-color: #405189;
+    background-color: var(--erp-sky-500);
 }
 
 .react-datepicker__current-month {
-    color: white;
+    color: var(--erp-white-color);
 }
 
 .react-datepicker__day-name {
-    color: white;
+    color: var(--erp-white-color);
 }
 
 /* page*/

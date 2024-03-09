@@ -76,9 +76,7 @@ function App() {
     <Page/>
     <Modal/>
     <Tab/>
-    <Accordian/> */}
-    {/* <Button/>
-      <Sidemenu />
+
       <Login /> */}
       {/* <Table /> */}
       {/* <Card /> */}

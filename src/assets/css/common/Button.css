@@ -1,22 +1,21 @@
 .btn-primary {
-    background-color: #405189;
-    border: #405189;
-
+    background-color: var(--erp-sky-500);
+    border: var(--erp-sky-500);
 }
 
 .btn-outline-primary {
-    color: #405189;
-    border-color: #405189;
+    color: var(--erp-sky-500);
+    border-color: var(--erp-sky-500);
 }
 
 .btn-outline-primary:hover {
-    background-color: #405189;
-    border: #405189;
+    background-color: var(--erp-sky-500);
+    border: var(--erp-sky-500);
 
 }
 
 .btn-primary:hover {
-    background-color: #405189;
+    background-color: var(--erp-sky-500);
 }
 
 .btn-load .spinner-border {
