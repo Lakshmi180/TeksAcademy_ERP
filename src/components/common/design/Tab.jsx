@@ -1,6 +1,7 @@
 import React from 'react'
 import { RiCheckboxMultipleBlankFill } from "react-icons/ri";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import "../../../assets/css/Tab.css"
 function Tab() {
     return (
         <div>

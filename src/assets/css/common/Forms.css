@@ -18,10 +18,6 @@ body {
     scrollbar-width: thin;
 }
 
-.nav-link.active {
-    border-bottom: 2px solid #0ab39c;
-    color: #0ab39c
-}
 
 .btn-soft-primary:hover {
     color: white;

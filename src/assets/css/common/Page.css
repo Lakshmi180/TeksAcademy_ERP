@@ -110,5 +110,5 @@
 }
 
 .nav-link.active {
-    border-bottom: #fff;
+    border-bottom: none;
 }
