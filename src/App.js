@@ -22,10 +22,10 @@ import Tab from "./components/common/design/Tab";
 import Modal from "./components/common/design/Modal";
 import Page from "./components/common/design/Page";
 import Button from "./components/common/design/Button";
-
+ 
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
-
+ 
   const toggleSidebar = () => {
     setIsExpanded(!isExpanded);
   };
@@ -43,7 +43,7 @@ function App() {
           setIsExpanded={setIsExpanded}
           toggleSidebar={toggleSidebar}
         />
-
+ 
         <div className="mt-5 pt-5">
           <Routes>
             <Route path="/table" element={<Table />} />
@@ -61,7 +61,7 @@ function App() {
     </div>
   );
 }
-
+ 
 export default App;
 {
   /* <Routes>
