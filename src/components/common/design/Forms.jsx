@@ -1,7 +1,17 @@
 import React from 'react'
 import { useState } from 'react';
+import { IoIosClose } from "react-icons/io";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
+import { MdHome } from "react-icons/md";
+import { FaHeart } from "react-icons/fa6";
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import { IoIosArrowRoundBack } from "react-icons/io";
+import { RiCheckboxMultipleBlankFill } from "react-icons/ri";
 import "../../../assets/css/common/Forms.css"
-export default function Form() {
+function Form() {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCity, setSelectedCity] = useState('');
     const cities = [
@@ -11,20 +21,17 @@ export default function Form() {
         "Liverpool", "London", "Manchester",
         "Michigan", "New York", "Washington"
     ];
-   
-   
-
+    const [selectedDate, setSelectedDate] = useState(null);
     const handleInputChange = (event) => {
         setSearchTerm(event.target.value);
     };
-
     const handleCitySelect = (city) => {
         setSelectedCity(city);
         setSearchTerm(city);
     };
 
     const filteredCities = cities.filter(city =>
-        city.toLowerCase().includes(searchTerm.toLowerCase()) 
+        city.toLowerCase().includes(searchTerm.toLowerCase())
     );
 
 
@@ -713,7 +720,7 @@ export default function Form() {
                                                     onChange={handleInputChange}
                                                     data-bs-toggle="dropdown"
                                                 />
-                                                <ul className=" form-select dropdown-menu px-3" size="3"  aria-label="size 3 select example">
+                                                <ul className=" form-select dropdown-menu px-3" size="3" aria-label="size 3 select example">
                                                     {filteredCities.map((city, index) => (
                                                         <li key={index}>
                                                             <a
@@ -721,9 +728,9 @@ export default function Form() {
                                                                 onClick={() => handleCitySelect(city)}
                                                             >
                                                                 {city}
-                                                             
+
                                                             </a>
-                                                            </li>
+                                                        </li>
                                                     ))}
                                                     {filteredCities.length === 0 && (
                                                         <li>
@@ -743,10 +750,107 @@ export default function Form() {
 
                 </div>
 
+            </div>        
+            <div class="container mt-4 bg-white">
+                <div class=" row fs-6 p-3 ">
+
+                    <h5>Pagination</h5>
+
+                    <nav aria-label="...">
+                        <ul class="pagination pagination-md">
+                            <li class="page-item disabled">
+
+                                <a class="page-link" href="#" tabindex="-1"> <IoIosArrowRoundBack /> Prev</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active">
+                                <a class="page-link" href="#">2 </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next <IoIosArrowRoundForward /></a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <nav aria-label="...">
+                        <ul class="pagination pagination-sm">
+                            <li class="page-item disabled">
+                                <span class="page-link"><IoIosArrowBack /></span>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active">
+                                <span class="page-link">
+                                    2
+
+                                </span>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#"><IoIosArrowForward /></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination pagination-rounded pagination-sm">
+                            <li class="page-item disabled p-1">
+                                <a href="#" class="page-link rounded"><IoIosArrowRoundBack /></a>
+                            </li>
+                            <li class="page-item p-1">
+                                <a href="#" class="page-link rounded">1</a>
+                            </li>
+                            <li class="page-item active p-1">
+                                <a href="#" class="page-link rounded">2</a>
+                            </li>
+                            <li class="page-item p-1">
+                                <a href="#" class="page-link rounded">3</a>
+                            </li>
+                            <li class="page-item p-1">
+                                <a href="#" class="page-link rounded">4</a>
+                            </li>
+                            <li class="page-item p-1">
+                                <a href="#" class="page-link rounded">5</a>
+                            </li>
+                            <li class="page-item p-1">
+                                <a href="#" class="page-link rounded"><IoIosArrowRoundForward /></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <nav arial-label="page navigation example">
+
+                        <nav aria-label="...">
+                            <ul class="pagination pagination-sm">
+                                <li class="page-item disabled p-1">
+                                    <a class="page-link rounded" href="#" tabindex="-1"><IoIosArrowRoundBack /> </a>
+                                </li>
+                                <li class="page-item p-1 "><a class="page-link rounded" href="#">1</a></li>
+                                <li class="page-item active p-1 "><a class="page-link rounded" href="#">2</a></li>
+                                <li class="page-item p-1 "><a class="page-link rounded" href="#">3</a></li>
+                                <li class="page-item p-1 ">
+                                    <a class="page-link rounded" href="#"> <IoIosArrowRoundForward /></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </nav>
+
+                </div>
+
             </div>
-
-
+            <div class="container mt-4 bg-white ">
+                <div class=" row fs-6 p-3 ">
+                    <h5 class="text-center">Picker</h5>
+                    <div class="col text-center">
+                        <DatePicker
+                            selected={selectedDate}
+                            onChange={date => setSelectedDate(date)}
+                            dateFormat="MMMM d, yyyy"
+                            className='date-pic'
+                        />
+                    </div>
+                </div>
+            </div>
+           
         </div>
-
     )
 }
+export default Form

@@ -1,6 +1,6 @@
 import React from 'react'
 import "../../../assets/css/common/Button.css"
-export default function Button() {
+ function Button() {
     return (
         <div>
             <div class="container mt-5">
@@ -27,3 +27,4 @@ export default function Button() {
         </div>
     )
 }
+export default Button
