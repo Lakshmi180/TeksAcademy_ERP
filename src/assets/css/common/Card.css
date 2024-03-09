@@ -43,7 +43,7 @@
   }
   
 .card-link{
-    color: #405189;
+    color: var( --erp-blue-color);
     font-size: 13px;
     padding-top: 15px;
     text-decoration: underline;
@@ -65,6 +65,6 @@
     color: #495057;
 }
 
-.book-s {
+.bookmark-icon  {
     width: 12px;
 }

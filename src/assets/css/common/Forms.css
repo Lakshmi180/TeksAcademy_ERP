@@ -6,3 +6,27 @@ body{
     font-size: 0.8125rem;
     font-weight: 500;
 }
+.dropzone {
+    min-height: 230px;
+    border: 2px dashed #e9ebec;
+    background: #fff;
+    border-radius: 6px;
+}
+.filepond{
+  
+    border: 2px dashed #e9ebec;
+    background: #fff;
+    border-radius: 6px;
+}
+.filepond-profile-picture {
+    border: 2px dashed #e9ebec;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.img-box-fsize {
+    font-size: 14px;
+}
+.form-fsize{
+    font-size: 14px;
+}

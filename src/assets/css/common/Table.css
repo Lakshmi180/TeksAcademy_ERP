@@ -29,7 +29,7 @@
     font-size: 12px;
 }
 .day-dropdown{
-    font-size: 12px;
+    font-size: 13px;
     color: #878a99;
     font-family: Poppins, sans-serif;
 }
@@ -126,3 +126,13 @@ img{
 .bg-danger{
     background-color: #f06548 !important;
 }
+.table-dropdown-menu{
+    font-size: 13px !important;
+  position: absolute !important;
+  inset: 0px 0px auto auto !important;
+  transform: translate3d(0px 37px 0px);
+}
+
+
+
+

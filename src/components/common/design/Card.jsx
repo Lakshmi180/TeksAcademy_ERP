@@ -17,8 +17,8 @@ function Card() {
     <div className="col-xl-3 col-md-6  mb-4 ">
       <div className="card Totalearning d-flex justify-content-between shadow   bg-body-tertiary rounded">
         <div className="card-body">
-          <div className="d-flex justify-content-between">
-            <p className=" fw-medium text-black-50 head">TOTAL EARNING</p>
+          <div className="d-flex justify-content-between mb-3">
+            <p className=" fw-medium text-muted m-0">TOTAL EARNING</p>
             <h5 className="text-success fs-14 card-number">
               <HiArrowUpRight /> +16.24%
             </h5>
@@ -30,7 +30,7 @@ function Card() {
             </h3>
           </div>
           <div className="d-flex justify-content-between">
-            <a href="#" className="link card-link">
+            <a href="#" className="link card-link text-decoration-underline">
               View net earnings
             </a>
             <div className="p-2 border d-flex justify-content-center text-success bg-success-subtle">
@@ -44,8 +44,8 @@ function Card() {
     <div className=" col-xl-3 col-md-6  mb-4 ">
       <div className="card orders shadow   bg-body-tertiary rounded">
         <div className="card-body">
-          <div className="d-flex justify-content-between">
-            <p className=" fw-medium head text-black-50">ORDERS</p>
+          <div className="d-flex justify-content-between mb-3">
+            <p className=" fw-medium text-muted m-0">ORDERS</p>
             <h5 className="text-danger fs-14 card-number">
               <GoArrowDownRight /> -3.57%
             </h5>
@@ -57,7 +57,7 @@ function Card() {
             </h3>
           </div>
           <div className="d-flex justify-content-between">
-            <a href="#" className="link card-link">
+            <a href="#" className="link card-link text-decoration-underline">
               View All orders
             </a>
             <div className="p-2 border d-flex justify-content-center text-info bg-info-subtle">
@@ -71,8 +71,8 @@ function Card() {
     <div className=" col-xl-3 col-md-6  mb-4">
       <div className="card  customers shadow   bg-body-tertiary rounded">
         <div className="card-body">
-          <div className="d-flex justify-content-between">
-            <p className="fw-medium head text-black-50">CUSTOMERS</p>
+          <div className="d-flex justify-content-between mb-3">
+            <p className="fw-medium text-muted m-0">CUSTOMERS</p>
             <h5 className="text-success fs-14 card-number ">
               <HiArrowUpRight /> +29.08%
             </h5>
@@ -84,7 +84,7 @@ function Card() {
             </h3>
           </div>
           <div className="d-flex justify-content-between">
-            <a href="#" className="link card-link">
+            <a href="#" className="link card-link text-decoration-underline">
               View Customers
             </a>
             <div className="p-2 border d-flex justify-content-center text-warning bg-warning-subtle">
@@ -98,8 +98,8 @@ function Card() {
     <div className="col-xl-3 col-md-6  mb-4">
       <div className="card my-balance shadow   bg-body-tertiary rounded">
         <div className="card-body">
-          <div className="d-flex justify-content-between">
-            <p className=" fw-medium text-black-50">MY BALANCE</p>
+          <div className="d-flex justify-content-between mb-3">
+            <p className=" fw-medium text-muted m-0">MY BALANCE</p>
             <h5 className="text-black-50 fs-14 card-number">+0.00%</h5>
           </div>
           <div className="d-flex justify-content-between">
@@ -109,7 +109,7 @@ function Card() {
             </h3>
           </div>
           <div className="d-flex justify-content-between ">
-            <a href="#" className="link card-link">
+            <a href="#" className="link card-link  text-decoration-underline">
               View My Balance
             </a>
             <div className="p-2 border d-flex justify-content-center text-primary bg-primary-subtle">
@@ -151,7 +151,7 @@ function Card() {
                                 </a>
                                 <a href='#' class="card-link link-success text-decoration-none ">
                                     Bookmark
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark book-s m-2" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark bookmark-icon m-2" viewBox="0 0 16 16">
                                         <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
                                     </svg>
                                 </a>
@@ -195,7 +195,7 @@ function Card() {
                                 </a>
                                 <a href='#' class="card-link link-success text-decoration-none">
                                     Bookmark
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark book-s m-2" viewBox="0 0 16 16">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark bookmark-icon m-2" viewBox="0 0 16 16">
                                         <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
                                     </svg>
                                 </a>

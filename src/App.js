@@ -21,22 +21,23 @@ import { Route, Routes } from "react-router-dom";
 import ReqireAuth from "./components/Layout/ReqireAuth";
 import PublicAuth from "./components/Layout/PublicAuth";
 
-import { Login } from "./components/Auth/Login";
+// import { Login } from "./components/Auth/Login";
 import Dashboard from "./components/pages/dashboard/Dashboard";
 import PublicLayout from "./components/Layout/PublicLayout";
+import WhatsppChat from "./components/common/design/WhatsappChat";
 
 function App() {
   return (
     <div className="App">
       {/* <Sidemenu /> */}
-     <Table />
-     {/* <Card /> */}
-      {/* <Forms /> */}
+     {/* <Table /> */}
+     {/* <Card />  */}
+       <Forms /> 
     {/* <Card/> */}
     {/* <Button/> */}
       {/* <Sidemenu /> */}
       {/* <Login /> */}
-
+        {/* <WhatsppChat /> */}
       {/* <Routes>
       <Route element={<ReqireAuth/>}>
         <Route path="/" element={<Dashboard/>} />
