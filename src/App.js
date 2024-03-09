@@ -32,12 +32,11 @@ function App() {
   };
   const [isExpanded, setIsExpanded] = useState(true);
 
-   const toggleSidebar = () => {
-     setIsExpanded(!isExpanded);
-   };
+  const toggleSidebar = () => {
+    setIsExpanded(!isExpanded);
+  };
   return (
     <div className="App">
-      
       {/* <Sidemenu /> */}
       {/* <Table /> */}
       {/* <Card /> */}
@@ -49,43 +48,31 @@ function App() {
       <ForgotPassword />
       <ChangePassword /> */}
 
-       <Routes>
-      <Route element={<ReqireAuth/>}>
-        <Route path="/" element={<Dashboard/>} />
-      </Route>
-
-
-      <Route element={<PublicLayout/>}>
-        <Route path="/login" element={<Login/>}/>
-        <Route path="/forgotpassword" element={<ForgotPassword/>}/>
-        <Route path="/changepassword" element={<ChangePassword/>}/>
-        <Route path="/lockscreen" element={<LockScreen/>}/>
-
-      </Route>
-
-     </Routes>
-
-
-
-     
-    
-
-      {/* <Login /> */}
-  
-    <div className="app">
-      <Sidemenu
-        isExpanded={isExpanded}
-        setIsExpanded={setIsExpanded}
-        toggleSidebar={toggleSidebar}
-      />
-      <main className="">
-        <Topbar
+      <div className="app">
+        <Sidemenu
           isExpanded={isExpanded}
           setIsExpanded={setIsExpanded}
           toggleSidebar={toggleSidebar}
         />
-      </main>
-    </div>
+        <main className="">
+          <Topbar
+            isExpanded={isExpanded}
+            setIsExpanded={setIsExpanded}
+            toggleSidebar={toggleSidebar}
+          />
+        </main>
+      </div>
+      <Routes>
+        <Route element={<ReqireAuth />}>
+          <Route path="/" element={<Dashboard />} />
+        </Route>
+        <Route element={<PublicLayout />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/forgotpassword" element={<ForgotPassword />} />
+          <Route path="/changepassword" element={<ChangePassword />} />
+          <Route path="/lockscreen" element={<LockScreen />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
