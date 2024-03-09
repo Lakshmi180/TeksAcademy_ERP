@@ -20,7 +20,11 @@ body {
   --erp-sky-300: #7dd3fc;
   --erp-yellow-color: #d19b3d;
   --erp-lightblack-color: #2e353d;
-  --erp--text-mute: #878a99;
+  --erp-text-mute: #878a99;
+
+  /* New */
+  --erp-sky-100: #b3b9d0;
+  --erp-sky-200: #878a99;
 
   /* Text Color */
   --erp-text-grey-color: #abb9e8;
@@ -33,6 +37,9 @@ body {
   --erp-font-size-m: 0.9375rem;
   --erp-font-size-l: 18px;
   --erp-font-size-xl: 20px;
+
+  --erp-fs-16: 1rem;
+  --erp-fs-13: 13px;
 
   /* font-weight */
   --erp-font-weight-thin: 100;
@@ -98,7 +105,7 @@ body {
 .main_menu i {
   display: inline-block;
   min-width: 1.75rem;
-  font-size: 18px;
+  font-size: var(--erp-font-size-l);
   line-height: inherit;
 }
 
@@ -107,7 +114,7 @@ a {
 }
 
 .text-mute {
-  color: var(--erp--text-mute) !important;
+  color: var(--erp-text-mute) !important;
 }
 
 .form-control {

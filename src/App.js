@@ -7,14 +7,7 @@ import "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.j
 import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js";
 
 // components
-import { Sidemenu } from "./components/common/sidemenu/Sidemenu";
-import Table from "./components/common/design/Table";
-// import Card from "./components/common/design/Card";
 import { Login } from "./components/Auth/Login";
-
-import Forms from "./components/common/design/Forms";
-
-import Button from "./components/common/design/Button";
 
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import ReqireAuth from "./components/Layout/ReqireAuth";
@@ -28,13 +21,6 @@ import { LockScreen } from "./components/Auth/LockScreen";
 function App() {
   return (
     <div className="App">
-      {/* <Sidemenu /> */}
-      {/* <Table /> */}
-      {/* <Card /> */}
-      {/* <Forms /> */}
-      {/* <Card/> */}
-      {/* <Button/> */}
-      {/* <Sidemenu /> */}
       <Login />
       <ForgotPassword />
       <ChangePassword />
@@ -49,8 +35,6 @@ function App() {
           <Route path="/login" element={<Login />} />
         </Route>
       </Routes> */}
-
-      {/* <Login /> */}
     </div>
   );
 }
