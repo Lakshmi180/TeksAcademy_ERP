@@ -1,15 +1,16 @@
-.card-number{
+body {
+    font-family: Poppins, sans-serif;
+}
+
+.card-number {
     font-size: 14px;
     font-weight: 400;
 }
-.card-body .dollar{
+
+.card-body .dollar {
     font-size: 22px;
 }
-.card-body{
-    font-family: Poppins, sans-serif;;
-}
 .Totalearning{
-
     transition:all 0.3s linear;
       
  }
@@ -44,12 +45,61 @@
   
 .card-link{
     color: var( --erp-blue-color);
+}
+.card-body {
+    font-family: Poppins, sans-serif;
+    ;
+}
+
+.Totalearning {
+
+    transition: all 0.3s linear;
+
+}
+
+.Totalearning:hover {
+    transform: translateY(-7px);
+    box-shadow: 0px 5px 0px 5px solid grey;
+}
+
+.orders {
+
+    transition: all 0.3s linear;
+
+}
+
+.orders:hover {
+    transform: translateY(-7px);
+}
+
+.customers {
+
+    transition: all 0.3s linear;
+
+}
+
+.customers:hover {
+    transform: translateY(-7px);
+}
+
+.my-balance {
+
+    transition: all 0.3s linear;
+
+}
+
+.my-balance:hover {
+    transform: translateY(-7px);
+}
+
+.card-link {
+    color: #405189;
     font-size: 13px;
     padding-top: 15px;
     text-decoration: underline;
-  font-family: Poppins, sans-serif;;
+    font-family: Poppins, sans-serif;
+    ;
 }
-
 
 .card-imgs {
     width: 50px;
