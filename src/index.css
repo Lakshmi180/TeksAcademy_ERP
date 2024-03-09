@@ -15,33 +15,47 @@ body {
   /* color #4676a0*/
   --erp-primary-color: #3a4876;
   --erp-secondary-color: #eb6329;
+  --erp-orange-500: #f06548;
+  --erp-orange-600: #da3412;
   --erp-light-blue-color: #abb9e8;
   --erp-gray-color: #878a99;
   --erp-white-color: #fff;
   --erp-sky-500: #405189;
   --erp-sky-300: #7dd3fc;
+
+  --erp-sky-400:   #2385ba;
+  --erp-sky-light:  #dff0fa ;
   --erp-yellow-color: #d19b3d;
   --erp-lightblack-color: #2e353d;
   --erp-text-mute: #878a99;
+  --erp-green-400 :#0ab39c ;
+  --erp-green-light: #daf4f0;
 
   /* font-size */
+  --erp-font-size-xxs: 10px;
   --erp-font-size-xs: 12px;
   --erp-font-size-s: 0.8125rem;
   --erp-font-size-m: 0.9375rem;
   --erp-font-size-l: 1.25rem;
   --erp-font-size-24: 24px;
 
+  --erp-font-size-22: 22px;
+  --erp-font-size-14: 14px;
   --erp-fs-16: 1rem;
   --erp-fs-13: 13px;
+  --erp-fs-14: 14px;
+  --erp-fs-17: 17px;
 
   /* font-weight */
   --erp-font-weight-thin: 100;
   --erp-font-weight-light: 300;
   --erp-font-weight-regular: 400;
   --erp-font-weight-medium: 500;
+  --erp-font-weight-lightbold: 600;
   --erp-font-weight-bold: 700;
 
   /* line-height */
+  --erp-xs-lh: 1.2;
   --erp-font-xs-light-lh: 12px 300 1.2;
   /* Extra Small, Light, Line Height 1.2 */
   --erp-font-s-regular-lh: 14px 400 1.5;
@@ -52,6 +66,7 @@ body {
   /* Large, Bold, Line Height 1.8 */
   --erp-font-xl-bold-lh: 20px 700 2;
   /* Extra Large, Bold, Line Height 2.0 */
+
 }
 
 /* Dark mode colors */

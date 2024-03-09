@@ -2,16 +2,31 @@ import { React } from "react";
 import "../../../assets/css/common/Table.css";
 import { TiChartBar } from "react-icons/ti";
 import { BiSolidReport } from "react-icons/bi";
-import { MdOutlineFileDownload } from "react-icons/md";
+import { MdOutlineFileDownload, MdPadding, MdWidthFull } from "react-icons/md";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { RxCrossCircled } from "react-icons/rx";
+// import { CiSettings } from "react-icons/ci";
+// import { FaUser } from "react-icons/fa";
+// import { HiOutlineArchiveBoxArrowDown } from "react-icons/hi2";
+// import { AiOutlineAudioMuted } from "react-icons/ai";
+// import { RiDeleteBin5Line } from "react-icons/ri";
+// import { BiDotsVerticalRounded } from "react-icons/bi";
+// import { IoCheckmarkDoneSharp } from "react-icons/io5";
+// import { HiDotsHorizontal } from "react-icons/hi";
+// import { IoMdSend } from "react-icons/io";
+// import { BsReply } from "react-icons/bs";
+// import { AiOutlineShareAlt } from "react-icons/ai";
+// import { MdContentCopy } from "react-icons/md";
+// import { FaRegBookmark } from "react-icons/fa";
 
 function Table() {
   return (
     <div>
       <div className="p-4 container">
-        <div className="row ">
-          <div className="col-xl-6  ">
+
+        {/* Best Selling Product & top sellers table starts */}
+        <div className="row  ">
+          <div className="col-xl-6 mb-2  ">
             <div className="card ">
               <div className="card-header  align-items-center d-flex justify-content-between p-3 border-bottom bg-transparent">
                 <div className="">
@@ -34,7 +49,7 @@ function Table() {
                     >
                       Today
                     </button>
-                    <ul className="dropdown-menu">
+                    <ul className="dropdown-menu table-dropdown-menu">
                       <li>
                         <a className="dropdown-item" href="#">
                           Today
@@ -430,7 +445,7 @@ function Table() {
                     >
                       Report
                     </button>
-                    <ul className="dropdown-menu">
+                    <ul className="dropdown-menu table-dropdown-menu">
                       <li>
                         <a className="dropdown-item" href="#">
                           Download Report
@@ -769,7 +784,9 @@ function Table() {
             </div>
           </div>
         </div>
+           
 
+           {/* Recent Order Table start */}
         <div className="row mt-3">
           <div className="col-xl-8">
             <div className="card">
@@ -791,7 +808,10 @@ function Table() {
               </div>
 
               <div className="card-body p-0">
-                <div className="table-responsive table-card">
+                <div
+                  className="table-responsive table-card "
+                  style={{ maxHeight: "275px", overflowY: "scroll", scrollbarWidth:"thin" }}
+                >
                   <table className="table table-borderless table-centered align-middle table-nowrap mb-0">
                     <thead className="  table-light ">
                       <tr className="shadow-sm bg-body-tertiary rounded  border-bottom  ">
@@ -1077,6 +1097,98 @@ function Table() {
                           </h5>
                         </td>
                       </tr>
+                      <tr className="">
+                        <td className="text-start">
+                          <a
+                            href="apps-ecommerce-order-details.html"
+                            className="fw-medium  order-code text-start "
+                          >
+                            #VZ2112
+                          </a>
+                        </td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="flex-shrink-0 me-2">
+                              <img
+                                src="https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
+                                alt=""
+                                className="avatar-xs rounded-circle tbl-user-img"
+                              />
+                            </div>
+                            <div className="flex-grow-1 td-sub-name text-black text-start ">
+                              Alex Smith
+                            </div>
+                          </div>
+                        </td>
+                        <td className="td-sub-name text-start ">Clothes</td>
+                        <td>
+                          <span className="text-success text-start tbl-amount">
+                            $109.00
+                          </span>
+                        </td>
+                        <td className="td-sub-name text-start ">
+                          Zoetic Fashion
+                        </td>
+                        <td className="text-start">
+                          <span className="badge bg-success-subtle fw-medium text-success text-start ">
+                            Paid
+                          </span>
+                        </td>
+                        <td>
+                          <h5 className="fs-14 fw-medium mb-0 td-name text-black text-start ">
+                            5.0
+                            <span className="text-muted fs-11 ms-1 votes text-start ">
+                              (61 votes)
+                            </span>
+                          </h5>
+                        </td>
+                      </tr>
+                      <tr className="">
+                        <td className="text-start">
+                          <a
+                            href="apps-ecommerce-order-details.html"
+                            className="fw-medium  order-code text-start "
+                          >
+                            #VZ2112
+                          </a>
+                        </td>
+                        <td>
+                          <div className="d-flex align-items-center">
+                            <div className="flex-shrink-0 me-2">
+                              <img
+                                src="https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg"
+                                alt=""
+                                className="avatar-xs rounded-circle tbl-user-img"
+                              />
+                            </div>
+                            <div className="flex-grow-1 td-sub-name text-black text-start ">
+                              Alex Smith
+                            </div>
+                          </div>
+                        </td>
+                        <td className="td-sub-name text-start ">Clothes</td>
+                        <td>
+                          <span className="text-success text-start tbl-amount">
+                            $109.00
+                          </span>
+                        </td>
+                        <td className="td-sub-name text-start ">
+                          Zoetic Fashion
+                        </td>
+                        <td className="text-start">
+                          <span className="badge bg-success-subtle fw-medium text-success text-start ">
+                            Paid
+                          </span>
+                        </td>
+                        <td>
+                          <h5 className="fs-14 fw-medium mb-0 td-name text-black text-start ">
+                            5.0
+                            <span className="text-muted fs-11 ms-1 votes text-start ">
+                              (61 votes)
+                            </span>
+                          </h5>
+                        </td>
+                      </tr>
                     </tbody>
                   </table>
                 </div>
@@ -1084,6 +1196,8 @@ function Table() {
             </div>
           </div>
         </div>
+
+        {/* Hoverable Table start */}
         <div className="row mt-3">
           <div className="col-lg-12">
             <div className="card card-hover">
@@ -1386,7 +1500,8 @@ function Table() {
               </div>
             </div>
           </div>
-
+          </div>
+          {/* Card Tables starts */}
           <div className="row mt-3">
             <div className="col-xl-12">
               <div className="card">
@@ -1604,7 +1719,9 @@ function Table() {
               </div>
             </div>
           </div>
-        </div>
+       
+
+        
       </div>
     </div>
   );

@@ -3,14 +3,49 @@ body {
 }
 
 .card-number {
-    font-size: 14px;
-    font-weight: 400;
+    font-size: var(--erp-font-size-14);
+    font-weight: var(--erp-font-weight-regular);
 }
 
 .card-body .dollar {
-    font-size: 22px;
+    font-size: var(--erp-font-size-22);
 }
-
+.Totalearning{
+    transition:all 0.3s linear;
+      
+ }
+ .Totalearning:hover{
+     transform: translateY(-7px);
+     box-shadow: 0px 5px 0px 5px solid grey;
+ }
+ .orders{
+ 
+     transition:all 0.3s linear;
+       
+  }
+  .orders:hover{
+      transform: translateY(-7px);
+  }
+  .customers{
+ 
+     transition:all 0.3s linear;
+       
+  }
+  .customers:hover{
+      transform: translateY(-7px);
+  }
+  .my-balance{
+ 
+     transition:all 0.3s linear;
+       
+  }
+  .my-balance:hover{
+      transform: translateY(-7px);
+  }
+  
+.card-link{
+    color: var( --erp-blue-color);
+}
 .card-body {
     font-family: Poppins, sans-serif;
     ;
@@ -24,7 +59,7 @@ body {
 
 .Totalearning:hover {
     transform: translateY(-7px);
-    box-shadow: 0px 5px 0px 5px solid grey;
+    box-shadow: 0px 5px 0px 5px solid var(--erp-gray-color);
 }
 
 .orders {
@@ -58,8 +93,8 @@ body {
 }
 
 .card-link {
-    color: #405189;
-    font-size: 13px;
+    color: var(--erp-primary-color);
+    font-size: var(--erp-fs-13);
     padding-top: 15px;
     text-decoration: underline;
     font-family: Poppins, sans-serif;
@@ -77,9 +112,9 @@ body {
 }
 
 .card-colr {
-    color: #495057;
+    color: var(--erp-text-mute);
 }
 
-.book-s {
+.bookmark-icon  {
     width: 12px;
 }

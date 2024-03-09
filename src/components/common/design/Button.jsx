@@ -1,13 +1,13 @@
 import React from 'react'
 import "../../../assets/css/common/Button.css"
- function Button() {
+function Button() {
     return (
         <div>
             <div class="container mt-5">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="hstack flex-wrap gap-2 mb-3 mb-lg-0">
-                            <button type="button" class="btn btn-primary waves-effect waves-light  ">Primary</button>
+                            <button type="button" class="btn btn-primary waves-effect waves-light">Primary</button>
                             <button type="button" class="btn btn-outline-primary waves-effect waves-light ">Primary</button>
                             <button type="button" class="btn rounded-pill btn-primary waves-effect waves-light ">Primary</button>
                             <button type="button" class="btn btn-ghost-primary waves-effect waves-light ">Primary</button>
