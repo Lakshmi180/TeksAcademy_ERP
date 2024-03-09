@@ -8,8 +8,6 @@ import { Login } from "./components/Auth/Login";
 import Forms from "./components/common/design/Forms";
 
 import Button from "./components/common/design/Button";
-import { Route, Routes, Outlet, BrowserRouter } from "react-router-dom";
-
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import ReqireAuth from "./components/Layout/ReqireAuth";
 import PublicAuth from "./components/Layout/PublicAuth";
