@@ -1,8 +1,17 @@
 import React, { useEffect, useState } from "react";
 import "../../../assets/css/common/Sidemenu.css";
 import { Link } from "react-router-dom";
+import Table from "../design/Table";
+import Card from "../design/Card";
+import { Login } from "../../Auth/Login";
+import Forms from "../design/Forms";
+import Page from "../design/Page";
+import Modal from "../design/Modal";
+import Tab from "../design/Tab";
+import Accordian from "../design/Accordian";
 
 // icons start
+import { CiSettings } from "react-icons/ci";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { FaRegUserCircle } from "react-icons/fa";
 import { AiOutlineLine } from "react-icons/ai";
@@ -13,6 +22,9 @@ import { AiOutlineFileAdd } from "react-icons/ai";
 import { CgWebsite } from "react-icons/cg";
 import { TbMessageReport } from "react-icons/tb";
 import { IoSettingsOutline } from "react-icons/io5";
+import { ForgotPassword } from "../../Auth/ForgotPassword";
+import { LockScreen } from "../../Auth/LockScreen";
+import { ChangePassword } from "../../Auth/ChangePassword";
 // icons end
 export const Sidemenu = ({ isExpanded }) => {
     return (
@@ -178,9 +190,75 @@ export const Sidemenu = ({ isExpanded }) => {
                         {/* Settings */}
                         <li className="sidebar-item">
                             <a href="#" className='sidebar-link'>
-                                <LuLayoutDashboard className="main_icon" />
+                                <CiSettings className="main_icon" />
                                 <span>Settings</span>
                             </a>
+                        </li>
+                        <li className="sidebar-item mb-2">
+                            <a href="#" className='sidebar-link has-dropdown collapsed' data-bs-toggle="collapse" data-bs-target="#design"
+                                aria-expanded="false" aria-controls="design">
+                                <TbMessageReport className="main_icon" />
+                                <span>Design</span>
+                            </a>
+                            <ul
+                                id="design"
+                                className="sidebar-dropdown list-unstyled collapse"
+                                data-bs-parent="#sidebar"
+                            >
+                                <li className="sidebar-item">
+                                    <Link to="/table" className="sidebar-link">
+                                        <AiOutlineLine className="sub_icon" />Table
+                                    </Link>
+                                </li>
+                                <li className="sidebar-item">
+                                    <Link to="/card" className="sidebar-link">
+                                        <AiOutlineLine className="sub_icon" />Card
+                                    </Link>
+                                </li>
+                                <li className="sidebar-item">
+                                    <Link to="/forms" className="sidebar-link">
+                                        <AiOutlineLine className="sub_icon" />Forms
+                                    </Link>
+                                </li>
+
+                                <li className="sidebar-item">
+                                    <Link to="whatsapp" className="sidebar-link">
+                                        <AiOutlineLine className="sub_icon" />Whatsapp Chat
+                                    </Link>
+                                </li>
+
+                                <li className="sidebar-item">
+                                    <Link to="/accordian" className="sidebar-link">
+                                        <AiOutlineLine className="sub_icon" />Accordions
+                                    </Link>
+                                </li>
+                                <li className="sidebar-item">
+                                    <Link to="/tabs" className="sidebar-link">
+                                        <AiOutlineLine className="sub_icon" />Tabs
+                                    </Link>
+                                </li>
+                                <li className="sidebar-item">
+                                    <Link to="/modal" className="sidebar-link">
+                                        <AiOutlineLine className="sub_icon" />Modal
+                                    </Link>
+                                </li>
+                                <li className="sidebar-item">
+                                    <Link to="/page" className="sidebar-link">
+                                        <AiOutlineLine className="sub_icon" />Page
+                                    </Link>
+                                </li>
+                                <li className="sidebar-item">
+                                    <Link to="/button" className="sidebar-link">
+                                        <AiOutlineLine className="sub_icon" />Button
+                                    </Link>
+                                </li>
+                                <li className="sidebar-item">
+                                    <Link to="/button" className="sidebar-link">
+                                        <AiOutlineLine className="sub_icon" />Button
+                                    </Link>
+                                </li>
+                            </ul>
+
                         </li>
                     </ul>
 
@@ -191,13 +269,8 @@ export const Sidemenu = ({ isExpanded }) => {
                     </div> */}
                 </aside>
 
-                {/* <div className="main_sidebar p-3">
-                    <div className="text-center">
-                        <h1>Sidebar Bootstrap</h1>
-                    </div>
-                </div> */}
+
             </div>
         </div>
-
     );
 };

@@ -41,7 +41,7 @@ function Form() {
                 <div class="row fs-6">
                     <div class="col-lg-12">
                         <div class="card border-0 bg-transparent ">
-                            <div className='text-start'>
+                            <div className='text-start ms-3'>
                                 <p >Input Example</p>
                             </div>
                         </div>
