@@ -630,9 +630,9 @@ function Form() {
                                                     Dropdown button
                                                 </button>
                                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                    <li><a class="dropdown-item" href="">Action</a></li>
+                                                    <li><a class="dropdown-item" href="">Another action</a></li>
+                                                    <li><a class="dropdown-item" href="">Something else here</a></li>
                                                 </ul>
                                             </div>
                                             <input type="text" class="form-control" aria-label="Text input with dropdown button" />
@@ -646,9 +646,9 @@ function Form() {
                                                     Dropdown button
                                                 </button>
                                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                                    <li><a class="dropdown-item" href="">Action</a></li>
+                                                    <li><a class="dropdown-item" href="">Another action</a></li>
+                                                    <li><a class="dropdown-item" href="">Something else here</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -658,18 +658,18 @@ function Form() {
                                     <div class="input-group">
                                         <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Action before</a></li>
-                                            <li><a class="dropdown-item" href="#">Another action before</a></li>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                            <li><a class="dropdown-item" href="">Action before</a></li>
+                                            <li><a class="dropdown-item" href="">Another action before</a></li>
+                                            <li><a class="dropdown-item" href="">Something else here</a></li>
+                                            <li><a class="dropdown-item" href="">Separated link</a></li>
                                         </ul>
                                         <input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons" />
                                         <button class="btn btn-outline-success dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</button>
                                         <ul class="dropdown-menu dropdown-menu-end">
-                                            <li><a class="dropdown-item" href="#">Action</a></li>
-                                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                            <li><a class="dropdown-item" href="#">Separated link</a></li>
+                                            <li><a class="dropdown-item" href="">Action</a></li>
+                                            <li><a class="dropdown-item" href="">Another action</a></li>
+                                            <li><a class="dropdown-item" href="">Something else here</a></li>
+                                            <li><a class="dropdown-item" href="">Separated link</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -744,13 +744,23 @@ function Form() {
                                 </div>
                             </div>
 
-
+                            <div class="col-lg-6 mt-3">
+                                <div class="input-group ms-2 ps-1">
+                                    <div class="dropdown">
+                                        <input class="dropdown-toggle form-control " type="text" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" placeholder='This is a placeholder ' />
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><input type="search.." placeholder="search.." class="form-control border-start-0" /></li>
+                                            <li><a class="dropdown-item" href="">Action</a></li>
+                                            <li><a class="dropdown-item" href="">Another action</a></li>
+                                            <li><a class="dropdown-item" href="">Something else here</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
-
-            </div>        
+            </div>
             <div class="container mt-4 bg-white">
                 <div class=" row fs-6 p-3 ">
 
@@ -760,15 +770,15 @@ function Form() {
                         <ul class="pagination pagination-md">
                             <li class="page-item disabled">
 
-                                <a class="page-link" href="#" tabindex="-1"> <IoIosArrowRoundBack /> Prev</a>
+                                <a class="page-link" href="" tabindex="-1"> <IoIosArrowRoundBack /> Prev</a>
                             </li>
                             <li class="page-item"><a class="page-link" href="#">1</a></li>
                             <li class="page-item active">
-                                <a class="page-link" href="#">2 </a>
+                                <a class="page-link" href="">2 </a>
                             </li>
                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                             <li class="page-item">
-                                <a class="page-link" href="#">Next <IoIosArrowRoundForward /></a>
+                                <a class="page-link" href="">Next <IoIosArrowRoundForward /></a>
                             </li>
                         </ul>
                     </nav>
@@ -849,7 +859,6 @@ function Form() {
                     </div>
                 </div>
             </div>
-           
         </div>
     )
 }

@@ -22,12 +22,12 @@
 }
 
 .ribbon-box .ribbon-two-danger span {
-    background: #f06548;
+    background: var(--erp-orange-500);
 }
 
 .ribbon-box .ribbon-two span {
     font-size: 13px;
-    color: #fff;
+    color: var(--erp-white-color);
     text-align: center;
     line-height: 20px;
     -webkit-transform: rotate(-45deg);
@@ -39,12 +39,12 @@
     position: absolute;
     top: 19px;
     left: -21px;
-    font-weight: 600;
+    font-weight: var(--erp-font-weight-medium);
 }
 
 .ribbon-box .ribbon-two-danger span:before {
-    border-left: 3px solid #da3412;
-    border-top: 3px solid #da3412;
+    border-left: 3px solid var(--erp-orange-600);
+    border-top: 3px solid var(--erp-orange-600);
 }
 
 .ribbon-box .ribbon-two span:before {
@@ -58,8 +58,8 @@
 }
 
 .ribbon-box .ribbon-two-danger span:after {
-    border-right: 3px solid #da3412;
-    border-top: 3px solid #da3412;
+    border-right: 3px solid var(--erp-orange-600);
+    border-top: 3px solid var(--erp-orange-600);
 }
 
 .ribbon-box .ribbon-two span:after {
@@ -73,13 +73,13 @@
 }
 
 .info-col {
-    background-color: #299cdb;
-    color: white
+    background-color: var(--erp-sky-400);
+    color: var(--erp-white-color)
 }
 
 .info-col:hover {
-    background-color: #299cdb;
-    color: white
+    background-color: var(--erp-sky-400);
+    color: var(--erp-white-color)
 }
 
 .auth-one-bg {
@@ -93,20 +93,20 @@
 }
 
 .coming-soon-text {
-    font-weight: 600;
+    font-weight: var(--erp-font-weight-lightbold);
     text-transform: uppercase;
-    color: #fff;
-    text-shadow: 3px 4px #0ab39c;
+    color: var(--erp-white-color);
+    text-shadow: 3px 4px var(--erp-green-400);
 }
 
 .back-col {
-    background-color: #0ab39c;
+    background-color: var(--erp-green-400);
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
     color: var(--bs-nav-pills-link-active-color);
-    background-color: #405189;
+    background-color: var(--erp-sky-500);
 }
 
 .nav-link.active {
