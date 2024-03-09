@@ -1,40 +1,44 @@
-import React from "react";
+// import React from "react";
 import "./App.css";
-
-// cdn
-import "bootstrap/dist/css/bootstrap.min.css";
-import "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js";
-import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js";
-
 // components
+import { Sidemenu } from "./components/common/sidemenu/Sidemenu";
+import Table from "./components/common/design/Table";
+// import Card from "./components/common/design/Card";
 import { Login } from "./components/Auth/Login";
+import Forms from "./components/common/design/Forms";
 
+import Button from "./components/common/design/Button";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import ReqireAuth from "./components/Layout/ReqireAuth";
 import PublicAuth from "./components/Layout/PublicAuth";
 import Dashboard from "./components/pages/dashboard/Dashboard";
 import PublicLayout from "./components/Layout/PublicLayout";
+import { Topbar } from "./components/common/topbar/Topbar";
+import React, { useContext, useState } from "react";
 import { ForgotPassword } from "./components/Auth/ForgotPassword";
 import { ChangePassword } from "./components/Auth/ChangePassword";
 import { LockScreen } from "./components/Auth/LockScreen";
 
 function App() {
+   const [isExpanded, setIsExpanded] = useState(true);
+
+   const toggleSidebar = () => {
+     setIsExpanded(!isExpanded);
+   };
   return (
-    <div className="App">
-      <Login />
-      <ForgotPassword />
-      <ChangePassword />
-      <LockScreen />
-
-      {/* <Routes>
-        <Route element={<ReqireAuth />}>
-          <Route path="/" element={<Dashboard />} />
-        </Route>
-
-        <Route element={<PublicLayout />}>
-          <Route path="/login" element={<Login />} />
-        </Route>
-      </Routes> */}
+    <div className="app">
+      <Sidemenu
+        isExpanded={isExpanded}
+        setIsExpanded={setIsExpanded}
+        toggleSidebar={toggleSidebar}
+      />
+      <main className="">
+        <Topbar
+          isExpanded={isExpanded}
+          setIsExpanded={setIsExpanded}
+          toggleSidebar={toggleSidebar}
+        />
+      </main>
     </div>
   );
 }

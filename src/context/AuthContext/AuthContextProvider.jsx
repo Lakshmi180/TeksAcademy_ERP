@@ -24,7 +24,7 @@ const AuthContextProvider=({children})=>{
     
     const LoginAdmin =async(logindata)=>{
         console.log(logindata , "logindatahere")
-        // const {data, Status} = await axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata); 
+        // const {data, Status} = await axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata);
 
         try{
             const {data, Status}= await toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/adminlogin`, logindata),{
