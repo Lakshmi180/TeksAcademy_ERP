@@ -25,50 +25,43 @@ import { ForgotPassword } from "./components/Auth/ForgotPassword";
 import { AllRoutes } from "./router";
 import { ChangePassword } from "./components/Auth/ChangePassword";
 import { LockScreen } from "./components/Auth/LockScreen";
+import Card from "./components/common/design/Card";
 
 function App() {
 
-  const toggleSidebar = () => {
-    setIsExpanded(!isExpanded);
-  };
+  // const toggleSidebar = () => {
+  //   setIsExpanded(!isExpanded);
+  // };
+
   return (
     <div className="App">
-      {/* <Sidemenu /> */}
-     {/* <Table />
-     <Card /> */}
-      <Forms />
-    <Card/>
-    <Page/>
-    <Modal/>
-    <Tab/>
-    <Accordian/>
-    {/* <Button/>
-      <Sidemenu />
-      <Login /> */}
-      {/* <Table /> */}
+     
+     
+      {/* <Sidemenu />
+      <Login />  */}
+     
       {/* <Card /> */}
       {/* <Forms /> */}
       {/* <Card/> */}
       {/* <Button/> */}
-      {/* <Sidemenu /> */}
-      {/* <Login />
-      <ForgotPassword />
-      <ChangePassword /> */}
+      
 
       <div className="app">
-        <Sidemenu
+        {/* <Sidemenu
           isExpanded={isExpanded}
           setIsExpanded={setIsExpanded}
           toggleSidebar={toggleSidebar}
-        />
+        /> */}
         <main className="">
-          <Topbar
+          {/* <Topbar
             isExpanded={isExpanded}
             setIsExpanded={setIsExpanded}
             toggleSidebar={toggleSidebar}
-          />
+          /> */}
         </main>
       </div>
+
+
       <Routes>
         <Route element={<ReqireAuth />}>
           <Route path="/" element={<Dashboard />} />
@@ -80,6 +73,19 @@ function App() {
           <Route path="/lockscreen" element={<LockScreen />} />
         </Route>
       </Routes>
+
+
+     <Forms />
+     <Card/>
+     <Page/>
+     <Modal/>
+     <Tab/>
+     <Accordian/>
+     <Table />
+     <Button/>
+
+
+
     </div>
   );
 }
