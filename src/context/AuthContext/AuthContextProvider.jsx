@@ -131,6 +131,7 @@ const AuthContextProvider = ({ children }) => {
     }
 
     const OpenLockScreen = async(password) => {
+        console.log(password, "userpassword")
         try {
             const { data, status } = await axios.post();
             if (status === 200) {
@@ -139,10 +140,9 @@ const AuthContextProvider = ({ children }) => {
                         password: data?.adminData?.password
                     }))
                 DispatchAuth({ type: "SET_PASSWORD_LOCALSTORAGE", payload: data?.adminData?.password })
-                navigate("/")
+               
             }
-
-
+            navigate("/")
         }
         catch (error) {
             console.log(error)
@@ -198,7 +198,7 @@ const AuthContextProvider = ({ children }) => {
     }, [])
 
     return (
-        <AuthContext.Provider value={{ AuthState, DispatchAuth, Forgotpassword, LoginAdmin, ChangePasswordfun, userLogout, LockTheScreen }}>
+        <AuthContext.Provider value={{ AuthState, DispatchAuth, Forgotpassword, LoginAdmin, ChangePasswordfun, userLogout,OpenLockScreen, LockTheScreen }}>
             {children}
         </AuthContext.Provider>
     )

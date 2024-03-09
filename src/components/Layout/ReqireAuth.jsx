@@ -42,7 +42,7 @@ const ReqireAuth=()=>{
     return (
       <div>
         <Navigate
-          to='/login'
+          to='/lockscreen'
           state={{ from: location }}
           replace
         />
@@ -51,7 +51,7 @@ const ReqireAuth=()=>{
   }
 
 
-  if(AuthState.token){
+  if(AuthState.token && AuthState.password){
     return(
       <div>
       <PublicAuth>
