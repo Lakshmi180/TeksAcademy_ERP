@@ -16,8 +16,6 @@ import PublicAuth from "./components/Layout/PublicAuth";
 import Dashboard from "./components/pages/dashboard/Dashboard";
 import PublicLayout from "./components/Layout/PublicLayout";
 import WhatsppChat from "./components/common/design/WhatsappChat";
-import Dashboard from "./components/pages/dashboard/Dashboard";
-import PublicLayout from "./components/Layout/PublicLayout";
 import { Topbar } from "./components/common/topbar/Topbar";
 import React, { useContext, useState } from "react";
 import { ForgotPassword } from "./components/Auth/ForgotPassword";
@@ -76,7 +74,7 @@ function App() {
       <ForgotPassword />
       <ChangePassword /> */}
 
-      <div className="app">
+      {/* <div className="app">
         <Sidemenu
           isExpanded={isExpanded}
           setIsExpanded={setIsExpanded}
@@ -89,8 +87,8 @@ function App() {
             toggleSidebar={toggleSidebar}
           />
         </main>
-      </div>
-      <Routes>
+      </div> */}
+      {/* <Routes>
         <Route element={<ReqireAuth />}>
           <Route path="/" element={<Dashboard />} />
         </Route>
@@ -100,7 +98,7 @@ function App() {
           <Route path="/changepassword" element={<ChangePassword />} />
           <Route path="/lockscreen" element={<LockScreen />} />
         </Route>
-      </Routes>
+      </Routes> */}
     </div>
   );
 }
