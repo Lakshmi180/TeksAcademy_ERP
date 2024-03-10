@@ -30,7 +30,6 @@ import { ChangePassword } from "./components/Auth/ChangePassword";
 import { LockScreen } from "./components/Auth/LockScreen";
 
 function App() {
-  const [isExpanded, setIsExpanded] = useState(true);
 
   const toggleSidebar = () => {
     setIsExpanded(!isExpanded);
