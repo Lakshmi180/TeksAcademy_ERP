@@ -363,6 +363,7 @@ import "../../../assets/css/common/Forms.css"
                         </div>
                       </div>
                     </div>
+
                     <div class="col-xxl-3 col-md-6">
                       <div>
                         <div class="text-start">
@@ -377,6 +378,7 @@ import "../../../assets/css/common/Forms.css"
                               placeholder="example@gmail.com"
                             />
                           </div>
+
                         </div>
                       </div>
                     </div>
@@ -630,6 +632,7 @@ import "../../../assets/css/common/Forms.css"
 
               </div>
               <div class="container mt-4 bg-white">
+
                 <div class=" row fs-6 p-3 ">
 
                   <h5>Pagination</h5>
@@ -697,6 +700,7 @@ import "../../../assets/css/common/Forms.css"
                   <nav arial-label="page navigation example">
 
                     <nav aria-label="...">
+
                       <ul class="pagination pagination-sm">
                         <li class="page-item disabled p-1">
                           <a class="page-link rounded" href="#" tabindex="-1"><IoIosArrowRoundBack /> </a>
@@ -1843,6 +1847,7 @@ import "../../../assets/css/common/Forms.css"
                 </div>
               </div>
             </div>
+
             <div className="col-xxl-6 ">
               <div className="card d-flex">
                 <div className="card-header fsize">
@@ -1918,6 +1923,7 @@ import "../../../assets/css/common/Forms.css"
               </div>
             </div>
           </div>
+
         </div>
       </div >
     </div>
