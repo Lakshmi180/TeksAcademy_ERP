@@ -1443,7 +1443,7 @@ import "../../../assets/css/common/Forms.css"
 
         <div className="container  mt-4  shadow-sm p-3 mb-5 bg-body rounded bg-white">
           <div className="row">
-            <div className="col-lg-12">
+            <div className="col-lg-12 ">
               <div className="card d-flex">
                 <div className="card-header">
                   <h4 className="card-title mb-0 fs-6">Dropzone</h4>
@@ -1454,29 +1454,30 @@ import "../../../assets/css/common/Forms.css"
                     file uploads with image previews.
                   </p>
 
-                  <div className="dropzone dz-clicable d-flex justify-content-center flex-column text-center m-2 form-control">
-                    <label for="customFileInput" className="form-label">
+                  <div className="dropzone dropone-border dz-clicable d-flex justify-content-center flex-column text-center m-2 form-control">
+                   
                       <div className="dz-message needclick  align-items-center   ">
                         <div className="mb-3 ">
                           <RiUploadCloud2Fill className="display-4 text-muted" />
                         </div>
                         <h4>Drop files here or click to upload.</h4>
                       </div>
+                     
+                  </div>
+                  <label for="customFileInput" className="form-label">
                     </label>
                     <input
                       type="file"
-                      className="form-control visually-hidden"
+                      className="form-control "
                       id="customFileInput"
                     />
-                  </div>
-
                   <ul className="list-unstyled mb-0" id="dropzone-preview"></ul>
                 </div>
               </div>
             </div>
           </div>
           <div class="row mt-4 p-3 mb-3 bg-body rounded bg-white ">
-            <div className="col-lg-6">
+            <div className="col-lg-6 mb-2">
               <div className="card d-flex">
                 <div className="card-header">
                   <h4 className=" card-title fs-6"> Multiple Uploads</h4>
@@ -1497,71 +1498,39 @@ import "../../../assets/css/common/Forms.css"
                     data-style-button-remove-item-align="false"
                     style={{ height: "76px" }}
                   >
-                    <input
-                      class="filepond--browser visually-hidden"
-                      type="file"
-                      id="filepond--browser-0jya0yqpg"
-                      name="filepond"
-                      aria-controls="filepond--assistant-0jya0yqpg"
-                      aria-labelledby="filepond--drop-label-0jya0yqpg"
-                      multiple=""
-                    />
-
-                    <div
-                      class="filepond--drop-label text-center img-box-fsize  "
-                      style={{
-                        transform: " translate3d(0px, 0px, 0px)",
-                        opacity: " 1",
-                      }}
-                    >
-                      <label
-                        for="filepond--browser-0jya0yqpg"
-                        id="filepond--drop-label-0jya0yqpg"
-                        aria-hidden="true"
-                      >
-                        Drag &amp; Drop your files or{" "}
-                        <span
-                          class="filepond--label-action fw-medium"
-                          tabindex="0"
-                        >
-                          Browse
-                        </span>
-                      </label>
-                    </div>
-                    {/* <div
-                    class="filepond--list-scroller"
-                    style={{transform:" translate3d (0px, 60px, 0px)"}}
                    
-                  >
-                    <ul class="filepond--list" role="list"></ul>
-                  </div> */}
-                    <div
-                      class="filepond--panel filepond--panel-root"
-                      data-scalable="true"
-                    >
-                      <div class="filepond--panel-top filepond--panel-root"></div>
-                      <div
-                        class="filepond--panel-center filepond--panel-root"
-                        style={{
-                          transform:
-                            "translate3d(0px, 8px , 0px) scale3d(1, 0.6, 1)",
-                        }}
-                      ></div>
-                      <div
-                        class="filepond--panel-bottom filepond--panel-root"
-                        style={{ transform: " translate3d (0px, 68px, 0px)" }}
-                      ></div>
-                    </div>
-                    <span
-                      class="filepond--assistant"
-                      id="filepond--assistant-0jya0yqpg"
-                      role="status"
-                      aria-live="polite"
-                      aria-relevant="additions"
-                    ></span>
-                    <div class="filepond--drip"></div>
-                    <fieldset class="filepond--data"></fieldset>
-                  </div>
+                
+                   
+                   <div className="dz-message needclick  align-items-center   ">
+                     <div className="mb-3 ">
+                    
+                     </div>
+                     <div className="img-box-fsize">
+                       Drag &amp; Drop your files or{" "}
+                          <span
+                            class="filepond--label-action fw-medium"
+                            tabindex="0"
+                          >
+                            Browse
+                          </span>
+                          </div>
+                   </div>
+                  
+               </div>
+               <label for="customFileInput" className="form-label">
+                 </label>
+                 <input
+                   type="file"
+                   className="form-control "
+                   id="customFileInput"
+                 />
+               <ul className="list-unstyled mb-0" id="dropzone-preview"></ul>
+                  
+                   
+
+
+                   
+               
                 </div>
               </div>
             </div>
@@ -1576,7 +1545,7 @@ import "../../../assets/css/common/Forms.css"
                     FilePond is a JavaScript library with profile picture-shaped
                     file upload variation.
                   </p>
-                  <div className="avatar-xl mx-auto d-flex justify-content-center align-items-center text-center">
+                  <div className="avatar-xl mx-auto d-flex flex-column justify-content-center align-items-center text-center">
                     <div
                       class="filepond--root filepond filepond-input-multiple filepond--hopper text-center filepond-profile-picture d-flex justify-content-center align-items-center "
                       data-style-button-remove-item-position="left"
@@ -1586,28 +1555,13 @@ import "../../../assets/css/common/Forms.css"
                       data-style-button-remove-item-align="false"
                       style={{ height: "120px", width: "120px" }}
                     >
-                      <input
-                        class="filepond--browser visually-hidden  "
-                        type="file"
-                        id="filepond--browser-0jya0yqpg"
-                        name="filepond"
-                        aria-controls="filepond--assistant-0jya0yqpg"
-                        aria-labelledby="filepond--drop-label-0jya0yqpg"
-                        multiple=""
-                      />
-
-                      <div
-                        class="filepond--drop-label text-center img-box-fsize  "
-                        style={{
-                          transform: " translate3d(0px, 0px, 0px)",
-                          opacity: " 1",
-                        }}
-                      >
-                        <label
-                          for="filepond--browser-0jya0yqpg"
-                          id="filepond--drop-label-0jya0yqpg"
-                          aria-hidden="true"
-                        >
+                     
+                        
+                   <div className="dz-message needclick  align-items-center   ">
+                     <div className="mb-3 ">
+                    
+                     </div>
+                        <div className="img-box-fsize">
                           Drag &amp; Drop your files or{" "}
                           <span
                             class="filepond--label-action fw-medium"
@@ -1615,42 +1569,21 @@ import "../../../assets/css/common/Forms.css"
                           >
                             Browse
                           </span>
-                        </label>
+                          </div>
+                        
                       </div>
-                      {/* <div
-                    class="filepond--list-scroller"
-                    style={{transform:" translate3d(0px, 0px, 0px)"}}
-                   
-                  >
-                    <ul class="filepond--list" role="list"></ul>
-                  </div> */}
-                      <div
-                        class="filepond--panel filepond--panel-root"
-                        data-scalable="true"
-                      >
-                        <div class="filepond--panel-top filepond--panel-root"></div>
-                        <div
-                          class="filepond--panel-center filepond--panel-root"
-                          style={{
-                            transform:
-                              "translate3d(0px, 0px , 0px) scale3d(1, 1.2, 1)",
-                          }}
-                        ></div>
-                        <div
-                          class="filepond--panel-bottom filepond--panel-root"
-                          style={{ transform: " translate3d (0px, 120px, 0px)" }}
-                        ></div>
-                      </div>
-                      <span
-                        class="filepond--assistant"
-                        id="filepond--assistant-0jya0yqpg"
-                        role="status"
-                        aria-live="polite"
-                        aria-relevant="additions"
-                      ></span>
-                      <div class="filepond--drip text-center"></div>
-                      <fieldset class="filepond--data"></fieldset>
+                      
+                     
+                      
                     </div>
+                    <label for="customFileInput" className="form-label">
+                 </label>
+                 <input
+                   type="file"
+                   className="form-control "
+                   id="customFileInput"
+                 />
+               <ul className="list-unstyled mb-0" id="dropzone-preview"></ul>
                   </div>
                 </div>
               </div>
@@ -1829,8 +1762,8 @@ import "../../../assets/css/common/Forms.css"
         </div>
 
         <div className="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg-white">
-          <div className="row">
-            <div className="col-xxl-6 ">
+          <div className="row  ">
+            <div className="col-xxl-6 mb-2">
               <div className="card d-flex">
                 <div className="card-header align-items-center">
                   <h4 className="fs-6">Vertical Forms</h4>

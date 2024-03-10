@@ -7,9 +7,9 @@ body {
     font-size: 0.8125rem;
     font-weight: 500;
 }
-.dropzone {
+.dropone-border {
     min-height: 230px;
-    border: 2px dashed #e9ebec;
+    border: 2px  #e9ebec dashed;
     background: #fff;
     border-radius: 6px;
 }

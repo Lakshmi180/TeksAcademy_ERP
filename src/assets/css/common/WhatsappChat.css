@@ -1,32 +1,30 @@
 .chat-setting-icon{
-    font-size: 17px;
+    font-size: var(--erp-fs-17);
 }
 .chat-font-size{
-    font-size: 13px;
+    font-size: var(--erp-fs-13);
 }
-/* .dropdown{
-    position: relative;
-} */
+
 .-table-dropdown-menu{
-    font-size: 13px !important;
+    font-size:var(--erp-fs-13) !important;
   position: absolute !important;
   inset: 0px 0px auto auto !important;
   transform: translate3d(0px 37px 0px);
 }
 .chat-dropdown-menu-right{
-    font-size: 13px !important;
+    font-size: var(--erp-fs-13)!important;
     position: absolute !important;
     inset:auto  0px  auto -10px!important;
     transform: translate3d(0px);
 }
 .chat-dropdown-menu-left{
-    font-size: 13px !important;
+    font-size: var(--erp-fs-13) !important;
     position: absolute !important;
         inset: 10px 10px auto auto !important;
         transform: translate3d(0px);
 }
 .img-dropdown-menu{
-    font-size: 13px !important;
+    font-size: var(--erp-fs-13)!important;
     position: absolute !important;
     inset:   auto -20px 0px auto   !important;
     transform: translate3d(0px);
@@ -62,7 +60,7 @@ p{
     display: none !important;
 }
  .doticons{
- font-size: 16px;
+ font-size: var(--erp-fs-16);
  visibility: hidden;
 
 
@@ -73,7 +71,7 @@ p{
 
 
 small{
-    font-size: 11px !important;
+    font-size: var( --erp-font-size-xxs) !important;
     text-align: left !important;
  
 }
@@ -100,7 +98,7 @@ small{
     position: relative;
 }
 .chat-conversation .conversation-list .message-img .message-img-link li .img-doticons {
-    font-size: 18px;
+    font-size: var(--erp-fs-17);
     color: #fff;
     display: inline-block;
     line-height: 20px;
@@ -115,24 +113,24 @@ small{
    bottom: 25px;
 }
 .btn-info {
-  background-color: #299cdb !important;
-  border-color: #299cdb  !important;
+  background-color:var( --erp-sky-400) !important;
+  border-color: var( --erp-sky-400)!important;
   
 }
 .btn-info:hover{
-    background-color: #2385ba !important;
-    border-color: #2385ba !important;
+    background-color: var( --erp-sky-400) !important;
+    border-color: var( --erp-sky-400) !important;
 
 }
 .bg-light {
  
-    background-color: white !important;
+    background-color: var( --erp-white-color) !important;
 }
 .border-light{
-    border-color: white !important;
+    border-color: var(--erp-white-color) !important;
 }
 .send-message{
-    font-size: 14px;
+    font-size: var(--erp-fs-14);
 }
 .simplebar-content-wrapper{
     scrollbar-width: thin !important;
@@ -161,7 +159,7 @@ small{
 @media screen and (max-width:425px) {
     
     .chat-font-size {
-      font-size: 12px;
+      font-size: var(--erp-font-size-xs);
     }
   
 

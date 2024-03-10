@@ -20,12 +20,17 @@ body {
   --erp-white-color: #fff;
   --erp-sky-500: #405189;
   --erp-sky-300: #7dd3fc;
+  --erp-sky-400:   #2385ba;
+  --erp-sky-light:  #dff0fa ;
   --erp-yellow-color: #d19b3d;
   --erp-lightblack-color: #2e353d;
   --erp-text-mute: #878a99;
+  --erp-green-400 :#0ab39c ;
+  --erp-green-light: #daf4f0;
 
 
   /* font-size */
+  --erp-font-size-xxs: 10px;
   --erp-font-size-xs: 12px;
   --erp-font-size-s: 0.8125rem;
   --erp-font-size-m: 0.9375rem;
@@ -34,6 +39,8 @@ body {
 
   --erp-fs-16: 1rem;
   --erp-fs-13: 13px;
+  --erp-fs-14: 14px;
+  --erp-fs-17: 17px;
 
   /* font-weight */
   --erp-font-weight-thin: 100;
@@ -43,6 +50,7 @@ body {
   --erp-font-weight-bold: 700;
 
   /* line-height */
+  --erp-xs-lh: 1.2;
   --erp-font-xs-light-lh: 12px 300 1.2;
   /* Extra Small, Light, Line Height 1.2 */
   --erp-font-s-regular-lh: 14px 400 1.5;
@@ -263,10 +271,10 @@ a.sidebar-link:hover {
   margin-right: 0.75rem;
 }
 
-a.sidebar-link:hover {
+/* a.sidebar-link:hover {
   /* background-color: rgba(255, 255, 255, 0.075); */
   /* border-left: 3px solid #3b7ddd; */
-}
+ 
 
 .sidebar-item {
   position: relative;

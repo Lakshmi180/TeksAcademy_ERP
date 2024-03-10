@@ -3,7 +3,7 @@ import "./App.css";
 // components
 import { Sidemenu } from "./components/common/sidemenu/Sidemenu";
 import Table from "./components/common/design/Table";
-// import Card from "./components/common/design/Card";
+import Card from "./components/common/design/Card";
 import { Login } from "./components/Auth/Login";
 import Forms from "./components/common/design/Forms";
 
@@ -38,9 +38,9 @@ function App() {
   return (
     <div className="App">
       {/* <Sidemenu /> */}
-     {/* <Table /> */}
-     {/* <Card />  */}
-       <Forms /> 
+     <Table />
+  
+       {/* <Forms />  */}
     {/* <Card/> */}
     {/* <Button/> */}
       {/* <Sidemenu /> */}
@@ -72,18 +72,18 @@ function App() {
       {/* <Login /> */}
      {/* <Table />
      <Card /> */}
-      <Forms />
+      {/* <Forms />
     <Card/>
     <Page/>
     <Modal/>
     <Tab/>
-    <Accordian/>
+    <Accordian/> */}
     {/* <Button/>
       <Sidemenu />
       <Login /> */}
       {/* <Table /> */}
       {/* <Card /> */}
-      {/* <Forms /> */}
+      <Forms />
       {/* <Card/> */}
       {/* <Button/> */}
       {/* <Sidemenu /> */}

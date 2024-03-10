@@ -25,8 +25,8 @@ function Table() {
       <div className="p-4 container">
 
         {/* Best Selling Product & top sellers table starts */}
-        <div className="row ">
-          <div className="col-xl-6  ">
+        <div className="row  ">
+          <div className="col-xl-6 mb-2  ">
             <div className="card ">
               <div className="card-header  align-items-center d-flex justify-content-between p-3 border-bottom bg-transparent">
                 <div className="">
