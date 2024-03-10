@@ -31,9 +31,9 @@ import { LockScreen } from "./components/Auth/LockScreen";
 
 function App() {
 
-  const toggleSidebar = () => {
-    setIsExpanded(!isExpanded);
-  };
+  // const toggleSidebar = () => {
+  //   setIsExpanded(!isExpanded);
+  // };
   return (
     <div className="App">
       {/* <Sidemenu /> */}
@@ -44,7 +44,7 @@ function App() {
     {/* <Button/> */}
       {/* <Sidemenu /> */}
       {/* <Login /> */}
-        {/* <WhatsppChat /> */}
+        <WhatsppChat />
       {/* <Routes>
       <Route element={<ReqireAuth/>}>
         <Route path="/" element={<Dashboard/>} />
