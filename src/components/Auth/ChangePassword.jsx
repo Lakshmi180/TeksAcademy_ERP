@@ -140,7 +140,7 @@ export const ChangePassword = () => {
           </div>
           <div className="justify-content-center row">
             <div className="col-md-8 col-lg-6 col-xl-5">
-              <div className="mt-5 card">
+              <div className="mt-2 card">
                 <div className="p-4 card-body">
                   <div className="text-center mt-2">
                     <h5 className="login_welcome_text">Create new password!</h5>

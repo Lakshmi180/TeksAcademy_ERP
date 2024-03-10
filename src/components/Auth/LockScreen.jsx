@@ -77,7 +77,7 @@ export const LockScreen = () => {
                                     </a>
                                 </div>
                             </div>
-                            <label
+                            {/* <label
                                 for="password-input"
                                 className="form-label form-label font-size-s font-weight-500"
                             >
@@ -124,10 +124,10 @@ export const LockScreen = () => {
                                         Not you? <a href="#">Signin</a>
                                     </h5>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="justify-content-center row">
                                 <div className="col-md-8 col-lg-6 col-xl-5">
-                                    <div className="mt-5 card">
+                                    <div className="mt-2 card">
                                         <div className="p-4 card-body">
                                             <div className="text-center mt-2">
                                                 <h5 className="login_welcome_text">Lock Screen</h5>

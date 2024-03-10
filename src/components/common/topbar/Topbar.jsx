@@ -1,4 +1,3 @@
-
 import React, { useContext, useState } from "react";
 import { MdFullscreen } from "react-icons/md";
 import { IoMdNotificationsOutline, IoIosSettings } from "react-icons/io";
@@ -12,33 +11,31 @@ import "../../../assets/css/common/Topbar.css";
 import { Button } from "../design/Button";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthContext/AuthContextProvider";
-import { RiMenu2Fill } from "react-icons/ri";
-
+import { CiMenuFries } from "react-icons/ci";
 
 // export const Topbar = ({ setOpen, open }) => {
 
-
 export const Topbar = ({ isExpanded, toggleSidebar }) => {
-    const {userLogout,LockTheScreen}= useContext(AuthContext)
-    
+    const { userLogout, LockTheScreen } = useContext(AuthContext);
 
     const [isDropdownActive, setIsDropdownActive] = useState(false);
-   
 
     const dropdownHandler = () => {
         setIsDropdownActive((dropdown) => !dropdown);
     };
 
-
     return (
-        <div className=" ">
-            <nav className={`navbar-header ${isExpanded ? 'navbar-header-min' : 'navbar-header-max'}`} >
+        <div className="">
+            <nav
+                className={`navbar-header shadow-sm ${isExpanded ? "navbar-header-min" : "navbar-header-max"
+                    }`}
+            >
                 <div className="d-flex justify-content-between">
                     {/* left */}
                     <div>
-                        <div className={`sidebar ${isExpanded ? 'expand' : ''}`}>
-                            <button id='toggle-btn' type='button' onClick={toggleSidebar}>
-                                <MdFullscreen className="navbar_icons" />
+                        <div className={`sidebar ${isExpanded ? "expand" : ""}`}>
+                            <button id="toggle-btn" type="button" onClick={toggleSidebar}>
+                                <CiMenuFries className="navbar_icons" />
                             </button>
                         </div>
                     </div>
@@ -89,31 +86,19 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
                                                 <IoIosSettings className="dropdown-icon" />
                                                 Settings
                                             </a>
-                                         
-                                               <span>
-                                                <Link to="/changepassword" className="dropdown-item mb-3">
-                                                <HiUserCircle className="dropdown-icon align-middle" />
-                                                  Change <br /> password
-                                                </Link>
-                                                </span>
-                                           
-                                            <a href="#" className="dropdown-item mb-3 align-middle">
-                                                <FaLock className="dropdown-icon" />
-                                                <span onClick={LockTheScreen}>
-                                                Lockscreen
-                                                </span>
-                                                
-
+                                            <a href="#" className="dropdown-item mb-3">
+                                                <FaLock className="dropdown-icon align-middle" />
+                                                {/* <Link to="/changepassword"> */}
+                                                <span>change password</span>
+                                                {/* </Link> */}
                                             </a>
                                             <a href="#" className="dropdown-item mb-3 align-middle">
-                                                <HiOutlineLogout className="dropdown-icon"
-                                                />
-                                                <span onClick={userLogout}>
-                                                    Logout
-                                                </span>
-
-
-
+                                                <FaLock className="dropdown-icon" />
+                                                <span onClick={LockTheScreen}>Lockscreen</span>
+                                            </a>
+                                            <a href="#" className="dropdown-item mb-3 align-middle">
+                                                <HiOutlineLogout className="dropdown-icon" />
+                                                <span onClick={userLogout}>Logout</span>
                                             </a>
                                         </div>
                                     </div>
@@ -126,9 +111,6 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
         </div>
     );
 };
-
-
-
 
 // import React, { useState } from "react";
 // import { MdFullscreen } from "react-icons/md";
