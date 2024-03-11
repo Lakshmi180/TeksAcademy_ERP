@@ -11,26 +11,14 @@ body {
   font-size: var(--erp-fs-22);
   color: var(--erp-text-color) !important;
 }
-.Totalearning {
-  /* transition: all 0.3s linear; */
-}
 .Totalearning:hover {
   transform: translateY(-7px);
-}
-.orders {
-  /* transition: all 0.3s linear; */
 }
 .orders:hover {
   transform: translateY(-7px);
 }
-.customers {
-  /* transition: all 0.3s linear; */
-}
 .customers:hover {
   transform: translateY(-7px);
-}
-.my-balance {
-  /* transition: all 0.3s linear; */
 }
 .my-balance:hover {
   transform: translateY(-7px);

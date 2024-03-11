@@ -1,5 +1,5 @@
-import React from 'react'
-import "../../../assets/css/common/Button.css"
+import React from "react";
+import "../../../assets/css/common/Button.css";
 function Button() {
     return (
         <div>
@@ -25,6 +25,6 @@ function Button() {
                 </div>
             </div>
         </div>
-    )
+    );
 }
-export default Button
+export default Button;
