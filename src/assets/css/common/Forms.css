@@ -1,7 +1,7 @@
 
 
 .fsize {
-    font-size: var(--erp-font-size-s);
+    font-size: var(--erp-fs-s);
     font-weight: var(--erp-font-weight-medium);
 }
 .dropone-border {

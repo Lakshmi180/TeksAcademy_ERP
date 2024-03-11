@@ -35,15 +35,15 @@ body {
   --erp-white-200: #495057;
 
   /* font-size */
-  --erp-font-size-xxs: 10px;
-  --erp-font-size-xs: 12px;
-  --erp-font-size-s: 0.8125rem;
-  --erp-font-size-m: 0.9375rem;
-  --erp-font-size-l: 1.25rem;
-  --erp-font-size-24: 24px;
+  --erp-fs-xxs: 10px;
+  --erp-fs-xs: 12px;
+  --erp-fs-s: 0.8125rem;
+  --erp-fs-m: 0.9375rem;
+  --erp-fs-l: 1.25rem;
+  --erp-fs-24: 24px;
 
-  --erp-font-size-22: 22px;
-  --erp-font-size-14: 14px;
+  --erp-fs-22: 22px;
+  --erp-fs-14: 14px;
   --erp-fs-16: 1rem;
   --erp-fs-13: 13px;
   --erp-fs-14: 14px;
@@ -89,19 +89,19 @@ body {
 }
 
 .font-size-s {
-  font-size: var(--erp-font-size-s);
+  font-size: var(--erp-fs-s);
 }
 
 .font-size-m {
-  font-size: var(--erp-font-size-m);
+  font-size: var(--erp-fs-m);
 }
 
 .font-size-lg {
-  font-size: var(--erp-font-size-l);
+  font-size: var(--erp-fs-l);
 }
 
 .font-size-xl {
-  font-size: var(--erp-font-size-xl);
+  font-size: var(--erp-fs-xl);
 }
 
 .font-weight-100 {
@@ -127,7 +127,7 @@ body {
 .main_menu i {
   display: inline-block;
   min-width: 1.75rem;
-  font-size: var(--erp-font-size-l);
+  font-size: var(--erp-fs-l);
   line-height: inherit;
 }
 
@@ -148,7 +148,7 @@ a {
   border-radius: 0.25rem !important;
   color: #212529;
   display: block;
-  font-size: var(--erp-font-size-s) !important;
+  font-size: var(--erp-fs-s) !important;
   font-weight: 400;
   line-height: 1.5;
   padding: 0.5rem 0.9rem !important;
@@ -219,3 +219,4 @@ body,
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+

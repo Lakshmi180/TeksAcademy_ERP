@@ -380,6 +380,13 @@ export const Sidemenu = ({ isExpanded }) => {
                 </li>
 
                 <li className="sidebar-item">
+                  <Link to="whatsapp" className="sidebar-link">
+                    <AiOutlineLine className="sub_icon" />
+                    Whatsapp Chat
+                  </Link>
+                </li>
+
+                <li className="sidebar-item">
                   <Link to="/accordian" className="sidebar-link">
                     <AiOutlineLine className="sub_icon" />
                     Accordions
@@ -409,15 +416,9 @@ export const Sidemenu = ({ isExpanded }) => {
                     Button
                   </Link>
                 </li>
-                {/* <li className="sidebar-item">
-                                    <Link to="/button" className="sidebar-link">
-                                        <AiOutlineLine className="sub_icon" />Button
-                                    </Link>
-                                </li> */}
               </ul>
             </li>
           </ul>
-
           {/* <div className='sidebar-footer'>
                         <a href="" className="sidebar-link">
                             <span>logout</span>

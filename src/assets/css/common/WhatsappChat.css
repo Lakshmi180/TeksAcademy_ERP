@@ -71,7 +71,7 @@ p{
 
 
 small{
-    font-size: var( --erp-font-size-xxs) !important;
+    font-size: var( --erp-fs-xxs) !important;
     text-align: left !important;
  
 }
@@ -159,7 +159,7 @@ small{
 @media screen and (max-width:425px) {
     
     .chat-font-size {
-      font-size: var(--erp-font-size-xs);
+      font-size: var(--erp-fs-xs);
     }
   
 
