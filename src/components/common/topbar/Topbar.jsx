@@ -34,7 +34,7 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
         }`}
       >
         <div className="d-flex justify-content-between">
-          {/* left */}
+          {/* Left */}
           <div>
             <div className={`sidebar ${isExpanded ? "expand" : ""}`}>
               <button id="toggle-btn" type="button" onClick={toggleSidebar}>
@@ -48,27 +48,18 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
               <div className="nav-item">
                 <MdFullscreen className="navbar_icons" />
               </div>
-
-              <div className="nav-item">
+              <div className="nav-item" onClick={setDarkMode}>
                 {theme === "light" ? (
-                  <MdOutlineDarkMode
-                    className="navbar_icons"
-                    onClick={setDarkMode}
-                  />
+                  <MdOutlineDarkMode className="navbar_icons" />
                 ) : (
-                  <MdOutlineLightMode
-                    className="navbar_icons"
-                    onClick={setDarkMode}
-                  />
+                  <MdOutlineLightMode className="navbar_icons" />
                 )}
               </div>
               <div className="nav-item">
                 <IoMdNotificationsOutline className="navbar_icons" />
               </div>
-
               <div
                 className="profile-item nav-item dropdown nav-icon pe-md-0 d-flex gap-2 align-items-center"
-                href="#"
                 onClick={dropdownHandler}
               >
                 <img
@@ -76,42 +67,35 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
                   className="avatar img-fluid "
                   alt="User Avatar"
                 />
-
                 <div className="details d-flex flex-column position-relative">
                   <span className="navbar_username">John Doe</span>
                   <span className="navbar_userrole">Admin</span>
                 </div>
                 {isDropdownActive && (
-                  <div
-                    className={
-                      isDropdownActive ? "dropdown-card show" : "dropdown-card"
-                    }
-                  >
-                    <div id="emailHelp" class="form-text mb-2 small-text">
+                  <div className="dropdown-card show">
+                    <div id="emailHelp" className="form-text mb-2 small-text">
                       Welcome John!
                     </div>
                     <div className="menu-items">
-                      <a href="#" className="dropdown-item mb-3">
-                        <HiUserCircle className="dropdown-icon align-middle" />
-                        Profile
-                      </a>
-                      <a href="#" className="dropdown-item mb-3 align-middle ">
-                        <IoIosSettings className="dropdown-icon" />
-                        Settings
-                      </a>
-                      <a href="#" className="dropdown-item mb-3">
+                      <Link to="/changepassword" className="dropdown-item mb-3">
                         <FaLock className="dropdown-icon align-middle" />
-                        {/* <Link to="/changepassword"> */}
-                        <span>change password</span>
-                        {/* </Link> */}
+                        Change Password
+                      </Link>
+                      <a
+                        href="#"
+                        className="dropdown-item mb-3 align-middle"
+                        onClick={LockTheScreen}
+                      >
+                        <FaLock className="dropdown-icon align-middle" />
+                        Lock Screen
                       </a>
-                      <a href="#" className="dropdown-item mb-3 align-middle">
-                        <FaLock className="dropdown-icon" />
-                        <span onClick={LockTheScreen}>Lockscreen</span>
-                      </a>
-                      <a href="#" className="dropdown-item mb-3 align-middle">
+                      <a
+                        href="#"
+                        className="dropdown-item mb-3 align-middle"
+                        onClick={userLogout}
+                      >
                         <HiOutlineLogout className="dropdown-icon" />
-                        <span onClick={userLogout}>Logout</span>
+                        Logout
                       </a>
                     </div>
                   </div>

@@ -16,7 +16,8 @@ root.render(
     <BrowserRouter>
       <AuthContextProvider>
         <ThemeProvider>
-          <ToastContainer />
+          {/* <RouterProvider router={router}/> */}
+          <ToastContainer style={{ position: "fixed", top: "60px" }} />
 
           <App />
         </ThemeProvider>

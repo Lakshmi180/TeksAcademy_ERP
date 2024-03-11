@@ -52,11 +52,12 @@ const ReqireAuth=()=>{
   }
 
 
-  if(AuthState.token && AuthState.password){
+  if(AuthState.token && 
+    AuthState.password){
     return(
       <div className='app'>
       <PublicAuth>
-        <Outlet/>
+      <Outlet/>
       </PublicAuth>
     </div>
     )
