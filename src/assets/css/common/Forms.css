@@ -1,6 +1,6 @@
 .fs-s {
     font-size: var(--erp-fs-s);
-    font-weight: var(--erp-font-weight-medium);
+    font-weight: var(--erp-fw-500);
 }
 
 .dropone-border {
@@ -11,15 +11,15 @@
 }
 
 .filepond {
-
-    border: 2px dashed #e9ebec;
-    background: #fff;
+    border: 2px dashed var(--erp-light-gray) ;
+    background: var(--erp-white-color);
     border-radius: 6px;
 }
 
+
 .filepond-profile-picture {
-    border: 2px dashed #e9ebec;
-    background: #fff;
+    border: 2px dashed var(--erp-light-gray);
+    background: var(--erp-white-color);
     border-radius: 50%;
 }
 
@@ -31,6 +31,10 @@
 .form-fs-12 {
     font-size: 14px;
 }
+.img-box-fsize {
+    font-size: var(--erp-fs-14);
+}
+
 
 .fs-16 {
     font-size: var(--erp-fs-16);

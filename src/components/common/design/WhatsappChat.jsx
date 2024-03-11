@@ -18,7 +18,7 @@ function WhatsppChat() {
     <div>
       <div className='container'>
 
-      <div className="row mt-3">
+      <div className="row ">
           <div className=" col-xxl-12 xl-6 md-6 lg-4">
             <div className="card card-hieght-100">
               <div className="card-header align-items-center d-flex">
@@ -41,7 +41,7 @@ function WhatsppChat() {
                     <ul class="dropdown-menu table-dropdown-menu">
                       <li>
                         <a class="dropdown-item fw-medium" href="#">
-                          <span className="text-muted me-1">
+                          <span className="text_mute me-1">
                             <FaUser />{" "}
                           </span>{" "}
                           View Profile
@@ -49,7 +49,7 @@ function WhatsppChat() {
                       </li>
                       <li>
                         <a class="dropdown-item fw-medium " href="#">
-                          <span className="text-muted me-1">
+                          <span className="text_mute me-1">
                             <HiOutlineArchiveBoxArrowDown />{" "}
                           </span>
                           Archieve
@@ -57,7 +57,7 @@ function WhatsppChat() {
                       </li>
                       <li>
                         <a class="dropdown-item fw-medium" href="#">
-                          <span className="text-muted me-1">
+                          <span className="text_mute me-1">
                             <AiOutlineAudioMuted />
                           </span>
                           Muted
@@ -65,7 +65,7 @@ function WhatsppChat() {
                       </li>
                       <li>
                         <a class="dropdown-item fw-medium" href="#">
-                          <span className="text-muted me-1">
+                          <span className="text_mute me-1">
                             <RiDeleteBin5Line />
                           </span>
                           Delete
@@ -113,7 +113,7 @@ function WhatsppChat() {
                                     className="list-unstyled chat-conversation-list  d-flex flex-column gap-1"
                                     id="user-conversation"
                                   >
-                                    <li className=" left  mb-2 align-items-start p-1">
+                                    <li className=" chat-left  mb-2 align-items-start p-1">
                                       <div className="conversation-list d-flex flex-row">
                                         <div className="chat-avatar d-flex justify-content-end align-items-end">
                                           <img
@@ -155,7 +155,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <BsReply />{" "}
                                                     </span>{" "}
                                                    Reply
@@ -166,7 +166,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium "
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <AiOutlineShareAlt />{" "}
                                                             </span>
                                                          Forward
@@ -177,7 +177,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <MdContentCopy />
                                                     </span>
                                                  Copy
@@ -188,7 +188,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <MdContentCopy />
                                                     </span>
                                                  Copy
@@ -199,7 +199,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <FaRegBookmark />
                                                     </span>
                                                    Bookmark
@@ -209,17 +209,17 @@ function WhatsppChat() {
                                             </div>
                                           </div>
                                           <div class="conversation-name">
-                                            <small class="text-muted time  small text-start">
+                                            <small class="text_mute time  small text-start">
                                               09:07 am
                                             </small>{" "}
-                                            <span class="text-success check-message-icon">
+                                            <span class="text_success check-message-icon">
                                               <i class="ri-check-double-line align-bottom"></i>
                                             </span>
                                           </div>
                                         </div>
                                       </div>
                                     </li>
-                                    <li className=" right  mb-3 d  p-1">
+                                    <li className=" chat-right  mb-3 d  p-1">
                                       <div className="conversation-list  ">
                                         <div className="user-chat-content d-flex ms-5 ">
                                         <div className="ctext-wrap d-flex   mb-1  ">
@@ -240,7 +240,7 @@ function WhatsppChat() {
                                                   class="dropdown-item fw-medium"
                                                   href="#"
                                                 >
-                                                  <span className="text-muted me-1">
+                                                  <span className="text_mute me-1">
                                                   <BsReply />{" "}
                                                   </span>{" "}
                                                  
@@ -252,7 +252,7 @@ function WhatsppChat() {
                                                   class="dropdown-item fw-medium "
                                                   href="#"
                                                 >
-                                                  <span className="text-muted me-1">
+                                                  <span className="text_mute me-1">
                                                   <AiOutlineShareAlt />{" "}
                                                             </span>
                                                          Forward
@@ -263,7 +263,7 @@ function WhatsppChat() {
                                                   class="dropdown-item fw-medium"
                                                   href="#"
                                                 >
-                                                  <span className="text-muted me-1">
+                                                  <span className="text_mute me-1">
                                                   <MdContentCopy />
                                                     </span>
                                                  Copy
@@ -274,7 +274,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <FaRegBookmark />
                                                     </span>
                                                    Bookmark
@@ -285,7 +285,7 @@ function WhatsppChat() {
                                                   class="dropdown-item fw-medium"
                                                   href="#"
                                                 >
-                                                  <span className="text-muted me-1">
+                                                  <span className="text_mute me-1">
                                                     <RiDeleteBin5Line />
                                                   </span>
                                                   Delete
@@ -299,7 +299,7 @@ function WhatsppChat() {
                                             
                                           >
                                             <p
-                                              class="ms-2  ctext-content chat-font-size text-success right-text  "
+                                              class="ms-2  ctext-content chat-font-size text_success right-text  "
                                               style={{ whiteSpace: "pre-wrap" }}
                                             >
                                               Good morning, How are you? What
@@ -309,17 +309,17 @@ function WhatsppChat() {
                                         </div>
                                         </div>
                                         <div class="conversation-name">
-                                          <span class="text-success check-message-icon me-1">
+                                          <span class="text_success check-message-icon me-1">
                                             <IoCheckmarkDoneSharp />
                                           </span>
-                                          <small class="text-muted time  small text-start">
+                                          <small class="text_mute time  small text-start">
                                             09:08 am
                                           </small>{" "}
                                         </div>
                                       </div>
                                     </li>
 
-                                    <li className=" left  mb-2 align-items-start p-1">
+                                    <li className=" chat-left  mb-2 align-items-start p-1">
                                       <div className="conversation-list d-flex flex-row">
                                         <div className="chat-avatar d-flex justify-content-end align-items-end">
                                           <img
@@ -363,7 +363,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <BsReply />{" "}
                                                   </span>{" "}
                                                  
@@ -375,7 +375,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium "
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <AiOutlineShareAlt />{" "}
                                                             </span>
                                                          Forward
@@ -386,7 +386,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <MdContentCopy />
                                                     </span>
                                                  Copy
@@ -397,7 +397,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <FaRegBookmark />
                                                     </span>
                                                    Bookmark
@@ -408,7 +408,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                       <RiDeleteBin5Line />
                                                     </span>
                                                     Delete
@@ -453,7 +453,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <BsReply />{" "}
                                                   </span>{" "}
                                                  
@@ -465,7 +465,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium "
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <AiOutlineShareAlt />{" "}
                                                             </span>
                                                          Forward
@@ -476,7 +476,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <MdContentCopy />
                                                     </span>
                                                  Copy
@@ -487,7 +487,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <FaRegBookmark />
                                                     </span>
                                                    Bookmark
@@ -498,7 +498,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                       <RiDeleteBin5Line />
                                                     </span>
                                                     Delete
@@ -508,10 +508,10 @@ function WhatsppChat() {
                                             </div>
                                           </div>
                                           <div class="conversation-name">
-                                            <small class="text-muted time  small text-start">
+                                            <small class="text_mute time  small text-start">
                                               09:10 am
                                             </small>{" "}
-                                            <span class="text-success check-message-icon">
+                                            <span class="text_success check-message-icon">
                                               <i class="ri-check-double-line align-bottom"></i>
                                             </span>
                                           </div>
@@ -519,7 +519,7 @@ function WhatsppChat() {
                                       </div>
                                     </li>
 
-                                    <li className=" right  mb-3 d  p-1">
+                                    <li className=" chat-right  mb-3 d  p-1">
                                       <div className="conversation-list  ">
                                         <div className="user-chat-content d-flex ms-5 ">
                                         <div className="ctext-wrap d-flex   mb-1  ">
@@ -540,7 +540,7 @@ function WhatsppChat() {
                                                   class="dropdown-item fw-medium"
                                                   href="#"
                                                 >
-                                                  <span className="text-muted me-1">
+                                                  <span className="text_mute me-1">
                                                   <BsReply />{" "}
                                                   </span>{" "}
                                                  
@@ -552,7 +552,7 @@ function WhatsppChat() {
                                                   class="dropdown-item fw-medium "
                                                   href="#"
                                                 >
-                                                  <span className="text-muted me-1">
+                                                  <span className="text_mute me-1">
                                                   <AiOutlineShareAlt />{" "}
                                                             </span>
                                                          Forward
@@ -563,7 +563,7 @@ function WhatsppChat() {
                                                   class="dropdown-item fw-medium"
                                                   href="#"
                                                 >
-                                                  <span className="text-muted me-1">
+                                                  <span className="text_mute me-1">
                                                   <MdContentCopy />
                                                     </span>
                                                  Copy
@@ -574,7 +574,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <FaRegBookmark />
                                                     </span>
                                                    Bookmark
@@ -585,7 +585,7 @@ function WhatsppChat() {
                                                   class="dropdown-item fw-medium"
                                                   href="#"
                                                 >
-                                                  <span className="text-muted me-1">
+                                                  <span className="text_mute me-1">
                                                     <RiDeleteBin5Line />
                                                   </span>
                                                   Delete
@@ -599,7 +599,7 @@ function WhatsppChat() {
                                             
                                           >
                                             <p
-                                              class="ms-2  ctext-content chat-font-size text-success right-text  "
+                                              class="ms-2  ctext-content chat-font-size text_success right-text  "
                                               style={{ whiteSpace: "pre-wrap" }}
                                             >
                                            Wow that's Great!
@@ -608,17 +608,17 @@ function WhatsppChat() {
                                         </div>
                                         </div>
                                         <div class="conversation-name">
-                                          <span class="text-success check-message-icon me-1">
+                                          <span class="text_success check-message-icon me-1">
                                             <IoCheckmarkDoneSharp />
                                           </span>
-                                          <small class="text-muted time  small text-start">
+                                          <small class="text_mute time  small text-start">
                                             09:08 am
                                           </small>{" "}
                                         </div>
                                       </div>
                                     </li>
 
-                                    <li className=" left  mb-2 align-items-start p-1">
+                                    <li className=" chat-left  mb-2 align-items-start p-1">
                                       <div className="conversation-list d-flex flex-row">
                                         <div className="chat-avatar d-flex justify-content-end align-items-end">
                                           <img
@@ -664,7 +664,7 @@ function WhatsppChat() {
                                                             class="dropdown-item fw-medium"
                                                             href="#"
                                                           >
-                                                            <span className="text-muted me-1">
+                                                            <span className="text_mute me-1">
                                                             <BsReply />{" "}
                                                   </span>{" "}
                                                  
@@ -676,7 +676,7 @@ function WhatsppChat() {
                                                             class="dropdown-item fw-medium "
                                                             href="#"
                                                           >
-                                                            <span className="text-muted me-1">
+                                                            <span className="text_mute me-1">
                                                             <AiOutlineShareAlt />{" "}
                                                             </span>
                                                          Forward
@@ -687,7 +687,7 @@ function WhatsppChat() {
                                                             class="dropdown-item fw-medium"
                                                             href="#"
                                                           >
-                                                            <span className="text-muted me-1">
+                                                            <span className="text_mute me-1">
                                                             <MdContentCopy />
                                                     </span>
                                                  Copy
@@ -698,7 +698,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <FaRegBookmark />
                                                     </span>
                                                    Bookmark
@@ -709,7 +709,7 @@ function WhatsppChat() {
                                                             class="dropdown-item fw-medium"
                                                             href="#"
                                                           >
-                                                            <span className="text-muted me-1">
+                                                            <span className="text_mute me-1">
                                                               <RiDeleteBin5Line />
                                                             </span>
                                                             Delete
@@ -754,7 +754,7 @@ function WhatsppChat() {
                                                             class="dropdown-item fw-medium"
                                                             href="#"
                                                           >
-                                                            <span className="text-muted me-1">
+                                                            <span className="text_mute me-1">
                                                             <BsReply />{" "}
                                                   </span>{" "}
                                                  
@@ -766,7 +766,7 @@ function WhatsppChat() {
                                                             class="dropdown-item fw-medium "
                                                             href="#"
                                                           >
-                                                            <span className="text-muted me-1">
+                                                            <span className="text_mute me-1">
                                                             <AiOutlineShareAlt />{" "}
                                                             </span>
                                                          Forward
@@ -777,7 +777,7 @@ function WhatsppChat() {
                                                             class="dropdown-item fw-medium"
                                                             href="#"
                                                           >
-                                                            <span className="text-muted me-1">
+                                                            <span className="text_mute me-1">
                                                             <MdContentCopy />
                                                     </span>
                                                  Copy
@@ -788,7 +788,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <FaRegBookmark />
                                                     </span>
                                                    Bookmark
@@ -799,7 +799,7 @@ function WhatsppChat() {
                                                             class="dropdown-item fw-medium"
                                                             href="#"
                                                           >
-                                                            <span className="text-muted me-1">
+                                                            <span className="text_mute me-1">
                                                               <RiDeleteBin5Line />
                                                             </span>
                                                             Delete
@@ -815,10 +815,10 @@ function WhatsppChat() {
                                            
                                           </div>
                                           <div class="conversation-name">
-                                            <small class="text-muted time  small text-start">
+                                            <small class="text_mute time  small text-start">
                                               09:07 am
                                             </small>{" "}
-                                            <span class="text-success check-message-icon">
+                                            <span class="text_success check-message-icon">
                                               <i class="ri-check-double-line align-bottom"></i>
                                             </span>
                                           </div>
@@ -826,7 +826,7 @@ function WhatsppChat() {
                                       </div>
                                     </li>
 
-                                    <li className=" right  mb-3 d  p-1">
+                                    <li className=" chat-right  mb-3 d  p-1">
                                       <div className="conversation-list  ">
                                         <div className="user-chat-content d-flex ms-5 ">
                                           <div className="ctext-wrap d-flex   mb-1 ">
@@ -847,7 +847,7 @@ function WhatsppChat() {
                                                   class="dropdown-item fw-medium"
                                                   href="#"
                                                 >
-                                                  <span className="text-muted me-1">
+                                                  <span className="text_mute me-1">
                                                   <BsReply />{" "}
                                                   </span>{" "}
                                                  
@@ -859,7 +859,7 @@ function WhatsppChat() {
                                                   class="dropdown-item fw-medium "
                                                   href="#"
                                                 >
-                                                  <span className="text-muted me-1">
+                                                  <span className="text_mute me-1">
                                                   <AiOutlineShareAlt />{" "}
                                                             </span>
                                                          Forward
@@ -870,7 +870,7 @@ function WhatsppChat() {
                                                   class="dropdown-item fw-medium"
                                                   href="#"
                                                 >
-                                                  <span className="text-muted me-1">
+                                                  <span className="text_mute me-1">
                                                   <MdContentCopy />
                                                     </span>
                                                  Copy
@@ -881,7 +881,7 @@ function WhatsppChat() {
                                                     class="dropdown-item fw-medium"
                                                     href="#"
                                                   >
-                                                    <span className="text-muted me-1">
+                                                    <span className="text_mute me-1">
                                                     <FaRegBookmark />
                                                     </span>
                                                    Bookmark
@@ -892,7 +892,7 @@ function WhatsppChat() {
                                                   class="dropdown-item fw-medium"
                                                   href="#"
                                                 >
-                                                  <span className="text-muted me-1">
+                                                  <span className="text_mute me-1">
                                                     <RiDeleteBin5Line />
                                                   </span>
                                                   Delete
@@ -906,7 +906,7 @@ function WhatsppChat() {
                                             
                                           >
                                             <p
-                                              class="ms-2  ctext-content chat-font-size text-success right-text   "
+                                              class="ms-2  ctext-content chat-font-size text_success right-text   "
                                               style={{ whiteSpace: "pre-wrap" }}
                                             >
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam amet error exercitationem consequatur labore, earum nesciunt ea possimus quas in, quidem eaque aspernatur laboriosam dolore itaque modi delectus eos. Ipsa.
@@ -915,10 +915,10 @@ function WhatsppChat() {
                                         </div>
                                         </div>
                                         <div class="conversation-name">
-                                          <span class="text-success check-message-icon me-1">
+                                          <span class="text_success check-message-icon me-1">
                                             <IoCheckmarkDoneSharp />
                                           </span>
-                                          <small class="text-muted time  small text-start">
+                                          <small class="text_mute time  small text-start">
                                             09:08 am
                                           </small>{" "}
                                         </div>
@@ -947,7 +947,7 @@ function WhatsppChat() {
                       </div>
                     </div>
                     <div className="col-auto">
-                      <button type="submit " className="btn btn-info text-white">
+                      <button type="submit " className="btn btn_info btn-info text_white">
                       <span className="d-none d-sm-inline-block me-2 send-message">Send</span>
                       <IoMdSend />
                       </button>

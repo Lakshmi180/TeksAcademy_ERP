@@ -22,15 +22,16 @@ function Card() {
             <div className="card Totalearning d-flex justify-content-between bg_white rounded">
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3">
-                  <p className=" fw-medium text-mute m-0">TOTAL EARNING</p>
-                  <h5 className="text-success fs-14 card-number">
+                  <p className=" fw-medium text-muted m-0 fw_400 fs_14size">TOTAL EARNING</p>
+                
+                  <h5 className="text-success fs-14 fw_400 fs_14">
                     <HiArrowUpRight /> +16.24%
                   </h5>
                 </div>
                 <div className="d-flex justify-content-between">
                   <h3>
                     {" "}
-                    <span className="fs-22 dollar">$559.25k</span>
+                    <span className="fs-22 fw_600 fs_22">$559.25k</span>
                   </h3>
                 </div>
                 <div className="d-flex justify-content-between">
@@ -52,6 +53,9 @@ function Card() {
             <div className="card orders  bg_white rounded">
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3">
+                  <p className=" fw-medium text-muted m-0 fw_400 fs_14size">ORDERS</p>
+                
+                  <h5 className="text-danger fs-14 fw_400 fs_14"/>
                   <p className=" fw-medium text-mute m-0">ORDERS</p>
                   <h5 className="text_danger fs-14 card-number">
                     <GoArrowDownRight /> -3.57%
@@ -60,7 +64,7 @@ function Card() {
                 <div className="d-flex justify-content-between">
                   <h3>
                     {" "}
-                    <span className="fs-22 dollar">36,849</span>
+                    <span className="fs-22 fw_600 fs_22">36,849</span>
                   </h3>
                 </div>
                 <div className="d-flex justify-content-between">
@@ -82,15 +86,16 @@ function Card() {
             <div className="card  customers   bg_white rounded">
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3">
-                  <p className="fw-medium text-mute m-0">CUSTOMERS</p>
-                  <h5 className="text-success fs-14 card-number ">
+                  <p className="fw-medium text-muted m-0 fw_400 fs_14size">CUSTOMERS</p>
+            
+                  <h5 className="text-success fs-14 fw_400 fs_14 ">
                     <HiArrowUpRight /> +29.08%
                   </h5>
                 </div>
                 <div className="d-flex justify-content-between">
                   <h3>
                     {" "}
-                    <span className="fs-22 dollar">183.35M</span>
+                    <span className="fs-22 fw_600 fs_22">183.35M</span>
                   </h3>
                 </div>
                 <div className="d-flex justify-content-between">
@@ -112,13 +117,14 @@ function Card() {
             <div className="card my-balance  bg_white rounded">
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3">
-                  <p className=" fw-medium text-mute m-0">MY BALANCE</p>
-                  <h5 className="text-black-50 fs-14 card-number">+0.00%</h5>
+                  <p className=" fw-medium text-muted m-0 fw_400 fs_14size">MY BALANCE</p>
+            
+                  <h5 className="text-black-50  fw_400 fs_14">+0.00%</h5>
                 </div>
                 <div className="d-flex justify-content-between">
                   <h3>
                     {" "}
-                    <span className="fs-22 dollar">$165.89k</span>
+                    <span className="fs-22 fw_600 fs_22">$165.89k</span>
                   </h3>
                 </div>
                 <div className="d-flex justify-content-between ">
