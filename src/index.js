@@ -7,28 +7,23 @@ import { ThemeProvider } from "./context/ThemeContext/ThemeContext";
 import { ToastContainer } from "react-toastify";
 import AuthContextProvider from "./context/AuthContext/AuthContextProvider";
 import { BrowserRouter, RouterProvider } from "react-router-dom";
-import 'react-toastify/dist/ReactToastify.css';
-import {router} from "./router";
-
+import "react-toastify/dist/ReactToastify.css";
+import { router } from "./router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
- 
-    <AuthContextProvider>
-    <ThemeProvider>
-    {/* <RouterProvider router={router}/> */}
-      <ToastContainer/>
+      <AuthContextProvider>
+        <ThemeProvider>
+          <ToastContainer />
 
-      <App />
-    </ThemeProvider>
-    </AuthContextProvider>
+          <App />
+        </ThemeProvider>
+      </AuthContextProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
-
-
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

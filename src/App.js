@@ -23,22 +23,26 @@ import Modal from "./components/common/design/Modal";
 import Page from "./components/common/design/Page";
 import Button from "./components/common/design/Button";
 import { Login } from "./components/Auth/Login";
+import { useTheme } from "./context/ThemeContext/ThemeContext";
 
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
-
+  const { theme } = useTheme();
   const toggleSidebar = () => {
     setIsExpanded(!isExpanded);
   };
   return (
-    <div className="App">
+    <div className={theme === "light" ? "App" : "darkMode App"}>
       <Sidemenu
         isExpanded={isExpanded}
         setIsExpanded={setIsExpanded}
         toggleSidebar={toggleSidebar}
       />
       <div style={{ marginBottom: "50px", backgroundColor: "white" }}></div>
-      <main className="content" style={{ overflow: "auto" }}>
+      <main
+        className={theme === "light" ? "content" : "darkMode content"}
+        style={{ overflow: "auto" }}
+      >
         <Topbar
           isExpanded={isExpanded}
           setIsExpanded={setIsExpanded}

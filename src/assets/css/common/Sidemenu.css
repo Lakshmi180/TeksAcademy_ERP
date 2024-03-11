@@ -22,7 +22,7 @@
   z-index: 1000;
   height: 100vh;
   transition: all 0.1s ease-in-out;
-  background-color: var(--erp-sky-500);
+  background-color: var(--erp-sidebar-color);
   overflow-y: scroll;
   /* position: fixed;
   top: 0;
@@ -88,7 +88,8 @@ a.sidebar-link {
 }
 
 a.sidebar-link:hover {
-  color: var(--erp-white-color);
+  /* color: var(--erp-white-color); */
+  color: white;
 }
 
 .sidebar-link i {
