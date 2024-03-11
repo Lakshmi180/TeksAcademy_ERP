@@ -222,7 +222,7 @@ export const Sidemenu = ({ isExpanded }) => {
                                 </li>
 
                                 <li className="sidebar-item">
-                                    <Link to="/whatsapp" className="sidebar-link">
+                                    <Link to="whatsapp" className="sidebar-link">
                                         <AiOutlineLine className="sub_icon" />Whatsapp Chat
                                     </Link>
                                 </li>
@@ -245,11 +245,6 @@ export const Sidemenu = ({ isExpanded }) => {
                                 <li className="sidebar-item">
                                     <Link to="/page" className="sidebar-link">
                                         <AiOutlineLine className="sub_icon" />Page
-                                    </Link>
-                                </li>
-                                <li className="sidebar-item">
-                                    <Link to="/button" className="sidebar-link">
-                                        <AiOutlineLine className="sub_icon" />Button
                                     </Link>
                                 </li>
                                 <li className="sidebar-item">
