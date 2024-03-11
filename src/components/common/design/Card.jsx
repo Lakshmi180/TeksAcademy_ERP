@@ -20,7 +20,7 @@ function Card() {
             <div className="card Totalearning d-flex justify-content-between shadow   bg-body-tertiary rounded">
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3">
-                  <p className=" fw-medium text-muted m-0">TOTAL EARNING</p>
+                  <p className=" fw-medium text-muted m-0 pfsize">TOTAL EARNING</p>
                   <h5 className="text-success fs-14 card-number">
                     <HiArrowUpRight /> +16.24%
                   </h5>
@@ -47,7 +47,7 @@ function Card() {
             <div className="card orders shadow   bg-body-tertiary rounded">
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3">
-                  <p className=" fw-medium text-muted m-0">ORDERS</p>
+                  <p className=" fw-medium text-muted m-0 pfsize">ORDERS</p>
                   <h5 className="text-danger fs-14 card-number">
                     <GoArrowDownRight /> -3.57%
                   </h5>
@@ -74,7 +74,7 @@ function Card() {
             <div className="card  customers shadow   bg-body-tertiary rounded">
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3">
-                  <p className="fw-medium text-muted m-0">CUSTOMERS</p>
+                  <p className="fw-medium text-muted m-0 pfsize">CUSTOMERS</p>
                   <h5 className="text-success fs-14 card-number ">
                     <HiArrowUpRight /> +29.08%
                   </h5>
@@ -101,7 +101,7 @@ function Card() {
             <div className="card my-balance shadow   bg-body-tertiary rounded">
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3">
-                  <p className=" fw-medium text-muted m-0">MY BALANCE</p>
+                  <p className=" fw-medium text-muted m-0 pfsize">MY BALANCE</p>
                   <h5 className="text-black-50 fs-14 card-number">+0.00%</h5>
                 </div>
                 <div className="d-flex justify-content-between">

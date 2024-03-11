@@ -14,7 +14,7 @@
 .login_welcome_text {
   color: var(--erp-sky-500);
   font-size: var(--erp-fs-16);
-  font-weight: var(--erp-font-weight-medium);
+  font-weight: var(--erp-fw-500);
 }
 
 .login_welcome_description {
@@ -78,7 +78,7 @@
 .reset-password-message {
   font-size: var(--erp-fs-13);
   color: var(--erp-yellow-color);
-  font-weight: var(--erp-font-weight-medium);
+  font-weight: var(--erp-fw-500);
 }
 
 .custom-password-length-text {
@@ -94,5 +94,5 @@
 .lock-screen-username {
   color: #495057;
   font-size: var(--erp-fs-16) !important;
-  font-weight: var(--erp-font-weight-medium);
+  font-weight: var(--erp-fw-500);
 }

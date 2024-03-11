@@ -39,7 +39,7 @@
     position: absolute;
     top: 19px;
     left: -21px;
-    font-weight: var(--erp-font-weight-medium);
+    font-weight: var(--erp-fw-500);
 }
 
 .ribbon-box .ribbon-two-danger span:before {
@@ -93,7 +93,7 @@
 }
 
 .coming-soon-text {
-    font-weight: var(--erp-font-weight-lightbold);
+    font-weight: var(--erp-fw-700);
     text-transform: uppercase;
     color: var(--erp-white-color);
     text-shadow: 3px 4px var(--erp-green-400);

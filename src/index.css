@@ -18,15 +18,18 @@ body {
   --erp-orange-500: #f06548;
   --erp-orange-600: #da3412;
   --erp-light-blue-color: #abb9e8;
+  --erp-light-gray:#e9ebec;
   --erp-gray-color: #878a99;
   --erp-white-color: #fff;
   --erp-sky-500: #405189;
   --erp-sky-300: #7dd3fc;
+ 
 
   --erp-sky-400:   #2385ba;
   --erp-sky-light:  #dff0fa ;
   --erp-yellow-color: #d19b3d;
   --erp-lightblack-color: #2e353d;
+  --erp-black-color: black;
   --erp-text-mute: #878a99;
   --erp-green-400 :#0ab39c ;
   --erp-green-light: #daf4f0;
@@ -47,12 +50,12 @@ body {
   --erp-fs-17: 17px;
 
   /* font-weight */
-  --erp-font-weight-thin: 100;
-  --erp-font-weight-light: 300;
-  --erp-font-weight-regular: 400;
-  --erp-font-weight-medium: 500;
-  --erp-font-weight-lightbold: 600;
-  --erp-font-weight-bold: 700;
+  --erp-fw-100: 100;
+  --erp-fw-300: 300;
+  --erp-fw-400: 400;
+  --erp-fw-500: 500;
+  --erp-fw-600: 600;
+  --erp-fw-700: 700;
 
   /* line-height */
   --erp-xs-lh: 1.2;
@@ -67,7 +70,14 @@ body {
   --erp-font-xl-bold-lh: 20px 700 2;
   /* Extra Large, Bold, Line Height 2.0 */
 
+
+  /* background colors*/
+ --erp-bg-light: rgb(248 249 250);
+ 
+
 }
+
+
 
 /* Dark mode colors */
 .darkMode,
@@ -103,23 +113,23 @@ body {
 }
 
 .font-weight-100 {
-  font-weight: var(--erp-font-weight-thin);
+  font-weight: var( --erp-fw-100);
 }
 
 .font-weight-300 {
-  font-weight: var(--erp-font-weight-light);
+  font-weight: var( --erp-fw-300);
 }
 
 .font-weight-400 {
-  font-weight: var(--erp-font-weight-regular);
+  font-weight: var( --erp-fw-400);
 }
 
 .font-weight-500 {
-  font-weight: var(--erp-font-weight-medium);
+  font-weight: var( --erp-fw-500);
 }
 
 .font-weight-700 {
-  font-weight: var(--erp-font-weight-bold);
+  font-weight: var( --erp-fw-700);
 }
 
 .main_menu i {

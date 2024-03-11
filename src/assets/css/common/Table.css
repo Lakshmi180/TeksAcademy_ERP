@@ -1,14 +1,32 @@
  table{
     font-family: Poppins, sans-serif;
+    scrollbar-width: thin;
 
  }
-
+.card-title{
+  font-size: var( --erp-fs-16) ;
+}
+.black_color{
+    color: var( --erp-lightblack-color);
+}
+.fw_medium{
+    font-weight: var(  --erp-fw-600);   
+}
+.fw_normal{
+    font-weight: var(  --erp-fw-500);   
+}
+.fs_14{
+    font-size: var(--erp-fs-14) ;
+}
+.lh_xs{
+    line-height: var(  --erp-xs-lh);
+}
 .td-name{
    
     font-size: var(--erp-fs-14) ;
-    font-weight: var(  --erp-font-weight-medium);
+    font-weight: var(  --erp-fw-500);
     line-height: var(  --erp-xs-lh);
-    color: var( --erp-lightblack-color);
+ 
 }
 .td-sub-name{
     color: var(  --erp-text-mute);
@@ -16,10 +34,10 @@
   
     font-size: var(--erp-fs-13);
 }
-.tbl-card-header {
+/* .tbl-card-header {
    
     font-size: var( --erp-fs-16);
-}
+} */
 
 
 .product-img{
@@ -60,17 +78,17 @@
   background-color:var(--erp-primary-color);
   border-color:var(--erp-primary-color);
 }
-.text-muted{
-    color: var(  --erp-text-mute) !important;
+.text_mute{
+    color: var( --erp-text-mute) !important;
 }
 
 thead th {
-font-weight: var(  --erp-font-weight-medium);
+font-weight: var(  --erp-fw-500);
  font-size: var(--erp-fs-13);
 
  color:var(  --erp-text-mute);
 }
-.text-danger{
+.text_danger{
  color: var( --erp-secondary-color) !important;
  
 }
@@ -84,8 +102,11 @@ tr{
     display: table-row;
     vertical-align: inherit;
 }
-.text-success{
+.text_success{
     color:var( --erp-green-400)!important;
+}
+.text_black{
+    color: var(--erp-black-color);
 }
 .tbl-amount{
     font-size: var(--erp-fs-14);
@@ -94,10 +115,10 @@ tr{
     line-height: .95 !important;
     font-size:  var( --erp-fs-xxs);
 }
-.bg-success-subtle{
+.bg_success_subtle{
     background-color:var(--erp-green-light);
 }
-.btn-soft-info{
+.btn_soft_info{
     color:var( --erp-sky-300) !important;
     background-color: var( --erp-sky-light) !important;
     border: transparent !important;
@@ -120,10 +141,13 @@ img{
 .detail-btn{
     font-size: var(--erp-fs-13);
 }
-.bg-success{
+.bg_success{
     background-color: var(--erp-green-400) !important;
 }
-.bg-danger{
+.bg_light{
+    background-color:var(--erp-bg-light) ;
+}
+.bg_danger{
     background-color: var(--erp-secondary-color) !important;
 }
 .table-dropdown-menu{
@@ -131,6 +155,11 @@ img{
   position: absolute !important;
   inset: 0px 0px auto auto !important;
   transform: translate3d(0px 37px 0px);
+}
+.btn_light {
+    color: var(--erp-black-color);
+    background-color: var(--erp-light-gray);
+    border-color: var(--erp-light-gray);
 }
 
 

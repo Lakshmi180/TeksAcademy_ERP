@@ -2,7 +2,7 @@
     background-image: none !important;
     font-family: "Material Design Icons";
     content: "+";
-    font-size: 1.5rem;
+    font-size: var(--erp-fs-l);
     vertical-align: middle;
     line-height: .8;
 }
@@ -11,5 +11,5 @@
     background-image: none !important;
     content: "-";
     margin-right: -3px;
-    font-size: 1.5rem;
+    font-size: var(--erp-fs-l);
 }
