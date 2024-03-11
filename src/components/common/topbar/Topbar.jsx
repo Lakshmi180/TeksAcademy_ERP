@@ -86,12 +86,13 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
                                                 <IoIosSettings className="dropdown-icon" />
                                                 Settings
                                             </a>
-                                            <a href="#" className="dropdown-item mb-3">
-                                                <FaLock className="dropdown-icon align-middle" />
-                                                {/* <Link to="/changepassword"> */}
-                                                <span>change password</span>
-                                                {/* </Link> */}
-                                            </a>
+                                            {/* <a href="#" className="dropdown-item mb-3"> */}
+                                               
+                                                <Link className="dropdown-item mb-3 align-middle"  to="/changepassword">
+                                                <FaLock className="dropdown-icon" />
+                                                change password
+                                                </Link>
+                                            {/* </a> */}
                                             <a href="#" className="dropdown-item mb-3 align-middle">
                                                 <FaLock className="dropdown-icon" />
                                                 <span onClick={LockTheScreen}>Lockscreen</span>

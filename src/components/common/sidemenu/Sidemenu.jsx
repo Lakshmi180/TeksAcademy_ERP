@@ -59,7 +59,11 @@ export const Sidemenu = ({ isExpanded }) => {
                                     <a href="#" className="sidebar-link"><AiOutlineLine className="sub_icon" />Create User</a>
                                 </li>
                                 <li className='sidebar-item'>
-                                    <a href="#" className="sidebar-link"><AiOutlineLine className="sub_icon" />User Details</a>
+                                    <a href="#" className="sidebar-link"><AiOutlineLine className="sub_icon" />
+                                    
+                                    User Details
+                                    
+                                    </a>
                                 </li>
                             </ul>
                         </li>
@@ -67,8 +71,8 @@ export const Sidemenu = ({ isExpanded }) => {
                         <li className='sidebar-item'>
                             <a href="#" className="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#student"
                                 aria-expanded="false" aria-controls="student">
-                                <PiStudentFill className="main_icon" />
-                                <span>Student Management</span>
+                              <PiStudentFill className="main_icon" />
+                                <span>Student Management</span> 
                             </a>
                             <ul id='student' className='sidebar-dropdown list-unstyled collapse' data-bs-parent="#sidebar">
                                 <li className='sidebar-item'>
@@ -85,6 +89,13 @@ export const Sidemenu = ({ isExpanded }) => {
                                 </li>
                                 <li className='sidebar-item'>
                                     <a href='' className='sidebar-link'><AiOutlineLine className="sub_icon" />Requested Certificate</a>
+                                    <Link to ="/table"
+                                     className='sidebar-link'
+                                    >
+                                        <AiOutlineLine className="sub_icon" />
+                                        Requested Certificate
+
+                                    </Link>
                                 </li>
                                 <li className='sidebar-item'>
                                     <a href="#" className="sidebar-link has-dropdown collapsed " data-bs-toggle="collapse" data-bs-target="#refund"

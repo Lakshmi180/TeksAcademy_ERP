@@ -19,7 +19,10 @@ root.render(
     <AuthContextProvider>
     <ThemeProvider>
     {/* <RouterProvider router={router}/> */}
-      <ToastContainer/>
+      <ToastContainer
+      style={{position:"fixed", top:"60px"}}
+      
+      />
 
       <App />
     </ThemeProvider>
