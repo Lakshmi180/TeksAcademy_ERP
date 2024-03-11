@@ -14,7 +14,7 @@
 }
 
 .btn-primary:hover {
-  background-color: var(--erp-sky-400);
+  background-color: var(--erp-violet-500);
 }
 
 .btn-load .spinner-border {
