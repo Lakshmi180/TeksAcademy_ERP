@@ -1,24 +1,23 @@
 .btn-primary {
-    background-color: var(--erp-sky-500);
-    border: var(--erp-sky-500);
+  background-color: var(--erp-violet-600);
+  border: var(--erp-sky-500);
 }
 
 .btn-outline-primary {
-    color: var(--erp-sky-500);
-    border-color: var(--erp-sky-500);
+  color: var(--erp-sky-500);
+  border-color: var(--erp-sky-500);
 }
 
 .btn-outline-primary:hover {
-    background-color: var(--erp-sky-500);
-    border: var(--erp-sky-500);
-
+  background-color: var(--erp-sky-500);
+  border: var(--erp-sky-500);
 }
 
 .btn-primary:hover {
-    background-color: var(--erp-sky-500);
+  background-color: var(--erp-sky-400);
 }
 
 .btn-load .spinner-border {
-    height: 19px;
-    width: 19px;
+  height: 19px;
+  width: 19px;
 }

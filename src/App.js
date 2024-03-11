@@ -22,42 +22,40 @@ import Tab from "./components/common/design/Tab";
 import Modal from "./components/common/design/Modal";
 import Page from "./components/common/design/Page";
 import Button from "./components/common/design/Button";
-import { Login } from "./components/Auth/Login";
+import { useTheme } from "./context/ThemeContext/ThemeContext";
 
 function App() {
-
   const [isExpanded, setIsExpanded] = useState(true);
+  const { theme } = useTheme();
   const toggleSidebar = () => {
     setIsExpanded(!isExpanded);
   };
 
-
   return (
-
-
-    <div className="App">
+    <div className={theme === "light" ? "App" : "darkMode App"}>
       <Sidemenu
         isExpanded={isExpanded}
         setIsExpanded={setIsExpanded}
         toggleSidebar={toggleSidebar}
       />
       <div style={{ marginBottom: "50px", backgroundColor: "white" }}></div>
-      <main className="content" style={{ overflow: "auto" }}>
+      <main
+        className={theme === "light" ? "content" : "darkMode content"}
+        style={{ overflow: "auto" }}
+      >
         <Topbar
           isExpanded={isExpanded}
           setIsExpanded={setIsExpanded}
           toggleSidebar={toggleSidebar}
         />
 
-
-
         <div className="mt-5 pt-5">
           <Routes>
-           <Route path="/" element={<Dashboard />} />
+            <Route path="/" element={<Dashboard />} />
             <Route path="/table" element={<Table />} />
-            <Route path="/card" element={<Card/>} />
+            <Route path="/card" element={<Card />} />
             <Route path="/forms" element={<Forms />} />
-            <Route path="/whatsapp" element={<WhatsappChat/>} />
+            <Route path="/whatsapp" element={<WhatsappChat />} />
             <Route path="/accordian" element={<Accordian />} />
             <Route path="/tabs" element={<Tab />} />
             <Route path="/modal" element={<Modal />} />
@@ -80,17 +78,14 @@ function App() {
     //       <Route path="/lockscreen" element={<LockScreen />} />
     //     </Route>
     //   </Routes>
-
-
-
   );
 }
 
 export default App;
 
-
 {
-  /* <Routes>
+  /* 
+  <Routes>
         <Route element={<ReqireAuth />}>
           <Route path="/" element={<Dashboard />} />
         </Route>
@@ -100,5 +95,6 @@ export default App;
           <Route path="/changepassword" element={<ChangePassword />} />
           <Route path="/lockscreen" element={<LockScreen />} />
         </Route>
-      </Routes> */
+  </Routes> 
+  */
 }
