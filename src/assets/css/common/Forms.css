@@ -2,31 +2,31 @@
 
 .fsize {
     font-size: var(--erp-fs-s);
-    font-weight: var(--erp-font-weight-medium);
+    font-weight: var(--erp-fw-500);
 }
 .dropone-border {
     min-height: 230px;
-    border: 2px  #e9ebec dashed;
-    background: #fff;
+    border: 2px dashed var(--erp-light-gray) ;
+    background: var(--erp-white-color);
     border-radius: 6px;
 }
 .filepond{
   
-    border: 2px dashed #e9ebec;
-    background: #fff;
+    border: 2px dashed var(--erp-light-gray);
+    background: var(--erp-white-color);
     border-radius: 6px;
 }
 .filepond-profile-picture {
-    border: 2px dashed #e9ebec;
-    background: #fff;
+    border: 2px dashed var(--erp-light-gray);
+    background: var(--erp-white-color);
     border-radius: 50%;
 }
 
 .img-box-fsize {
-    font-size: 14px;
+    font-size: var(--erp-fs-14);
 }
 .form-fsize{
-    font-size: 14px;
+    font-size: var(--erp-fs-14);
 }
 
 .dropdown-menu {
