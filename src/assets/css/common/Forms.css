@@ -1,32 +1,43 @@
-
-
-.fsize {
+.fs-s {
     font-size: var(--erp-fs-s);
     font-weight: var(--erp-fw-500);
 }
+
 .dropone-border {
     min-height: 230px;
+    border: 2px #e9ebec dashed;
+    background: #fff;
+    border-radius: 6px;
+}
+
+.filepond {
     border: 2px dashed var(--erp-light-gray) ;
     background: var(--erp-white-color);
     border-radius: 6px;
 }
-.filepond{
-  
-    border: 2px dashed var(--erp-light-gray);
-    background: var(--erp-white-color);
-    border-radius: 6px;
-}
+
+
 .filepond-profile-picture {
     border: 2px dashed var(--erp-light-gray);
     background: var(--erp-white-color);
     border-radius: 50%;
 }
 
+.img-box-fs-12 {
+    font-size: 14px;
+}
+
+
+.form-fs-12 {
+    font-size: 14px;
+}
 .img-box-fsize {
     font-size: var(--erp-fs-14);
 }
-.form-fsize{
-    font-size: var(--erp-fs-14);
+
+
+.fs-16 {
+    font-size: var(--erp-fs-16);
 }
 
 .dropdown-menu {
@@ -39,21 +50,41 @@
     scrollbar-width: thin;
 }
 
-
-.btn-soft-primary:hover {
-    color: var(--erp-white-color);
-    background-color: var(--erp-sky-500);
+.btn_primary {
+    background-color: var(--erp-sidebar-color) !important;
+    border-color: var(--erp-sidebar-color) !important;
+    color: var(--erp-card-color)
 }
 
-.btn-soft-primary {
-    color: var(--erp-sky-500);
-    background-color: var(--erp-gray-200);
+.btn_success {
+    background-color: var(--erp-green-600) !important;
+    border-color: var(--erp-green-600) !important;
+    color: var(--erp-card-color)
 }
+
+
 
 /* .acc-plus::after {
     display: none;
 } */
 
+.primary_outline {
+    border-color: var(--erp-sidebar-color);
+}
+
+.primary_outline:hover {
+    background-color: var(--erp-sidebar-color);
+    color: var(--erp-card-color)
+}
+
+.success_outline {
+    border-color: var(--erp-green-600);
+}
+
+.success_outline:hover {
+    background-color: var(--erp-green-600);
+    color: var(--erp-card-color)
+}
 
 .date-pic {
     width: 300px !important;
@@ -64,11 +95,24 @@
 }
 
 .react-datepicker__current-month {
-    color: var(--erp-white-color);
+    color: var(--erp-card-color);
 }
 
 .react-datepicker__day-name {
-    color: var(--erp-white-color);
+    color: var(--erp-card-color);
+}
+
+.bg_white {
+    background-color: var(--erp-bg-white);
 }
 
 /* page*/
+.page-item.active.square {
+    background-color: var(--erp-sidebar-color);
+    color: var(--erp-card-color)
+}
+
+.page-link.rounded.col {
+    background-color: var(--erp-sidebar-color);
+    color: var(--erp-card-color)
+}

@@ -24,6 +24,9 @@ import Page from "./components/common/design/Page";
 import Button from "./components/common/design/Button";
 import { useTheme } from "./context/ThemeContext/ThemeContext";
 
+
+
+
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
   const { theme } = useTheme();
@@ -81,7 +84,7 @@ function App() {
   );
 }
 
-export default App;
+
 
 {
   /* 
@@ -95,6 +98,8 @@ export default App;
           <Route path="/changepassword" element={<ChangePassword />} />
           <Route path="/lockscreen" element={<LockScreen />} />
         </Route>
-  </Routes> 
-  */
+      </Routes> */
 }
+  
+
+export default App;

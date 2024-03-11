@@ -305,6 +305,7 @@ h1 {
   font-size: 1.5rem;
   color: #000;
 }
+
 /* ---- */
 html,
 body,
@@ -317,6 +318,7 @@ body,
   /* font-family: "Nunito", sans-serif; */
   background-color: var(--erp-bg-color);
 }
+
 ::-webkit-scrollbar {
   width: 3px;
 }

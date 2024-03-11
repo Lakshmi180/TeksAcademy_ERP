@@ -5,7 +5,7 @@ import "../../../assets/css/common/Tab.css"
 function Tab() {
     return (
         <div>
-            <div class="container mt-4 bg-white">
+            <div class="container mt-4 bg_white">
                 <div class=" row fs-6 p-3 ">
                     <h5>Tabs</h5>
                     <div class="col-lg-6">
@@ -102,7 +102,7 @@ function Tab() {
                                     <div class="flex-grow-1 ms-2">
                                         Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR.
                                         <div class="mt-2">
-                                            <a href="javascript:void(0);" class="btn btn-sm btn-soft-primary">Read More <IoIosArrowRoundForward /></a>
+                                            <a href="javascript:void(0);" class="btn btn-sm btn_soft_primary">Read More <IoIosArrowRoundForward /></a>
                                         </div>
                                     </div>
                                 </div>
@@ -117,7 +117,7 @@ function Tab() {
                                     <div class="flex-grow-1 ms-2">
                                         When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees, and but a few stray gleams steal into the inner sanctuary, I throw myself down among the tall grass by the trickling stream; and, as I lie close to the earth, a thousand unknown.
                                         <div class="mt-2">
-                                            <a href="javascript:void(0);" class="btn btn-sm btn-soft-primary">Read More <IoIosArrowRoundForward /></a>
+                                            <a href="javascript:void(0);" class="btn btn-sm btn_soft_primary">Read More <IoIosArrowRoundForward /></a>
                                         </div>
                                     </div>
                                 </div>
@@ -132,7 +132,7 @@ function Tab() {
                                     <div class="flex-grow-1 ms-2">
                                         Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
                                         <div class="mt-2">
-                                            <a href="javascript:void(0);" class="btn btn-sm btn-soft-primary">Read More<IoIosArrowRoundForward /></a>
+                                            <a href="javascript:void(0);" class="btn btn-sm btn_soft_primary">Read More<IoIosArrowRoundForward /></a>
                                         </div>
                                     </div>
                                 </div>
@@ -147,7 +147,7 @@ function Tab() {
                                     <div class="flex-grow-1 ms-2">
                                         when darkness overspreads my eyes, and heaven and earth seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often think with longing, Oh, would I could describe these conceptions, could impress upon paper all that is living so full and warm within me, that it might be the.
                                         <div class="mt-2">
-                                            <a href="javascript:void(0);" class="btn btn-sm btn-soft-primary">Read More <IoIosArrowRoundForward /></a>
+                                            <a href="javascript:void(0);" class="btn btn-sm btn_soft_primary">Read More <IoIosArrowRoundForward /></a>
                                         </div>
                                     </div>
                                 </div>

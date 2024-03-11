@@ -1,31 +1,33 @@
 import React from 'react'
 import { IoIosClose } from "react-icons/io";
+import "../../../assets/css/common/Modal.css"
+
 function Modal() {
-  return (
-    <div>
-         <div class="container mt-4 bg-white">
-                <div class=" row fs-6 p-3 ">
+    return (
+        <div>
+            <div class="container mt-4 bg-white">
+                <div class=" row fs-16 p-3 ">
                     <h5>Modals</h5>
                     <div class="col-lg-6">
-                        <button type="button" class="btn btn-primary mt-4 " data-bs-toggle="modal" data-bs-target="#myModal">Standard Modal</button>
+                        <button type="button" class="btn btn_primary mt-4 " data-bs-toggle="modal" data-bs-target="#myModal">Standard Modal</button>
                         <div id="myModal" class="modal fade" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header ">
                                         <h5 class="modal-title" id="myModalLabel">Modal Heading</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"> </button>
+                                        <button type="button" class="btn-close mt-5" data-bs-dismiss="modal" aria-label="Close"> </button>
                                     </div>
-                                    <div class="modal-body fsize">
-                                        <h5 class="fs-15">
+                                    <div class="modal-body fs-s">
+                                        <h5 class="fs-16">
                                             Overflowing text to show scroll behavior
                                         </h5>
                                         <p class="text-muted">One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections.</p>
                                         <p class="text-muted">The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to me?" he thought.</p>
                                         <p class="text-muted">It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
                                     </div>
-                                    <div class="modal-footer fsize">
+                                    <div class="modal-footer fs-s">
                                         <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary ">Save Changes</button>
+                                        <button type="button" class="btn btn_primary ">Save Changes</button>
                                     </div>
                                 </div>
                             </div>
@@ -33,7 +35,7 @@ function Modal() {
 
                     </div>
                     <div class="col-lg-6">
-                        <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <button type="button" class="btn btn_primary mt-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             Static Backdrop Modal
                         </button>
 
@@ -53,7 +55,7 @@ function Modal() {
                                             <p class="text-muted mb-4"> The transfer was not successfully received by us. the email of the recipient wasn't correct.</p>
                                             <div class="hstack gap-2 justify-content-center">
                                                 <a href="javascript:void(0);" class="btn btn-link link-success fw-medium" data-bs-dismiss="modal"><IoIosClose /> Close</a>
-                                                <a href="javascript:void(0);" class="btn btn-success">Completed</a>
+                                                <a href="javascript:void(0);" class="btn btn_success">Completed</a>
                                             </div>
                                         </div>
                                     </div>
@@ -62,7 +64,7 @@ function Modal() {
                         </div>
                     </div>
                     <div class="col-lg-6 mt-4">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalgrid">
+                        <button type="button" class="btn btn_primary" data-bs-toggle="modal" data-bs-target="#exampleModalgrid">
                             Launch Demo Modal
                         </button>
                         <div class="modal fade" id="exampleModalgrid" tabindex="-1" aria-labelledby="exampleModalgridLabel" aria-modal="true">
@@ -70,7 +72,7 @@ function Modal() {
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="exampleModalgridLabel">Grid Modals</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        <button type="button" class="btn-close mt-5" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
                                         <form action="javascript:void(0);">
@@ -119,7 +121,7 @@ function Modal() {
                                                 <div class="col-lg-12">
                                                     <div class="hstack gap-2 justify-content-end">
                                                         <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-                                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                                        <button type="submit" class="btn btn_primary">Submit</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -131,8 +133,8 @@ function Modal() {
                     </div>
                 </div>
             </div>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Modal

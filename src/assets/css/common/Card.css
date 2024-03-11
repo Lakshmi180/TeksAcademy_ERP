@@ -92,6 +92,9 @@ body {
   text-decoration: underline;
   font-family: Poppins, sans-serif;
 }
+.fs-16{
+    font-size: var(--erp-fs-16)
+}
 
 .card-imgs {
   width: 50px;
