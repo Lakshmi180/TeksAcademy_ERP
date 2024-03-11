@@ -22,17 +22,17 @@ function Page() {
                     </div>
                     <div class="col-xxl-3 col-lg-4 mt-3">
                         <div class="card pricing-box">
-                            <div class="card-body bg-light m-2 p-4">
+                            <div class="card-body bg_light m-2 p-4">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="flex-grow-1">
                                         <h5 class="mb-0 fw-semibold fs-6">Starter</h5>
                                     </div>
-                                    <div class="ms-auto  fsize">
-                                        <h2 class="month mb-0 ">$19 <small class="fs-13 text-muted fsize">/Month</small></h2>
+                                    <div class="ms-auto  fs-12">
+                                        <h2 class="month mb-0 ">$19 <small class="fs-13 text-muted fs-12">/Month</small></h2>
                                     </div>
                                 </div>
-                                <p class="text-muted fsize">The perfect way to get started and get used to our tools.</p>
-                                <ul class="list-unstyled vstack gap-3 fsize">
+                                <p class="text-muted fs-12">The perfect way to get started and get used to our tools.</p>
+                                <ul class="list-unstyled vstack gap-3 fs-12">
                                     <li>
                                         <div class="d-flex">
                                             <div class="flex-shrink-0 text-success me-1">
@@ -112,18 +112,18 @@ function Page() {
                     </div>
                     <div class="col-xxl-3 col-lg-4 mt-3">
                         <div class="card pricing-box">
-                            <div class="card-body bg-light m-2 p-4">
+                            <div class="card-body bg_light m-2 p-4">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="flex-grow-1">
                                         <h5 class="mb-0 fw-semibold fs-6">Professional</h5>
                                     </div>
                                     <div class="ms-auto ">
-                                        <h2 class="month mb-0 fs-3" >$29 <small class="fs-13 text-muted fsize ">/Month</small></h2>
+                                        <h2 class="month mb-0 fs-3" >$29 <small class="fs-13 text-muted fs-12 ">/Month</small></h2>
 
                                     </div>
                                 </div>
-                                <p class="text-muted fsize">Excellent for scalling teams to build culture. Special plan for professional business.</p>
-                                <ul class="list-unstyled vstack gap-3 fsize">
+                                <p class="text-muted fs-12">Excellent for scalling teams to build culture. Special plan for professional business.</p>
+                                <ul class="list-unstyled vstack gap-3 fs-12">
                                     <li>
                                         <div class="d-flex">
                                             <div class="flex-shrink-0 text-success me-1">
@@ -203,7 +203,7 @@ function Page() {
                     </div>
                     <div class="col-xxl-3 col-lg-4 mt-3">
                         <div class="card pricing-box ribbon-box right">
-                            <div class="card-body bg-light m-2 p-4">
+                            <div class="card-body bg_light m-2 p-4">
                                 <div class="ribbon-two ribbon-two-danger">
                                     <span>popular</span>
                                 </div>
@@ -212,12 +212,12 @@ function Page() {
                                         <h5 class="mb-0 fw-semibold fs-6">Enterprise</h5>
                                     </div>
                                     <div class="ms-auto ">
-                                        <h2 class="month mb-0 fs-3" >$39 <small class="fs-13 text-muted fsize">/Month</small></h2>
+                                        <h2 class="month mb-0 fs-3" >$39 <small class="fs-13 text-muted fs-12">/Month</small></h2>
 
                                     </div>
                                 </div>
-                                <p class="text-muted fsize">This plan is for those who have a team alredy and running a large business.</p>
-                                <ul class="list-unstyled vstack gap-3 fsize">
+                                <p class="text-muted fs-12">This plan is for those who have a team alredy and running a large business.</p>
+                                <ul class="list-unstyled vstack gap-3 fs-12">
                                     <li>
                                         <div class="d-flex">
                                             <div class="flex-shrink-0 text-success me-1">
@@ -297,17 +297,17 @@ function Page() {
                     </div>
                     <div class="col-xxl-3 col-lg-4 mt-3">
                         <div class="card pricing-box">
-                            <div class="card-body bg-light m-2 p-4">
+                            <div class="card-body bg_light m-2 p-4">
                                 <div class="d-flex align-items-center mb-3">
                                     <div class="flex-grow-1">
                                         <h5 class="mb-0 fw-semibold fs-6">Unlimited</h5>
                                     </div>
                                     <div class="ms-auto">
-                                        <h2 class="month mb-0" >$49 <small class="fs-13 text-muted fsize">/Month</small></h2>
+                                        <h2 class="month mb-0" >$49 <small class="fs-13 text-muted fs-12">/Month</small></h2>
                                     </div>
                                 </div>
-                                <p class="text-muted fsize">For most businesses that want to optimize web queries.</p>
-                                <ul class="list-unstyled vstack gap-3 fsize">
+                                <p class="text-muted fs-12">For most businesses that want to optimize web queries.</p>
+                                <ul class="list-unstyled vstack gap-3 fs-12">
                                     <li>
                                         <div class="d-flex">
                                             <div class="flex-shrink-0 text-success me-1">
@@ -398,7 +398,7 @@ function Page() {
                                             <h1 class="display-5 coming-soon-text">Site is Under Maintenance</h1>
                                             <p class="fs-14">Please check back in sometime</p>
                                             <div class="mt-4 pt-2">
-                                                <a href="index.html" class="btn btn-success back-col"><MdHome /> Back to Home</a>
+                                                <a href="index.html" class="btn btn_success back-col"><MdHome /> Back to Home</a>
                                             </div>
                                         </div>
                                         <div class="row justify-content-center">
@@ -417,7 +417,7 @@ function Page() {
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="text-center">
-                                            <p class="mb-0 text-muted fsize">©
+                                            <p class="mb-0 text-muted fs-12">©
                                                 <script>document.write(new Date().getFullYear())</script>2024 Velzon. Crafted with <FaHeart
                                                     class="text-danger" /> by Themesbrand
                                             </p>

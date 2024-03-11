@@ -125,15 +125,15 @@ function Card() {
       </div>
       <div>
         <div class="container">
-          <div class="row text-start fsize">
+          <div class="row text-start fs-s">
             <div class="col-sm-6 col-xl-3">
               <div class="card">
                 <img class="crad-img-top img-fluid" src="https://themesbrand.com/velzon/html/default/assets/images/small/img-1.jpg" />
                 <div class="card-body">
-                  <h4 class="card-title mb-2 fs-6  card-colr">Web Developer</h4>
+                  <h4 class="card-title mb-2 fs-16  card-colr">Web Developer</h4>
                   <p class="card-text">At missed advice my it no sister. Miss told ham dull knew see she spot near can. Spirit her entire her called.</p>
                   <div class="text-end">
-                    <a href="#" class="btn btn-primary fsize">Submit</a>
+                    <a href="#" class="btn btn-primary fs-s">Submit</a>
                   </div>
                 </div>
               </div>
@@ -142,7 +142,7 @@ function Card() {
               <div class="card">
                 <img class="card-img-top img-fluid" src="https://themesbrand.com/velzon/html/default/assets/images/small/img-2.jpg" />
                 <div class="card-body">
-                  <h4 class="card-title mb-2 fs-6  card-colr">How apps is changing the It world</h4>
+                  <h4 class="card-title mb-2 fs-16  card-colr">How apps is changing the It world</h4>
                   <p class="card-text mb-0">Whether article spirits new her covered hastily sitting her. Money witty books nor son add. Chicken age had evening believe but proceed pretend mrs.</p>
 
                 </div>
@@ -183,7 +183,7 @@ function Card() {
               <div class="card">
 
                 <div class="card-body">
-                  <h4 class="card-title mb-2 fs-6"> What planning process needs?</h4>
+                  <h4 class="card-title mb-2 fs-16"> What planning process needs?</h4>
                   <h6 class="card-subtile font-14 text-muted">Development</h6>
                 </div>
                 <img class="card-img-top img-fluid" src="	https://themesbrand.com/velzon/html/default/assets/images/small/img-4.jpg" />
@@ -204,172 +204,172 @@ function Card() {
                 </div>
               </div>
             </div>
-          
-           
-             
-              <div class="container" >
-                <div class="row">
-                  <div class="col-12">
-                    <div class="justify-content-between d-flex align-items-center mt-3 mb-4">
-                      <h5 class="mb-0 pb-1 text-decoration-underline fs-6">Using Grid Markup</h5>
-                    </div>
-                    <div class="row row-cols-xxl-5 row-cols-lg-3 row-cols-1 text-start">
-                      <div class="col mt-3 ">
-                        <div class="card card-body fsize">
-                          <div class="d-flex mb-4 align-items-center ">
-                            <div class="flex-shrink-0">
-                              <img src="	https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg" alt class="avatar-sm rounded-circle card-imgs" />
-                            </div>
-                            <div class="flex-grow-1 ms-2">
-                              <h5 class="card-title mb-1 fs-6 ">Oliver Phillips</h5>
-                              <p class="text-muted mb-0 fsize">Digital Marketing</p>
-                            </div>
-                          </div>
 
-                          <h6 class="mb-1 fsize">$15,548</h6>
-                          <p class="card-text text-muted">Expense Account</p>
 
-                          <a href="#" class="btn btn-primary btn-sm fsize">See Details</a>
-                        </div>
-                      </div>
-                      <div class="col mt-3">
-                        <div class="card card-body fsize">
-                          <div class="d-flex mb-4 align-items-center">
-                            <div class="flex-shrink-0">
-                              <img src="	https://themesbrand.com/velzon/html/default/assets/images/users/avatar-4.jpg" alt class="avatar-sm rounded-circle card-imgs" />
 
-                            </div>
-                            <div class="flex-grow-1 ms-2">
-                              <h5 class="card-title mb-1 fs-6 ">Natasha Carey</h5>
-                              <p class="text-muted mb-0 fsize">Manager</p>
-
-                            </div>
-                          </div>
-                          <h6 class="mb-1 fsize">$8,785</h6>
-                          <p class="card-text text-muted">Expense Account</p>
-                          <a href="#" class="btn btn-primary btn-sm fsize">See Details</a>
-                        </div>
-                      </div>
-                      <div class="col mt-3">
-                        <div class="card card-body fsize">
-                          <div class="d-flex mb-4 align-items-center">
-                            <div class="flex-shrink-0">
-                              <img src="	https://themesbrand.com/velzon/html/default/assets/images/users/avatar-3.jpg" alt class="avatar-sm rounded-circle card-imgs" />
-
-                            </div>
-                            <div class="flex-grow-1 ms-2">
-                              <h5 class="card-title mb-1 fs-6 ">Bethany Johnson</h5>
-                              <p class="text-muted mb-0 fsize">Development</p>
-
-                            </div>
-                          </div>
-                          <h6 class="mb-1 fsize">$1,542</h6>
-                          <p class="card-text text-muted">Expense Account</p>
-                          <a href="#" class="btn btn-primary btn-sm fsize">See Details</a>
-                        </div>
-                      </div>
-                      <div class="col mt-3">
-                        <div class="card card-body fsize">
-                          <div class="d-flex mb-4 align-items-center">
-                            <div class="flex-shrink-0">
-                              <img src="	https://themesbrand.com/velzon/html/default/assets/images/users/avatar-6.jpg" alt class="avatar-sm rounded-circle card-imgs" />
-
-                            </div>
-                            <div class="flex-grow-1 ms-2">
-                              <h5 class="card-title mb-1 fs-6 ">Erica Kernan</h5>
-                              <p class="text-muted mb-0 fsize">Fashion Designer</p>
-
-                            </div>
-                          </div>
-                          <h6 class="mb-1 fsize">$798</h6>
-                          <p class="card-text text-muted">Expense Account</p>
-                          <a href="#" class="btn btn-primary btn-sm fsize">See Details</a>
-                        </div>
-                      </div>
-                      <div class="col mt-3">
-                        <div class="card card-body fsize">
-                          <div class="d-flex mb-4 align-items-center">
-                            <div class="flex-shrink-0">
-                              <img src="		https://themesbrand.com/velzon/html/default/assets/images/users/avatar-5.jpg" alt class="avatar-sm rounded-circle card-imgs" />
-
-                            </div>
-                            <div class="flex-grow-1 ms-2">
-                              <h5 class="card-title mb-1 fs-6 ">Lewis Pratt</h5>
-                              <p class="text-muted mb-0 fsize">Design</p>
-
-                            </div>
-                          </div>
-                          <h6 class="mb-1 fsize">$2,856</h6>
-                          <p class="card-text text-muted">Expense Account</p>
-                          <a href="#" class="btn btn-primary btn-sm fsize">See Details</a>
-                        </div>
-                      </div>
-                    </div>
-
+            <div class="container" >
+              <div class="row">
+                <div class="col-12">
+                  <div class="justify-content-between d-flex align-items-center mt-3 mb-4">
+                    <h5 class="mb-0 pb-1 text-decoration-underline fs-16">Using Grid Markup</h5>
                   </div>
-                </div>
-              </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-12">
-                    <div class="justify-content-between d-flex align-items-center mt-3 mb-4">
-                      <h5 class="mb-0 pb-1 text-decoration-underline fs-6">Card Text Alignment</h5>
+                  <div class="row row-cols-xxl-5 row-cols-lg-3 row-cols-1 text-start">
+                    <div class="col mt-3 ">
+                      <div class="card card-body fs-s">
+                        <div class="d-flex mb-4 align-items-center ">
+                          <div class="flex-shrink-0">
+                            <img src="	https://themesbrand.com/velzon/html/default/assets/images/users/avatar-1.jpg" alt class="avatar-sm rounded-circle card-imgs" />
+                          </div>
+                          <div class="flex-grow-1 ms-2">
+                            <h5 class="card-title mb-1 fs-16 ">Oliver Phillips</h5>
+                            <p class="text-muted mb-0 fs-s">Digital Marketing</p>
+                          </div>
+                        </div>
+
+                        <h6 class="mb-1 fs-s">$15,548</h6>
+                        <p class="card-text text-muted">Expense Account</p>
+
+                        <a href="#" class="btn btn-primary btn-sm fs-s">See Details</a>
+                      </div>
                     </div>
-                    <div class="row fsize">
-                      <div class="col-xxl-4 col-lg-6 mt-3">
-                        <div class="card card-body text-start">
-                          <div class="avatar-sm mb-3">
-                            <div class="avatar-title bg-success-subtle text-success fs-17 rounded d-flex justify-content-center align-items-center text-start phone">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
-                                <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
-                                <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
-                              </svg>
-                            </div>
+                    <div class="col mt-3">
+                      <div class="card card-body fs-s">
+                        <div class="d-flex mb-4 align-items-center">
+                          <div class="flex-shrink-0">
+                            <img src="	https://themesbrand.com/velzon/html/default/assets/images/users/avatar-4.jpg" alt class="avatar-sm rounded-circle card-imgs" />
+
                           </div>
-                          <h4 class="card-title fs-6 card-colr ">Text Application</h4>
-                          <p class="card-text text-muted">
-                            Send a link to apply on mobile device. Appropriately communicate one-to-one technology.
-                          </p>
-                          <a href='#' class="btn btn-success fsize">Apply Now</a>
+                          <div class="flex-grow-1 ms-2">
+                            <h5 class="card-title mb-1 fs-16 ">Natasha Carey</h5>
+                            <p class="text-muted mb-0 fs-s">Manager</p>
+
+                          </div>
                         </div>
+                        <h6 class="mb-1 fs-s">$8,785</h6>
+                        <p class="card-text text-muted">Expense Account</p>
+                        <a href="#" class="btn btn-primary btn-sm fs-s">See Details</a>
                       </div>
-                      <div class="col-xxl-4 col-lg-6 mt-3">
-                        <div class="card card-body text-center">
-                          <div class="avatar-sm mx-auto mb-3">
-                            <div class="avatar-title bg-success-subtle text-success fs-17 rounded d-flex justify-content-center align-items-center phone">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
-                                <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
-                              </svg>
-                            </div>
+                    </div>
+                    <div class="col mt-3">
+                      <div class="card card-body fs-s">
+                        <div class="d-flex mb-4 align-items-center">
+                          <div class="flex-shrink-0">
+                            <img src="	https://themesbrand.com/velzon/html/default/assets/images/users/avatar-3.jpg" alt class="avatar-sm rounded-circle card-imgs" />
+
                           </div>
-                          <h4 class="card-title fs-6 card-colr">Add New Application</h4>
-                          <p class="card-text text-muted">
-                            Send a link to apply on mobile device. Appropriately communicate one-to-one technology.
-                          </p>
-                          <a href='#' class="btn btn-success fsize">Add New</a>
+                          <div class="flex-grow-1 ms-2">
+                            <h5 class="card-title mb-1 fs-16 ">Bethany Johnson</h5>
+                            <p class="text-muted mb-0 fs-s">Development</p>
+
+                          </div>
                         </div>
+                        <h6 class="mb-1 fs-s">$1,542</h6>
+                        <p class="card-text text-muted">Expense Account</p>
+                        <a href="#" class="btn btn-primary btn-sm fs-s">See Details</a>
                       </div>
-                      <div class="col-xxl-4 col-lg-6 mt-3">
-                        <div class="card card-body text-end">
-                          <div class="avatar-sm ms-auto mb-3">
-                            <div class="avatar-title bg-success-subtle text-success fs-17 rounded d-flex justify-content-center align-items-center phone">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gift-fill" viewBox="0 0 16 16">
-                                <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9z" />
-                              </svg>
-                            </div>
+                    </div>
+                    <div class="col mt-3">
+                      <div class="card card-body fs-s">
+                        <div class="d-flex mb-4 align-items-center">
+                          <div class="flex-shrink-0">
+                            <img src="	https://themesbrand.com/velzon/html/default/assets/images/users/avatar-6.jpg" alt class="avatar-sm rounded-circle card-imgs" />
+
                           </div>
-                          <h4 class="card-title fs-6 card-colr">Text Application</h4>
-                          <p class="card-text text-muted">
-                            Send a link to apply on mobile device. Appropriately communicate one-to-one technology.
-                          </p>
-                          <a href='#' class="btn btn-success fsize">Add New</a>
+                          <div class="flex-grow-1 ms-2">
+                            <h5 class="card-title mb-1 fs-16 ">Erica Kernan</h5>
+                            <p class="text-muted mb-0 fs-s">Fashion Designer</p>
+
+                          </div>
                         </div>
+                        <h6 class="mb-1 fs-s">$798</h6>
+                        <p class="card-text text-muted">Expense Account</p>
+                        <a href="#" class="btn btn-primary btn-sm fs-s">See Details</a>
+                      </div>
+                    </div>
+                    <div class="col mt-3">
+                      <div class="card card-body fs-s">
+                        <div class="d-flex mb-4 align-items-center">
+                          <div class="flex-shrink-0">
+                            <img src="		https://themesbrand.com/velzon/html/default/assets/images/users/avatar-5.jpg" alt class="avatar-sm rounded-circle card-imgs" />
+
+                          </div>
+                          <div class="flex-grow-1 ms-2">
+                            <h5 class="card-title mb-1 fs-16 ">Lewis Pratt</h5>
+                            <p class="text-muted mb-0 fs-s">Design</p>
+
+                          </div>
+                        </div>
+                        <h6 class="mb-1 fs-s">$2,856</h6>
+                        <p class="card-text text-muted">Expense Account</p>
+                        <a href="#" class="btn btn-primary btn-sm fs-s">See Details</a>
                       </div>
                     </div>
                   </div>
-                </div>
 
+                </div>
               </div>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="justify-content-between d-flex align-items-center mt-3 mb-4">
+                    <h5 class="mb-0 pb-1 text-decoration-underline fs-16">Card Text Alignment</h5>
+                  </div>
+                  <div class="row fs-s">
+                    <div class="col-xxl-4 col-lg-6 mt-3">
+                      <div class="card card-body text-start">
+                        <div class="avatar-sm mb-3">
+                          <div class="avatar-title bg-success-subtle text-success fs-17 rounded d-flex justify-content-center align-items-center text-start phone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+                              <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                              <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+                            </svg>
+                          </div>
+                        </div>
+                        <h4 class="card-title fs-16 card-colr ">Text Application</h4>
+                        <p class="card-text text-muted">
+                          Send a link to apply on mobile device. Appropriately communicate one-to-one technology.
+                        </p>
+                        <a href='#' class="btn btn-success fs-s">Apply Now</a>
+                      </div>
+                    </div>
+                    <div class="col-xxl-4 col-lg-6 mt-3">
+                      <div class="card card-body text-center">
+                        <div class="avatar-sm mx-auto mb-3">
+                          <div class="avatar-title bg-success-subtle text-success fs-17 rounded d-flex justify-content-center align-items-center phone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus" viewBox="0 0 16 16">
+                              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
+                            </svg>
+                          </div>
+                        </div>
+                        <h4 class="card-title fs-16 card-colr">Add New Application</h4>
+                        <p class="card-text text-muted">
+                          Send a link to apply on mobile device. Appropriately communicate one-to-one technology.
+                        </p>
+                        <a href='#' class="btn btn-success fs-s">Add New</a>
+                      </div>
+                    </div>
+                    <div class="col-xxl-4 col-lg-6 mt-3">
+                      <div class="card card-body text-end">
+                        <div class="avatar-sm ms-auto mb-3">
+                          <div class="avatar-title bg-success-subtle text-success fs-17 rounded d-flex justify-content-center align-items-center phone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-gift-fill" viewBox="0 0 16 16">
+                              <path d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7zM2.5 16A1.5 1.5 0 0 1 1 14.5V7h6v9z" />
+                            </svg>
+                          </div>
+                        </div>
+                        <h4 class="card-title fs-16 card-colr">Text Application</h4>
+                        <p class="card-text text-muted">
+                          Send a link to apply on mobile device. Appropriately communicate one-to-one technology.
+                        </p>
+                        <a href='#' class="btn btn-success fs-s">Add New</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
 
           </div>
         </div>

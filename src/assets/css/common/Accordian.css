@@ -4,7 +4,7 @@
     content: "+";
     font-size: 1.5rem;
     vertical-align: middle;
-    line-height: .8;
+    line-height: var(--erp-xxs-lh);
 }
 
 .custom-accordionwithicon-plus .accordion-button:not(.collapsed)::after {
@@ -12,4 +12,12 @@
     content: "-";
     margin-right: -3px;
     font-size: 1.5rem;
+}
+.bg_white{
+    background-color: var(--erp-bg-white
+    );
+}
+.fs-s{
+    font-size: var(--erp-fs-s);
+
 }

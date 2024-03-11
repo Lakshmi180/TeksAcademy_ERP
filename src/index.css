@@ -14,6 +14,8 @@ body {
 [data-erp-theme="light"] {
   /* color #4676a0*/
   --erp-primary-color: #3a4876;
+  --erp-success-color: #198754;
+  --erp-danger-color:#dc3545;
   --erp-secondary-color: #eb6329;
   --erp-orange-500: #f06548;
   --erp-orange-600: #da3412;
@@ -23,14 +25,15 @@ body {
   --erp-sky-500: #405189;
   --erp-sky-300: #7dd3fc;
 
-  --erp-sky-400:   #2385ba;
-  --erp-sky-light:  #dff0fa ;
+  --erp-sky-400: #2385ba;
+  --erp-sky-light: #dff0fa;
   --erp-yellow-color: #d19b3d;
   --erp-lightblack-color: #2e353d;
   --erp-text-mute: #878a99;
-  --erp-green-400 :#0ab39c ;
+  --erp-green-400: #0ab39c;
   --erp-green-light: #daf4f0;
-
+/* Bg-color*/
+--erp-bg-white:#fff;
   /* font-size */
   --erp-fs-xxs: 10px;
   --erp-fs-xs: 12px;
@@ -45,6 +48,7 @@ body {
   --erp-fs-13: 13px;
   --erp-fs-14: 14px;
   --erp-fs-17: 17px;
+ 
 
   /* font-weight */
   --erp-font-weight-thin: 100;
@@ -56,17 +60,8 @@ body {
 
   /* line-height */
   --erp-xs-lh: 1.2;
-  --erp-font-xs-light-lh: 12px 300 1.2;
-  /* Extra Small, Light, Line Height 1.2 */
-  --erp-font-s-regular-lh: 14px 400 1.5;
-  /* Small, Regular, Line Height 1.5 */
-  --erp-font-m-medium-lh: 16px 500 1.6;
-  /* Medium, Medium, Line Height 1.6 */
-  --erp-font-l-bold-lh: 18px 700 1.8;
-  /* Large, Bold, Line Height 1.8 */
-  --erp-font-xl-bold-lh: 20px 700 2;
-  /* Extra Large, Bold, Line Height 2.0 */
-
+  --erp-xxs-lh: .8;
+  --erp-xl-lh: 20px;
 }
 
 /* Dark mode colors */
@@ -184,6 +179,7 @@ h1 {
   font-size: 1.5rem;
   color: #000;
 }
+
 /* ---- */
 html,
 body,
@@ -195,10 +191,12 @@ body,
   /* font-family: "Source Sans Pro", sans-serif; */
   /* font-family: "Nunito", sans-serif; */
 }
+
 .App {
   display: flex;
   position: relative;
 }
+
 ::-webkit-scrollbar {
   width: 3px;
 }
@@ -217,4 +215,3 @@ body,
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-

@@ -1,138 +1,160 @@
- table{
-    font-family: Poppins, sans-serif;
+ table {
+     font-family: Poppins, sans-serif;
+ }
+
+ .td-name {
+
+     font-size: var(--erp-fs-14);
+     font-weight: var(--erp-font-weight-medium);
+     line-height: var(--erp-xs-lh);
+     color: var(--erp-lightblack-color);
+ }
+
+ .td-sub-name {
+     color: var(--erp-text-mute);
+     white-space: nowrap;
+
+     font-size: var(--erp-fs-13);
+ }
+
+ .tbl-card-header {
+
+     font-size: var(--erp-fs-16);
+ }
+
+
+ .product-img {
+     width: 40px;
+ }
+
+ .sort-by {
+     font-size: var(--erp-fs-xs);
+ }
+
+ .day-dropdown {
+     font-size: var(--erp-fs-xs);
+     color: var(--erp-text-mute);
+     font-family: Poppins, sans-serif;
+ }
+
+ .pagination-text {
+     font-size: var(--erp-fs-14);
+     color: var(--erp-text-mute);
 
  }
 
-.td-name{
-   
-    font-size: var(--erp-fs-14) ;
-    font-weight: var(  --erp-font-weight-medium);
-    line-height: var(  --erp-xs-lh);
-    color: var( --erp-lightblack-color);
-}
-.td-sub-name{
-    color: var(  --erp-text-mute);
-    white-space: nowrap;
-  
-    font-size: var(--erp-fs-13);
-}
-.tbl-card-header {
-   
-    font-size: var( --erp-fs-16);
-}
+ .tbl-user-img {
+     width: 30px;
+ }
 
+ .general-report {
+     font-size: var(--erp-fs-13);
+ }
 
-.product-img{
-    width: 40px;
-}
-.sort-by{
-    font-size: var(  --erp-fs-xs);
-}
-.day-dropdown{
-    font-size:var( --erp-fs-xs);
-    color: var(  --erp-text-mute);
-    font-family: Poppins, sans-serif;
-}
-.pagination-text{
-    font-size: var( --erp-fs-14);
-    color: var(  --erp-text-mute);
-  
-}
-.tbl-user-img{
-    width: 30px;
-}
+ .order-code {
+     font-size: var(--erp-fs-13);
+     color: var(--erp-primary-color);
+ }
 
-.general-report{
-    font-size: var( --erp-fs-13);
-}
-.order-code{
-    font-size: var(--erp-fs-13);
-    color: var( --erp-primary-color);
-}
+ .page-link {
+     color: var(--erp-primary-color);
+     background-color: var(--erp-white-color);
 
-.page-link{
-    color: var( --erp-primary-color);
-    background-color:var( --erp-white-color);
-   
-}
-.active>.page-link, .page-link.active {
-  color:var( --erp-white-color);
-  background-color:var(--erp-primary-color);
-  border-color:var(--erp-primary-color);
-}
-.text-muted{
-    color: var(  --erp-text-mute) !important;
-}
+ }
 
-thead th {
-font-weight: var(  --erp-font-weight-medium);
- font-size: var(--erp-fs-13);
+ .active>.page-link,
+ .page-link.active {
+     color: var(--erp-white-color);
+     background-color: var(--erp-primary-color);
+     border-color: var(--erp-primary-color);
+ }
 
- color:var(  --erp-text-mute);
-}
-.text-danger{
- color: var( --erp-secondary-color) !important;
- 
-}
-.link-primary{
-    color:var(--erp-primary-color);
-}
-.votes{
-    font-size: var( --erp-fs-xs);
-}
-tr{
-    display: table-row;
-    vertical-align: inherit;
-}
-.text-success{
-    color:var( --erp-green-400)!important;
-}
-.tbl-amount{
-    font-size: var(--erp-fs-14);
-}
-.badge {
-    line-height: .95 !important;
-    font-size:  var( --erp-fs-xxs);
-}
-.bg-success-subtle{
-    background-color:var(--erp-green-light);
-}
-.btn-soft-info{
-    color:var( --erp-sky-300) !important;
-    background-color: var( --erp-sky-light) !important;
-    border: transparent !important;
-}
-img{
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
-/* Hoverable Table css start*/
-.toggle-showcode{
-    font-size: var(--erp-fs-14);
-}
-.instruction-line{
-    font-size: var(--erp-fs-13);
-}
-.download-icon{
-    font-size: var(--erp-fs-16);
-    color: var( --erp-primary-color);
-}
-.detail-btn{
-    font-size: var(--erp-fs-13);
-}
-.bg-success{
-    background-color: var(--erp-green-400) !important;
-}
-.bg-danger{
-    background-color: var(--erp-secondary-color) !important;
-}
-.table-dropdown-menu{
-    font-size: var(--erp-fs-13) !important;
-  position: absolute !important;
-  inset: 0px 0px auto auto !important;
-  transform: translate3d(0px 37px 0px);
-}
+ .text-muted {
+     color: var(--erp-text-mute) !important;
+ }
 
+ thead th {
+     font-weight: var(--erp-font-weight-medium);
+     font-size: var(--erp-fs-13);
 
+     color: var(--erp-text-mute);
+ }
 
+ .text-danger {
+     color: var(--erp-secondary-color) !important;
 
+ }
+
+ .link-primary {
+     color: var(--erp-primary-color);
+ }
+
+ .votes {
+     font-size: var(--erp-fs-xs);
+ }
+
+ tr {
+     display: table-row;
+     vertical-align: inherit;
+ }
+
+ .text-success {
+     color: var(--erp-green-400) !important;
+ }
+
+ .tbl-amount {
+     font-size: var(--erp-fs-14);
+ }
+
+ .badge {
+
+     font-size: var(--erp-fs-xxs);
+ }
+
+ .bg-success-subtle {
+     background-color: var(--erp-green-light);
+ }
+
+ .btn-soft-info {
+     color: var(--erp-sky-300) !important;
+     background-color: var(--erp-sky-light) !important;
+     border: transparent !important;
+ }
+
+ img {
+     overflow-clip-margin: content-box;
+     overflow: clip;
+ }
+
+ /* Hoverable Table css start*/
+ .toggle-showcode {
+     font-size: var(--erp-fs-14);
+ }
+
+ .instruction-line {
+     font-size: var(--erp-fs-13);
+ }
+
+ .download-icon {
+     font-size: var(--erp-fs-16);
+     color: var(--erp-primary-color);
+ }
+
+ .detail-btn {
+     font-size: var(--erp-fs-13);
+ }
+
+ .bg-success {
+     background-color: var(--erp-green-400) !important;
+ }
+
+ .bg-danger {
+     background-color: var(--erp-secondary-color) !important;
+ }
+
+ .table-dropdown-menu {
+     font-size: var(--erp-fs-13) !important;
+     position: absolute !important;
+     inset: 0px 0px auto auto !important;
+     transform: translate3d(0px 37px 0px);
+ }
