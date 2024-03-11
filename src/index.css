@@ -13,7 +13,7 @@ body {
 :root,
 [data-erp-theme="light"] {
   /* color #4676a0*/
-  /* --erp-primary-color: #3a4876;
+  --erp-primary-color: #3a4876;
   --erp-secondary-color: #eb6329;
   --erp-orange-500: #f06548;
   --erp-orange-600: #da3412;
@@ -31,7 +31,7 @@ body {
   --erp-green-400: #0ab39c;
   --erp-green-light: #daf4f0;
   --erp-black-300: #495057;
-  --erp-white-200: #495057; */
+  --erp-white-200: #495057;
 
   /* Gray / Zinc */
   --erp-gray-100: #f4f4f5;
@@ -50,7 +50,7 @@ body {
   --erp-green-200: #bbf7d0;
   --erp-green-300: #86efac;
   --erp-green-400: #4ade80;
-  --erp-green-500: #22c55e;
+  --erp-green-500: #0ab39c;
   --erp-green-600: #16a34a;
   --erp-green-700: #15803d;
   --erp-green-800: #166534;
@@ -91,6 +91,18 @@ body {
   --erp-blue-700: #6495ed;
   --erp-blue-800: #4682b4;
   --erp-blue-900: #00008b;
+
+  /* Indigo */
+
+  --erp-indigo-100: #e0e7ff;
+  --erp-indigo-200: #c7d2fe;
+  --erp-indigo-300: #a5b4fc;
+  --erp-indigo-400: #818cf8;
+  --erp-indigo-500: #6366f1;
+  --erp-indigo-600: #4f46e5;
+  --erp-indigo-700: #4338ca;
+  --erp-indigo-800: #3730a3;
+  --erp-indigo-900: #312e81;
 
   /* Sky */
 
@@ -321,4 +333,8 @@ body,
 .list_bg_white {
   background-color: var(--erp-card-color) !important;
   color: var(--erp-text-color) !important;
+}
+
+.text_danger {
+  color: var(--erp-red-500) !important;
 }

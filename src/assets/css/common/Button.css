@@ -1,5 +1,5 @@
 .btn-primary {
-  background-color: var(--erp-violet-600);
+  background-color: var(--erp-indigo-600);
   border: var(--erp-sky-500);
 }
 
@@ -14,7 +14,11 @@
 }
 
 .btn-primary:hover {
-  background-color: var(--erp-violet-500);
+  background-color: var(--erp-indigo-500);
+}
+
+.btn-success {
+  background-color: var(--erp-green-500);
 }
 
 .btn-load .spinner-border {

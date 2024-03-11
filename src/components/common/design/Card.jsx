@@ -53,7 +53,7 @@ function Card() {
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3">
                   <p className=" fw-medium text-mute m-0">ORDERS</p>
-                  <h5 className="text-danger fs-14 card-number">
+                  <h5 className="text_danger fs-14 card-number">
                     <GoArrowDownRight /> -3.57%
                   </h5>
                 </div>
