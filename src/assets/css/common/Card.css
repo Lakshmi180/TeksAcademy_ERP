@@ -1,135 +1,82 @@
 body {
-    font-family: Poppins, sans-serif;
+  font-family: Poppins, sans-serif;
 }
 
 .card-number {
-    font-size: var(--erp-fs-14);
-    font-weight: var(--erp-font-weight-regular);
+  font-size: var(--erp-fs-14);
+  font-weight: var(--erp-font-weight-regular);
 }
 
 .card-body .dollar {
-    font-size: var(--erp-fs-22);
+  font-size: var(--erp-fs-22);
+  color: var(--erp-text-color) !important;
 }
-
 .Totalearning {
-    transition: all 0.3s linear;
-
+  /* transition: all 0.3s linear; */
 }
-
 .Totalearning:hover {
-    transform: translateY(-7px);
-    box-shadow: 0px 5px 0px 5px solid grey;
+  transform: translateY(-7px);
 }
-
 .orders {
-
-    transition: all 0.3s linear;
-
+  /* transition: all 0.3s linear; */
 }
-
 .orders:hover {
-    transform: translateY(-7px);
+  transform: translateY(-7px);
 }
-
 .customers {
-
-    transition: all 0.3s linear;
-
+  /* transition: all 0.3s linear; */
 }
-
 .customers:hover {
-    transform: translateY(-7px);
+  transform: translateY(-7px);
 }
-
 .my-balance {
-
-    transition: all 0.3s linear;
-
+  /* transition: all 0.3s linear; */
 }
-
 .my-balance:hover {
-    transform: translateY(-7px);
+  transform: translateY(-7px);
 }
 
 .card-link {
-    color: var(--erp-blue-color);
+  color: var(--erp-link-color) !important;
 }
-
 .card-body {
-    font-family: Poppins, sans-serif;
-    ;
+  font-family: Poppins, sans-serif;
 }
 
-.Totalearning {
-
-    transition: all 0.3s linear;
-
+.card-title {
+  color: var(--erp-text-color) !important;
 }
 
-.Totalearning:hover {
-    transform: translateY(-7px);
-    box-shadow: 0px 5px 0px 5px solid var(--erp-gray-color);
-}
-
-.orders {
-
-    transition: all 0.3s linear;
-
-}
-
-.orders:hover {
-    transform: translateY(-7px);
-}
-
-.customers {
-
-    transition: all 0.3s linear;
-
-}
-
-.customers:hover {
-    transform: translateY(-7px);
-}
-
-.my-balance {
-
-    transition: all 0.3s linear;
-
-}
-
-.my-balance:hover {
-    transform: translateY(-7px);
+.card-text {
+  color: var(--erp-text-color) !important;
 }
 
 .card-link {
-    color: var(--erp-primary-color);
-    font-size: var(--erp-fs-13);
-    padding-top: 15px;
-    text-decoration: underline;
-    font-family: Poppins, sans-serif;
-    ;
+  color: var(--erp-primary-color);
+  font-size: var(--erp-fs-13);
+  padding-top: 15px;
+  text-decoration: underline;
+  font-family: Poppins, sans-serif;
 }
 .fs-16{
     font-size: var(--erp-fs-16)
 }
 
 .card-imgs {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 .phone {
-    width: 50px;
-    height: 50px
+  width: 50px;
+  height: 50px;
 }
 
 .card-colr {
-    color: var(--erp-text-mute);
+  color: var(--erp-text-mute);
 }
 
 .bookmark-icon {
-    width: 12px;
-}
-.fs-s{
-    font-size: var(--erp-fs-s);
+  width: 12px;
+  color: var(--erp-green-700);
 }
