@@ -45,7 +45,7 @@
 }
 .navbar_icons {
   display: inline-block;
-  font-size: var(--erp-font-size-24);
+  font-size: var(--erp-fs-24);
   line-height: inherit;
   min-width: 1.75rem;
   margin-right: 10px;
@@ -59,7 +59,7 @@
 }
 
 .navbar_userrole {
-  font-size: var(--bs-font-size-xs);
+  font-size: var(--bs-fs-xs);
   color: #495057;
   letter-spacing: 1px;
 }
@@ -90,7 +90,7 @@
 }
 
 .dropdown-card .small-text {
-  font-size: var(--bs-font-size-xs);
+  font-size: var(--bs-fs-xs);
   color: #878a99;
   font-weight: 500;
 }
