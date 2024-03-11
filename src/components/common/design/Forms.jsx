@@ -442,7 +442,7 @@ function Form() {
                           <a class="page-link" href="#" tabindex="-1"> <IoIosArrowRoundBack /> Prev</a>
                         </li>
                         <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item active">
+                        <li class="page-item active square">
                           <a class="page-link" href="#">2 </a>
                         </li>
                         <li class="page-item"><a class="page-link" href="#">3</a></li>
@@ -458,7 +458,7 @@ function Form() {
                           <span class="page-link"><IoIosArrowBack /></span>
                         </li>
                         <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item active">
+                        <li class="page-item active square">
                           <span class="page-link">
                             2
 
@@ -479,7 +479,7 @@ function Form() {
                           <a href="#" class="page-link rounded">1</a>
                         </li>
                         <li class="page-item active p-1">
-                          <a href="#" class="page-link rounded">2</a>
+                          <a href="#" class="page-link rounded col">2</a>
                         </li>
                         <li class="page-item p-1">
                           <a href="#" class="page-link rounded">3</a>
@@ -504,7 +504,7 @@ function Form() {
                             <a class="page-link rounded" href="#" tabindex="-1"><IoIosArrowRoundBack /> </a>
                           </li>
                           <li class="page-item p-1 "><a class="page-link rounded" href="#">1</a></li>
-                          <li class="page-item active p-1 "><a class="page-link rounded" href="#">2</a></li>
+                          <li class="page-item active p-1 "><a class="page-link rounded col" href="#">2</a></li>
                           <li class="page-item p-1 "><a class="page-link rounded" href="#">3</a></li>
                           <li class="page-item p-1 ">
                             <a class="page-link rounded" href="#"> <IoIosArrowRoundForward /></a>

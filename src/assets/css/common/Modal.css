@@ -1,9 +1,9 @@
 .btn_primary {
-    background-color: var(--erp-primary-color);
+    background-color: var(--erp-sidebar-color);
 }
 
 .btn_primary:hover {
-    color: var(--erp-white-color);
+    color: var(--erp-card-color);
 }
 
 .fs-s {

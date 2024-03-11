@@ -31,7 +31,8 @@
 .form-fs-12 {
     font-size: 14px;
 }
-.fs-16{
+
+.fs-16 {
     font-size: var(--erp-fs-16);
 }
 
@@ -46,15 +47,15 @@
 }
 
 .btn_primary {
-    background-color: var(--erp-primary-color) !important;
-    border-color: var(--erp-primary-color) !important;
-    color: var(--erp-white-color)
+    background-color: var(--erp-sidebar-color) !important;
+    border-color: var(--erp-sidebar-color) !important;
+    color: var(--erp-card-color)
 }
 
 .btn_success {
-    background-color: var(--erp-success-color) !important;
-    border-color: var(--erp-success-color) !important;
-    color: var(--erp-white-color)
+    background-color: var(--erp-green-600) !important;
+    border-color: var(--erp-green-600) !important;
+    color: var(--erp-card-color)
 }
 
 
@@ -64,21 +65,21 @@
 } */
 
 .primary_outline {
-    border-color: var(--erp-primary-color);
+    border-color: var(--erp-sidebar-color);
 }
 
 .primary_outline:hover {
-    background-color: var(--erp-primary-color);
-    color: var(--erp-white-color)
+    background-color: var(--erp-sidebar-color);
+    color: var(--erp-card-color)
 }
 
 .success_outline {
-    border-color: var(--erp-success-color);
+    border-color: var(--erp-green-600);
 }
 
 .success_outline:hover {
-    background-color: var(--erp-success-color);
-    color: var(--erp-white-color)
+    background-color: var(--erp-green-600);
+    color: var(--erp-card-color)
 }
 
 .date-pic {
@@ -90,11 +91,11 @@
 }
 
 .react-datepicker__current-month {
-    color: var(--erp-white-color);
+    color: var(--erp-card-color);
 }
 
 .react-datepicker__day-name {
-    color: var(--erp-white-color);
+    color: var(--erp-card-color);
 }
 
 .bg_white {
@@ -102,3 +103,12 @@
 }
 
 /* page*/
+.page-item.active.square {
+    background-color: var(--erp-sidebar-color);
+    color: var(--erp-card-color)
+}
+
+.page-link.rounded.col {
+    background-color: var(--erp-sidebar-color);
+    color: var(--erp-card-color)
+}
