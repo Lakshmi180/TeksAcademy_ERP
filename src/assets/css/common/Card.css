@@ -3,12 +3,12 @@ body {
 }
 
 .card-number {
-    font-size: var(--erp-font-size-14);
+    font-size: var(--erp-fs-14);
     font-weight: var(--erp-font-weight-regular);
 }
 
 .card-body .dollar {
-    font-size: var(--erp-font-size-22);
+    font-size: var(--erp-fs-22);
 }
 .Totalearning{
     transition:all 0.3s linear;

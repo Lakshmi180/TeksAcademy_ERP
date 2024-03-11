@@ -26,10 +26,10 @@
     width: 40px;
 }
 .sort-by{
-    font-size: var(  --erp-font-size-xs);
+    font-size: var(  --erp-fs-xs);
 }
 .day-dropdown{
-    font-size:var( --erp-font-size-xs);
+    font-size:var( --erp-fs-xs);
     color: var(  --erp-text-mute);
     font-family: Poppins, sans-serif;
 }
@@ -78,7 +78,7 @@ font-weight: var(  --erp-font-weight-medium);
     color:var(--erp-primary-color);
 }
 .votes{
-    font-size: var( --erp-font-size-xs);
+    font-size: var( --erp-fs-xs);
 }
 tr{
     display: table-row;
@@ -92,7 +92,7 @@ tr{
 }
 .badge {
     line-height: .95 !important;
-    font-size:  var( --erp-font-size-xxs);
+    font-size:  var( --erp-fs-xxs);
 }
 .bg-success-subtle{
     background-color:var(--erp-green-light);
