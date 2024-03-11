@@ -22,6 +22,7 @@ import Tab from "./components/common/design/Tab";
 import Modal from "./components/common/design/Modal";
 import Page from "./components/common/design/Page";
 import Button from "./components/common/design/Button";
+import { Login } from "./components/Auth/Login";
 
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
@@ -49,7 +50,7 @@ function App() {
             <Route path="/table" element={<Table />} />
             <Route path="/card" element={<Card />} />
             <Route path="/forms" element={<Forms />} />
-            <Route path="/whatsapp" element={<WhatsappChat/>} />
+            <Route path="/whatsapp" element={<WhatsappChat />} />
             <Route path="/accordian" element={<Accordian />} />
             <Route path="/tabs" element={<Tab />} />
             <Route path="/modal" element={<Modal />} />
@@ -64,7 +65,8 @@ function App() {
 
 export default App;
 {
-  /* <Routes>
+  /* 
+  <Routes>
         <Route element={<ReqireAuth />}>
           <Route path="/" element={<Dashboard />} />
         </Route>
@@ -74,5 +76,6 @@ export default App;
           <Route path="/changepassword" element={<ChangePassword />} />
           <Route path="/lockscreen" element={<LockScreen />} />
         </Route>
-      </Routes> */
+  </Routes> 
+  */
 }

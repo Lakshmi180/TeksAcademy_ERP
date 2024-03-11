@@ -23,13 +23,16 @@ body {
   --erp-sky-500: #405189;
   --erp-sky-300: #7dd3fc;
 
-  --erp-sky-400:   #2385ba;
-  --erp-sky-light:  #dff0fa ;
+  --erp-sky-400: #2385ba;
+  --erp-sky-light: #dff0fa;
   --erp-yellow-color: #d19b3d;
   --erp-lightblack-color: #2e353d;
   --erp-text-mute: #878a99;
-  --erp-green-400 :#0ab39c ;
+  --erp-green-400: #0ab39c;
   --erp-green-light: #daf4f0;
+
+  --erp-black-300: #495057;
+  --erp-white-200: #495057;
 
   /* font-size */
   --erp-font-size-xxs: 10px;
@@ -45,7 +48,7 @@ body {
   --erp-fs-13: 13px;
   --erp-fs-14: 14px;
   --erp-fs-17: 17px;
-
+  --erp-fs-7: 0.775rem;
   /* font-weight */
   --erp-font-weight-thin: 100;
   --erp-font-weight-light: 300;
@@ -66,7 +69,6 @@ body {
   /* Large, Bold, Line Height 1.8 */
   --erp-font-xl-bold-lh: 20px 700 2;
   /* Extra Large, Bold, Line Height 2.0 */
-
 }
 
 /* Dark mode colors */
