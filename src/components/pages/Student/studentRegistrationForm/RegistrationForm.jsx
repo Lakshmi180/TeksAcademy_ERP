@@ -33,6 +33,7 @@ function RegistrationForm() {
     },
   ];
 
+  console.log(formData);
   const handleNext = () => {
     if (isFormValid) {
     }
