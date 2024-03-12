@@ -123,8 +123,26 @@ small {
 .text_white {
   color: var(--erp-white-color);
 }
-.text_success {
-  color: var(--erp-green-400);
+.btn_info:hover {
+    background-color: var( --erp-blue-color) !important;
+    border-color: var( --erp-blue-color) !important;
+    /* color: var(--erp-white-color); */
+    
+
+}
+.btn_info:active {
+    background-color: var( --erp-blue-color) !important;
+    border-color: var( --erp-blue-color) !important;
+    color: var(--erp-white-color);
+}
+.text_mute{
+    color: var(--erp-text-mute) ;
+}
+.text_white{
+    color: var(--erp-white-color);
+}
+.text_success{
+   color: var(--erp-green-400);
 }
 
 .bg-light {

@@ -9,6 +9,7 @@ body {
   word-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f3f3f9 !important;
 }
 
 :root,
@@ -26,8 +27,8 @@ body {
   --erp-sky-500: #405189;
   --erp-sky-300: #7dd3fc;
 
+  --erp-sky-400: #299cdb;
 
-  --erp-sky-400: #2385ba;
   --erp-sky-light: #dff0fa;
   --erp-yellow-color: #d19b3d;
   --erp-lightblack-color: #2e353d;
@@ -59,13 +60,16 @@ body {
   --erp-green-500: #0ab39c;
   --erp-green-600: #16a34a;
   --erp-green-700: #15803d;
-  --erp-green-800: #166534;
+  --erp-green-800: #099885;
   --erp-green-900: #14532d;
+  --erp-green-800: #166534;
+  /* --erp-green-900: #14532d; */
   --erp-light-green:#0ab39c;
+
 
   /* Red */
 
-  --erp-red-100: #fee2e2;
+  --erp-red-100: #fde8e4;
   --erp-red-200: #fecaca;
   --erp-red-300: #fca5a5;
   --erp-red-400: #f87171;
@@ -93,7 +97,7 @@ body {
   --erp-blue-200: #add8e6;
   --erp-blue-300: #87ceeb;
   --erp-blue-400: #87cefa;
-  --erp-blue-500: #00bfff;
+  --erp-blue-500: #2385ba ;;
   --erp-blue-600: #1e90ff;
   --erp-blue-700: #6495ed;
   --erp-blue-800: #4682b4;
@@ -204,6 +208,7 @@ body {
   --erp-sky-300: #7dd3fc;
   --text-color: #fff;
   --erp-text-mute: #a3a3a3; */
+ 
   --erp-bg-color: #1a1d21;
   --erp-card-color: #212529;
   --erp-navbar-color: #292e32;

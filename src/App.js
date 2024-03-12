@@ -24,6 +24,7 @@ import Page from "./components/common/design/Page";
 import Button from "./components/common/design/Button";
 import { useTheme } from "./context/ThemeContext/ThemeContext";
 import CreateUserForm from "./components/pages/User/CreateUserForm/CreateUserForm";
+import Studentdata from "./components/pages/Student/studentData/Studentdata";
 
 
 
@@ -40,7 +41,7 @@ function App() {
   };
 
   return (
-    <div className={theme === "light" ? "App" : "darkMode App"}>
+    <div className={theme === "light" ? "App" : "darkMode App"}  style={{backgroundColor:"f3f3f9"}}>
       <Sidemenu
         isExpanded={isExpanded}
         setIsExpanded={setIsExpanded}
@@ -70,6 +71,7 @@ function App() {
             <Route path="/page" element={<Page />} />
             <Route path="/button" element={<Button />} />
             <Route path="/createuserform" element={<CreateUserForm />} />
+            <Route path="/studentdata" element={<Studentdata />} />
             <Route path={"/registrationform"} element={<RegistrationForm />} />
             <Route path="/settingstabs" element={<SettingsTabs />} />
             <Route path="roles" element={<Roles />} />
