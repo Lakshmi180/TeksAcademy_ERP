@@ -123,7 +123,7 @@ export const Sidemenu = ({ isExpanded }) => {
                   </Link>
                 </li>
                 <li className="sidebar-item">
-                  <Link
+                  <Link to="/studentdata"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("enrolledstudents")}
                   >

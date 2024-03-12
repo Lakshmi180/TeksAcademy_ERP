@@ -76,6 +76,7 @@ function App() {
             <Route path="/settingstabs" element={<SettingsTabs />} />
             <Route path="roles" element={<Roles />} />
             <Route path="/createrole" element={<CreateRole />} />
+            <Route path="/studentdata" element={<Studentdata/>}/>
           </Routes>
         </div>
       </main>
