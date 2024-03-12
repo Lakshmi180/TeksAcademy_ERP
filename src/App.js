@@ -65,7 +65,7 @@ function App() {
             <Route path="/modal" element={<Modal />} />
             <Route path="/page" element={<Page />} />
             <Route path="/button" element={<Button />} />
-            <Route path="/registrationform" element={<RegistrationForm />} />
+            <Route path={"/registrationform"} element={<RegistrationForm />} />
             <Route path="/settingstabs" element={<SettingsTabs />} />
             <Route path="roles" element={<Roles />} />
             <Route path="/createrole" element={<CreateRole />} />

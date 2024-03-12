@@ -108,7 +108,7 @@ export const Sidemenu = ({ isExpanded }) => {
               >
                 <li className="sidebar-item">
                   <Link
-                    to="/registrationform"
+                    to={"/registrationform"}
                     className="sidebar-link"
                     onClick={() => handleActiveClick("registrationform")}
                   >
