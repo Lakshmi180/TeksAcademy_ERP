@@ -3,23 +3,37 @@ import "./RegistrationForm.css";
 import { StudentDetails } from "./StudentDetails";
 import { ThankYou } from "../../../common/design/ThankYou";
 import { useTheme } from "../../../../context/ThemeContext/ThemeContext";
+import { EducationDetails } from "./EducationDetails";
+import { AdmissionDetails } from "./AdmissionDetails";
+import { FeeDetails } from "./FeeDetails";
 function RegistrationForm() {
   const [activeTab, setActiveTab] = useState(0);
   const [isFormValid, setIsFormValid] = useState(false);
-  const [formData, setFormData] = useState({});
   const { theme } = useTheme();
-
-  const getFormData = (data) => {
-    setFormData(data);
-  };
 
   const tabs = [
     {
-      title: "General",
-      content: <StudentDetails getFormData={getFormData} />,
+      title: "Student Details",
+      content: <StudentDetails />,
     },
     {
-      title: "Description",
+      title: "Education Details",
+      content: <EducationDetails />,
+    },
+    {
+      title: "Admission Details",
+      content: <AdmissionDetails />,
+    },
+    {
+      title: "Fee Details",
+      content: <FeeDetails />,
+    },
+    {
+      title: "Billing",
+      content: <StudentDetails />,
+    },
+    {
+      title: "Others",
       content: <StudentDetails />,
     },
     {
@@ -33,7 +47,6 @@ function RegistrationForm() {
     },
   ];
 
-  console.log(formData);
   const handleNext = () => {
     if (isFormValid) {
     }
@@ -50,15 +63,7 @@ function RegistrationForm() {
 
   return (
     <div className="registration_form_section d-flex flex-column justify-content-center gap-3">
-      <div className="top d-flex flex-column justify-content-center align-items-center gap-4">
-        <div className="registration_img">
-          <img
-            src="https://www.admin.teksacademy.com/static/media/Teks-Logo-with-Trade.07d75f2c54a71180af08.png"
-            alt=""
-            width={100}
-          />
-        </div>
-
+      <div className="top">
         <div className="registration_form_tabs row">
           <div className="button_grp col-lg-12 p-0">
             {tabs.map((tab, index) => {
