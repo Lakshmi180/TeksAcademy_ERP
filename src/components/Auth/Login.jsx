@@ -20,7 +20,6 @@ export const Login = () => {
     password: "",
   });
 
-
   const handleInput = (event) => {
     setValues((prev) => ({ ...prev, [event.target.name]: event.target.value }));
   };
@@ -125,10 +124,12 @@ export const Login = () => {
                       <div className="mb-3">
                         <div className="float-end">
                           <a className="text-mute font-size-s" href="">
-                            <Link to="/forgotpassword" style={{cursor:"pointer"}}>
-                            Forgot password?
+                            <Link
+                              to="/forgotpassword"
+                              style={{ cursor: "pointer" }}
+                            >
+                              Forgot password?
                             </Link>
-                           
                           </a>
                         </div>
                         <label
