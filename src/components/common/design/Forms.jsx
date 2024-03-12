@@ -1,30 +1,38 @@
-
 import "../../../assets/css/common/Forms.css";
 import { RiUploadCloud2Fill } from "react-icons/ri";
-import React from 'react'
-import { useState } from 'react';
+import React from "react";
+import { useState } from "react";
 import { IoIosClose } from "react-icons/io";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 import { MdHome } from "react-icons/md";
 import { FaHeart } from "react-icons/fa6";
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { RiCheckboxMultipleBlankFill } from "react-icons/ri";
-import "../../../assets/css/common/Forms.css"
+import "../../../assets/css/common/Forms.css";
 
 function Form() {
-
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCity, setSelectedCity] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCity, setSelectedCity] = useState("");
   const cities = [
-    "Montreal", "Toronto", "Vancouver",
-    "Lyon", "Marseille", "Paris",
-    "Barcelona", "Madrid", "Malaga",
-    "Liverpool", "London", "Manchester",
-    "Michigan", "New York", "Washington"
+    "Montreal",
+    "Toronto",
+    "Vancouver",
+    "Lyon",
+    "Marseille",
+    "Paris",
+    "Barcelona",
+    "Madrid",
+    "Malaga",
+    "Liverpool",
+    "London",
+    "Manchester",
+    "Michigan",
+    "New York",
+    "Washington",
   ];
   const [selectedDate, setSelectedDate] = useState(null);
   const handleInputChange = (event) => {
@@ -35,7 +43,7 @@ function Form() {
     setSearchTerm(city);
   };
 
-  const filteredCities = cities.filter(city =>
+  const filteredCities = cities.filter((city) =>
     city.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -72,8 +80,10 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label class="form-label fs-s" for="example-text-input ">
-                              {" "}
+                            <label
+                              class="form-label fs-s"
+                              for="example-text-input "
+                            >
                               Input with Label
                             </label>
                             <input
@@ -87,7 +97,10 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label class="form-label fs-s" for="example-text-input">
+                            <label
+                              class="form-label fs-s"
+                              for="example-text-input"
+                            >
                               {" "}
                               Input with Placeholder
                             </label>
@@ -102,7 +115,10 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label class="form-label fs-s" for="example-text-input ">
+                            <label
+                              class="form-label fs-s"
+                              for="example-text-input "
+                            >
                               Text Input
                             </label>
                             <input
@@ -116,7 +132,10 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label class="form-label fs-s" for="example-text-input ">
+                            <label
+                              class="form-label fs-s"
+                              for="example-text-input "
+                            >
                               Readonly plain Text Input
                             </label>
                             <input
@@ -176,13 +195,15 @@ function Form() {
                                 placeholder="example@gmail.com"
                               />
                             </div>
-
                           </div>
                         </div>
                       </div>
                       <div class="col-xxl-3 col-md-6">
                         <div class=" text-start">
-                          <label class="form-label fs-s" for="example-text-input">
+                          <label
+                            class="form-label fs-s"
+                            for="example-text-input"
+                          >
                             {" "}
                             Input with Icon right
                           </label>
@@ -200,7 +221,10 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label class="form-label fs-s" for="example-text-input ">
+                            <label
+                              class="form-label fs-s"
+                              for="example-text-input "
+                            >
                               Input Date
                             </label>
                             <input
@@ -214,7 +238,10 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label class="form-label fs-s" for="example-text-input ">
+                            <label
+                              class="form-label fs-s"
+                              for="example-text-input "
+                            >
                               Input Time
                             </label>
                             <input
@@ -228,7 +255,10 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label class="form-label fs-s" for="example-text-input ">
+                            <label
+                              class="form-label fs-s"
+                              for="example-text-input "
+                            >
                               {" "}
                               Input Password
                             </label>
@@ -244,7 +274,10 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label class="form-label fs-s" for="example-text-input ">
+                            <label
+                              class="form-label fs-s"
+                              for="example-text-input "
+                            >
                               Example TextArea
                             </label>
                             <textarea
@@ -258,7 +291,10 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label class="form-label fs-s" for="example-text-input">
+                            <label
+                              class="form-label fs-s"
+                              for="example-text-input"
+                            >
                               Form Text{" "}
                             </label>
                             <input
@@ -290,7 +326,10 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label class="form-label fs-s" for="example-text-input ">
+                            <label
+                              class="form-label fs-s"
+                              for="example-text-input "
+                            >
                               Input Border Style
                             </label>
                             <input
@@ -305,7 +344,10 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label class="form-label fs-s" for="exampleDataList ">
+                            <label
+                              class="form-label fs-s"
+                              for="exampleDataList "
+                            >
                               Datalist example
                             </label>
                             <input
@@ -328,7 +370,10 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label class="form-label fs-s" for="example-text-input ">
+                            <label
+                              class="form-label fs-s"
+                              for="example-text-input "
+                            >
                               Rounded Input
                             </label>
                             <input
@@ -349,7 +394,10 @@ function Form() {
                               id="example-text-input"
                               placeholder="Enter your firstname"
                             />
-                            <label class="form-label fs-s" for="example-text-input ">
+                            <label
+                              class="form-label fs-s"
+                              for="example-text-input "
+                            >
                               Floating Input
                             </label>
                           </div>
@@ -357,13 +405,16 @@ function Form() {
                       </div>
                     </div>
                   </div>
-                </div >
+                </div>
                 <div class="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
                   <div class="row">
                     <div class="col-lg-12">
                       <div class="card-body">
                         <div class="col-lg-6">
-                          <select class="form-select mb-3" aria-label="Default select example">
+                          <select
+                            class="form-select mb-3"
+                            aria-label="Default select example"
+                          >
                             <option selected="">Select your Status </option>
                             <option value="1">Declined Payment</option>
                             <option value="2">Delivery Error</option>
@@ -371,11 +422,16 @@ function Form() {
                           </select>
                         </div>
                       </div>
-
                     </div>
                     <div class="col-lg-6">
-                      <select class="form-select select-scrl" size="3" aria-label="size 3 select example">
-                        <option selected="">Open this select menu (select menu size)</option>
+                      <select
+                        class="form-select select-scrl"
+                        size="3"
+                        aria-label="size 3 select example"
+                      >
+                        <option selected="">
+                          Open this select menu (select menu size)
+                        </option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -398,7 +454,11 @@ function Form() {
                                     onChange={handleInputChange}
                                     data-bs-toggle="dropdown"
                                   />
-                                  <ul className=" form-select dropdown-menu px-3" size="3" aria-label="size 3 select example">
+                                  <ul
+                                    className=" form-select dropdown-menu px-3"
+                                    size="3"
+                                    aria-label="size 3 select example"
+                                  >
                                     {filteredCities.map((city, index) => (
                                       <li key={index}>
                                         <a
@@ -406,13 +466,14 @@ function Form() {
                                           onClick={() => handleCitySelect(city)}
                                         >
                                           {city}
-
                                         </a>
                                       </li>
                                     ))}
                                     {filteredCities.length === 0 && (
                                       <li>
-                                        <span className="dropdown-item">No results found</span>
+                                        <span className="dropdown-item">
+                                          No results found
+                                        </span>
                                       </li>
                                     )}
                                   </ul>
@@ -421,33 +482,41 @@ function Form() {
                             </div>
                           </div>
                         </div>
-
-
                       </div>
                     </div>
-
                   </div>
-
                 </div>
                 <div class="container mt-4 bg_white">
-
                   <div class=" row fs-16 p-3 ">
-
                     <h5>Pagination</h5>
 
                     <nav aria-label="...">
                       <ul class="pagination pagination-md">
                         <li class="page-item disabled">
-
-                          <a class="page-link" href="#" tabindex="-1"> <IoIosArrowRoundBack /> Prev</a>
+                          <a class="page-link" href="#" tabindex="-1">
+                            {" "}
+                            <IoIosArrowRoundBack /> Prev
+                          </a>
                         </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item active square">
-                          <a class="page-link" href="#">2 </a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
                         <li class="page-item">
-                          <a class="page-link" href="#">Next <IoIosArrowRoundForward /></a>
+                          <a class="page-link" href="#">
+                            1
+                          </a>
+                        </li>
+                        <li class="page-item active square">
+                          <a class="page-link" href="#">
+                            2{" "}
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">
+                            3
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">
+                            Next <IoIosArrowRoundForward />
+                          </a>
                         </li>
                       </ul>
                     </nav>
@@ -455,66 +524,102 @@ function Form() {
                     <nav aria-label="...">
                       <ul class="pagination pagination-sm">
                         <li class="page-item disabled">
-                          <span class="page-link"><IoIosArrowBack /></span>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item active square">
                           <span class="page-link">
-                            2
-
+                            <IoIosArrowBack />
                           </span>
                         </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
                         <li class="page-item">
-                          <a class="page-link" href="#"><IoIosArrowForward /></a>
+                          <a class="page-link" href="#">
+                            1
+                          </a>
+                        </li>
+                        <li class="page-item active square">
+                          <span class="page-link">2</span>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">
+                            3
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">
+                            <IoIosArrowForward />
+                          </a>
                         </li>
                       </ul>
                     </nav>
                     <nav aria-label="Page navigation example">
                       <ul class="pagination pagination-rounded pagination-sm">
                         <li class="page-item disabled p-1">
-                          <a href="#" class="page-link rounded"><IoIosArrowRoundBack /></a>
+                          <a href="#" class="page-link rounded">
+                            <IoIosArrowRoundBack />
+                          </a>
                         </li>
                         <li class="page-item p-1">
-                          <a href="#" class="page-link rounded">1</a>
+                          <a href="#" class="page-link rounded">
+                            1
+                          </a>
                         </li>
                         <li class="page-item active p-1">
-                          <a href="#" class="page-link rounded col">2</a>
+                          <a href="#" class="page-link rounded col">
+                            2
+                          </a>
                         </li>
                         <li class="page-item p-1">
-                          <a href="#" class="page-link rounded">3</a>
+                          <a href="#" class="page-link rounded">
+                            3
+                          </a>
                         </li>
                         <li class="page-item p-1">
-                          <a href="#" class="page-link rounded">4</a>
+                          <a href="#" class="page-link rounded">
+                            4
+                          </a>
                         </li>
                         <li class="page-item p-1">
-                          <a href="#" class="page-link rounded">5</a>
+                          <a href="#" class="page-link rounded">
+                            5
+                          </a>
                         </li>
                         <li class="page-item p-1">
-                          <a href="#" class="page-link rounded"><IoIosArrowRoundForward /></a>
+                          <a href="#" class="page-link rounded">
+                            <IoIosArrowRoundForward />
+                          </a>
                         </li>
                       </ul>
                     </nav>
                     <nav arial-label="page navigation example">
-
                       <nav aria-label="...">
-
                         <ul class="pagination pagination-sm">
                           <li class="page-item disabled p-1">
-                            <a class="page-link rounded" href="#" tabindex="-1"><IoIosArrowRoundBack /> </a>
+                            <a class="page-link rounded" href="#" tabindex="-1">
+                              <IoIosArrowRoundBack />{" "}
+                            </a>
                           </li>
-                          <li class="page-item p-1 "><a class="page-link rounded" href="#">1</a></li>
-                          <li class="page-item active p-1 "><a class="page-link rounded col" href="#">2</a></li>
-                          <li class="page-item p-1 "><a class="page-link rounded" href="#">3</a></li>
                           <li class="page-item p-1 ">
-                            <a class="page-link rounded" href="#"> <IoIosArrowRoundForward /></a>
+                            <a class="page-link rounded" href="#">
+                              1
+                            </a>
+                          </li>
+                          <li class="page-item active p-1 ">
+                            <a class="page-link rounded col" href="#">
+                              2
+                            </a>
+                          </li>
+                          <li class="page-item p-1 ">
+                            <a class="page-link rounded" href="#">
+                              3
+                            </a>
+                          </li>
+                          <li class="page-item p-1 ">
+                            <a class="page-link rounded" href="#">
+                              {" "}
+                              <IoIosArrowRoundForward />
+                            </a>
                           </li>
                         </ul>
                       </nav>
                     </nav>
-
                   </div>
-
                 </div>
                 <div class="container mt-4 bg_white ">
                   <div class=" row fs-16 p-3 ">
@@ -522,16 +627,16 @@ function Form() {
                     <div class="col text-center">
                       <DatePicker
                         selected={selectedDate}
-                        onChange={date => setSelectedDate(date)}
+                        onChange={(date) => setSelectedDate(date)}
                         dateFormat="MMMM d, yyyy"
-                        className='date-pic'
+                        className="date-pic"
                       />
                     </div>
                   </div>
                 </div>
               </div>
-            </div >
-          </div >
+            </div>
+          </div>
         </div>
       </div>
       <div class="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
@@ -863,10 +968,7 @@ function Form() {
               </div>
               <div class="col-lg-4">
                 <div class="input-group input-group-lg mb-3">
-                  <span
-                    class="input-group-text"
-                    id="inputGroup-sizing-lg fs-s"
-                  >
+                  <span class="input-group-text" id="inputGroup-sizing-lg fs-s">
                     Large
                   </span>
                   <input
@@ -1259,17 +1361,14 @@ function Form() {
                 </p>
 
                 <div className="dropzone dropone-border dz-clicable d-flex justify-content-center flex-column text-center m-2 form-control">
-
                   <div className="dz-message needclick  align-items-center   ">
                     <div className="mb-3 ">
                       <RiUploadCloud2Fill className="display-4 text-muted" />
                     </div>
                     <h4>Drop files here or click to upload.</h4>
                   </div>
-
                 </div>
-                <label for="customFileInput" className="form-label">
-                </label>
+                <label for="customFileInput" className="form-label"></label>
                 <input
                   type="file"
                   className="form-control "
@@ -1302,13 +1401,8 @@ function Form() {
                   data-style-button-remove-item-align="false"
                   style={{ height: "76px" }}
                 >
-
-
-
                   <div className="dz-message needclick  align-items-center   ">
-                    <div className="mb-3 ">
-
-                    </div>
+                    <div className="mb-3 "></div>
                     <div className="img-box-fs-s">
                       Drag &amp; Drop your files or{" "}
                       <span
@@ -1319,10 +1413,8 @@ function Form() {
                       </span>
                     </div>
                   </div>
-
                 </div>
-                <label for="customFileInput" className="form-label">
-                </label>
+                <label for="customFileInput" className="form-label"></label>
                 <input
                   type="file"
                   className="form-control "
@@ -1353,12 +1445,8 @@ function Form() {
                     data-style-button-remove-item-align="false"
                     style={{ height: "120px", width: "120px" }}
                   >
-
-
                     <div className="dz-message needclick  align-items-center   ">
-                      <div className="mb-3 ">
-
-                      </div>
+                      <div className="mb-3 "></div>
                       <div className="img-box-fs-s">
                         Drag &amp; Drop your files or{" "}
                         <span
@@ -1368,14 +1456,9 @@ function Form() {
                           Browse
                         </span>
                       </div>
-
                     </div>
-
-
-
                   </div>
-                  <label for="customFileInput" className="form-label">
-                  </label>
+                  <label for="customFileInput" className="form-label"></label>
                   <input
                     type="file"
                     className="form-control "
@@ -1567,11 +1650,18 @@ function Form() {
                 <h4 className="fs-16">Vertical Forms</h4>
               </div>
               <div className="card-body">
-                <p className="text-muted fs-s">Example of vertical form using <code>form-control</code> class. No need to specify row and col class to create vertical form.</p>
+                <p className="text-muted fs-s">
+                  Example of vertical form using <code>form-control</code>{" "}
+                  class. No need to specify row and col class to create vertical
+                  form.
+                </p>
                 <div className="live-preview">
                   <form action="javascript:void(0);">
                     <div className="mb-3">
-                      <label for="employeeName " className="form-label fw-medium form-fs-s">
+                      <label
+                        for="employeeName "
+                        className="form-label fw-medium form-fs-s"
+                      >
                         Employee Name
                       </label>
                       <input
@@ -1582,7 +1672,10 @@ function Form() {
                       />
                     </div>
                     <div className="mb-3">
-                      <label for="employeeUrl" className="form-label fw-medium form-fs-s">
+                      <label
+                        for="employeeUrl"
+                        className="form-label fw-medium form-fs-s"
+                      >
                         Employee Department URL
                       </label>
                       <input
@@ -1593,7 +1686,10 @@ function Form() {
                       />
                     </div>
                     <div className="mb-3">
-                      <label for="StartleaveDate" className="form-label fw-medium form-fs-s">
+                      <label
+                        for="StartleaveDate"
+                        className="form-label fw-medium form-fs-s"
+                      >
                         Start Leave Date
                       </label>
                       <input
@@ -1605,7 +1701,10 @@ function Form() {
                       />
                     </div>
                     <div className="mb-3">
-                      <label for="EndleaveDate" className="form-label fw-medium form-fs-s">
+                      <label
+                        for="EndleaveDate"
+                        className="form-label fw-medium form-fs-s"
+                      >
                         End Leave Date
                       </label>
                       <input
@@ -1614,14 +1713,13 @@ function Form() {
                         data-provider="flatpickr"
                         id="EndleaveDate"
                         readonly="readonly"
-
-                      >
-
-                      </input>
-
+                      ></input>
                     </div>
                     <div className="mb-3">
-                      <label for="VertimeassageInput" className="form-label fw-medium form-fs-s">
+                      <label
+                        for="VertimeassageInput"
+                        className="form-label fw-medium form-fs-s"
+                      >
                         Message
                       </label>
                       <textarea
@@ -1632,7 +1730,10 @@ function Form() {
                       ></textarea>
                     </div>
                     <div className="text-end">
-                      <button type="submit" className="btn btn_primary fw-medium form-fs-s">
+                      <button
+                        type="submit"
+                        className="btn btn_primary fw-medium form-fs-s"
+                      >
                         Add Leave
                       </button>
                     </div>
@@ -1648,68 +1749,153 @@ function Form() {
                 <h4 className="fs-16">Horizontal Form</h4>
               </div>
               <div className="card-body">
-                <p className="text-muted fs-s">Create horizontal forms with the grid by adding the <code>row</code> class to form groups and using the <code>col-*-*</code> class to specify the width of your labels and controls. Be sure to add <code>col-form-label</code> class to your <code>&lt;label&gt;</code>s as well so they’re vertically centered with their associated form controls.</p>
+                <p className="text-muted fs-s">
+                  Create horizontal forms with the grid by adding the{" "}
+                  <code>row</code> class to form groups and using the{" "}
+                  <code>col-*-*</code> class to specify the width of your labels
+                  and controls. Be sure to add <code>col-form-label</code> class
+                  to your <code>&lt;label&gt;</code>s as well so they’re
+                  vertically centered with their associated form controls.
+                </p>
                 <div className="live-preview">
                   <form action="javascript:void(0);">
                     <div class="row mb-3">
                       <div className="col-lg-3">
-                        <label for="nameInput" className="form-label fw-medium form-fs-s">Name</label>
+                        <label
+                          for="nameInput"
+                          className="form-label fw-medium form-fs-s"
+                        >
+                          Name
+                        </label>
                       </div>
                       <div className="col-lg-9">
-                        <input type="text" className="form-control form-fs-s" id="nameInput" placeholder="Enter your name" />
+                        <input
+                          type="text"
+                          className="form-control form-fs-s"
+                          id="nameInput"
+                          placeholder="Enter your name"
+                        />
                       </div>
                     </div>
                     <div className="row mb-3">
                       <div className="col-lg-3">
-                        <label for="websiteUrl" className="form-label fw-medium form-fs-s">Website URL</label>
+                        <label
+                          for="websiteUrl"
+                          className="form-label fw-medium form-fs-s"
+                        >
+                          Website URL
+                        </label>
                       </div>
                       <div className="col-lg-9">
-                        <input type="url" className="form-control form-fs-s" id="websiteUrl" placeholder="Enter your url" />
+                        <input
+                          type="url"
+                          className="form-control form-fs-s"
+                          id="websiteUrl"
+                          placeholder="Enter your url"
+                        />
                       </div>
                     </div>
                     <div className="row mb-3">
                       <div className="col-lg-3">
-                        <label for="dateInput" className="form-label fw-medium form-fs-s">Date</label>
+                        <label
+                          for="dateInput"
+                          className="form-label fw-medium form-fs-s"
+                        >
+                          Date
+                        </label>
                       </div>
                       <div className="col-lg-9">
-                        <input type="text" className="form-control flatpickr-input form-fs-s" data-provider="flatpickr" id="dateInput" readonly="readonly" />
+                        <input
+                          type="text"
+                          className="form-control flatpickr-input form-fs-s"
+                          data-provider="flatpickr"
+                          id="dateInput"
+                          readonly="readonly"
+                        />
                       </div>
                     </div>
                     <div className="row mb-3">
                       <div className="col-lg-3">
-                        <label for="timeInput" className="form-label fw-medium form-fs-s">Time</label>
+                        <label
+                          for="timeInput"
+                          className="form-label fw-medium form-fs-s"
+                        >
+                          Time
+                        </label>
                       </div>
                       <div className="col-lg-9">
-                        <input type="text" className="form-control flatpickr-input form-fs-s" data-provider="timepickr" data-time-basic="true" id="timeInput" readonly="readonly" />
+                        <input
+                          type="text"
+                          className="form-control flatpickr-input form-fs-s"
+                          data-provider="timepickr"
+                          data-time-basic="true"
+                          id="timeInput"
+                          readonly="readonly"
+                        />
                       </div>
                     </div>
                     <div className="row mb-3">
                       <div className="col-lg-3">
-                        <label for="leaveemails" className="form-label fw-medium form-fs-s">Email Id</label>
+                        <label
+                          for="leaveemails"
+                          className="form-label fw-medium form-fs-s"
+                        >
+                          Email Id
+                        </label>
                       </div>
                       <div className="col-lg-9">
-                        <input type="email" className="form-control form-fs-s" id="leaveemails" placeholder="Enter your email" />
+                        <input
+                          type="email"
+                          className="form-control form-fs-s"
+                          id="leaveemails"
+                          placeholder="Enter your email"
+                        />
                       </div>
                     </div>
                     <div className="row mb-3">
                       <div className="col-lg-3">
-                        <label for="contactNumber" className="form-label fw-medium form-fs-s">Contact Number</label>
+                        <label
+                          for="contactNumber"
+                          className="form-label fw-medium form-fs-s"
+                        >
+                          Contact Number
+                        </label>
                       </div>
                       <div className="col-lg-9">
-                        <input type="number" className="form-control form-fs-s" id="contactNumber" placeholder="
-                                                    Enter contact number"/>
+                        <input
+                          type="number"
+                          className="form-control form-fs-s"
+                          id="contactNumber"
+                          placeholder="
+                                                    Enter contact number"
+                        />
                       </div>
                     </div>
                     <div className="row mb-3">
                       <div className="col-lg-3">
-                        <label for="meassageInput" className="form-label fw-medium form-fs-s">Message</label>
+                        <label
+                          for="meassageInput"
+                          className="form-label fw-medium form-fs-s"
+                        >
+                          Message
+                        </label>
                       </div>
                       <div className="col-lg-9">
-                        <textarea className="form-control form-fs-s" id="meassageInput" rows="3" placeholder="Enter your message"></textarea>
+                        <textarea
+                          className="form-control form-fs-s"
+                          id="meassageInput"
+                          rows="3"
+                          placeholder="Enter your message"
+                        ></textarea>
                       </div>
                     </div>
                     <div className="text-end">
-                      <button type="submit" className="btn btn_primary fw-medium form-fs-s">Add Leave</button>
+                      <button
+                        type="submit"
+                        className="btn btn_primary fw-medium form-fs-s"
+                      >
+                        Add Leave
+                      </button>
                     </div>
                   </form>
                 </div>
@@ -1717,11 +1903,8 @@ function Form() {
             </div>
           </div>
         </div>
-
       </div>
     </div>
-
-
   );
 }
-export default Form
+export default Form;

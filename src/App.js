@@ -23,9 +23,7 @@ import Modal from "./components/common/design/Modal";
 import Page from "./components/common/design/Page";
 import Button from "./components/common/design/Button";
 import { useTheme } from "./context/ThemeContext/ThemeContext";
-
-
-
+import RegistrationForm from "./components/pages/Student/studentRegistrationForm/RegistrationForm";
 
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
@@ -64,6 +62,7 @@ function App() {
             <Route path="/modal" element={<Modal />} />
             <Route path="/page" element={<Page />} />
             <Route path="/button" element={<Button />} />
+            <Route path="/registration-form" element={<RegistrationForm />} />
           </Routes>
         </div>
       </main>
@@ -84,8 +83,6 @@ function App() {
   );
 }
 
-
-
 {
   /* 
   <Routes>
@@ -100,6 +97,5 @@ function App() {
         </Route>
       </Routes> */
 }
-  
 
 export default App;
