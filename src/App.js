@@ -23,6 +23,10 @@ import Modal from "./components/common/design/Modal";
 import Page from "./components/common/design/Page";
 import Button from "./components/common/design/Button";
 import { useTheme } from "./context/ThemeContext/ThemeContext";
+import Studentdata from "./components/pages/Student/studentData/Studentdata";
+
+
+
 import RegistrationForm from "./components/pages/Student/studentRegistrationForm/RegistrationForm";
 import { SettingsTabs } from "./components/pages/Settings/SettingsTabs";
 import { Roles } from "./components/pages/Settings/Roles/Roles";
@@ -36,7 +40,7 @@ function App() {
   };
 
   return (
-    <div className={theme === "light" ? "App" : "darkMode App"}>
+    <div className={theme === "light" ? "App" : "darkMode App"}  style={{backgroundColor:"f3f3f9"}}>
       <Sidemenu
         isExpanded={isExpanded}
         setIsExpanded={setIsExpanded}
@@ -65,6 +69,7 @@ function App() {
             <Route path="/modal" element={<Modal />} />
             <Route path="/page" element={<Page />} />
             <Route path="/button" element={<Button />} />
+            <Route path="/studentdata" element={<Studentdata />} />
             <Route path={"/registrationform"} element={<RegistrationForm />} />
             <Route path="/settingstabs" element={<SettingsTabs />} />
             <Route path="roles" element={<Roles />} />
