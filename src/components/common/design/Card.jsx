@@ -22,8 +22,8 @@ function Card() {
             <div className="card Totalearning d-flex justify-content-between bg_white rounded">
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3">
-                  <p className=" fw-medium text-muted m-0 fw_400 fs_14size">TOTAL EARNING</p>
-                
+                  <p className=" fw-medium text-mute m-0">TOTAL EARNING</p>
+
                   <h5 className="text-success fs-14 fw_400 fs_14">
                     <HiArrowUpRight /> +16.24%
                   </h5>
@@ -53,9 +53,6 @@ function Card() {
             <div className="card orders  bg_white rounded">
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3">
-                  <p className=" fw-medium text-muted m-0 fw_400 fs_14size">ORDERS</p>
-                
-                  <h5 className="text-danger fs-14 fw_400 fs_14"/>
                   <p className=" fw-medium text-mute m-0">ORDERS</p>
                   <h5 className="text_danger fs-14 card-number">
                     <GoArrowDownRight /> -3.57%
@@ -86,8 +83,8 @@ function Card() {
             <div className="card  customers   bg_white rounded">
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3">
-                  <p className="fw-medium text-muted m-0 fw_400 fs_14size">CUSTOMERS</p>
-            
+                  <p className=" fw-medium text-mute m-0">CUSTOMERS</p>
+
                   <h5 className="text-success fs-14 fw_400 fs_14 ">
                     <HiArrowUpRight /> +29.08%
                   </h5>
@@ -117,8 +114,8 @@ function Card() {
             <div className="card my-balance  bg_white rounded">
               <div className="card-body">
                 <div className="d-flex justify-content-between mb-3">
-                  <p className=" fw-medium text-muted m-0 fw_400 fs_14size">MY BALANCE</p>
-            
+                  <p className=" fw-medium text-mute m-0">MY BALANCE</p>
+
                   <h5 className="text-black-50  fw_400 fs_14">+0.00%</h5>
                 </div>
                 <div className="d-flex justify-content-between">

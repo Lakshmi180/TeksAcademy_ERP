@@ -18,12 +18,11 @@ body {
   --erp-orange-500: #f06548;
   --erp-orange-600: #da3412;
   --erp-light-blue-color: #abb9e8;
-  --erp-light-gray:#e9ebec;
+  --erp-light-gray: #e9ebec;
   --erp-gray-color: #878a99;
   --erp-white-color: #fff;
   --erp-sky-500: #405189;
   --erp-sky-300: #7dd3fc;
- 
 
   --erp-sky-400: #2385ba;
   --erp-sky-light: #dff0fa;
@@ -49,7 +48,7 @@ body {
 
   /* Green */
 
-  --erp-green-100: #dcfce7;
+  --erp-green-100: #c7f7d8;
   --erp-green-200: #bbf7d0;
   --erp-green-300: #86efac;
   --erp-green-400: #4ade80;
@@ -57,7 +56,7 @@ body {
   --erp-green-600: #16a34a;
   --erp-green-700: #15803d;
   --erp-green-800: #166534;
-  --erp-green-900: #14532d;
+  --erp-green-900: #173433;
 
   /* Red */
 
@@ -151,6 +150,7 @@ body {
   --erp-sidebar-color: #405189;
   --erp-text-color: #000;
   --erp-link-color: #4682b4;
+  --erp-input-bg-color: #f3f6f9;
 
   /* font-size */
   --erp-fs-xxs: 10px;
@@ -184,14 +184,9 @@ body {
   --erp-font-xl-bold-lh: 20px 700 2;
   /* Extra Large, Bold, Line Height 2.0 */
 
-
   /* background colors*/
- --erp-bg-light: rgb(248 249 250);
- 
-
+  --erp-bg-light: rgb(248 249 250);
 }
-
-
 
 /* Dark mode colors */
 .darkMode,
@@ -208,6 +203,7 @@ body {
   --erp-sidebar-color: #212529;
   --erp-text-color: #fff;
   --erp-link-color: #fff;
+  --erp-input-bg-color: #282b2e;
 }
 
 /* .wrap {
@@ -217,7 +213,6 @@ body {
 } */
 
 .App {
-  background-color: var(--erp-bg-color);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -241,23 +236,23 @@ body {
 }
 
 .font-weight-100 {
-  font-weight: var( --erp-fw-100);
+  font-weight: var(--erp-fw-100);
 }
 
 .font-weight-300 {
-  font-weight: var( --erp-fw-300);
+  font-weight: var(--erp-fw-300);
 }
 
 .font-weight-400 {
-  font-weight: var( --erp-fw-400);
+  font-weight: var(--erp-fw-400);
 }
 
 .font-weight-500 {
-  font-weight: var( --erp-fw-500);
+  font-weight: var(--erp-fw-500);
 }
 
 .font-weight-700 {
-  font-weight: var( --erp-fw-700);
+  font-weight: var(--erp-fw-700);
 }
 
 .main_menu i {
@@ -351,4 +346,8 @@ body,
 
 .text_danger {
   color: var(--erp-red-500) !important;
+}
+
+.text_color {
+  color: var(--erp-text-color) !important;
 }
