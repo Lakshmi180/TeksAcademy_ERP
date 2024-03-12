@@ -8,7 +8,7 @@ function CreateUserForm() {
           <div className="col-xxl-12">
             <div className="card  border-0">
               <div className="align-items-center bg_white">
-                <h5 className="mt-4 fs-16 txt-color ms-4 ">User Creation Form</h5>
+                <h5 className="mt-4 fs-16 txt-color ms-3 ">User Creation Form</h5>
               </div>
               <div className="card-body ">
 
