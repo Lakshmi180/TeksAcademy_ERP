@@ -1,11 +1,19 @@
-import React from 'react'
+import React from 'react';
+import { Link } from "react-router-dom";
 import { MdOutlineEdit } from "react-icons/md";
 import { MdDeleteOutline } from "react-icons/md";
 export const Roles = () => {
   return (
     <div>
       <div className="container">
-        <h6>Roles</h6>
+        <div className=" d-flex justify-content-between">
+          <div className='fs_13'>Roles</div>
+          <div>
+            <button className='btn btn-primary fs_13'>
+              <Link to="/createrole" className='text-white'>Add Role</Link>
+            </button>
+          </div>
+        </div>
         <div className="row mt-3">
           <div className="col-xl-12">
             <div className="card">

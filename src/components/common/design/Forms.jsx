@@ -52,9 +52,9 @@ function Form() {
       <div class="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
         <div class="row ">
           <div class="col-lg-12">
-            <div class="card border-0 bg-transparent ">
+            <div class="card border-0 bg_transparent ">
               <div className="text-start ms-4 fs-16">
-                <p>Input Example</p>
+                <p className="txt-color">Input Example</p>
               </div>
               <div>
                 <div class="card-body m-3 fs-s">
@@ -64,13 +64,13 @@ function Form() {
                         <div>
                           <div className="form-group text-start">
                             <label
-                              className="form-label fs-s "
+                              className="form-label fs-s txt-color"
                               for="example-text-input"
                             >
                               Basic Input
                             </label>
                             <input
-                              class="form-control"
+                              class="form-control bg-form"
                               type="text"
                               id="example-text-input"
                             />
@@ -80,14 +80,12 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label
-                              class="form-label fs-s"
-                              for="example-text-input "
-                            >
+                            <label class="form-label fs-s txt-color" for="example-text-input ">
+                              {" "}
                               Input with Label
                             </label>
                             <input
-                              class="form-control"
+                              class="form-control  bg-form"
                               type="text"
                               id="example-text-input"
                             />
@@ -97,15 +95,12 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label
-                              class="form-label fs-s"
-                              for="example-text-input"
-                            >
+                            <label class="form-label fs-stxt-color" for="example-text-input">
                               {" "}
                               Input with Placeholder
                             </label>
                             <input
-                              class="form-control"
+                              class="form-control bg-form"
                               type="text"
                               id="example-text-input"
                             />
@@ -115,14 +110,11 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label
-                              class="form-label fs-s"
-                              for="example-text-input "
-                            >
+                            <label class="form-label fs-s txt-color" for="example-text-input ">
                               Text Input
                             </label>
                             <input
-                              class="form-control"
+                              class="form-control bg-form"
                               type="text"
                               id="example-text-input"
                             />
@@ -132,14 +124,11 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label
-                              class="form-label fs-s"
-                              for="example-text-input "
-                            >
+                            <label class="form-label fs-s txt-color" for="example-text-input ">
                               Readonly plain Text Input
                             </label>
                             <input
-                              class="form-control-plaintext fs-s"
+                              class="form-control-plaintext fs-s  bg-form"
                               type="text"
                               id="readonlyPlaintext"
                               value="Readonly input"
@@ -151,11 +140,11 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label class="form-label  fs-s" for="readonlyInput">
+                            <label class="form-label  fs-s txt-color" for="readonlyInput">
                               Readonly Input
                             </label>
                             <input
-                              class="form-control fs-s"
+                              class="form-control fs-s  bg-form"
                               type="text"
                               id="readonlyInput"
                               value="Readonly input"
@@ -167,11 +156,11 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label class="form-label fs-s" for="disabledInput">
+                            <label class="form-label fs-s txt-color" for="disabledInput">
                               Disabled Input
                             </label>
                             <input
-                              class="form-control fs-s"
+                              class="form-control fs-s bg-form"
                               type="text"
                               id="disabledInput"
                               value="Disabled input"
@@ -184,12 +173,12 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="text-start">
-                            <label class="form-label fs-s" for="iconInput">
+                            <label class="form-label fs-s txt-color" for="iconInput">
                               Input with Icon
                             </label>
                             <div class="form-icon d-flex">
                               <input
-                                class="form-control form-control-icon fs-s"
+                                class="form-control form-control-icon fs-s bg-form"
                                 type="email"
                                 id="iconInput"
                                 placeholder="example@gmail.com"
@@ -200,16 +189,13 @@ function Form() {
                       </div>
                       <div class="col-xxl-3 col-md-6">
                         <div class=" text-start">
-                          <label
-                            class="form-label fs-s"
-                            for="example-text-input"
-                          >
+                          <label class="form-label fs-s txt-color" for="example-text-input">
                             {" "}
                             Input with Icon right
                           </label>
                           <div class="form-icon right">
                             <input
-                              class="form-control fs-s"
+                              class="form-control fs-s bg-form"
                               type="email"
                               id="example-text-input"
                               placeholder="example@gmail.com"
@@ -221,14 +207,11 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label
-                              class="form-label fs-s"
-                              for="example-text-input "
-                            >
+                            <label class="form-label fs-s txt-color" for="example-text-input ">
                               Input Date
                             </label>
                             <input
-                              class="form-control fs-s"
+                              class="form-control fs-s bg-form"
                               type="date"
                               id="exampleInputdate"
                             />
@@ -238,14 +221,11 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label
-                              class="form-label fs-s"
-                              for="example-text-input "
-                            >
+                            <label class="form-label fs-s txt-color" for="example-text-input ">
                               Input Time
                             </label>
                             <input
-                              class="form-control"
+                              class="form-control bg-form"
                               type="time"
                               id="exampleInputtime"
                             />
@@ -255,15 +235,12 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label
-                              class="form-label fs-s"
-                              for="example-text-input "
-                            >
+                            <label class="form-label fs-s txt-color" for="example-text-input ">
                               {" "}
                               Input Password
                             </label>
                             <input
-                              class="form-control"
+                              class="form-control bg-form"
                               type="password"
                               id="example-text-input"
                               value="44512465"
@@ -274,14 +251,11 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label
-                              class="form-label fs-s"
-                              for="example-text-input "
-                            >
+                            <label class="form-label fs-s txt-color" for="example-text-input ">
                               Example TextArea
                             </label>
                             <textarea
-                              class="form-control"
+                              class="form-control bg-form"
                               id="exampleFormContro;Textarea5"
                               rows="3"
                             ></textarea>
@@ -291,18 +265,15 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label
-                              class="form-label fs-s"
-                              for="example-text-input"
-                            >
+                            <label class="form-label fs-s txt-color" for="example-text-input">
                               Form Text{" "}
                             </label>
                             <input
-                              class="form-control"
+                              class="form-control bg-form"
                               type="password"
                               id="formtextinput"
                             />
-                            <div id="passwordHelpBlock" class="form-text">
+                            <div id="passwordHelpBlock" class="form-text txt-color">
                               "Must be 8-20 characters long"
                             </div>
                           </div>
@@ -311,11 +282,11 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label class="form-label fs-s" for="colorPicker ">
+                            <label class="form-label fs-s txt-color" for="colorPicker ">
                               Color Picker
                             </label>
                             <input
-                              class="form-control form-control-color w-100"
+                              class="form-control form-control-color w-100 bg-form"
                               type="color"
                               id="colorpicker"
                               value="#364574"
@@ -326,14 +297,11 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label
-                              class="form-label fs-s"
-                              for="example-text-input "
-                            >
+                            <label class="form-label fs-s txt-color" for="example-text-input ">
                               Input Border Style
                             </label>
                             <input
-                              class="form-control border-dashed fs-s"
+                              class="form-control border-dashed fs-s  bg-form"
                               type="text"
                               id="borderInput"
                               placeholder="Enter your name"
@@ -344,14 +312,11 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label
-                              class="form-label fs-s"
-                              for="exampleDataList "
-                            >
+                            <label class="form-label fs-s txt-color" for="exampleDataList ">
                               Datalist example
                             </label>
                             <input
-                              class="form-control fs-s"
+                              class="form-control fs-s  bg-form"
                               type="text"
                               id="example-text-input"
                               list="datalistOptions"
@@ -370,14 +335,11 @@ function Form() {
                       <div class="col-xxl-3 col-md-6">
                         <div>
                           <div class="form-group text-start">
-                            <label
-                              class="form-label fs-s"
-                              for="example-text-input "
-                            >
+                            <label class="form-label fs-s txt-color" for="example-text-input ">
                               Rounded Input
                             </label>
                             <input
-                              class="form-control rounded-pill fs-s"
+                              class="form-control rounded-pill fs-s bg-form"
                               type="text"
                               id="example-text-input"
                               placeholder="enter your name"
@@ -389,15 +351,12 @@ function Form() {
                         <div>
                           <div class="form-floating">
                             <input
-                              class="form-control fs-s"
+                              class="form-control fs-s bg-form"
                               type="text"
                               id="example-text-input"
                               placeholder="Enter your firstname"
                             />
-                            <label
-                              class="form-label fs-s"
-                              for="example-text-input "
-                            >
+                            <label class="form-label fs-s txt-color" for="example-text-input ">
                               Floating Input
                             </label>
                           </div>
@@ -411,10 +370,7 @@ function Form() {
                     <div class="col-lg-12">
                       <div class="card-body">
                         <div class="col-lg-6">
-                          <select
-                            class="form-select mb-3"
-                            aria-label="Default select example"
-                          >
+                          <select class="form-select mb-3  bg-form" aria-label="Default select example">
                             <option selected="">Select your Status </option>
                             <option value="1">Declined Payment</option>
                             <option value="2">Delivery Error</option>
@@ -424,14 +380,8 @@ function Form() {
                       </div>
                     </div>
                     <div class="col-lg-6">
-                      <select
-                        class="form-select select-scrl"
-                        size="3"
-                        aria-label="size 3 select example"
-                      >
-                        <option selected="">
-                          Open this select menu (select menu size)
-                        </option>
+                      <select class="form-select select-scrl bg-form" size="3" aria-label="size 3 select example">
+                        <option selected="">Open this select menu (select menu size)</option>
                         <option value="1">One</option>
                         <option value="2">Two</option>
                         <option value="3">Three</option>
@@ -448,7 +398,7 @@ function Form() {
                                 <div className="dropdown">
                                   <input
                                     type="search"
-                                    className="form-control dropdown-toggle p-2 rounded"
+                                    className="form-control dropdown-toggle p-2 rounded bg-form"
                                     placeholder="Choose a city"
                                     value={searchTerm}
                                     onChange={handleInputChange}
@@ -488,35 +438,22 @@ function Form() {
                 </div>
                 <div class="container mt-4 bg_white">
                   <div class=" row fs-16 p-3 ">
-                    <h5>Pagination</h5>
+
+                    <h5 className="txt-color">Pagination</h5>
 
                     <nav aria-label="...">
                       <ul class="pagination pagination-md">
-                        <li class="page-item disabled">
-                          <a class="page-link" href="#" tabindex="-1">
-                            {" "}
-                            <IoIosArrowRoundBack /> Prev
-                          </a>
+                        <li class="page-item disabled ">
+
+                          <a class="page-linkbg-form" href="#" tabindex="-1"> <IoIosArrowRoundBack /> Prev</a>
                         </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">
-                            1
-                          </a>
+                        <li class="page-itembg-form"><a class="page-link bg-form" href="#">1</a></li>
+                        <li class="page-item active square  bg-form">
+                          <a class="page-link bg-form" href="#">2 </a>
                         </li>
-                        <li class="page-item active square">
-                          <a class="page-link" href="#">
-                            2{" "}
-                          </a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">
-                            3
-                          </a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">
-                            Next <IoIosArrowRoundForward />
-                          </a>
+                        <li class="page-item bg-form"><a class="page-link bg-form" href="#">3</a></li>
+                        <li class="page-item bg-form">
+                          <a class="page-link bg-form" href="#">Next <IoIosArrowRoundForward /></a>
                         </li>
                       </ul>
                     </nav>
@@ -524,66 +461,43 @@ function Form() {
                     <nav aria-label="...">
                       <ul class="pagination pagination-sm">
                         <li class="page-item disabled">
-                          <span class="page-link">
-                            <IoIosArrowBack />
+                          <span class="page-link bg-form"><IoIosArrowBack /></span>
+                        </li>
+                        <li class="page-item"><a class="page-link bg-form" href="#">1</a></li>
+                        <li class="page-item active square">
+                          <span class="page-link bg-form">
+                            2
+
                           </span>
                         </li>
+                        <li class="page-item"><a class="page-link bg-form" href="#">3</a></li>
                         <li class="page-item">
-                          <a class="page-link" href="#">
-                            1
-                          </a>
-                        </li>
-                        <li class="page-item active square">
-                          <span class="page-link">2</span>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">
-                            3
-                          </a>
-                        </li>
-                        <li class="page-item">
-                          <a class="page-link" href="#">
-                            <IoIosArrowForward />
-                          </a>
+                          <a class="page-link bg-form" href="#"><IoIosArrowForward /></a>
                         </li>
                       </ul>
                     </nav>
                     <nav aria-label="Page navigation example">
                       <ul class="pagination pagination-rounded pagination-sm">
                         <li class="page-item disabled p-1">
-                          <a href="#" class="page-link rounded">
-                            <IoIosArrowRoundBack />
-                          </a>
+                          <a href="#" class="page-link rounded bg-form"><IoIosArrowRoundBack /></a>
                         </li>
                         <li class="page-item p-1">
-                          <a href="#" class="page-link rounded">
-                            1
-                          </a>
+                          <a href="#" class="page-link rounded bg-form">1</a>
                         </li>
                         <li class="page-item active p-1">
-                          <a href="#" class="page-link rounded col">
-                            2
-                          </a>
+                          <a href="#" class="page-link rounded col bg-form">2</a>
                         </li>
                         <li class="page-item p-1">
-                          <a href="#" class="page-link rounded">
-                            3
-                          </a>
+                          <a href="#" class="page-link rounded bg-form">3</a>
                         </li>
                         <li class="page-item p-1">
-                          <a href="#" class="page-link rounded">
-                            4
-                          </a>
+                          <a href="#" class="page-link rounded bg-form">4</a>
                         </li>
                         <li class="page-item p-1">
-                          <a href="#" class="page-link rounded">
-                            5
-                          </a>
+                          <a href="#" class="page-link rounded bg-form">5</a>
                         </li>
                         <li class="page-item p-1">
-                          <a href="#" class="page-link rounded">
-                            <IoIosArrowRoundForward />
-                          </a>
+                          <a href="#" class="page-link rounded bg-form"><IoIosArrowRoundForward /></a>
                         </li>
                       </ul>
                     </nav>
@@ -591,30 +505,13 @@ function Form() {
                       <nav aria-label="...">
                         <ul class="pagination pagination-sm">
                           <li class="page-item disabled p-1">
-                            <a class="page-link rounded" href="#" tabindex="-1">
-                              <IoIosArrowRoundBack />{" "}
-                            </a>
+                            <a class="page-link rounded bg-form" href="#" tabindex="-1"><IoIosArrowRoundBack /> </a>
                           </li>
+                          <li class="page-item p-1 "><a class="page-link rounded bg-form" href="#">1</a></li>
+                          <li class="page-item active p-1 "><a class="page-link rounded col bg-form" href="#">2</a></li>
+                          <li class="page-item p-1 "><a class="page-link rounded bg-form" href="#">3</a></li>
                           <li class="page-item p-1 ">
-                            <a class="page-link rounded" href="#">
-                              1
-                            </a>
-                          </li>
-                          <li class="page-item active p-1 ">
-                            <a class="page-link rounded col" href="#">
-                              2
-                            </a>
-                          </li>
-                          <li class="page-item p-1 ">
-                            <a class="page-link rounded" href="#">
-                              3
-                            </a>
-                          </li>
-                          <li class="page-item p-1 ">
-                            <a class="page-link rounded" href="#">
-                              {" "}
-                              <IoIosArrowRoundForward />
-                            </a>
+                            <a class="page-link rounded bg-form" href="#"> <IoIosArrowRoundForward /></a>
                           </li>
                         </ul>
                       </nav>
@@ -642,14 +539,14 @@ function Form() {
       <div class="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
         <div class="row fs-16">
           <div class="col-lg-12">
-            <div class="card border-0 bg-transparent ">
+            <div class="card border-0 bg_transparent ">
               <div class="">
-                <p class="text-start fs-16"> Input Sizing </p>
+                <p class="text-start fs-16 txt-color"> Input Sizing </p>
               </div>
             </div>
           </div>
           <div class="card-body m-3">
-            <p class="text-muted text-start fs-s">
+            <p class="text-muted text-start fs-s txt-color">
               use <code>form-control-lg</code> class to set small large size
               input and use <code>form-control-sm</code> class to set small size
               input. No class is needed for default size input
@@ -658,7 +555,7 @@ function Form() {
               <div class="row  g-3">
                 <div class="col-lg-4">
                   <input
-                    class="form-control form-control-sm"
+                    class="form-control form-control-sm bg-form"
                     type="text"
                     id="example-text-input"
                     placeholder=".form-control-sm"
@@ -669,12 +566,12 @@ function Form() {
                     class="form-control"
                     type="text"
                     id="example-text-input"
-                    placeholder=".form-control-sm"
+                    placeholder=".form-control-sm bg-form"
                   />
                 </div>
                 <div class="col-lg-4">
                   <input
-                    class="form-control form-control-lg"
+                    class="form-control form-control-lg bg-form"
                     type="text"
                     id="example-text-input"
                     placeholder=".form-control-sm"
@@ -689,8 +586,8 @@ function Form() {
         <div class="row fs-16">
           <div class="col-lg-12">
             <div class="card border-0 bg-transparent ">
-              <div class="align-items-center  ">
-                <p class="text-start fs-16">File Input </p>
+              <div class="align-items-center   ">
+                <p class="text-start fs-16 txt-color">File Input </p>
               </div>
             </div>
           </div>
@@ -698,19 +595,19 @@ function Form() {
             <div class="row align-items-center text-start g-3 fs-s">
               <div class="col-lg-4">
                 <div>
-                  <label for="formfile" class="form-label fs-s">
+                  <label for="formfile" class="form-label fs-s txt-color">
                     Default File Input Example
                   </label>
-                  <p class="text-muted fs-s">
+                  <p class="text-muted fs-s txt-color">
                     use <code>input</code> attribute with
                     <code>type="file</code> tag for default file input{" "}
                   </p>
-                  <input class="form-control fs-s" type="file" id="formfile" />
+                  <input class="form-control fs-s bg-form" type="file" id="formfile" />
                 </div>
               </div>
               <div class="col-lg-4 ">
                 <div>
-                  <label for="formFileMultiple" class="form-label fs-s">
+                  <label for="formFileMultiple txt-color" class="form-label fs-s">
                     Multiple File Input Example
                   </label>
                   <p class="text-muted fs-s">
@@ -718,7 +615,7 @@ function Form() {
                     attribute to select multiple files
                   </p>
                   <input
-                    class="form-control fs-s"
+                    class="form-control fs-s bg-form"
                     type="file"
                     id="formFileMultiple"
                   />
@@ -734,7 +631,7 @@ function Form() {
                     attribute to disable the file input.
                   </p>
                   <input
-                    class="form-control fs-s"
+                    class="form-control fs-s bg-form"
                     type="file"
                     id="formFileDisabled"
                     disabled
@@ -754,7 +651,7 @@ function Form() {
                     form-control class to set a small size file input.
                   </p>
                   <input
-                    class="form-control form-control-sm"
+                    class="form-control form-control-sm bg-form"
                     type="file"
                     id="formSizeSmall"
                   />
@@ -771,7 +668,7 @@ function Form() {
                     attribute to set a default size file input.
                   </p>
                   <input
-                    class="form-control "
+                    class="form-control bg-form "
                     type="file"
                     id="formSizeDefault"
                   />
@@ -787,7 +684,7 @@ function Form() {
                     form-control class to set a large size file input.
                   </p>
                   <input
-                    class="form-control form-control-lg"
+                    class="form-control form-control-lg bg-form"
                     type="file"
                     id="formSizeLarge"
                   />
@@ -822,7 +719,7 @@ function Form() {
                   </span>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control bg-form"
                     placeholder="Username"
                     aria-label="Username"
                     aria-describedby="basic-addon1"
@@ -833,7 +730,7 @@ function Form() {
                 <div class="input-group mb-3">
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control bg-form"
                     placeholder="Recipient's username"
                     aria-label="Recipient's username"
                     aria-describedby="basic-addon2"
@@ -848,7 +745,7 @@ function Form() {
                   <span class="input-group-text">$</span>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control bg-form"
                     aria-label="Amount (to the nearest dollar)"
                   />
                   <span class="input-group-text">.00</span>
@@ -858,14 +755,14 @@ function Form() {
                 <div class="input-group mb-3">
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control bg-form"
                     placeholder="Username"
                     aria-label="Username"
                   />
                   <span class="input-group-text">@</span>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control bg-form"
                     placeholder="Server"
                     aria-label="Server"
                   />
@@ -890,7 +787,7 @@ function Form() {
                   </span>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control bg-form"
                     id="basic-url"
                     aria-describedby="basic-addon3"
                   />
@@ -910,7 +807,7 @@ function Form() {
                   </span>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control bg-form"
                     placeholder="Username"
                     aria-label="Username"
                     aria-describedby="basic-addon1"
@@ -947,7 +844,7 @@ function Form() {
                   </span>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control bg-form"
                     aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-sm"
                   />
@@ -960,7 +857,7 @@ function Form() {
                   </span>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control bg-form"
                     aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-default"
                   />
@@ -973,7 +870,7 @@ function Form() {
                   </span>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form-control bg-form"
                     aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-lg"
                   />
@@ -1007,12 +904,14 @@ function Form() {
                 <input
                   type="text"
                   aria-label="First name"
-                  class="form-control"
+                  class="form-controlbg-form"
+                
+
                 />
                 <input
                   type="text"
                   aria-label="Last name"
-                  class="form-control"
+                  class="form-control bg-form"
                 />
               </div>
             </div>
@@ -1022,7 +921,7 @@ function Form() {
                 <span class="input-group-text">0.00</span>
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-controlbg-form"
                   aria-label="Dollar amount (with dot and two decimal places)"
                 />
               </div>
@@ -1031,7 +930,7 @@ function Form() {
               <div class="input-group">
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-controlbg-form"
                   aria-label="Dollar amount (with dot and two decimal places)"
                 />
                 <span class="input-group-text">$</span>
@@ -1063,7 +962,7 @@ function Form() {
                     <div class="input-group">
                       <div class="input-group-text">
                         <input
-                          class="form-check-input mt-0 "
+                          class="form-check-input mt-0bg-form "
                           type="checkbox"
                           value
                           aria-label="checkbox for following text input"
@@ -1071,7 +970,7 @@ function Form() {
                       </div>
                       <input
                         type="text"
-                        class="form-control"
+                        class="form-control bg-form"
                         arial-label="Text input with checkbox"
                       />
                     </div>
@@ -1080,7 +979,7 @@ function Form() {
                     <div class="input-group">
                       <div class="input-group-text">
                         <input
-                          class="form-check-input mt-0 "
+                          class="form-check-input mt-0 bg-form"
                           type="checkbox"
                           value
                           aria-label="checkbox for following text input"
@@ -1088,7 +987,7 @@ function Form() {
                       </div>
                       <input
                         type="text"
-                        class="form-control"
+                        class="form-control bg-form"
                         arial-label="Text input with checkbox"
                       />
                     </div>
@@ -1096,7 +995,7 @@ function Form() {
                   <div class="col-lg-6">
                     <div class="input-group">
                       <button
-                        class="btn primary_outline "
+                        class="btn primary_outline bg-form "
                         type="button"
                         id="button-addon1"
                       >
@@ -1105,7 +1004,7 @@ function Form() {
 
                       <input
                         type="text"
-                        class="form-control"
+                        class="form-control bg-form"
                         placeholder=""
                         arial-label="Example text with button addon"
                         aria-describedby="button-addon1"
@@ -1116,7 +1015,7 @@ function Form() {
                     <div class="input-group">
                       <input
                         type="text"
-                        class="form-control"
+                        class="form-control bg-form"
                         placeholder=""
                         arial-label="Recipient's username"
                         aria-describedby="button-addon2"
@@ -1136,7 +1035,7 @@ function Form() {
                         Button
                       </button>
                       <button
-                        class="btn btn_success "
+                        class="btn btn_sucess "
                         type="button"
                         id="button-addon2"
                       >
@@ -1144,7 +1043,7 @@ function Form() {
                       </button>
                       <input
                         type="text"
-                        class="form-control"
+                        class="form-control bg-form"
                         placeholder=""
                         arial-label="Example text with two button addons"
                         aria-describedby="button-addon2"
@@ -1155,7 +1054,7 @@ function Form() {
                     <div class="input-group">
                       <input
                         type="text"
-                        class="form-control"
+                        class="form-control bg-form"
                         placeholder=""
                         arial-label="Example text with two button addons"
                         aria-describedby="button-addon2"
@@ -1164,7 +1063,7 @@ function Form() {
                         Button
                       </button>
                       <button
-                        class="btn btn_success "
+                        class="btn btn_sucess "
                         type="button"
                         id="button-addon2"
                       >
@@ -1195,7 +1094,7 @@ function Form() {
                     <div class="input-group">
                       <div class="dropdown">
                         <button
-                          class="btn btn_primary dropdown-toggle"
+                          class="btn btn_primary dropdown-toggle "
                           type="button"
                           id="dropdownMenuButton1"
                           data-bs-toggle="dropdown"
@@ -1226,7 +1125,8 @@ function Form() {
                       </div>
                       <input
                         type="text"
-                        class="form-control"
+                        class="form-control "
+                      
                         aria-label="Text input with dropdown button"
                       />
                     </div>
@@ -1235,7 +1135,7 @@ function Form() {
                     <div class="input-group">
                       <input
                         type="text"
-                        class="form-control"
+                        class="form-control bg-form"
                         aria-label="Text input with dropdown button"
                       />
                       <div class="dropdown">
@@ -1371,7 +1271,7 @@ function Form() {
                 <label for="customFileInput" className="form-label"></label>
                 <input
                   type="file"
-                  className="form-control "
+                  className="form-control bg-form "
                   id="customFileInput"
                 />
                 <ul className="list-unstyled mb-0" id="dropzone-preview"></ul>
@@ -1417,7 +1317,7 @@ function Form() {
                 <label for="customFileInput" className="form-label"></label>
                 <input
                   type="file"
-                  className="form-control "
+                  className="form-control bg-form"
                   id="customFileInput"
                 />
                 <ul className="list-unstyled mb-0" id="dropzone-preview"></ul>
@@ -1461,7 +1361,7 @@ function Form() {
                   <label for="customFileInput" className="form-label"></label>
                   <input
                     type="file"
-                    className="form-control "
+                    className="form-control bg-form "
                     id="customFileInput"
                   />
                   <ul className="list-unstyled mb-0" id="dropzone-preview"></ul>
@@ -1503,7 +1403,7 @@ function Form() {
                           </label>
                           <input
                             type="text"
-                            className="form-control form-fs-s"
+                            className="form-control form-fs-s bg-form"
                             placeholder="Enter your firstname"
                             id="firstNameinput"
                           />
@@ -1519,7 +1419,7 @@ function Form() {
                           </label>
                           <input
                             type="text"
-                            className="form-control form-fs-s"
+                            className="form-control form-fs-s bg-form"
                             placeholder="Enter your lastname"
                             id="firstNameinput"
                           />
@@ -1535,7 +1435,7 @@ function Form() {
                           </label>
                           <input
                             type="text"
-                            className="form-control form-fs-s"
+                            className="form-control form-fs-s bg-form"
                             placeholder="Enter Company Name"
                             id="companyNameinput"
                           />
@@ -1551,7 +1451,7 @@ function Form() {
                           </label>
                           <input
                             type="tel"
-                            className="form-control form-fs-s"
+                            className="form-control form-fs-s bg-form"
                             placeholder="+(245) 451 45123"
                             id="phonenumberInput"
                           />
@@ -1567,7 +1467,7 @@ function Form() {
                           </label>
                           <input
                             type="email"
-                            className="form-control form-fs-s"
+                            className="form-control form-fs-s bg-form"
                             placeholder="example @gmail.com"
                             id="emailInput"
                           />
@@ -1583,7 +1483,7 @@ function Form() {
                           </label>
                           <input
                             type="text"
-                            className="form-control form-fs-s "
+                            className="form-control form-fs-s bg-form "
                             placeholder="Address 1"
                             id="address1ControlTextarea"
                           />
@@ -1599,7 +1499,7 @@ function Form() {
                           </label>
                           <input
                             type="email"
-                            className="form-control form-fs-s"
+                            className="form-control form-fs-s bg-form"
                             placeholder="Enter your city"
                             id="citynameInput"
                           />
@@ -1616,7 +1516,7 @@ function Form() {
 
                           <input
                             type="state"
-                            className="form-control form-fs-s"
+                            className="form-control form-fs-s bg-form"
                             placeholder="Choose"
                             id="stateInput"
                           />
@@ -1666,7 +1566,7 @@ function Form() {
                       </label>
                       <input
                         type="text"
-                        className="form-control form-fs-s"
+                        className="form-control form-fs-s bg-form"
                         id="employeeName"
                         placeholder="Enter employee name"
                       />
@@ -1680,7 +1580,7 @@ function Form() {
                       </label>
                       <input
                         type="url"
-                        className="form-control form-fs-s "
+                        className="form-control form-fs-s bg-form"
                         id="employeeUrl"
                         placeholder="Enter employee url"
                       />
@@ -1694,22 +1594,19 @@ function Form() {
                       </label>
                       <input
                         type="text"
-                        className="form-control flatpickr-input form-fs-s"
+                        className="form-control flatpickr-input form-fs-s bg-form"
                         data-provider="flatpickr"
                         id="StartleaveDate"
                         readonly="readonly"
                       />
                     </div>
                     <div className="mb-3">
-                      <label
-                        for="EndleaveDate"
-                        className="form-label fw-medium form-fs-s"
-                      >
+                      <label for="EndleaveDate" className="form-label fw-medium form-fs-s bg-form">
                         End Leave Date
                       </label>
                       <input
                         type="text"
-                        className="form-control flatpickr-input form-fs-s"
+                        className="form-control flatpickr-input form-fs-s bg-form"
                         data-provider="flatpickr"
                         id="EndleaveDate"
                         readonly="readonly"
@@ -1723,7 +1620,7 @@ function Form() {
                         Message
                       </label>
                       <textarea
-                        className="form-control form-fs-s"
+                        className="form-control form-fs-s bg-form"
                         id="VertimeassageInput "
                         rows="3"
                         placeholder="Enter your message"
@@ -1769,12 +1666,7 @@ function Form() {
                         </label>
                       </div>
                       <div className="col-lg-9">
-                        <input
-                          type="text"
-                          className="form-control form-fs-s"
-                          id="nameInput"
-                          placeholder="Enter your name"
-                        />
+                        <input type="text" className="form-control form-fs-s bg-form" id="nameInput" placeholder="Enter your name" />
                       </div>
                     </div>
                     <div className="row mb-3">
@@ -1787,12 +1679,7 @@ function Form() {
                         </label>
                       </div>
                       <div className="col-lg-9">
-                        <input
-                          type="url"
-                          className="form-control form-fs-s"
-                          id="websiteUrl"
-                          placeholder="Enter your url"
-                        />
+                        <input type="url" className="form-control form-fs-s bg-form" id="websiteUrl" placeholder="Enter your url" />
                       </div>
                     </div>
                     <div className="row mb-3">
@@ -1805,13 +1692,7 @@ function Form() {
                         </label>
                       </div>
                       <div className="col-lg-9">
-                        <input
-                          type="text"
-                          className="form-control flatpickr-input form-fs-s"
-                          data-provider="flatpickr"
-                          id="dateInput"
-                          readonly="readonly"
-                        />
+                        <input type="text" className="form-control flatpickr-input form-fs-s bg-form" data-provider="flatpickr" id="dateInput" readonly="readonly" />
                       </div>
                     </div>
                     <div className="row mb-3">
@@ -1824,14 +1705,7 @@ function Form() {
                         </label>
                       </div>
                       <div className="col-lg-9">
-                        <input
-                          type="text"
-                          className="form-control flatpickr-input form-fs-s"
-                          data-provider="timepickr"
-                          data-time-basic="true"
-                          id="timeInput"
-                          readonly="readonly"
-                        />
+                        <input type="text" className="form-control flatpickr-input form-fs-s bg-form" data-provider="timepickr" data-time-basic="true" id="timeInput" readonly="readonly" />
                       </div>
                     </div>
                     <div className="row mb-3">
@@ -1844,12 +1718,7 @@ function Form() {
                         </label>
                       </div>
                       <div className="col-lg-9">
-                        <input
-                          type="email"
-                          className="form-control form-fs-s"
-                          id="leaveemails"
-                          placeholder="Enter your email"
-                        />
+                        <input type="email" className="form-control form-fs-s bg-form" id="leaveemails" placeholder="Enter your email" />
                       </div>
                     </div>
                     <div className="row mb-3">
@@ -1862,13 +1731,8 @@ function Form() {
                         </label>
                       </div>
                       <div className="col-lg-9">
-                        <input
-                          type="number"
-                          className="form-control form-fs-s"
-                          id="contactNumber"
-                          placeholder="
-                                                    Enter contact number"
-                        />
+                        <input type="number" className="form-control form-fs-s bg-form" id="contactNumber" placeholder="
+                                                    Enter contact number"/>
                       </div>
                     </div>
                     <div className="row mb-3">
@@ -1881,12 +1745,7 @@ function Form() {
                         </label>
                       </div>
                       <div className="col-lg-9">
-                        <textarea
-                          className="form-control form-fs-s"
-                          id="meassageInput"
-                          rows="3"
-                          placeholder="Enter your message"
-                        ></textarea>
+                        <textarea className="form-control form-fs-s bg-form" id="meassageInput" rows="3" placeholder="Enter your message"></textarea>
                       </div>
                     </div>
                     <div className="text-end">

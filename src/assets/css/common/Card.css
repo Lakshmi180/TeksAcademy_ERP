@@ -13,7 +13,9 @@ body {
     font-weight: var(--erp-fw-400);
 
 }
-
+.black_color{
+  color: var(--erp-text-color);
+}
 .fs_22{
     font-size:var(--erp-fs-22) ;
 }
