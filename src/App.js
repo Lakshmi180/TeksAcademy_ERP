@@ -27,6 +27,10 @@ import CreateUserForm from "./components/pages/User/CreateUserForm/CreateUserFor
 
 
 
+import RegistrationForm from "./components/pages/Student/studentRegistrationForm/RegistrationForm";
+import { SettingsTabs } from "./components/pages/Settings/SettingsTabs";
+import { Roles } from "./components/pages/Settings/Roles/Roles";
+import { CreateRole } from "./components/pages/Settings/Roles/CreateRole";
 
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
@@ -66,6 +70,10 @@ function App() {
             <Route path="/page" element={<Page />} />
             <Route path="/button" element={<Button />} />
             <Route path="/createuserform" element={<CreateUserForm />} />
+            <Route path={"/registrationform"} element={<RegistrationForm />} />
+            <Route path="/settingstabs" element={<SettingsTabs />} />
+            <Route path="roles" element={<Roles />} />
+            <Route path="/createrole" element={<CreateRole />} />
           </Routes>
         </div>
       </main>
@@ -86,8 +94,6 @@ function App() {
   );
 }
 
-
-
 {
   /* 
   <Routes>
@@ -102,6 +108,5 @@ function App() {
         </Route>
       </Routes> */
 }
-  
 
 export default App;
