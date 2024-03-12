@@ -19,7 +19,18 @@ body {
 }
 .fw_600{
     font-weight: var(--erp-fw-600);
-
+}
+.Totalearning:hover {
+  transform: translateY(-7px);
+}
+.orders:hover {
+  transform: translateY(-7px);
+}
+.customers:hover {
+  transform: translateY(-7px);
+}
+.my-balance:hover {
+  transform: translateY(-7px);
 }
 
 
