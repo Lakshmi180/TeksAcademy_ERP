@@ -23,6 +23,7 @@ import Modal from "./components/common/design/Modal";
 import Page from "./components/common/design/Page";
 import Button from "./components/common/design/Button";
 import { useTheme } from "./context/ThemeContext/ThemeContext";
+import CreateUserForm from "./components/pages/User/CreateUserForm/CreateUserForm";
 import Studentdata from "./components/pages/Student/studentData/Studentdata";
 
 
@@ -69,6 +70,7 @@ function App() {
             <Route path="/modal" element={<Modal />} />
             <Route path="/page" element={<Page />} />
             <Route path="/button" element={<Button />} />
+            <Route path="/createuserform" element={<CreateUserForm />} />
             <Route path="/studentdata" element={<Studentdata />} />
             <Route path={"/registrationform"} element={<RegistrationForm />} />
             <Route path="/settingstabs" element={<SettingsTabs />} />
