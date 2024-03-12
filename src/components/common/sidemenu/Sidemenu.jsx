@@ -73,7 +73,7 @@ export const Sidemenu = ({ isExpanded }) => {
                 <Link
                   className="sidebar-link"
                   onClick={() => handleActiveClick("users")}
-                  to="/"
+                  to="/createuser"
                 >
                   <span className={`${active === "users" ? `text-white` : ""}`}>
                     <FaRegUserCircle className="main_icon" />
@@ -94,9 +94,8 @@ export const Sidemenu = ({ isExpanded }) => {
               >
                 <PiStudentFill className="main_icon" />
                 <span
-                  className={`${
-                    active === "studentmanagement" ? "text-white" : ""
-                  }`}
+                  className={`${active === "studentmanagement" ? "text-white" : ""
+                    }`}
                 >
                   Student Management
                 </span>
@@ -113,9 +112,8 @@ export const Sidemenu = ({ isExpanded }) => {
                     onClick={() => handleActiveClick("registrationform")}
                   >
                     <span
-                      className={`${
-                        active === "registrationform" ? "text-white" : ""
-                      }`}
+                      className={`${active === "registrationform" ? "text-white" : ""
+                        }`}
                     >
                       <AiOutlineLine className="sub_icon" />
                       Registration Form
@@ -128,9 +126,8 @@ export const Sidemenu = ({ isExpanded }) => {
                     onClick={() => handleActiveClick("enrolledstudents")}
                   >
                     <span
-                      className={`${
-                        active === "enrolledstudents" ? "text-white" : ""
-                      }`}
+                      className={`${active === "enrolledstudents" ? "text-white" : ""
+                        }`}
                     >
                       <AiOutlineLine className="sub_icon" />
                       Enrolled Students
@@ -143,9 +140,8 @@ export const Sidemenu = ({ isExpanded }) => {
                     onClick={() => handleActiveClick("feedetails")}
                   >
                     <span
-                      className={`${
-                        active === "feedetails" ? "text-white" : ""
-                      }`}
+                      className={`${active === "feedetails" ? "text-white" : ""
+                        }`}
                     >
                       <AiOutlineLine className="sub_icon" />
                       Fee Details
@@ -158,9 +154,8 @@ export const Sidemenu = ({ isExpanded }) => {
                     onClick={() => handleActiveClick("certificate")}
                   >
                     <span
-                      className={`${
-                        active === "certificate" ? "text-white" : ""
-                      }`}
+                      className={`${active === "certificate" ? "text-white" : ""
+                        }`}
                     >
                       <AiOutlineLine className="sub_icon" />
                       Certificate
@@ -173,9 +168,8 @@ export const Sidemenu = ({ isExpanded }) => {
                     onClick={() => handleActiveClick("requestedcertificate")}
                   >
                     <span
-                      className={`${
-                        active === "requestedcertificate" ? "text-white" : ""
-                      }`}
+                      className={`${active === "requestedcertificate" ? "text-white" : ""
+                        }`}
                     >
                       <AiOutlineLine className="sub_icon" />
                       Requested Certificate
@@ -208,9 +202,8 @@ export const Sidemenu = ({ isExpanded }) => {
                         onClick={() => handleActiveClick("refundform")}
                       >
                         <span
-                          className={`${
-                            active === "refundform" ? "text-white" : ""
-                          }`}
+                          className={`${active === "refundform" ? "text-white" : ""
+                            }`}
                         >
                           <AiOutlineLine className="sub_icon" />
                           Refund Form
@@ -223,9 +216,8 @@ export const Sidemenu = ({ isExpanded }) => {
                         onClick={() => handleActiveClick("refunddata")}
                       >
                         <span
-                          className={`${
-                            active === "refunddata" ? "text-white" : ""
-                          }`}
+                          className={`${active === "refunddata" ? "text-white" : ""
+                            }`}
                         >
                           <AiOutlineLine className="sub_icon" />
                           Refund Data
@@ -264,9 +256,8 @@ export const Sidemenu = ({ isExpanded }) => {
                     onClick={() => handleActiveClick("addassets")}
                   >
                     <span
-                      className={`${
-                        active === "addassets" ? "text-white" : ""
-                      }`}
+                      className={`${active === "addassets" ? "text-white" : ""
+                        }`}
                     >
                       <AiOutlineLine className="sub_icon" />
                       Add Assets
@@ -280,9 +271,8 @@ export const Sidemenu = ({ isExpanded }) => {
                   >
                     <AiOutlineLine className="sub_icon" />
                     <span
-                      className={`${
-                        active === "assignassets" ? "text-white" : ""
-                      }`}
+                      className={`${active === "assignassets" ? "text-white" : ""
+                        }`}
                     >
                       Assign Assets
                     </span>
@@ -314,9 +304,8 @@ export const Sidemenu = ({ isExpanded }) => {
                         onClick={() => handleActiveClick("addassetstype")}
                       >
                         <span
-                          className={`${
-                            active === "addassetstype" ? "text-white" : ""
-                          }`}
+                          className={`${active === "addassetstype" ? "text-white" : ""
+                            }`}
                         >
                           <AiOutlineLine className="sub_icon" />
                           Add Assets Type
@@ -329,9 +318,8 @@ export const Sidemenu = ({ isExpanded }) => {
                         onClick={() => handleActiveClick("addvendor")}
                       >
                         <span
-                          className={`${
-                            active === "addvendor" ? "text-white" : ""
-                          }`}
+                          className={`${active === "addvendor" ? "text-white" : ""
+                            }`}
                         >
                           <AiOutlineLine className="sub_icon" />
                           Add Vendor
@@ -373,9 +361,8 @@ export const Sidemenu = ({ isExpanded }) => {
                     aria-controls="websiteleads"
                   >
                     <span
-                      className={`${
-                        active === "websiteleads" ? "text-white" : ""
-                      }`}
+                      className={`${active === "websiteleads" ? "text-white" : ""
+                        }`}
                     >
                       <CgWebsite className="main_icon" />
                       Website Leads
@@ -391,9 +378,8 @@ export const Sidemenu = ({ isExpanded }) => {
                         onClick={() => handleActiveClick("webinar")}
                       >
                         <span
-                          className={`${
-                            active === "webinar" ? "text-white" : ""
-                          }`}
+                          className={`${active === "webinar" ? "text-white" : ""
+                            }`}
                         >
                           <AiOutlineLine className="sub_icon" />
                           Webinar
@@ -406,9 +392,8 @@ export const Sidemenu = ({ isExpanded }) => {
                         onClick={() => handleActiveClick("whatsapp")}
                       >
                         <span
-                          className={`${
-                            active === "whatsapp" ? "text-white" : ""
-                          }`}
+                          className={`${active === "whatsapp" ? "text-white" : ""
+                            }`}
                         >
                           <AiOutlineLine className="sub_icon" />
                           WhatsApp
@@ -421,9 +406,8 @@ export const Sidemenu = ({ isExpanded }) => {
                         onClick={() => handleActiveClick("downloadsyllbus")}
                       >
                         <span
-                          className={`${
-                            active === "downloadsyllbus" ? "text-white" : ""
-                          }`}
+                          className={`${active === "downloadsyllbus" ? "text-white" : ""
+                            }`}
                         >
                           <AiOutlineLine className="sub_icon" />
                           Download Syllabus
@@ -436,9 +420,8 @@ export const Sidemenu = ({ isExpanded }) => {
                         onClick={() => handleActiveClick("viewcourse")}
                       >
                         <span
-                          className={`${
-                            active === "viewcourse" ? "text-white" : ""
-                          }`}
+                          className={`${active === "viewcourse" ? "text-white" : ""
+                            }`}
                         >
                           <AiOutlineLine className="sub_icon" />
                           View Course
@@ -451,9 +434,8 @@ export const Sidemenu = ({ isExpanded }) => {
                         onClick={() => handleActiveClick("contactus")}
                       >
                         <span
-                          className={`${
-                            active === "contactus" ? "text-white" : ""
-                          }`}
+                          className={`${active === "contactus" ? "text-white" : ""
+                            }`}
                         >
                           <AiOutlineLine className="sub_icon" />
                           Contact Us
@@ -466,9 +448,8 @@ export const Sidemenu = ({ isExpanded }) => {
                         onClick={() => handleActiveClick("hlpenquireleads")}
                       >
                         <span
-                          className={`${
-                            active === "hlpenquireleads" ? "text-white" : ""
-                          }`}
+                          className={`${active === "hlpenquireleads" ? "text-white" : ""
+                            }`}
                         >
                           <AiOutlineLine className="sub_icon" />
                           Hlp Enquire Leads
@@ -481,9 +462,8 @@ export const Sidemenu = ({ isExpanded }) => {
                         onClick={() => handleActiveClick("slpenquireleads")}
                       >
                         <span
-                          className={`${
-                            active === "slpenquireleads" ? "text-white" : ""
-                          }`}
+                          className={`${active === "slpenquireleads" ? "text-white" : ""
+                            }`}
                         >
                           <AiOutlineLine className="sub_icon" />
                           Slp Enquire Leads
@@ -520,9 +500,8 @@ export const Sidemenu = ({ isExpanded }) => {
                     onClick={() => handleActiveClick("reportsdata")}
                   >
                     <span
-                      className={`${
-                        active === "reportsdata" ? "text-white" : ""
-                      }`}
+                      className={`${active === "reportsdata" ? "text-white" : ""
+                        }`}
                     >
                       <AiOutlineLine className="sub_icon" />
                       Reports Data
@@ -615,9 +594,8 @@ export const Sidemenu = ({ isExpanded }) => {
                     onClick={() => handleActiveClick("whatsappchat")}
                   >
                     <span
-                      className={`${
-                        active === "whatsappchat" ? "text-white" : ""
-                      }`}
+                      className={`${active === "whatsappchat" ? "text-white" : ""
+                        }`}
                     >
                       <AiOutlineLine className="sub_icon" />
                       Whatsapp Chat
@@ -631,9 +609,8 @@ export const Sidemenu = ({ isExpanded }) => {
                     onClick={() => handleActiveClick("accordions")}
                   >
                     <span
-                      className={`${
-                        active === "accordions" ? "text-white" : ""
-                      }`}
+                      className={`${active === "accordions" ? "text-white" : ""
+                        }`}
                     >
                       <AiOutlineLine className="sub_icon" />
                       Accordions
