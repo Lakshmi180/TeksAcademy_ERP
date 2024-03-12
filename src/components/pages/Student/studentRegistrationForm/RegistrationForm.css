@@ -9,7 +9,6 @@
 .registration_form_tabs .button_grp {
   width: 100%;
   display: flex;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
 .registration_form_tabs .button_grp .form_tab_btn {
@@ -71,6 +70,7 @@ input::-webkit-inner-spin-button {
   border-radius: 5px;
   color: #fff;
   order: 2;
+  align-content: end;
 }
 
 .control_prev_btn {
