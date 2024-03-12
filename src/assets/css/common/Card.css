@@ -2,27 +2,34 @@ body {
   font-family: Poppins, sans-serif;
 }
 
-.card-number {
+/* .card-number {
     font-size: var(--erp-fs-14);
     font-weight: var(--erp-fw-400);
-}
-.pfsize{
+} */
+.fs_14{
     font-size:var(--erp-fs-14) ;
+}
+.fw_400{
     font-weight: var(--erp-fw-400);
-  font-size: var(--erp-fs-14);
-  font-weight: var(--erp-font-weight-regular);
+
 }
-.card-body .dollar {
-    font-size: var(--erp-fs-22);
+
+.fs_22{
+    font-size:var(--erp-fs-22) ;
+}
+.fw_600{
     font-weight: var(--erp-fw-600);
+
 }
+
+
 .Totalearning{
     transition:all 0.3s linear;
-      
+    /* box-shadow: 0px 5px 0px 5px solid var(--erp-gray-color); */
  }
  .Totalearning:hover{
      transform: translateY(-7px);
-     box-shadow: 0px 5px 0px 5px solid var(--erp-gray-color);
+    
  }
  .orders{
  
@@ -49,45 +56,12 @@ body {
       transform: translateY(-7px);
   }
   
-.card-link{
-    color: var( --erp-blue-color);
-}
-.card-body {
-    font-family: Poppins, sans-serif;
-    ;
-}
 
-  /* font-size: var(--erp-fs-22);
-  color: var(--erp-text-color) !important;
-} */
-.Totalearning {
-  /* transition: all 0.3s linear; */
-}
-.Totalearning:hover {
-  transform: translateY(-7px);
-}
-.orders {
-  /* transition: all 0.3s linear; */
-}
-.orders:hover {
-  transform: translateY(-7px);
-}
-.customers {
-  /* transition: all 0.3s linear; */
-}
-.customers:hover {
-  transform: translateY(-7px);
-}
-.my-balance {
-  /* transition: all 0.3s linear; */
-}
-.my-balance:hover {
-  transform: translateY(-7px);
-}
 
-.card-link {
-  color: var(--erp-link-color) !important;
-}
+
+
+
+
 .card-body {
   font-family: Poppins, sans-serif;
 }
@@ -101,7 +75,7 @@ body {
 }
 
 .card-link {
-  color: var(--erp-primary-color);
+    color: var(--erp-link-color) !important;
   font-size: var(--erp-fs-13);
   padding-top: 15px;
   text-decoration: underline;
