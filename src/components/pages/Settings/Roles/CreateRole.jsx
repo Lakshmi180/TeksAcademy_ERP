@@ -1,8 +1,8 @@
 import React from 'react'
 export const CreateRole = () => {
   return (
-    <div>
-      <div className="container">
+    <div className='container'>
+      <div className="card  border-0 p-2">
         <h6>Create Role</h6>
         <div class="row gy-4 ">
           <div class="col-xxl-3 col-md-6">
@@ -12,7 +12,7 @@ export const CreateRole = () => {
                   className="form-label fs-s "
                   for="example-text-input"
                 >
-                  Basic Input
+                Role Name
                 </label>
                 <input
                   class="form-control"
@@ -26,8 +26,7 @@ export const CreateRole = () => {
             <div>
               <div class="form-group text-start">
                 <label class="form-label fs-s" for="example-text-input ">
-                  {" "}
-                  Input with Label
+                Role Description
                 </label>
                 <input
                   class="form-control"
