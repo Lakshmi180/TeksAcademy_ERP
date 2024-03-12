@@ -2,7 +2,7 @@ import React from 'react'
 import "../../../../assets/css/common/Table.css"
 import { AiFillEye } from "react-icons/ai";
 import { MdEdit } from "react-icons/md";
-import { LiaRupeeSignSolid } from "react-icons/lia";
+import { FaRupeeSign } from "react-icons/fa";
 import { MdLocalPrintshop } from "react-icons/md";
 import { FaRegIdCard } from "react-icons/fa";
 import { IoIosSearch } from "react-icons/io";
@@ -166,7 +166,7 @@ function Studentdata() {
                         <td className='fs_14 text_mute bg_light   lh_xs'>
                         <AiFillEye className='text_mute me-3' />
                         <MdEdit className='text_mute me-3' />
-                        <LiaRupeeSignSolid className='text_mute   me-3' />
+                        <FaRupeeSign className='text_mute   me-3' />
                         <MdLocalPrintshop className='text_mute '  />
 
                         
@@ -242,7 +242,7 @@ function Studentdata() {
                         <td className='fs_14 text_mute bg_light  lh_xs'>
                         <AiFillEye className='text_mute me-3' />
                         <MdEdit className='text_mute  me-3' />
-                        <LiaRupeeSignSolid className='text_mute me-3' />
+                        <FaRupeeSign className='text_mute me-3' />
                         <MdLocalPrintshop className='text_mute '   />
 
                         
@@ -317,7 +317,7 @@ function Studentdata() {
                         <td className='fs_14 text_mute bg_light  lh_xs'>
                         <AiFillEye className='text_mute  me-3' />
                         <MdEdit className='text_mute  me-3' />
-                        <LiaRupeeSignSolid className='text_mute  me-3' />
+                        <FaRupeeSign className='text_mute  me-3' />
                         <MdLocalPrintshop className='text_mute ' />
 
                         
@@ -392,7 +392,7 @@ function Studentdata() {
                         <td className='fs_14 text_mute bg_light   lh_xs'>
                         <AiFillEye className='text_mute  me-3' />
                         <MdEdit className='text_mute  me-3' />
-                        <LiaRupeeSignSolid className='text_mute  me-3' />
+                        <FaRupeeSign className='text_mute  me-3' />
                         <MdLocalPrintshop className='text_mute b' />
 
                         
@@ -467,7 +467,7 @@ function Studentdata() {
                         <td className='fs_14 text_mute lh_xs bg_light   '>
                         <AiFillEye className='text_mute me-3' />
                         <MdEdit className='text_mute  me-3' />
-                        <LiaRupeeSignSolid className='text_mute me-3' />
+                        <FaRupeeSign className='text_mute me-3' />
                         <MdLocalPrintshop className='text_mute ' />
 
                         
