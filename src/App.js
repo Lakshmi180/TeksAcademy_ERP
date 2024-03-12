@@ -24,6 +24,9 @@ import Page from "./components/common/design/Page";
 import Button from "./components/common/design/Button";
 import { useTheme } from "./context/ThemeContext/ThemeContext";
 import RegistrationForm from "./components/pages/Student/studentRegistrationForm/RegistrationForm";
+import { SettingsTabs } from "./components/pages/Settings/SettingsTabs";
+import { Roles } from "./components/pages/Settings/Roles/Roles";
+import { CreateRole } from "./components/pages/Settings/Roles/CreateRole";
 
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
@@ -63,6 +66,9 @@ function App() {
             <Route path="/page" element={<Page />} />
             <Route path="/button" element={<Button />} />
             <Route path="/registration-form" element={<RegistrationForm />} />
+            <Route path="/settingstabs" element={<SettingsTabs />} />
+            <Route path="roles" element={<Roles />} />
+            <Route path="/createrole" element={<CreateRole />} />
           </Routes>
         </div>
       </main>
