@@ -23,8 +23,7 @@ import Modal from "./components/common/design/Modal";
 import Page from "./components/common/design/Page";
 import Button from "./components/common/design/Button";
 import { useTheme } from "./context/ThemeContext/ThemeContext";
-import CreateUserForm from "./components/pages/User/CreateUserForm/CreateUserForm";
-import Studentdata from "./components/pages/Student/studentData/Studentdata";
+import { Login } from "./components/Auth/Login";
 
 
 
@@ -88,17 +87,26 @@ function App() {
     </div>
 
     // <Routes>
-    //     <Route element={<ReqireAuth />}>
-    //       <Route path="/" element={<Dashboard />} />
-    //       <Route path="/table" element={<Table />} />
-    //     </Route>
-    //     <Route element={<PublicLayout />}>
-    //       <Route path="/login" element={<Login/>} />
-    //       <Route path="/forgotpassword" element={<ForgotPassword />} />
-    //       <Route path="/changepassword" element={<ChangePassword />} />
-    //       <Route path="/lockscreen" element={<LockScreen />} />
-    //     </Route>
-    //   </Routes>
+    //   <Route element={<ReqireAuth />}>
+    //     <Route path="/" element={<Dashboard />} />
+    //     <Route path="/table" element={<Table />} />
+    //     <Route path="/table" element={<Table />} />
+    //     <Route path="/card" element={<Card />} />
+    //     <Route path="/forms" element={<Forms />} />
+    //     <Route path="/whatsapp" element={<WhatsappChat />} />
+    //     <Route path="/accordian" element={<Accordian />} />
+    //     <Route path="/tabs" element={<Tab />} />
+    //     <Route path="/modal" element={<Modal />} />
+    //     <Route path="/page" element={<Page />} />
+    //     <Route path="/button" element={<Button />} />
+    //   </Route>
+    //   <Route element={<PublicLayout />}>
+    //     <Route path="/login" element={<Login />} />
+    //     <Route path="/forgotpassword" element={<ForgotPassword />} />
+    //     <Route path="/changepassword" element={<ChangePassword />} />
+    //     <Route path="/lockscreen" element={<LockScreen />} />
+    //   </Route>
+    // </Routes>
   );
 }
 
