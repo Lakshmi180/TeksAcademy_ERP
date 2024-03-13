@@ -118,12 +118,17 @@ small{
   color: var(--erp-white-color);
   
 }
-.btn_info:hover{
-    background-color: var( --erp-sky-color) !important;
-    border-color: var( --erp-sky-color) !important;
-    color: var(--erp-white-color);
+.btn_info:hover {
+    background-color: var( --erp-blue-color) !important;
+    border-color: var( --erp-blue-color) !important;
+    /* color: var(--erp-white-color); */
     
 
+}
+.btn_info:active {
+    background-color: var( --erp-blue-color) !important;
+    border-color: var( --erp-blue-color) !important;
+    color: var(--erp-white-color);
 }
 .text_mute{
     color: var(--erp-text-mute) ;

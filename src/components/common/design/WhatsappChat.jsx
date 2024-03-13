@@ -947,7 +947,7 @@ function WhatsppChat() {
                       </div>
                     </div>
                     <div className="col-auto">
-                      <button type="submit " className="btn btn_info btn-info text_white">
+                      <button type="submit " className="btn btn_info  text_white">
                       <span className="d-none d-sm-inline-block me-2 send-message">Send</span>
                       <IoMdSend />
                       </button>
