@@ -35,7 +35,10 @@ export const AdmissionDetails = () => {
           <label className="form-label fs-s text_color" htmlFor="rwhatsappnum">
             Course Package
           </label>
-          <select class="form-select " aria-label="Default select example">
+          <select
+            class="form-select form-control"
+            aria-label="Default select example"
+          >
             <option selected="">--Select--</option>
             <option value="1">TEKS Job Oriented Program</option>
             <option value="2">Teks Professional Training Program</option>
@@ -46,7 +49,10 @@ export const AdmissionDetails = () => {
           <label className="form-label fs-s text_color" htmlFor="rwhatsappnum">
             Course
           </label>
-          <select class="form-select " aria-label="Default select example">
+          <select
+            class="form-select form-control"
+            aria-label="Default select example"
+          >
             <option selected="">--Select--</option>
             <option value="1">one</option>
             <option value="2">Two</option>
@@ -58,7 +64,10 @@ export const AdmissionDetails = () => {
           <label className="form-label fs-s text_color" htmlFor="rwhatsappnum">
             Lead Source
           </label>
-          <select class="form-select " aria-label="Default select example">
+          <select
+            class="form-select form-control"
+            aria-label="Default select example"
+          >
             <option selected="">--Select--</option>
             <option value="1">one</option>
             <option value="2">Two</option>
@@ -69,7 +78,10 @@ export const AdmissionDetails = () => {
           <label className="form-label fs-s text_color" htmlFor="rwhatsappnum">
             Branch
           </label>
-          <select class="form-select " aria-label="Default select example">
+          <select
+            class="form-select form-control"
+            aria-label="Default select example"
+          >
             <option selected="">--Select--</option>
             <option value="1">One</option>
             <option value="2">Two</option>
@@ -80,7 +92,10 @@ export const AdmissionDetails = () => {
           <label className="form-label fs-s text_color" htmlFor="rwhatsappnum">
             Mode Of Training
           </label>
-          <select class="form-select " aria-label="Default select example">
+          <select
+            class="form-select form-control"
+            aria-label="Default select example"
+          >
             <option selected="">--Select--</option>
             <option value="1">one</option>
             <option value="2">Two</option>

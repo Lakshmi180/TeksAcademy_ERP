@@ -101,7 +101,7 @@ export const StudentDetails = ({ getFormData }) => {
             Gender
           </label>
           <select
-            class="form-select "
+            class="form-select form-control"
             aria-label="Default select example"
             id="rgender"
           >
@@ -121,7 +121,7 @@ export const StudentDetails = ({ getFormData }) => {
             Marital Status
           </label>
           <select
-            class="form-select "
+            class="form-select form-control"
             aria-label="Default select example"
             id="rmaritalstatus"
           >
