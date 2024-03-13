@@ -34,7 +34,7 @@ import PublicAuth from './PublicAuth';
 
 const ReqireAuth=()=>{
   const { AuthState } = useContext(AuthContext);
- 
+
   const location = useLocation();
 
   console.log(AuthState, "kfhkhkg")
@@ -52,8 +52,7 @@ const ReqireAuth=()=>{
   }
 
 
-  if(AuthState.token && 
-    AuthState.password){
+  if(!AuthState.token && !AuthState.password){
     return(
       <div className='app'>
       <PublicAuth>
