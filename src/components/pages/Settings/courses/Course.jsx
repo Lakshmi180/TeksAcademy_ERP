@@ -1,12 +1,12 @@
 import React from "react";
 
 
-const Department=()=>{
+const Course=()=>{
     return(
         <>
-        Department
+        Course
         </>
     )
 
 }
-export default Department;
+export default Course;

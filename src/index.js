@@ -9,18 +9,23 @@ import AuthContextProvider from "./context/AuthContext/AuthContextProvider";
 import { BrowserRouter, RouterProvider } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { router } from "./router";
+import RoleContextProvider from "./context/RoleContext/RoleContextProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <AuthContextProvider>
+        <RoleContextProvider>
+
+       
         <ThemeProvider>
           {/* <RouterProvider router={router}/> */}
           <ToastContainer style={{ position: "fixed", top: "60px" }} />
 
           <App />
         </ThemeProvider>
+        </RoleContextProvider>
       </AuthContextProvider>
     </BrowserRouter>
   </React.StrictMode>

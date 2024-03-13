@@ -31,6 +31,16 @@ import RegistrationForm from "./components/pages/Student/studentRegistrationForm
 import { SettingsTabs } from "./components/pages/Settings/SettingsTabs";
 import { Roles } from "./components/pages/Settings/Roles/Roles";
 import { CreateRole } from "./components/pages/Settings/Roles/CreateRole";
+import CreateUserForm from "./components/pages/User/CreateUserForm/CreateUserForm";
+import Studentdata from "./components/pages/Student/studentData/Studentdata"
+import Course from "./components/pages/Settings/courses/Course";
+import CreateCourse from "./components/pages/Settings/courses/CreateCourse";
+import Branch from "./components/pages/Settings/branch/Branch";
+import CreateBranch from "./components/pages/Settings/branch/CreateBranch";
+import Department from "./components/pages/Settings/Departments/Department";
+import CreateDepartment from "./components/pages/Settings/Departments/CreateDepartment";
+import CoursePackage from "./components/pages/Settings/coursePackage/CoursePackage";
+import CreateCoursePackage from "./components/pages/Settings/coursePackage/CreateCoursePackage";
 
 
 function App() {
@@ -73,14 +83,32 @@ function App() {
             <Route path="/modal" element={<Modal />} />
             <Route path="/page" element={<Page />} />
             <Route path="/button" element={<Button />} />
-            <Route path="/createuserform" element={<CreateUserForm />} />
-            <Route path="/studentdata" element={<Studentdata />} />
+            <Route path="/createuserform" element={<CreateUserForm/>} />
+            <Route path="/studentdata" element={<Studentdata/>} />
             <Route path={"/registrationform"} element={<RegistrationForm />} />
             <Route path="/settingstabs" element={<SettingsTabs />} />
-            <Route path="roles" element={<Roles />} />
+            <Route path="/roles" element={<Roles/>} />
             <Route path="/createrole" element={<CreateRole />} />
             <Route path="/studentdata" element={<Studentdata />} />
             <Route path="/createuser" element={<CreateUserForm />} />
+
+            <Route path="/course" element={<Course/>} />
+            <Route path="/createcourse" element={<CreateCourse/>} />
+
+            <Route path="/branch" element={<Branch/>} />
+            <Route path="/createbranch" element={<CreateBranch/>} />
+             
+            <Route path="/department" element={<Department/>} />
+            <Route path="/createdepartment" element={<CreateDepartment/>} />
+
+            <Route path="/coursepackage" element={<CoursePackage/>} />
+            <Route path="/createcoursepackage" element={<CreateCoursePackage/>} />
+
+
+
+            
+
+            
           </Routes>
         </div>
       </main>

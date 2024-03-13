@@ -1,5 +1,6 @@
 import React from 'react'
 import "./CreateUserForm.css";
+
 function CreateUserForm() {
   return (
     <div>
@@ -176,4 +177,4 @@ function CreateUserForm() {
   )
 }
 
-export default CreateUserForm
+export default CreateUserForm;

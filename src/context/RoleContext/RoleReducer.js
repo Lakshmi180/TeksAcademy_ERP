@@ -1,5 +1,6 @@
  const RoleReducer = (state, action) => {
   
+  console.log(state, "rolereducer")
     switch (action.type) {
       case "SET_ROLES":
         return {
