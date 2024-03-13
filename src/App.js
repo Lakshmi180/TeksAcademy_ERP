@@ -23,16 +23,12 @@ import Modal from "./components/common/design/Modal";
 import Page from "./components/common/design/Page";
 import Button from "./components/common/design/Button";
 import { useTheme } from "./context/ThemeContext/ThemeContext";
-import CreateUserForm from "./components/pages/User/CreateUserForm/CreateUserForm";
-import Studentdata from "./components/pages/Student/studentData/Studentdata";
-
-
+import { Login } from "./components/Auth/Login";
 
 import RegistrationForm from "./components/pages/Student/studentRegistrationForm/RegistrationForm";
 import { SettingsTabs } from "./components/pages/Settings/SettingsTabs";
 import { Roles } from "./components/pages/Settings/Roles/Roles";
 import { CreateRole } from "./components/pages/Settings/Roles/CreateRole";
-
 
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
@@ -74,31 +70,40 @@ function App() {
             <Route path="/modal" element={<Modal />} />
             <Route path="/page" element={<Page />} />
             <Route path="/button" element={<Button />} />
-            <Route path="/createuserform" element={<CreateUserForm />} />
-            <Route path="/studentdata" element={<Studentdata />} />
+            {/* <Route path="/createuserform" element={<CreateUserForm />} /> */}
+            {/* <Route path="/studentdata" element={<Studentdata />} /> */}
             <Route path={"/registrationform"} element={<RegistrationForm />} />
             <Route path="/settingstabs" element={<SettingsTabs />} />
             <Route path="roles" element={<Roles />} />
             <Route path="/createrole" element={<CreateRole />} />
-            <Route path="/studentdata" element={<Studentdata />} />
-            <Route path="/createuser" element={<CreateUserForm />} />
+            {/* <Route path="/studentdata" element={<Studentdata />} /> */}
+            {/* <Route path="/createuser" element={<CreateUserForm />} /> */}
           </Routes>
         </div>
       </main>
     </div>
 
     // <Routes>
-    //     <Route element={<ReqireAuth />}>
-    //       <Route path="/" element={<Dashboard />} />
-    //       <Route path="/table" element={<Table />} />
-    //     </Route>
-    //     <Route element={<PublicLayout />}>
-    //       <Route path="/login" element={<Login/>} />
-    //       <Route path="/forgotpassword" element={<ForgotPassword />} />
-    //       <Route path="/changepassword" element={<ChangePassword />} />
-    //       <Route path="/lockscreen" element={<LockScreen />} />
-    //     </Route>
-    //   </Routes>
+    //   <Route element={<ReqireAuth />}>
+    //     <Route path="/" element={<Dashboard />} />
+    //     <Route path="/table" element={<Table />} />
+    //     <Route path="/table" element={<Table />} />
+    //     <Route path="/card" element={<Card />} />
+    //     <Route path="/forms" element={<Forms />} />
+    //     <Route path="/whatsapp" element={<WhatsappChat />} />
+    //     <Route path="/accordian" element={<Accordian />} />
+    //     <Route path="/tabs" element={<Tab />} />
+    //     <Route path="/modal" element={<Modal />} />
+    //     <Route path="/page" element={<Page />} />
+    //     <Route path="/button" element={<Button />} />
+    //   </Route>
+    //   <Route element={<PublicLayout />}>
+    //     <Route path="/login" element={<Login />} />
+    //     <Route path="/forgotpassword" element={<ForgotPassword />} />
+    //     <Route path="/changepassword" element={<ChangePassword />} />
+    //     <Route path="/lockscreen" element={<LockScreen />} />
+    //   </Route>
+    // </Routes>
   );
 }
 

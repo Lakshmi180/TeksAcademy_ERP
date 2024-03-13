@@ -97,10 +97,14 @@ export const StudentDetails = ({ getFormData }) => {
           />
         </div>
         <div className="form-group text-start col-lg-3">
-          <label className="form-label fs-s text_color" htmlFor="rwhatsappnum">
+          <label className="form-label fs-s text_color" htmlFor="rgender">
             Gender
           </label>
-          <select class="form-select " aria-label="Default select example">
+          <select
+            class="form-select form-control"
+            aria-label="Default select example"
+            id="rgender"
+          >
             <option selected="" className="fs-s">
               Select your Gender
             </option>
@@ -110,10 +114,17 @@ export const StudentDetails = ({ getFormData }) => {
           </select>
         </div>
         <div className="form-group text-start col-lg-3">
-          <label className="form-label fs-s text_color" htmlFor="rwhatsappnum">
+          <label
+            className="form-label fs-s text_color"
+            htmlFor="rmaritalstatus"
+          >
             Marital Status
           </label>
-          <select class="form-select " aria-label="Default select example">
+          <select
+            class="form-select form-control"
+            aria-label="Default select example"
+            id="rmaritalstatus"
+          >
             <option selected="">Your Marital Status</option>
             <option value="1">Male</option>
             <option value="2">Female</option>
