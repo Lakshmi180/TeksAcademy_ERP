@@ -7,6 +7,9 @@
   background-color: #fafbfe;
   /* margin-left: 18%; */
 }
+a {
+  color: #abb9e8;
+}
 
 .wrapper {
   display: flex;

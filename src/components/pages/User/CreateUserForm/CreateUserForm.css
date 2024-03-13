@@ -1,0 +1,14 @@
+.body{
+    background-color: aqua;
+}
+.fs-16 {
+    font-size: var(--erp-fs-16);
+}
+.fs-s{
+    font-size: var(--erp-fs-s);
+    font-weight: var(--erp-fw-500);
+}
+.bg_white{
+    background-color: var( --erp-bg-color);
+}
+

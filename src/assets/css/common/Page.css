@@ -115,11 +115,11 @@
 .bg_light{
     background-color: var(--erp-white-color);
 }
-.btn_success {
+/* .btn_success {
     background-color: var(--erp-success-color) !important;
     border-color: var(--erp-success-color) !important;
     color: var(--erp-white-color)
-}
+} */
 .fs-12 {
     font-size: var(--erp-fs-s);
   

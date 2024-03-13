@@ -27,7 +27,7 @@ function Table() {
         {/* Best Selling Product & top sellers table starts */}
         <div className="row  ">
           <div className="col-xl-6 mb-2  ">
-            <div className="card ">
+            <div className="card  bg_light">
               <div className="card-header  align-items-center d-flex justify-content-between p-3 border-bottom bg-transparent">
                 <div className="">
                   <h4 className="card-title fs_16 mb-0 flex-grow-1">
@@ -712,7 +712,7 @@ function Table() {
                           </div>
                         </td>
                         <td>
-                          <span className="text_mute fs_13  d-flex fw_500  text-start">
+                          <span className="text_mute fs_13  black_color d-flex fw_500  text-start">
                             Furniture
                           </span>
                         </td>
@@ -799,7 +799,7 @@ function Table() {
                 <div className="flex-shrink-0">
                   <button
                     type="button"
-                    className=" btn text-primary bg-primary-subtle border-0 rounded general-report"
+                    className=" btn text-primary bg-primary-subtle border-0 rounded fs_13"
                   >
                     <BiSolidReport />
                     Generate Report
@@ -865,7 +865,7 @@ function Table() {
                         <td className="text-start">
                           <a
                             href="apps-ecommerce-order-details.html"
-                            className="fw-medium  order-code text-start "
+                            className="fw-medium  fs_13 text-start "
                           >
                             #VZ2112
                           </a>
@@ -879,18 +879,18 @@ function Table() {
                                 className="avatar-xs rounded-circle tbl-user-img"
                               />
                             </div>
-                            <div className="flex-grow-1 fs_13  text_black text-start ">
+                            <div className="flex-grow-1 fs_13  black_color text-start ">
                               Alex Smith
                             </div>
                           </div>
                         </td>
-                        <td className="fs_13  text-start ">Clothes</td>
+                        <td className="fs_13  text-start black_color">Clothes</td>
                         <td>
-                          <span className="text_success text-start tbl-amount">
+                          <span className="text_success text-start tbl-amount ">
                             $109.00
                           </span>
                         </td>
-                        <td className="fs_13  text-start ">
+                        <td className="fs_13  text-start black_color ">
                           Zoetic Fashion
                         </td>
                         <td className="text-start">
@@ -899,7 +899,7 @@ function Table() {
                           </span>
                         </td>
                         <td>
-                          <h5 className=" fw-medium mb-0 fs_14 lh_xs black_color text_black text-start ">
+                          <h5 className=" fw-medium mb-0 fs_14 lh_xs black_color  text-start ">
                             5.0
                             <span className="text_mute  ms-1 fs_xs text-start ">
                               (61 votes)
@@ -911,7 +911,7 @@ function Table() {
                         <td className="text-start">
                           <a
                             href="apps-ecommerce-order-details.html"
-                            className="fw-medium  order-code text-start "
+                            className="fw-medium  fs_13 text-start "
                           >
                             #VZ2111
                           </a>
@@ -925,12 +925,12 @@ function Table() {
                                 className="avatar-xs rounded-circle tbl-user-img"
                               />
                             </div>
-                            <div className="flex-grow-1 fs_13  text_black text-start ">
+                            <div className="flex-grow-1 fs_13  black_color text-start ">
                               Jansh Brown
                             </div>
                           </div>
                         </td>
-                        <td className="fs_13  text-start ">
+                        <td className="fs_13  text-start black_color ">
                           Kitchen Storage
                         </td>
                         <td>
@@ -938,7 +938,7 @@ function Table() {
                             $149.00
                           </span>
                         </td>
-                        <td className="fs_13  text-start ">
+                        <td className="fs_13  text-start black_color">
                           Micro Design
                         </td>
                         <td className="text-start">
@@ -947,7 +947,7 @@ function Table() {
                           </span>
                         </td>
                         <td>
-                          <h5 className=" fw-medium mb-0 fs_14 lh_xs black_color text_black text-start ">
+                          <h5 className=" fw-medium mb-0 fs_14 lh_xs black_color black_color text-start ">
                             4.5
                             <span className="text_mute  ms-1 fs_xs text-start ">
                               (61 votes)
@@ -959,7 +959,7 @@ function Table() {
                         <td className="text-start">
                           <a
                             href="apps-ecommerce-order-details.html"
-                            className="fw-medium  order-code text-start "
+                            className="fw-medium  fs_13 text-start "
                           >
                             #VZ2109
                           </a>
@@ -973,12 +973,12 @@ function Table() {
                                 className="avatar-xs rounded-circle tbl-user-img"
                               />
                             </div>
-                            <div className="flex-grow-1 fs_13  text_black text-start ">
+                            <div className="flex-grow-1 fs_13  black_color text-start  ">
                               Ayaan Bowen
                             </div>
                           </div>
                         </td>
-                        <td className="fs_13  text-start ">
+                        <td className="fs_13  text-start black_color">
                           Bike Accessories
                         </td>
                         <td>
@@ -986,7 +986,7 @@ function Table() {
                             $215.00
                           </span>
                         </td>
-                        <td className="fs_13  text-start ">
+                        <td className="fs_13  text-start black_color ">
                           Nesta Technologies
                         </td>
                         <td className="text-start">
@@ -995,7 +995,7 @@ function Table() {
                           </span>
                         </td>
                         <td>
-                          <h5 className="fw-medium mb-0 fs_14 lh_xs black_color text_black text-start ">
+                          <h5 className="fw-medium mb-0 fs_14 lh_xs black_color black_color text-start ">
                             4.9
                             <span className="text_mute  ms-1 fs_xs text-start ">
                               (89 votes)
@@ -1007,7 +1007,7 @@ function Table() {
                         <td className="text-start">
                           <a
                             href="apps-ecommerce-order-details.html"
-                            className="fw-medium  order-code text-start "
+                            className="fw-medium  fs_13 text-start "
                           >
                             #VZ2108
                           </a>
@@ -1021,7 +1021,7 @@ function Table() {
                                 className="avatar-xs rounded-circle tbl-user-img"
                               />
                             </div>
-                            <div className="flex-grow-1 fs_13  text_black  text-start ">
+                            <div className="flex-grow-1 fs_13  black_color  text-start  black_color">
                               Prezy Mark
                             </div>
                           </div>
@@ -1032,7 +1032,7 @@ function Table() {
                             $199.00
                           </span>
                         </td>
-                        <td className="fs_13  text-start ">
+                        <td className="fs_13  text-start black_color ">
                           Syntyce Solutions
                         </td>
                         <td className="text-start">
@@ -1041,7 +1041,7 @@ function Table() {
                           </span>
                         </td>
                         <td>
-                          <h5 className=" fw-medium mb-0 fs_14 lh_xs black_color text_black text-start ">
+                          <h5 className=" fw-medium mb-0 fs_14 lh_xs black_color black_color text-start ">
                             4.3
                             <span className="text_mute  ms-1 fs_xs text-start ">
                               (47 votes)
@@ -1053,7 +1053,7 @@ function Table() {
                         <td className="text-start">
                           <a
                             href="apps-ecommerce-order-details.html"
-                            className="fw-medium order-code  "
+                            className="fw-medium fs_13  "
                           >
                             #VZ2107
                           </a>
@@ -1067,12 +1067,12 @@ function Table() {
                                 className="avatar-xs rounded-circle tbl-user-img"
                               />
                             </div>
-                            <div className="flex-grow-1 fs_13  text_black text-start ">
+                            <div className="flex-grow-1 fs_13  black_color text-start ">
                               Vihan Hudda
                             </div>
                           </div>
                         </td>
-                        <td className="fs_13  text-start ">
+                        <td className="fs_13  text-start black_color ">
                           Bags and Wallets
                         </td>
                         <td>
@@ -1080,7 +1080,7 @@ function Table() {
                             $330.00
                           </span>
                         </td>
-                        <td className="fs_13   text-start">
+                        <td className="fs_13   text-start black_color">
                           iTest Factory
                         </td>
                         <td className="text-start">
@@ -1089,7 +1089,7 @@ function Table() {
                           </span>
                         </td>
                         <td>
-                          <h5 className="fw-medium mb-0 fs_14 lh_xs black_color text_black  text-start">
+                          <h5 className="fw-medium mb-0 fs_14 lh_xs black_color black_color  text-start">
                             4.7
                             <span className="text_mute  ms-1 fs_xs  text-start">
                               (161 votes)
@@ -1101,7 +1101,7 @@ function Table() {
                         <td className="text-start">
                           <a
                             href="apps-ecommerce-order-details.html"
-                            className="fw-medium  order-code text-start "
+                            className="fw-medium  fs_13 text-start "
                           >
                             #VZ2112
                           </a>
@@ -1115,7 +1115,7 @@ function Table() {
                                 className="avatar-xs rounded-circle tbl-user-img"
                               />
                             </div>
-                            <div className="flex-grow-1 fs_13  text_black text-start ">
+                            <div className="flex-grow-1 fs_13   text-start black_color ">
                               Alex Smith
                             </div>
                           </div>
@@ -1126,7 +1126,7 @@ function Table() {
                             $109.00
                           </span>
                         </td>
-                        <td className="fs_13  text-start ">
+                        <td className="fs_13  text-start black_color ">
                           Zoetic Fashion
                         </td>
                         <td className="text-start">
@@ -1135,7 +1135,7 @@ function Table() {
                           </span>
                         </td>
                         <td>
-                          <h5 className=" fw-medium mb-0 fs_14 lh_xs black_color text_black text-start ">
+                          <h5 className=" fw-medium mb-0 fs_14 lh_xs black_color black_color text-start ">
                             5.0
                             <span className="text_mute  ms-1 fs_xs text-start ">
                               (61 votes)
@@ -1147,7 +1147,7 @@ function Table() {
                         <td className="text-start">
                           <a
                             href="apps-ecommerce-order-details.html"
-                            className="fw-medium  order-code text-start "
+                            className="fw-medium  fs_13 text-start "
                           >
                             #VZ2112
                           </a>
@@ -1161,18 +1161,18 @@ function Table() {
                                 className="avatar-xs rounded-circle tbl-user-img"
                               />
                             </div>
-                            <div className="flex-grow-1 fs_13  text_black text-start ">
+                            <div className="flex-grow-1 fs_13  black_color text-start ">
                               Alex Smith
                             </div>
                           </div>
                         </td>
-                        <td className="fs_13  text-start ">Clothes</td>
+                        <td className="fs_13  text-start black_color ">Clothes</td>
                         <td>
                           <span className="text_success text-start tbl-amount">
                             $109.00
                           </span>
                         </td>
-                        <td className="fs_13  text-start ">
+                        <td className="fs_13  text-start black_color">
                           Zoetic Fashion
                         </td>
                         <td className="text-start">
@@ -1181,7 +1181,7 @@ function Table() {
                           </span>
                         </td>
                         <td>
-                          <h5 className=" fw-medium mb-0 fs_14 lh_xs black_color text_black text-start ">
+                          <h5 className=" fw-medium mb-0 fs_14 lh_xs black_color black_color text-start ">
                             5.0
                             <span className="text_mute  ms-1 fs_xs text-start ">
                               (61 votes)
@@ -1359,19 +1359,19 @@ function Table() {
                                 {" "}
                                 ID
                               </th>
-                              <th scope="col" className="fs_14 lh_xs black_color">
+                              <th scope="col" className="fs_14 lh_xs black_color fw_600">
                                 Invoice
                               </th>
-                              <th scope="col" className="fs_14 lh_xs black_color">
+                              <th scope="col" className="fs_14 lh_xs black_color fw_600">
                                 Amount
                               </th>
-                              <th scope="col" className="fs_14 lh_xs black_color">
+                              <th scope="col" className="fs_14 lh_xs black_color fw_600">
                                 Date
                               </th>
-                              <th scope="col" className="fs_14 lh_xs black_color">
+                              <th scope="col" className="fs_14 lh_xs black_color fw_600">
                                 Status
                               </th>
-                              <th scope="col" className="fs_14 lh_xs black_color">
+                              <th scope="col" className="fs_14 lh_xs black_color fw_600">
                                 Action
                               </th>
                             </tr>
@@ -1551,22 +1551,22 @@ function Table() {
                               ></label>
                             </div>
                           </th>
-                          <th scope="col" className="fs_14 lh_xs black_color">
+                          <th scope="col" className="fs_14 lh_xs black_color fw_600">
                             ID
                           </th>
-                          <th scope="col" className="fs_14 lh_xs black_color">
+                          <th scope="col" className="fs_14 lh_xs black_color fw_600">
                             Name
                           </th>
-                          <th scope="col" className="fs_14 lh_xs black_color">
+                          <th scope="col" className="fs_14 lh_xs black_color fw_600">
                             Date
                           </th>
-                          <th scope="col" className="fs_14 lh_xs black_color">
+                          <th scope="col" className="fs_14 lh_xs black_color fw_600">
                             Total
                           </th>
-                          <th scope="col" className="fs_14 lh_xs black_color">
+                          <th scope="col" className="fs_14 lh_xs black_color fw_600">
                             Status
                           </th>
-                          <th scope="col" className="fs_14 lh_xs black_color">
+                          <th scope="col" className="fs_14 lh_xs black_color fw_600">
                             Action
                           </th>
                         </tr>
@@ -1588,20 +1588,20 @@ function Table() {
                             </div>
                           </td>
                           <td>
-                            <a href="#" className="fw-medium order-code">
+                            <a href="#" className="fw-medium fs_13">
                               #VL2110
                             </a>
                           </td>
-                          <td className="fs_13 ">William Elmore</td>
-                          <td className="fs_13 ">07 Oct, 2021</td>
-                          <td className="fs_13 ">$24.05</td>
+                          <td className="fs_13 black_color">William Elmore</td>
+                          <td className="fs_13 black_color ">07 Oct, 2021</td>
+                          <td className="fs_13 black_color ">$24.05</td>
                           <td>
                             <span className="badge bg_success text_success">Paid</span>
                           </td>
                           <td>
                             <button
                               type="button"
-                              className="btn btn-sm btn_light btn-light detail-btn border-0"
+                              className="btn btn-sm btn_light btn-light detail-btn border-0 black_color"
                             >
                               Details
                             </button>
@@ -1623,20 +1623,20 @@ function Table() {
                             </div>
                           </td>
                           <td>
-                            <a href="#" className="fw-medium order-code">
+                            <a href="#" className="fw-medium fs_13">
                               #VL2109
                             </a>
                           </td>
-                          <td className="fs_13 "> Georgie Winters</td>
-                          <td className="fs_13 ">07 Oct, 2021</td>
-                          <td className="fs_13 ">$26.15</td>
+                          <td className="fs_13 black_color "> Georgie Winters</td>
+                          <td className="fs_13 black_color ">07 Oct, 2021</td>
+                          <td className="fs_13  black_color">$26.15</td>
                           <td>
                             <span className="badge bg_success text_success">Paid</span>
                           </td>
                           <td>
                             <button
                               type="button"
-                              className="btn btn-sm btn_light btn-light detail-btn border-0"
+                              className="btn btn-sm btn_light btn-light detail-btn border-0 black_color"
                             >
                               Details
                             </button>
@@ -1658,20 +1658,20 @@ function Table() {
                             </div>
                           </td>
                           <td>
-                            <a href="#" className="fw-medium order-code">
+                            <a href="#" className="fw-medium fs_13">
                               #VL2108
                             </a>
                           </td>
-                          <td className="fs_13 "> Whitney Meier</td>
-                          <td className="fs_13 ">06 Oct, 2021</td>
-                          <td className="fs_13 ">$21.25</td>
+                          <td className="fs_13 black_color "> Whitney Meier</td>
+                          <td className="fs_13 black_color ">06 Oct, 2021</td>
+                          <td className="fs_13 black_color ">$21.25</td>
                           <td>
                             <span className="badge bg_danger">Refund</span>
                           </td>
                           <td>
                             <button
                               type="button"
-                              className="btn btn-sm btn-light detail-btn border-0"
+                              className="btn btn-sm btn_light  btn-light detail-btn border-0 black_color"
                             >
                               Details
                             </button>
@@ -1693,20 +1693,20 @@ function Table() {
                             </div>
                           </td>
                           <td>
-                            <a href="#" className="fw-medium order-code">
+                            <a href="#" className="fw-medium fs_13">
                               #VL2107
                             </a>
                           </td>
-                          <td className="fs_13 ">Justin Maier</td>
-                          <td className="fs_13 ">05 Oct, 2021</td>
-                          <td className="fs_13 ">$25.03</td>
+                          <td className="fs_13  black_color">Justin Maier</td>
+                          <td className="fs_13 black_color ">05 Oct, 2021</td>
+                          <td className="fs_13  black_color">$25.03</td>
                           <td>
                             <span className="badge bg_success text_success">Paid</span>
                           </td>
                           <td>
                             <button
                               type="button"
-                              className="btn btn-sm btn_light  btn-light detail-btn border-0"
+                              className="btn btn-sm btn_light  btn-light detail-btn border-0 black_color"
                             >
                               Details
                             </button>

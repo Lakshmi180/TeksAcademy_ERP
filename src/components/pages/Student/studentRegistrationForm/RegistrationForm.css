@@ -1,0 +1,84 @@
+.registration_form_section {
+  max-width: 1100px;
+  margin: auto;
+  background: var(--erp-card-color);
+  padding: 20px;
+  border: 1px solid;
+}
+
+.registration_form_tabs .button_grp {
+  width: 100%;
+  display: flex;
+}
+
+.registration_form_tabs .button_grp .form_tab_btn {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  border: none;
+  outline: none;
+  position: relative;
+  background-color: var(--erp-input-bg-color) !important;
+  font-size: var(--erp-fs-13);
+}
+
+.registration_form_tabs .button_grp .form_tab_btn[disabled] {
+  opacity: 1 !important;
+  color: var(--erp-text-color);
+}
+
+.registration_form_tabs .button_grp .form_tab_btn.active {
+  background-color: var(--erp-gray-200) !important;
+}
+
+.registration_form_tabs .button_grp .form_tab_btn.dark.active {
+  background-color: var(--erp-gray-700) !important;
+}
+
+.registration_form_tabs .button_grp .active::before {
+  position: absolute;
+  border: 7px solid transparent;
+  right: -14px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  content: "";
+  z-index: 100;
+}
+.registration_form_tabs .button_grp .form_tab_btn.active::before {
+  border-left-color: var(--erp-gray-200);
+}
+
+.registration_form_tabs .button_grp .form_tab_btn.dark.active::before {
+  border-left-color: var(--erp-gray-700);
+}
+
+.registration_form_tabs.button_grp .active:last-child::after {
+  display: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.controls .control_next_btn {
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--erp-green-500);
+  border-radius: 5px;
+  color: #fff;
+  order: 2;
+  align-content: end;
+}
+
+.control_prev_btn {
+  order: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: var(--erp-input-bg-color);
+  border-radius: 5px;
+  color: var(--erp-text-color);
+}
