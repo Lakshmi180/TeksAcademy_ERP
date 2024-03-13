@@ -25,13 +25,10 @@ import Button from "./components/common/design/Button";
 import { useTheme } from "./context/ThemeContext/ThemeContext";
 import { Login } from "./components/Auth/Login";
 
-
-
 import RegistrationForm from "./components/pages/Student/studentRegistrationForm/RegistrationForm";
 import { SettingsTabs } from "./components/pages/Settings/SettingsTabs";
 import { Roles } from "./components/pages/Settings/Roles/Roles";
 import { CreateRole } from "./components/pages/Settings/Roles/CreateRole";
-
 
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
@@ -73,14 +70,14 @@ function App() {
             <Route path="/modal" element={<Modal />} />
             <Route path="/page" element={<Page />} />
             <Route path="/button" element={<Button />} />
-            <Route path="/createuserform" element={<CreateUserForm />} />
-            <Route path="/studentdata" element={<Studentdata />} />
+            {/* <Route path="/createuserform" element={<CreateUserForm />} /> */}
+            {/* <Route path="/studentdata" element={<Studentdata />} /> */}
             <Route path={"/registrationform"} element={<RegistrationForm />} />
             <Route path="/settingstabs" element={<SettingsTabs />} />
             <Route path="roles" element={<Roles />} />
             <Route path="/createrole" element={<CreateRole />} />
-            <Route path="/studentdata" element={<Studentdata />} />
-            <Route path="/createuser" element={<CreateUserForm />} />
+            {/* <Route path="/studentdata" element={<Studentdata />} /> */}
+            {/* <Route path="/createuser" element={<CreateUserForm />} /> */}
           </Routes>
         </div>
       </main>

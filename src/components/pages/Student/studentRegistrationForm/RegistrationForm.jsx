@@ -6,6 +6,8 @@ import { useTheme } from "../../../../context/ThemeContext/ThemeContext";
 import { EducationDetails } from "./EducationDetails";
 import { AdmissionDetails } from "./AdmissionDetails";
 import { FeeDetails } from "./FeeDetails";
+import { OthersForm } from "./OthersForm";
+import { Billing } from "./Billing";
 function RegistrationForm() {
   const [activeTab, setActiveTab] = useState(0);
   const [isFormValid, setIsFormValid] = useState(false);
@@ -30,11 +32,11 @@ function RegistrationForm() {
     },
     {
       title: "Billing",
-      content: <StudentDetails />,
+      content: <Billing />,
     },
     {
       title: "Others",
-      content: <StudentDetails />,
+      content: <OthersForm />,
     },
     {
       title: "Finish",

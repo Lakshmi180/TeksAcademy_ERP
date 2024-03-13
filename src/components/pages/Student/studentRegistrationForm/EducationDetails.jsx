@@ -19,7 +19,10 @@ export const EducationDetails = () => {
           >
             Education Type
           </label>
-          <select class="form-select " aria-label="Default select example">
+          <select
+            class="form-select form-control"
+            aria-label="Default select example"
+          >
             <option selected="" className="fs-s">
               Select your Qualifications
             </option>
