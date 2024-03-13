@@ -1,6 +1,5 @@
 .btn_primary {
   background-color: var(--erp-sidebar-color);
-
 }
 .btn_outline_primary {
   color: var(--erp-sidebar-color);
@@ -10,12 +9,11 @@
 .btn_outline_primary:hover {
   background-color: var(--erp-sidebar-color);
   border: var(--erp-sidebar-color);
-  color:var(--erp-card-color)
+  color: var(--erp-card-color);
 }
 
 .btn_primary:hover {
   background-color: var(--erp-sidebar-color);
-
 }
 
 .btn-success {
