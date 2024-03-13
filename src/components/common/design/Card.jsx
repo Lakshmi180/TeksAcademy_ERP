@@ -24,6 +24,8 @@ function Card() {
                 <div className="d-flex justify-content-between mb-3">
                   <p className=" fw-medium text-mute m-0 fw_400 fs_14">TOTAL EARNING</p>
                 
+                  <p className=" fw-medium text-mute m-0">TOTAL EARNING</p>
+
                   <h5 className="text-success fs-14 fw_400 fs_14">
                     <HiArrowUpRight /> +16.24%
                   </h5>
@@ -57,7 +59,8 @@ function Card() {
                 
                   {/* <h5 className="text-danger fs-14 fw_400 fs_14"/>
                   <p className=" fw-medium text-mute m-0">ORDERS</p> */}
-                  <h5 className="text_danger fw_400 fs_14">
+                
+                  <h5 className="text_danger fs-14 card-number">
                     <GoArrowDownRight /> -3.57%
                   </h5>
                 </div>
@@ -88,6 +91,8 @@ function Card() {
                 <div className="d-flex justify-content-between mb-3">
                   <p className="fw-medium text-mute m-0 fw_400 fs_14">CUSTOMERS</p>
             
+                  <p className=" fw-medium text-mute m-0">CUSTOMERS</p>
+
                   <h5 className="text-success fs-14 fw_400 fs_14 ">
                     <HiArrowUpRight /> +29.08%
                   </h5>
@@ -120,6 +125,9 @@ function Card() {
                   <p className=" fw-medium text-mute m-0 fw_400 fs_14">MY BALANCE</p>
             
                   <h5 className="text-black-50  fw_400 fs_14 ">+0.00%</h5>
+                  <p className=" fw-medium text-mute m-0">MY BALANCE</p>
+
+                  <h5 className="text-black-50  fw_400 fs_14">+0.00%</h5>
                 </div>
                 <div className="d-flex justify-content-between">
                   <h3>
