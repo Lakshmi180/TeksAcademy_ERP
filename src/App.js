@@ -29,7 +29,8 @@ import RegistrationForm from "./components/pages/Student/studentRegistrationForm
 import { SettingsTabs } from "./components/pages/Settings/SettingsTabs";
 import { Roles } from "./components/pages/Settings/Roles/Roles";
 import { CreateRole } from "./components/pages/Settings/Roles/CreateRole";
-
+import Studentdata from "./components/pages/Student/studentData/Studentdata";
+import CreateUserForm from "./components/pages/User/CreateUserForm/CreateUserForm";
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
   const { theme } = useTheme();
@@ -76,8 +77,8 @@ function App() {
             <Route path="/settingstabs" element={<SettingsTabs />} />
             <Route path="roles" element={<Roles />} />
             <Route path="/createrole" element={<CreateRole />} />
-            {/* <Route path="/studentdata" element={<Studentdata />} /> */}
-            {/* <Route path="/createuser" element={<CreateUserForm />} /> */}
+            <Route path="/studentdata" element={<Studentdata />} />
+            <Route path="/createuser" element={<CreateUserForm />} />
           </Routes>
         </div>
       </main>
