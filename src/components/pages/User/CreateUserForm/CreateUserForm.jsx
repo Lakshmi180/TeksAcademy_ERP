@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import "./CreateUserForm.css";
 function CreateUserForm() {
   return (
@@ -8,10 +8,11 @@ function CreateUserForm() {
           <div className="col-xxl-12">
             <div className="card  border-0">
               <div className="align-items-center bg_white">
-                <h5 className="mt-4 fs-16 txt-color ms-4 ">User Creation Form</h5>
+                <h5 className="mt-4 fs-16 txt-color ms-4 ">
+                  User Creation Form
+                </h5>
               </div>
               <div className="card-body ">
-
                 <div className="live-prieview">
                   <form action="javascript:void(0)">
                     <div className="row d-flex">
@@ -80,89 +81,74 @@ function CreateUserForm() {
                         </div>
                       </div>
                       <div className=" col-md-4 ">
-                        <label className="form-label fs-s fw-medium txt-color">Department</label>
+                        <label className="form-label fs-s fw-medium txt-color">
+                          Department
+                        </label>
                         <select
-                          class="form-select form-control  " aria-label="Default select example"
+                          class="form-select form-control  "
+                          aria-label="Default select example"
                           placeholder="Branch*"
                           name="branch"
                           id="branch"
                           required
-
-
                         >
                           <option value="">Department</option>
-                         
-                       
-
-
                         </select>
                       </div>
                       <div className=" col-md-4 ">
-                        <label className="form-label fs-s fw-medium txt-color">Report To</label>
+                        <label className="form-label fs-s fw-medium txt-color">
+                          Report To
+                        </label>
                         <select
-                          class="form-select form-control  " aria-label="Default select example"
+                          class="form-select form-control  "
+                          aria-label="Default select example"
                           placeholder="Report To*"
                           name="branch"
                           id="branch"
                           required
-
-
                         >
-                         
                           <option value="">Report To</option>
-                          
-
                         </select>
-
-
-
-
                       </div>
                       <div className=" col-md-4 ">
-                        <label className="form-label fs-s fw-medium txt-color">Role</label>
+                        <label className="form-label fs-s fw-medium txt-color">
+                          Role
+                        </label>
                         <select
-                          class="form-select form-control  " aria-label="Default select example"
+                          class="form-select form-control  "
+                          aria-label="Default select example"
                           placeholder="Role*"
                           name="branch"
                           id="branch"
                           required
-
-
                         >
                           <option value="">Role</option>
-                      
-
                         </select>
-
-
-
-
                       </div>
                       <div className=" col-md-4 ">
-                        <label className="form-label fs-s fw-medium txt-color">Branch</label>
+                        <label className="form-label fs-s fw-medium txt-color">
+                          Branch
+                        </label>
                         <select
-                          class="form-select  form-control " aria-label="Default select example"
+                          class="form-select  form-control "
+                          aria-label="Default select example"
                           placeholder="Branch*"
                           name="branch"
                           id="branch"
                           required
-
-
                         >
                           <option value="">Branch</option>
-                       
-
                         </select>
-
-
-
-
                       </div>
                     </div>
                     <div className=" ">
                       <div className="d-flex justify-content-end">
-
-                        <button type="button" class="btn btn_primary waves-effect waves-light ">Submit</button>
+                        <button
+                          type="button"
+                          class="btn btn_primary waves-effect waves-light "
+                        >
+                          Submit
+                        </button>
                       </div>
                     </div>
                   </form>
@@ -173,7 +159,7 @@ function CreateUserForm() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default CreateUserForm
+export default CreateUserForm;
