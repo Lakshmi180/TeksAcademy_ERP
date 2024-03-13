@@ -16,7 +16,10 @@ export const FeeDetails = () => {
           <label className="form-label fs-s text_color" htmlFor="rwhatsappnum">
             Fee Type
           </label>
-          <select class="form-select " aria-label="Default select example">
+          <select
+            class="form-select form-control"
+            aria-label="Default select example"
+          >
             <option selected="">--Select--</option>
             <option value="1">one</option>
             <option value="2">Two</option>

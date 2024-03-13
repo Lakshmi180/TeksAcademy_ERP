@@ -25,12 +25,11 @@ import Button from "./components/common/design/Button";
 import { useTheme } from "./context/ThemeContext/ThemeContext";
 import { Login } from "./components/Auth/Login";
 
-
-
 import RegistrationForm from "./components/pages/Student/studentRegistrationForm/RegistrationForm";
 import { SettingsTabs } from "./components/pages/Settings/SettingsTabs";
 import { Roles } from "./components/pages/Settings/Roles/Roles";
 import { CreateRole } from "./components/pages/Settings/Roles/CreateRole";
+
 import CreateUserForm from "./components/pages/User/CreateUserForm/CreateUserForm";
 import Studentdata from "./components/pages/Student/studentData/Studentdata"
 import Course from "./components/pages/Settings/courses/Course";
@@ -42,6 +41,9 @@ import CreateDepartment from "./components/pages/Settings/Departments/CreateDepa
 import CoursePackage from "./components/pages/Settings/coursePackage/CoursePackage";
 import CreateCoursePackage from "./components/pages/Settings/coursePackage/CreateCoursePackage";
 
+
+import Studentdata from "./components/pages/Student/studentData/Studentdata";
+import CreateUserForm from "./components/pages/User/CreateUserForm/CreateUserForm";
 
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
@@ -83,8 +85,8 @@ function App() {
             <Route path="/modal" element={<Modal />} />
             <Route path="/page" element={<Page />} />
             <Route path="/button" element={<Button />} />
-            <Route path="/createuserform" element={<CreateUserForm/>} />
-            <Route path="/studentdata" element={<Studentdata/>} />
+            {/* <Route path="/createuserform" element={<CreateUserForm />} /> */}
+            {/* <Route path="/studentdata" element={<Studentdata />} /> */}
             <Route path={"/registrationform"} element={<RegistrationForm />} />
             <Route path="/settingstabs" element={<SettingsTabs />} />
             <Route path="/roles" element={<Roles/>} />
