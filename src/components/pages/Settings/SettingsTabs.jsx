@@ -7,7 +7,7 @@ export const SettingsTabs = () => {
                 <h6 className='py-2'>Settings</h6>
                 <div className="row d-flex justify-content-center">
                     <div className="col-lg-3 col-sm-6">
-                        <Link to="/createrole">
+                        <Link to="/roles">
                             <button type="button" class="btn btn_primary waves-effect waves-light w-100 py-2">Roles</button>
                         </Link>
                     </div>
@@ -24,6 +24,29 @@ export const SettingsTabs = () => {
                     <div className="col-lg-3 col-sm-6">
                         <Link to="/course">
                             <button type="button" class="btn btn_primary waves-effect waves-light w-100 py-2">Course</button>
+                        </Link>
+                    </div>
+
+                </div>
+                <div className="row d-flex justify-content-center mt-3">
+                    <div className="col-lg-3 col-sm-6">
+                        <Link to="/coursepackage">
+                            <button type="button" class="btn btn_primary waves-effect waves-light w-100 py-2">Course Package</button>
+                        </Link>
+                    </div>
+                    <div className="col-lg-3 col-sm-6">
+                        <Link to="/">
+                            <button type="button" class="btn btn_primary waves-effect waves-light w-100 py-2">Admission fee</button>
+                        </Link>
+                    </div>
+                    <div className="col-lg-3 col-sm-6">
+                        <Link to="/">
+                            <button type="button" class="btn btn_primary waves-effect waves-light w-100 py-2">Communication</button>
+                        </Link>
+                    </div>
+                    <div className="col-lg-3 col-sm-6">
+                        <Link to="/">
+                            <button type="button" class="btn btn_primary waves-effect waves-light w-100 py-2">Lead Source</button>
                         </Link>
                     </div>
                 </div>

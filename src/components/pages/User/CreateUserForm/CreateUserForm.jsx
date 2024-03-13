@@ -1,6 +1,7 @@
 import React from "react";
 import "./CreateUserForm.css";
 import { FaArrowRight } from "react-icons/fa";
+
 function CreateUserForm() {
   return (
     <div>

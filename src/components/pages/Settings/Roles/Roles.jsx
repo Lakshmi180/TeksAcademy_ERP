@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import { MdOutlineEdit } from "react-icons/md";
 import { MdDeleteOutline } from "react-icons/md";
+import { RoleContext } from '../../../../context/RoleContext/RoleContextProvider';
 export const Roles = () => {
+
+  const { RoleState } = useContext(RoleContext);
+  console.log(RoleState, "kjhghg")
+
+
+
+
   return (
     <div>
       <div className="container">
@@ -62,7 +70,52 @@ export const Roles = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
+
+                      {
+                        (RoleState?.roles && RoleState?.roles.length > 0) ?
+                          RoleState?.roles.map((item, index) => {
+                            console.log(`item: ${item}`, "fdhjhg");
+                            return (
+                              <tr>
+                                <td>
+                                  <div class="form-check">
+                                    <input
+                                      className="form-check-input"
+                                      type="checkbox"
+                                      value=""
+                                      id="cardtableCheck01"
+                                    />
+                                    <label
+                                      className="form-check-label"
+                                      for="cardtableCheck01"
+                                    ></label>
+                                  </div>
+                                </td>
+                                <td className="fs_13">
+                                  {index+1}
+                                </td>
+                                <td className="fs_13 ">{item.role}</td>
+                                <td className="fs_13 ">{item.description}</td>
+                                <td className="fs_13 ">-</td>
+                                <td className="fs_13 ">20/12/2023</td>
+                                <td>
+                                  <MdOutlineEdit />
+                                  <MdDeleteOutline className='ms-3' />
+                                </td>
+                              </tr>
+                            );
+                          }) :
+                          (
+                            <div>
+                              no data found
+                            </div>
+                          )
+                      }
+
+
+                      
+
+                      {/* <tr>
                         <td>
                           <div class="form-check">
                             <input
@@ -169,7 +222,7 @@ export const Roles = () => {
                           <MdOutlineEdit />
                           <MdDeleteOutline className='ms-3' />
                         </td>
-                      </tr>
+                      </tr> */}
                     </tbody>
                   </table>
                 </div>
