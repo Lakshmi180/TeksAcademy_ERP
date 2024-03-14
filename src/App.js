@@ -31,7 +31,7 @@ import { Roles } from "./components/pages/Settings/Roles/Roles";
 import { CreateRole } from "./components/pages/Settings/Roles/CreateRole";
 import Course from "./components/pages/Settings/courses/Course";
 import CreateCourse from "./components/pages/Settings/courses/CreateCourse";
-import Branch from "./components/pages/Settings/branch/Branch";
+import { Branch } from "./components/pages/Settings/branch/Branch";
 import CreateBranch from "./components/pages/Settings/branch/CreateBranch";
 import Department from "./components/pages/Settings/Departments/Department";
 import CreateDepartment from "./components/pages/Settings/Departments/CreateDepartment";

@@ -145,7 +145,7 @@ function CreateUserForm() {
                   <div className="d-flex justify-content-end">
                     <button
                       type="button"
-                      class="btn btn_primary waves-effect waves-light btn-label right"
+                      class="btn btn_primary waves-effect waves-light btn-label right fs_13"
                     >
                       Submit
                       <span className="label-icon"><FaArrowRight /></span>

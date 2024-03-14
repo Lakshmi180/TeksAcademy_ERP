@@ -396,33 +396,45 @@ h1 {
   color: var(--erp-text-color) !important;
 }
 /* button css */
-.btn-label{
-    position: relative;
-    padding-left: 44px;
+.btn-label {
+  position: relative;
+  padding-left: 44px;
 }
 .btn-label.right {
-    padding-left: 0.9rem;
-    padding-right: 44px;
+  padding-left: 0.9rem;
+  padding-right: 44px;
 }
 .btn-label .label-icon {
-    position: absolute;
-    width: 35.5px;
-    left: calc(var(--vz-border-width)* -1);
-    top: calc(var(--vz-border-width)* -1);
-    bottom: calc(var(--vz-border-width)* -1);
-    background-color: rgba(255, 255, 255, .1);
-    font-size: 16px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+  position: absolute;
+  width: 35.5px;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  border-color: #0ab39c;
+  background-color: #0ab39c;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 .btn-label.right .label-icon {
-    right:1px;
-    left: auto;
+  right: 0px;
+  left: auto;
+}
+.btn-label:hover {
+  color: #fff;
+  background-color: #2da494 !important;
+  border-color: #2da494;
+}
+.btn_primary {
+  background-color: var(--erp-green-500);
+  color: #fff;
+}
+.btn_primary:hover {
+  background-color: var(--erp-green-600);
 }
