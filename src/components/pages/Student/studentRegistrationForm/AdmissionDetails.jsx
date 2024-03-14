@@ -9,7 +9,7 @@ export const AdmissionDetails = () => {
       <div className="row">
         <div className="form-group text-start col-lg-3">
           <label className="form-label fs-s text_color" htmlFor="renqiurydate">
-            Enquiry Date
+            Enquiry Date*
           </label>
           <input
             className="form-control"
@@ -20,7 +20,7 @@ export const AdmissionDetails = () => {
         </div>
         <div className="form-group text-start col-lg-3">
           <label className="form-label fs-s text_color" htmlFor="renqtakeby">
-            Enquiry taken by
+            Enquiry taken by*
           </label>
           <input
             className="form-control"
@@ -33,7 +33,7 @@ export const AdmissionDetails = () => {
 
         <div className="form-group text-start col-lg-3">
           <label className="form-label fs-s text_color" htmlFor="rwhatsappnum">
-            Course Package
+            Course Package*
           </label>
           <select
             class="form-select form-control"
@@ -47,7 +47,7 @@ export const AdmissionDetails = () => {
 
         <div className="form-group text-start col-lg-3">
           <label className="form-label fs-s text_color" htmlFor="rwhatsappnum">
-            Course
+            Course*
           </label>
           <select
             class="form-select form-control"
@@ -62,7 +62,7 @@ export const AdmissionDetails = () => {
       <div className="row mt-3">
         <div className="form-group text-start col-lg-3 ">
           <label className="form-label fs-s text_color" htmlFor="rwhatsappnum">
-            Lead Source
+            Lead Source*
           </label>
           <select
             class="form-select form-control"
@@ -76,7 +76,7 @@ export const AdmissionDetails = () => {
 
         <div className="form-group text-start col-lg-3">
           <label className="form-label fs-s text_color" htmlFor="rwhatsappnum">
-            Branch
+            Branch*
           </label>
           <select
             class="form-select form-control"
@@ -90,7 +90,7 @@ export const AdmissionDetails = () => {
 
         <div className="form-group text-start col-lg-3">
           <label className="form-label fs-s text_color" htmlFor="rwhatsappnum">
-            Mode Of Training
+            Mode Of Training*
           </label>
           <select
             class="form-select form-control"
@@ -104,7 +104,7 @@ export const AdmissionDetails = () => {
 
         <div className="form-group text-start col-lg-3">
           <label className="form-label fs-s text_color" htmlFor="renqiurydate">
-            Admission Date
+            Admission Date*
           </label>
           <input
             className="form-control"
@@ -118,7 +118,7 @@ export const AdmissionDetails = () => {
       <div className="row mt-3">
         <div className="form-group text-start col-lg-3">
           <label className="form-label fs-s text_color" htmlFor="renqiurydate">
-            Validity Start Date
+            Validity Start Date*
           </label>
           <input
             className="form-control"
@@ -130,7 +130,7 @@ export const AdmissionDetails = () => {
 
         <div className="form-group text-start col-lg-3">
           <label className="form-label fs-s text_color" htmlFor="renqiurydate">
-            Validity End Date
+            Validity End Date*
           </label>
           <input
             className="form-control"

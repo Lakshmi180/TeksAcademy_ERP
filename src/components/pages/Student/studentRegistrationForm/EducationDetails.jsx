@@ -17,7 +17,7 @@ export const EducationDetails = () => {
             className="form-label fs-s text_color"
             htmlFor="reducationtype"
           >
-            Education Type
+            Education Type*
           </label>
           <select
             class="form-select form-control"
@@ -35,7 +35,7 @@ export const EducationDetails = () => {
 
         <div className="form-group text-start col-lg-3">
           <label className="form-label fs-s text_color" htmlFor="rpercentage">
-            Percentage
+            Percentage*
           </label>
           <input
             className="form-control"
@@ -48,7 +48,7 @@ export const EducationDetails = () => {
         </div>
         <div className="form-group text-start col-lg-3">
           <label className="form-label fs-s text_color" htmlFor="racademicyear">
-            Academic Year
+            Academic Year*
           </label>
           <input
             className="form-control"
