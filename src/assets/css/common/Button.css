@@ -1,4 +1,4 @@
-.btn_primary {
+/* .btn_primary {
   background-color: var(--erp-sidebar-color);
 }
 .btn_outline_primary {
@@ -12,9 +12,7 @@
   color: var(--erp-card-color);
 }
 
-.btn_primary:hover {
-  background-color: var(--erp-sidebar-color);
-}
+
 
 .btn-success {
   background-color: var(--erp-green-500);
@@ -23,4 +21,4 @@
 .btn-load .spinner-border {
   height: 19px;
   width: 19px;
-}
+} */
