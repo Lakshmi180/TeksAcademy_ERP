@@ -14,7 +14,7 @@ export const FeeDetails = () => {
       <div className="row">
         <div className="form-group text-start col-lg-3">
           <label className="form-label fs-s text_color" htmlFor="rwhatsappnum">
-            Fee Type
+            Fee Type*
           </label>
           <select
             class="form-select form-control"
@@ -28,7 +28,7 @@ export const FeeDetails = () => {
 
         <div className="form-group text-start col-lg-3">
           <label className="form-label fs-s text_color" htmlFor="rcontactnum">
-            Amount
+            Amount*
           </label>
           <input
             className="form-control"
@@ -42,7 +42,7 @@ export const FeeDetails = () => {
 
         <div className="form-group text-start col-lg-3">
           <label className="form-label fs-s text_color" htmlFor="rcontactnum">
-            Discount
+            Discount*
           </label>
           <input
             className="form-control"
