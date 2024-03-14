@@ -1,6 +1,6 @@
-.btn_primary {
+/* .btn_primary {
     background-color: var(--erp-sidebar-color);
-}
+} */
 
 .btn_primary:hover {
     color: var(--erp-card-color);

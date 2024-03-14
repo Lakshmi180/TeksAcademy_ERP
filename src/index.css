@@ -8,7 +8,6 @@ body {
   word-wrap: break-word;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f3f3f9 !important;
 }
 html,
 body,
@@ -18,10 +17,7 @@ body,
   height: 100%;
   width: 100%;
 }
-.table td,
-.table th {
-  line-height: 1.5;
-}
+
 :root,
 [data-erp-theme="light"] {
   /* color #4676a0*/
@@ -31,7 +27,7 @@ body,
   --erp-orange-600: #da3412;
   --erp-light-blue-color: #abb9e8;
   --erp-light-gray: #e9ebec;
-  --erp-light-gray: #e9ebec;
+  /* --erp-light-gray: #e9ebec; */
   --erp-gray-color: #878a99;
   --erp-white-color: #fff;
   --erp-sky-500: #405189;
@@ -51,8 +47,7 @@ body,
 
   /* Gray / Zinc */
   --erp-gray-100: #f4f4f5;
-  --erp-gray-200: #e4e4e7;
-
+  --erp-gray-200: #e9ebec;
   --erp-gray-300: #d4d4d8;
   --erp-gray-400: #b3b9d0;
   --erp-gray-500: #71717a;
@@ -254,26 +249,21 @@ body,
 
 .font-weight-100 {
   font-weight: var(--erp-fw-100);
-  font-weight: var(--erp-fw-100);
 }
 
 .font-weight-300 {
-  font-weight: var(--erp-fw-300);
   font-weight: var(--erp-fw-300);
 }
 
 .font-weight-400 {
   font-weight: var(--erp-fw-400);
-  font-weight: var(--erp-fw-400);
 }
 
 .font-weight-500 {
   font-weight: var(--erp-fw-500);
-  font-weight: var(--erp-fw-500);
 }
 
 .font-weight-700 {
-  font-weight: var(--erp-fw-700);
   font-weight: var(--erp-fw-700);
 }
 
@@ -289,9 +279,52 @@ a {
 }
 
 .text-mute {
-  color: var(--erp-gray-400) !important;
+  color: var(--erp-text-mute) !important;
+}
+.button_color {
+  color: var(--erp-white-color) !important;
 }
 
+.card {
+  border-radius: 0.375rem !important;
+  margin-bottom: 1.5rem;
+  -webkit-box-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
+  box-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
+}
+.card-header {
+  padding: 1rem 1rem;
+  background-color: var(--erp-white-color);
+  border-bottom: 0px;
+}
+
+.card-body {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+}
+.table_icons {
+  font-style: normal;
+  font-size: 16px !important;
+  font-weight: 400;
+}
+.table-card {
+  margin: -1rem -1rem;
+  border: 0px solid;
+  border-bottom: 1px solid var(--erp-gray-200);
+}
+.table-card td:first-child,
+.table-card th:first-child {
+  padding-left: 16px;
+}
+
+.table > thead {
+  background-color: #f3f6f9;
+}
+.table td,
+.table th {
+  line-height: 1.5;
+}
 .form-control {
   -webkit-appearance: none;
   appearance: none;
@@ -361,4 +394,47 @@ h1 {
 
 .text_color {
   color: var(--erp-text-color) !important;
+}
+/* button css */
+.btn-label {
+  position: relative;
+  padding-left: 44px;
+}
+.btn-label.right {
+  padding-left: 0.9rem;
+  padding-right: 44px;
+}
+.btn-label .label-icon {
+  position: absolute;
+  width: 35.5px;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  border-color: #0ab39c;
+  background-color: #0ab39c;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.btn-label.right .label-icon {
+  right: 0px;
+  left: auto;
+}
+.btn-label:hover {
+  color: #fff;
+  background-color: #2da494 !important;
+  border-color: #2da494;
+}
+.btn_primary {
+  background-color: var(--erp-green-500);
+  color: #fff;
+}
+.btn_primary:hover {
+  background-color: var(--erp-green-600);
 }

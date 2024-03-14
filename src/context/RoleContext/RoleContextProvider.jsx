@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useReducer } from "react";
 import { useNavigate } from "react-router-dom";
 import RoleReducer from "./RoleReducer";
+import axios from "axios";
 
 export const RoleContext = createContext();
 
@@ -11,12 +12,15 @@ const RoleContextProvider = ({ children }) => {
         roles: [],
     }
 
-    const [RoleState, DispatchRoleState] = useReducer(RoleReducer, initialState)
+    const [RoleState, DispatchRoleState] = useReducer(RoleReducer, initialState);
+    console.log(RoleState, "RoleState")
 
     const getAllRoles = async () => {
         try {
-            const { data, status } = await axios.get();
-            if (status == 200) {
+            const { data, status } = await axios.get(`${process.env.REACT_APP_API_URL}/getuserroles`);
+          
+            if (status === 201) {
+                console.log(data, "getroledata")
                 DispatchRoleState({ type: "SET_ROLES", payload: data })
             }
 
@@ -25,13 +29,14 @@ const RoleContextProvider = ({ children }) => {
         }
     }
 
-    const createRole = async (rolestate) => {
+    const createRole = async (roledetails) => {
+        console.log(roledetails, "roledetails")
         try {
-            const { data, status } = await axios.post();
+            const { data, status } = await axios.post(`${process.env.REACT_APP_API_URL}/userroles`,roledetails);
+            console.log(data, "axiosdata")  
             if (status === 200) {
                 DispatchRoleState({ type: "CREATE_ROLE", payload: data })
                 getAllRoles();
-                // navigate("/roletable")
             }
 
         } catch (error) {
@@ -43,9 +48,10 @@ const RoleContextProvider = ({ children }) => {
         getAllRoles();
     }, [])
 
-    useEffect(() => {
-        getALLRoles();
-    }, [RoleState?.roles])
+    
+    // useEffect(() => {
+    //     getALLRoles();
+    // }, [RoleState?.roles])
 
 
     return (
