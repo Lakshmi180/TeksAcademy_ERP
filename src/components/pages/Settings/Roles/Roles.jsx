@@ -6,9 +6,8 @@ import { RoleContext } from '../../../../context/RoleContext/RoleContextProvider
 export const Roles = () => {
 
   const { RoleState } = useContext(RoleContext);
-  console.log(RoleState, "kjhghg")
 
-
+  console.log(RoleState.roles, "kjhghg")
 
 
   return (
@@ -72,9 +71,9 @@ export const Roles = () => {
                     <tbody>
 
                       {
-                        (RoleState?.roles && RoleState?.roles.length > 0) ?
+                        (RoleState.roles && RoleState?.roles.length > 0) ?
                           RoleState?.roles.map((item, index) => {
-                            console.log(`item: ${item}`, "fdhjhg");
+                            console.log(`item:${item}`, "fdhjhgfdf");
                             return (
                               <tr>
                                 <td>
@@ -96,7 +95,7 @@ export const Roles = () => {
                                 </td>
                                 <td className="fs_13 ">{item.role}</td>
                                 <td className="fs_13 ">{item.description}</td>
-                                <td className="fs_13 ">-</td>
+                                <td className="fs_13 ">-xvbb</td>
                                 <td className="fs_13 ">20/12/2023</td>
                                 <td>
                                   <MdOutlineEdit />
@@ -106,9 +105,11 @@ export const Roles = () => {
                             );
                           }) :
                           (
-                            <div>
-                              no data found
-                            </div>
+                            
+                              <span>
+                                    
+                              </span>
+                            
                           )
                       }
 
