@@ -8,15 +8,38 @@ import { AdmissionDetails } from "./AdmissionDetails";
 import { FeeDetails } from "./FeeDetails";
 import { OthersForm } from "./OthersForm";
 import { Billing } from "./Billing";
+import { ParentsDetails } from "./ParentsDetails";
+import { IoMdArrowBack, IoMdCheckmark, IoMdArrowForward } from "react-icons/io";
+
 function RegistrationForm() {
   const [activeTab, setActiveTab] = useState(0);
   const [isFormValid, setIsFormValid] = useState(false);
+  const [formData, setFormData] = useState({
+    rname: "",
+    // remail,
+    // rphoto,
+    // rdob,
+    // rcontactnum,
+    // rwhatsappnum,
+    // rgender,
+    // rmaritalstatus,
+    // rcscname,
+    // rpincode,
+    // rcountry,
+    // rstate,
+    // rnative,
+    // rarea,
+  });
   const { theme } = useTheme();
 
-  const tabs = [
+  const [tabs] = useState([
     {
       title: "Student Details",
       content: <StudentDetails />,
+    },
+    {
+      title: "Parent Details",
+      content: <ParentsDetails />,
     },
     {
       title: "Education Details",
@@ -47,13 +70,11 @@ function RegistrationForm() {
         />
       ),
     },
-  ];
+  ]);
 
-  const handleNext = () => {
-    if (isFormValid) {
-    }
-    return setActiveTab((prevActiveTab) => prevActiveTab + 1);
-  };
+  function handleNext() {
+    setActiveTab((prevActiveTab) => prevActiveTab + 1);
+  }
 
   const handlePrev = () => {
     setActiveTab((prevActiveTab) => prevActiveTab - 1);
@@ -64,7 +85,7 @@ function RegistrationForm() {
   };
 
   return (
-    <div className="registration_form_section d-flex flex-column justify-content-center gap-3">
+    <div className="registration_form_section  ">
       <div className="top">
         <div className="registration_form_tabs row">
           <div className="button_grp col-lg-12 p-0">
@@ -96,24 +117,52 @@ function RegistrationForm() {
         <form className="row d-flex align-items-center" onSubmit={handleSubmit}>
           {tabs[activeTab].content}
 
-          <div className="controls d-flex justify-content-between align-items-center mt-4">
-            {activeTab !== 0 && (
-              <button
-                type="button"
-                className="control_prev_btn"
-                onClick={() => setActiveTab(activeTab - 1)}
-              >
-                Go Back
-              </button>
-            )}
-
-            <button
-              type="button"
-              className="control_next_btn"
-              onClick={handleNext}
-            >
-              Continue
-            </button>
+          <div className="controls d-flex justify-content-between  mt-4">
+            <div>
+              {" "}
+              {activeTab !== 0 && (
+                <button
+                  type="button"
+                  className="control_prev_btn reg_btn"
+                  onClick={() => setActiveTab(activeTab - 1)}
+                >
+                  <span>
+                    <IoMdArrowBack className="button_icons" />
+                  </span>
+                  Go Back
+                </button>
+              )}
+            </div>
+            <div>
+              {activeTab !== tabs.length - 1 && (
+                <div className="">
+                  <button
+                    type="button"
+                    className="control_next_btn reg_btn"
+                    onClick={handleNext}
+                  >
+                    Continue
+                    <span>
+                      <IoMdArrowForward className="button_icons" />
+                    </span>
+                  </button>
+                </div>
+              )}
+              {activeTab === tabs.length - 1 && (
+                <div className="">
+                  <button
+                    type="submit"
+                    className="control_next_btn reg_btn"
+                    onClick={handleNext}
+                  >
+                    Submit
+                    <span>
+                      <IoMdCheckmark />
+                    </span>
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </form>
       </div>

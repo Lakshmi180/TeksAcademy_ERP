@@ -12,18 +12,16 @@ import { router } from "./router";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <AuthContextProvider>
-        <ThemeProvider>
-          {/* <RouterProvider router={router}/> */}
-          <ToastContainer style={{ position: "fixed", top: "60px" }} />
+  <BrowserRouter>
+    <AuthContextProvider>
+      <ThemeProvider>
+        {/* <RouterProvider router={router}/> */}
+        <ToastContainer style={{ position: "fixed", top: "60px" }} />
 
-          <App />
-        </ThemeProvider>
-      </AuthContextProvider>
-    </BrowserRouter>
-  </React.StrictMode>
+        <App />
+      </ThemeProvider>
+    </AuthContextProvider>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
