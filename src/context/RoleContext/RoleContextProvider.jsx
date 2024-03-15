@@ -17,12 +17,12 @@ const RoleContextProvider = ({ children }) => {
 
     const getAllRoles = async () => {
         try {
-            const { data, status } = await axios.get(`${process.env.REACT_APP_API_URL}/getuserroles`);
-          
-            if (status === 201) {
-                console.log(data, "getroledata")
-                DispatchRoleState({ type: "SET_ROLES", payload: data })
-            }
+            // const { data, status } = await axios.get(`${process.env.REACT_APP_API_URL}/getuserroles`);
+           
+            // if (status === 201) {
+            //     console.log(data, "getroledata")
+            //     DispatchRoleState({ type: "SET_ROLES", payload: data })
+            // }
 
         } catch (error) {
             console.log(error)
@@ -49,9 +49,9 @@ const RoleContextProvider = ({ children }) => {
     }, [])
 
     
-    // useEffect(() => {
-    //     getALLRoles();
-    // }, [RoleState?.roles])
+    useEffect(() => {
+        getAllRoles();
+    }, [RoleState?.roles])
 
 
     return (
