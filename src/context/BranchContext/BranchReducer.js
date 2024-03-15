@@ -1,5 +1,6 @@
 
 const BranchReducer = (state, action) => {
+  console.log("reducerstate", state)
     switch (action.type) {
       case "SET_BRANCHES":
         return {

@@ -10,6 +10,7 @@ import { BrowserRouter, RouterProvider } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { router } from "./router";
 import RoleContextProvider from "./context/RoleContext/RoleContextProvider";
+import BranchContextProvider from "./context/BranchContext/BranchContextProvider";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,14 +18,16 @@ root.render(
     <BrowserRouter>
       <AuthContextProvider>
         <RoleContextProvider>
-
-       
+        <BranchContextProvider>
+        
         <ThemeProvider>
           {/* <RouterProvider router={router}/> */}
           <ToastContainer style={{ position: "fixed", top: "60px" }} />
 
           <App />
         </ThemeProvider>
+
+        </BranchContextProvider>
         </RoleContextProvider>
       </AuthContextProvider>
     </BrowserRouter>
