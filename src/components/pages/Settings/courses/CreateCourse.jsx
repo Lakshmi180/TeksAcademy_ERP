@@ -5,6 +5,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { toast } from "react-toastify";
 import { CourseContext } from "../../../../context/courseContext/CourseContextProvider";
 
+import Button from "../../../common/design/Button";
 const CreateCourse = () => {
     const {DispatchCourse,courseState,getAllCourses}=useContext(CourseContext)
     const [formdata, setformdata]=useState({
@@ -75,7 +76,7 @@ const CreateCourse = () => {
     
 
     return (
-        <div>
+        <div className="">
             <div className="container-fluid">
                 <div className="card border-0">
                     <div className="align-items-center">
@@ -172,14 +173,9 @@ const CreateCourse = () => {
                                 </div>
                                 <div className=" ">
                                     <div className="d-flex justify-content-end">
-                                        <button
-                                            type="button"
-                                            class="btn btn_primary waves-effect waves-light btn-label right fs_13"
-                                            onClick={handleSubmit}
-                                        >
+                                        <Button className={"btn_primary btn-label right"} onClick={handleSubmit} icon={<FaArrowRight />} >
                                             Submit
-                                            <span className="label-icon"><FaArrowRight /></span>
-                                        </button>
+                                        </Button>
                                     </div>
                                 </div>
                             </form>

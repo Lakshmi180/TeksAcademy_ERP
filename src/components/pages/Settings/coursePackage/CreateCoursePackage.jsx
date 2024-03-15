@@ -7,6 +7,7 @@ import { toast } from "react-toastify";
 import { CoursePackageContext } from "../../../../context/coursePackageContext/CoursePackageContext";
 import { Navigate, useNavigate } from "react-router-dom";
 
+import Button from "../../../common/design/Button";
 const CreateCoursePackage=()=>{
 
 const {coursePackageState,getAllCoursePackages, DispatchCourseState}=useContext(CoursePackageContext)
@@ -81,7 +82,7 @@ const navigate = useNavigate();
 
 
     return(
-        <div>
+        <div className="container">
             <div className="row d-flex justify-content-center">
                 <div className="col-lg-5">
                     <div className="card">
@@ -108,15 +109,9 @@ const navigate = useNavigate();
                                 </div>
                                 <div className=" ">
                                     <div className="d-flex justify-content-end">
-                                        <button
-                                            type="button"
-                                            class="btn btn_primary waves-effect waves-light btn-label right fs_13"
-                                            onClick={handleSubmit}
-                                        >
+                                        <Button className={"btn_primary btn-label right"} icon={<FaArrowRight />} onClick={handleSubmit}>
                                             Submit
-                                            <span className="label-icon"><FaArrowRight /></span>
-                                        </button>
-                                        
+                                        </Button>
                                     </div>
                                 </div>
                             </form>

@@ -4,6 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 import { toast } from 'react-toastify';
 import { DepartmentContext } from '../../../../context/deparmentContext/DepartmentContextProvider';
 import { useNavigate } from 'react-router-dom';
+import Button from "../../../common/design/Button";
 function CreateDepartment() {
   const navigate = useNavigate();
 
@@ -71,7 +72,7 @@ function CreateDepartment() {
 
   return (
     <div>
-      <div>
+      <div className='container'>
         <div className="row d-flex justify-content-center">
           <div className="col-lg-5">
             <div className="card">
@@ -99,14 +100,9 @@ function CreateDepartment() {
                   </div>
                   <div className=" ">
                     <div className="d-flex justify-content-end">
-                      <button
-                        type="button"
-                        class="btn btn_primary waves-effect waves-light btn-label right fs_13"
-                        onClick={handleSubmit}
-                      >
+                      <Button className={"btn_primary btn-label right"}  onClick={handleSubmit} icon={<FaArrowRight />} >
                         Submit
-                        <span className="label-icon"><FaArrowRight /></span>
-                      </button>
+                      </Button>
                     </div>
                   </div>
                 </form>
