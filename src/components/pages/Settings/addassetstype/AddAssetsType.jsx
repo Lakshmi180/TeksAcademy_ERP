@@ -1,11 +1,9 @@
-
-import React from "react";
+import React from 'react';
 import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 import { HiMiniPlus } from "react-icons/hi2";
-
-const CoursePackage = () => {
+const AddAssetsType = () => {
     return (
         <div>
             <div className='container-fluid'>
@@ -14,10 +12,10 @@ const CoursePackage = () => {
                         <div className="card border-0">
                             <div className="card-header">
                                 <div className="d-flex justify-content-between">
-                                    <h5 className="fs-16 txt-color">Course Packages</h5>
+                                    <h5 className="fs-16 txt-color">Asset Type</h5>
                                     <div>
                                         <button type="button" class="btn btn_success add-btn fs_13 ">
-                                            <Link to="/createcoursepackage" className="button_color"><HiMiniPlus /> Add Course Package</Link>
+                                            <Link to="/createaddassetstype" className="button_color"><HiMiniPlus /> Add Assets Type</Link>
                                         </button>
                                     </div>
                                 </div>
@@ -33,15 +31,6 @@ const CoursePackage = () => {
                                                 <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
                                                     Name
                                                 </th>
-                                                <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                                                    Description
-                                                </th>
-                                                <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                                                    Create By
-                                                </th>
-                                                <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                                                    Create At
-                                                </th>
                                                 <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                                                     Actions
                                                 </th>
@@ -54,16 +43,7 @@ const CoursePackage = () => {
                                                     01
                                                 </td>
                                                 <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Teks Job Oriented Program
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Description
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Bhavitha
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    12-10-2024
+                                                    Kavya
                                                 </td>
                                                 <td className='fs_13 black_color  lh_xs bg_light '>
                                                     <MdEdit className='text-mute table_icons me-3' />
@@ -76,16 +56,7 @@ const CoursePackage = () => {
                                                     01
                                                 </td>
                                                 <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Teks Job Oriented Program
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Description
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Bhavitha
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    12-10-2024
+                                                    Kavya
                                                 </td>
                                                 <td className='fs_13 black_color  lh_xs bg_light '>
                                                     <MdEdit className='text-mute table_icons me-3' />
@@ -138,7 +109,7 @@ const CoursePackage = () => {
                 </div>
             </div>
         </div>
-    )
-
+    );
 }
-export default CoursePackage;
+
+export default AddAssetsType;

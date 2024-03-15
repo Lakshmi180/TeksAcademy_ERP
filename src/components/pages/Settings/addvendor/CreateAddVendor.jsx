@@ -1,16 +1,13 @@
-
-
-import React from "react";
+import React from 'react';
 import { FaArrowRight } from "react-icons/fa";
-
-const CreateCoursePackage=()=>{
-    return(
+const CreateAddVendor = () => {
+    return (
         <div>
             <div className="row d-flex justify-content-center">
                 <div className="col-lg-5">
                     <div className="card">
                         <div className="card-header">
-                            <h5 className="fs-16 txt-color">Create Course Package</h5>
+                            <h5 className="fs-16 txt-color">Create Vendor</h5>
                         </div>
                         <div className="card-body">
                             <form>
@@ -19,12 +16,12 @@ const CreateCoursePackage=()=>{
                                         for="firstNameinput"
                                         className="form-label fs-s fw-medium txt-color"
                                     >
-                                        Package Name
+                                    Vendor Name
                                     </label>
                                     <input
                                         type="text"
                                         className="form-control fs-s bg-form txt-color"
-                                        placeholder="Enter Package Name"
+                                        placeholder="Enter Vendor Name"
                                         id="firstNameinput"
                                     />
                                 </div>
@@ -37,7 +34,6 @@ const CreateCoursePackage=()=>{
                                             Submit
                                             <span className="label-icon"><FaArrowRight /></span>
                                         </button>
-                                        
                                     </div>
                                 </div>
                             </form>
@@ -46,7 +42,7 @@ const CreateCoursePackage=()=>{
                 </div>
             </div>
         </div>
-    )
-
+    );
 }
-export default CreateCoursePackage;
+
+export default CreateAddVendor;
