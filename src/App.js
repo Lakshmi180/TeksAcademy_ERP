@@ -40,6 +40,14 @@ import CreateCoursePackage from "./components/pages/Settings/coursePackage/Creat
 
 import Studentdata from "./components/pages/Student/studentData/Studentdata";
 import CreateUserForm from "./components/pages/User/CreateUserForm/CreateUserForm";
+import LeadSource from "./components/pages/Settings/leadsource/LeadSource";
+import CreateLeadSource from "./components/pages/Settings/leadsource/CreateLeadSource";
+import CreateAdmissionFee from "./components/pages/Settings/admissionfee/CreateAdmissionFee";
+import AdmissionFee from "./components/pages/Settings/admissionfee/AdmissionFee";
+import AddVendor from "./components/pages/Settings/addvendor/AddVendor";
+import CreateAddVendor from "./components/pages/Settings/addvendor/CreateAddVendor";
+import AddAssetsType from "./components/pages/Settings/addassetstype/AddAssetsType";
+import CreateAddAssetsType from "./components/pages/Settings/addassetstype/CreateAddAssetsType";
 
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
@@ -100,10 +108,17 @@ function App() {
             <Route path="/createdepartment" element={<CreateDepartment />} />
 
             <Route path="/coursepackage" element={<CoursePackage />} />
-            <Route
-              path="/createcoursepackage"
-              element={<CreateCoursePackage />}
-            />
+            <Route path="/createcoursepackage" element={<CreateCoursePackage />} />
+            <Route path="/leadsource" element={<LeadSource />} />
+            <Route path="/createleadsource" element={<CreateLeadSource />} />
+            <Route path="/createadmissionfee" element={<CreateAdmissionFee />} />
+            <Route path="/admissionfee" element={<AdmissionFee />} />
+            <Route path="/addvendor" element={<AddVendor />} />
+            <Route path="/createaddvendor" element={<CreateAddVendor />} />
+            <Route path="/addassetstype" element={<AddAssetsType />} />
+            <Route path="/createaddassetstype" element={<CreateAddAssetsType/>}/>
+
+        
           </Routes>
         </div>
       </main>

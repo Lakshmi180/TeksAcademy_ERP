@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { RoleContext } from '../../../../context/RoleContext/RoleContextProvider'
-
-
+import { FaArrowRight } from "react-icons/fa";
 
 export const CreateRole = () => {
 
@@ -61,14 +60,14 @@ export const CreateRole = () => {
 
   }
 
-
-
-
   return (
-    <div className='container'>
-      <div className="card  border-0 p-2">
-        <h6>Create Role</h6>
-        <div class="row gy-4 ">
+    <div className='container-fluid'>
+      <div className="card">
+        <div className="card-header">
+          <h5 className="fs-16 txt-color">Create Role</h5>
+        </div>
+        <div className="card-body">
+        <div class="row">
           <div class="col-xxl-3 col-md-6">
             <div>
               <div className="form-group text-start">
@@ -80,7 +79,8 @@ export const CreateRole = () => {
                 </label>
                 <input
                   class="form-control"
-                  type="text"
+                    type="text"
+                    placeholder='Enter Role Name'
                   id="example-text-input"
                   name="role"
                   value={fromData.role}
@@ -97,7 +97,8 @@ export const CreateRole = () => {
                 </label>
                 <input
                   class="form-control"
-                  type="text"
+                    type="text"
+                    placeholder='Enter Role Discription'
                   id="example-text-input"
                   name="roleDescription"
                   value={fromData.roleDescription}
@@ -106,12 +107,17 @@ export const CreateRole = () => {
               </div>
             </div>
           </div>
-          <div className=''>
-            <button type="button" class="btn btn_primary waves-effect waves-light"
-              onClick={handleSubmit}
-            >
-              Submit
-            </button>
+          <div className=" ">
+            <div className="d-flex justify-content-end">
+              <button
+                type="button"
+                class="btn btn_primary waves-effect waves-light btn-label right fs_13" onClick={handleSubmit}
+              >
+                Submit
+                <span className="label-icon"><FaArrowRight /></span>
+              </button>
+            </div>
+          </div>
           </div>
         </div>
       </div>

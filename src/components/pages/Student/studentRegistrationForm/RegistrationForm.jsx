@@ -10,6 +10,7 @@ import { OthersForm } from "./OthersForm";
 import { Billing } from "./Billing";
 import { ParentsDetails } from "./ParentsDetails";
 import { IoMdArrowBack, IoMdCheckmark, IoMdArrowForward } from "react-icons/io";
+import Button from "../../../common/design/Button";
 
 function RegistrationForm() {
   const [activeTab, setActiveTab] = useState(0);
@@ -103,6 +104,9 @@ function RegistrationForm() {
     },
   ];
 
+  function handleClick() {
+    alert("Hello Lakshmi")
+  }
   function handleNext() {
     localStorage.setItem("formData", JSON.stringify(formData));
     setActiveTab((prevActiveTab) => prevActiveTab + 1);
@@ -131,11 +135,10 @@ function RegistrationForm() {
                   type="button"
                   className={
                     activeTab === index
-                      ? `${
-                          theme === "light"
-                            ? "form_tab_btn active"
-                            : "form_tab_btn dark active"
-                        }`
+                      ? `${theme === "light"
+                        ? "form_tab_btn active"
+                        : "form_tab_btn dark active"
+                      }`
                       : "form_tab_btn "
                   }
                   onClick={() => setActiveTab(index)}
@@ -197,6 +200,8 @@ function RegistrationForm() {
                   </button>
                 </div>
               )}
+              <Button className={"btn_primary"} icon={<IoMdArrowBack />} onClick={handleNext}>Hello</Button>
+              <Button className={"btn_primary"} icon={<IoMdArrowBack />} onClick={handlePrev}>Back</Button>
             </div>
           </div>
         </form>

@@ -13,10 +13,10 @@ export const Branch = () => {
                         <div className="card border-0">
                             <div className="card-header">
                                 <div className="d-flex justify-content-between">
-                                    <div>   Branch</div>
+                                    <h5 className="fs-16 txt-color">Branch</h5>
                                     <div>
                                         <button type="button" class="btn btn_success add-btn fs_13 ">
-                                            <Link to="/createbranch" className="button_color"><HiMiniPlus /> Add New Branch</Link>
+                                            <Link to="/createbranch" className="button_color"><HiMiniPlus /> Add Branch</Link>
                                         </button>
                                     </div>
                                 </div>
