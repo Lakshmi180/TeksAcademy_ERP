@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { RoleContext } from '../../../../context/RoleContext/RoleContextProvider'
 import { FaArrowRight } from "react-icons/fa";
-
+import Button from "../../../common/design/Button";
 export const CreateRole = () => {
 
   const{RoleState, createRole}=useContext(RoleContext)
@@ -61,7 +61,7 @@ export const CreateRole = () => {
   }
 
   return (
-    <div className='container-fluid'>
+    <div className='container'>
       <div className="card">
         <div className="card-header">
           <h5 className="fs-16 txt-color">Create Role</h5>
@@ -109,13 +109,9 @@ export const CreateRole = () => {
           </div>
           <div className=" ">
             <div className="d-flex justify-content-end">
-              <button
-                type="button"
-                class="btn btn_primary waves-effect waves-light btn-label right fs_13" onClick={handleSubmit}
-              >
-                Submit
-                <span className="label-icon"><FaArrowRight /></span>
-              </button>
+                <Button className={"btn_primary btn-label right"} icon={<FaArrowRight />} >
+                  Submit
+                </Button>
             </div>
           </div>
           </div>

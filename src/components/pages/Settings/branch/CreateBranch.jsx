@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { BranchContext } from "../../../../context/BranchContext/BranchContextProvider";
 import axios from "axios";
 import { FaArrowRight } from "react-icons/fa";
-
+import Button from "../../../common/design/Button";
 const CreateBranch = () => {
 
 const {DispatchBranch,BranchState, getAllBranches}=useContext(BranchContext)
@@ -84,7 +84,7 @@ const {DispatchBranch,BranchState, getAllBranches}=useContext(BranchContext)
 
 
     return (
-        <div>
+        <div className="container">
             <div className="row d-flex justify-content-center">
                 <div className="col-lg-5">
                     <div className="card">
@@ -109,22 +109,11 @@ const {DispatchBranch,BranchState, getAllBranches}=useContext(BranchContext)
                                         onChange={handlechange}
                                     />
                                 </div>
-                                <div className=''>
-                                    <button type="button" class="btn btn_primary waves-effect waves-light"
-                                        onClick={handleSubmit}
-                                    >
-                                        Submit
-                                    </button>
-                                    </div>
                                 <div className=" ">
                                     <div className="d-flex justify-content-end">
-                                        <button
-                                            type="button"
-                                            class="btn btn_primary waves-effect waves-light btn-label right fs_13"
-                                        >
+                                        <Button className={"btn_primary btn-label right"} onClick={handleSubmit}  icon={<FaArrowRight />} >
                                             Submit
-                                            <span className="label-icon"><FaArrowRight /></span>
-                                        </button>
+                                        </Button>
                                     </div>
                                 </div>
                             </form>

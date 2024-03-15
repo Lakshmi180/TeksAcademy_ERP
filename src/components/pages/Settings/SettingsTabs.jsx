@@ -46,7 +46,6 @@ export const SettingsTabs = () => {
             icon: "https://themesbrand.com/velzon/html/default/assets/images/user-illustarator-1.png",
             link: "/"
         },
-     
         {
             name: "Add Vendor",
             icon: "https://themesbrand.com/velzon/html/default/assets/images/user-illustarator-1.png",
