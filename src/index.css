@@ -440,6 +440,7 @@ h1 {
 .text_color {
   color: var(--erp-text-color) !important;
 }
+
 /* button css */
 .btn-label {
   position: relative;

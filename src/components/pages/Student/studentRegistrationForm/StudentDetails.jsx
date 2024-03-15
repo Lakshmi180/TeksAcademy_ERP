@@ -24,7 +24,10 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             type="text"
             name="rname"
             placeholder="Enter your name"
-            onChange={handleInputChange}
+            onChange={(e) =>
+              handleInputChange({ name: "rname", value: e.target.value })
+            }
+            value={formData?.rname || ""}
           />
         </div>
         <div className="form-group text-start col-lg-3">
@@ -37,7 +40,10 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             type="email"
             name="remail"
             placeholder="Enter your email address"
-            // onBlur={handleInputChange}
+            onChange={(e) =>
+              handleInputChange({ name: "remail", value: e.target.value })
+            }
+            value={formData?.remail || ""}
           />
         </div>
 
@@ -50,7 +56,13 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             id="rphoto"
             type="file"
             name="rphoto"
-            // onBlur={handleInputChange}
+            onChange={(e) =>
+              handleInputChange({
+                name: "rphoto",
+                type: "file",
+                files: e.target.files,
+              })
+            }
           />
         </div>
         <div className="form-group text-start col-lg-3">
@@ -63,7 +75,10 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             type="date"
             name="rdob"
             onKeyDown={handleKeyDown}
-            // onBlur={handleInputChange}
+            onChange={(e) =>
+              handleInputChange({ name: "rdob", value: e.target.value })
+            }
+            value={formData?.rdob || ""}
           />
         </div>
       </div>
@@ -80,7 +95,10 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             name="rcontactnum"
             onKeyDown={handleKeyDown}
             placeholder="Enter Contact Number"
-            // onBlur={handleInputChange}
+            onChange={(e) =>
+              handleInputChange({ name: "rcontactnum", value: e.target.value })
+            }
+            value={formData?.rcontactnum || ""}
           />
         </div>
 
@@ -95,7 +113,10 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             name="rwhatsappnum"
             onKeyDown={handleKeyDown}
             placeholder="Enter WhatsApp number"
-            // onBlur={handleInputChange}
+            onChange={(e) =>
+              handleInputChange({ name: "rwhatsappnum", value: e.target.value })
+            }
+            value={formData?.rwhatsappnum || ""}
           />
         </div>
         <div className="form-group text-start col-lg-3">
@@ -106,8 +127,11 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             class="form-select form-control"
             aria-label="Default select example"
             id="rgender"
-            // onChange={handleInputChange}
             name="rgender"
+            onChange={(e) =>
+              handleInputChange({ name: "rgender", value: e.target.value })
+            }
+            value={formData?.rgender || ""}
           >
             <option selected="" className="fs-s">
               Select your Gender
@@ -128,13 +152,18 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             class="form-select form-control"
             aria-label="Default select example"
             id="rmaritalstatus"
-            // onChange={handleInputChange}
             name="rmaritalstatus"
+            onChange={(e) =>
+              handleInputChange({
+                name: "rmaritalstatus",
+                value: e.target.value,
+              })
+            }
+            value={formData?.rmaritalstatus || ""}
           >
             <option selected="">Your Marital Status</option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
-            <option value="3">Other</option>
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
           </select>
         </div>
       </div>
@@ -151,7 +180,10 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             name="rcscname"
             onKeyDown={handleKeyDown}
             placeholder="College/School/Company"
-            // onBlur={handleInputChange}
+            onChange={(e) =>
+              handleInputChange({ name: "rcscname", value: e.target.value })
+            }
+            value={formData?.rcscname || ""}
           />
         </div>
         <div className="form-group text-start col-lg-3">
@@ -165,7 +197,10 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             name="rpincode"
             onKeyDown={handleKeyDown}
             placeholder="Enter your pincode"
-            // onBlur={handleInputChange}
+            onChange={(e) =>
+              handleInputChange({ name: "rpincode", value: e.target.value })
+            }
+            value={formData?.rpincode || ""}
           />
         </div>
         <div className="form-group text-start col-lg-3">
@@ -178,7 +213,10 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             type="text"
             name="rcountry"
             placeholder="Enter your Country"
-            // onBlur={handleInputChange}
+            onChange={(e) =>
+              handleInputChange({ name: "rcountry", value: e.target.value })
+            }
+            value={formData?.rcountry || ""}
           />
         </div>
         <div className="form-group text-start col-lg-3">
@@ -191,7 +229,10 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             type="text"
             name="rstate"
             placeholder="Enter your State"
-            // onBlur={handleInputChange}
+            onChange={(e) =>
+              handleInputChange({ name: "rstate", value: e.target.value })
+            }
+            value={formData?.rstate || ""}
           />
         </div>
       </div>
@@ -207,7 +248,10 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             type="text"
             name="rnative"
             placeholder="Enter your Native Place"
-            // onBlur={handleInputChange}
+            onChange={(e) =>
+              handleInputChange({ name: "rnative", value: e.target.value })
+            }
+            value={formData?.rnative || ""}
           />
         </div>
         <div className="form-group text-start col-lg-3">
@@ -220,7 +264,10 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             type="text"
             name="rarea"
             placeholder="Enter your Area"
-            // onBlur={handleInputChange}
+            onChange={(e) =>
+              handleInputChange({ name: "rarea", value: e.target.value })
+            }
+            value={formData?.rarea || ""}
           />
         </div>
       </div>

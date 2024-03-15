@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./RegistrationForm.css";
 import { StudentDetails } from "./StudentDetails";
 import { ThankYou } from "../../../common/design/ThankYou";
@@ -15,44 +15,75 @@ import Button from "../../../common/design/Button";
 function RegistrationForm() {
   const [activeTab, setActiveTab] = useState(0);
   const [isFormValid, setIsFormValid] = useState(false);
-  const [formData, setFormData] = useState({
-    rname: "",
-    // remail,
-    // rphoto,
-    // rdob,
-    // rcontactnum,
-    // rwhatsappnum,
-    // rgender,
-    // rmaritalstatus,
-    // rcscname,
-    // rpincode,
-    // rcountry,
-    // rstate,
-    // rnative,
-    // rarea,
+
+  const [formData, setFormData] = useState(() => {
+    // Intializing local storage to add the form data
+    const storedData = JSON.parse(localStorage.getItem("formData"));
+    return storedData || [];
   });
+  const handleInputChange = (input) => {
+    const { name, value, type, files } = input;
+
+    // Handle different types of inputs
+    if (type === "file") {
+      // For file input, handle differently
+      const file = files[0]; // Assuming only single file selection
+      setFormData((prevValues) => ({
+        ...prevValues,
+        [name]: file,
+      }));
+    } else {
+      // For other input types, handle as usual
+      setFormData((prevValues) => ({
+        ...prevValues,
+        [name]: value,
+      }));
+    }
+  };
   const { theme } = useTheme();
 
-  const [tabs] = useState([
+  const tabs = [
     {
       title: "Student Details",
-      content: <StudentDetails />,
+      content: (
+        <StudentDetails
+          formData={formData}
+          handleInputChange={handleInputChange}
+        />
+      ),
     },
     {
       title: "Parent Details",
-      content: <ParentsDetails />,
+      content: (
+        <ParentsDetails
+          formData={formData}
+          handleInputChange={handleInputChange}
+        />
+      ),
     },
     {
       title: "Education Details",
-      content: <EducationDetails />,
+      content: (
+        <EducationDetails
+          formData={formData}
+          handleInputChange={handleInputChange}
+        />
+      ),
     },
     {
       title: "Admission Details",
-      content: <AdmissionDetails />,
+      content: (
+        <AdmissionDetails
+          formData={formData}
+          handleInputChange={handleInputChange}
+        />
+      ),
     },
     {
       title: "Fee Details",
-      content: <FeeDetails />,
+      content: (
+        <FeeDetails formData={formData} handleInputChange={handleInputChange} />
+      ),
     },
     {
       title: "Billing",
@@ -71,12 +102,13 @@ function RegistrationForm() {
         />
       ),
     },
-  ]);
+  ];
 
   function handleClick() {
     alert("Hello Lakshmi")
   }
   function handleNext() {
+    localStorage.setItem("formData", JSON.stringify(formData));
     setActiveTab((prevActiveTab) => prevActiveTab + 1);
   }
 
@@ -88,6 +120,9 @@ function RegistrationForm() {
     e.preventDefault();
   };
 
+  useEffect(() => {
+    localStorage.setItem("formData", JSON.stringify(formData));
+  }, [formData]);
   return (
     <div className="registration_form_section  ">
       <div className="top">
