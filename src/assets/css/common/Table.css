@@ -170,13 +170,11 @@ img {
 }
 .btn_success {
   color: var(--erp-white-color) !important;
-
   background-color: var(--erp-green-500) !important;
 }
 .btn_success:hover{
   color: var(--erp-white-color) !important;
-
-  background-color: var(--erp-green-800) !important;
+  background-color: var(--erp-green-600) !important;
 }
 .bg_success {
   background-color: var(--erp-green-100) !important;

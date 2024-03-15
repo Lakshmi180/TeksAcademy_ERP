@@ -91,8 +91,9 @@ function CreateUserForm() {
                       name="branch"
                       id="branch"
                       required
-                    >
-                      <option value="">Department</option>
+                    ><option value="1">Select Department</option>
+                      <option value="2">Department 1</option>
+                      <option value="3">Department 2</option>
                     </select>
                   </div>
                   <div className=" col-md-4 ">
@@ -107,7 +108,9 @@ function CreateUserForm() {
                       id="branch"
                       required
                     >
-                      <option value="">Report To</option>
+                      <option value="1">Select Report</option>
+                      <option value="2">Report 1</option>
+                      <option value="3">Report 2</option>
                     </select>
                   </div>
                   <div className=" col-md-4 ">
@@ -122,7 +125,9 @@ function CreateUserForm() {
                       id="branch"
                       required
                     >
-                      <option value="">Role</option>
+                      <option value="1">Select Role</option>
+                      <option value="2">Role</option>
+                      <option value="3">Role</option>
                     </select>
                   </div>
                   <div className=" col-md-4 ">
@@ -137,7 +142,9 @@ function CreateUserForm() {
                       id="branch"
                       required
                     >
-                      <option value="">Branch</option>
+                      <option value="1">Select Branch</option>
+                      <option value="2">Branch</option>
+                      <option value="3">Branch</option>
                     </select>
                   </div>
                 </div>
