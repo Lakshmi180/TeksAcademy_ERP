@@ -1,8 +1,9 @@
 import React from 'react';
 import { FaArrowRight } from "react-icons/fa";
+import Button from "../../../common/design/Button";
 const CreateLeadSource = () => {
   return (
-    <div>
+    <div className='container'>
           <div className="row d-flex justify-content-center">
               <div className="col-lg-5">
                   <div className="card">
@@ -27,13 +28,9 @@ const CreateLeadSource = () => {
                               </div>
                               <div className=" ">
                                   <div className="d-flex justify-content-end">
-                                      <button
-                                          type="button"
-                                          class="btn btn_primary waves-effect waves-light btn-label right fs_13"
-                                      >
+                                      <Button className={"btn_primary btn-label right"} icon={<FaArrowRight />} >
                                           Submit
-                                          <span className="label-icon"><FaArrowRight /></span>
-                                      </button>
+                                      </Button>
                                   </div>
                               </div>
                           </form>

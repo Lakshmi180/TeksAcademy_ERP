@@ -1,7 +1,8 @@
 import React from "react";
 import "./CreateUserForm.css";
 import { FaArrowRight } from "react-icons/fa";
-
+import Button from "../../../common/design/Button";
+import { IoMdArrowBack, IoMdCheckmark, IoMdArrowForward } from "react-icons/io";
 function CreateUserForm() {
   return (
     <div>
@@ -150,13 +151,9 @@ function CreateUserForm() {
                 </div>
                 <div className=" ">
                   <div className="d-flex justify-content-end">
-                    <button
-                      type="button"
-                      class="btn btn_primary waves-effect waves-light btn-label right fs_13"
-                    >
+                    <Button className={"btn_primary btn-label right"} icon={<FaArrowRight />} >
                       Submit
-                      <span className="label-icon"><FaArrowRight /></span>
-                    </button>
+                    </Button>
                   </div>
                 </div>
               </form>

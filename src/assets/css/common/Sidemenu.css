@@ -90,6 +90,9 @@ a.sidebar-link:hover {
   position: relative;
 }
 
+#sidebar:not(.expand) .sidebar-item:hover .sidebar-dropdown {
+  display: block;
+}
 /* minimise hovering */
 #sidebar:not(.expand) .sidebar-item .sidebar-link .sidebar-dropdown {
   position: absolute;

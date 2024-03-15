@@ -73,7 +73,7 @@ export const Sidemenu = ({ isExpanded }) => {
                 <Link
                   className="sidebar-link"
                   onClick={() => handleActiveClick("users")}
-                  to="/createuser"
+                  to="/userdata"
                 >
                   <span className={`${active === "users" ? `text-white` : ""}`}>
                     <FaRegUserCircle className="main_icon" />
@@ -277,56 +277,6 @@ export const Sidemenu = ({ isExpanded }) => {
                       Assign Assets
                     </span>
                   </Link>
-                </li>
-                <li className="sidebar-item">
-                  <Link
-                    onClick={() => handleActiveClick("settings")}
-                    className="sidebar-link has-dropdown collapsed "
-                    data-bs-toggle="collapse"
-                    data-bs-target="#setting"
-                    aria-expanded="false"
-                    aria-controls="setting"
-                  >
-                    <span
-                      className={`${active === "settings" ? "text-white" : ""}`}
-                    >
-                      <PiStudentFill className="main_icon" />
-                      Settings
-                    </span>
-                  </Link>
-                  <ul
-                    id="setting"
-                    className="sidebar-dropdown list-unstyled collapse"
-                  >
-                    <li className="sidebar-item">
-                      <Link
-                        className="sidebar-link"
-                        onClick={() => handleActiveClick("addassetstype")}
-                      >
-                        <span
-                          className={`${active === "addassetstype" ? "text-white" : ""
-                            }`}
-                        >
-                          <AiOutlineLine className="sub_icon" />
-                          Add Assets Type
-                        </span>
-                      </Link>
-                    </li>
-                    <li className="sidebar-item">
-                      <Link
-                        className="sidebar-link"
-                        onClick={() => handleActiveClick("addvendor")}
-                      >
-                        <span
-                          className={`${active === "addvendor" ? "text-white" : ""
-                            }`}
-                        >
-                          <AiOutlineLine className="sub_icon" />
-                          Add Vendor
-                        </span>
-                      </Link>
-                    </li>
-                  </ul>
                 </li>
               </ul>
             </li>
