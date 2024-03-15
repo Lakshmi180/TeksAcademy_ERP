@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ParentsDetails = () => {
+export const ParentsDetails = ({ formData, handleInputChange }) => {
   const handleKeyDown = (event) => {
     if (event.keyCode === 38 || event.keyCode === 40) {
       event.preventDefault(); // Prevent default behavior of arrow keys
@@ -22,6 +22,10 @@ export const ParentsDetails = () => {
             type="text"
             name="rparentname"
             placeholder="Enter your Parent's Name"
+            onChange={(e) =>
+              handleInputChange({ name: "rparentname", value: e.target.value })
+            }
+            value={formData?.rparentname || ""}
           />
         </div>
 
@@ -39,6 +43,13 @@ export const ParentsDetails = () => {
             name="rparentscontact"
             onKeyDown={handleKeyDown}
             placeholder="Enter your Parent's contact"
+            onChange={(e) =>
+              handleInputChange({
+                name: "rparentscontact",
+                value: e.target.value,
+              })
+            }
+            value={formData?.rparentscontact || ""}
           />
         </div>
 
@@ -49,14 +60,21 @@ export const ParentsDetails = () => {
           <select
             class="form-select form-control"
             aria-label="Default select example"
-            id="rgender"
+            id="rrelation"
+            onChange={(e) =>
+              handleInputChange({ name: "rrelation", value: e.target.value })
+            }
+            value={formData?.rrelation || ""}
           >
             <option selected="" className="fs-s">
               --Select--
             </option>
-            <option value="1">Male</option>
-            <option value="2">Female</option>
-            <option value="3">Other</option>
+            <option value="Father">Father</option>
+            <option value="Mother">Mother</option>
+            <option value="Brother">Brother</option>
+            <option value="Sister">Sister</option>
+            <option value="Uncle">Uncle</option>
+            <option value="Aunt">Aunt</option>
           </select>
         </div>
       </div>

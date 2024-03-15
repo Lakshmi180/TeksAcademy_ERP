@@ -189,12 +189,11 @@ body,
   --erp-fw-700: 700;
 
   /* line-height */
-  --erp-xs-lh: 1.2;
-  --erp-font-xs-light-lh: 12px 300 1.2;
-  --erp-font-s-regular-lh: 14px 400 1.5;
-  --erp-font-m-medium-lh: 16px 500 1.6;
-  --erp-font-l-bold-lh: 18px 700 1.8;
-  --erp-font-xl-bold-lh: 20px 700 2;
+  --erp-lh-100:  1.2;
+  --erp-lh-200: 1.5;
+  --erp-lh-300: 1.6;
+  --erp-lh-400: 1.8;
+  --erp-lh-500: 2;
   /* Extra Large, Bold, Line Height 2.0 */
 }
 
@@ -266,6 +265,29 @@ body,
 .font-weight-700 {
   font-weight: var(--erp-fw-700);
 }
+
+/* Line Height */
+
+.lh-100 {
+  line-height: var(--erp-lh-100);
+}
+
+.lh-200 {
+  line-height: var(--erp-lh-200);
+}
+
+.lh-300 {
+  line-height: var(--erp-lh-300);
+}
+
+.lh-400 {
+  line-height: var(--erp-lh-400);
+}
+
+.lh-500 {
+  line-height: var(--erp-lh-500);
+}
+
 
 .main_menu i {
   display: inline-block;
@@ -395,6 +417,7 @@ h1 {
 .text_color {
   color: var(--erp-text-color) !important;
 }
+
 /* button css */
 .btn-label {
   position: relative;
