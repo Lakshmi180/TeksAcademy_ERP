@@ -1,11 +1,9 @@
-
-import React from "react";
+import React from 'react';
 import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 import { HiMiniPlus } from "react-icons/hi2";
-
-const CoursePackage = () => {
+const LeadSource = () => {
     return (
         <div>
             <div className='container-fluid'>
@@ -14,10 +12,10 @@ const CoursePackage = () => {
                         <div className="card border-0">
                             <div className="card-header">
                                 <div className="d-flex justify-content-between">
-                                    <h5 className="fs-16 txt-color">Course Packages</h5>
+                                    <h5 className="fs-16 txt-color">Branch</h5>
                                     <div>
                                         <button type="button" class="btn btn_success add-btn fs_13 ">
-                                            <Link to="/createcoursepackage" className="button_color"><HiMiniPlus /> Add Course Package</Link>
+                                            <Link to="/createleadsource" className="button_color"><HiMiniPlus /> Add Lead Source</Link>
                                         </button>
                                     </div>
                                 </div>
@@ -54,7 +52,7 @@ const CoursePackage = () => {
                                                     01
                                                 </td>
                                                 <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Teks Job Oriented Program
+                                                    Kukkatpally
                                                 </td>
                                                 <td className='fs_13 black_color  lh_xs bg_light'>
                                                     Description
@@ -76,7 +74,7 @@ const CoursePackage = () => {
                                                     01
                                                 </td>
                                                 <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Teks Job Oriented Program
+                                                    Kukkatpally
                                                 </td>
                                                 <td className='fs_13 black_color  lh_xs bg_light'>
                                                     Description
@@ -138,7 +136,7 @@ const CoursePackage = () => {
                 </div>
             </div>
         </div>
-    )
-
+    );
 }
-export default CoursePackage;
+
+export default LeadSource;
