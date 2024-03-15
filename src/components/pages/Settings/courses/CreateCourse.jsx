@@ -1,8 +1,79 @@
 
-import React from "react";
+import axios from "axios";
+import React, { useContext, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { toast } from "react-toastify";
+import { CourseContext } from "../../../../context/courseContext/CourseContextProvider";
 
 const CreateCourse = () => {
+    const {DispatchCourse,courseState,getAllCourses}=useContext(CourseContext)
+    const [formdata, setformdata]=useState({
+        course_name:"",
+        course_package:"",
+        fee:"",
+        max_discount:"",
+       
+    })
+
+    const handleChange =(e)=>{
+        setformdata((prev)=>{
+            return {
+             ...prev,
+                [e.target.name]:e.target.value
+            }
+        })
+    }
+
+    const handleSubmit=async(e)=>{
+        e.preventDefault();
+        let user={
+            course_name: formdata.course_name,
+            course_package: formdata.course_package,
+            fee: formdata.fee,
+            max_discount: formdata.max_discount,
+            
+        }
+
+        console.log(user, "userfound")
+        user=[user];
+        const dataWithTitleCase = user.map((item) => {
+            const newItem = {};
+            for (const key in item) {
+              if (Object.prototype.hasOwnProperty.call(item, key)) {
+                if (typeof item[key] === "string" && key !== "email") {
+                  newItem[key] = item[key]
+                    .split(" ")
+                    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                    .join(" ");
+                } else {
+                  newItem[key] = item[key];
+                }
+              }
+            }
+            return newItem;
+          });
+          user=dataWithTitleCase[0];
+          console.log(user,"datatiltecases")
+    
+    
+          try{
+            const {data, status} = await 
+            toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/addcourses`,JSON.stringify(user) ),{
+                loading: "Loading...",
+                success: "Course created Successfully",
+                error: "Course not Created"
+            })
+    
+            if(status === 201){
+                console.log(data, "hellobb")    
+            }
+          }
+          catch(error){
+            console.log(error)
+          }
+    }
+    
+
     return (
         <div>
             <div className="container-fluid">
@@ -31,6 +102,10 @@ const CreateCourse = () => {
                                                 className="form-control fs-s bg-form txt-color"
                                                 placeholder="Enter Course Name"
                                                 id="firstNameinput"
+                                                name="course_name"
+                                                value={formdata.course_name}
+                                                onChange={handleChange}
+
                                             />
                                         </div>
                                     </div>
@@ -43,13 +118,17 @@ const CreateCourse = () => {
                                         <select
                                             class="form-select form-control  "
                                             aria-label="Default select example"
-                                            placeholder="Branch*"
-                                            name="branch"
-                                            id="branch"
+                                            placeholder="course_package*"
+                                            name="course_package"
+                                            id="course_package"
+                                            value={formdata.course_package}
+                                            onChange={handleChange}
+                                            
+
                                             required
-                                        ><option value="1">Select Course Package</option>
-                                            <option value="2">Teks Job Oriented Program</option>
-                                            <option value="3">Teks Professional Training Program</option>
+                                        ><option value="">Select Course Package</option>
+                                            <option >Teks Job Oriented Program</option>
+                                            <option >Teks Professional Training Program</option>
                                         </select>
                                     </div>
                                     <div className="col-md-4">
@@ -61,10 +140,13 @@ const CreateCourse = () => {
                                                 Fee
                                             </label>
                                             <input
-                                                type=""
+                                                type="number"
                                                 className="form-control fs-s bg-form"
                                                 placeholder="Enter Fee"
                                                 id="firstNameinput"
+                                                name="fee"
+                                                value={formdata.fee}
+                                                onChange={handleChange}
                                             />
                                         </div>
                                     </div>
@@ -77,10 +159,13 @@ const CreateCourse = () => {
                                                 Max Discount
                                             </label>
                                             <input
-                                                type=""
+                                                type="number"
                                                 className="form-control fs-s bg-form"
                                                 placeholder="Enter Max Discount"
                                                 id="firstNameinput"
+                                                name="max_discount"
+                                                value={formdata.max_discount}
+                                                onChange={handleChange}
                                             />
                                         </div>
                                     </div>
@@ -90,6 +175,7 @@ const CreateCourse = () => {
                                         <button
                                             type="button"
                                             class="btn btn_primary waves-effect waves-light btn-label right fs_13"
+                                            onClick={handleSubmit}
                                         >
                                             Submit
                                             <span className="label-icon"><FaArrowRight /></span>

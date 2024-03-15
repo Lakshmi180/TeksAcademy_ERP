@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { RoleContext } from '../../../../context/RoleContext/RoleContextProvider'
+import { RoleContext } from '../../../../context/roleContext/RoleContextProvider'
 import { FaArrowRight } from "react-icons/fa";
 
 export const CreateRole = () => {

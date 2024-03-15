@@ -1,6 +1,74 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useContext, useState } from 'react'
 import { FaArrowRight } from "react-icons/fa";
+import { toast } from 'react-toastify';
+import { DepartmentContext } from '../../../../context/deparmentContext/DepartmentContextProvider';
+import { useNavigate } from 'react-router-dom';
 function CreateDepartment() {
+  const navigate = useNavigate();
+
+  const {DispatchDepartment,DepartmentState, getAllDeparments}=useContext(DepartmentContext)
+
+  const [formData, setFormData] = useState({
+    department: "",
+  });
+
+  const handlechange = (e) => {
+    setFormData((prev) => {
+      return {
+        ...prev,
+        [e.target.name]: e.target.value
+      }
+    })
+  }
+
+  const handleSubmit=async(e)=>{
+    e.preventDefault();
+    let user={
+      department_name: formData.department,
+    }
+    user=[user];
+    const dataWithTitleCase = user.map((item) => {
+        const newItem = {};
+  
+        for (const key in item) {
+          if (Object.prototype.hasOwnProperty.call(item, key)) {
+            if (typeof item[key] === "string" && key !== "email") {
+              newItem[key] = item[key]
+                .split(" ")
+                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(" ");
+            } else {
+              newItem[key] = item[key];
+            }
+          }
+        }
+        return newItem;
+      });
+      user=dataWithTitleCase[0];
+      
+
+
+      try{
+        const {data, status} = await 
+        toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/adddepartment`, user),{
+            loading: "Loading...",
+            success: "department created Successfully",
+            error: "department not Created"
+        })
+
+        if(status === 201){
+            console.log(data, "hellobb")
+            DispatchDepartment({type:"CREATE_DEPARTMENT", payload:data})
+            getAllDeparments();
+            navigate("/department")
+        }
+      }
+      catch(error){
+        console.log(error)
+      }
+}
+
   return (
     <div>
       <div>
@@ -24,6 +92,9 @@ function CreateDepartment() {
                       className="form-control fs-s bg-form txt-color"
                       placeholder="Enter Department Name"
                       id="firstNameinput"
+                      name="department"
+                      vaule={formData.department}
+                      onChange={handlechange}
                     />
                   </div>
                   <div className=" ">
@@ -31,6 +102,7 @@ function CreateDepartment() {
                       <button
                         type="button"
                         class="btn btn_primary waves-effect waves-light btn-label right fs_13"
+                        onClick={handleSubmit}
                       >
                         Submit
                         <span className="label-icon"><FaArrowRight /></span>

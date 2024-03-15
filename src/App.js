@@ -22,7 +22,7 @@ import Tab from "./components/common/design/Tab";
 import Modal from "./components/common/design/Modal";
 import Page from "./components/common/design/Page";
 import Button from "./components/common/design/Button";
-import { useTheme } from "./context/ThemeContext/ThemeContext";
+import { useTheme } from "./context/themeContext/ThemeContext";
 import { Login } from "./components/Auth/Login";
 
 import RegistrationForm from "./components/pages/Student/studentRegistrationForm/RegistrationForm";

@@ -1,9 +1,85 @@
 
 
-import React from "react";
+import axios from "axios";
+import React, { useContext, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { toast } from "react-toastify";
+import { CoursePackageContext } from "../../../../context/coursePackageContext/CoursePackageContext";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const CreateCoursePackage=()=>{
+
+const {coursePackageState,getAllCoursePackages, DispatchCourseState}=useContext(CoursePackageContext)
+const navigate = useNavigate();
+    const [formdata, setformdata]= useState({
+        coursepackages_name:"",
+    });
+
+    const handlechange=(e)=>{
+        setformdata((prev)=>{
+            return {
+             ...prev,
+                coursepackages_name:e.target.value
+            }
+        })
+    }
+
+    const handleSubmit=async(e)=>{
+        e.preventDefault();
+        let user={
+            coursepackages_name: formdata.coursepackages_name,
+        }
+        user=[user];
+
+        const dataWithTitleCase = user.map((item) => {
+            const newItem = {};
+      
+            for (const key in item) {
+              if (Object.prototype.hasOwnProperty.call(item, key)) {
+                if (typeof item[key] === "string" && key !== "email") {
+                  newItem[key] = item[key]
+                    .split(" ")
+                    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                    .join(" ");
+                } else {
+                  newItem[key] = item[key];
+                }
+              }
+            }
+            return newItem;
+          });
+
+
+          user=dataWithTitleCase[0];
+
+          
+
+    //    let   updateduser = JSON.stringify(user)
+    //     console.log(updateduser, "datawithtitilecase")
+
+
+          try{
+            const {data, status} = await 
+            toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/addcoursespackages`,  user),{
+                loading: "Loading...",
+                success: "CoursePackage created Successfully",
+                error: "CoursePackage not Created"
+            })
+            if(status === 201){
+                DispatchCourseState({type:"CREATE_COURSE_PACKAGE", payload:data})
+                getAllCoursePackages()
+                navigate("/coursepackage")
+                
+            }
+          }
+          catch(error){
+            console.log(error)
+          }
+    }
+
+
+
+
     return(
         <div>
             <div className="row d-flex justify-content-center">
@@ -26,6 +102,8 @@ const CreateCoursePackage=()=>{
                                         className="form-control fs-s bg-form txt-color"
                                         placeholder="Enter Package Name"
                                         id="firstNameinput"
+                                        value={formdata.coursepackages_name}
+                                        onChange={handlechange}
                                     />
                                 </div>
                                 <div className=" ">
@@ -33,6 +111,7 @@ const CreateCoursePackage=()=>{
                                         <button
                                             type="button"
                                             class="btn btn_primary waves-effect waves-light btn-label right fs_13"
+                                            onClick={handleSubmit}
                                         >
                                             Submit
                                             <span className="label-icon"><FaArrowRight /></span>

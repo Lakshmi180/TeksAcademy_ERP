@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useReducer } from 'react'
 import DepartmentReducer from './DepartmentReducer';
+import axios from 'axios';
 
 
 
@@ -12,6 +13,8 @@ const DepartmentContextProvider=({children})=> {
     }
 
     const[DepartmentState, DispatchDepartment]= useReducer(DepartmentReducer, initialState )
+
+    console.log(DepartmentState.departments, "DepartmentState")
 
     const CreateDepartment=async(department)=>{
         try{
@@ -27,11 +30,13 @@ const DepartmentContextProvider=({children})=> {
 
     const getAllDeparments =async()=>{
         try{
-            const {data, status}=await axios.get(``)
-            if(status==200){
+            const {data, status}=await axios.get(`${process.env.REACT_APP_API_URL}/getdepartment`)
+            console.log(data, "lsknvjfdb")
+            if(status === 201){
                 DispatchDepartment({type: "SET_DEPARTMENTS", payload:data})
             }
         }
+
         catch(error){
             console.log(error)
         }
@@ -39,11 +44,11 @@ const DepartmentContextProvider=({children})=> {
 
     useEffect(()=>{
         getAllDeparments();
-    })
+    },[])
 
-    useEffect(()=>{
-        getAllDeparments();
-    },[DepartmentState?.departments])
+    // useEffect(()=>{
+    //     getAllDeparments();
+    // },[DepartmentState?.departments])
 
   return (
     <DepartmentContext.Provider value={{DepartmentState, DispatchDepartment, CreateDepartment,getAllDeparments}}>

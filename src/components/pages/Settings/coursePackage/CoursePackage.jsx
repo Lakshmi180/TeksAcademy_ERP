@@ -1,11 +1,13 @@
 
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 import { HiMiniPlus } from "react-icons/hi2";
+import { CoursePackageContext } from "../../../../context/coursePackageContext/CoursePackageContext";
 
 const CoursePackage = () => {
+    const { coursePackageState, getAllCoursePackages, DispatchCourseState } = useContext(CoursePackageContext)
     return (
         <div>
             <div className='container-fluid'>
@@ -48,50 +50,57 @@ const CoursePackage = () => {
                                             </tr>
                                         </thead>
                                         <tbody className=''>
-                                            {/* 1st row */}
-                                            <tr>
-                                                <td className='fs_13 black_color fw_500 lh_xs bg_light '>
-                                                    01
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Teks Job Oriented Program
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Description
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Bhavitha
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    12-10-2024
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light '>
-                                                    <MdEdit className='text-mute table_icons me-3' />
-                                                    <MdDelete className='text-mute table_icons me-3' />
-                                                </td>
-                                            </tr>
-                                            {/* 2nd row */}
-                                            <tr>
-                                                <td className='fs_13 black_color fw_500 lh_xs bg_light '>
-                                                    01
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Teks Job Oriented Program
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Description
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Bhavitha
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    12-10-2024
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light '>
-                                                    <MdEdit className='text-mute table_icons me-3' />
-                                                    <MdDelete className='text-mute table_icons me-3' />
-                                                </td>
-                                            </tr>
+
+                                            {
+                                                coursePackageState.coursepackages && coursePackageState.coursepackages.length > 0 ?
+                                                    coursePackageState.coursepackages[0].map((item, index) => {
+                                                        let date = new Date(item.date);
+                                                        const day = date.getUTCDate();
+                                                        const monthIndex = date.getUTCMonth();
+                                                        const year = date.getUTCFullYear();
+            
+                                                        const monthAbbreviations = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            
+                                                        // Formatting the date
+                                                        date = `${day < 10 ? "0" : ""}${day}-${monthAbbreviations[monthIndex]
+                                                            }-${year}`;
+            
+
+                                                        return (
+                                                            <tr>
+                                                                <td className='fs_13 black_color fw_500 lh_xs bg_light '>
+                                                                    {index+1}
+                                                                </td>
+                                                                <td className='fs_13 black_color  lh_xs bg_light'>
+                                                                    
+                                                                    {item.coursepackages_name}
+                                                                </td>
+                                                                <td className='fs_13 black_color  lh_xs bg_light'>
+                                                                    Description
+                                                                </td>
+                                                                <td className='fs_13 black_color  lh_xs bg_light'>
+                                                                    Bhavitha
+                                                                </td>
+                                                                <td className='fs_13 black_color  lh_xs bg_light'>
+                                                                    {date}
+                                                                </td>
+                                                                <td className='fs_13 black_color  lh_xs bg_light '>
+                                                                    <MdEdit className='text-mute table_icons me-3' />
+                                                                    <MdDelete className='text-mute table_icons me-3' />
+                                                                </td>
+                                                            </tr>
+
+                                                        )
+
+                                                    }) :
+                                                    <tr>
+                                                        <td>
+                                                            No data found
+                                                        </td>
+                                                    </tr>
+
+                                            }
+                                            
                                         </tbody>
                                     </table>
                                 </div>

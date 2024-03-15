@@ -3,14 +3,18 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { ThemeProvider } from "./context/ThemeContext/ThemeContext";
+import { ThemeProvider } from "./context/themeContext/ThemeContext";
 import { ToastContainer } from "react-toastify";
-import AuthContextProvider from "./context/AuthContext/AuthContextProvider";
+import AuthContextProvider from "./context/authContext/AuthContextProvider";
 import { BrowserRouter, RouterProvider } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { router } from "./router";
-import RoleContextProvider from "./context/RoleContext/RoleContextProvider";
-import BranchContextProvider from "./context/BranchContext/BranchContextProvider";
+import RoleContextProvider from "./context/roleContext/RoleContextProvider";
+import BranchContextProvider from "./context/branchContext/BranchContextProvider";
+import DepartmentContextProvider, { DepartmentContext } from "./context/deparmentContext/DepartmentContextProvider";
+import CoursePackageContextProvider from "./context/coursePackageContext/CoursePackageContext";
+import CourseContextProvider from "./context/courseContext/CourseContextProvider";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -18,16 +22,22 @@ root.render(
     <BrowserRouter>
       <AuthContextProvider>
         <RoleContextProvider>
-        <BranchContextProvider>
-        
-        <ThemeProvider>
-          {/* <RouterProvider router={router}/> */}
-          <ToastContainer style={{ position: "fixed", top: "60px" }} />
+          <BranchContextProvider>
+            <DepartmentContextProvider>
+              <CoursePackageContextProvider>
+                <CourseContextProvider>
 
-          <App />
-        </ThemeProvider>
+                  <ThemeProvider>
+                    {/* <RouterProvider router={router}/> */}
+                    <ToastContainer style={{ position: "fixed", top: "60px" }} />
 
-        </BranchContextProvider>
+                    <App />
+                  </ThemeProvider>
+
+                </CourseContextProvider>
+              </CoursePackageContextProvider>
+            </DepartmentContextProvider>
+          </BranchContextProvider>
         </RoleContextProvider>
       </AuthContextProvider>
     </BrowserRouter>
