@@ -4,10 +4,11 @@ import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 import { HiMiniPlus } from "react-icons/hi2";
 import { BranchContext } from "../../../../context/branchContext/BranchContextProvider";
+import { useBranchContext } from "../../../../hooks/useBranchContext";
 
 export const Branch = () => {
 
-    const {DispatchBranch,BranchState, getAllBranches}=useContext(BranchContext);
+    const {DispatchBranch,BranchState, getAllBranches}=useBranchContext();
     console.log(BranchState.branches, "kbdvjdj")
 
     return (
@@ -54,7 +55,7 @@ export const Branch = () => {
                                         <tbody style={{maxHeight:"400px", overflowY:"auto"}} className=''>
 
                                             {
-                                                BranchState.branches && BranchState.branches.length>0 ? BranchState.branches[0].map((item, index)=>{
+                                                BranchState.branches && BranchState.branches.length>0 ? BranchState.branches.map((item, index)=>{
 
                                                     let date = new Date(item.date);
                                             const day = date.getUTCDate();

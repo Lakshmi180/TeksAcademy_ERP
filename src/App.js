@@ -24,7 +24,6 @@ import Page from "./components/common/design/Page";
 import Button from "./components/common/design/Button";
 import { useTheme } from "./context/themeContext/ThemeContext";
 import { Login } from "./components/Auth/Login";
-
 import RegistrationForm from "./components/pages/Student/studentRegistrationForm/RegistrationForm";
 import { SettingsTabs } from "./components/pages/Settings/SettingsTabs";
 import { Roles } from "./components/pages/Settings/Roles/Roles";
@@ -37,7 +36,6 @@ import Department from "./components/pages/Settings/Departments/Department";
 import CreateDepartment from "./components/pages/Settings/Departments/CreateDepartment";
 import CoursePackage from "./components/pages/Settings/coursePackage/CoursePackage";
 import CreateCoursePackage from "./components/pages/Settings/coursePackage/CreateCoursePackage";
-
 import Studentdata from "./components/pages/Student/studentData/Studentdata";
 import CreateUserForm from "./components/pages/User/CreateUserForm/CreateUserForm";
 import LeadSource from "./components/pages/Settings/leadsource/LeadSource";
@@ -118,6 +116,7 @@ function App() {
             <Route path="/certificate" element={<Certificate />} />
             <Route path="/requestedcertificate" element={<RequestedCertificate />} />
             <Route path="/issuedcertificates" element={<IssuedCertificates />} />
+            <Route path="/updatecourse/:courseId" element={<CreateCourse/>} />
 
           </Routes>
         </div>

@@ -2,9 +2,10 @@ import React, { useContext, useState } from 'react'
 import { RoleContext } from '../../../../context/roleContext/RoleContextProvider'
 import { FaArrowRight } from "react-icons/fa";
 import Button from "../../../common/design/Button";
+import { useRoleContext } from '../../../../hooks/useRoleContext';
 export const CreateRole = () => {
 
-  const{RoleState, createRole}=useContext(RoleContext)
+  const{RoleState, createRole}=useRoleContext();
   console.log(RoleState, "RoleState")
 
   const [fromData, setFormData] = useState({
