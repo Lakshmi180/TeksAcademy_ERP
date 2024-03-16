@@ -52,37 +52,29 @@ export const Sidemenu = ({ isExpanded }) => {
           </div>
           <ul className="sidebar-nav">
             {/* Dashboard */}
-            <li className="sidebar-item">
-              <Link
-                className="sidebar-link"
+            <li className="sidebar-item ">
+              <Link className="sidebar-link"
                 onClick={() => handleActiveClick("Dashboard")}
                 to="/"
-              >
-                {" "}
-                <LuLayoutDashboard className="main_icon" />
-                <span
-                  className={`${active === "Dashboard" ? `text-white` : ""}`}
-                >
+              > <LuLayoutDashboard className="main_icon" />
+                <span className={`${active === "Dashboard" ? `text-white` : ""}`}>
                   Dashboard
-                </span>
+               </span>
               </Link>
             </li>
 
             {/* Users */}
-            <li className="sidebar-item">
-              <li className="sidebar-item ">
-                <Link
-                  className="sidebar-link"
-                  onClick={() => handleActiveClick("users")}
-                  to="/userdata"
-                >
+          
+              <li className="sidebar-item" >
+                <Link className="sidebar-link" onClick={() => handleActiveClick("users")} to="/userdata">
                   <FaRegUserCircle className="main_icon" />
-                  <span className={`${active === "users" ? `text-white` : ""}`}>
+                  <span className={`sidebar-item ${active === "users" ? `text-white` : ""}`}>
                     Users
                   </span>
+                  
                 </Link>
               </li>
-            </li>
+           
             {/* Student Management */}
             <li className="sidebar-item">
               <Link
@@ -107,7 +99,7 @@ export const Sidemenu = ({ isExpanded }) => {
                 className="sidebar-dropdown list-unstyled collapse"
                 data-bs-parent="#sidebar"
               >
-                {/* <li
+               <li
                   className={`sidebar-item ${
                     active === "registrationform" ? "text-white" : ""
                   }`}
@@ -120,72 +112,39 @@ export const Sidemenu = ({ isExpanded }) => {
                     <AiOutlineLine className="sub_icon" />
                     Registration Form
                   </Link>
-                </li> */}
-                <li className="sidebar-item">
-                  <Link
-                    to="/studentdata"
-                    className="sidebar-link"
-                    onClick={() => handleActiveClick("enrolledstudents")}
-                  >
+                </li>
+                <li className={`sidebar-item ${active === "enrolledstudents" ? "text-white" : ""}`}>
+                  <Link to="/studentdata" className="sidebar-link" onClick={() => handleActiveClick("enrolledstudents")}>
                     <AiOutlineLine className="sub_icon" />
-                    <span
-                      className={`${
-                        active === "enrolledstudents" ? "text-white" : ""
-                      }`}
-                    >
-                      Enrolled Students
-                    </span>
+                    Enrolled Students
                   </Link>
                 </li>
-                <li className="sidebar-item">
+                <li className={`sidebar-item ${active === "feedetails" ? "text-white" : ""}`}>
                   <Link
                     className="sidebar-link"
                     onClick={() => handleActiveClick("feedetails")}
-                  >
-                    {" "}
-                    <AiOutlineLine className="sub_icon" />
-                    <span
-                      className={`${
-                        active === "feedetails" ? "text-white" : ""
-                      }`}
-                    >
-                      Fee Details
-                    </span>
+                  >  <AiOutlineLine className="sub_icon" />
+                    Fee Details
                   </Link>
                 </li>
-                <li className="sidebar-item">
-                  <Link
+                <li className={`sidebar-item ${active === "certificate" ? "text-white" : ""}`}>
+                  <Link to="/certificate"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("certificate")}
-                  >
-                    {" "}
-                    <AiOutlineLine className="sub_icon" />
-                    <span
-                      className={`${
-                        active === "certificate" ? "text-white" : ""
-                      }`}
-                    >
-                      Certificate
-                    </span>
-                  </Link>
+                  > <AiOutlineLine className="sub_icon" />
+                    Certificate
+                    </Link>
                 </li>
-                <li className="sidebar-item">
-                  <Link
+                <li className={`sidebar-item ${active === "requestedcertificate" ? "text-white" : ""
+                  }`}>
+                  <Link to="/requestedcertificate"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("requestedcertificate")}
-                  >
-                    {" "}
-                    <AiOutlineLine className="sub_icon" />
-                    <span
-                      className={`${
-                        active === "requestedcertificate" ? "text-white" : ""
-                      }`}
-                    >
-                      Requested Certificate
-                    </span>
+                  > <AiOutlineLine className="sub_icon" />
+                    Requested Certificate
                   </Link>
                 </li>
-                <li className="sidebar-item">
+                <li className={`sidebar-item ${active === "refund" ? "text-white" : ""}`}>
                   <Link
                     onClick={() => handleActiveClick("refund")}
                     className="sidebar-link has-dropdown collapsed "
@@ -193,14 +152,8 @@ export const Sidemenu = ({ isExpanded }) => {
                     data-bs-target="#refund"
                     aria-expanded="false"
                     aria-controls="refund"
-                  >
-                    {" "}
-                    <RiRefund2Line className="main_icon" />
-                    <span
-                      className={`${active === "refund" ? "text-white" : ""}`}
-                    >
-                      Refund
-                    </span>
+                  >   <RiRefund2Line className="main_icon" />
+                    Refund
                   </Link>
                   <ul
                     id="refund"
@@ -208,34 +161,18 @@ export const Sidemenu = ({ isExpanded }) => {
                   >
                     <li className="sidebar-item">
                       <Link
-                        className="sidebar-link"
+                        className={`sidebar-link ${active === "refundform" ? "text-white" : ""}`}
                         onClick={() => handleActiveClick("refundform")}
-                      >
-                        {" "}
-                        <AiOutlineLine className="sub_icon" />
-                        <span
-                          className={`${
-                            active === "refundform" ? "text-white" : ""
-                          }`}
-                        >
-                          Refund Form
-                        </span>
+                      > <AiOutlineLine className="sub_icon" />
+                        Refund Form
                       </Link>
                     </li>
-                    <li className="sidebar-item">
+                    <li className={`sidebar-item ${active === "refunddata" ? "text-white" : ""}`}>
                       <Link
                         className="sidebar-link"
                         onClick={() => handleActiveClick("refunddata")}
-                      >
-                        {" "}
-                        <AiOutlineLine className="sub_icon" />
-                        <span
-                          className={`${
-                            active === "refunddata" ? "text-white" : ""
-                          }`}
-                        >
-                          Refund Data
-                        </span>
+                      >   <AiOutlineLine className="sub_icon" />
+                        Refund Data
                       </Link>
                     </li>
                   </ul>

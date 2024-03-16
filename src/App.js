@@ -47,7 +47,9 @@ import CreateAddVendor from "./components/pages/Settings/addvendor/CreateAddVend
 import AddAssetsType from "./components/pages/Settings/addassetstype/AddAssetsType";
 import CreateAddAssetsType from "./components/pages/Settings/addassetstype/CreateAddAssetsType";
 import UserData from "./components/pages/User/UserData/UserData";
-
+import Certificate from "./components/pages/Student/Certificate/Certificate";
+import RequestedCertificate from "./components/pages/Student/requestedCertificate/RequestedCertificate";
+import IssuedCertificates from "./components/pages/Student/issuedCertificates/IssuedCertificates";
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
   const { theme } = useTheme();
@@ -111,6 +113,9 @@ function App() {
             <Route path="/addassetstype" element={<AddAssetsType />} />
             <Route path="/createaddassetstype" element={<CreateAddAssetsType />} />
             <Route path="/userdata" element={<UserData />} />
+            <Route path="/certificate" element={<Certificate />} />
+            <Route path="/requestedcertificate" element={<RequestedCertificate />} />
+            <Route path="/issuedcertificates" element={<IssuedCertificates />} />
             <Route path="/updatecourse/:courseId" element={<CreateCourse/>} />
 
           </Routes>
