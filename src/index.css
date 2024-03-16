@@ -400,6 +400,17 @@ h1 {
   font-size: 1.5rem;
   color: #000;
 }
+/* toggle */
+.form-check-input:checked {
+  background-color: #878a99;
+  border-color: #878a99;
+  border: 5px;
+}
+.form-check-input:focus {
+  border-color: #878a99;
+  outline: 0;
+  box-shadow: none;
+}
 
 /* ---- */
 
@@ -489,7 +500,7 @@ h1 {
 }
 .btn_primary {
   background-color: var(--erp-green-500);
-  color: #fff;
+  color: white  !important;
 }
 .btn_primary:hover {
   background-color: var(--erp-green-600);

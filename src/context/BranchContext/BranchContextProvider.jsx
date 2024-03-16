@@ -14,13 +14,13 @@
 
         const [BranchState, DispatchBranch]=useReducer(BranchReducer, intialState)
 
-        console.log(BranchState, "hdsfjhfj")
+        console.log(BranchState, "BranchState")
         
     
         const getAllBranches = async () => {
             try{
                 const {status,data}= await axios.get(`${process.env.REACT_APP_API_URL}/getbranch`) 
-                console.log(status, "dkhbfjsvbj")
+                console.log(data, "dkhbfjsvbj")
                 if(status===201){
                     DispatchBranch({type:"SET_BRANCHES",payload:data})
                 }
@@ -49,7 +49,7 @@
 
 
         useEffect(()=>{
-            // createBranch();
+            // createBranch();  
             getAllBranches();
         },[]);
 

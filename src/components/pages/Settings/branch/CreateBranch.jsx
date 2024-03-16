@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useContext } from "react";
-import { BranchContext } from "../../../../context/BranchContext/BranchContextProvider";
+import { BranchContext } from "../../../../context/branchContext/BranchContextProvider";
 import axios from "axios";
 import { FaArrowRight } from "react-icons/fa";
+import { useNavigate, useNavigation } from "react-router-dom";
+import { toast } from "react-toastify";
 
+import Button from "../../../common/design/Button";
 const CreateBranch = () => {
 
 const {DispatchBranch,BranchState, getAllBranches}=useContext(BranchContext)
 
-    
+    const navigate= useNavigate()
     const [formData, setFormData] = useState({
         branch: "",
     });
@@ -22,10 +25,8 @@ const {DispatchBranch,BranchState, getAllBranches}=useContext(BranchContext)
             }
         })
     }
-
     const handleSubmit=async(e)=>{
         e.preventDefault();
-
         let user={
             branch_name: formData.branch,
         }
@@ -46,45 +47,40 @@ const {DispatchBranch,BranchState, getAllBranches}=useContext(BranchContext)
                 }
               }
             }
-      
             return newItem;
           });
+
+
           user=dataWithTitleCase[0];
-          console.log(user, "datawithtitilecase")
+
+          
+
+    //    let   updateduser = JSON.stringify(user)
+    //     console.log(updateduser, "datawithtitilecase")
+
 
           try{
-            const {data, status} = await axios.post(`${process.env.REACT_APP_API_URL}/addbranch`, user)
-           
-
+            const {data, status} = await 
+            toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/addbranch`,  user),{
+                loading: "Loading...",
+                success: "Branch created Successfully",
+                error: "Branch not Created"
+            })
             if(status === 201){
                 console.log(data, "hellobb")
                 DispatchBranch({type:"CREATE_BRANCH", payload:data})
                 getAllBranches();
+                navigate("/branch")
             }
-
           }
           catch(error){
             console.log(error)
           }
-        
-
-
-        //   const data = await fetch(`${process.env.REACT_APP_API_URL}/addbranch`,{
-        //     method: "POST",
-        //     headers: {
-        //       "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify(user),
-        //   })        
-        // createBranch(user)
-
-
-
     }
 
 
     return (
-        <div>
+        <div className="container">
             <div className="row d-flex justify-content-center">
                 <div className="col-lg-5">
                     <div className="card">
@@ -109,22 +105,12 @@ const {DispatchBranch,BranchState, getAllBranches}=useContext(BranchContext)
                                         onChange={handlechange}
                                     />
                                 </div>
-                                <div className=''>
-                                    <button type="button" class="btn btn_primary waves-effect waves-light"
-                                        onClick={handleSubmit}
-                                    >
-                                        Submit
-                                    </button>
-                                    </div>
+                                   
                                 <div className=" ">
                                     <div className="d-flex justify-content-end">
-                                        <button
-                                            type="button"
-                                            class="btn btn_primary waves-effect waves-light btn-label right fs_13"
-                                        >
+                                        <Button className={"btn_primary btn-label right"} onClick={handleSubmit}  icon={<FaArrowRight />} >
                                             Submit
-                                            <span className="label-icon"><FaArrowRight /></span>
-                                        </button>
+                                        </Button>
                                     </div>
                                 </div>
                             </form>

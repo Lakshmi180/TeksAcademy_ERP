@@ -22,7 +22,7 @@ import Tab from "./components/common/design/Tab";
 import Modal from "./components/common/design/Modal";
 import Page from "./components/common/design/Page";
 import Button from "./components/common/design/Button";
-import { useTheme } from "./context/ThemeContext/ThemeContext";
+import { useTheme } from "./context/themeContext/ThemeContext";
 import { Login } from "./components/Auth/Login";
 
 import RegistrationForm from "./components/pages/Student/studentRegistrationForm/RegistrationForm";
@@ -48,6 +48,7 @@ import AddVendor from "./components/pages/Settings/addvendor/AddVendor";
 import CreateAddVendor from "./components/pages/Settings/addvendor/CreateAddVendor";
 import AddAssetsType from "./components/pages/Settings/addassetstype/AddAssetsType";
 import CreateAddAssetsType from "./components/pages/Settings/addassetstype/CreateAddAssetsType";
+import UserData from "./components/pages/User/UserData/UserData";
 
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
@@ -89,24 +90,18 @@ function App() {
             <Route path="/modal" element={<Modal />} />
             <Route path="/page" element={<Page />} />
             <Route path="/button" element={<Button />} />
-            {/* <Route path="/createuserform" element={<CreateUserForm />} /> */}
-            {/* <Route path="/studentdata" element={<Studentdata />} /> */}
             <Route path={"/registrationform"} element={<RegistrationForm />} />
             <Route path="/settingstabs" element={<SettingsTabs />} />
             <Route path="/roles" element={<Roles />} />
             <Route path="/createrole" element={<CreateRole />} />
             <Route path="/studentdata" element={<Studentdata />} />
             <Route path="/createuser" element={<CreateUserForm />} />
-
             <Route path="/course" element={<Course />} />
             <Route path="/createcourse" element={<CreateCourse />} />
-
             <Route path="/branch" element={<Branch />} />
             <Route path="/createbranch" element={<CreateBranch />} />
-
             <Route path="/department" element={<Department />} />
             <Route path="/createdepartment" element={<CreateDepartment />} />
-
             <Route path="/coursepackage" element={<CoursePackage />} />
             <Route path="/createcoursepackage" element={<CreateCoursePackage />} />
             <Route path="/leadsource" element={<LeadSource />} />
@@ -116,9 +111,9 @@ function App() {
             <Route path="/addvendor" element={<AddVendor />} />
             <Route path="/createaddvendor" element={<CreateAddVendor />} />
             <Route path="/addassetstype" element={<AddAssetsType />} />
-            <Route path="/createaddassetstype" element={<CreateAddAssetsType/>}/>
+            <Route path="/createaddassetstype" element={<CreateAddAssetsType />} />
+            <Route path="/userdata" element={<UserData />} />
 
-        
           </Routes>
         </div>
       </main>

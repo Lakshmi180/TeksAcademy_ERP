@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./RegistrationForm.css";
 import { StudentDetails } from "./StudentDetails";
 import { ThankYou } from "../../../common/design/ThankYou";
-import { useTheme } from "../../../../context/ThemeContext/ThemeContext";
+import { useTheme } from "../../../../context/themeContext/ThemeContext";
 import { EducationDetails } from "./EducationDetails";
 import { AdmissionDetails } from "./AdmissionDetails";
 import { FeeDetails } from "./FeeDetails";

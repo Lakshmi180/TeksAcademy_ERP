@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 import { HiMiniPlus } from "react-icons/hi2";
+import { CourseContext } from "../../../../context/courseContext/CourseContextProvider";
 
-const Course=()=>{
-    return(
+const Course = () => {
+    const { DispatchCourse, courseState, getAllCourses } = useContext(CourseContext)
+    return (
         <div>
             <div className='container-fluid'>
                 <div className="row">
@@ -32,7 +34,7 @@ const Course=()=>{
                                                     S.No
                                                 </th>
                                                 <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                                                   Course Name
+                                                    Course Name
                                                 </th>
                                                 <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
                                                     Course Package
@@ -52,6 +54,53 @@ const Course=()=>{
                                             </tr>
                                         </thead>
                                         <tbody className=''>
+
+                                            {
+                                                courseState.courses && courseState.courses.length>0 ? courseState.courses[0].map((item, index) => {
+
+                                                    let date = new Date(item.date);
+                                                        const day = date.getUTCDate();
+                                                        const monthIndex = date.getUTCMonth();
+                                                        const year = date.getUTCFullYear();
+            
+                                                        const monthAbbreviations = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+            
+                                                        // Formatting the date
+                                                        date = `${day < 10 ? "0" : ""}${day}-${monthAbbreviations[monthIndex]
+                                                            }-${year}`;
+                                                    return (
+                                                        <tr>
+                                                            <td className='fs_13 black_color fw_500 lh_xs bg_light '>
+                                                                {index+1}
+                                                            </td>
+                                                            <td className='fs_13 black_color  lh_xs bg_light'>
+                                                                {item.course_name}
+                                                            </td>
+                                                            <td className='fs_13 black_color  lh_xs bg_light'>
+                                                            {item.course_package}
+                                                            </td>
+                                                            <td className='fs_13 black_color  lh_xs bg_light'>
+                                                            {item.fee}
+                                                            </td>
+                                                            <td className='fs_13 black_color  lh_xs bg_light'>
+                                                            {item.max_discount}
+                                                            </td>
+                                                            <td className='fs_13 black_color  lh_xs bg_light'>
+                                                              {date}
+                                                            </td>
+                                                            <td className='fs_13 black_color  lh_xs bg_light '>
+                                                                <MdEdit className='text-mute table_icons me-3' />
+                                                                <MdDelete className='text-mute table_icons me-3' />
+                                                            </td>
+                                                        </tr>
+                                                    )
+                                                }) :
+                                                    <tr>
+                                                        <td>
+                                                            no data found
+                                                        </td>
+                                                    </tr>
+                                            }
                                             {/* 1st row */}
                                             <tr>
                                                 <td className='fs_13 black_color fw_500 lh_xs bg_light '>
@@ -67,7 +116,7 @@ const Course=()=>{
                                                     18000
                                                 </td>
                                                 <td className='fs_13 black_color  lh_xs bg_light'>
-                                                  9000
+                                                    9000
                                                 </td>
                                                 <td className='fs_13 black_color  lh_xs bg_light'>
                                                     10-June-2024
@@ -147,7 +196,7 @@ const Course=()=>{
                     </div>
                 </div>
             </div>
-     </div>
+        </div>
     )
 
 }

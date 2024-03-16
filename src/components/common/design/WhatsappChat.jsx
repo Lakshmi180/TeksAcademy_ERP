@@ -13,7 +13,7 @@ import { BsReply } from "react-icons/bs";
 import { AiOutlineShareAlt } from "react-icons/ai";
 import { MdContentCopy } from "react-icons/md";
 import { FaRegBookmark } from "react-icons/fa";
-import { useTheme } from "../../../context/ThemeContext/ThemeContext";
+import { useTheme } from "../../../context/themeContext/ThemeContext";
 function WhatsppChat() {
   const { theme } = useTheme();
   return (

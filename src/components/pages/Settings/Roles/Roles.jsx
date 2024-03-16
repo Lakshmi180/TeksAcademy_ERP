@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { MdOutlineEdit } from "react-icons/md";
 import { MdDeleteOutline } from "react-icons/md";
 import { HiMiniPlus } from "react-icons/hi2";
-import { RoleContext } from '../../../../context/RoleContext/RoleContextProvider';
+import { RoleContext } from '../../../../context/roleContext/RoleContextProvider';
 export const Roles = () => {
 
   const { RoleState } = useContext(RoleContext);
