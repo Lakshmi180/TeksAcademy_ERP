@@ -9,7 +9,7 @@ export const AdmissionDetails = ({ formData, handleInputChange }) => {
             Enquiry Date*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="renqiurydate"
             type="date"
             name="renqiurydate"
@@ -24,7 +24,7 @@ export const AdmissionDetails = ({ formData, handleInputChange }) => {
             Enquiry taken by*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="renqtakeby"
             type="text"
             name="renqtakeby"
@@ -44,7 +44,7 @@ export const AdmissionDetails = ({ formData, handleInputChange }) => {
             Course Package*
           </label>
           <select
-            class="form-select form-control"
+            class="form-select form-control input_bg_color"
             aria-label="Default select example"
             id="rcoursepackage"
             onChange={(e) =>
@@ -66,7 +66,7 @@ export const AdmissionDetails = ({ formData, handleInputChange }) => {
             Course*
           </label>
           <select
-            class="form-select form-control"
+            class="form-select form-control input_bg_color"
             aria-label="Default select example"
             id="rcourse"
             onChange={(e) =>
@@ -86,7 +86,7 @@ export const AdmissionDetails = ({ formData, handleInputChange }) => {
             Lead Source*
           </label>
           <select
-            class="form-select form-control"
+            class="form-select form-control input_bg_color"
             aria-label="Default select example"
             id="rleadsource"
             onChange={(e) =>
@@ -105,7 +105,7 @@ export const AdmissionDetails = ({ formData, handleInputChange }) => {
             Branch*
           </label>
           <select
-            class="form-select form-control"
+            class="form-select form-control input_bg_color"
             aria-label="Default select example"
             id="rbranch"
             onChange={(e) =>
@@ -127,7 +127,7 @@ export const AdmissionDetails = ({ formData, handleInputChange }) => {
             Mode Of Training*
           </label>
           <select
-            class="form-select form-control"
+            class="form-select form-control input_bg_color"
             aria-label="Default select example"
             id="rmodeoftraining"
             onChange={(e) =>
@@ -152,7 +152,7 @@ export const AdmissionDetails = ({ formData, handleInputChange }) => {
             Admission Date*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="radmissiondate"
             type="date"
             name="radmissiondate"
@@ -176,7 +176,7 @@ export const AdmissionDetails = ({ formData, handleInputChange }) => {
             Validity Start Date*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="rvaliditystartdate"
             type="date"
             name="rvaliditystartdate"
@@ -198,7 +198,7 @@ export const AdmissionDetails = ({ formData, handleInputChange }) => {
             Validity End Date*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="rvalidityenddate"
             type="date"
             name="rvalidityenddate"

@@ -14,12 +14,12 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
       </div>
 
       <div className="row">
-        <div className="form-group text-start col-lg-3">
+        <div className="form-group text-start col-lg-3 ">
           <label className="form-label fs-s text_color" htmlFor="rname">
             Name*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="rname"
             type="text"
             name="rname"
@@ -35,7 +35,7 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             Email*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="remail"
             type="email"
             name="remail"
@@ -52,7 +52,7 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             Choose your photo*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="rphoto"
             type="file"
             name="rphoto"
@@ -70,7 +70,7 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             Date of Birth*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="rdob"
             type="date"
             name="rdob"
@@ -89,7 +89,7 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             Contact Number*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="rcontactnum"
             type="number"
             name="rcontactnum"
@@ -107,7 +107,7 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             Whatsapp Number*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="rwhatsappnum"
             type="number"
             name="rwhatsappnum"
@@ -124,7 +124,7 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             Gender*
           </label>
           <select
-            class="form-select form-control"
+            class="form-select form-control input_bg_color"
             aria-label="Default select example"
             id="rgender"
             name="rgender"
@@ -149,7 +149,7 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             Marital Status*
           </label>
           <select
-            class="form-select form-control"
+            class="form-select form-control input_bg_color"
             aria-label="Default select example"
             id="rmaritalstatus"
             name="rmaritalstatus"
@@ -174,7 +174,7 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             College/School/Company*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="rcscname"
             type="text"
             name="rcscname"
@@ -191,7 +191,7 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             Pincode*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="rpincode"
             type="number"
             name="rpincode"
@@ -208,7 +208,7 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             Country*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="rcountry"
             type="text"
             name="rcountry"
@@ -224,7 +224,7 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             State*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="rstate"
             type="text"
             name="rstate"
@@ -243,7 +243,7 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             Native Place*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="rnative"
             type="text"
             name="rnative"
@@ -259,7 +259,7 @@ export const StudentDetails = ({ handleInputChange, formData }) => {
             Area*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="rarea"
             type="text"
             name="rarea"

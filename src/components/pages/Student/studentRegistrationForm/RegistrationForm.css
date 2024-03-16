@@ -1,5 +1,4 @@
 .registration_form_section {
-  max-width: 1100px;
   margin: auto;
   background: var(--erp-card-color);
   padding: 20px;
@@ -32,10 +31,11 @@
 
 .registration_form_tabs .button_grp .form_tab_btn.active {
   background-color: var(--erp-gray-200) !important;
+  color: #405189;
 }
 
 .registration_form_tabs .button_grp .form_tab_btn.dark.active {
-  background-color: var(--erp-gray-700) !important;
+  background-color: var(--erp-gray-400) !important;
 }
 
 .registration_form_tabs .button_grp .active::before {
@@ -53,10 +53,10 @@
 }
 
 .registration_form_tabs .button_grp .form_tab_btn.dark.active::before {
-  border-left-color: var(--erp-gray-700);
+  border-left-color: var(--erp-gray-400);
 }
 
-.registration_form_tabs.button_grp .active:last-child::after {
+.registration_form_tabs.button_grp .active:last-child::before {
   display: none;
 }
 input::-webkit-outer-spin-button,
@@ -89,4 +89,9 @@ input::-webkit-inner-spin-button {
   order: 1;
   background-color: var(--erp-input-bg-color);
   color: var(--erp-text-color);
+}
+
+.prev_bold {
+  color: var(--erp-gray-500) !important;
+  font-weight: 600;
 }

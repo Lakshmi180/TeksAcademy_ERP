@@ -8,9 +8,9 @@ export const EducationDetails = ({ formData, handleInputChange }) => {
   };
   return (
     <>
-      <div className="form_title">
+      {/* <div className="form_title">
         <h5 className="text_color fs-6">Education Details</h5>
-      </div>
+      </div> */}
       <div className="row">
         <div className="form-group text-start col-lg-3">
           <label
@@ -20,7 +20,7 @@ export const EducationDetails = ({ formData, handleInputChange }) => {
             Education Type*
           </label>
           <select
-            class="form-select form-control"
+            class="form-select form-control input_bg_color"
             aria-label="Default select example"
             id="reducationtype"
             onChange={(e) =>
@@ -46,7 +46,7 @@ export const EducationDetails = ({ formData, handleInputChange }) => {
             Percentage*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="rpercentage"
             type="number"
             name="rpercentage"
@@ -66,7 +66,7 @@ export const EducationDetails = ({ formData, handleInputChange }) => {
             Academic Year*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="racademicyear"
             type="date"
             name="racademicyear"
