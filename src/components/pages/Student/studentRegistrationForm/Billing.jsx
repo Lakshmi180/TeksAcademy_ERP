@@ -3,9 +3,6 @@ import React from "react";
 export const Billing = () => {
   return (
     <div>
-      <div className="form_title">
-        <h5 className="text_color fs-6">Billing Details</h5>
-      </div>
       <div className="row">
         <div className="col-xl-12 ">
           <div className="table-responsive ">

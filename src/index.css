@@ -43,7 +43,7 @@ body,
 
   /* Gray / Zinc */
   --erp-gray-100: #f4f4f5;
-  --erp-gray-200: #e9ebec;
+  --erp-gray-200: rgba(64, 81, 137, 0.202);
   --erp-gray-300: #d4d4d8;
   --erp-gray-400: #b3b9d0;
   --erp-gray-500: #71717a;
@@ -425,7 +425,17 @@ h1 {
 /* Cards */
 .bg_white {
   background-color: var(--erp-card-color) !important;
-  box-shadow: 0 0 0 var(--erp-text-mute) !important;
+  /* box-shadow: 0 0 0 var(--erp-text-mute) !important; */
+}
+
+.input_bg_color {
+  background-color: var(--erp-card-color) !important;
+  /* border: 1px solid var(--erp-text-mute) !important; */
+  color: var(--erp-text-color) !important;
+}
+
+.input_bg_color::placeholder {
+  color: var(--erp-text-mute) !important;
 }
 
 .list_bg_white {
