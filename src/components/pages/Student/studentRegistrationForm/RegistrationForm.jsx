@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import "./RegistrationForm.css";
+import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import { StudentDetails } from "./StudentDetails";
-import { ThankYou } from "../../../common/design/ThankYou";
 import { useTheme } from "../../../../context/themeContext/ThemeContext";
 import { EducationDetails } from "./EducationDetails";
 import { AdmissionDetails } from "./AdmissionDetails";
@@ -11,116 +11,30 @@ import { Billing } from "./Billing";
 import { ParentsDetails } from "./ParentsDetails";
 import { IoMdArrowBack, IoMdCheckmark, IoMdArrowForward } from "react-icons/io";
 import { Preview } from "./Preview";
+import "./RegistrationForm.css";
 
 function RegistrationForm() {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(1);
   const [isFormValid, setIsFormValid] = useState(false);
-
-  const [formData, setFormData] = useState(() => {
-    // Intializing local storage to add the form data
-    const storedData = JSON.parse(localStorage.getItem("formData"));
-    return storedData || [];
-  });
-  const handleInputChange = (input) => {
-    const { name, value, type, files } = input;
-
-    // Handle different types of inputs
-    if (type === "file") {
-      // For file input, handle differently
-      const file = files[0]; // Assuming only single file selection
-      setFormData((prevValues) => ({
-        ...prevValues,
-        [name]: file,
-      }));
-    } else {
-      // For other input types, handle as usual
-      setFormData((prevValues) => ({
-        ...prevValues,
-        [name]: value,
-      }));
-    }
-  };
   const { theme } = useTheme();
 
-  const tabs = [
-    {
-      title: "Student Details",
-      content: (
-        <StudentDetails
-          formData={formData}
-          handleInputChange={handleInputChange}
-        />
-      ),
-    },
-    {
-      title: "Parent Details",
-      content: (
-        <ParentsDetails
-          formData={formData}
-          handleInputChange={handleInputChange}
-        />
-      ),
-    },
-    {
-      title: "Education Details",
-      content: (
-        <EducationDetails
-          formData={formData}
-          handleInputChange={handleInputChange}
-        />
-      ),
-    },
-    {
-      title: "Admission Details",
-      content: (
-        <AdmissionDetails
-          formData={formData}
-          handleInputChange={handleInputChange}
-        />
-      ),
-    },
-    {
-      title: "Fee Details",
-      content: (
-        <FeeDetails formData={formData} handleInputChange={handleInputChange} />
-      ),
-    },
-    {
-      title: "Billing",
-      content: <Billing />,
-    },
-    {
-      title: "Others",
-      content: <OthersForm />,
-    },
-    {
-      title: "Preview",
-      content: <Preview />,
-    },
-  ];
-
-  function handleNext() {
-    localStorage.setItem("formData", JSON.stringify(formData));
-    setActiveTab((prevActiveTab) => prevActiveTab + 1);
-  }
-
-  const handlePrev = () => {
-    setActiveTab((prevActiveTab) => prevActiveTab - 1);
+  const handleNext = () => {
+    setActiveTab((prevTab) => prevTab + 1);
   };
 
+  const handlePrev = () => {
+    setActiveTab((prevTab) => prevTab - 1);
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
   };
 
-  useEffect(() => {
-    localStorage.setItem("formData", JSON.stringify(formData));
-  }, [formData]);
   return (
     <div className="container-fluid">
       <div className="registration_form_section  ">
         <div className="top">
           <div className="registration_form_tabs row">
-            <div className="button_grp col-lg-12 p-0">
+            {/* <div className="button_grp col-lg-12 p-0">
               {tabs.map((tab, index) => {
                 return (
                   <button
@@ -142,16 +56,152 @@ function RegistrationForm() {
                   </button>
                 );
               })}
+            </div> */}
+            <div className="button_grp col-lg-12 p-0">
+              <button
+                type="button"
+                className={
+                  activeTab === 1
+                    ? `${
+                        theme === "light"
+                          ? "form_tab_btn active"
+                          : "form_tab_btn dark active"
+                      }`
+                    : "form_tab_btn "
+                }
+                disabled={!isFormValid}
+              >
+                Student Details
+              </button>
+              <button
+                type="button"
+                className={
+                  activeTab === 2
+                    ? `${
+                        theme === "light"
+                          ? "form_tab_btn active"
+                          : "form_tab_btn dark active"
+                      }`
+                    : "form_tab_btn "
+                }
+                disabled={!isFormValid}
+              >
+                Parent Details
+              </button>
+              <button
+                type="button"
+                className={
+                  activeTab === 3
+                    ? `${
+                        theme === "light"
+                          ? "form_tab_btn active"
+                          : "form_tab_btn dark active"
+                      }`
+                    : "form_tab_btn "
+                }
+                disabled={!isFormValid}
+              >
+                Education Details
+              </button>
+              <button
+                type="button"
+                className={
+                  activeTab === 4
+                    ? `${
+                        theme === "light"
+                          ? "form_tab_btn active"
+                          : "form_tab_btn dark active"
+                      }`
+                    : "form_tab_btn "
+                }
+                disabled={!isFormValid}
+              >
+                Admission Details
+              </button>
+              <button
+                type="button"
+                className={
+                  activeTab === 5
+                    ? `${
+                        theme === "light"
+                          ? "form_tab_btn active"
+                          : "form_tab_btn dark active"
+                      }`
+                    : "form_tab_btn "
+                }
+                disabled={!isFormValid}
+              >
+                Fee Details
+              </button>
+              <button
+                type="button"
+                className={
+                  activeTab === 6
+                    ? `${
+                        theme === "light"
+                          ? "form_tab_btn active"
+                          : "form_tab_btn dark active"
+                      }`
+                    : "form_tab_btn "
+                }
+                disabled={!isFormValid}
+              >
+                Billing
+              </button>
+              <button
+                type="button"
+                className={
+                  activeTab === 7
+                    ? `${
+                        theme === "light"
+                          ? "form_tab_btn active"
+                          : "form_tab_btn dark active"
+                      }`
+                    : "form_tab_btn "
+                }
+                disabled={!isFormValid}
+              >
+                Others
+              </button>
+              <button
+                type="button"
+                className={
+                  activeTab === 8
+                    ? `${
+                        theme === "light"
+                          ? "form_tab_btn active"
+                          : "form_tab_btn dark active"
+                      }`
+                    : "form_tab_btn "
+                }
+                disabled={!isFormValid}
+              >
+                Preview
+              </button>
             </div>
           </div>
         </div>
         <div className="bottom mt-3">
           <form className="" onSubmit={handleSubmit}>
-            {tabs[activeTab].content}
+            {activeTab === 1 && <StudentDetails />}
+            {activeTab === 2 && <ParentsDetails />}
+
+            {activeTab === 3 && <EducationDetails />}
+
+            {activeTab === 4 && <AdmissionDetails />}
+
+            {activeTab === 5 && <FeeDetails />}
+
+            {activeTab === 6 && <Billing />}
+
+            {activeTab === 7 && <OthersForm />}
+            {activeTab === 8 && <Preview />}
+
+            {/* {tabs[activeTab].content} */}
 
             <div className="controls d-flex justify-content-between  mt-4">
               <div>
-                {activeTab !== 0 && (
+                {activeTab !== 1 && (
                   <button
                     type="button"
                     className="btn control_prev_btn reg_btn"
@@ -165,7 +215,7 @@ function RegistrationForm() {
                 )}
               </div>
               <div>
-                {activeTab !== tabs.length - 1 && (
+                {activeTab !== 8 && (
                   <button
                     type="button"
                     className="btn btn-label right btn_primary "
@@ -177,7 +227,7 @@ function RegistrationForm() {
                     </span>
                   </button>
                 )}
-                {activeTab === tabs.length - 1 && (
+                {activeTab === 8 && (
                   <button
                     type="submit"
                     className="btn btn-label right btn_primary "
