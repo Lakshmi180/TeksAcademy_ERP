@@ -490,8 +490,13 @@ h1 {
 }
 .btn_primary {
   background-color: var(--erp-green-500);
-  color: white  !important;
+  color: white !important;
 }
 .btn_primary:hover {
   background-color: var(--erp-green-600);
+}
+
+/* settings tabs */
+.bg-danger-subtle {
+  background-color: #a0add8 !important;
 }

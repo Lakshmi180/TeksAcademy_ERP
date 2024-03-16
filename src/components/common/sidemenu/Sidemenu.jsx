@@ -52,32 +52,26 @@ export const Sidemenu = ({ isExpanded }) => {
           </div>
           <ul className="sidebar-nav">
             {/* Dashboard */}
-            <li className="sidebar-item ">
-              <Link
-                className="sidebar-link"
+            <li className="sidebar-item">
+              <Link className="sidebar-link"
                 onClick={() => handleActiveClick("Dashboard")}
                 to="/"
-              >
+              > <LuLayoutDashboard className="main_icon" />
                 <span
                   className={`${active === "Dashboard" ? `text-white` : ""}`}
                 >
-                  <LuLayoutDashboard className="main_icon" />
-                  Dashboard{" "}
+                  Dashboard
                 </span>
               </Link>
             </li>
 
             {/* Users */}
-            <li className="sidebar-item text-danger ">
+            <li className="sidebar-item">
               <li className="sidebar-item ">
-                <Link
-                  className="sidebar-link"
-                  onClick={() => handleActiveClick("users")}
-                  to="/userdata"
-                >
+                <Link className="sidebar-link" onClick={() => handleActiveClick("users")} to="/userdata">
+                  <FaRegUserCircle className="main_icon" />
                   <span className={`${active === "users" ? `text-white` : ""}`}>
-                    <FaRegUserCircle className="main_icon" />
-                    Users{" "}
+                    Users
                   </span>
                 </Link>
               </li>
@@ -105,31 +99,19 @@ export const Sidemenu = ({ isExpanded }) => {
                 className="sidebar-dropdown list-unstyled collapse"
                 data-bs-parent="#sidebar"
               >
-                <li className="sidebar-item">
-                  <Link
-                    to={"/registrationform"}
-                    className="sidebar-link"
-                    onClick={() => handleActiveClick("registrationform")}
-                  >
-                    <span
-                      className={`${active === "registrationform" ? "text-white" : ""
-                        }`}
-                    >
-                      <AiOutlineLine className="sub_icon" />
-                      Registration Form
-                    </span>
+                <li className={`sidebar-item ${active === "registrationform" ? "text-white" : ""}`}>
+                  <Link to={"/registrationform"} className="sidebar-link" onClick={() => handleActiveClick("registrationform")}>
+                    <AiOutlineLine className="sub_icon" />
+                    Registration Form
                   </Link>
                 </li>
                 <li className="sidebar-item">
-                  <Link to="/studentdata"
-                    className="sidebar-link"
-                    onClick={() => handleActiveClick("enrolledstudents")}
-                  >
+                  <Link to="/studentdata" className="sidebar-link" onClick={() => handleActiveClick("enrolledstudents")}>
+                    <AiOutlineLine className="sub_icon" />
                     <span
                       className={`${active === "enrolledstudents" ? "text-white" : ""
                         }`}
                     >
-                      <AiOutlineLine className="sub_icon" />
                       Enrolled Students
                     </span>
                   </Link>
@@ -138,12 +120,11 @@ export const Sidemenu = ({ isExpanded }) => {
                   <Link
                     className="sidebar-link"
                     onClick={() => handleActiveClick("feedetails")}
-                  >
+                  >  <AiOutlineLine className="sub_icon" />
                     <span
                       className={`${active === "feedetails" ? "text-white" : ""
                         }`}
                     >
-                      <AiOutlineLine className="sub_icon" />
                       Fee Details
                     </span>
                   </Link>
@@ -152,12 +133,11 @@ export const Sidemenu = ({ isExpanded }) => {
                   <Link
                     className="sidebar-link"
                     onClick={() => handleActiveClick("certificate")}
-                  >
+                  > <AiOutlineLine className="sub_icon" />
                     <span
                       className={`${active === "certificate" ? "text-white" : ""
                         }`}
                     >
-                      <AiOutlineLine className="sub_icon" />
                       Certificate
                     </span>
                   </Link>
@@ -166,12 +146,11 @@ export const Sidemenu = ({ isExpanded }) => {
                   <Link
                     className="sidebar-link"
                     onClick={() => handleActiveClick("requestedcertificate")}
-                  >
+                  > <AiOutlineLine className="sub_icon" />
                     <span
                       className={`${active === "requestedcertificate" ? "text-white" : ""
                         }`}
                     >
-                      <AiOutlineLine className="sub_icon" />
                       Requested Certificate
                     </span>
                   </Link>
@@ -184,11 +163,10 @@ export const Sidemenu = ({ isExpanded }) => {
                     data-bs-target="#refund"
                     aria-expanded="false"
                     aria-controls="refund"
-                  >
+                  >   <RiRefund2Line className="main_icon" />
                     <span
                       className={`${active === "refund" ? "text-white" : ""}`}
                     >
-                      <RiRefund2Line className="main_icon" />
                       Refund
                     </span>
                   </Link>
@@ -200,12 +178,11 @@ export const Sidemenu = ({ isExpanded }) => {
                       <Link
                         className="sidebar-link"
                         onClick={() => handleActiveClick("refundform")}
-                      >
+                      > <AiOutlineLine className="sub_icon" />
                         <span
                           className={`${active === "refundform" ? "text-white" : ""
                             }`}
                         >
-                          <AiOutlineLine className="sub_icon" />
                           Refund Form
                         </span>
                       </Link>
@@ -214,12 +191,11 @@ export const Sidemenu = ({ isExpanded }) => {
                       <Link
                         className="sidebar-link"
                         onClick={() => handleActiveClick("refunddata")}
-                      >
+                      >   <AiOutlineLine className="sub_icon" />
                         <span
                           className={`${active === "refunddata" ? "text-white" : ""
                             }`}
                         >
-                          <AiOutlineLine className="sub_icon" />
                           Refund Data
                         </span>
                       </Link>
@@ -237,11 +213,10 @@ export const Sidemenu = ({ isExpanded }) => {
                 data-bs-target="#inventory"
                 aria-expanded="false"
                 aria-controls="inventory"
-              >
+              >  <MdOutlineInventory className="main_icon" />
                 <span
                   className={`${active === "inventory" ? "text-white" : ""}`}
                 >
-                  <MdOutlineInventory className="main_icon" />
                   Inventory
                 </span>
               </Link>
@@ -254,12 +229,11 @@ export const Sidemenu = ({ isExpanded }) => {
                   <Link
                     className="sidebar-link"
                     onClick={() => handleActiveClick("addassets")}
-                  >
+                  >  <AiOutlineLine className="sub_icon" />
                     <span
                       className={`${active === "addassets" ? "text-white" : ""
                         }`}
                     >
-                      <AiOutlineLine className="sub_icon" />
                       Add Assets
                     </span>
                   </Link>
@@ -290,9 +264,8 @@ export const Sidemenu = ({ isExpanded }) => {
                 data-bs-target="#leads"
                 aria-expanded="false"
                 aria-controls="leads"
-              >
+              ><AiOutlineFileAdd className="main_icon" />
                 <span className={`${active === "leads" ? "text-white" : ""}`}>
-                  <AiOutlineFileAdd className="main_icon" />
                   Leads
                 </span>
               </Link>
@@ -309,13 +282,11 @@ export const Sidemenu = ({ isExpanded }) => {
                     data-bs-target="#websiteleads"
                     aria-expanded="false"
                     aria-controls="websiteleads"
-                  >
+                  >  <CgWebsite className="main_icon" />
                     <span
                       className={`${active === "websiteleads" ? "text-white" : ""
                         }`}
-                    >
-                      <CgWebsite className="main_icon" />
-                      Website Leads
+                    >   Website Leads
                     </span>
                   </Link>
                   <ul
@@ -326,12 +297,11 @@ export const Sidemenu = ({ isExpanded }) => {
                       <Link
                         className="sidebar-link"
                         onClick={() => handleActiveClick("webinar")}
-                      >
+                      > <AiOutlineLine className="sub_icon" />
                         <span
                           className={`${active === "webinar" ? "text-white" : ""
                             }`}
                         >
-                          <AiOutlineLine className="sub_icon" />
                           Webinar
                         </span>
                       </Link>
@@ -340,12 +310,11 @@ export const Sidemenu = ({ isExpanded }) => {
                       <Link
                         className="sidebar-link"
                         onClick={() => handleActiveClick("whatsapp")}
-                      >
+                      >   <AiOutlineLine className="sub_icon" />
                         <span
                           className={`${active === "whatsapp" ? "text-white" : ""
                             }`}
                         >
-                          <AiOutlineLine className="sub_icon" />
                           WhatsApp
                         </span>
                       </Link>
@@ -354,12 +323,11 @@ export const Sidemenu = ({ isExpanded }) => {
                       <Link
                         className="sidebar-link"
                         onClick={() => handleActiveClick("downloadsyllbus")}
-                      >
+                      >   <AiOutlineLine className="sub_icon" />
                         <span
                           className={`${active === "downloadsyllbus" ? "text-white" : ""
                             }`}
                         >
-                          <AiOutlineLine className="sub_icon" />
                           Download Syllabus
                         </span>
                       </Link>
@@ -368,12 +336,11 @@ export const Sidemenu = ({ isExpanded }) => {
                       <Link
                         className="sidebar-link"
                         onClick={() => handleActiveClick("viewcourse")}
-                      >
+                      >  <AiOutlineLine className="sub_icon" />
                         <span
                           className={`${active === "viewcourse" ? "text-white" : ""
                             }`}
                         >
-                          <AiOutlineLine className="sub_icon" />
                           View Course
                         </span>
                       </Link>
@@ -382,12 +349,11 @@ export const Sidemenu = ({ isExpanded }) => {
                       <Link
                         className="sidebar-link"
                         onClick={() => handleActiveClick("contactus")}
-                      >
+                      >  <AiOutlineLine className="sub_icon" />
                         <span
                           className={`${active === "contactus" ? "text-white" : ""
                             }`}
                         >
-                          <AiOutlineLine className="sub_icon" />
                           Contact Us
                         </span>
                       </Link>
@@ -396,12 +362,11 @@ export const Sidemenu = ({ isExpanded }) => {
                       <Link
                         className="sidebar-link"
                         onClick={() => handleActiveClick("hlpenquireleads")}
-                      >
+                      >   <AiOutlineLine className="sub_icon" />
                         <span
                           className={`${active === "hlpenquireleads" ? "text-white" : ""
                             }`}
                         >
-                          <AiOutlineLine className="sub_icon" />
                           Hlp Enquire Leads
                         </span>
                       </Link>
@@ -410,12 +375,11 @@ export const Sidemenu = ({ isExpanded }) => {
                       <Link
                         className="sidebar-link"
                         onClick={() => handleActiveClick("slpenquireleads")}
-                      >
+                      > <AiOutlineLine className="sub_icon" />
                         <span
                           className={`${active === "slpenquireleads" ? "text-white" : ""
                             }`}
                         >
-                          <AiOutlineLine className="sub_icon" />
                           Slp Enquire Leads
                         </span>
                       </Link>
@@ -433,9 +397,8 @@ export const Sidemenu = ({ isExpanded }) => {
                 data-bs-target="#reports"
                 aria-expanded="false"
                 aria-controls="reports"
-              >
+              >   <TbMessageReport className="main_icon" />
                 <span className={`${active === "reports" ? "text-white" : ""}`}>
-                  <TbMessageReport className="main_icon" />
                   Reports
                 </span>
               </Link>
@@ -448,12 +411,11 @@ export const Sidemenu = ({ isExpanded }) => {
                   <Link
                     className="sidebar-link"
                     onClick={() => handleActiveClick("reportsdata")}
-                  >
+                  >   <AiOutlineLine className="sub_icon" />
                     <span
                       className={`${active === "reportsdata" ? "text-white" : ""
                         }`}
                     >
-                      <AiOutlineLine className="sub_icon" />
                       Reports Data
                     </span>
                   </Link>
@@ -466,11 +428,10 @@ export const Sidemenu = ({ isExpanded }) => {
                 to="/settingstabs"
                 className="sidebar-link"
                 onClick={() => handleActiveClick("settings")}
-              >
+              > <CiSettings className="main_icon" />
                 <span
                   className={`${active === "settings" ? "text-white" : ""}`}
                 >
-                  <CiSettings className="main_icon" />
                   Settings
                 </span>
               </Link>
@@ -483,9 +444,8 @@ export const Sidemenu = ({ isExpanded }) => {
                 data-bs-target="#design"
                 aria-expanded="false"
                 aria-controls="design"
-              >
+              > <TbMessageReport className="main_icon" />
                 <span className={`${active === "design" ? "text-white" : ""}`}>
-                  <TbMessageReport className="main_icon" />
                   Design
                 </span>
               </Link>
@@ -499,11 +459,10 @@ export const Sidemenu = ({ isExpanded }) => {
                     to="/table"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("table")}
-                  >
+                  >  <AiOutlineLine className="sub_icon" />
                     <span
                       className={`${active === "table" ? "text-white" : ""}`}
                     >
-                      <AiOutlineLine className="sub_icon" />
                       Table
                     </span>
                   </Link>
@@ -513,11 +472,10 @@ export const Sidemenu = ({ isExpanded }) => {
                     to="/card"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("card")}
-                  >
+                  >  <AiOutlineLine className="sub_icon" />
                     <span
                       className={`${active === "card" ? "text-white" : ""}`}
                     >
-                      <AiOutlineLine className="sub_icon" />
                       Card
                     </span>
                   </Link>
@@ -527,11 +485,10 @@ export const Sidemenu = ({ isExpanded }) => {
                     to="/forms"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("form")}
-                  >
+                  >  <AiOutlineLine className="sub_icon" />
                     <span
                       className={`${active === "form" ? "text-white" : ""}`}
                     >
-                      <AiOutlineLine className="sub_icon" />
                       Forms
                     </span>
                   </Link>
@@ -542,12 +499,11 @@ export const Sidemenu = ({ isExpanded }) => {
                     to="/whatsapp"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("whatsappchat")}
-                  >
+                  >  <AiOutlineLine className="sub_icon" />
                     <span
                       className={`${active === "whatsappchat" ? "text-white" : ""
                         }`}
                     >
-                      <AiOutlineLine className="sub_icon" />
                       Whatsapp Chat
                     </span>
                   </Link>
@@ -557,12 +513,11 @@ export const Sidemenu = ({ isExpanded }) => {
                     to="/accordian"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("accordions")}
-                  >
+                  >   <AiOutlineLine className="sub_icon" />
                     <span
                       className={`${active === "accordions" ? "text-white" : ""
                         }`}
                     >
-                      <AiOutlineLine className="sub_icon" />
                       Accordions
                     </span>
                   </Link>
@@ -572,11 +527,10 @@ export const Sidemenu = ({ isExpanded }) => {
                     to="/tabs"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("tabs")}
-                  >
+                  >  <AiOutlineLine className="sub_icon" />
                     <span
                       className={`${active === "tabs" ? "text-white" : ""}`}
                     >
-                      <AiOutlineLine className="sub_icon" />
                       Tabs
                     </span>
                   </Link>
@@ -586,11 +540,10 @@ export const Sidemenu = ({ isExpanded }) => {
                     to="/modal"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("modal")}
-                  >
+                  >  <AiOutlineLine className="sub_icon" />
                     <span
                       className={`${active === "modal" ? "text-white" : ""}`}
                     >
-                      <AiOutlineLine className="sub_icon" />
                       Modal
                     </span>
                   </Link>
@@ -600,11 +553,10 @@ export const Sidemenu = ({ isExpanded }) => {
                     to="/page"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("page")}
-                  >
+                  >  <AiOutlineLine className="sub_icon" />
                     <span
                       className={`${active === "page" ? "text-white" : ""}`}
                     >
-                      <AiOutlineLine className="sub_icon" />
                       Page
                     </span>
                   </Link>
@@ -614,11 +566,10 @@ export const Sidemenu = ({ isExpanded }) => {
                     to="/button"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("button")}
-                  >
+                  ><AiOutlineLine className="sub_icon" />
                     <span
                       className={`${active === "button" ? "text-white" : ""}`}
                     >
-                      <AiOutlineLine className="sub_icon" />
                       Button
                     </span>
                   </Link>
