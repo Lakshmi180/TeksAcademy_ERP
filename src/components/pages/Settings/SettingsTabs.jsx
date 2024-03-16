@@ -3,64 +3,76 @@ import { Link } from "react-router-dom";
 import "../../../assets/css/common/Settings.css";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaGift } from "react-icons/fa";
+import Branch from "../../../images/setting_tabs_icons/Branch.svg";
+import Roles from "../../../images/setting_tabs_icons/Roles.svg";
+import courses from "../../../images/setting_tabs_icons/courses.svg";
+import departments from "../../../images/setting_tabs_icons/departments.svg";
+import fee from "../../../images/setting_tabs_icons/fee.svg";
+import course from "../../../images/setting_tabs_icons/course.svg";
+import sources from "../../../images/setting_tabs_icons/sources.svg";
+import communications from "../../../images/setting_tabs_icons/communications.svg";
+import oraganisation from "../../../images/setting_tabs_icons/oraganisation.svg";
+import assests from "../../../images/setting_tabs_icons/assests.svg";
+import forms from "../../../images/setting_tabs_icons/forms.svg";
+import cc from "../../../images/setting_tabs_icons/cc.svg";
 
 export const SettingsTabs = () => {
 
     const settingsData = [
         {
             name: "Roles",
-            icon: "https://themesbrand.com/velzon/html/default/assets/images/user-illustarator-1.png",
+            icon: Roles,
             link: "/roles"
         },
         {
             name: "Branch",
-            icon: "https://themesbrand.com/velzon/html/default/assets/images/user-illustarator-1.png",
+            icon:  Branch,
             link: "/branch"
         },
         {
             name: "Course Package",
-            icon: "https://themesbrand.com/velzon/html/default/assets/images/user-illustarator-1.png",
+            icon: course,
             link: "/coursepackage"
         },
         {
             name: "Courses",
-            icon: "https://themesbrand.com/velzon/html/default/assets/images/user-illustarator-1.png",
+            icon: courses,
             link: "/course"
         },
         {
             name: "Admission Fee",
-            icon: "https://themesbrand.com/velzon/html/default/assets/images/user-illustarator-1.png",
+            icon: fee,
             link: "/admissionfee"
         }, {
             name: "Departments",
-            icon: "https://themesbrand.com/velzon/html/default/assets/images/user-illustarator-1.png",
+            icon: departments,
             link: "/department"
         },
         {
             name: "Lead Sources",
-            icon: "https://themesbrand.com/velzon/html/default/assets/images/user-illustarator-1.png",
+            icon: sources,
             link: "/leadsource"
         },
         {
             name: "Communication",
-            icon: "https://themesbrand.com/velzon/html/default/assets/images/user-illustarator-1.png",
+            icon: communications,
             link: "/"
         },
         {
             name: "Add Vendor",
-            icon: "https://themesbrand.com/velzon/html/default/assets/images/user-illustarator-1.png",
+            icon: communications,
             link: "/addvendor"
         }, {
             name: "Add Assets Type",
-            icon: "https://themesbrand.com/velzon/html/default/assets/images/user-illustarator-1.png",
+            icon: assests,
             link: "/addassetstype"
         }, {
             name: "Forms",
-            icon: "https://themesbrand.com/velzon/html/default/assets/images/user-illustarator-1.png",
+            icon: forms,
             link: "/"
         }, {
             name: "Organization Profile",
-            icon: "https://themesbrand.com/velzon/html/default/assets/images/user-illustarator-1.png",
+            icon: oraganisation,
             link: "/"
         },
     ]
