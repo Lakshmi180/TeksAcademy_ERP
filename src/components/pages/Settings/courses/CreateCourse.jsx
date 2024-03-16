@@ -1,20 +1,40 @@
 
 import axios from "axios";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import { toast } from "react-toastify";
 import { CourseContext } from "../../../../context/courseContext/CourseContextProvider";
 
 import Button from "../../../common/design/Button";
+import { useParams } from "react-router-dom";
+import { useCourseContext } from "../../../../hooks/useCourseContext";
 const CreateCourse = () => {
-    const {DispatchCourse,courseState,getAllCourses}=useContext(CourseContext)
+    const {DispatchCourse,courseState,getAllCourses}=useCourseContext();
+    const { courseId } = useParams();
+
     const [formdata, setformdata]=useState({
         course_name:"",
         course_package:"",
         fee:"",
         max_discount:"",
-       
     })
+
+    console.log(courseId,"courseId")
+
+    useEffect(() => {
+        console.log(courseId,"courseId")
+        if (courseId) {
+          // Fetch course details for editing
+          axios.get(`${process.env.REACT_APP_API_URL}/getcourse/${courseId}`)
+            .then(response => {
+                setformdata(response.data);
+                console.log(response.data, "response.data");
+            })
+            .catch(error => {
+              console.error("Error fetching course details:", error);
+            });
+        }
+      }, [courseId]);
 
     const handleChange =(e)=>{
         setformdata((prev)=>{
@@ -56,8 +76,8 @@ const CreateCourse = () => {
           user=dataWithTitleCase[0];
           console.log(user,"datatiltecases")
     
-    
-          try{
+    if(!courseId){
+        try{
             const {data, status} = await 
             toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/addcourses`,JSON.stringify(user) ),{
                 loading: "Loading...",
@@ -72,6 +92,27 @@ const CreateCourse = () => {
           catch(error){
             console.log(error)
           }
+    }
+
+    if(courseId){
+        try{
+            const {data, status} = await 
+            toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/updatecourse/${courseId}`,JSON.stringify(user) ),{
+                loading: "Loading...",
+                success: "Course created Successfully",
+                error: "Course not Created"
+            })
+    
+            if(status === 201){
+                console.log(data, "hellobb")    
+            }
+          }
+          catch(error){
+            console.log(error)
+          }
+
+    }
+          
     }
     
 

@@ -6,7 +6,7 @@ const CoursePackageReducer=(state, action)=> {
         case "SET_COURSE_PACKAGES":
             return{
                 ...state,
-                 coursepackages: [action?.payload],
+                 coursepackages: action?.payload,
 
             }
         case "CREATE_COURSE_PACKAGE":

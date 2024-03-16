@@ -5,10 +5,11 @@ import { toast } from 'react-toastify';
 import { DepartmentContext } from '../../../../context/deparmentContext/DepartmentContextProvider';
 import { useNavigate } from 'react-router-dom';
 import Button from "../../../common/design/Button";
+import { useDepartmentContext } from '../../../../hooks/useDepartmentContext';
 function CreateDepartment() {
   const navigate = useNavigate();
 
-  const {DispatchDepartment,DepartmentState, getAllDeparments}=useContext(DepartmentContext)
+  const {DispatchDepartment,DepartmentState, getAllDeparments}=useDepartmentContext();
 
   const [formData, setFormData] = useState({
     department: "",

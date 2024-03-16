@@ -9,7 +9,7 @@
     const BranchContextProvider=({children})=>{
 
         const intialState={
-            branches:[],
+            branches:null,
         }
 
         const [BranchState, DispatchBranch]=useReducer(BranchReducer, intialState)

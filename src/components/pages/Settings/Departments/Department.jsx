@@ -4,10 +4,11 @@ import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 import { HiMiniPlus } from "react-icons/hi2";
 import { DepartmentContext } from "../../../../context/deparmentContext/DepartmentContextProvider";
+import { useDepartmentContext } from "../../../../hooks/useDepartmentContext";
 
 const Department = () => {
 
-    const { DepartmentState } = useContext(DepartmentContext)
+    const { DepartmentState } = useDepartmentContext();
     console.log(DepartmentState.departments, "DepartmentStatedfhfgh")
 
 
@@ -55,8 +56,7 @@ const Department = () => {
                                 <tbody className=''>
 
                                     {
-                                        DepartmentState.departments && DepartmentState?.departments.length > 0 ? DepartmentState.departments[0].map((item, index) => {
-
+                                        DepartmentState.departments && DepartmentState?.departments.length > 0 ? DepartmentState.departments.map((item, index) => {
 
                                             let date = new Date(item.date);
                                             const day = date.getUTCDate();

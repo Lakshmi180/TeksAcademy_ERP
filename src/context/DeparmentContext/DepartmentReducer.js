@@ -3,9 +3,9 @@ const DepartmentReducer = (state, action) => {
         case "SET_DEPARTMENTS":
             return {
                 ...state,
-                departments: [action?.payload]
+                departments: action?.payload
             };
-        case "CREATE_DEPARTMENTS":
+        case "CREATE_DEPARTMENT":
             return {
                 ...state,
                 departments: [...state.departments, action?.payload]

@@ -7,9 +7,10 @@ import { useNavigate, useNavigation } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import Button from "../../../common/design/Button";
-const CreateBranch = () => {
+import { useBranchContext } from "../../../../hooks/useBranchContext";
 
-const {DispatchBranch,BranchState, getAllBranches}=useContext(BranchContext)
+const CreateBranch = () => {
+const {DispatchBranch,BranchState, getAllBranches}=useBranchContext();
 
     const navigate= useNavigate()
     const [formData, setFormData] = useState({
