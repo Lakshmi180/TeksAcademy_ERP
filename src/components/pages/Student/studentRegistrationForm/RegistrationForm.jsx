@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./RegistrationForm.css";
 import { StudentDetails } from "./StudentDetails";
 import { ThankYou } from "../../../common/design/ThankYou";
-import { useTheme } from "../../../../context/ThemeContext/ThemeContext";
+import { useTheme } from "../../../../context/themeContext/ThemeContext";
 import { EducationDetails } from "./EducationDetails";
 import { AdmissionDetails } from "./AdmissionDetails";
 import { FeeDetails } from "./FeeDetails";
@@ -10,7 +10,7 @@ import { OthersForm } from "./OthersForm";
 import { Billing } from "./Billing";
 import { ParentsDetails } from "./ParentsDetails";
 import { IoMdArrowBack, IoMdCheckmark, IoMdArrowForward } from "react-icons/io";
-import Button from "../../../common/design/Button";
+import { Preview } from "./Preview";
 
 function RegistrationForm() {
   const [activeTab, setActiveTab] = useState(0);
@@ -94,19 +94,11 @@ function RegistrationForm() {
       content: <OthersForm />,
     },
     {
-      title: "Finish",
-      content: (
-        <ThankYou
-          heading="Thank you!"
-          description={"Thank you for registering with us!!"}
-        />
-      ),
+      title: "Preview",
+      content: <Preview />,
     },
   ];
 
-  function handleClick() {
-    alert("Hello Lakshmi")
-  }
   function handleNext() {
     localStorage.setItem("formData", JSON.stringify(formData));
     setActiveTab((prevActiveTab) => prevActiveTab + 1);
@@ -124,87 +116,83 @@ function RegistrationForm() {
     localStorage.setItem("formData", JSON.stringify(formData));
   }, [formData]);
   return (
-    <div className="registration_form_section  ">
-      <div className="top">
-        <div className="registration_form_tabs row">
-          <div className="button_grp col-lg-12 p-0">
-            {tabs.map((tab, index) => {
-              return (
-                <button
-                  key={index}
-                  type="button"
-                  className={
-                    activeTab === index
-                      ? `${theme === "light"
-                        ? "form_tab_btn active"
-                        : "form_tab_btn dark active"
-                      }`
-                      : "form_tab_btn "
-                  }
-                  onClick={() => setActiveTab(index)}
-                  disabled={!isFormValid}
-                >
-                  {tab.title}
-                </button>
-              );
-            })}
+    <div className="container-fluid">
+      <div className="registration_form_section  ">
+        <div className="top">
+          <div className="registration_form_tabs row">
+            <div className="button_grp col-lg-12 p-0">
+              {tabs.map((tab, index) => {
+                return (
+                  <button
+                    key={index}
+                    type="button"
+                    className={
+                      activeTab === index
+                        ? `${
+                            theme === "light"
+                              ? "form_tab_btn active"
+                              : "form_tab_btn dark active"
+                          }`
+                        : "form_tab_btn "
+                    }
+                    onClick={() => setActiveTab(index)}
+                    disabled={!isFormValid}
+                  >
+                    {tab.title}
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </div>
-      </div>
-      <div className="bottom mt-3">
-        <form className="row d-flex align-items-center" onSubmit={handleSubmit}>
-          {tabs[activeTab].content}
+        <div className="bottom mt-3">
+          <form className="" onSubmit={handleSubmit}>
+            {tabs[activeTab].content}
 
-          <div className="controls d-flex justify-content-between  mt-4">
-            <div>
-              {" "}
-              {activeTab !== 0 && (
-                <button
-                  type="button"
-                  className="control_prev_btn reg_btn"
-                  onClick={() => setActiveTab(activeTab - 1)}
-                >
-                  <span>
-                    <IoMdArrowBack className="button_icons" />
-                  </span>
-                  Go Back
-                </button>
-              )}
-            </div>
-            <div>
-              {activeTab !== tabs.length - 1 && (
-                <div className="">
+            <div className="controls d-flex justify-content-between  mt-4">
+              <div>
+                {activeTab !== 0 && (
                   <button
                     type="button"
-                    className="control_next_btn reg_btn"
+                    className="btn control_prev_btn reg_btn"
+                    onClick={handlePrev}
+                  >
+                    <span>
+                      <IoMdArrowBack className="button_icons" />
+                    </span>
+                    Go Back
+                  </button>
+                )}
+              </div>
+              <div>
+                {activeTab !== tabs.length - 1 && (
+                  <button
+                    type="button"
+                    className="btn btn-label right btn_primary "
                     onClick={handleNext}
                   >
                     Continue
-                    <span>
-                      <IoMdArrowForward className="button_icons" />
+                    <span className="label-icon">
+                      <IoMdArrowForward />
                     </span>
                   </button>
-                </div>
-              )}
-              {activeTab === tabs.length - 1 && (
-                <div className="">
+                )}
+                {activeTab === tabs.length - 1 && (
                   <button
                     type="submit"
-                    className="control_next_btn reg_btn"
+                    className="btn btn-label right btn_primary "
                     onClick={handleNext}
                   >
                     Submit
-                    <span>
+                    <span className="label-icon">
                       <IoMdCheckmark />
                     </span>
                   </button>
-                </div>
-              )}
-              <Button className={"btn_primary"} icon={<IoMdArrowBack />} onClick={handleNext}>Hello</Button>
-              <Button className={"btn_primary"} icon={<IoMdArrowBack />} onClick={handlePrev}>Back</Button>
+                )}
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   );

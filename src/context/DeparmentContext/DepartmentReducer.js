@@ -1,20 +1,18 @@
-import React from 'react'
-
-const DepartmentReducer=(action, state)=> {
-    switch(action.type){
+const DepartmentReducer = (state, action) => {
+    switch(action.type) {
         case "SET_DEPARTMENTS":
-            return{
+            return {
                 ...state,
-                 departments: [action?.payload]
-                
-            }
+                departments: [action?.payload]
+            };
         case "CREATE_DEPARTMENTS":
-            return{
+            return {
                 ...state,
-                departments:[...state.departments, action?.payload]
-            }
+                departments: [...state.departments, action?.payload]
+            };
+        default:
+            return state;
     }
-  
 }
 
 export default DepartmentReducer;

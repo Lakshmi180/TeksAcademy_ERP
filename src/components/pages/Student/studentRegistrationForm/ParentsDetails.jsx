@@ -17,7 +17,7 @@ export const ParentsDetails = ({ formData, handleInputChange }) => {
             Parent's Name*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="rparentname"
             type="text"
             name="rparentname"
@@ -37,7 +37,7 @@ export const ParentsDetails = ({ formData, handleInputChange }) => {
             Parent's Contact*
           </label>
           <input
-            className="form-control"
+            className="form-control input_bg_color"
             id="rparentscontact"
             type="number"
             name="rparentscontact"
@@ -58,7 +58,7 @@ export const ParentsDetails = ({ formData, handleInputChange }) => {
             Relation*
           </label>
           <select
-            class="form-select form-control"
+            class="form-select form-control input_bg_color"
             aria-label="Default select example"
             id="rrelation"
             onChange={(e) =>

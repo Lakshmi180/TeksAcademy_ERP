@@ -9,7 +9,7 @@ import { MdOutlineAccountBalanceWallet } from "react-icons/md";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoCloseCircle } from "react-icons/io5";
 import { RiCheckboxCircleFill } from "react-icons/ri";
-import { useTheme } from "../../../context/ThemeContext/ThemeContext";
+import { useTheme } from "../../../context/themeContext/ThemeContext";
 // import "../../../assets/css/common/Card.css"
 
 function Card() {

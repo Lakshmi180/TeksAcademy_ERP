@@ -7,7 +7,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 import "../../assets/css/common/Login.css";
 import Loginvalidation from "./LoginValidation";
-import { AuthContext } from "../../context/AuthContext/AuthContextProvider";
+import { AuthContext } from "../../context/authContext/AuthContextProvider";
 import { Link } from "react-router-dom";
 
 export const Login = () => {
