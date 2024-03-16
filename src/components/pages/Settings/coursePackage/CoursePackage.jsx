@@ -5,9 +5,10 @@ import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 import { HiMiniPlus } from "react-icons/hi2";
 import { CoursePackageContext } from "../../../../context/coursePackageContext/CoursePackageContext";
+import { useCoursePackage } from "../../../../hooks/useCoursePackage";
 
 const CoursePackage = () => {
-    const { coursePackageState, getAllCoursePackages, DispatchCourseState } = useContext(CoursePackageContext)
+    const { coursePackageState, getAllCoursePackages, DispatchCourseState } = useCoursePackage();
     return (
         <div>
             <div className='container-fluid'>
@@ -53,7 +54,7 @@ const CoursePackage = () => {
 
                                             {
                                                 coursePackageState.coursepackages && coursePackageState.coursepackages.length > 0 ?
-                                                    coursePackageState.coursepackages[0].map((item, index) => {
+                                                    coursePackageState.coursepackages.map((item, index) => {
                                                         let date = new Date(item.date);
                                                         const day = date.getUTCDate();
                                                         const monthIndex = date.getUTCMonth();

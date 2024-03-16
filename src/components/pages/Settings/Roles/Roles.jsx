@@ -4,9 +4,10 @@ import { MdOutlineEdit } from "react-icons/md";
 import { MdDeleteOutline } from "react-icons/md";
 import { HiMiniPlus } from "react-icons/hi2";
 import { RoleContext } from '../../../../context/roleContext/RoleContextProvider';
+import { useRoleContext } from '../../../../hooks/useRoleContext';
 export const Roles = () => {
 
-  const { RoleState } = useContext(RoleContext);
+  const { RoleState } = useRoleContext();
 
   console.log(RoleState.roles, "kjhghg")
 

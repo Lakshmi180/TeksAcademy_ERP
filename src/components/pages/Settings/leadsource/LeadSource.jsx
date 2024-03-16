@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 import { HiMiniPlus } from "react-icons/hi2";
+import { LeadSourceContext } from '../../../../context/leadSourceContext/LeadSourceContext';
+import { useLeadSourceContext } from '../../../../hooks/useLeadSourceContext';
 const LeadSource = () => {
+    const { leadSourceState, DispatchLeadSource, getAllLeadSource } = useLeadSourceContext();
+
     return (
         <div>
             <div className='container-fluid'>
@@ -46,50 +50,51 @@ const LeadSource = () => {
                                             </tr>
                                         </thead>
                                         <tbody className=''>
-                                            {/* 1st row */}
-                                            <tr>
-                                                <td className='fs_13 black_color fw_500 lh_xs bg_light '>
-                                                    01
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Kukkatpally
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Description
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Bhavitha
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    12-10-2024
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light '>
-                                                    <MdEdit className='text-mute table_icons me-3' />
-                                                    <MdDelete className='text-mute table_icons me-3' />
-                                                </td>
-                                            </tr>
-                                            {/* 2nd row */}
-                                            <tr>
-                                                <td className='fs_13 black_color fw_500 lh_xs bg_light '>
-                                                    01
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Kukkatpally
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Description
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    Bhavitha
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    12-10-2024
-                                                </td>
-                                                <td className='fs_13 black_color  lh_xs bg_light '>
-                                                    <MdEdit className='text-mute table_icons me-3' />
-                                                    <MdDelete className='text-mute table_icons me-3' />
-                                                </td>
-                                            </tr>
+                                            {
+                                                leadSourceState.leadSources && leadSourceState.leadSources.length > 0 ? leadSourceState.leadSources.map((item, index) => {
+                                                    let date = new Date(item.date);
+                                                    const day = date.getUTCDate();
+                                                    const monthIndex = date.getUTCMonth();
+                                                    const year = date.getUTCFullYear();
+
+                                                    const monthAbbreviations = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+                                                    // Formatting the date
+                                                    date = `${day < 10 ? "0" : ""}${day}-${monthAbbreviations[monthIndex]
+                                                        }-${year}`;
+
+                                                    return (
+                                                        <tr>
+                                                            <td className='fs_13 black_color fw_500 lh_xs bg_light '>
+                                                                {index+1}
+                                                            </td>
+                                                            <td className='fs_13 black_color  lh_xs bg_light'>
+                                                                {item.leadsource}
+                                                                
+                                                            </td>
+                                                            <td className='fs_13 black_color  lh_xs bg_light'>
+                                                                Description
+                                                            </td>
+                                                            <td className='fs_13 black_color  lh_xs bg_light'>
+                                                                Bhavitha
+                                                            </td>
+                                                            <td className='fs_13 black_color  lh_xs bg_light'>
+                                                                {date}
+                                                            </td>
+                                                            <td className='fs_13 black_color  lh_xs bg_light '>
+                                                                <MdEdit className='text-mute table_icons me-3' />
+                                                                <MdDelete className='text-mute table_icons me-3' />
+                                                            </td>
+                                                        </tr>
+                                                    )
+                                                }) :
+                                                    <tr>
+                                                        <td>
+                                                            no data found
+                                                        </td>
+                                                    </tr>
+                                            }
+                                            
                                         </tbody>
                                     </table>
                                 </div>

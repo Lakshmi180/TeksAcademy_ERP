@@ -14,6 +14,7 @@ import BranchContextProvider from "./context/branchContext/BranchContextProvider
 import DepartmentContextProvider, { DepartmentContext } from "./context/deparmentContext/DepartmentContextProvider";
 import CoursePackageContextProvider from "./context/coursePackageContext/CoursePackageContext";
 import CourseContextProvider from "./context/courseContext/CourseContextProvider";
+import LeadSourceContextProvider from "./context/leadSourceContext/LeadSourceContext";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -26,6 +27,9 @@ root.render(
             <DepartmentContextProvider>
               <CoursePackageContextProvider>
                 <CourseContextProvider>
+                <LeadSourceContextProvider>
+
+                
 
                   <ThemeProvider>
                     {/* <RouterProvider router={router}/> */}
@@ -34,6 +38,7 @@ root.render(
                     <App />
                   </ThemeProvider>
 
+                  </LeadSourceContextProvider>
                 </CourseContextProvider>
               </CoursePackageContextProvider>
             </DepartmentContextProvider>
