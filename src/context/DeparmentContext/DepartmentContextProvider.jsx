@@ -9,7 +9,7 @@ export const DepartmentContext = createContext();
 const DepartmentContextProvider=({children})=> {
     
     const initialState={
-        departments:[]
+        departments:null
     }
 
     const[DepartmentState, DispatchDepartment]= useReducer(DepartmentReducer, initialState )

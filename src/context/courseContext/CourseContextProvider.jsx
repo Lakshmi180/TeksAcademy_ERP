@@ -8,7 +8,7 @@ export const CourseContext = createContext();
 const CourseContextProvider=({children})=>{
 
     const initialState ={
-        courses:[]
+        courses:null
     }
     
     const [courseState, DispatchCourse]=useReducer(CourseReducer,initialState)
@@ -18,8 +18,7 @@ const CourseContextProvider=({children})=>{
     const getAllCourses = async()=>{
         try{
             const {data, status}=await axios.get(`${process.env.REACT_APP_API_URL}/getcourses`)
-            
-
+        
             if(status === 201){
                 console.log(data, "courseresponsedata")
                 DispatchCourse({type: "SET_COURSES", payload:data})

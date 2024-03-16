@@ -8,9 +8,10 @@ import { CoursePackageContext } from "../../../../context/coursePackageContext/C
 import { Navigate, useNavigate } from "react-router-dom";
 
 import Button from "../../../common/design/Button";
+import { useCoursePackage } from "../../../../hooks/useCoursePackage";
 const CreateCoursePackage=()=>{
 
-const {coursePackageState,getAllCoursePackages, DispatchCourseState}=useContext(CoursePackageContext)
+const {coursePackageState,getAllCoursePackages, DispatchCourseState}=useCoursePackage();
 const navigate = useNavigate();
     const [formdata, setformdata]= useState({
         coursepackages_name:"",

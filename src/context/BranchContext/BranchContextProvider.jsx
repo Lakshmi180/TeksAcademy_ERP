@@ -12,8 +12,6 @@ const BranchContextProvider = ({ children }) => {
 
   const [BranchState, DispatchBranch] = useReducer(BranchReducer, intialState);
 
-  console.log(BranchState, "BranchState");
-
   const getAllBranches = async () => {
     try {
       const { status, data } = await axios.get(

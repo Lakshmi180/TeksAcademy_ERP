@@ -8,7 +8,7 @@ export const CoursePackageContext = createContext();
 const CoursePackageContextProvider=({children})=> {
 
     const initialState={
-        coursepackages:[]
+        coursepackages:null
     }
 
 const [coursePackageState, DispatchCourseState] =useReducer(CoursePackageReducer, initialState);
@@ -46,8 +46,6 @@ const [coursePackageState, DispatchCourseState] =useReducer(CoursePackageReducer
   useEffect(()=>{
     getAllCoursePackages();
   },[]);
-
-
 
 
   return (

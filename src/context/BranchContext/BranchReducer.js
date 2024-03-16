@@ -5,9 +5,10 @@ const BranchReducer = (state, action) => {
       case "SET_BRANCHES":
         return {
         ...state,
-          branches:[action?.payload]
+          branches:action?.payload
         };
-      case "CREATE_BRANCHES":
+      case "CREATE_BRANCH":
+       
         return {
           branches: [...state.branches, action?.payload]
         };
