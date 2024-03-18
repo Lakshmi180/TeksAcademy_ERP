@@ -60,7 +60,7 @@ export const SettingsTabs = () => {
         },
         {
             name: "Add Vendor",
-            icon: communications,
+            icon: cc,
             link: "/addvendor"
         }, {
             name: "Add Assets Type",
@@ -86,12 +86,13 @@ export const SettingsTabs = () => {
                         settingsData.map((setting, index) => {
                             return (
                                 <div key={index} className="col-lg-3 col-sm-6">
-                                    <div className='card'>
+                                    <div className='card card_animate'>
+                                        <Link to={setting.link}>
                                         <div className="d-flex p-3 justify-content-between">
                                             <div>
                                                 <span className="fs_20 fw-500">{setting.name}</span>
                                                 <div className='mt-3 fs_14 lh-100 text_underline black_300'>
-                                                    <Link to={setting.link}>Explore <FaArrowRight /></Link>
+                                                    <p>Explore <FaArrowRight /></p>
                                                 </div>
                                             </div>
                                             <div className="flex-shrink-0">
@@ -101,7 +102,8 @@ export const SettingsTabs = () => {
                                                     </span>
                                                 </div>
                                             </div>
-                                        </div>
+                                            </div>
+                                        </Link>
                                     </div>
                                 </div>
                             );
