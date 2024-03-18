@@ -8,30 +8,31 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { useCourseContext } from "../../../../hooks/useCourseContext";
 
+
 const Course = () => {
-   
+
     const { DispatchCourse, courseState, getAllCourses } = useCourseContext();
-   
-    const handleDeleteCourse=async(id)=>{
+
+    const handleDeleteCourse = async (id) => {
         let courseID = { id: id }
-        try{
-            const {data, status} = await 
-            toast.promise(axios.delete(`${process.env.REACT_APP_API_URL}/deletecourse/${id}`, id ),{
-                loading: "Loading...",
-                success: "Course Deleted Successfully",
-                error: "Course not Deleted"
-            })
+        try {
+            const { data, status } = await
+                toast.promise(axios.delete(`${process.env.REACT_APP_API_URL}/deletecourse/${id}`, id), {
+                    loading: "Loading...",
+                    success: "Course Deleted Successfully",
+                    error: "Course not Deleted"
+                })
             console.log(data, status, "seethdsvf")
-    
-            if(status === 200){
+
+            if (status === 200) {
                 console.log(data, "hellobb")
-                DispatchCourse({type:"DELETE_COURSE", payload:courseID}) 
+                DispatchCourse({ type: "DELETE_COURSE", payload: courseID })
 
             }
-          }
-          catch(error){
+        }
+        catch (error) {
             console.log(error)
-          }
+        }
     }
 
 
@@ -55,7 +56,10 @@ const Course = () => {
                                 </div>
                             </div>
                             <div className="card-body">
-                                <div class="table-responsive table-card border-0">
+                                
+
+                                
+                                <div class="table-responsive table-card border-0 ">
                                     <table className="table table-centered align-middle table-nowrap equal-cell-table">
                                         <thead>
                                             <tr className=''>
@@ -82,7 +86,7 @@ const Course = () => {
                                                 </th>
                                             </tr>
                                         </thead>
-                                        <tbody className=''>
+                                        <tbody className='scrollable-body' style={{ display:"block" ,flexDirection:"column", maxHeight: 'calc(80vh - 200px)', overflowY: 'auto' ,}}>
 
                                             {
                                                 courseState.courses && courseState.courses.length>0 ? courseState.courses.map((item, index) => {
@@ -134,7 +138,88 @@ const Course = () => {
                                             }
                                         </tbody>
                                     </table>
+
+
+                                    {/* <div className="table-responsive">
+                                        <table className="table table-centered align-middle table-nowrap equal-cell-table">
+                                            <thead className="sticky-header">
+                                                <tr>
+                                                    <th scope="col" className="fs_13 lh_xs fw_600 black_color">
+                                                        S.No
+                                                    </th>
+                                                    <th scope="col" className="fs_13 lh_xs black_color fw_600">
+                                                        Course Name
+                                                    </th>
+                                                    <th scope="col" className="fs_13 lh_xs black_color fw_600">
+                                                        Course Package
+                                                    </th>
+                                                    <th scope="col" className="fs_13 lh_xs black_color fw_600">
+                                                        Fee
+                                                    </th>
+                                                    <th scope="col" className="fs_13 lh_xs black_color fw_600">
+                                                        Max Discount
+                                                    </th>
+                                                    <th scope="col" className="fs_13 lh_xs black_color fw_600">
+                                                        Created At
+                                                    </th>
+                                                    <th scope="col" className="fs_13 lh_xs black_color fw_600">
+                                                        Actions
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody className="scrollable-body">
+                                                {courseState.courses && courseState.courses.length > 0 ? (
+                                                    courseState.courses.map((item, index) => {
+                                                        let date = new Date(item.date);
+                                                        const day = date.getUTCDate();
+                                                        const monthIndex = date.getUTCMonth();
+                                                        const year = date.getUTCFullYear();
+
+                                                        const monthAbbreviations = [
+                                                            "Jan",
+                                                            "Feb",
+                                                            "Mar",
+                                                            "Apr",
+                                                            "May",
+                                                            "Jun",
+                                                            "Jul",
+                                                            "Aug",
+                                                            "Sep",
+                                                            "Oct",
+                                                            "Nov",
+                                                            "Dec"
+                                                        ];
+
+                                                        // Formatting the date
+                                                        date = `${day < 10 ? "0" : ""}${day}-${monthAbbreviations[monthIndex]}-${year}`;
+                                                        return (
+                                                            <tr key={item.id}>
+                                                                <td className="fs_13 black_color fw_500 lh_xs bg_light">{index + 1}</td>
+                                                                <td className="fs_13 black_color lh_xs bg_light">{item.course_name}</td>
+                                                                <td className="fs_13 black_color lh_xs bg_light">{item.course_package}</td>
+                                                                <td className="fs_13 black_color lh_xs bg_light">{item.fee}</td>
+                                                                <td className="fs_13 black_color lh_xs bg_light">{item.max_discount}</td>
+                                                                <td className="fs_13 black_color lh_xs bg_light">{date}</td>
+                                                                <td className="fs_13 black_color lh_xs bg_light">
+                                                                    <NavLink to={`/updatecourse/${item.id}`}>
+                                                                        <MdEdit className="text-mute table_icons me-3" />
+                                                                    </NavLink>
+                                                                    <MdDelete className="text-mute table_icons me-3" onClick={() => handleDeleteCourse(item.id)} />
+                                                                </td>
+                                                            </tr>
+                                                        );
+                                                    })
+                                                ) : (
+                                                    <tr>
+                                                        <td colSpan="7">No data found</td>
+                                                    </tr>
+                                                )}
+                                            </tbody>
+                                        </table>
+                                    </div> */}
+
                                 </div>
+
                                 <div className="align-items-center d-flex justify-content-between row text-center text-sm-start">
                                     <div className="col-sm">
                                         <div className="text_mute pagination-text">

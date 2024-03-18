@@ -27,15 +27,11 @@ export const CreateRole = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-
     let user = {
       role: fromData.role,
       roleDescription: fromData.roleDescription,
     }
-
-   
     user=[user]
-   
     const dataWithTitleCase = user.map((item) => {
       const newItem = {};
       for (const key in item) {
@@ -56,9 +52,7 @@ export const CreateRole = () => {
     user =dataWithTitleCase[0];
 
    console.log(user, "datawithtitilecase")
-
    createRole(user);
-
   }
 
   return (
