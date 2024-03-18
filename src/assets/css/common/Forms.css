@@ -50,11 +50,11 @@
     scrollbar-width: thin;
 }
 
-.btn_primary {
+/* .btn_primary {
     background-color: var(--erp-sidebar-color) !important;
     border-color: var(--erp-sidebar-color) !important;
     color: var(--erp-card-color)
-}
+} */
 
 .btn_sucess{
     background-color: var(--erp-light-green);

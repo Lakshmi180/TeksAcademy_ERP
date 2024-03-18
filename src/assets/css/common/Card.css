@@ -42,7 +42,6 @@ body {
  }
  .Totalearning:hover{
      transform: translateY(-7px);
-    
  }
  .orders{
  
@@ -68,17 +67,6 @@ body {
   .my-balance:hover{
       transform: translateY(-7px);
   }
-  
-
-
-
-
-
-
-.card-body {
-  font-family: Poppins, sans-serif;
-}
-
 .card-title {
   color: var(--erp-text-color) !important;
 }
@@ -92,7 +80,6 @@ body {
   font-size: var(--erp-fs-13);
   padding-top: 15px;
   text-decoration: underline;
-  font-family: Poppins, sans-serif;
 }
 .fs-16{
     font-size: var(--erp-fs-16)
