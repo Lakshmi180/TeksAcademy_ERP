@@ -11,7 +11,6 @@ function CreateUserForm() {
                 <h5 className="mt-4 fs-16 txt-color ms-3 ">User Creation Form</h5>
               </div>
               <div className="card-body ">
-
                 <div className="live-prieview">
                   <form action="javascript:void(0)">
                     <div className="row d-flex">
@@ -87,14 +86,8 @@ function CreateUserForm() {
                           name="branch"
                           id="branch"
                           required
-
-
                         >
                           <option value="">Department</option>
-                         
-                       
-
-
                         </select>
                       </div>
                       <div className=" col-md-4 ">
@@ -105,18 +98,9 @@ function CreateUserForm() {
                           name="branch"
                           id="branch"
                           required
-
-
                         >
-                         
                           <option value="">Report To</option>
-                          
-
                         </select>
-
-
-
-
                       </div>
                       <div className=" col-md-4 ">
                         <label className="form-label fs-s fw-medium txt-color">Role</label>
@@ -126,17 +110,9 @@ function CreateUserForm() {
                           name="branch"
                           id="branch"
                           required
-
-
                         >
                           <option value="">Role</option>
-                      
-
                         </select>
-
-
-
-
                       </div>
                       <div className=" col-md-4 ">
                         <label className="form-label fs-s fw-medium txt-color">Branch</label>
@@ -146,17 +122,9 @@ function CreateUserForm() {
                           name="branch"
                           id="branch"
                           required
-
-
                         >
                           <option value="">Branch</option>
-                       
-
                         </select>
-
-
-
-
                       </div>
                     </div>
                     <div className=" ">
