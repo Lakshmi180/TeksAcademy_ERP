@@ -3,6 +3,7 @@ const CourseReducer = (state, action) => {
 
     switch (action.type) {
         case "SET_COURSES":
+            console.log(action.payload, "setcourses" )
             return {
                 ...state,
                 courses: action?.payload,
