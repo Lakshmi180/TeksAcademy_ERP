@@ -15,6 +15,9 @@ import DepartmentContextProvider, { DepartmentContext } from "./context/deparmen
 import CoursePackageContextProvider from "./context/coursePackageContext/CoursePackageContext";
 import CourseContextProvider from "./context/courseContext/CourseContextProvider";
 import LeadSourceContextProvider from "./context/leadSourceContext/LeadSourceContext";
+import UserContextProvider from "./context/UsersContext/UsersContextProvider";
+import StudentsContextProvider from "./context/studentsContext/StudContextProvider";
+import SingleStudentContextProvider from "./context/singleStudentContext/SingleStudentContext";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -22,22 +25,32 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <AuthContextProvider>
+
         <RoleContextProvider>
           <BranchContextProvider>
             <DepartmentContextProvider>
               <CoursePackageContextProvider>
                 <CourseContextProvider>
                 <LeadSourceContextProvider>
+                  <UserContextProvider>
+                 <StudentsContextProvider>
+                 <SingleStudentContextProvider>
+
+                 
+                
 
                 
 
                   <ThemeProvider>
                     {/* <RouterProvider router={router}/> */}
-                    <ToastContainer style={{ position: "fixed", top: "60px" }} />
-
+                  <ToastContainer style={{ position: "fixed", top: "60px" }} />
                     <App />
                   </ThemeProvider>
+                  
 
+                  </SingleStudentContextProvider>
+                  </StudentsContextProvider>
+                  </UserContextProvider>
                   </LeadSourceContextProvider>
                 </CourseContextProvider>
               </CoursePackageContextProvider>
