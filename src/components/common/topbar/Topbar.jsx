@@ -10,9 +10,9 @@ import { FaLock } from "react-icons/fa";
 import "../../../assets/css/common/Topbar.css";
 import { Button } from "../design/Button";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../../context/AuthContext/AuthContextProvider";
+import { AuthContext } from "../../../context/authContext/AuthContextProvider";
 import { CiMenuFries } from "react-icons/ci";
-import { useTheme } from "../../../context/ThemeContext/ThemeContext";
+import { useTheme } from "../../../context/themeContext/ThemeContext";
 
 // export const Topbar = ({ setOpen, open }) => {
 

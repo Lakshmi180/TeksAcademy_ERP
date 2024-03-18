@@ -1,10 +1,68 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
+import { RoleContext } from '../../../../context/roleContext/RoleContextProvider'
+import { FaArrowRight } from "react-icons/fa";
+import Button from "../../../common/design/Button";
+import { useRoleContext } from '../../../../hooks/useRoleContext';
 export const CreateRole = () => {
+
+  const{RoleState, createRole}=useRoleContext();
+  console.log(RoleState, "RoleState")
+
+  const [fromData, setFormData] = useState({
+    role: "",
+    roleDescription: "",
+  })
+
+
+
+
+  const handleChange = (e) => {
+    setFormData((prev) => {
+      return {
+        ...prev,
+        [e.target.name]: e.target.value
+      }
+    })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    let user = {
+      role: fromData.role,
+      roleDescription: fromData.roleDescription,
+    }
+    user=[user]
+    const dataWithTitleCase = user.map((item) => {
+      const newItem = {};
+      for (const key in item) {
+        if (Object.prototype.hasOwnProperty.call(item, key)) {
+          if (typeof item[key] === "string" && key !== "email") {
+            newItem[key] = item[key]
+              .split(" ")
+              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(" ");
+          } else {
+            newItem[key] = item[key];
+          }
+        }
+      }
+      return newItem;
+    });
+
+    user =dataWithTitleCase[0];
+
+   console.log(user, "datawithtitilecase")
+   createRole(user);
+  }
+
   return (
     <div className='container'>
-      <div className="card  border-0 p-2">
-        <h6>Create Role</h6>
-        <div class="row gy-4 ">
+      <div className="card">
+        <div className="card-header">
+          <h5 className="fs-16 txt-color">Create Role</h5>
+        </div>
+        <div className="card-body">
+        <div class="row">
           <div class="col-xxl-3 col-md-6">
             <div>
               <div className="form-group text-start">
@@ -12,12 +70,16 @@ export const CreateRole = () => {
                   className="form-label fs-s "
                   for="example-text-input"
                 >
-                Role Name
+                  Role Name
                 </label>
                 <input
                   class="form-control"
-                  type="text"
+                    type="text"
+                    placeholder='Enter Role Name'
                   id="example-text-input"
+                  name="role"
+                  value={fromData.role}
+                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -26,18 +88,30 @@ export const CreateRole = () => {
             <div>
               <div class="form-group text-start">
                 <label class="form-label fs-s" for="example-text-input ">
-                Role Description
+                  Role Description
                 </label>
                 <input
                   class="form-control"
-                  type="text"
+                    type="text"
+                    placeholder='Enter Role Discription'
                   id="example-text-input"
+                  name="roleDescription"
+                  value={fromData.roleDescription}
+                  onChange={handleChange}
                 />
               </div>
             </div>
           </div>
+          <div className=" ">
+            <div className="d-flex justify-content-end">
+                <Button className={"btn_primary btn-label right"} icon={<FaArrowRight />} >
+                  Submit
+                </Button>
+            </div>
+          </div>
+          </div>
         </div>
       </div>
     </div>
-      )
+  )
 }

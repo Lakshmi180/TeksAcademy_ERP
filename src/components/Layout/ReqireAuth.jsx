@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
-import { AuthContext } from '../../context/AuthContext/AuthContextProvider'
+import { AuthContext } from '../../context/authContext/AuthContextProvider'
 import { Navigate, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import PublicAuth from './PublicAuth';
+import { useAuthContext } from '../../hooks/useAuthContext';
 
 
 // const ReqireAuth = () => {
@@ -33,8 +34,8 @@ import PublicAuth from './PublicAuth';
 
 
 const ReqireAuth=()=>{
-  const { AuthState } = useContext(AuthContext);
- 
+  const { AuthState } = useAuthContext();
+
   const location = useLocation();
 
   console.log(AuthState, "kfhkhkg")
@@ -52,8 +53,7 @@ const ReqireAuth=()=>{
   }
 
 
-  if(AuthState.token && 
-    AuthState.password){
+  if(!AuthState.token && !AuthState.password){
     return(
       <div className='app'>
       <PublicAuth>
