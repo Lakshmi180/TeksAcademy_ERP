@@ -46,6 +46,7 @@ export const Sidemenu = ({ isExpanded }) => {
                 <img
                   src="https://www.admin.teksacademy.com/static/media/Teks-Logo-with-Trade.07d75f2c54a71180af08.png"
                   className="img-fluid h-50 w-75"
+                  alt=""
                 />
               </Link>
             </div>
@@ -53,28 +54,40 @@ export const Sidemenu = ({ isExpanded }) => {
           <ul className="sidebar-nav">
             {/* Dashboard */}
             <li className="sidebar-item ">
-              <Link className="sidebar-link"
+              <Link
+                className="sidebar-link"
                 onClick={() => handleActiveClick("Dashboard")}
                 to="/"
-              > <LuLayoutDashboard className="main_icon" />
-                <span className={`${active === "Dashboard" ? `text-white` : ""}`}>
+              >
+                {" "}
+                <LuLayoutDashboard className="main_icon" />
+                <span
+                  className={`${active === "Dashboard" ? `text-white` : ""}`}
+                >
                   Dashboard
-               </span>
+                </span>
               </Link>
             </li>
 
             {/* Users */}
-          
-              <li className="sidebar-item" >
-                <Link className="sidebar-link" onClick={() => handleActiveClick("users")} to="/userdata">
-                  <FaRegUserCircle className="main_icon" />
-                  <span className={`sidebar-item ${active === "users" ? `text-white` : ""}`}>
-                    Users
-                  </span>
-                  
-                </Link>
-              </li>
-           
+
+            <li className="sidebar-item">
+              <Link
+                className="sidebar-link"
+                onClick={() => handleActiveClick("users")}
+                to="/userdata"
+              >
+                <FaRegUserCircle className="main_icon" />
+                <span
+                  className={`sidebar-item ${
+                    active === "users" ? `text-white` : ""
+                  }`}
+                >
+                  Users
+                </span>
+              </Link>
+            </li>
+
             {/* Student Management */}
             <li className="sidebar-item">
               <Link
@@ -99,7 +112,7 @@ export const Sidemenu = ({ isExpanded }) => {
                 className="sidebar-dropdown list-unstyled collapse"
                 data-bs-parent="#sidebar"
               >
-               <li
+                <li
                   className={`sidebar-item ${
                     active === "registrationform" ? "text-white" : ""
                   }`}
@@ -113,38 +126,70 @@ export const Sidemenu = ({ isExpanded }) => {
                     Registration Form
                   </Link>
                 </li>
-                <li className={`sidebar-item ${active === "enrolledstudents" ? "text-white" : ""}`}>
-                  <Link to="/studentdata" className="sidebar-link" onClick={() => handleActiveClick("enrolledstudents")}>
+                <li
+                  className={`sidebar-item ${
+                    active === "enrolledstudents" ? "text-white" : ""
+                  }`}
+                >
+                  <Link
+                    to="/studentdata"
+                    className="sidebar-link"
+                    onClick={() => handleActiveClick("enrolledstudents")}
+                  >
                     <AiOutlineLine className="sub_icon" />
                     Enrolled Students
                   </Link>
                 </li>
-                <li className={`sidebar-item ${active === "feedetails" ? "text-white" : ""}`}>
-                  <Link to="/feedetailspage"
+                <li
+                  className={`sidebar-item ${
+                    active === "feedetails" ? "text-white" : ""
+                  }`}
+                >
+                  <Link
+                    to="/feedetailspage"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("feedetails")}
-                  >  <AiOutlineLine className="sub_icon" />
+                  >
+                    {" "}
+                    <AiOutlineLine className="sub_icon" />
                     Fee Details
                   </Link>
                 </li>
-                <li className={`sidebar-item ${active === "certificate" ? "text-white" : ""}`}>
-                  <Link to="/certificate"
+                <li
+                  className={`sidebar-item ${
+                    active === "certificate" ? "text-white" : ""
+                  }`}
+                >
+                  <Link
+                    to="/certificate"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("certificate")}
-                  > <AiOutlineLine className="sub_icon" />
+                  >
+                    {" "}
+                    <AiOutlineLine className="sub_icon" />
                     Certificate
-                    </Link>
+                  </Link>
                 </li>
-                <li className={`sidebar-item ${active === "requestedcertificate" ? "text-white" : ""
-                  }`}>
-                  <Link to="/requestedcertificate"
+                <li
+                  className={`sidebar-item ${
+                    active === "requestedcertificate" ? "text-white" : ""
+                  }`}
+                >
+                  <Link
+                    to="/requestedcertificate"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("requestedcertificate")}
-                  > <AiOutlineLine className="sub_icon" />
+                  >
+                    {" "}
+                    <AiOutlineLine className="sub_icon" />
                     Requested Certificate
                   </Link>
                 </li>
-                <li className={`sidebar-item ${active === "refund" ? "text-white" : ""}`}>
+                <li
+                  className={`sidebar-item ${
+                    active === "refund" ? "text-white" : ""
+                  }`}
+                >
                   <Link
                     onClick={() => handleActiveClick("refund")}
                     className="sidebar-link has-dropdown collapsed "
@@ -152,7 +197,9 @@ export const Sidemenu = ({ isExpanded }) => {
                     data-bs-target="#refund"
                     aria-expanded="false"
                     aria-controls="refund"
-                  >   <RiRefund2Line className="main_icon" />
+                  >
+                    {" "}
+                    <RiRefund2Line className="main_icon" />
                     Refund
                   </Link>
                   <ul
@@ -161,17 +208,27 @@ export const Sidemenu = ({ isExpanded }) => {
                   >
                     <li className="sidebar-item">
                       <Link
-                        className={`sidebar-link ${active === "refundform" ? "text-white" : ""}`}
+                        className={`sidebar-link ${
+                          active === "refundform" ? "text-white" : ""
+                        }`}
                         onClick={() => handleActiveClick("refundform")}
-                      > <AiOutlineLine className="sub_icon" />
+                      >
+                        {" "}
+                        <AiOutlineLine className="sub_icon" />
                         Refund Form
                       </Link>
                     </li>
-                    <li className={`sidebar-item ${active === "refunddata" ? "text-white" : ""}`}>
+                    <li
+                      className={`sidebar-item ${
+                        active === "refunddata" ? "text-white" : ""
+                      }`}
+                    >
                       <Link
                         className="sidebar-link"
                         onClick={() => handleActiveClick("refunddata")}
-                      >   <AiOutlineLine className="sub_icon" />
+                      >
+                        {" "}
+                        <AiOutlineLine className="sub_icon" />
                         Refund Data
                       </Link>
                     </li>
