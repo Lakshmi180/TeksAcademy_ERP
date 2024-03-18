@@ -481,7 +481,7 @@ function Studentdata() {
                     </tbody>
                   </table>
                 </div>
-                <div className="align-items-center d-flex justify-content-between row text-center text-sm-start p-1  ">
+                <div className="align-items-center d-flex justify-content-between row text-center text-sm-start p-3  ">
                   <div className="col-sm">
                     <div className="text_mute pagination-text">
                       Showing <span className="fw-semibold">5</span> of{" "}
