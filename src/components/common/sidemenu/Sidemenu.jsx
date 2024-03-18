@@ -120,7 +120,7 @@ export const Sidemenu = ({ isExpanded }) => {
                   </Link>
                 </li>
                 <li className={`sidebar-item ${active === "feedetails" ? "text-white" : ""}`}>
-                  <Link
+                  <Link to="/feedetailspage"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("feedetails")}
                   >  <AiOutlineLine className="sub_icon" />
