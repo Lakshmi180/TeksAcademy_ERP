@@ -228,10 +228,10 @@ function Studentdata() {
                           Offline
                         </td>
                         <td className='fs_14 text_mute bg_light   lh_xs'>
-                          <AiFillEye className='eye_icon table_icons me-3' />
-                          <MdEdit className='edit_icon table_icons me-3' />
+                        <Link to="/studentdataview"> <AiFillEye className='eye_icon table_icons me-3' /></Link>
+                        <Link to="/createuser" > <MdEdit className='edit_icon table_icons me-3' /> </Link> 
                           <FaRupeeSign className='rupee_icon table_icons me-3' />
-                          <MdLocalPrintshop className='text-mute table_icons me-3' />
+                          <Link to="/studentapplicationprint"> <MdLocalPrintshop className='text-mute table_icons me-3' /> </Link>
                           <FaRegIdCard className='id_card table_icons ' />
                         </td>
                       </tr>
@@ -261,10 +261,10 @@ function Studentdata() {
                           Offline
                         </td>
                         <td className='fs_14 text_mute bg_light   lh_xs'>
-                          <AiFillEye className='eye_icon table_icons me-3' />
-                          <MdEdit className='edit_icon table_icons me-3' />
+                        <Link to="/studentdataview"> <AiFillEye className='eye_icon table_icons me-3' /></Link>
+                        <Link to="/createuser" > <MdEdit className='edit_icon table_icons me-3' /> </Link> 
                           <FaRupeeSign className='rupee_icon table_icons me-3' />
-                          <MdLocalPrintshop className='text-mute table_icons me-3' />
+                          <Link to="/studentapplicationprint"> <MdLocalPrintshop className='text-mute table_icons me-3' /> </Link>
                           <FaRegIdCard className='id_card table_icons ' />
                         </td>
                       </tr>
@@ -294,10 +294,10 @@ function Studentdata() {
                           Offline
                         </td>
                         <td className='fs_14 text_mute bg_light   lh_xs'>
-                          <AiFillEye className='eye_icon table_icons me-3' />
-                          <MdEdit className='edit_icon table_icons me-3' />
+                        <Link to="/studentdataview"> <AiFillEye className='eye_icon table_icons me-3' /></Link>
+                        <Link to="/createuser" > <MdEdit className='edit_icon table_icons me-3' /> </Link> 
                           <FaRupeeSign className='rupee_icon table_icons me-3' />
-                          <MdLocalPrintshop className='text-mute table_icons me-3' />
+                          <Link to="/studentapplicationprint"> <MdLocalPrintshop className='text-mute table_icons me-3' /> </Link>
                           <FaRegIdCard className='id_card table_icons ' />
                         </td>
                       </tr>
@@ -327,10 +327,10 @@ function Studentdata() {
                           Offline
                         </td>
                         <td className='fs_14 text_mute bg_light   lh_xs'>
-                          <AiFillEye className='eye_icon table_icons me-3' />
-                          <MdEdit className='edit_icon table_icons me-3' />
+                        <Link to="/studentdataview"> <AiFillEye className='eye_icon table_icons me-3' /></Link>
+                        <Link to="/createuser" > <MdEdit className='edit_icon table_icons me-3' /> </Link> 
                           <FaRupeeSign className='rupee_icon table_icons me-3' />
-                          <MdLocalPrintshop className='text-mute table_icons me-3' />
+                          <Link to="/studentapplicationprint"> <MdLocalPrintshop className='text-mute table_icons me-3' /> </Link>
                           <FaRegIdCard className='id_card table_icons ' />
                         </td>
                       </tr>
@@ -360,10 +360,10 @@ function Studentdata() {
                           Offline
                         </td>
                         <td className='fs_14 text_mute bg_light   lh_xs'>
-                          <AiFillEye className='eye_icon table_icons me-3' />
-                          <MdEdit className='edit_icon table_icons me-3' />
+                        <Link to="/studentdataview"> <AiFillEye className='eye_icon table_icons me-3' /></Link>
+                        <Link to="/createuser" > <MdEdit className='edit_icon table_icons me-3' /> </Link> 
                           <FaRupeeSign className='rupee_icon table_icons me-3' />
-                          <MdLocalPrintshop className='text-mute table_icons me-3' />
+                          <Link to="/studentapplicationprint"> <MdLocalPrintshop className='text-mute table_icons me-3' /> </Link>
                           <FaRegIdCard className='id_card table_icons ' />
                         </td>
                       </tr>
