@@ -52,6 +52,8 @@ import RequestedCertificate from "./components/pages/Student/requestedCertificat
 import IssuedCertificates from "./components/pages/Student/issuedCertificates/IssuedCertificates";
 import UserView from "./components/pages/User/UserData/UserView";
 import FeeDetailsPage from "./components/pages/Student/fee/FeeDetailsPage";
+import Addassets from "./components/pages/Inventory/Addassets";
+import Assignassets from "./components/pages/Inventory/Assignassets";
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
   const { theme } = useTheme();
@@ -118,12 +120,13 @@ function App() {
             <Route path="/certificate" element={<Certificate />} />
             <Route path="/requestedcertificate" element={<RequestedCertificate />} />
             <Route path="/issuedcertificates" element={<IssuedCertificates />} />
-            <Route path="/updatecourse/:courseId" element={<CreateCourse/>} />
-            <Route path="/userview/:courseId" element={<UserView/>} />
+            <Route path="/updatecourse/:courseId" element={<CreateCourse />} />
+            <Route path="/userview/:courseId" element={<UserView />} />
 
             {/* <Route path="/updatecourse/:courseId" element={<CreateCourse />} /> */}
             <Route path="/feedetailspage" element={<FeeDetailsPage />} />
-           
+            <Route path="/addassests" element={<Addassets />} />
+            <Route path="/assignassets" element={<Assignassets />} />
           </Routes>
         </div>
       </main>

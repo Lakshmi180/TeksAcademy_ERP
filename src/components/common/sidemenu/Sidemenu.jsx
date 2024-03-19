@@ -261,6 +261,7 @@ export const Sidemenu = ({ isExpanded }) => {
               >
                 <li className="sidebar-item">
                   <Link
+                  to="./addassests"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("addassets")}
                   >
@@ -276,7 +277,7 @@ export const Sidemenu = ({ isExpanded }) => {
                   </Link>
                 </li>
                 <li className="sidebar-item">
-                  <Link
+                  <Link to="./assignassets"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("assignassets")}
                   >
