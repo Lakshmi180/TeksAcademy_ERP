@@ -228,10 +228,10 @@ function Studentdata() {
                           Offline
                         </td>
                         <td className='fs_14 text_mute bg_light   lh_xs'>
-                          <AiFillEye className='text-mute table_icons me-3' />
-                          <MdEdit className='text-mute table_icons me-3' />
+                        <Link to="/studentdataview"><AiFillEye className='text-mute table_icons me-3' /></Link> 
+                          <Link to="/createuser" ><MdEdit className='text-mute table_icons me-3' /> </Link>
                           <FaRupeeSign className='text-mute table_icons me-3' />
-                          <MdLocalPrintshop className='text-mute table_icons me-3' />
+                          <Link to="/studentapplicationprint"><MdLocalPrintshop className='text-mute table_icons me-3' /></Link>
                           <FaRegIdCard className='text-mute table_icons ' />
                         </td>
                       </tr>
@@ -261,10 +261,10 @@ function Studentdata() {
                           Offline
                         </td>
                         <td className='fs_14 text_mute bg_light   lh_xs'>
-                          <AiFillEye className='text-mute table_icons me-3' />
-                          <MdEdit className='text-mute table_icons me-3' />
+                        <Link to="/studentdataview"><AiFillEye className='text-mute table_icons me-3' /></Link> 
+                           <Link to="/createuser" ><MdEdit className='text-mute table_icons me-3' /> </Link>  
                           <FaRupeeSign className='text-mute table_icons me-3' />
-                          <MdLocalPrintshop className='text-mute table_icons me-3' />
+                          <Link to="/studentapplicationprint"><MdLocalPrintshop className='text-mute table_icons me-3' /></Link>
                           <FaRegIdCard className='text-mute table_icons ' />
                         </td>
                       </tr>
@@ -294,10 +294,10 @@ function Studentdata() {
                           Offline
                         </td>
                         <td className='fs_14 text_mute bg_light   lh_xs'>
-                          <AiFillEye className='text-mute table_icons me-3' />
-                          <MdEdit className='text-mute table_icons me-3' />
+                        <Link to="/studentdataview"><AiFillEye className='text-mute table_icons me-3' /></Link> 
+                          <Link to="/createuser" ><MdEdit className='text-mute table_icons me-3' /> </Link>
                           <FaRupeeSign className='text-mute table_icons me-3' />
-                          <MdLocalPrintshop className='text-mute table_icons me-3' />
+                          <Link to="/studentdapplicationprint"><MdLocalPrintshop className='text-mute table_icons me-3' /></Link>
                           <FaRegIdCard className='text-mute table_icons ' />
                         </td>
                       </tr>
@@ -327,10 +327,10 @@ function Studentdata() {
                           Offline
                         </td>
                         <td className='fs_14 text_mute bg_light   lh_xs'>
-                          <AiFillEye className='text-mute table_icons me-3' />
-                          <MdEdit className='text-mute table_icons me-3' />
+                        <Link to="/studentdataview"><AiFillEye className='text-mute table_icons me-3' /></Link> 
+                          <Link to="/createuser" ><MdEdit className='text-mute table_icons me-3' /> </Link>
                           <FaRupeeSign className='text-mute table_icons me-3' />
-                          <MdLocalPrintshop className='text-mute table_icons me-3' />
+                          <Link to="/studentdapplicationprint"><MdLocalPrintshop className='text-mute table_icons me-3' /></Link>
                           <FaRegIdCard className='text-mute table_icons ' />
                         </td>
                       </tr>
@@ -360,17 +360,17 @@ function Studentdata() {
                           Offline
                         </td>
                         <td className='fs_14 text_mute bg_light   lh_xs'>
-                          <AiFillEye className='text-mute table_icons me-3' />
-                          <MdEdit className='text-mute table_icons me-3' />
+                         <Link to="/studentdataview"><AiFillEye className='text-mute table_icons me-3' /></Link> 
+                          <Link to="/createuser" ><MdEdit className='text-mute table_icons me-3' /> </Link>
                           <FaRupeeSign className='text-mute table_icons me-3' />
-                          <MdLocalPrintshop className='text-mute table_icons me-3' />
+                          <Link to="/studentdapplicationprint"><MdLocalPrintshop className='text-mute table_icons me-3' /></Link>
                           <FaRegIdCard className='text-mute table_icons ' />
                         </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
-                <div className="align-items-center d-flex justify-content-between row text-center text-sm-start p-3  ">
+                <div className="align-items-center d-flex justify-content-between row text-center text-sm-start   ">
                   <div className="col-sm">
                     <div className="text_mute pagination-text">
                       Showing <span className="fw-semibold">5</span> of{" "}

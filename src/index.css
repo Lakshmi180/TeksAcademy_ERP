@@ -169,10 +169,12 @@ body,
   --erp-fs-lg: 1.25rem;
   --erp-fs-7: 0.775rem;
   --erp-fs-13: 13px;
+
   --erp-fs-14: 14px;
   --erp-fs-16: 1rem;
   --erp-fs-17: 17px;
   --erp-fs-18: 18px;
+  --erp-fs-20: 20px;
   --erp-fs-22: 22px;
   --erp-fs-24: 24px;
 
@@ -327,6 +329,9 @@ a {
 }
 .black_300 {
   color: var(--erp-black-300);
+}
+.text_black{
+  color: var( --erp-black-color);
 }
 .text-mute {
   color: var(--erp-text-mute) !important;
