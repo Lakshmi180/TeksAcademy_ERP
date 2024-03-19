@@ -73,9 +73,7 @@ function App() {
   
 
   return (
-
     <Routes>
-      
       <Route element={<ReqireAuth />}>
         <Route path="/" element={<Dashboard />} />
         <Route path="/table" element={<Table />} />
