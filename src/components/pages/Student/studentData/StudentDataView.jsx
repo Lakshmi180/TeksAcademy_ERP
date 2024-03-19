@@ -26,31 +26,31 @@ function StudentDataView() {
                           <td class="ps-0 black_300 fw-500   fs-13  " >
                             Full Name 
                           </td>
-                          <td class="text_black fs-14 ps-2  fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b>John Doe</td>
+                          <td class="black_color fs-14 ps-2  fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b>John Doe</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300 fw-500   fs-13  " >
                            Email-id 
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>xyzabcdefg@gmail.com</td>
+                          <td class="black_color fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>xyzabcdefg@gmail.com</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300  fw-500   fs-13" >
                         Mobile Number 
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>8788530605</td>
+                          <td class="black_color fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>8788530605</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300 fw-500   fs-13" >
                    Registration Number 
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>TKID123456789</td>
+                          <td class="black_color fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>TKID123456789</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300  fw-500   fs-13" >
                     Whatsapp Number 
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>8788530605</td>
+                          <td class="black_color fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>8788530605</td>
                         </tr>
                       </tbody>
                     </div>
@@ -64,31 +64,31 @@ function StudentDataView() {
                           <td class="ps-0 black_300   fs-13  " >
                        Addmission Date 
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b>14 March 2024</td>
+                          <td class="black_color fs-14 ps-2 fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b>14 March 2024</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300 fw-500   fs-13  " >
                       Course 
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>Data Science</td>
+                          <td class="black_color fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>Data Science</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300 fw-500    fs-13" >
                      Branch 
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>Hitech City</td>
+                          <td class="black_color fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>Hitech City</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300 fw-500   0 fs-13" >
                    Valid Start Date 
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>17 March 2024</td>
+                          <td class="black_color fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>17 March 2024</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300 fw-500   fs-13" >
            Valid End Date
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500"> <b className=" fw-500 fs-13 pe-2"> :</b>27 September 2024</td>
+                          <td class="black_color fs-14 ps-2 fw-500"> <b className=" fw-500 fs-13 pe-2"> :</b>27 September 2024</td>
                         </tr>
                       </tbody>
                     </div>
@@ -108,38 +108,38 @@ function StudentDataView() {
                           <td class="ps-0 black_300 fw-500  fs-13  " >
                         Country
                           </td>
-                          <td class="text_black fs-14 ps-2  fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b>India</td>
+                          <td class="black_color fs-14 ps-2  fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b>India</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300 fw-500   fs-13  " >
                    State
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>Telangana</td>
+                          <td class="black_color fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>Telangana</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300 fw-500    fs-13" >
                  Area
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>xyz</td>
+                          <td class="black_color fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>xyz</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300 fw-500   fs-13" >
              
              Native Place
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>Hyderabad</td>
+                          <td class="black_color fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>Hyderabad</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300 fw-500    fs-13" >
               Zip Code
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>441601</td>
+                          <td class="black_color fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>441601</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300 fw-500    fs-13" >
            Addmision Remark
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>Free Course Manual testing</td>
+                          <td class="black_color fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>Free Course Manual testing</td>
                         </tr>
                       </tbody>
                     </div>
@@ -153,37 +153,37 @@ function StudentDataView() {
                           <td class="ps-0 black_300 fw-500  fs-13  " >
                    Parents Name
                           </td>
-                          <td class="text_black fs-14 ps-2  fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b>John Doe</td>
+                          <td class="black_color fs-14 ps-2  fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b>John Doe</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300  fw-500  fs-13  " >
                        Birthdate
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>xyzabcdefg@gmail.com</td>
+                          <td class="black_color fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>xyzabcdefg@gmail.com</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300  fw-500   fs-13" >
                Gender
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>8788530605</td>
+                          <td class="black_color fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>8788530605</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300  fw-500   fs-13" >
                   College
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>TKID123456789</td>
+                          <td class="black_color fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>TKID123456789</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300 fw-500    fs-13" >
               Education Type
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>8788530605</td>
+                          <td class="black_color fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>8788530605</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300 fw-500    fs-13" >
           Asset
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>8788530605</td>
+                          <td class="black_color fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>8788530605</td>
                         </tr>
                       </tbody>
                     </div>
@@ -197,31 +197,31 @@ function StudentDataView() {
                           <td class="ps-0 black_300  fs-13  " >
                      Enquiry Date
                           </td>
-                          <td class="text_black fs-14 ps-2  fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b>John Doe</td>
+                          <td class="black_color fs-14 ps-2  fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b>John Doe</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300 fw-500   fs-13  " >
                           Enquiry Taken By
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>xyzabcdefg@gmail.com</td>
+                          <td class="black_color fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>xyzabcdefg@gmail.com</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300  fw-500   fs-13" >
                     Course Package
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>8788530605</td>
+                          <td class="black_color fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>8788530605</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300  fw-500   fs-13" >
               Lead Source
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>TKID123456789</td>
+                          <td class="black_color fs-14 ps-2 fw-500">  <b className=" fw-500 fs-13 pe-2"> :</b>TKID123456789</td>
                         </tr>
                         <tr className="lh-500">
                           <td class="ps-0 black_300 fw-500    fs-13" >
                    Mode Of Training
                           </td>
-                          <td class="text_black fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>8788530605</td>
+                          <td class="black_color fs-14 ps-2 fw-500 ">  <b className=" fw-500 fs-13 pe-2"> :</b>8788530605</td>
                         </tr>
                       </tbody>
                     </div>
@@ -254,25 +254,25 @@ function StudentDataView() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="fw-medium fs_13 ">01</td>
-                  <td className="fs_13 ">Course Fee</td>
-                  <td className="fs_13 ">6482.37</td>
-                  <td className="fs_13 ">1166.83</td>
-                  <td className="fs_13 ">7649.2</td>
+                  <td className="fw-medium fs_13 black_color ">01</td>
+                  <td className="fs_13 black_color ">Course Fee</td>
+                  <td className="fs_13 black_color ">6482.37</td>
+                  <td className="fs_13 black_color">1166.83</td>
+                  <td className="fs_13 black_color">7649.2</td>
                 </tr>
                 <tr>
-                  <td className="fw-medium fs_13 ">02</td>
-                  <td className="fs_13 ">Admission Fee</td>
-                  <td className="fs_13 ">395.76</td>
-                  <td className="fs_13 ">71.24</td>
-                  <td className="fs_13 ">467</td>
+                  <td className="fw-medium fs_13 black_color">02</td>
+                  <td className="fs_13 black_color ">Admission Fee</td>
+                  <td className="fs_13 black_color ">395.76</td>
+                  <td className="fs_13 black_color ">71.24</td>
+                  <td className="fs_13 black_color ">467</td>
                 </tr>
                 <tr>
-                  <td className="fw-medium fs_13 ">03</td>
-                  <td className="fs_13 ">Sub Total</td>
-                  <td className="fs_13 ">6878.14</td>
-                  <td className="fs_13 ">1238.06</td>
-                  <td className="fs_13 ">8116.2</td>
+                  <td className="fw-medium fs_13  black_color">03</td>
+                  <td className="fs_13 black_color">Sub Total</td>
+                  <td className="fs_13 black_color">6878.14</td>
+                  <td className="fs_13 black_color ">1238.06</td>
+                  <td className="fs_13 black_color">8116.2</td>
                 </tr>
               </tbody>
             </table>
