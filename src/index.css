@@ -66,6 +66,7 @@ body,
   --erp-green-800: #166534;
   /* --erp-green-900: #14532d; */
   --erp-light-green: #0ab39c;
+  
 
   /* Red */
 
@@ -525,4 +526,28 @@ webkit-box-shadow: 0 1px 2px rgba(56,65,74,.15);
 .card_animate:hover {
   transform: translateY(-7px);
     box-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
+}
+.eye_icon{
+ color: #3a4876
+}
+
+.edit_icon{
+  color:#0ab39c
+}
+.edit_icon:hover{
+  color:#088f7d
+}
+
+.toggle_btn:checked {
+  background-color: #405189;
+  border-color: #405189;
+}
+.rupee_icon{
+  color:#2d65cd
+}
+.id_card{
+  color:#299cdb
+}
+.delete_icon{
+  color:#da3412;
 }
