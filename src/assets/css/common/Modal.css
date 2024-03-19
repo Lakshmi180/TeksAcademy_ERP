@@ -2,9 +2,9 @@
     background-color: var(--erp-sidebar-color);
 } */
 
-.btn_primary:hover {
+/* .btn_primary:hover {
     color: var(--erp-card-color);
-}
+} */
 
 .fs-s {
     font-size: var(--erp-fs-s);
