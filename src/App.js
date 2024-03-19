@@ -61,6 +61,13 @@ import Addassets from "./components/pages/Inventory/Addassets";
 import Assignassets from "./components/pages/Inventory/Assignassets";
 import RefundData from "./components/pages/Student/refund/RefundData";
 import RefundForm from "./components/pages/Student/refund/RefundForm";
+import { Webinar } from "./components/pages/Leads/Webinar";
+import { WhatsApp } from "./components/pages/Leads/WhatsApp";
+import { DownloadSyllabus } from "./components/pages/Leads/DownloadSyllabus";
+import { ViewCourse } from "./components/pages/Leads/ViewCourse";
+import { ContactUs } from "./components/pages/Leads/ContactUs";
+import { HLPEnquireLeads } from "./components/pages/Leads/HLPEnquireLeads";
+import { SLPEnquireLeads } from "./components/pages/Leads/SLPEnquireLeads";
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
   const { theme } = useTheme();
@@ -114,39 +121,78 @@ function App() {
             <Route path="/department" element={<Department />} />
             <Route path="/createdepartment" element={<CreateDepartment />} />
             <Route path="/coursepackage" element={<CoursePackage />} />
-            <Route path="/createcoursepackage" element={<CreateCoursePackage />} />
+            <Route
+              path="/createcoursepackage"
+              element={<CreateCoursePackage />}
+            />
             <Route path="/leadsource" element={<LeadSource />} />
             <Route path="/createleadsource" element={<CreateLeadSource />} />
-            <Route path="/createadmissionfee" element={<CreateAdmissionFee />} />
+            <Route
+              path="/createadmissionfee"
+              element={<CreateAdmissionFee />}
+            />
             <Route path="/admissionfee" element={<AdmissionFee />} />
             <Route path="/addvendor" element={<AddVendor />} />
             <Route path="/createaddvendor" element={<CreateAddVendor />} />
             <Route path="/addassetstype" element={<AddAssetsType />} />
-            <Route path="/createaddassetstype" element={<CreateAddAssetsType />} />
+            <Route
+              path="/createaddassetstype"
+              element={<CreateAddAssetsType />}
+            />
             <Route path="/userdata" element={<UserData />} />
             <Route path="/certificate" element={<Certificate />} />
-            <Route path="/requestedcertificate" element={<RequestedCertificate />} />
-            <Route path="/issuedcertificates" element={<IssuedCertificates />} />
-           
+            <Route
+              path="/requestedcertificate"
+              element={<RequestedCertificate />}
+            />
+            <Route
+              path="/issuedcertificates"
+              element={<IssuedCertificates />}
+            />
+            <Route path="/updatecourse/:courseId" element={<CreateCourse />} />
+            <Route
+              path="/requestedcertificate"
+              element={<RequestedCertificate />}
+            />
+            <Route
+              path="/issuedcertificates"
+              element={<IssuedCertificates />}
+            />
+
             <Route path="/userview/:courseId" element={<UserView />} />
 
             {/* <Route path="/updatecourse/:courseId" element={<CreateCourse />} /> */}
             <Route path="/feedetailspage" element={<FeeDetailsPage />} />
             <Route path="/feefollowups" element={<FeeFollowUps />} />
             <Route path="/feeview" element={<FeeView />} />
-            <Route path="/noduerecords" element={<NoDueRecords/>}/>
+            <Route path="/noduerecords" element={<NoDueRecords />} />
             <Route path="/addassests" element={<Addassets />} />
             <Route path="/assignassets" element={<Assignassets />} />
-            <Route path="/updatecourse/:courseId" element={<CreateCourse/>} />
+            <Route path="/updatecourse/:courseId" element={<CreateCourse />} />
             <Route path="/studentdataview" element={<StudentDataView />} />
-            <Route path="/studentapplicationprint" element={<StudentApplicationPrint />} />
-            <Route path="/userview/:courseId" element={<UserView/>} />
+            <Route
+              path="/studentapplicationprint"
+              element={<StudentApplicationPrint />}
+            />
+            <Route path="/userview/:courseId" element={<UserView />} />
 
             {/* <Route path="/updatecourse/:courseId" element={<CreateCourse />} /> */}
             <Route path="/feedetailspage" element={<FeeDetailsPage />} />
             <Route path="/refunddata" element={<RefundData />} />
             <Route path="/refundform" element={<RefundForm />} />
-           
+
+            {/* Leads */}
+
+            <Route path="/webinarleads" element={<Webinar />} />
+            <Route path="/whatsappleads" element={<WhatsApp />} />
+            <Route
+              path="/downloadsyllabusleads"
+              element={<DownloadSyllabus />}
+            />
+            <Route path="/viewcourseleads" element={<ViewCourse />} />
+            <Route path="/contactusleads" element={<ContactUs />} />
+            <Route path="/hlpenquireleads" element={<HLPEnquireLeads />} />
+            <Route path="/slpenquireleads" element={<SLPEnquireLeads />} />
           </Routes>
         </div>
       </main>
