@@ -36,7 +36,7 @@ const StudentsContextProvider = ({ children }) => {
     Dispatchstudents(Actions.setLoading("ENROLLED_STUDENTS"))
     try {
       const { data, status } = await api.getEnrolledStudents(currentPage, perPage, search, filters);
-      console.log(data, "paginateddata")
+      console.log(data,status, "paginateddata")
       if (status == 200) {
         Dispatchstudents(Actions.getEnrolledStudents(data, "ENROLLED_STUDENTS"))
       }
