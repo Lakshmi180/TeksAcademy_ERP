@@ -52,6 +52,7 @@ import RequestedCertificate from "./components/pages/Student/requestedCertificat
 import IssuedCertificates from "./components/pages/Student/issuedCertificates/IssuedCertificates";
 import StudentDataView from "./components/pages/Student/studentData/StudentDataView";
 import StudentApplicationPrint from "./components/pages/Student/studentData/StudentApplicationPrint";
+import FeeDetailsPage from "./components/pages/Student/fee/FeeDetailsPage";
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
   const { theme } = useTheme();
@@ -122,6 +123,9 @@ function App() {
             <Route path="/studentdataview" element={<StudentDataView />} />
             <Route path="/studentapplicationprint" element={<StudentApplicationPrint />} />
 
+            {/* <Route path="/updatecourse/:courseId" element={<CreateCourse />} /> */}
+            <Route path="/feedetailspage" element={<FeeDetailsPage />} />
+           
           </Routes>
         </div>
       </main>
