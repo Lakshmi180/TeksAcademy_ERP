@@ -16,7 +16,7 @@ function Assignassets() {
                     <div className=" d-flex justify-content-between rounded">
                         <div className="card-body bg_red ">
                             <div className="d-flex justify-content-between mb-3">
-                                <p className=" fw-medium text-mute m-0 fw_400 fs_14">All Branches</p>
+                                <p className=" fw-medium black_300 m-0 fw_400 fs_14">All Branches</p>
                             </div>
                         </div>
                     </div>
@@ -25,7 +25,7 @@ function Assignassets() {
                     <div className="card  d-flex justify-content-between bg_white rounded">
                         <div className="card-body bg_subtle">
                             <div className="d-flex justify-content-between mb-3">
-                                <p className=" fw-medium text-mute m-0 fw_400 fs_14">
+                                <p className=" fw-medium black_300  m-0 fw_400 fs_14">
                                     Secunderabad
                                 </p>
                             </div>
@@ -37,7 +37,7 @@ function Assignassets() {
                     <div className="card d-flex justify-content-between bg_white rounded">
                         <div className="card-body bg_yellow">
                             <div className="d-flex justify-content-between mb-3">
-                                <p className=" fw-medium text-mute m-0 fw_400 fs_14">Hi-Tech city</p>
+                                <p className=" fw-medium black_300  m-0 fw_400 fs_14">Hi-Tech city</p>
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@ function Assignassets() {
                     <div className="card  d-flex justify-content-between bg_white rounded">
                         <div className="card-body bg_infosubtle">
                             <div className="d-flex justify-content-between mb-3">
-                                <p className=" fw-medium text-mute m-0 fw_400 fs_14">Ameerpet</p>
+                                <p className=" fw-medium black_300  m-0 fw_400 fs_14">Ameerpet</p>
                             </div>
                         </div>
                     </div>
@@ -55,7 +55,7 @@ function Assignassets() {
                     <div className="card  d-flex justify-content-between bg_white rounded">
                         <div className="card-body bg_secondary">
                             <div className="d-flex justify-content-between mb-3">
-                                <p className=" fw-medium text-mute m-0 fw_400 fs_14">Dilsukhnagar</p>
+                                <p className=" fw-medium black_300  m-0 fw_400 fs_14">Dilsukhnagar</p>
                             </div>
                         </div>
                     </div>
@@ -65,7 +65,7 @@ function Assignassets() {
                     <div className="card d-flex justify-content-between bg_white rounded">
                         <div className="card-body bg_infolight">
                             <div className="d-flex justify-content-between mb-3">
-                                <p className=" fw-medium text-mute m-0 fw_400 fs_14">Kukatpally</p>
+                                <p className=" fw-medium black_300  m-0 fw_400 fs_14">Kukatpally</p>
                             </div>
                         </div>
                     </div>
