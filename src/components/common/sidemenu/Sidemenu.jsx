@@ -208,6 +208,7 @@ export const Sidemenu = ({ isExpanded }) => {
                   >
                     <li className="sidebar-item">
                       <Link
+                      to="./refundform"
                         className={`sidebar-link ${
                           active === "refundform" ? "text-white" : ""
                         }`}
@@ -224,6 +225,7 @@ export const Sidemenu = ({ isExpanded }) => {
                       }`}
                     >
                       <Link
+                      to="./refunddata"
                         className="sidebar-link"
                         onClick={() => handleActiveClick("refunddata")}
                       >
