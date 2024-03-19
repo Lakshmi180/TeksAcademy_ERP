@@ -10,9 +10,11 @@ import { RiDeleteBin2Line } from "react-icons/ri";
 import { IoSettingsOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { HiMiniPlus } from "react-icons/hi2";
-function Studentdata() {
+
+function RefundData() {
   return (
     <div>
+      
       <div className='container-fluid'>
         <div className="row">
           <div className="col-xl-12">
@@ -47,9 +49,7 @@ function Studentdata() {
                         </select>
                       </div>
                       <button className="btn btn_primary fs-13 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Filters</button>
-                      <button type="button" className="btn btn_primary fs-13">
-                        <Link to="/createuser" className="btn_primary"><HiMiniPlus />Add Enrollment</Link>
-                      </button>
+                     
                     </div>
                   </div>
                 </div>
@@ -176,25 +176,26 @@ function Studentdata() {
                           S.No
                         </th>
                         <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                          Student Name /<br />
-                          Registration Number
+                          Student Name 
                         </th>
                         <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                          Branch
+                       Registration Number
                         </th>
                         <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                          Course
+                     Branch
                         </th>
                         <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                          Counsellor<br />
-                          Source
+                        Course
                         </th>
                         <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                          Mobile
+                         
+                         Support Status
                         </th>
                         <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                          Joining Date /<br />
-                          Traning Mode
+                         Rm Status
+                        </th>
+                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                       Account Status
                         </th>
                         <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                           Action
@@ -209,162 +210,172 @@ function Studentdata() {
                         </td>
                         <td className='fs_13 black_color  lh_xs bg_light'>
                           Vishakha chachane <br />
-                          TK7689375826572938
+                         
                         </td>
                         <td className='fs_13 black_color  lh_xs bg_light'>
-                          Kukkatpally
+                        TK7689375826572938
                         </td>
                         <td className='fs_13 black_color  lh_xs bg_light'>
-                          Data Science
+                        Kukkatpally
                         </td>
                         <td className='fs_13 black_color  lh_xs bg_light'>
-                          Mahitha T
+                        Data science
                         </td>
                         <td className='fs_13 black_color  lh_xs bg_light '>
-                          8208302537
+                  None
                         </td>
                         <td className='fs_13 black_color  lh_xs  bg_light'>
-                          12-Mar-2023<br />
-                          Offline
+                        None
+                        </td>
+                        <td className='fs_13 black_color  lh_xs  bg_light'>
+                        None
                         </td>
                         <td className='fs_14 text_mute bg_light   lh_xs'>
-                          <AiFillEye className='eye_icon table_icons me-3' />
-                          <MdEdit className='edit_icon table_icons me-3' />
-                          <FaRupeeSign className='rupee_icon table_icons me-3' />
-                          <MdLocalPrintshop className='text-mute table_icons me-3' />
-                          <FaRegIdCard className='id_card table_icons ' />
+                        <Link to="/studentdataview"><AiFillEye className='text-mute table_icons me-3' /></Link> 
+                          <Link to="/createuser" ><MdEdit className='text-mute table_icons me-3' /> </Link>
+                          <FaRupeeSign className='text-mute table_icons me-3' />
+                          <Link to="/studentapplicationprint"><MdLocalPrintshop className='text-mute table_icons me-3' /></Link>
+                          <FaRegIdCard className='text-mute table_icons ' />
                         </td>
                       </tr>
-                      {/* 2nd row */}
+                        {/* 2nd row */}
+                        <tr>
+                        <td className='fs_13 black_color fw_500 lh_xs bg_light '>
+                          01
+                        </td>
+                        <td className='fs_13 black_color  lh_xs bg_light'>
+                          Vishakha chachane <br />
+                         
+                        </td>
+                        <td className='fs_13 black_color  lh_xs bg_light'>
+                        TK7689375826572938
+                        </td>
+                        <td className='fs_13 black_color  lh_xs bg_light'>
+                        Kukkatpally
+                        </td>
+                        <td className='fs_13 black_color  lh_xs bg_light'>
+                        Data science
+                        </td>
+                        <td className='fs_13 black_color  lh_xs bg_light '>
+                  None
+                        </td>
+                        <td className='fs_13 black_color  lh_xs  bg_light'>
+                        None
+                        </td>
+                        <td className='fs_13 black_color  lh_xs  bg_light'>
+                        None
+                        </td>
+                        <td className='fs_14 text_mute bg_light   lh_xs'>
+                        <Link to="/studentdataview"><AiFillEye className='text-mute table_icons me-3' /></Link> 
+                          <Link to="/createuser" ><MdEdit className='text-mute table_icons me-3' /> </Link>
+                          <FaRupeeSign className='text-mute table_icons me-3' />
+                          <Link to="/studentapplicationprint"><MdLocalPrintshop className='text-mute table_icons me-3' /></Link>
+                          <FaRegIdCard className='text-mute table_icons ' />
+                        </td>
+                      </tr>
+                       {/* 3rd row */}
+                       <tr>
+                        <td className='fs_13 black_color fw_500 lh_xs bg_light '>
+                          01
+                        </td>
+                        <td className='fs_13 black_color  lh_xs bg_light'>
+                          Vishakha chachane <br />
+                         
+                        </td>
+                        <td className='fs_13 black_color  lh_xs bg_light'>
+                        TK7689375826572938
+                        </td>
+                        <td className='fs_13 black_color  lh_xs bg_light'>
+                        Kukkatpally
+                        </td>
+                        <td className='fs_13 black_color  lh_xs bg_light'>
+                        Data science
+                        </td>
+                        <td className='fs_13 black_color  lh_xs bg_light '>
+                  None
+                        </td>
+                        <td className='fs_13 black_color  lh_xs  bg_light'>
+                        None
+                        </td>
+                        <td className='fs_13 black_color  lh_xs  bg_light'>
+                        None
+                        </td>
+                        <td className='fs_14 text_mute bg_light   lh_xs'>
+                        <Link to="/studentdataview"><AiFillEye className='text-mute table_icons me-3' /></Link> 
+                          <Link to="/createuser" ><MdEdit className='text-mute table_icons me-3' /> </Link>
+                          <FaRupeeSign className='text-mute table_icons me-3' />
+                          <Link to="/studentapplicationprint"><MdLocalPrintshop className='text-mute table_icons me-3' /></Link>
+                          <FaRegIdCard className='text-mute table_icons ' />
+                        </td>
+                      </tr>
+                       {/*4rth  row */}
                       <tr>
                         <td className='fs_13 black_color fw_500 lh_xs bg_light '>
                           01
                         </td>
                         <td className='fs_13 black_color  lh_xs bg_light'>
                           Vishakha chachane <br />
-                          TK7689375826572938
+                         
                         </td>
                         <td className='fs_13 black_color  lh_xs bg_light'>
-                          Kukkatpally
+                        TK7689375826572938
                         </td>
                         <td className='fs_13 black_color  lh_xs bg_light'>
-                          Data Science
+                        Kukkatpally
                         </td>
                         <td className='fs_13 black_color  lh_xs bg_light'>
-                          Mahitha T
+                        Data science
                         </td>
                         <td className='fs_13 black_color  lh_xs bg_light '>
-                          8208302537
+                  None
                         </td>
                         <td className='fs_13 black_color  lh_xs  bg_light'>
-                          12-Mar-2023<br />
-                          Offline
+                        None
+                        </td>
+                        <td className='fs_13 black_color  lh_xs  bg_light'>
+                        None
                         </td>
                         <td className='fs_14 text_mute bg_light   lh_xs'>
-                          <AiFillEye className='eye_icon table_icons me-3' />
-                          <MdEdit className='edit_icon table_icons me-3' />
-                          <FaRupeeSign className='rupee_icon table_icons me-3' />
-                          <MdLocalPrintshop className='text-mute table_icons me-3' />
-                          <FaRegIdCard className='id_card table_icons ' />
+                        <Link to="/studentdataview"><AiFillEye className='text-mute table_icons me-3' /></Link> 
+                          <Link to="/createuser" ><MdEdit className='text-mute table_icons me-3' /> </Link>
+                          <FaRupeeSign className='text-mute table_icons me-3' />
+                          <Link to="/studentapplicationprint"><MdLocalPrintshop className='text-mute table_icons me-3' /></Link>
+                          <FaRegIdCard className='text-mute table_icons ' />
                         </td>
                       </tr>
-                      {/* 3rd row */}
+                           {/*5th  row */}
                       <tr>
                         <td className='fs_13 black_color fw_500 lh_xs bg_light '>
                           01
                         </td>
                         <td className='fs_13 black_color  lh_xs bg_light'>
                           Vishakha chachane <br />
-                          TK7689375826572938
+                         
                         </td>
                         <td className='fs_13 black_color  lh_xs bg_light'>
-                          Kukkatpally
+                        TK7689375826572938
                         </td>
                         <td className='fs_13 black_color  lh_xs bg_light'>
-                          Data Science
+                        Kukkatpally
                         </td>
                         <td className='fs_13 black_color  lh_xs bg_light'>
-                          Mahitha T
+                        Data science
                         </td>
                         <td className='fs_13 black_color  lh_xs bg_light '>
-                          8208302537
+                  None
                         </td>
                         <td className='fs_13 black_color  lh_xs  bg_light'>
-                          12-Mar-2023<br />
-                          Offline
-                        </td>
-                        <td className='fs_14 text_mute bg_light   lh_xs'>
-                          <AiFillEye className='eye_icon table_icons me-3' />
-                          <MdEdit className='edit_icon table_icons me-3' />
-                          <FaRupeeSign className='rupee_icon table_icons me-3' />
-                          <MdLocalPrintshop className='text-mute table_icons me-3' />
-                          <FaRegIdCard className='id_card table_icons ' />
-                        </td>
-                      </tr>
-                      {/* 4th row */}
-                      <tr>
-                        <td className='fs_13 black_color fw_500 lh_xs bg_light '>
-                          01
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                          Vishakha chachane <br />
-                          TK7689375826572938
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                          Kukkatpally
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                          Data Science
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                          Mahitha T
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light '>
-                          8208302537
+                        None
                         </td>
                         <td className='fs_13 black_color  lh_xs  bg_light'>
-                          12-Mar-2023<br />
-                          Offline
+                        None
                         </td>
                         <td className='fs_14 text_mute bg_light   lh_xs'>
-                          <AiFillEye className='eye_icon table_icons me-3' />
-                          <MdEdit className='edit_icon table_icons me-3' />
-                          <FaRupeeSign className='rupee_icon table_icons me-3' />
-                          <MdLocalPrintshop className='text-mute table_icons me-3' />
-                          <FaRegIdCard className='id_card table_icons ' />
-                        </td>
-                      </tr>
-                      {/* 5th row */}
-                      <tr>
-                        <td className='fs_13 black_color fw_500 lh_xs bg_light '>
-                          01
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                          Vishakha chachane <br />
-                          TK7689375826572938
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                          Kukkatpally
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                          Data Science
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                          Mahitha T
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light '>
-                          8208302537
-                        </td>
-                        <td className='fs_13 black_color  lh_xs  bg_light'>
-                          12-Mar-2023<br />
-                          Offline
-                        </td>
-                        <td className='fs_14 text_mute bg_light   lh_xs'>
-                          <AiFillEye className='eye_icon table_icons me-3' />
-                          <MdEdit className='edit_icon table_icons me-3' />
-                          <FaRupeeSign className='rupee_icon table_icons me-3' />
-                          <MdLocalPrintshop className='text-mute table_icons me-3' />
-                          <FaRegIdCard className='id_card table_icons ' />
+                        <Link to="/studentdataview"><AiFillEye className='text-mute table_icons me-3' /></Link> 
+                          <Link to="/createuser" ><MdEdit className='text-mute table_icons me-3' /> </Link>
+                          <FaRupeeSign className='text-mute table_icons me-3' />
+                          <Link to="/studentapplicationprint"><MdLocalPrintshop className='text-mute table_icons me-3' /></Link>
+                          <FaRegIdCard className='text-mute table_icons ' />
                         </td>
                       </tr>
                     </tbody>
@@ -412,8 +423,8 @@ function Studentdata() {
           </div>
         </div>
       </div>
-    </div >
+    </div>
   )
 }
 
-export default Studentdata
+export default RefundData
