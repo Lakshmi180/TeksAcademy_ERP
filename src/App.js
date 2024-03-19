@@ -53,6 +53,8 @@ import IssuedCertificates from "./components/pages/Student/issuedCertificates/Is
 import StudentDataView from "./components/pages/Student/studentData/StudentDataView";
 import StudentApplicationPrint from "./components/pages/Student/studentData/StudentApplicationPrint";
 import FeeDetailsPage from "./components/pages/Student/fee/FeeDetailsPage";
+import RefundData from "./components/pages/Student/refund/RefundData";
+import RefundForm from "./components/pages/Student/refund/RefundForm";
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
   const { theme } = useTheme();
@@ -125,6 +127,8 @@ function App() {
 
             {/* <Route path="/updatecourse/:courseId" element={<CreateCourse />} /> */}
             <Route path="/feedetailspage" element={<FeeDetailsPage />} />
+            <Route path="/refunddata" element={<RefundData />} />
+            <Route path="/refundform" element={<RefundForm />} />
            
           </Routes>
         </div>
