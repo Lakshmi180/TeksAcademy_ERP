@@ -18,7 +18,7 @@ const LeadSource = () => {
                                 <div className="d-flex justify-content-between">
                                     <h5 className="fs-16 txt-color">Branch</h5>
                                     <div>
-                                        <button type="button" class="btn btn_success add-btn fs_13 ">
+                                        <button type="button" class="btn btn_primary add-btn fs_13 ">
                                             <Link to="/createleadsource" className="button_color"><HiMiniPlus /> Add Lead Source</Link>
                                         </button>
                                     </div>

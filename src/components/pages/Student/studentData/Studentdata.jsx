@@ -48,7 +48,7 @@ function Studentdata() {
                       </div>
                       <button className="btn btn_primary fs-13 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Filters</button>
                       <button type="button" className="btn btn_primary fs-13">
-                        <Link to="/createuser" className="btn_primary"><HiMiniPlus />Add Enrollment</Link>
+                        <Link to="/registrationform" className="btn_primary"><HiMiniPlus />Add Enrollment</Link>
                       </button>
                     </div>
                   </div>
