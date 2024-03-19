@@ -54,6 +54,8 @@ import StudentDataView from "./components/pages/Student/studentData/StudentDataV
 import StudentApplicationPrint from "./components/pages/Student/studentData/StudentApplicationPrint";
 import UserView from "./components/pages/User/UserData/UserView";
 import FeeDetailsPage from "./components/pages/Student/fee/FeeDetailsPage";
+import Addassets from "./components/pages/Inventory/Addassets";
+import Assignassets from "./components/pages/Inventory/Assignassets";
 import RefundData from "./components/pages/Student/refund/RefundData";
 import RefundForm from "./components/pages/Student/refund/RefundForm";
 function App() {
@@ -122,6 +124,13 @@ function App() {
             <Route path="/certificate" element={<Certificate />} />
             <Route path="/requestedcertificate" element={<RequestedCertificate />} />
             <Route path="/issuedcertificates" element={<IssuedCertificates />} />
+           
+            <Route path="/userview/:courseId" element={<UserView />} />
+
+            {/* <Route path="/updatecourse/:courseId" element={<CreateCourse />} /> */}
+            <Route path="/feedetailspage" element={<FeeDetailsPage />} />
+            <Route path="/addassests" element={<Addassets />} />
+            <Route path="/assignassets" element={<Assignassets />} />
             <Route path="/updatecourse/:courseId" element={<CreateCourse/>} />
             <Route path="/studentdataview" element={<StudentDataView />} />
             <Route path="/studentapplicationprint" element={<StudentApplicationPrint />} />
