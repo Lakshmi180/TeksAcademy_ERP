@@ -51,99 +51,131 @@ import Certificate from "./components/pages/Student/Certificate/Certificate";
 import RequestedCertificate from "./components/pages/Student/requestedCertificate/RequestedCertificate";
 import IssuedCertificates from "./components/pages/Student/issuedCertificates/IssuedCertificates";
 function App() {
-  const [isExpanded, setIsExpanded] = useState(true);
-  const { theme } = useTheme();
-  const toggleSidebar = () => {
-    setIsExpanded(!isExpanded);
-  };
+  // const [isExpanded, setIsExpanded] = useState(true);
+  // const { theme } = useTheme();
+  // const toggleSidebar = () => {
+  //   setIsExpanded(!isExpanded);
+  // };
 
   return (
-    <div
-      className={theme === "light" ? "App" : "darkMode App"}
-      style={{ backgroundColor: "f3f3f9" }}
-    >
-      <Sidemenu
-        isExpanded={isExpanded}
-        setIsExpanded={setIsExpanded}
-        toggleSidebar={toggleSidebar}
-      />
-      <div style={{ marginBottom: "50px", backgroundColor: "white" }}></div>
-      <main
-        className={theme === "light" ? "content" : "darkMode content"}
-        style={{ overflow: "auto" }}
-      >
-        <Topbar
-          isExpanded={isExpanded}
-          setIsExpanded={setIsExpanded}
-          toggleSidebar={toggleSidebar}
-        />
+    // <div
+    //   className={theme === "light" ? "App" : "darkMode App"}
+    //   style={{ backgroundColor: "f3f3f9" }}
+    // >
+    //   <Sidemenu
+    //     isExpanded={isExpanded}
+    //     setIsExpanded={setIsExpanded}
+    //     toggleSidebar={toggleSidebar}
+    //   />
+    //   <div style={{ marginBottom: "50px", backgroundColor: "white" }}></div>
+    //   <main
+    //     className={theme === "light" ? "content" : "darkMode content"}
+    //     style={{ overflow: "auto" }}
+    //   >
+    //     <Topbar
+    //       isExpanded={isExpanded}
+    //       setIsExpanded={setIsExpanded}
+    //       toggleSidebar={toggleSidebar}
+    //     />
 
-        <div className="mt-5 pt-5">
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/table" element={<Table />} />
-            <Route path="/card" element={<Card />} />
-            <Route path="/forms" element={<Forms />} />
-            <Route path="/whatsapp" element={<WhatsappChat />} />
-            <Route path="/accordian" element={<Accordian />} />
-            <Route path="/tabs" element={<Tab />} />
-            <Route path="/modal" element={<Modal />} />
-            <Route path="/page" element={<Page />} />
-            <Route path="/button" element={<Button />} />
-            <Route path={"/registrationform"} element={<RegistrationForm />} />
-            <Route path="/settingstabs" element={<SettingsTabs />} />
-            <Route path="/roles" element={<Roles />} />
-            <Route path="/createrole" element={<CreateRole />} />
-            <Route path="/studentdata" element={<Studentdata />} />
-            <Route path="/createuser" element={<CreateUserForm />} />
-            <Route path="/course" element={<Course />} />
-            <Route path="/createcourse" element={<CreateCourse />} />
-            <Route path="/branch" element={<Branch />} />
-            <Route path="/createbranch" element={<CreateBranch />} />
-            <Route path="/department" element={<Department />} />
-            <Route path="/createdepartment" element={<CreateDepartment />} />
-            <Route path="/coursepackage" element={<CoursePackage />} />
-            <Route path="/createcoursepackage" element={<CreateCoursePackage />} />
-            <Route path="/leadsource" element={<LeadSource />} />
-            <Route path="/createleadsource" element={<CreateLeadSource />} />
-            <Route path="/createadmissionfee" element={<CreateAdmissionFee />} />
-            <Route path="/admissionfee" element={<AdmissionFee />} />
-            <Route path="/addvendor" element={<AddVendor />} />
-            <Route path="/createaddvendor" element={<CreateAddVendor />} />
-            <Route path="/addassetstype" element={<AddAssetsType />} />
-            <Route path="/createaddassetstype" element={<CreateAddAssetsType />} />
-            <Route path="/userdata" element={<UserData />} />
-            <Route path="/certificate" element={<Certificate />} />
-            <Route path="/requestedcertificate" element={<RequestedCertificate />} />
-            <Route path="/issuedcertificates" element={<IssuedCertificates />} />
-            <Route path="/updatecourse/:courseId" element={<CreateCourse/>} />
+    //     <div className="mt-5 pt-5">
+    //       <Routes>
 
-          </Routes>
-        </div>
-      </main>
-    </div>
+    //         <Route path="/" element={<Dashboard />} />
+    //         <Route path="/table" element={<Table />} />
+    //         <Route path="/card" element={<Card />} />
+    //         <Route path="/forms" element={<Forms />} />
+    //         <Route path="/whatsapp" element={<WhatsappChat />} />
+    //         <Route path="/accordian" element={<Accordian />} />
+    //         <Route path="/tabs" element={<Tab />} />
+    //         <Route path="/modal" element={<Modal />} />
+    //         <Route path="/page" element={<Page />} />
+    //         <Route path="/button" element={<Button />} />
+    //         <Route path={"/registrationform"} element={<RegistrationForm />} />
+    //         <Route path="/settingstabs" element={<SettingsTabs />} />
+    //         <Route path="/roles" element={<Roles />} />
+    //         <Route path="/createrole" element={<CreateRole />} />
+    //         <Route path="/studentdata" element={<Studentdata />} />
+    //         <Route path="/createuser" element={<CreateUserForm />} />
+    //         <Route path="/edituser/:id" element={<CreateUserForm/>}/>
+    //         <Route path="/course" element={<Course />} />
+    //         <Route path="/createcourse" element={<CreateCourse />} />
+    //         <Route path="/branch" element={<Branch />} />
+    //         <Route path="/createbranch" element={<CreateBranch />} />
+    //         <Route path="/department" element={<Department />} />
+    //         <Route path="/createdepartment" element={<CreateDepartment />} />
+    //         <Route path="/coursepackage" element={<CoursePackage />} />
+    //         <Route path="/createcoursepackage" element={<CreateCoursePackage />} />
+    //         <Route path="/leadsource" element={<LeadSource />} />
+    //         <Route path="/createleadsource" element={<CreateLeadSource />} />
+    //         <Route path="/createadmissionfee" element={<CreateAdmissionFee />} />
+    //         <Route path="/admissionfee" element={<AdmissionFee />} />
+    //         <Route path="/addvendor" element={<AddVendor />} />
+    //         <Route path="/createaddvendor" element={<CreateAddVendor />} />
+    //         <Route path="/addassetstype" element={<AddAssetsType />} />
+    //         <Route path="/createaddassetstype" element={<CreateAddAssetsType />} />
+    //         <Route path="/userdata" element={<UserData />} />
+    //         <Route path="/certificate" element={<Certificate />} />
+    //         <Route path="/requestedcertificate" element={<RequestedCertificate />} />
+    //         <Route path="/issuedcertificates" element={<IssuedCertificates />} />
+    //         <Route path="/updatecourse/:courseId" element={<CreateCourse/>} />
 
-    // <Routes>
-    //   <Route element={<ReqireAuth />}>
-    //     <Route path="/" element={<Dashboard />} />
-    //     <Route path="/table" element={<Table />} />
-    //     <Route path="/table" element={<Table />} />
-    //     <Route path="/card" element={<Card />} />
-    //     <Route path="/forms" element={<Forms />} />
-    //     <Route path="/whatsapp" element={<WhatsappChat />} />
-    //     <Route path="/accordian" element={<Accordian />} />
-    //     <Route path="/tabs" element={<Tab />} />
-    //     <Route path="/modal" element={<Modal />} />
-    //     <Route path="/page" element={<Page />} />
-    //     <Route path="/button" element={<Button />} />
-    //   </Route>
-    //   <Route element={<PublicLayout />}>
-    //     <Route path="/login" element={<Login />} />
-    //     <Route path="/forgotpassword" element={<ForgotPassword />} />
-    //     <Route path="/changepassword" element={<ChangePassword />} />
-    //     <Route path="/lockscreen" element={<LockScreen />} />
-    //   </Route>
-    // </Routes>
+
+    //       </Routes>
+    //     </div>
+    //   </main>
+    // </div>
+
+    <Routes>
+      <Route element={<ReqireAuth />}>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/table" element={<Table />} />
+        <Route path="/card" element={<Card />} />
+        <Route path="/forms" element={<Forms />} />
+        <Route path="/whatsapp" element={<WhatsappChat />} />
+        <Route path="/accordian" element={<Accordian />} />
+        <Route path="/tabs" element={<Tab />} />
+        <Route path="/modal" element={<Modal />} />
+        <Route path="/page" element={<Page />} />
+        <Route path="/button" element={<Button />} />
+        <Route path={"/registrationform"} element={<RegistrationForm />} />
+        <Route path="/settingstabs" element={<SettingsTabs />} />
+        <Route path="/roles" element={<Roles />} />
+        <Route path="/createrole" element={<CreateRole />} />
+        <Route path="/studentdata" element={<Studentdata />} />
+        <Route path="/createuser" element={<CreateUserForm />} />
+        <Route path="/edituser/:id" element={<CreateUserForm />} />
+        <Route path="/course" element={<Course />} />
+        <Route path="/createcourse" element={<CreateCourse />} />
+        <Route path="/branch" element={<Branch />} />
+        <Route path="/editbranch/:id" element={<CreateBranch />} />
+        <Route path="/createbranch" element={<CreateBranch />} />
+        <Route path="/department" element={<Department />} />
+        <Route path="/createdepartment" element={<CreateDepartment />} />
+        <Route path="/coursepackage" element={<CoursePackage />} />
+        <Route path="/createcoursepackage" element={<CreateCoursePackage />} />
+        <Route path="/leadsource" element={<LeadSource />} />
+        <Route path="/createleadsource" element={<CreateLeadSource />} />
+        <Route path="/createadmissionfee" element={<CreateAdmissionFee />} />
+        <Route path="/admissionfee" element={<AdmissionFee />} />
+        <Route path="/addvendor" element={<AddVendor />} />
+        <Route path="/createaddvendor" element={<CreateAddVendor />} />
+        <Route path="/addassetstype" element={<AddAssetsType />} />
+        <Route path="/createaddassetstype" element={<CreateAddAssetsType />} />
+        <Route path="/userdata" element={<UserData />} />
+
+        <Route path="/certificate" element={<Certificate />} />
+        <Route path="/requestedcertificate" element={<RequestedCertificate />} />
+        <Route path="/issuedcertificates" element={<IssuedCertificates />} />
+        <Route path="/updatecourse/:courseId" element={<CreateCourse />} />
+      </Route>
+      <Route element={<PublicLayout />}>
+        <Route path="/login" element={<Login />} />
+        <Route path="/forgotpassword" element={<ForgotPassword />} />
+        <Route path="/changepassword" element={<ChangePassword />} />
+        <Route path="/lockscreen" element={<LockScreen />} />
+      </Route>
+    </Routes>
   );
 }
 

@@ -9,6 +9,9 @@ import { Link } from "react-router-dom";
 import { HiMiniPlus } from "react-icons/hi2";
 import { useUserContext } from "../../../../hooks/useUserContext";
 import Usedebounce from "../../../../hooks/useDebounce/Usedebounce";
+import { useRoleContext } from "../../../../hooks/useRoleContext";
+import { useBranchContext } from "../../../../hooks/useBranchContext";
+import { useDepartmentContext } from "../../../../hooks/useDepartmentContext";
 
 function UserData() {
 
@@ -18,6 +21,9 @@ function UserData() {
 
   // here the adding the filters and pagination------------------------
   const { UsersState, UsersState: { EnrolledUsers }, DispatchUsers } = useUserContext();
+  const { RoleState, createRole } = useRoleContext();
+  const { DispatchBranch, BranchState, getAllBranches } = useBranchContext();
+  const { DispatchDepartment, DepartmentState, getAllDeparments } = useDepartmentContext();
   console.log(UsersState.EnrolledUsers, "bvjhjkbjbvjb")
   const { debouncesetSearch, debouncesetPage } = Usedebounce(DispatchUsers);
 
@@ -100,17 +106,17 @@ function UserData() {
 
   const [currentPage, setCurrentPage] = useState(EnrolledUsers.currentPage);
   
-  useEffect(()=>{
-    debouncesetPage({ context: "ENROLLED_USERS", data:currentPage })
-  },[currentPage])
+
 
   const totalPages = EnrolledUsers.totalPages;
 
   const changePage = (page) => {
+    debouncesetPage({ context: "ENROLLED_USERS", data:page })
     setCurrentPage(page);
     // Add your logic here to handle page change
     console.log("Current page:", page);
   };
+  
 
   const previousPage = () => {
     if (currentPage > 1) {
@@ -203,12 +209,15 @@ function UserData() {
                         value={filterCriteria.profile}
                         onChange={HandleFilterCertria}
                       >
-                        <option value="1">Select Profile</option>
-                        <option value="2">Sr. Associate</option>
-                        <option value="3">Regional Manager</option>
-                        <option value="4">Branch Manager</option>
-                        <option value="5">Counsellor</option>
-                        <option value="6">Admin</option>
+                        
+
+                        <option value="" disabled selected> Select Role </option>
+                      {
+                        RoleState?.roles && RoleState?.roles.length > 0 ? RoleState.roles.map((item, index) => (
+                          <option key={index}>{item.role}</option>
+                        )) : null
+                      }
+
                       </select>
                     </div>
                     {/* branch */}
@@ -223,13 +232,13 @@ function UserData() {
                         name="branch"
                         value={filterCriteria.branch}
                         onChange={HandleFilterCertria}
-                      >
-                        <option value="1">Select Branch</option>
-                        <option value="2">Hitech City</option>
-                        <option value="3">Kukkatpally</option>
-                        <option value="4">Dilsukhnagar</option>
-                        <option value="5">Secunderabad</option>
-                        <option value="6">Testing</option>
+                      >                
+                        <option value="" disabled selected> Enter Branch </option>
+                      {
+                        BranchState.branches && BranchState.branches.length > 0 && BranchState.branches.map((item) => (
+                          <option >{item.branch_name}</option>
+                        ))
+                      }
                       </select>
                     </div>
                     {/* department */}
@@ -245,10 +254,12 @@ function UserData() {
                         value={filterCriteria.department}
                         onChange={HandleFilterCertria}
                       >
-                        <option value="1">Select Department</option>
-                        <option value="2">Counsellor</option>
-                        <option value="3">Digital Marketing</option>
-                        <option value="4">Student Counsellor</option>
+                        <option value="" disabled selected> Enter  Department </option>
+                      {
+                        DepartmentState.departments && DepartmentState.departments.length > 0 && DepartmentState.departments.map((item, index) => (
+                          <option key={index}>{item.department_name}</option>
+                        ))
+                      }
                       </select>
                     </div>
                     <div>
@@ -328,7 +339,7 @@ function UserData() {
                           return (
                             <tr>
                               <td className='fs_13 black_color fw_500 lh_xs bg_light '>
-                                {index + 1}
+                              {(currentPage-1)*EnrolledUsers.perPage+index+1}
                               </td>
                               <td className='fs_13 black_color  lh_xs bg_light'>
 
@@ -406,14 +417,15 @@ function UserData() {
                   </div>
                   <div className="col-sm-auto mt-3 mt-sm-0">
                     <ul className="mt-2 pagination pagination-separated pagination-sm mb-0 justify-content-center">
+
+
                     <li className={`page-item ${currentPage === 1 ? 'cursor-crosshair' : ' '}  p-1`}>
-                      
                         <span  className={`page-link ${currentPage > 1 ? 'cursor-pointer' : ''} `}
                           onClick={previousPage}
                         >
                           ←
                         </span>
-                      </li>
+                    </li>
 
                       {/* here the pagintation  */}
                       {/* <li className="page-item p-1">
@@ -450,6 +462,8 @@ function UserData() {
                           →
                         </span>
                       </li>
+
+
                     </ul>
                   </div>
                 </div>

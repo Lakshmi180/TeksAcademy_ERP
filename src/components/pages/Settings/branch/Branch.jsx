@@ -10,6 +10,7 @@ export const Branch = () => {
 
     const {DispatchBranch,BranchState, getAllBranches}=useBranchContext();
     console.log(BranchState.branches, "kbdvjdj")
+    
 
     return (
         <div>
@@ -86,7 +87,10 @@ export const Branch = () => {
                                                     {date}
                                                 </td>
                                                 <td className='fs_13 black_color  lh_xs bg_light '>
+                                                 <Link to={`/editbranch/${item.id}`}>
                                                     <MdEdit className='text-mute table_icons me-3' />
+                                                    </Link>
+                                                    
                                                     <MdDelete className='text-mute table_icons me-3' />
                                                 </td>
                                             </tr>

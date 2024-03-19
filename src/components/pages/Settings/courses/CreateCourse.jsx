@@ -104,7 +104,7 @@ const CreateCourse = () => {
             })
     
             if(status === 201){
-                console.log(data, "hellobb")    
+                console.log(data, "hellobb")   
             }
           }
           catch(error){
