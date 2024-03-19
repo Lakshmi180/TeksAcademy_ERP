@@ -973,10 +973,10 @@ function RegistrationForm() {
         const id = response.data.insertId;
         let updateContext = studentRegistrationdata;
         updateContext.id = response.data.insertId;
-        dispatch({
-          type: "CREATE_STUDENT",
-          payload: updateContext,
-        });
+        // dispatch({
+        //   type: "CREATE_STUDENT",
+        //   payload: updateContext,
+        // });
         navigate(`/feeview/${id}`);
 
         // You can navigate to another page or perform other actions here.

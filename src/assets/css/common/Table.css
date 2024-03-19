@@ -224,3 +224,6 @@ img {
     border-color: var( --erp-sky-800) !important;
     color: var(--erp-white-color);
 }
+.bg-yellow{
+  background-color: var(--erp-yellow-100);
+}

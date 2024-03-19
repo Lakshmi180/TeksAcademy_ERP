@@ -12,10 +12,6 @@ import Usedebounce from "../../../../hooks/useDebounce/Usedebounce";
 
 function UserData() {
 
-
-
-
-
   // here the adding the filters and pagination------------------------
   const { UsersState, UsersState: { EnrolledUsers }, DispatchUsers } = useUserContext();
   console.log(UsersState.EnrolledUsers, "bvjhjkbjbvjb")
@@ -99,10 +95,10 @@ function UserData() {
   }, [])
 
   const [currentPage, setCurrentPage] = useState(EnrolledUsers.currentPage);
-  
-  useEffect(()=>{
-    debouncesetPage({ context: "ENROLLED_USERS", data:currentPage })
-  },[currentPage])
+
+  useEffect(() => {
+    debouncesetPage({ context: "ENROLLED_USERS", data: currentPage })
+  }, [currentPage])
 
   const totalPages = EnrolledUsers.totalPages;
 
@@ -154,8 +150,8 @@ function UserData() {
                   <div className="col-sm-6">
                     <div className="d-flex justify-content-end">
                       <div className="fs-13 me-3 mt-2">
-                      { EnrolledUsers.searchResultUsers } / {EnrolledUsers.totalUsers}
-                      
+                        {EnrolledUsers.searchResultUsers} / {EnrolledUsers.totalUsers}
+
                       </div>
                       <div className="me-2">
                         <select
@@ -359,16 +355,16 @@ function UserData() {
                               </td>
                               <td className='fs_14 text_mute bg_light lh_xs flex-row d-flex'>
                                 <Link to={`/userview/${item.id}`}>
-                                  <AiFillEye className='text-mute table_icons me-3' />
+                                  <AiFillEye className=' table_icons me-3 eye_icon' />
                                 </Link>
 
-                                <Link to={`/edituser/${item.id}`}>
-                                  <MdEdit className='text-mute table_icons me-3' />
+                                <Link to="/createuser">
+                                  <MdEdit className=' edit_icon me-3' />
                                 </Link>
 
-                                <div className="form-check form-switch form-switch-right form-switch-md">
+                                <div className="form-check form-switch form-switch-right form-switch-md ">
                                   {/* <label for="FormValidationDefault" className="form-label text-muted">Show Code</label> */}
-                                  <input className="form-check-input code-switcher" type="checkbox" id="FormValidationDefault" />
+                                  <input className="form-check-input code-switcher toggle_btn" type="checkbox" id="FormValidationDefault" />
                                 </div>
                               </td>
                             </tr>
@@ -406,9 +402,9 @@ function UserData() {
                   </div>
                   <div className="col-sm-auto mt-3 mt-sm-0">
                     <ul className="mt-2 pagination pagination-separated pagination-sm mb-0 justify-content-center">
-                    <li className={`page-item ${currentPage === 1 ? 'cursor-crosshair' : ' '}  p-1`}>
-                      
-                        <span  className={`page-link ${currentPage > 1 ? 'cursor-pointer' : ''} `}
+                      <li className={`page-item ${currentPage === 1 ? 'cursor-crosshair' : ' '}  p-1`}>
+
+                        <span className={`page-link ${currentPage > 1 ? 'cursor-pointer' : ''} `}
                           onClick={previousPage}
                         >
                           ←
@@ -437,7 +433,7 @@ function UserData() {
                         const page = startPage + index;
                         return (
                           <li key={page} className={`page-item p-1 ${currentPage === page ? 'active' : ''}`}>
-                            <span className="page-link"  style={{ cursor: 'pointer' }} onClick={() => changePage(page)}>{page}</span>
+                            <span className="page-link" style={{ cursor: 'pointer' }} onClick={() => changePage(page)}>{page}</span>
                           </li>
                         );
                       })}
