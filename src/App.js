@@ -51,6 +51,7 @@ import Certificate from "./components/pages/Student/Certificate/Certificate";
 import RequestedCertificate from "./components/pages/Student/requestedCertificate/RequestedCertificate";
 import IssuedCertificates from "./components/pages/Student/issuedCertificates/IssuedCertificates";
 import UserView from "./components/pages/User/UserData/UserView";
+import FeeDetailsPage from "./components/pages/Student/fee/FeeDetailsPage";
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
   const { theme } = useTheme();
@@ -120,6 +121,9 @@ function App() {
             <Route path="/updatecourse/:courseId" element={<CreateCourse/>} />
             <Route path="/userview/:courseId" element={<UserView/>} />
 
+            {/* <Route path="/updatecourse/:courseId" element={<CreateCourse />} /> */}
+            <Route path="/feedetailspage" element={<FeeDetailsPage />} />
+           
           </Routes>
         </div>
       </main>
