@@ -1,0 +1,21 @@
+.bg_red{
+    background-color:#fde8e4
+}
+.bg_subtle{
+    background-color: #daf4f0;
+}
+.bg_yellow{
+    background-color: #fef4e4;
+}
+.bg_infosubtle{
+    background-color: #dff0fa;
+}
+.bg_secondary{
+    background-color: #daf4f0;
+}
+.bg_infolight{
+    background-color: var(--erp-green-200) ;
+}
+.bg_primary{
+    background-color: var(--erp-green-400);
+}

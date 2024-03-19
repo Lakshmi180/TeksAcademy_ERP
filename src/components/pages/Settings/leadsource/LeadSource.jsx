@@ -82,8 +82,10 @@ const LeadSource = () => {
                                                                 {date}
                                                             </td>
                                                             <td className='fs_13 black_color  lh_xs bg_light '>
-                                                                <MdEdit className='text-mute table_icons me-3' />
-                                                                <MdDelete className='text-mute table_icons me-3' />
+                                                            <Link to="/createleadsource">
+                                                            <MdEdit className='edit_icon table_icons me-3' />
+                                                        </Link>
+                                                                <MdDelete className='delete_icon table_icons me-3' />
                                                             </td>
                                                         </tr>
                                                     )

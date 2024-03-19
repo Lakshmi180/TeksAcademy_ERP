@@ -7,13 +7,13 @@ import { RoleContext } from '../../../../context/roleContext/RoleContextProvider
 import { useRoleContext } from '../../../../hooks/useRoleContext';
 export const Roles = () => {
 
-  const { RoleState } = useRoleContext();
+    const { RoleState } = useRoleContext();
 
-  console.log(RoleState.roles, "kjhghg")
+    console.log(RoleState.roles, "kjhghg")
 
 
-  return (
-    <div>
+    return (
+        <div>
             <div className='container-fluid'>
                 <div className="card border-0">
                     <div className="card-header">
@@ -75,22 +75,24 @@ export const Roles = () => {
                                                         {index + 1}
                                                     </td>
                                                     <td className='fs_13 black_color  lh_xs bg_light'>
-                                                    {item.role}
-                                                        
+                                                        {item.role}
+
                                                     </td>
                                                     <td className='fs_13 black_color  lh_xs bg_light'>
-                                                            {item.description}
+                                                        {item.description}
                                                     </td>
                                                     <td className='fs_13 black_color  lh_xs bg_light'>
-                                                         {item.createdby}
+                                                        {item.createdby}
                                                     </td>
                                                     <td className='fs_13 black_color  lh_xs bg_light'>
 
                                                         {date}
                                                     </td>
                                                     <td className='fs_13 black_color  lh_xs bg_light '>
-                                                        <MdEdit className='text-mute table_icons me-3' />
-                                                        <MdDelete className='text-mute table_icons me-3' />
+                                                        <Link to="/createrole">
+                                                            <MdEdit className='edit_icon table_icons me-3' />
+                                                        </Link>
+                                                        <MdDelete className='delete_icon table_icons me-3' />
                                                     </td>
                                                 </tr>
                                             )
@@ -98,20 +100,20 @@ export const Roles = () => {
 
 
 
-                                        }) :  <tr>
+                                        }) : <tr>
                                             <td>
-                                                 No Data Found
+                                                No Data Found
                                             </td>
-                                              </tr>
+                                        </tr>
                                     }
-                                    
+
                                 </tbody>
                             </table>
 
 
 
 
-                      
+
                         </div>
                         <div className="align-items-center d-flex justify-content-between row text-center text-sm-start">
                             <div className="col-sm">
@@ -154,8 +156,8 @@ export const Roles = () => {
                 </div>
             </div>
         </div>
-   
-  )
+
+    )
 }
 
 

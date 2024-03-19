@@ -50,10 +50,17 @@ import UserData from "./components/pages/User/UserData/UserData";
 import Certificate from "./components/pages/Student/Certificate/Certificate";
 import RequestedCertificate from "./components/pages/Student/requestedCertificate/RequestedCertificate";
 import IssuedCertificates from "./components/pages/Student/issuedCertificates/IssuedCertificates";
+import StudentDataView from "./components/pages/Student/studentData/StudentDataView";
+import StudentApplicationPrint from "./components/pages/Student/studentData/StudentApplicationPrint";
+import UserView from "./components/pages/User/UserData/UserView";
 import FeeDetailsPage from "./components/pages/Student/fee/FeeDetailsPage";
 import FeeFollowUps from "./components/pages/Student/fee/FeeFollowUps";
 import FeeView from "./components/pages/Student/fee/FeeView";
 import NoDueRecords from "./components/pages/Student/fee/NoDueRecords";
+import Addassets from "./components/pages/Inventory/Addassets";
+import Assignassets from "./components/pages/Inventory/Assignassets";
+import RefundData from "./components/pages/Student/refund/RefundData";
+import RefundForm from "./components/pages/Student/refund/RefundForm";
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
   const { theme } = useTheme();
@@ -120,11 +127,25 @@ function App() {
             <Route path="/certificate" element={<Certificate />} />
             <Route path="/requestedcertificate" element={<RequestedCertificate />} />
             <Route path="/issuedcertificates" element={<IssuedCertificates />} />
-            <Route path="/updatecourse/:courseId" element={<CreateCourse />} />
+           
+            <Route path="/userview/:courseId" element={<UserView />} />
+
+            {/* <Route path="/updatecourse/:courseId" element={<CreateCourse />} /> */}
             <Route path="/feedetailspage" element={<FeeDetailsPage />} />
             <Route path="/feefollowups" element={<FeeFollowUps />} />
             <Route path="/feeview" element={<FeeView />} />
             <Route path="/noduerecords" element={<NoDueRecords/>}/>
+            <Route path="/addassests" element={<Addassets />} />
+            <Route path="/assignassets" element={<Assignassets />} />
+            <Route path="/updatecourse/:courseId" element={<CreateCourse/>} />
+            <Route path="/studentdataview" element={<StudentDataView />} />
+            <Route path="/studentapplicationprint" element={<StudentApplicationPrint />} />
+            <Route path="/userview/:courseId" element={<UserView/>} />
+
+            {/* <Route path="/updatecourse/:courseId" element={<CreateCourse />} /> */}
+            <Route path="/feedetailspage" element={<FeeDetailsPage />} />
+            <Route path="/refunddata" element={<RefundData />} />
+            <Route path="/refundform" element={<RefundForm />} />
            
           </Routes>
         </div>

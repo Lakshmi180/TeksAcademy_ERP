@@ -137,6 +137,7 @@ const AdmissionFee = () => {
           </div>
     </div>
   );
+  
 }
 
 export default AdmissionFee;

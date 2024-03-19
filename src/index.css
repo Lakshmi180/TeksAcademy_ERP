@@ -532,7 +532,6 @@ h1 {
   border-left: 3px solid var(--erp-bg-color) !important;
   border-bottom: 3px solid var(--erp-bg-color) !important;
   background-color: #fff;
-   color: #000 !important;
 }
 
 .nav-link.active {

@@ -17,25 +17,24 @@ import { useAuthContext } from "../../../../hooks/useAuthContext";
 import { useLeadSourceContext } from "../../../../hooks/useLeadSourceContext";
 import { useCourseContext } from "../../../../hooks/useCourseContext";
 import { useCoursePackage } from "../../../../hooks/useCoursePackage";
+import { useStudentsContext } from "../../../../hooks/useStudentsContext";
+import { TbDatabaseDollar } from "react-icons/tb";
+import { MdDelete } from "react-icons/md";
+
 function RegistrationForm() {
   // * Active Tab start
   const [activeTab, setActiveTab] = useState(1);
-  const [isFormValid, setIsFormValid] = useState(false);
+
   const { theme } = useTheme();
-  const [formData, setFormData] = useState(() => {
-    // Intializing local storage to add the form data
-    const storedData = JSON.parse(localStorage.getItem("formData"));
-    return storedData || [];
-  });
-  // const { dispatch } = useStudentsContext();
+  const { dispatch } = useStudentsContext();
   const [isPopupOpen, setPopupOpen] = useState(false);
   let select = "select";
   const openPopup = () => setPopupOpen(true);
   const closePopup = () => setPopupOpen(false);
   // const { user } = useAuthContext();
-  // const { coursePackageState } = useBranchContext();
-  const { leadsources } = useLeadSourceContext();
-  const { courseState } = useCourseContext();
+  const { BranchState } = useBranchContext();
+  const { leadSourceState } = useLeadSourceContext();
+  const { courseState, getAllCourses } = useCourseContext();
   const { coursePackageState } = useCoursePackage();
   const navigate = useNavigate();
   console.log(`COurse State : ${courseState}`);
@@ -108,6 +107,25 @@ function RegistrationForm() {
   const [certificate_status, setcertificate_status] = useState([
     { courseStartDate: "", courseEndDate: "", certificateStatus: "" },
   ]);
+  const [error, setError] = useState({
+    name: "",
+    email: "",
+    photo: "",
+    dob: "",
+    contact: "",
+    wpNum: "",
+    gender: "",
+    marital: "",
+    college: "",
+    pincode: "",
+    country: "",
+    state: "",
+    native: "",
+    area: "",
+  });
+
+  const [errorState, setErrorState] = useState({});
+  const [errorBox, setErrorBox] = useState(false);
   const [extra_discount, setExtra_Discount] = useState([]);
   let LoggedInuser = JSON.parse(localStorage.getItem("user"));
   let userName;
@@ -295,7 +313,8 @@ function RegistrationForm() {
       }
       handleNext();
     } else {
-      alert("The fee should contain both 'Admission Fee' and 'fee'.");
+      setErrorState((prev) => ({ ...prev, feetype: "Fee type is required" }));
+      setErrorState((prev) => ({ ...prev, amount: "Amount is required" }));
     }
   };
   useEffect(() => {
@@ -318,7 +337,7 @@ function RegistrationForm() {
       setAmount(499);
     }
     if (feetype === "fee") {
-      let course = courseState.courses.filter(
+      let course = courseState?.courses?.filter(
         (course) =>
           course.course_name === courses &&
           course.course_package === coursepackage
@@ -330,7 +349,9 @@ function RegistrationForm() {
         setAmount("");
       }
     }
-  }, [feetype, courses, coursepackage]);
+  }, [feetype, courses, coursepackage, courseState]);
+
+  console.log(courseState.courses, "2564");
 
   const handleFeeDetails = (e) => {
     e.preventDefault();
@@ -373,106 +394,134 @@ function RegistrationForm() {
     }
   };
   // * ------------------validations-------------------------------
+
   const handleBasicDetails = () => {
     if (!name) {
-      alert("please enter the name");
+      setErrorState((prev) => ({ ...prev, name: "Please enter the name" }));
       return;
     }
     if (!email) {
-      alert("please  enter email id");
+      setErrorState((prev) => ({ ...prev, email: "Email is required" }));
       return;
     } else {
       const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
       if (!emailPattern.test(email)) {
-        alert("Invalid Email Address");
+        setErrorState((prev) => ({ ...prev, email: "Invalid Email Address" }));
         return;
-        // errors.email = 'Invalid email address';
       }
     }
 
-    // if (!studentImage) {
-    //   alert("Please select an image to upload");
-    //   return;
-    // }
-
     if (!birthdate) {
-      alert("please  enter Date of birth");
+      setErrorState((prev) => ({ ...prev, dob: "Birthdate is required" }));
       return;
     }
 
     if (!mobilenumber) {
-      alert("please enter mobilenumber");
+      setErrorState((prev) => ({ ...prev, contact: "Contact is required" }));
       return;
     } else {
       if (mobilenumber.length !== 10) {
-        alert("incorrect mobile number");
+        setErrorState((prev) => ({
+          ...prev,
+          contact: "Incorrect mobile number",
+        }));
         return;
       }
     }
 
     if (!whatsappno) {
-      alert("please enter whatsappno");
+      setErrorState((prev) => ({ ...prev, wpNum: "WhatsApp Number required" }));
       return;
     } else {
       if (whatsappno.length !== 10) {
-        alert("incorrect whatsappno ");
+        setErrorState((prev) => ({
+          ...prev,
+          wpNum: "Incorrect WhatsApp number",
+        }));
         return;
       }
     }
 
     if (!gender) {
-      alert("please enter gender");
+      setErrorState((prev) => ({ ...prev, gender: "Gender is required" }));
       return;
     }
 
     if (!maritalstatus) {
-      alert("please enter marital status");
+      setErrorState((prev) => ({
+        ...prev,
+        marital: "Marital status is required",
+      }));
       return;
     }
 
     if (!college) {
-      alert("please enter college name");
+      setErrorState((prev) => ({
+        ...prev,
+        college: "College name is required",
+      }));
       return;
     }
 
     if (!zipcode) {
-      alert("please enter zipcode");
+      setErrorState((prev) => ({ ...prev, pincode: "Pincode is required" }));
       return;
     }
     if (!country) {
-      alert("please enter country");
+      setErrorState((prev) => ({ ...prev, country: "Country is required" }));
       return;
     }
     if (!state) {
-      alert("please  enter State");
+      setErrorState((prev) => ({ ...prev, state: "State is required" }));
       return;
     }
     if (!area) {
-      alert("please enter area");
+      setErrorState((prev) => ({ ...prev, area: "Area is required" }));
       return;
     }
     if (!native) {
-      alert("please enter Native place");
+      setErrorState((prev) => ({ ...prev, native: "Native is required" }));
       return;
     }
     handleNext();
   };
-  const handleStudentDetails = () => {
+
+  const handleFeeInput = () => {
+    if (!feetype) {
+      // setErrorState((prev) => ({ ...prev, country: "Country is required" }));
+    }
+
+    if (!amount) {
+      return alert("Please enter amount");
+    }
+
     handleNext();
   };
 
   const handleParentDetails = () => {
     if (!parentsname) {
-      alert("please enter parent's name");
+      setErrorState((prev) => ({
+        ...prev,
+        parentsname: "Parent Name is required",
+      }));
+
       return;
     }
 
     if (!parentsnumber) {
-      alert("please enter parent's mobilenumber");
+      setErrorState((prev) => ({
+        ...prev,
+        parentsnumber: "Parent Number is required",
+      }));
+
       return;
     } else {
       if (parentsnumber.length !== 10) {
-        alert("incorrect  parent's mobile number");
+        setErrorState((prev) => ({
+          ...prev,
+          parentsnumber: "Number is invalid",
+        }));
+
         return;
       }
     }
@@ -480,15 +529,24 @@ function RegistrationForm() {
   };
   const handleEducationDetails = () => {
     if (!educationtype) {
-      alert("please enter educationtype");
+      setErrorState((prev) => ({
+        ...prev,
+        educationtype: "Education type is required",
+      }));
       return;
     }
     if (!marks) {
-      alert("please  enter marks");
+      setErrorState((prev) => ({
+        ...prev,
+        marks: "Percentage is required",
+      }));
       return;
     }
     if (!academicyear) {
-      alert("please enter academicyear");
+      setErrorState((prev) => ({
+        ...prev,
+        academicyear: "Academic Year is required",
+      }));
       return;
     }
     if (educationtype === "others") {
@@ -591,28 +649,35 @@ function RegistrationForm() {
     // Image size is within the limit, proceed to the next step
     handleNext();
   };
-  console.log("studentImage", studentImage);
 
   // ----photo end--------------------------------------------
   const handleAdmissionDetails = () => {
     if (!enquirydate) {
-      alert("please enter enquirydate");
+      setErrorState((prev) => ({
+        ...prev,
+        enquirydate: "Enquiry Date is required",
+      }));
       return;
-    }
-    if (!enquirytakenby) {
-      alert("please  enter enquirytakenby");
+    } else if (!enquirytakenby) {
+      setErrorState((prev) => ({
+        ...prev,
+        enquirytakenby: "Enquiry Taken by is required",
+      }));
       return;
-    }
-    if (!coursepackage) {
-      alert("please enter coursepackage");
+    } else if (!coursepackage) {
+      setErrorState((prev) => ({
+        ...prev,
+        coursepackage: "Course Package is required",
+      }));
       return;
-    }
-    if (!courses) {
-      alert("please enter courses");
+    } else if (!courses) {
+      setErrorState((prev) => ({ ...prev, courses: "Courses is required" }));
       return;
-    }
-    if (!leadsource) {
-      alert("please enter leadsource");
+    } else if (!leadsource) {
+      setErrorState((prev) => ({
+        ...prev,
+        leadsource: "Lead Source is required",
+      }));
       return;
     }
     if (
@@ -628,26 +693,32 @@ function RegistrationForm() {
         .join(" ") === "employee referral"
     ) {
       setLeadSource([CustomLeadSource]);
-    }
-
-    if (!branch) {
-      alert("please enter branch");
+    } else if (!branch) {
+      setErrorState((prev) => ({ ...prev, branch: "Branch is required" }));
       return;
-    }
-    if (!modeoftraining) {
-      alert("please  enter modeoftraining");
+    } else if (!modeoftraining) {
+      setErrorState((prev) => ({
+        ...prev,
+        modeoftraining: "Mode of Training is required",
+      }));
       return;
-    }
-    if (!admissiondate) {
-      alert("please enter Native place");
+    } else if (!admissiondate) {
+      setErrorState((prev) => ({
+        ...prev,
+        admissiondate: "Admission Date is required",
+      }));
       return;
-    }
-    if (!validitystartdate) {
-      alert("please enter validitystartdate");
+    } else if (!validitystartdate) {
+      setErrorState((prev) => ({
+        ...prev,
+        validitystartdate: "Validity Start Date is required",
+      }));
       return;
-    }
-    if (!validityenddate) {
-      alert("please enter validityenddate ");
+    } else if (!validityenddate) {
+      setErrorState((prev) => ({
+        ...prev,
+        validityenddate: "Validity End Date is required",
+      }));
       return;
     }
 
@@ -676,7 +747,76 @@ function RegistrationForm() {
   //   setuserid(user.id);
   // }, [user]);
 
-  const handleSubmit = async () => {
+  useEffect(() => {
+    // Clear error messages on change
+    setErrorState((prev) => ({
+      ...prev,
+      name: "",
+      email: "",
+      dob: "",
+      contact: "",
+      wpNum: "",
+      gender: "",
+      marital: "",
+      college: "",
+      pincode: "",
+      country: "",
+      state: "",
+      area: "",
+      native: "",
+      parentsname: "",
+      parentsnumber: "",
+      educationtype: "",
+      marks: "",
+      academicyear: "",
+      enquirydate: "",
+      enquirytakenby: "",
+      coursepackage: "",
+      courses: "",
+      leadsource: "",
+      branch: "",
+      modeoftraining: "",
+      admissiondate: "",
+      validitystartdate: "",
+      validityenddate: "",
+      feetype: "",
+      amount: "",
+    }));
+  }, [
+    name,
+    email,
+    birthdate,
+    mobilenumber,
+    whatsappno,
+    gender,
+    maritalstatus,
+    college,
+    zipcode,
+    country,
+    state,
+    area,
+    native,
+    parentsname,
+    parentsnumber,
+    educationtype,
+    marks,
+    academicyear,
+    enquirydate,
+    enquirytakenby,
+    coursepackage,
+    courses,
+    leadsource,
+    branch,
+    modeoftraining,
+    admissiondate,
+    validitystartdate,
+    validityenddate,
+    feetype,
+    amount,
+  ]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     // * registration number start
     let registrationnumber;
     // let filterbranch
@@ -825,7 +965,7 @@ function RegistrationForm() {
 
         // Handle the response as needed
         console.log("Response:", response.data);
-        if (response.data.Status === "exists") {
+        if (response.data.status === "exists" || response.status === 400) {
           alert(response.data.field + " already " + response.data.Status);
           return false;
         }
@@ -969,29 +1109,6 @@ function RegistrationForm() {
       <div className="registration_form_section  ">
         <div className="top">
           <div className="registration_form_tabs row">
-            {/* <div className="button_grp col-lg-12 p-0">
-              {tabs.map((tab, index) => {
-                return (
-                  <button
-                    key={index}
-                    type="button"
-                    className={
-                      activeTab === index
-                        ? `${
-                            theme === "light"
-                              ? "form_tab_btn active"
-                              : "form_tab_btn dark active"
-                          }`
-                        : "form_tab_btn "
-                    }
-                    onClick={() => setActiveTab(index)}
-                    disabled={!isFormValid}
-                  >
-                    {tab.title}
-                  </button>
-                );
-              })}
-            </div> */}
             <div className="button_grp col-lg-12 p-0">
               <button
                 type="button"
@@ -1004,7 +1121,6 @@ function RegistrationForm() {
                       }`
                     : "form_tab_btn "
                 }
-                disabled={!isFormValid}
               >
                 Student Details
               </button>
@@ -1019,7 +1135,6 @@ function RegistrationForm() {
                       }`
                     : "form_tab_btn "
                 }
-                disabled={!isFormValid}
               >
                 Parent Details
               </button>
@@ -1034,7 +1149,6 @@ function RegistrationForm() {
                       }`
                     : "form_tab_btn "
                 }
-                disabled={!isFormValid}
               >
                 Education Details
               </button>
@@ -1049,7 +1163,6 @@ function RegistrationForm() {
                       }`
                     : "form_tab_btn "
                 }
-                disabled={!isFormValid}
               >
                 Admission Details
               </button>
@@ -1064,7 +1177,6 @@ function RegistrationForm() {
                       }`
                     : "form_tab_btn "
                 }
-                disabled={!isFormValid}
               >
                 Fee Details
               </button>
@@ -1079,7 +1191,6 @@ function RegistrationForm() {
                       }`
                     : "form_tab_btn "
                 }
-                disabled={!isFormValid}
               >
                 Billing
               </button>
@@ -1094,7 +1205,6 @@ function RegistrationForm() {
                       }`
                     : "form_tab_btn "
                 }
-                disabled={!isFormValid}
               >
                 Others
               </button>
@@ -1109,7 +1219,6 @@ function RegistrationForm() {
                       }`
                     : "form_tab_btn "
                 }
-                disabled={!isFormValid}
               >
                 Preview
               </button>
@@ -1130,7 +1239,11 @@ function RegistrationForm() {
                       Name*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.name
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="rname"
                       type="text"
                       required
@@ -1138,6 +1251,9 @@ function RegistrationForm() {
                       value={name}
                       placeholder="Enter your name"
                     />
+                    {errorState && errorState.name && (
+                      <p className="text-danger m-0 fs-xs">{errorState.name}</p>
+                    )}
                   </div>
                   <div className="form-group text-start col-lg-3">
                     <label
@@ -1147,7 +1263,11 @@ function RegistrationForm() {
                       Email*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.email
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="remail"
                       type="email"
                       required
@@ -1155,6 +1275,11 @@ function RegistrationForm() {
                       value={email}
                       placeholder="Enter your email address"
                     />
+                    {errorState && errorState.email && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.email}
+                      </p>
+                    )}
                   </div>
 
                   <div className="form-group text-start col-lg-3">
@@ -1165,12 +1290,21 @@ function RegistrationForm() {
                       Choose your photo*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.photo
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="rphoto"
                       ref={fileInputRef}
                       type="file"
                       onChange={handleFileChange}
                     />
+                    {errorState && errorState.photo && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.photo}
+                      </p>
+                    )}
                   </div>
                   <div className="form-group text-start col-lg-3">
                     <label
@@ -1180,13 +1314,20 @@ function RegistrationForm() {
                       Date of Birth*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.dob
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="rdob"
                       type="date"
                       onChange={(e) => setBirthDate(e.target.value)}
                       value={birthdate}
                       onKeyDown={handleKeyDown}
                     />
+                    {errorState && errorState.dob && (
+                      <p className="text-danger m-0 fs-xs">{errorState.dob}</p>
+                    )}
                   </div>
                 </div>
 
@@ -1199,7 +1340,11 @@ function RegistrationForm() {
                       Contact Number*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.contact
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="rcontactnum"
                       type="number"
                       onKeyDown={handleKeyDown}
@@ -1208,6 +1353,11 @@ function RegistrationForm() {
                       onChange={(e) => setMobileNumber(e.target.value)}
                       value={mobilenumber}
                     />
+                    {errorState && errorState.contact && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.contact}
+                      </p>
+                    )}
                   </div>
 
                   <div className="form-group text-start col-lg-3">
@@ -1218,7 +1368,11 @@ function RegistrationForm() {
                       Whatsapp Number*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.wpNum
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="rwhatsappnum"
                       type="number"
                       required
@@ -1227,6 +1381,11 @@ function RegistrationForm() {
                       onKeyDown={handleKeyDown}
                       placeholder="Enter WhatsApp number"
                     />
+                    {errorState && errorState.wpNum && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.wpNum}
+                      </p>
+                    )}
                   </div>
                   <div className="form-group text-start col-lg-3">
                     <label
@@ -1236,7 +1395,11 @@ function RegistrationForm() {
                       Gender*
                     </label>
                     <select
-                      class="form-select form-control input_bg_color"
+                      className={
+                        errorState && errorState.gender
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       aria-label="Default select example"
                       id="gender"
                       name="gender"
@@ -1247,10 +1410,16 @@ function RegistrationForm() {
                         Select your Gender
                       </option>
                       <option value="male">Male</option>
-                      <option value="femal">Female</option>
+                      <option value="female">Female</option>
                       <option value="other">Other</option>
                     </select>
+                    {errorState && errorState.gender && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.gender}
+                      </p>
+                    )}
                   </div>
+
                   <div className="form-group text-start col-lg-3">
                     <label
                       className="form-label fs-s text_color"
@@ -1259,7 +1428,11 @@ function RegistrationForm() {
                       Marital Status*
                     </label>
                     <select
-                      class="form-select form-control input_bg_color"
+                      className={
+                        errorState && errorState.marital
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       aria-label="Default select example"
                       id="maritalstatus"
                       name="maritalstatus"
@@ -1271,6 +1444,11 @@ function RegistrationForm() {
                       <option value="Single">Single</option>
                       <option value="Married">Married</option>
                     </select>
+                    {errorState && errorState.marital && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.marital}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -1283,7 +1461,11 @@ function RegistrationForm() {
                       College/School/Company*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.college
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="rcscname"
                       type="text"
                       required
@@ -1292,6 +1474,11 @@ function RegistrationForm() {
                       onKeyDown={handleKeyDown}
                       placeholder="College/School/Company"
                     />
+                    {errorState && errorState.college && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.college}
+                      </p>
+                    )}
                   </div>
                   <div className="form-group text-start col-lg-3">
                     <label
@@ -1301,7 +1488,11 @@ function RegistrationForm() {
                       Pincode*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.pincode
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="rpincode"
                       type="number"
                       required
@@ -1310,6 +1501,11 @@ function RegistrationForm() {
                       onKeyDown={handleKeyDown}
                       placeholder="Enter your pincode"
                     />
+                    {errorState && errorState.pincode && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.pincode}
+                      </p>
+                    )}
                   </div>
                   <div className="form-group text-start col-lg-3">
                     <label
@@ -1319,7 +1515,11 @@ function RegistrationForm() {
                       Country*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.country
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="rcountry"
                       type="text"
                       required
@@ -1327,6 +1527,11 @@ function RegistrationForm() {
                       value={country}
                       placeholder="Enter your Country"
                     />
+                    {errorState && errorState.country && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.country}
+                      </p>
+                    )}
                   </div>
                   <div className="form-group text-start col-lg-3">
                     <label
@@ -1336,7 +1541,11 @@ function RegistrationForm() {
                       State*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.state
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="rstate"
                       type="text"
                       required
@@ -1344,6 +1553,11 @@ function RegistrationForm() {
                       value={state}
                       placeholder="Enter your State"
                     />
+                    {errorState && errorState.state && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.state}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -1356,7 +1570,11 @@ function RegistrationForm() {
                       Native Place*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.native
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="rnative"
                       type="text"
                       required
@@ -1364,6 +1582,11 @@ function RegistrationForm() {
                       value={native}
                       placeholder="Enter your Native Place"
                     />
+                    {errorState && errorState.native && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.native}
+                      </p>
+                    )}
                   </div>
                   <div className="form-group text-start col-lg-3">
                     <label
@@ -1373,7 +1596,11 @@ function RegistrationForm() {
                       Area*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.area
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="rarea"
                       type="text"
                       required
@@ -1381,6 +1608,9 @@ function RegistrationForm() {
                       value={area}
                       placeholder="Enter your Area"
                     />
+                    {errorState && errorState.area && (
+                      <p className="text-danger m-0 fs-xs">{errorState.area}</p>
+                    )}
                   </div>
                 </div>
                 <div className="controls d-flex justify-content-between  mt-4">
@@ -1430,7 +1660,11 @@ function RegistrationForm() {
                       Parent's Name*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.parentsname
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="rparentname"
                       type="text"
                       required
@@ -1438,6 +1672,11 @@ function RegistrationForm() {
                       value={parentsname}
                       placeholder="Enter your Parent's Name"
                     />
+                    {errorState && errorState.parentsname && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.parentsname}
+                      </p>
+                    )}
                   </div>
 
                   <div className="form-group text-start col-lg-3">
@@ -1448,7 +1687,11 @@ function RegistrationForm() {
                       Parent's Contact*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.parentsnumber
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="rparentscontact"
                       type="number"
                       required
@@ -1457,6 +1700,11 @@ function RegistrationForm() {
                       onKeyDown={handleKeyDown}
                       placeholder="Enter your Parent's contact"
                     />
+                    {errorState && errorState.parentsnumber && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.parentsnumber}
+                      </p>
+                    )}
                   </div>
 
                   <div className="form-group text-start col-lg-3">
@@ -1530,7 +1778,11 @@ function RegistrationForm() {
                       Education Type*
                     </label>
                     <select
-                      class="form-select form-control input_bg_color"
+                      className={
+                        errorState && errorState.educationtype
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       aria-label="Default select example"
                       id="educationtype"
                       name="educationtype"
@@ -1546,6 +1798,11 @@ function RegistrationForm() {
                       <option value="SSC">SSC</option>
                       <option value="Other">Other</option>
                     </select>
+                    {errorState && errorState.educationtype && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.educationtype}
+                      </p>
+                    )}
                   </div>
 
                   <div className="form-group text-start col-lg-3">
@@ -1556,7 +1813,11 @@ function RegistrationForm() {
                       Percentage*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.marks
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="rpercentage"
                       type="number"
                       required
@@ -1565,6 +1826,11 @@ function RegistrationForm() {
                       onKeyDown={handleKeyDown}
                       placeholder="Enter your percentage"
                     />
+                    {errorState && errorState.marks && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.marks}
+                      </p>
+                    )}
                   </div>
                   <div className="form-group text-start col-lg-3">
                     <label
@@ -1574,13 +1840,22 @@ function RegistrationForm() {
                       Academic Year*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.academicyear
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="racademicyear"
                       type="date"
                       required
                       onChange={(e) => setAcademicyear(e.target.value)}
                       value={academicyear}
                     />
+                    {errorState && errorState.academicyear && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.academicyear}
+                      </p>
+                    )}
                   </div>
                 </div>
                 <div className="controls d-flex justify-content-between  mt-4">
@@ -1630,13 +1905,22 @@ function RegistrationForm() {
                       Enquiry Date*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.enquirydate
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="renqiurydate"
                       type="date"
                       required
                       onChange={(e) => setEnquiryDate(e.target.value)}
                       value={enquirydate}
                     />
+                    {errorState && errorState.enquirydate && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.enquirydate}
+                      </p>
+                    )}
                   </div>
                   <div className="form-group text-start col-lg-3">
                     <label
@@ -1646,7 +1930,11 @@ function RegistrationForm() {
                       Enquiry taken by*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.enquirytakenby
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="renqtakeby"
                       type="text"
                       name="renqtakeby"
@@ -1654,6 +1942,11 @@ function RegistrationForm() {
                       value={enquirytakenby}
                       placeholder="Enter your Counsellor Name"
                     />
+                    {errorState && errorState.enquirytakenby && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.enquirytakenby}
+                      </p>
+                    )}
                   </div>
 
                   <div className="form-group text-start col-lg-3">
@@ -1664,7 +1957,11 @@ function RegistrationForm() {
                       Course Package*
                     </label>
                     <select
-                      class="form-select form-control input_bg_color"
+                      className={
+                        errorState && errorState.coursepackage
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       aria-label="Default select example"
                       name="coursepackage"
                       required
@@ -1685,6 +1982,11 @@ function RegistrationForm() {
                           )
                         )}
                     </select>
+                    {errorState && errorState.coursepackage && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.coursepackage}
+                      </p>
+                    )}
                   </div>
 
                   <div className="form-group text-start col-lg-3">
@@ -1695,7 +1997,11 @@ function RegistrationForm() {
                       Course*
                     </label>
                     <select
-                      class="form-select form-control input_bg_color"
+                      className={
+                        errorState && errorState.courses
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       aria-label="Default select example"
                       id="courses"
                       name="courses"
@@ -1712,61 +2018,150 @@ function RegistrationForm() {
                           </option>
                         ))}
                     </select>
+                    {errorState && errorState.courses && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.courses}
+                      </p>
+                    )}
                   </div>
                 </div>
                 <div className="row mt-3">
                   <div className="form-group text-start col-lg-3 ">
                     <label
                       className="form-label fs-s text_color"
-                      htmlFor="rleadsource"
+                      htmlFor="leadsource"
                     >
                       Lead Source*
                     </label>
                     <select
-                      class="form-select form-control input_bg_color"
+                      className={
+                        errorState && errorState.leadsource
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       aria-label="Default select example"
-                      id="rleadsource"
+                      id="leadsource"
+                      required
+                      onChange={handleLeadSourceSelectChange}
+                      value={leadsource.source}
                     >
                       <option selected="">--Select--</option>
-                      <option value="1">one</option>
-                      <option value="2">Two</option>
+                      {leadSourceState?.leadSources &&
+                        leadSourceState?.leadSources?.map((item, index) => (
+                          <option key={item.id} value={item.leadsource}>
+                            {item.leadsource}
+                          </option>
+                        ))}
                     </select>
+                    {errorState && errorState.leadsource && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.leadsource}
+                      </p>
+                    )}
+                    {leadsourceOptions && (
+                      <div className="mt-3">
+                        <label
+                          htmlFor=""
+                          className="form-label fs-s text_color"
+                        >
+                          Name
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control input_bg_color"
+                          required
+                          onChange={(e) =>
+                            setCustomLeadSource((prev) => ({
+                              ...prev,
+                              name: e.target.value,
+                            }))
+                          }
+                          value={CustomLeadSource.name || ""}
+                        />
+                        <label
+                          htmlFor=""
+                          className="form-label fs-s text_color"
+                        >
+                          Mobile Number
+                        </label>
+                        <input
+                          type="text"
+                          className="form-control input_bg_color"
+                          required
+                          onChange={(e) =>
+                            setCustomLeadSource((prev) => ({
+                              ...prev,
+                              mobileNumber: e.target.value,
+                            }))
+                          }
+                          value={CustomLeadSource.mobileNumber || ""}
+                        />
+                      </div>
+                    )}
                   </div>
 
                   <div className="form-group text-start col-lg-3">
                     <label
                       className="form-label fs-s text_color"
-                      htmlFor="rbranch"
+                      htmlFor="branch"
                     >
                       Branch*
                     </label>
                     <select
-                      class="form-select form-control input_bg_color"
+                      className={
+                        errorState && errorState.branch
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       aria-label="Default select example"
-                      id="rbranch"
+                      id="branch"
+                      required
+                      onChange={(e) => setBranch(e.target.value)}
+                      value={branch}
                     >
                       <option selected="">--Select--</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
+                      {BranchState?.branches &&
+                        BranchState?.branches.map((item, index) => (
+                          <option key={item.id} value={item.branch_name}>
+                            {item.branch_name}
+                          </option>
+                        ))}
                     </select>
+                    {errorState && errorState.branch && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.branch}
+                      </p>
+                    )}
                   </div>
 
                   <div className="form-group text-start col-lg-3">
                     <label
                       className="form-label fs-s text_color"
-                      htmlFor="rmodeoftraining"
+                      htmlFor="modeoftraining"
                     >
                       Mode Of Training*
                     </label>
                     <select
-                      class="form-select form-control input_bg_color"
+                      className={
+                        errorState && errorState.modeoftraining
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       aria-label="Default select example"
-                      id="rmodeoftraining"
+                      id="modeoftraining"
+                      required
+                      onChange={(e) => setModeOfTraining(e.target.value)}
+                      value={modeoftraining}
                     >
                       <option selected="">--Select--</option>
-                      <option value="1">one</option>
-                      <option value="2">Two</option>
+                      <option value="Online">Online</option>
+                      <option value="Offline">Offline</option>
                     </select>
+                    {errorState && errorState.modeoftraining && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.modeoftraining}
+                      </p>
+                    )}
                   </div>
 
                   <div className="form-group text-start col-lg-3">
@@ -1777,11 +2172,23 @@ function RegistrationForm() {
                       Admission Date*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.admissiondate
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="radmissiondate"
                       type="date"
                       name="radmissiondate"
+                      required
+                      onChange={(e) => setAdmissionDate(e.target.value)}
+                      value={admissiondate}
                     />
+                    {errorState && errorState.admissiondate && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.admissiondate}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -1794,11 +2201,23 @@ function RegistrationForm() {
                       Validity Start Date*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.validitystartdate
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="rvaliditystartdate"
                       type="date"
                       name="rvaliditystartdate"
+                      onChange={(e) => setValidityStartDate(e.target.value)}
+                      value={validitystartdate}
+                      required
                     />
+                    {errorState && errorState.validitystartdate && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.validitystartdate}
+                      </p>
+                    )}
                   </div>
 
                   <div className="form-group text-start col-lg-3">
@@ -1809,11 +2228,23 @@ function RegistrationForm() {
                       Validity End Date*
                     </label>
                     <input
-                      className="form-control input_bg_color"
+                      className={
+                        errorState && errorState.validityenddate
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
                       id="rvalidityenddate"
                       type="date"
                       name="rvalidityenddate"
+                      onChange={(e) => setValidityEndDate(e.target.value)}
+                      value={validityenddate}
+                      required
                     />
+                    {errorState && errorState.validityenddate && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.validityenddate}
+                      </p>
+                    )}
                   </div>
                 </div>
 
@@ -1852,57 +2283,754 @@ function RegistrationForm() {
             )}
             {/* Admission Details End */}
 
-            {activeTab === 5 && <FeeDetails />}
+            {/* Fee Details Start */}
+            {activeTab === 5 && (
+              <>
+                <div className="row">
+                  <div className="form-group text-start col-lg-3">
+                    <label
+                      className="form-label fs-s text_color"
+                      htmlFor="rwhatsappnum"
+                    >
+                      Fee Type*
+                    </label>
+                    <select
+                      className={
+                        errorState && errorState.feetype
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
+                      aria-label="Default select example"
+                      name="Fee Type"
+                      required
+                      onChange={(e) => setfeetype(e.target.value)}
+                      value={feetype}
+                    >
+                      <option selected="">--Select--</option>
+                      <option value="Admission Fee">Admission Fee</option>
+                      <option value="fee">Fee</option>
+                    </select>
+                    {errorState && errorState.feetype && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.feetype}
+                      </p>
+                    )}
+                  </div>
 
-            {activeTab === 6 && <Billing />}
+                  <div className="form-group text-start col-lg-3">
+                    <label
+                      className="form-label fs-s text_color"
+                      htmlFor="courseamount"
+                    >
+                      Amount*
+                    </label>
+                    <input
+                      className={
+                        errorState && errorState.amount
+                          ? "form-control input_bg_color error-input"
+                          : "form-control input_bg_color"
+                      }
+                      id="courseamount"
+                      type="number"
+                      name="courseamount"
+                      onKeyDown={handleKeyDown}
+                      placeholder="Enter Course Amount"
+                      required
+                      onChange={(e) => setAmount(e.target.value)}
+                      value={amount}
+                    />
+                    {errorState && errorState.amount && (
+                      <p className="text-danger m-0 fs-xs">
+                        {errorState.amount}
+                      </p>
+                    )}
+                  </div>
 
-            {activeTab === 7 && <OthersForm />}
-            {activeTab === 8 && <Preview />}
+                  <div className="form-group text-start col-lg-3">
+                    <label
+                      className="form-label fs-s text_color"
+                      htmlFor="discount"
+                    >
+                      Discount*
+                    </label>
+                    <input
+                      className={"form-control input_bg_color"}
+                      id="discount"
+                      type="number"
+                      name="discount"
+                      onKeyDown={handleKeyDown}
+                      placeholder="Enter Discount"
+                      required
+                      onChange={(e) => setDiscount(e.target.value)}
+                      value={discount}
+                    />
+                  </div>
 
-            {/* {tabs[activeTab].content} */}
-            {/* 
-            <div className="controls d-flex justify-content-between  mt-4">
-              <div>
-                {activeTab !== 1 && (
-                  <button
-                    type="button"
-                    className="btn control_prev_btn reg_btn"
-                    onClick={handlePrev}
-                  >
-                    <span>
-                      <IoMdArrowBack className="button_icons" />
-                    </span>
-                    Go Back
-                  </button>
+                  <div className="col-lg-3 form-group text-start align-middle mt-4 pt-2">
+                    <button
+                      onClick={handleFeeDetails}
+                      className="btn btn_primary fs-13"
+                    >
+                      Save
+                    </button>
+                  </div>
+                </div>
+                {feedetails.length > 0 && (
+                  <div className="row mt-3">
+                    <div className="col-xl-12 ">
+                      <div className="table-responsive ">
+                        <table className="table table-hover align-midle table-nowrap mb-0">
+                          <thead>
+                            <tr>
+                              <th
+                                scope="col"
+                                className="fs_14 lh_xs black_color"
+                              >
+                                Fee Type
+                              </th>
+                              <th
+                                scope="col"
+                                className="fs_14 lh_xs black_color fw_600"
+                              >
+                                Amount
+                              </th>
+                              <th
+                                scope="col"
+                                className="fs_14 lh_xs black_color fw_600"
+                              >
+                                Discount
+                              </th>
+                              <th
+                                scope="col"
+                                className="fs_14 lh_xs black_color fw_600"
+                              >
+                                Tax Amount
+                              </th>
+                              <th
+                                scope="col"
+                                className="fs_14 lh_xs black_color fw_600"
+                              >
+                                Total Amount
+                              </th>
+                              <th
+                                scope="col"
+                                className="fs_14 lh_xs black_color fw_600"
+                              >
+                                Actions
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {feedetails.length > 0 &&
+                              feedetails.map((item) => (
+                                <tr key={item.id}>
+                                  <td className="fw-medium fs_13 ">
+                                    {item.feetype}
+                                  </td>
+                                  <td className="fs_13 ">{item.amount}</td>
+                                  <td className="fs_13 ">{item.discount}</td>
+                                  <td className="fs_13 ">
+                                    {parseFloat(item.taxamount.toFixed(2))}
+                                  </td>
+                                  <td className="fs_13 ">{item.totalamount}</td>
+                                  <td onClick={() => handleFeeDelete(item.id)}>
+                                    <MdDelete />
+                                  </td>
+                                </tr>
+                              ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
                 )}
-              </div>
-              <div>
-                {activeTab !== 8 && (
-                  <button
-                    type="button"
-                    className="btn btn-label right btn_primary "
-                    onClick={handleNext}
-                  >
-                    Continue
-                    <span className="label-icon">
-                      <IoMdArrowForward />
-                    </span>
-                  </button>
-                )}
-                {activeTab === 8 && (
-                  <button
-                    type="submit"
-                    className="btn btn-label right btn_primary "
-                    onClick={handleNext}
-                  >
-                    Submit
-                    <span className="label-icon">
-                      <IoMdCheckmark />
-                    </span>
-                  </button>
-                )}
-              </div>
-            </div> */}
+
+                <div className="controls d-flex justify-content-between  mt-4">
+                  <div>
+                    {activeTab !== 1 && (
+                      <button
+                        type="button"
+                        className="btn control_prev_btn reg_btn"
+                        onClick={handlePrev}
+                      >
+                        <span>
+                          <IoMdArrowBack className="button_icons" />
+                        </span>
+                        Go Back
+                      </button>
+                    )}
+                  </div>
+
+                  <div>
+                    {activeTab !== 8 && (
+                      <button
+                        type="button"
+                        className="btn btn-label right btn_primary "
+                        onClick={handleFeecalculations}
+                      >
+                        Continue
+                        <span className="label-icon">
+                          <IoMdArrowForward />
+                        </span>
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
+            {/* Fee Details End */}
+
+            {/* Billing Start */}
+            {activeTab === 6 && (
+              <>
+                <div className="row">
+                  <div className="col-xl-12 ">
+                    <div className="table-responsive ">
+                      <table className="table table-hover align-midle table-nowrap mb-0">
+                        <thead>
+                          <tr>
+                            <th
+                              scope="col"
+                              className="fs_14 lh_xs black_color fw_600"
+                            >
+                              Gross Total
+                            </th>
+                            <th
+                              scope="col"
+                              className="fs_14 lh_xs black_color fw_600"
+                            >
+                              Total Discount
+                            </th>
+                            <th
+                              scope="col"
+                              className="fs_14 lh_xs black_color fw_600"
+                            >
+                              Total Amount
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td className="fs_13 ">{grosstotal}</td>
+                            <td className="fs_13 ">{totaldiscount}</td>
+                            <td className="fs_13 ">{finaltotal}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div className="col-xl-12 ">
+                    <div className="table-responsive mt-2 ">
+                      <table className="table table-hover align-midle table-nowrap mb-0">
+                        <thead>
+                          <tr>
+                            <th
+                              scope="col"
+                              className="fs_14 lh_xs black_color fw_600"
+                            >
+                              Fee Type
+                            </th>
+                            <th
+                              scope="col"
+                              className="fs_14 lh_xs black_color fw_600"
+                            >
+                              Fee (Excl. of GST)
+                            </th>
+                            <th
+                              scope="col"
+                              className="fs_14 lh_xs black_color fw_600"
+                            >
+                              Tax
+                            </th>
+                            <th
+                              scope="col"
+                              className="fs_14 lh_xs black_color fw_600"
+                            >
+                              Fee (Incl. of GST)
+                            </th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          {feedetailsbilling.length > 0 &&
+                            feedetailsbilling.map((item) => {
+                              if (item.feetype !== "Material Fee") {
+                                return (
+                                  <tr key={item.id}>
+                                    <td className=" fs_13">{item.feetype}</td>
+                                    <td className=" fs_13">
+                                      {parseFloat(
+                                        item.feewithouttax.toFixed(2)
+                                      )}
+                                    </td>
+                                    <td className=" fs_13">
+                                      {parseFloat(item.feetax.toFixed(2))}
+                                    </td>
+                                    <td className=" fs_13">
+                                      {parseFloat(item.feewithtax.toFixed(2))}
+                                    </td>
+                                  </tr>
+                                );
+                              }
+                            })}
+
+                          {feedetailsbilling.length > 0 && (
+                            <tr>
+                              <td className="fw-medium fs_13">
+                                <b>Sub Total</b>
+                              </td>
+                              <td className=" fs_13">
+                                {parseFloat(totalfeewithouttax.toFixed(2))}
+                              </td>
+                              <td className=" fs_13">
+                                {parseFloat(totaltax.toFixed(2))}
+                              </td>
+                              <td className=" fs_13">
+                                {parseFloat(grandtotal.toFixed(2))}
+                              </td>
+                            </tr>
+                          )}
+
+                          <tr>
+                            <td rowSpan={3} />
+                            <td rowSpan={3} />
+                            <td className="fs_13">Material Fee</td>
+                            <td className="fs_13">{materialfee}</td>
+                          </tr>
+                          <tr>
+                            <td className="fw-medium fs_13">
+                              <strong> Grand Total</strong>
+                            </td>
+                            <td className="fs_13">{finaltotal}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div className="controls d-flex justify-content-between  mt-4">
+                  <div>
+                    {activeTab !== 1 && (
+                      <button
+                        type="button"
+                        className="btn control_prev_btn reg_btn"
+                        onClick={handlePrev}
+                      >
+                        <span>
+                          <IoMdArrowBack className="button_icons" />
+                        </span>
+                        Go Back
+                      </button>
+                    )}
+                  </div>
+
+                  <div>
+                    {activeTab !== 8 && (
+                      <button
+                        type="button"
+                        className="btn btn-label right btn_primary "
+                        onClick={handleNext}
+                      >
+                        Continue
+                        <span className="label-icon">
+                          <IoMdArrowForward />
+                        </span>
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
+            {/* Billing End */}
+
+            {/* Others Start */}
+            {activeTab === 7 && (
+              <>
+                <div className="row">
+                  <div className="form-group text-start col-lg-3">
+                    <label
+                      className="form-label fs-s text_color"
+                      htmlFor="rremarks"
+                    >
+                      Remarks*
+                    </label>
+                    <input
+                      className="form-control"
+                      id="rremarks"
+                      type="text"
+                      name="rremarks"
+                      placeholder="Enter your Remarks"
+                      required
+                      onChange={(e) => setadmissionremarks(e.target.value)}
+                      value={admissionremarks}
+                    />
+                  </div>
+                  <div className="form-group text-start col-lg-3">
+                    <label
+                      className="form-check-label fs-s text_color"
+                      for="cardtableCheck"
+                    >
+                      Assets
+                    </label>
+
+                    <div className="w-100 ">
+                      <div className="form-check ">
+                        <label
+                          className="form-check-label fs-s text_color"
+                          for="cardtableCheck"
+                        >
+                          Bag
+                        </label>
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          id="cardtableCheck"
+                          name="bag"
+                          checked={assets.includes("bag")}
+                          onChange={handleAssetChange}
+                        />
+                      </div>
+
+                      <div className="form-check ">
+                        <label
+                          className="form-check-label fs-s text_color"
+                          for="cardtableCheck"
+                        >
+                          Laptop
+                        </label>
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          id="cardtableCheck"
+                          name="laptop"
+                          checked={assets.includes("laptop")}
+                          onChange={handleAssetChange}
+                        />
+                      </div>
+
+                      <div className="form-check ">
+                        <label
+                          className="form-check-label fs-s text_color"
+                          for="cardtableCheck"
+                        >
+                          LMS
+                        </label>
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          id="cardtableCheck"
+                          name="lms"
+                          checked={assets.includes("lms")}
+                          onChange={handleAssetChange}
+                        />
+                      </div>
+
+                      <div className="form-check ">
+                        <label
+                          className="form-check-label fs-s text_color"
+                          for="cardtableCheck"
+                        >
+                          Course Material
+                        </label>
+                        <input
+                          className="form-check-input"
+                          type="checkbox"
+                          id="cardtableCheck"
+                          name="courseMaterial"
+                          checked={assets.includes("courseMaterial")}
+                          onChange={handleAssetChange}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="controls d-flex justify-content-between  mt-4">
+                  <div>
+                    {activeTab !== 1 && (
+                      <button
+                        type="button"
+                        className="btn control_prev_btn reg_btn"
+                        onClick={handlePrev}
+                      >
+                        <span>
+                          <IoMdArrowBack className="button_icons" />
+                        </span>
+                        Go Back
+                      </button>
+                    )}
+                  </div>
+
+                  <div>
+                    {activeTab !== 8 && (
+                      <button
+                        type="button"
+                        className="btn btn-label right btn_primary "
+                        onClick={handleNext}
+                      >
+                        Continue
+                        <span className="label-icon">
+                          <IoMdArrowForward />
+                        </span>
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
+            {/* Others End */}
+
+            {/* Preview Starts */}
+            {activeTab === 8 && (
+              <>
+                <div className="container">
+                  <div className="row">
+                    <div className="col-lg-4 text-center">
+                      <img
+                        className="img-fluid "
+                        src={imageUrl}
+                        alt="user_img"
+                        width={"50%"}
+                      />
+                    </div>
+                    <div className="col-lg-4">
+                      <p className="text_color">
+                        <b className="prev_bold">Name:</b> {name}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Email:</b> {email}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Date Of Birth:</b> {birthdate}
+                      </p>
+                      <p className="">
+                        <b className="prev_bold">Number:</b> {mobilenumber}
+                      </p>
+                    </div>
+                    <div className="col-lg-4">
+                      <p className="text_color">
+                        <b className="prev_bold">WhatsApp Number:</b>{" "}
+                        {whatsappno}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Gender:</b> {gender}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Marital Status:</b>{" "}
+                        {maritalstatus}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">College/School/Company:</b>{" "}
+                        {college}
+                      </p>
+                    </div>
+
+                    <div className="col-lg-4">
+                      <p className="text_color">
+                        <b className="prev_bold">Pincode:</b> {zipcode}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Country:</b> {country}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">State:</b> {state}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Native Place:</b> {native}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Area:</b> {area}
+                      </p>
+                    </div>
+                    <div className="col-lg-4">
+                      <p className="text_color">
+                        <b className="prev_bold">Parent's Name:</b>{" "}
+                        {parentsname}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Parent's Number:</b>{" "}
+                        {mobilenumber}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Relation:</b> Other
+                      </p>
+                    </div>
+
+                    <div className="col-lg-4">
+                      <p className="text_color">
+                        <b className="prev_bold">Education Type:</b>{" "}
+                        {educationtype}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Percentage:</b> {marks}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Academic Year:</b>{" "}
+                        {academicyear}
+                      </p>
+                    </div>
+
+                    <div className="col-lg-4">
+                      <p className="text_color">
+                        <b className="prev_bold">Enquiry Date:</b> {enquirydate}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Enquiry taken by:</b>{" "}
+                        {enquirytakenby}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Course Package:</b>{" "}
+                        {coursepackage}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Course:</b> {courses}
+                      </p>
+                    </div>
+
+                    <div className="col-lg-4">
+                      {/* <p className="text_color">
+                        <b className="prev_bold">Lead Source:</b> 12345
+                      </p> */}
+                      <p className="text_color">
+                        <b className="prev_bold">Branch:</b> {branch}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Mode Of Training:</b>{" "}
+                        {modeoftraining}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Admission Date:</b>{" "}
+                        {admissiondate}
+                      </p>
+                    </div>
+
+                    <div className="col-lg-4">
+                      <p className="text_color">
+                        <b className="prev_bold"> Validity Start Date:</b>{" "}
+                        {validitystartdate}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Validity End Date:</b>{" "}
+                        {validityenddate}
+                      </p>
+                    </div>
+                    <div className="col-lg-12">
+                      <div className="table-responsive mt-2 ">
+                        <table className="table table-hover align-midle table-nowrap mb-0">
+                          <thead>
+                            <tr>
+                              <th
+                                scope="col"
+                                className="fs_14 lh_xs black_color fw_600"
+                              >
+                                Fee Type
+                              </th>
+                              <th
+                                scope="col"
+                                className="fs_14 lh_xs black_color fw_600"
+                              >
+                                Amount
+                              </th>
+                              <th
+                                scope="col"
+                                className="fs_14 lh_xs black_color fw_600"
+                              >
+                                Discount
+                              </th>
+                              <th
+                                scope="col"
+                                className="fs_14 lh_xs black_color fw_600"
+                              >
+                                Tax Amount (Inclusive of GST)
+                              </th>
+                              <th
+                                scope="col"
+                                className="fs_14 lh_xs black_color fw_600"
+                              >
+                                Total Amount
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {feedetails &&
+                              feedetails.map((item, index) => (
+                                <tr key={index}>
+                                  <td className="fs-13">{item.feetype}</td>
+                                  <td className="fs-13">{item.amount}</td>
+                                  <td className="fs-13">{item.discount}</td>
+                                  <td className="fs-13">
+                                    {parseFloat(item.taxamount).toFixed(2)}
+                                  </td>
+                                  <td className="fs-13">
+                                    {item.feetype === "fee" ? (
+                                      <>
+                                        Materialfee:{materialfee}&nbsp; ,
+                                        CourseFee:
+                                        {item.totalamount - materialfee}
+                                      </>
+                                    ) : (
+                                      <span></span>
+                                    )}
+                                    <br />
+                                    <b>{item.totalamount}</b>
+                                  </td>
+                                </tr>
+                              ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    <div className="col-lg-12">
+                      <p className="text_color">
+                        <b className="prev_bold"> Remarks:</b>{" "}
+                        {admissionremarks}
+                      </p>
+                      <p className="text_color">
+                        <b className="prev_bold">Assets:</b>{" "}
+                        {assets.map((item, index) => (
+                          <span key={index}>
+                            {index === assets.length - 1 ? item : item + ", "}{" "}
+                          </span>
+                        ))}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="controls d-flex justify-content-between  mt-4">
+                  <div>
+                    {activeTab !== 1 && (
+                      <button
+                        type="button"
+                        className="btn control_prev_btn reg_btn"
+                        onClick={handlePrev}
+                      >
+                        <span>
+                          <IoMdArrowBack className="button_icons" />
+                        </span>
+                        Go Back
+                      </button>
+                    )}
+                  </div>
+
+                  <div>
+                    {activeTab === 8 && (
+                      <button
+                        type="submit"
+                        className="btn btn-label right btn_primary "
+                        onClick={handleSubmit}
+                      >
+                        Submit
+                        <span className="label-icon">
+                          <IoMdCheckmark />
+                        </span>
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
+            {/* Preview ENd */}
           </form>
         </div>
       </div>
