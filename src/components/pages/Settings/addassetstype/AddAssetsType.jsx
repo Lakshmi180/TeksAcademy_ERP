@@ -14,7 +14,7 @@ const AddAssetsType = () => {
                                 <div className="d-flex justify-content-between">
                                     <h5 className="fs-16 txt-color">Asset Type</h5>
                                     <div>
-                                        <button type="button" class="btn btn_success add-btn fs_13 ">
+                                        <button type="button" class="btn btn_primary add-btn fs_13 ">
                                             <Link to="/createaddassetstype" className="button_color"><HiMiniPlus /> Add Assets Type</Link>
                                         </button>
                                     </div>
@@ -46,8 +46,10 @@ const AddAssetsType = () => {
                                                     Kavya
                                                 </td>
                                                 <td className='fs_13 black_color  lh_xs bg_light '>
-                                                    <MdEdit className='text-mute table_icons me-3' />
+                                                <Link to="/createaddassetstype">
                                                     <MdDelete className='text-mute table_icons me-3' />
+                                                    </Link>
+                                                    <MdDelete className='delete_icon table_icons me-3' />
                                                 </td>
                                             </tr>
                                             {/* 2nd row */}
@@ -59,8 +61,9 @@ const AddAssetsType = () => {
                                                     Kavya
                                                 </td>
                                                 <td className='fs_13 black_color  lh_xs bg_light '>
-                                                    <MdEdit className='text-mute table_icons me-3' />
-                                                    <MdDelete className='text-mute table_icons me-3' />
+                                                <Link to={`/createaddassetstype`}>
+                                                    <MdDelete className='delete_icon table_icons me-3' />
+                                                    </Link>
                                                 </td>
                                             </tr>
                                         </tbody>

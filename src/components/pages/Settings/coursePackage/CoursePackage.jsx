@@ -19,7 +19,7 @@ const CoursePackage = () => {
                                 <div className="d-flex justify-content-between">
                                     <h5 className="fs-16 txt-color">Course Packages</h5>
                                     <div>
-                                        <button type="button" class="btn btn_success add-btn fs_13 ">
+                                        <button type="button" class="btn btn_primary add-btn fs_13 ">
                                             <Link to="/createcoursepackage" className="button_color"><HiMiniPlus /> Add Course Package</Link>
                                         </button>
                                     </div>
@@ -86,8 +86,10 @@ const CoursePackage = () => {
                                                                     {date}
                                                                 </td>
                                                                 <td className='fs_13 black_color  lh_xs bg_light '>
-                                                                    <MdEdit className='text-mute table_icons me-3' />
-                                                                    <MdDelete className='text-mute table_icons me-3' />
+                                                                <Link to="/createcoursepackage">
+                                                            <MdEdit className='edit_icon table_icons me-3' />
+                                                        </Link>
+                                                                    <MdDelete className='delete_icon table_icons me-3' />
                                                                 </td>
                                                             </tr>
 

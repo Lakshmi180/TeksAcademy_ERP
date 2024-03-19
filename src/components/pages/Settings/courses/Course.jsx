@@ -49,7 +49,7 @@ const Course = () => {
                                         Course
                                     </h5>
                                     <div>
-                                        <button type="button" class="btn btn_success add-btn fs_13 ">
+                                        <button type="button" class="btn btn_primary add-btn fs_13 ">
                                             <Link to="/createcourse" className="button_color"><HiMiniPlus /> Add Course</Link>
                                         </button>
                                     </div>
@@ -123,9 +123,9 @@ const Course = () => {
                                                             </td>
                                                             <td className='fs_13 black_color  lh_xs bg_light '>
                                                               <NavLink to={`/updatecourse/${item.id}`}>
-                                                                <MdEdit className='text-mute table_icons me-3' />
+                                                                <MdEdit className='edit_icon table_icons me-3' />
                                                                 </NavLink>
-                                                                <MdDelete className='text-mute table_icons me-3'  onClick={e => handleDeleteCourse(item.id)} />
+                                                                <MdDelete className='delete_icon table_icons me-3'  onClick={e => handleDeleteCourse(item.id)} />
                                                             </td>
                                                         </tr>
                                                     )

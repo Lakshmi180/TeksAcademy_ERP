@@ -14,7 +14,7 @@ const AddVendor = () => {
                                 <div className="d-flex justify-content-between">
                                     <h5 className="fs-16 txt-color">Vendor</h5>
                                     <div>
-                                        <button type="button" class="btn btn_success add-btn fs_13 ">
+                                        <button type="button" class="btn btn_primary add-btn fs_13 ">
                                             <Link to="/createaddvendor" className="button_color"><HiMiniPlus />Add Vendor</Link>
                                         </button>
                                     </div>
@@ -46,8 +46,10 @@ const AddVendor = () => {
                                                     Kukkatpally
                                                 </td>
                                                 <td className='fs_13 black_color  lh_xs bg_light '>
-                                                    <MdEdit className='text-mute table_icons me-3' />
-                                                    <MdDelete className='text-mute table_icons me-3' />
+                                                <Link to="/createaddvendor">
+                                                            <MdEdit className='edit_icon table_icons me-3' />
+                                                        </Link>
+                                                    <MdDelete className='delete_icon table_icons me-3' />
                                                 </td>
                                             </tr>
                                             {/* 2nd row */}
@@ -59,8 +61,10 @@ const AddVendor = () => {
                                                     Kukkatpally
                                                 </td>
                                                 <td className='fs_13 black_color  lh_xs bg_light '>
-                                                    <MdEdit className='text-mute table_icons me-3' />
-                                                    <MdDelete className='text-mute table_icons me-3' />
+                                                <Link to="/createaddvendor">
+                                                            <MdEdit className='edit_icon table_icons me-3' />
+                                                        </Link>
+                                                    <MdDelete className='delete_icon table_icons me-3' />
                                                 </td>
                                             </tr>
                                         </tbody>
