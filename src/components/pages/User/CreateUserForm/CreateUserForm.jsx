@@ -21,7 +21,9 @@ function CreateUserForm() {
 
   useEffect(() => {
     if (UsersState.TotalUsers) {
-      const filteredUsers = UsersState.TotalUsers.filter(user => user.profile.toLowerCase() !== "counsellor")
+      const filteredUsers = UsersState.TotalUsers.filter(user =>{
+        return user.profile &&  user.profile.toLowerCase() !== "counsellor" 
+      })
       setUsersDropDown(filteredUsers)
     }
   }, [UsersState?.TotalUsers])
@@ -98,12 +100,6 @@ function CreateUserForm() {
     catch (error) {
       console.log(error)
     }
-
-
-
-
-
-
   }
 
   return (

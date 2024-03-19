@@ -52,6 +52,7 @@ import RequestedCertificate from "./components/pages/Student/requestedCertificat
 import IssuedCertificates from "./components/pages/Student/issuedCertificates/IssuedCertificates";
 import StudentDataView from "./components/pages/Student/studentData/StudentDataView";
 import StudentApplicationPrint from "./components/pages/Student/studentData/StudentApplicationPrint";
+import UserView from "./components/pages/User/UserData/UserView";
 import FeeDetailsPage from "./components/pages/Student/fee/FeeDetailsPage";
 import RefundData from "./components/pages/Student/refund/RefundData";
 import RefundForm from "./components/pages/Student/refund/RefundForm";
@@ -124,6 +125,7 @@ function App() {
             <Route path="/updatecourse/:courseId" element={<CreateCourse/>} />
             <Route path="/studentdataview" element={<StudentDataView />} />
             <Route path="/studentapplicationprint" element={<StudentApplicationPrint />} />
+            <Route path="/userview/:courseId" element={<UserView/>} />
 
             {/* <Route path="/updatecourse/:courseId" element={<CreateCourse />} /> */}
             <Route path="/feedetailspage" element={<FeeDetailsPage />} />
