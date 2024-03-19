@@ -353,7 +353,7 @@ function UserData() {
                               <td className='fs_13 black_color  lh_xs  bg_light'>
                                 {item.branch}
                               </td>
-                              <td className='fs_14 text_mute bg_light lh_xs flex-row d-flex'>
+                              <td className='fs_14 text_mute bg_light lh_xs d-flex mt-3'>
                                 <Link to={`/userview/${item.id}`}>
                                   <AiFillEye className=' table_icons me-3 eye_icon' />
                                 </Link>

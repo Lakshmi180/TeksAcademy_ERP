@@ -54,6 +54,9 @@ import StudentDataView from "./components/pages/Student/studentData/StudentDataV
 import StudentApplicationPrint from "./components/pages/Student/studentData/StudentApplicationPrint";
 import UserView from "./components/pages/User/UserData/UserView";
 import FeeDetailsPage from "./components/pages/Student/fee/FeeDetailsPage";
+import FeeFollowUps from "./components/pages/Student/fee/FeeFollowUps";
+import FeeView from "./components/pages/Student/fee/FeeView";
+import NoDueRecords from "./components/pages/Student/fee/NoDueRecords";
 import Addassets from "./components/pages/Inventory/Addassets";
 import Assignassets from "./components/pages/Inventory/Assignassets";
 import RefundData from "./components/pages/Student/refund/RefundData";
@@ -129,6 +132,9 @@ function App() {
 
             {/* <Route path="/updatecourse/:courseId" element={<CreateCourse />} /> */}
             <Route path="/feedetailspage" element={<FeeDetailsPage />} />
+            <Route path="/feefollowups" element={<FeeFollowUps />} />
+            <Route path="/feeview" element={<FeeView />} />
+            <Route path="/noduerecords" element={<NoDueRecords/>}/>
             <Route path="/addassests" element={<Addassets />} />
             <Route path="/assignassets" element={<Assignassets />} />
             <Route path="/updatecourse/:courseId" element={<CreateCourse/>} />
