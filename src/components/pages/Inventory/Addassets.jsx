@@ -5,7 +5,7 @@ function Addassets() {
     return (
         <div className='container-fluid'>
             <div className="d-flex justify-content-between mt-4">
-                <h5 className="ms-2"> Add Assets</h5>
+                <h5 className="ms-2 "> Add Assets</h5>
                 <NavLink to="/addassetsform" className="btn btn_primary fs-13">
                     Add Assets
                 </NavLink>
@@ -15,7 +15,7 @@ function Addassets() {
                     <div className=" d-flex justify-content-between rounded">
                         <div className="card-body bg_red ">
                             <div className="d-flex justify-content-between mb-3">
-                                <p className=" fw-medium text-mute m-0 fw_400 fs_14">Total Laptops:</p>
+                                <p className=" fw-medium  m-0 fw_400 fs_14 black_300">Total Laptops:</p>
                             </div>
                         </div>
                     </div>
@@ -24,7 +24,7 @@ function Addassets() {
                     <div className="card  d-flex justify-content-between bg_white rounded">
                         <div className="card-body bg_subtle">
                             <div className="d-flex justify-content-between mb-3">
-                                <p className=" fw-medium text-mute m-0 fw_400 fs_14">Total T-shirts</p>
+                                <p className=" fw-medium  m-0 fw_400 fs_14 black_300">Total T-shirts</p>
                             </div>
                         </div>
                     </div>
@@ -34,7 +34,7 @@ function Addassets() {
                     <div className="card d-flex justify-content-between bg_white rounded">
                         <div className="card-body bg_yellow">
                             <div className="d-flex justify-content-between mb-3">
-                                <p className=" fw-medium text-mute m-0 fw_400 fs_14">Total shirt:</p>
+                                <p className=" fw-medium black_300 m-0 fw_400 fs_14">Total shirt:</p>
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ function Addassets() {
                     <div className="card  d-flex justify-content-between bg_white rounded">
                         <div className="card-body bg_infosubtle">
                             <div className="d-flex justify-content-between mb-3">
-                                <p className=" fw-medium text-mute m-0 fw_400 fs_14">Total Charger:</p>
+                                <p className=" fw-medium black_300 m-0 fw_400 fs_14">Total Charger:</p>
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ function Addassets() {
                     <div className="card  d-flex justify-content-between bg_white rounded">
                         <div className="card-body bg_secondary">
                             <div className="d-flex justify-content-between mb-3">
-                                <p className=" fw-medium text-mute m-0 fw_400 fs_14">Total Mouse:</p>
+                                <p className=" fw-medium black_300 m-0 fw_400 fs_14">Total Mouse:</p>
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@ function Addassets() {
                     <div className="card d-flex justify-content-between bg_white rounded">
                         <div className="card-body bg_infolight">
                             <div className="d-flex justify-content-between mb-3">
-                                <p className=" fw-medium text-mute m-0 fw_400 fs_14">Total Bags:</p>
+                                <p className=" fw-medium black_300 m-0 fw_400 fs_14">Total Bags:</p>
                             </div>
                         </div>
                     </div>
