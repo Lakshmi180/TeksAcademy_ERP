@@ -49,7 +49,7 @@ const Course = () => {
                                         Course
                                     </h5>
                                     <div>
-                                        <button type="button" class="btn btn_success add-btn fs_13 ">
+                                        <button type="button" class="btn btn_primary add-btn fs_13 ">
                                             <Link to="/createcourse" className="button_color"><HiMiniPlus /> Add Course</Link>
                                         </button>
                                     </div>

@@ -9,7 +9,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 html,
 body,
 #root,
@@ -67,7 +66,6 @@ body,
   --erp-green-800: #166534;
   /* --erp-green-900: #14532d; */
   --erp-light-green: #0ab39c;
-
 
   /* Red */
 
@@ -161,6 +159,7 @@ body,
   --erp-card-color: #fff;
   --erp-navbar-color: #fff;
   --erp-sidebar-color: #405189;
+  --erp-sidebar-hover-color: rgb(43, 62, 124) 9;
   --erp-text-color: #000;
   --erp-link-color: #4682b4;
   --erp-input-bg-color: #f3f6f9;
@@ -173,12 +172,10 @@ body,
   --erp-fs-lg: 1.25rem;
   --erp-fs-7: 0.775rem;
   --erp-fs-13: 13px;
-
   --erp-fs-14: 14px;
   --erp-fs-16: 1rem;
   --erp-fs-17: 17px;
   --erp-fs-18: 18px;
-  --erp-fs-20: 20px;
   --erp-fs-22: 22px;
   --erp-fs-24: 24px;
 
@@ -197,7 +194,6 @@ body,
   --erp-lh-400: 1.8;
   --erp-lh-500: 2;
 }
-
 /* Dark mode colors */
 .darkMode,
 [data-erp-theme="dark"] {
@@ -232,15 +228,12 @@ body,
   display: flex;
   position: relative;
 }
-
 .font-size-xxs {
   font-size: var(--erp-fs-xxs);
 }
-
 .fs-xs {
   font-size: var(--erp-fs-xs);
 }
-
 .fs-s {
   font-size: var(--erp-fs-s);
 }
@@ -252,31 +245,24 @@ body,
 .fs-lg {
   font-size: var(--erp-fs-l);
 }
-
 .fs-7 {
   font-size: var(--erp-fs-7);
 }
-
 .fs-13 {
   font-size: var(--erp-fs-13);
 }
-
 .fs-14 {
   font-size: var(--erp-fs-14);
 }
-
 .fs-16 {
   font-size: var(--erp-fs-16);
 }
-
 .fs-17 {
   font-size: var(--erp-fs-17);
 }
-
 .fs-18 {
   font-size: var(--erp-fs-18);
 }
-
 .fs-20 {
   font-size: var(--erp-fs-20);
 }
@@ -301,11 +287,9 @@ body,
 .fw-500 {
   font-weight: var(--erp-fw-500);
 }
-
 .fw-600 {
   font-weight: var(--erp-fw-600);
 }
-
 .fw-700 {
   font-weight: var(--erp-fw-700);
 }
@@ -342,20 +326,13 @@ body,
   text-decoration: underline;
   color: var(--erp-black-300);
 }
-
 a {
   text-decoration: none !important;
   color: var(--erp-black-300);
 }
-
 .black_300 {
   color: var(--erp-text-color);
 }
-
-.text_black {
-  color: var(--erp-black-color);
-}
-
 .text-mute {
   color: var(--erp-text-mute) !important;
 }
@@ -363,7 +340,6 @@ a {
 .button_color {
   color: var(--erp-white-color) !important;
 }
-
 .form-control #border_none {
   border: none;
 }
@@ -377,7 +353,6 @@ a {
   background-color: var(--erp-card-color);
 
 }
-
 .card-header {
   padding: 1rem 1rem;
   background-color: var(--erp-card-color);
@@ -390,13 +365,11 @@ a {
   flex: 1 1 auto;
   padding: 1rem 1rem;
 }
-
 .table_icons {
   font-style: normal;
   font-size: 16px !important;
   font-weight: 400;
 }
-
 .table-card {
   margin: -1rem -1rem;
   border: 0px solid;
@@ -412,15 +385,13 @@ a {
   padding-left: 16px;
 }
 
-.table>thead {
+.table > thead {
   background-color: #f3f6f9;
 }
-
 .table td,
 .table th {
   line-height: 1.5;
 }
-
 .form-control {
   -webkit-appearance: none;
   appearance: none;
@@ -475,14 +446,12 @@ h1 {
   font-size: 1.5rem;
   color: #000;
 }
-
 /* toggle */
 .form-check-input:checked {
   background-color: #878a99;
   border-color: #878a99;
   border: 5px;
 }
-
 .form-check-input:focus {
   border-color: #878a99;
   outline: 0;
@@ -531,10 +500,6 @@ h1 {
   color: var(--erp-text-color) !important;
 }
 
-.error-input {
-  border: 1px solid var(--erp-red-500) !important;
-}
-
 .text_danger {
   color: var(--erp-red-500) !important;
 }
@@ -548,12 +513,10 @@ h1 {
   position: relative;
   padding-left: 44px;
 }
-
 .btn-label.right {
   padding-left: 0.9rem;
   padding-right: 44px;
 }
-
 .btn-label .label-icon {
   position: absolute;
   width: 35.5px;
@@ -572,68 +535,57 @@ h1 {
   -ms-flex-pack: center;
   justify-content: center;
 }
-
 .btn-label.right .label-icon {
   right: 0px;
   left: auto;
 }
-
 .btn-label:hover {
   color: #fff;
   background-color: #2da494 !important;
   border-color: #2da494;
 }
-
 .btn_primary {
-  background-color: var(--erp-green-500);
+  background-color: var(--erp-sidebar-color);
   color: white !important;
 }
-
 .btn_primary:hover {
-  background-color: var(--erp-green-600);
+  background-color: var(--erp-sidebar-color);
+  color: #fff;
 }
 
 /* settings tabs */
 .bg-danger-subtle {
   background-color: #a0add8 !important;
 }
-
 .card_animate {
   transition: all 0.3s linear;
-  webkit-box-shadow: 0 1px 2px rgba(56, 65, 74, .15);
+  webkit-box-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
   /* box-shadow: 0px 5px 0px 5px solid var(--erp-gray-color); */
 }
-
 .card_animate:hover {
   transform: translateY(-7px);
   box-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
 }
-
-.eye_icon {
-  color: #3a4876
+/* tabs inside of fee details page */
+.nav-link {
+  border-left: 3px solid var(--erp-bg-color) !important;
+  border-bottom: 3px solid var(--erp-bg-color) !important;
+  background-color: #fff;
 }
 
-.edit_icon {
-  color: #0ab39c
+.nav-link.active {
+  border-left: 3px solid var(--erp-sidebar-color) !important;
+  border-bottom: 3px solid var(--erp-sidebar-color) !important;
+  color: #000 !important;
+    background-color: #fff !important;
 }
 
-.edit_icon:hover {
-  color: #088f7d
+.thead-fixed{
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
-
-.toggle_btn:checked {
-  background-color: #405189;
-  border-color: #405189;
-}
-
-.rupee_icon {
-  color: #2d65cd
-}
-
-.id_card {
-  color: #299cdb
-}
-
-.delete_icon {
-  color: #da3412;
+.table-container {
+  height: 500px; /* Set the height of the container */
+  overflow-y: auto; /* Enable vertical scrolling */
 }

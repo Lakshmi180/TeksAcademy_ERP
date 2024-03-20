@@ -11,6 +11,7 @@ export const Branch = () => {
     const {DispatchBranch,BranchState, getAllBranches}=useBranchContext();
     console.log(BranchState.branches, "kbdvjdj")
 
+
     return (
         <div>
             <div className='container-fluid'>
@@ -21,7 +22,7 @@ export const Branch = () => {
                                 <div className="d-flex justify-content-between">
                                     <h5 className="fs-16 txt-color">Branch</h5>
                                     <div>
-                                        <button type="button" class="btn btn_success add-btn fs_13 ">
+                                        <button type="button" class="btn btn_primary add-btn fs_13 ">
                                             <Link to="/createbranch" className="button_color"><HiMiniPlus /> Add Branch</Link>
                                         </button>
                                     </div>
@@ -86,10 +87,11 @@ export const Branch = () => {
                                                     {date}
                                                 </td>
                                                 <td className='fs_13 black_color  lh_xs bg_light '>
-                                                <Link to="/createbranch">
-                                                            <MdEdit className='edit_icon table_icons me-3' />
-                                                        </Link>
-                                                    <MdDelete className='delete_icon table_icons me-3' />
+                                                 <Link to={`/editbranch/${item.id}`}>
+                                                    <MdEdit className='text-mute table_icons me-3' />
+                                                    </Link>
+                                                    
+                                                    <MdDelete className='text-mute table_icons me-3' />
                                                 </td>
                                             </tr>
 

@@ -9,24 +9,74 @@ import { useRoleContext } from "../../../../hooks/useRoleContext";
 import { toast } from "react-toastify";
 import axios from "axios";
 import { useUserContext } from "../../../../hooks/useUserContext";
+import { useNavigate, useParams } from "react-router";
 function CreateUserForm() {
   const { DispatchBranch, BranchState, getAllBranches } = useBranchContext();
   const { DispatchDepartment, DepartmentState, getAllDeparments } = useDepartmentContext();
   const { RoleState, createRole } = useRoleContext();
-  const { UsersState, getAllUsers } = useUserContext();
+  const { UsersState, getAllUsers,DispatchUsers } = useUserContext();
 
-  console.log(UsersState,getAllUsers, "showusersate")
+  const navigate = useNavigate();
+  const { id } = useParams();
+
+
+  console.log(UsersState, "showusersatevvf")
 
   const [UsersDropDown, setUsersDropDown] = useState();
 
   useEffect(() => {
     if (UsersState.TotalUsers) {
       const filteredUsers = UsersState.TotalUsers.filter(user =>{
-        return user.profile &&  user.profile.toLowerCase() !== "counsellor" 
+        return user.profile && user.profile.toLowerCase() !== "counsellor";
       })
+
       setUsersDropDown(filteredUsers)
     }
   }, [UsersState?.TotalUsers])
+
+
+  // useEffect(() => {
+  //   if (id) {
+  //     const filtereduserid = UsersState.TotalUsers.find(user => user.user_id === id)
+  //     console.log(filtereduserid, "dbjudsvhjvjfv")
+  //     setFormData(filtereduserid)
+  //   }
+  // }, [id]);
+
+
+
+//   useEffect(() => {
+//     if (id && UsersState.TotalUsers.length > 0) {
+      
+//       id = parseInt(id);
+//         const filteredUser = UsersState.TotalUsers.find(user => user.id === id);
+//         console.log(filteredUser, "FilteredUser");
+//         if (filteredUser) {
+//             console.log(filteredUser, "FilteredUser"); 
+//             setFormData(filteredUser);
+//         } else {  
+//             console.log("No user found with the id:", id); 
+//         }
+//     }
+
+// }, [id]);
+
+useEffect(() => {
+  console.log(id,"getuserdata")
+  if (id) {
+    // Fetch course details for editing
+    axios.get(`${process.env.REACT_APP_API_URL}/userdata/${id}`)
+      .then(response => {
+        setFormData(response.data);
+          console.log(response.data, "userresponceid");
+      })
+      .catch(error => {
+        console.error("Error fetching course details:", error);
+      });
+  }
+}, [id]);
+
+
 
 
   const [formData, setFormData] = useState({
@@ -81,9 +131,10 @@ function CreateUserForm() {
     user = dataWithTitleCase[0];
     console.log(user, "ibdcjsbjvgfjv")
 
+
+   if(!id){
     try {
-      const { data, status } = await
-        toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/createUser`, user), {
+      const { data, status } = await toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/createUser`, user), {
           loading: "Loading...",
           success: "User created Successfully",
           error: "User not Created"
@@ -92,14 +143,43 @@ function CreateUserForm() {
       if (status === 201) {
         console.log(data, "hellobb")
         getAllUsers();
-        // DispatchDepartment({type:"CREATE_DEPARTMENT", payload:data})
-        // getAllDeparments();
-        // navigate("/department")
+        DispatchUsers({type:"CREATE_USER", payload:data})
+        getAllUsers();
+        navigate("/userdata")
+        
       }
     }
     catch (error) {
       console.log(error)
     }
+
+   }
+    
+
+   
+      
+    
+
+  if(id){
+    try {
+      const { data, status } = await
+        toast.promise(axios.put(`${process.env.REACT_APP_API_URL}/updateuser/${id}`, user), {
+          loading: "Loading...",
+          success: "User created Successfully",
+          error: "User not Created"
+        })
+
+      if (status === 200) {
+        getAllUsers();
+        navigate("/userdata")
+        DispatchUsers({type:"CREATE_USER", payload:data})
+      }
+    }
+    catch (error) {
+      console.log(error)
+    }
+  }  
+     
   }
 
   return (
@@ -207,7 +287,7 @@ function CreateUserForm() {
                       required
                     >
                       <option value="" disabled selected> Enter the Department </option>
-                    {
+                      {
                         DepartmentState.departments && DepartmentState.departments.length > 0 && DepartmentState.departments.map((item, index) => (
                           <option key={index}>{item.department_name}</option>
                         ))
@@ -256,9 +336,9 @@ function CreateUserForm() {
                     >
                       <option value="" disabled selected> Enter Role </option>
                       {
-                        RoleState?.roles && RoleState?.roles.length > 0 ? RoleState.roles.map((item, index) => (
-                          <option key={index}>{item.role}</option>
-                        )) : null
+                        RoleState?.roles && RoleState?.roles.length > 0 && RoleState.roles.map((item, index) => (
+                          <option key={index} value={item.role}>{item.role}</option>
+                        )) 
                       }
 
                     </select>
