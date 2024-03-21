@@ -1633,7 +1633,7 @@ function RegistrationForm() {
                     {activeTab !== 8 && (
                       <button
                         type="button"
-                        className="btn btn-label right btn_primary "
+                        className="btn  right btn_primary "
                         onClick={handleBasicDetails}
                       >
                         Continue
@@ -1751,7 +1751,7 @@ function RegistrationForm() {
                     {activeTab !== 8 && (
                       <button
                         type="button"
-                        className="btn btn-label right btn_primary "
+                        className="btn  right btn_primary "
                         onClick={handleParentDetails}
                       >
                         Continue
@@ -1878,7 +1878,7 @@ function RegistrationForm() {
                     {activeTab !== 8 && (
                       <button
                         type="button"
-                        className="btn btn-label right btn_primary "
+                        className="btn  right btn_primary "
                         onClick={handleEducationDetails}
                       >
                         Continue
@@ -2268,7 +2268,7 @@ function RegistrationForm() {
                     {activeTab !== 8 && (
                       <button
                         type="button"
-                        className="btn btn-label right btn_primary "
+                        className="btn  right btn_primary "
                         onClick={handleAdmissionDetails}
                       >
                         Continue
@@ -2465,7 +2465,7 @@ function RegistrationForm() {
                     {activeTab !== 8 && (
                       <button
                         type="button"
-                        className="btn btn-label right btn_primary "
+                        className="btn  right btn_primary "
                         onClick={handleFeecalculations}
                       >
                         Continue
@@ -2628,7 +2628,7 @@ function RegistrationForm() {
                     {activeTab !== 8 && (
                       <button
                         type="button"
-                        className="btn btn-label right btn_primary "
+                        className="btn  right btn_primary "
                         onClick={handleNext}
                       >
                         Continue
@@ -2765,7 +2765,7 @@ function RegistrationForm() {
                     {activeTab !== 8 && (
                       <button
                         type="button"
-                        className="btn btn-label right btn_primary "
+                        className="btn  right btn_primary "
                         onClick={handleNext}
                       >
                         Continue
@@ -3017,7 +3017,7 @@ function RegistrationForm() {
                     {activeTab === 8 && (
                       <button
                         type="submit"
-                        className="btn btn-label right btn_primary "
+                        className="btn  right btn_primary "
                         onClick={handleSubmit}
                       >
                         Submit

@@ -205,7 +205,7 @@ function Certificate() {
 
   return (
     <div>
-      <div className='container-fluid'>
+      <div className="container-fluid">
         <div className="row">
           <div className="col-xl-12">
             <div className="card border-0">
@@ -248,14 +248,36 @@ function Certificate() {
                           <option value="750">750</option>
                         </select>
                       </div>
-                      <button className="btn btn_primary fs-13 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Filters</button>
+                      <button
+                        className="btn btn_primary fs-13 me-2"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight"
+                      >
+                        Filters
+                      </button>
                     </div>
                   </div>
                 </div>
-                <div className="offcanvas offcanvas-end mt-5 pt-2" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div
+                  className="offcanvas offcanvas-end mt-5 pt-2 bg_white"
+                  id="offcanvasRight"
+                  aria-labelledby="offcanvasRightLabel"
+                >
                   <div className="offcanvas-header">
-                    <h5 className="offcanvas-title" id="offcanvasRightLabel">Filters</h5>
-                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h5
+                      className="offcanvas-title text_color"
+                      id="offcanvasRightLabel"
+                    >
+                      Filters
+                    </h5>
+                    <button
+                      type="button"
+                      className="btn-close"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    ></button>
                   </div>
                   <div className="offcanvas-body p-2">
                     {/* from calendar */}
@@ -296,7 +318,9 @@ function Certificate() {
                     </div>
                     {/* Course */}
                     <div className="">
-                      <label className="form-label fs-s fw-medium txt-color">Course</label>
+                      <label className="form-label fs-s fw-medium txt-color">
+                        Course
+                      </label>
                       <select
                         className="form-select form-control"
                         aria-label="Default select example"
@@ -319,7 +343,9 @@ function Certificate() {
 
                     {/* Consellor */}
                     <div className="">
-                      <label className="form-label fs-s fw-medium txt-color">Consellor</label>
+                      <label className="form-label fs-s fw-medium txt-color">
+                        Consellor
+                      </label>
                       <select
                         className="form-select form-control"
                         aria-label="Default select example"
@@ -340,7 +366,9 @@ function Certificate() {
                     </div>
                     {/* branch */}
                     <div className="mt-2">
-                      <label className="form-label fs-s fw-medium txt-color">Branch</label>
+                      <label className="form-label fs-s fw-medium txt-color">
+                        Branch
+                      </label>
                       <select
                         className="form-select form-control"
                         aria-label="Default select example"
@@ -361,7 +389,9 @@ function Certificate() {
                     </div>
                     {/* ceritificateSatus */}
                     <div className="mt-2">
-                      <label className="form-label fs-s fw-medium txt-color">Certificate Status</label>
+                      <label className="form-label fs-s fw-medium txt-color">
+                        Certificate Status
+                      </label>
                       <select
                         className="form-select form-control"
                         aria-label="Default select example"
@@ -401,7 +431,7 @@ function Certificate() {
                 <div class="table-responsive table-card border-0">
                   <table className="table table-centered align-middle table-nowrap equal-cell-table">
                     <thead>
-                      <tr className=''>
+                      <tr className="">
                         {/* <th scope="col">
                           <div className="form-check">
                             <input
@@ -416,28 +446,52 @@ function Certificate() {
                             ></label>
                           </div>
                         </th> */}
-                        <th scope="col" className="fs_13 lh_xs fw_600 black_color ">
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs fw_600 black_color "
+                        >
                           S.No
                         </th>
-                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs black_color fw_600  "
+                        >
                           Name
                         </th>
-                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs black_color fw_600  "
+                        >
                           Course
                         </th>
-                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs black_color fw_600  "
+                        >
                           Registration ID
                         </th>
-                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs black_color fw_600 "
+                        >
                           Course StartDate
                         </th>
-                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs black_color fw_600 "
+                        >
                           Course EndDate
                         </th>
-                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs black_color fw_600 "
+                        >
                           Certificate Status
                         </th>
-                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs black_color fw_600 "
+                        >
                           PDF
                         </th>
                       </tr>
@@ -568,19 +622,19 @@ function Certificate() {
                       }
 
                       <tr>
-                        <td className='fs_13 black_color fw_500 lh_xs bg_light '>
+                        <td className="fs_13 black_color fw_500 lh_xs bg_light ">
                           01
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
+                        <td className="fs_13 black_color  lh_xs bg_light">
                           Lakshmi
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
+                        <td className="fs_13 black_color  lh_xs bg_light">
                           DM
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
+                        <td className="fs_13 black_color  lh_xs bg_light">
                           TASJDFJ12345
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
+                        <td className="fs_13 black_color  lh_xs bg_light">
                           <div class="text-start">
                             <input
                               class="form-control fs-s bg-form w-75"
@@ -591,7 +645,7 @@ function Certificate() {
                             />
                           </div>
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light '>
+                        <td className="fs_13 black_color  lh_xs bg_light ">
                           <div class="text-start">
                             <input
                               class="form-control fs-s bg-form w-75"
@@ -615,6 +669,7 @@ function Certificate() {
                         <td className='fs_14 text_mute bg_light   lh_xs'>
 
                         </td>
+                        <td className="fs_14 text_mute bg_light   lh_xs"></td>
                       </tr>
 
 
@@ -726,4 +781,4 @@ function Certificate() {
 
 }
 
-export default Certificate
+export default Certificate;
