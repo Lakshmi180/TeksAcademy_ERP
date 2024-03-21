@@ -10,8 +10,9 @@
     border-radius: 6px;
 }
 
+
 .filepond {
-    border: 2px dashed var(--erp-light-gray) ;
+    border: 2px dashed var(--erp-light-gray);
     background: var(--erp-white-color);
     border-radius: 6px;
 }
@@ -31,6 +32,7 @@
 .form-fs-12 {
     font-size: 14px;
 }
+
 .img-box-fsize {
     font-size: var(--erp-fs-14);
 }
@@ -56,9 +58,9 @@
     color: var(--erp-card-color)
 } */
 
-.btn_sucess{
+.btn_sucess {
     background-color: var(--erp-light-green);
-    color:var(--erp-card-color)
+    color: var(--erp-card-color)
 }
 
 
@@ -86,34 +88,38 @@
 }
 
 .date-pic {
-    width: 300px !important;
+    width: 150px !important;
+    border: none !important;
 }
 
 .react-datepicker__header {
-    background-color: var(--erp-sky-500);
+    background-color: var( --erp-primary-color)!important;
 }
 
 .react-datepicker__current-month {
-    color: var(--erp-card-color);
+    color: var(--erp-card-color)!important;
 }
 
 .react-datepicker__day-name {
-    color: var(--erp-card-color);
+    color: var(--erp-card-color)!important;
 }
 
 .bg_white {
     background-color: var(--erp-bg-white);
 }
-.bg_transparent{
-    background-color:var(--erp-bg-white);
-}
-.bg-form{
+
+.bg_transparent {
     background-color: var(--erp-bg-white);
-    border-color:var(--erp-card-color);
-    color:var(--erp-text-color)
 }
-.txt-color{
-    color:var(--erp-text-color) 
+
+.bg-form {
+    background-color: var(--erp-bg-white);
+    border-color: var(--erp-card-color);
+    color: var(--erp-text-color)
+}
+
+.txt-color {
+    color: var(--erp-text-color)
 }
 
 /* page*/
@@ -126,11 +132,17 @@
     background-color: var(--erp-sidebar-color);
     color: var(--erp-card-color)
 }
+
 .form-control:focus {
-     color: var(--erp-gray-800);
+    color: var(--erp-gray-800);
     background-color: var(--erp-bg-white);
-    border-color: var(--erp-gray-400)!important; 
+    border-color: var(--erp-gray-400) !important;
     outline: 0;
     -webkit-box-shadow: 0 0 1 0.25rem rgba(var(--vz-primary-rgb), .25);
-    box-shadow: 0 0 1 0.25rem rgba(var(--vz-primary-rgb), .25); 
+    box-shadow: 0 0 1 0.25rem rgba(var(--vz-primary-rgb), .25);
+}
+.react-datepicker__day--keyboard-selected, .react-datepicker__month-text--keyboard-selected, .react-datepicker__quarter-text--keyboard-selected, .react-datepicker__year-text--keyboard-selected {
+    border-radius: 0.3rem;
+    background-color: var( --erp-primary-color)!important;
+    color: white!important;
 }

@@ -62,6 +62,9 @@ import Addassets from "./components/pages/Inventory/Addassets";
 import Assignassets from "./components/pages/Inventory/Assignassets";
 import RefundData from "./components/pages/Student/refund/RefundData";
 import RefundForm from "./components/pages/Student/refund/RefundForm";
+import CreateReport from "./components/pages/Reports/CreateReport";
+import Addassetsform from "./components/pages/Inventory/Addassetsform";
+import Register from "./components/pages/Inventory/Register";
 import { Webinar } from "./components/pages/Leads/Webinar";
 import { WhatsApp } from "./components/pages/Leads/WhatsApp";
 import { DownloadSyllabus } from "./components/pages/Leads/DownloadSyllabus";
@@ -119,9 +122,7 @@ function App() {
         <Route path="/createaddassetstype" element={<CreateAddAssetsType />} />
         <Route path="/userdata" element={<UserData />} />
         <Route path="/certificate" element={<Certificate />} />
-        <Route
-          path="/requestedcertificate"
-          element={<RequestedCertificate />}
+        <Route path="/requestedcertificate" element={<RequestedCertificate />}
         />
         <Route path="/issuedcertificates" element={<IssuedCertificates />} />
         <Route path="/updatecourse/:courseId" element={<CreateCourse />} />
@@ -132,9 +133,7 @@ function App() {
           element={<RequestedCertificate />}
         />
         <Route path="/issuedcertificates" element={<IssuedCertificates />} />
-
         <Route path="/userview/:courseId" element={<UserView />} />
-
         {/* <Route path="/updatecourse/:courseId" element={<CreateCourse />} /> */}
         <Route path="/feedetailspage" element={<FeeDetailsPage />} />
         <Route path="/feefollowups" element={<FeeFollowUps />} />
@@ -168,9 +167,11 @@ function App() {
         <Route path="/feedetailspage" element={<FeeDetailsPage />} />
         <Route path="/refunddata" element={<RefundData />} />
         <Route path="/refundform" element={<RefundForm />} />
+        <Route path="/reports" element={<CreateReport />} />
+        <Route path="/addassetsform" element={<Addassetsform />} />
 
-        {/* Leads */}
-
+        <Route path="/register" element={<Register />} />
+        {/* leads */}
         <Route path="/webinarleads" element={<Webinar />} />
         <Route path="/whatsappleads" element={<WhatsApp />} />
         <Route path="/downloadsyllabusleads" element={<DownloadSyllabus />} />
@@ -178,7 +179,14 @@ function App() {
         <Route path="/contactusleads" element={<ContactUs />} />
         <Route path="/hlpenquireleads" element={<HLPEnquireLeads />} />
         <Route path="/slpenquireleads" element={<SLPEnquireLeads />} />
+        {/* did by lipika */}
+        <Route path="/updatecourse/:courseId" element={<CreateCourse />} />
+        < Route path="/feedetailspage" element={< FeeDetailsPage />} />
+        < Route path="/refunddata" element={< RefundData />} />
+        < Route path="/refundform" element={< RefundForm />} />
+
       </Route>
+
 
       <Route element={<PublicLayout />}>
         <Route path="/login" element={<Login />} />
@@ -186,7 +194,7 @@ function App() {
         <Route path="/changepassword" element={<ChangePassword />} />
         <Route path="/lockscreen" element={<LockScreen />} />
       </Route>
-    </Routes>
+    </Routes >
   );
 }
 export default App;

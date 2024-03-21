@@ -1,0 +1,117 @@
+.coming-soon-text {
+    font-weight: var(--erp-fw-700);
+    text-transform: uppercase;
+    color: var(--erp-white-color);
+
+}
+
+.back-col {
+    background-color: var(--erp-green-400);
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+    background-color: var(--erp-sky-500);
+}
+
+.nav-link.active {
+    border-bottom: none;
+}
+
+.bg_light {
+    background-color: var(--erp-white-color);
+}
+
+/* .btn_success {
+    background-color: var(--erp-success-color) !important;
+    border-color: var(--erp-success-color) !important;
+    color: var(--erp-white-color)
+} */
+.fs-12 {
+    font-size: var(--erp-fs-s);
+
+}
+
+.bg-img {
+    background-image: url("https://themesbrand.com/velzon/html/master/assets/images/profile-bg.jpg");
+    background-position: 50%;
+    background-size: cover;
+
+}
+
+
+
+.auth-one-bg-position {
+    height: 380px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+
+}
+
+.bg-img::before {
+    content: "";
+    /* Required for pseudo-elements */
+    position: absolute;
+    /* Position the overlay */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: .9;
+    /* Full height */
+    background: linear-gradient(var(--erp-primary-color), var(--erp-primary-color));
+    /* Adjust the alpha values as needed */
+    z-index: 1;
+    /* Ensure the overlay is on top of the background image */
+}
+
+.bg-img {
+    background-image: url("https://themesbrand.com/velzon/html/master/assets/images/profile-bg.jpg");
+    background-position: 50%;
+    background-size: cover;
+}
+
+.bg-other {
+    /* background-color: #000; */
+    bottom: 0;
+
+    left: 0;
+    opacity: .7;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+
+}
+
+.text-white-50 {
+    --vz-text-opacity: 1;
+    color: #ffffff80 !important;
+}
+
+
+.cards {
+    margin-top: 250px;
+}
+
+.img-thumbnail {
+    padding: 0.25rem;
+    background-color: var(--erp-card-color);
+    border: var(--vz-border-width) solid var(--vz-border-color);
+    border-radius: var(--vz-border-radius);
+    max-width: 100%;
+    height: auto;
+}
+
+.avatar-lg {
+    height: 6rem;
+    width: 6rem;
+}
+
+.profile-nav.nav-pills .nav-link {
+    color: rgba(255, 255, 255, .8);
+}

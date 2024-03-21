@@ -4,11 +4,12 @@ import { AiFillEye } from "react-icons/ai";
 import { MdEdit } from "react-icons/md";
 function Assignassets() {
     return (
-        <div className='container-fluid'>
+        <div className='container'>
+            <div className='card p-2'>
             <div className="d-flex justify-content-between mt-4">
                 <h5 className="ms-2"> Add Data</h5>
-                <NavLink to="/addassetsform" className="btn btn_primary fs-13">
-                    Add Assets
+                <NavLink to="/register" className="btn btn_primary fs-13">
+                    Assign Data
                 </NavLink>
             </div>
             <div className="row d-flex mt-4">
@@ -74,53 +75,35 @@ function Assignassets() {
             </div>
             <div className="card-body">
                 <div className="table-responsive table-card border-0">
-                    <table className="table table-centered align-middle table-nowrap equal-cell-table">
-                        <thead>
-                            <tr className=''>
-                                {/* <th scope="col">
-                          <div className="form-check">
-                            <input
-                              className="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="cardtableCheck"
-                            />
-                            <label
-                              className="form-check-label"
-                              for="cardtableCheck"
-                            ></label>
-                          </div>
-                        </th> */}
-                                <th scope="col" className="fs_13 lh_xs fw_600 black_color ">
-                                 ID
-                                </th>
-                                <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                                    Name
-                                </th>
-                                <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                               Branch
-                                </th>
-                                <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                                    Asset Type
-                                </th>
-                                <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                                  Brand Name
-                                </th>
-                                <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                                   Asset Code
-                                </th>
-                                <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                                   Issue Date
-                                </th>
-                                <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                               Quantity
-                                </th>
-                                <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                             Actions
-                                </th>
-                                
-                            </tr>
-                            <tr>
+                <table className="table table-borderless table-centered align-middle table-nowrap mb-0">
+                            <thead className="  table-light ">
+                                <tr className="shadow-sm bg-body-tertiary rounded  border-bottom  ">
+                                    <th scope="col" className="fs_14 lh_xs fw_600 ">
+                                        ID
+                                    </th>
+                                    <th scope="col" className="fs_14 lh_xs  fw_600 ">
+                                        Vendor Name
+                                    </th>
+                                    <th scope="col" className="fs_14 lh_xs fw_600  ">
+                                        Asset Type
+                                    </th>
+                                    <th scope="col" className="fs_14 lh_xs fw_600  ">
+                                        Brand Name
+                                    </th>
+                                    <th scope="col" className="fs_14 lh_xs fw_600  ">
+                                        Asset Code
+                                    </th>
+                                    <th scope="col" className="fs_14 lh_xs fw_600  ">
+                                        Quantity
+                                    </th>
+                                    <th scope="col" className="fs_14 lh_xs fw_600  ">
+                                     Status
+                                    </th>
+                                    <th scope="col" className="fs_14 lh_xs fw_600  ">
+                                       Action
+                                    </th>
+                                </tr>
+                                <tr>
                         <td className='fs_13 black_color fw_500 lh_xs bg_light '>
                           1
                         </td>
@@ -144,21 +127,19 @@ function Assignassets() {
                           12-Mar-2023<br />
                        
                         </td>
-                        <td className='fs_13 black_color  lh_xs  bg_light'>
-                          12-Mar-2023<br />
                         
-                        </td>
                         <td className='fs_14 text_mute bg_light   lh_xs'>
                           <AiFillEye className='eye_icon table_icons me-3' />
                           <MdEdit className='edit_icon table_icons me-3' />
                          
                         </td>
                       </tr>
-                        </thead>
-                       
-                    </table>
+                            </thead>
+
+                        </table>
                 </div>
 
+            </div>
             </div>
         </div>
     );
