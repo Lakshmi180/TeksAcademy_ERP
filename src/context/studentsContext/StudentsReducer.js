@@ -178,6 +178,7 @@ const StudentsReducer = (state, action) => {
                     EnrolledStudents: {
                         ...state.EnrolledStudents,
                         perPage: action.payload.data,
+                        currentPage: 1,
                     }
                 }
             }

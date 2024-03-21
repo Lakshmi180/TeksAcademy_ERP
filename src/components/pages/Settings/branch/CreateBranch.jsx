@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { BranchContext } from "../../../../context/branchContext/BranchContextProvider";
 import axios from "axios";
 import { FaArrowRight } from "react-icons/fa";
-import { useNavigate, useNavigation } from "react-router-dom";
+import { useNavigate, useNavigation, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
 import Button from "../../../common/design/Button";
@@ -11,8 +11,21 @@ import { useBranchContext } from "../../../../hooks/useBranchContext";
 
 const CreateBranch = () => {
 const {DispatchBranch,BranchState, getAllBranches}=useBranchContext();
+const {id}=useParams();
+console.log(id, "jhdbjvbdjvb")
 
-    const navigate= useNavigate()
+    const navigate= useNavigate();
+
+    useEffect(()=>{
+        if(id){
+            const filterbranchid =BranchState.branches && BranchState.branches.filter((branch)=>{
+                return branch.id === id;
+            })
+            console.log(filterbranchid[0], "filterbranchid")
+        }
+
+    },[id]);
+
     const [formData, setFormData] = useState({
         branch: "",
     });

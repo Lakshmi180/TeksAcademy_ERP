@@ -68,7 +68,6 @@ body,
   /* --erp-green-900: #14532d; */
   --erp-light-green: #0ab39c;
 
-
   /* Red */
 
   --erp-red-100: #fde8e4;
@@ -157,9 +156,12 @@ body,
 
   --erp-bg-color: #f3f3f9;
 
+  --erp-input-border: #ced4da;
+  --erp-table-bottom-border: #fff;
   --erp-card-color: #fff;
   --erp-navbar-color: #fff;
   --erp-sidebar-color: #405189;
+  --erp-sidebar-hover-color: rgb(43, 62, 124) 9;
   --erp-text-color: #000;
   --erp-link-color: #4682b4;
   --erp-input-bg-color: #f3f6f9;
@@ -212,6 +214,7 @@ body,
 
   --erp-bg-color: #1a1d21;
   --erp-card-color: #212529;
+  --erp-input-border: #292e32;
   --erp-navbar-color: #292e32;
   --erp-sidebar-color: #212529;
   --erp-text-color: #fff;
@@ -223,6 +226,7 @@ body,
   --erp-bg-infosubtle: #299cdb26;
   --erp-bg-secondary: #3577f126;
   --erp-bg-infolight: #0c4a6e;
+  --erp-table-bottom-border: #ced4da;
 }
 
 /* .wrap {
@@ -356,6 +360,7 @@ a {
 
 .black_300 {
   color: var(--erp-text-color);
+  color: var(--erp-text-color) !important;
 }
 
 .text-mute {
@@ -376,11 +381,13 @@ a {
   -webkit-box-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
   box-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
   border: 0px;
+  background-color: var(--erp-card-color);
+
 }
 
 .card-header {
   padding: 1rem 1rem;
-  background-color: var(--erp-white-color);
+  background-color: var(--erp-card-color);
   border-bottom: 0px;
 }
 
@@ -403,6 +410,10 @@ a {
   border-bottom: 1px solid var(--erp-gray-200);
 }
 
+.table>:not(caption) {
+  border-bottom: var(--erp-table-bottom-border) !important;
+}
+
 .table-card td:first-child,
 .table-card th:first-child {
   padding-left: 16px;
@@ -421,10 +432,10 @@ a {
   -webkit-appearance: none;
   appearance: none;
   background-clip: padding-box;
-  background-color: var(--erp-white-color);
-  border: 1px solid #ced4da !important;
+  background-color: var(--erp-card-color);
+  border: 1px solid var(--erp-input-border) !important;
   border-radius: 0.25rem !important;
-  color: #212529;
+  color: var(--erp-text-color);
   display: block;
   font-size: var(--erp-fs-s) !important;
   font-weight: 400;
@@ -432,6 +443,43 @@ a {
   padding: 0.5rem 0.9rem !important;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
   width: 100%;
+}
+
+.form-control.search {
+  background-color: var(--erp-input-bg-color) !important;
+
+}
+
+.form-control.search::placeholder {
+  color: var(--erp-text-mute) !important;
+  ;
+}
+
+form input {
+  background-color: var(--erp-input-bg-color) !important;
+}
+
+form input::placeholder {
+  color: var(--erp-text-mute) !important;
+
+}
+
+.form-select {
+  background-color: var(--erp-input-bg-color) !important;
+
+}
+
+.form-select::placeholder {
+  color: var(--erp-text-mute) !important;
+}
+
+form textarea {
+  background-color: var(--erp-input-bg-color) !important;
+}
+
+form textarea::placeholder {
+  color: var(--erp-text-mute) !important;
+
 }
 
 li {
@@ -549,12 +597,13 @@ h1 {
 }
 
 .btn_primary {
-  background-color: var(--erp-green-500);
+  background-color: var(--erp-sidebar-color);
   color: white !important;
 }
 
 .btn_primary:hover {
-  background-color: var(--erp-green-600);
+  background-color: var(--erp-sidebar-color);
+  color: #fff;
 }
 
 /* settings tabs */
@@ -564,7 +613,7 @@ h1 {
 
 .card_animate {
   transition: all 0.3s linear;
-  webkit-box-shadow: 0 1px 2px rgba(56, 65, 74, .15);
+  webkit-box-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
   /* box-shadow: 0px 5px 0px 5px solid var(--erp-gray-color); */
 }
 
@@ -573,31 +622,29 @@ h1 {
   box-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
 }
 
-.eye_icon {
-  color: #3a4876
+/* tabs inside of fee details page */
+.nav-link {
+  border-left: 3px solid var(--erp-bg-color) !important;
+  border-bottom: 3px solid var(--erp-bg-color) !important;
+  background-color: #fff;
 }
 
-.edit_icon {
-  color: #0ab39c
+.nav-link.active {
+  border-left: 3px solid var(--erp-sidebar-color) !important;
+  border-bottom: 3px solid var(--erp-sidebar-color) !important;
+  color: #000 !important;
+  background-color: #fff !important;
 }
 
-.edit_icon:hover {
-  color: #088f7d
+.thead-fixed {
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
-.toggle_btn:checked {
-  background-color: #405189;
-  border-color: #405189;
-}
-
-.rupee_icon {
-  color: #2d65cd
-}
-
-.id_card {
-  color: #299cdb
-}
-
-.delete_icon {
-  color: #da3412;
+.table-container {
+  height: 500px;
+  /* Set the height of the container */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
 }

@@ -2,6 +2,7 @@ table {
   font-family: Poppins, sans-serif;
   scrollbar-width: thin;
 }
+
 .card-header input {
   padding-right: 30px;
 }
@@ -15,7 +16,10 @@ table {
 }
 
 th {
-  background-color: #f3f3f9 !important;
+  background-color: var(--erp-bg-color) !important;
+}
+td {
+  background-color: var(--erp-card-color) !important;
 }
 .card-title {
   font-size: var(--erp-fs-16);
@@ -51,13 +55,12 @@ table {
   font-family: Poppins, sans-serif;
 }
 .white_color {
-  font-variant: var(--erp-card-color) !important;
+  color: var(--erp-card-color) !important;
 }
 .black_color {
   color: var(--erp-text-color) !important;
 }
-.tbl-card-header {
-}
+
 
 .product-img {
   width: 40px;

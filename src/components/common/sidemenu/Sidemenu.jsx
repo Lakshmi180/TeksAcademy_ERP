@@ -343,6 +343,7 @@ export const Sidemenu = ({ isExpanded }) => {
                     <li className="sidebar-item">
                       <Link
                         className="sidebar-link"
+                        to={"/webinarleads"}
                         onClick={() => handleActiveClick("webinar")}
                       >
                         {" "}
@@ -359,6 +360,7 @@ export const Sidemenu = ({ isExpanded }) => {
                     <li className="sidebar-item">
                       <Link
                         className="sidebar-link"
+                        to="/whatsappleads"
                         onClick={() => handleActiveClick("whatsapp")}
                       >
                         {" "}
@@ -375,6 +377,7 @@ export const Sidemenu = ({ isExpanded }) => {
                     <li className="sidebar-item">
                       <Link
                         className="sidebar-link"
+                        to={"/downloadsyllabusleads"}
                         onClick={() => handleActiveClick("downloadsyllbus")}
                       >
                         {" "}
@@ -391,6 +394,7 @@ export const Sidemenu = ({ isExpanded }) => {
                     <li className="sidebar-item">
                       <Link
                         className="sidebar-link"
+                        to={"/viewcourseleads"}
                         onClick={() => handleActiveClick("viewcourse")}
                       >
                         {" "}
@@ -407,6 +411,7 @@ export const Sidemenu = ({ isExpanded }) => {
                     <li className="sidebar-item">
                       <Link
                         className="sidebar-link"
+                        to={"/contactusleads"}
                         onClick={() => handleActiveClick("contactus")}
                       >
                         {" "}
@@ -423,6 +428,7 @@ export const Sidemenu = ({ isExpanded }) => {
                     <li className="sidebar-item">
                       <Link
                         className="sidebar-link"
+                        to={"/hlpenquireleads"}
                         onClick={() => handleActiveClick("hlpenquireleads")}
                       >
                         {" "}
@@ -439,6 +445,7 @@ export const Sidemenu = ({ isExpanded }) => {
                     <li className="sidebar-item">
                       <Link
                         className="sidebar-link"
+                        to={"/slpenquireleads"}
                         onClick={() => handleActiveClick("slpenquireleads")}
                       >
                         {" "}
