@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { HiMiniPlus } from "react-icons/hi2";
 import { useUserContext } from "../../../hooks/useUserContext";
 import Usedebounce from "../../../hooks/useDebounce/Usedebounce";
+import { Filters } from "../../common/design/Filters";
 
 export const Webinar = () => {
   // here the adding the filters and pagination------------------------
@@ -190,6 +191,8 @@ export const Webinar = () => {
                     </div>
                   </div>
                 </div>
+                {/* <Filters /> */}
+
                 <div
                   className="offcanvas offcanvas-end mt-5 pt-2 bg_white"
                   id="offcanvasRight"
@@ -300,80 +303,68 @@ export const Webinar = () => {
               </div>
               <div className="card-body bg_white">
                 <div className="table-responsive table-card border-0 bg_white">
-                  <table className="bg_white table table-centered align-middle table-nowrap equal-cell-table ">
-                    <thead>
-                      <tr className="">
-                        {/* <th scope="col">
-                        <div className="form-check">
-                          <input
-                            className="form-check-input"
-                            type="checkbox"
-                            value=""
-                            id="cardtableCheck"
-                          />
-                          <label
-                            className="form-check-label"
-                            for="cardtableCheck"
-                          ></label>
-                        </div>
-                      </th> */}
-                        <th
-                          scope="col"
-                          className="fs_13 lh_xs fw_600 black_300 "
-                        >
-                          S.No
-                        </th>
-                        <th
-                          scope="col"
-                          className="fs_13 lh_xs black_300  fw_600  "
-                        >
-                          Name
-                        </th>
-                        <th
-                          scope="col"
-                          className="fs_13 lh_xs black_300  fw_600  "
-                        >
-                          Email
-                        </th>
-                        <th
-                          scope="col"
-                          className="fs_13 lh_xs black_300  fw_600  "
-                        >
-                          Course
-                        </th>
-                        <th
-                          scope="col"
-                          className="fs_13 lh_xs black_300  fw_600  "
-                        >
-                          Contact Number
-                        </th>
-                        <th
-                          scope="col"
-                          className="fs_13 lh_xs black_300  fw_600  "
-                        >
-                          Date
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="bg_white">
-                      <tr>
-                        <td className="fs-13 lh-xs fw-semibold black_300 ">
-                          01
-                        </td>
-                        <td className="fs-13 lh-xs black_300 ">Rahul</td>
-                        <td className="fs-13 lh-xs  black_300">
-                          Rahul@Rahul.com
-                        </td>
-                        <td className="fs-13 lh-xs  black_300">B.tech</td>
+                  <div className="table-container">
+                    <table className="bg_white table table-centered align-middle table-nowrap equal-cell-table ">
+                      <thead>
+                        <tr className="">
+                          <th
+                            scope="col"
+                            className="fs_13 lh_xs fw_600 black_300 "
+                          >
+                            S.No
+                          </th>
+                          <th
+                            scope="col"
+                            className="fs_13 lh_xs black_300  fw_600  "
+                          >
+                            Name
+                          </th>
+                          <th
+                            scope="col"
+                            className="fs_13 lh_xs black_300  fw_600  "
+                          >
+                            Email
+                          </th>
+                          <th
+                            scope="col"
+                            className="fs_13 lh_xs black_300  fw_600  "
+                          >
+                            Course
+                          </th>
+                          <th
+                            scope="col"
+                            className="fs_13 lh_xs black_300  fw_600  "
+                          >
+                            Contact Number
+                          </th>
+                          <th
+                            scope="col"
+                            className="fs_13 lh_xs black_300  fw_600  "
+                          >
+                            Date
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="bg_white">
+                        <tr>
+                          <td className="fs-13 lh-xs fw-semibold black_300 ">
+                            01
+                          </td>
+                          <td className="fs-13 lh-xs black_300 ">Rahul</td>
+                          <td className="fs-13 lh-xs  black_300">
+                            Rahul@Rahul.com
+                          </td>
+                          <td className="fs-13 lh-xs  black_300">B.tech</td>
 
-                        <td className="fs-13 lh-xs  black_300">1234567890</td>
+                          <td className="fs-13 lh-xs  black_300">1234567890</td>
 
-                        <td className="fs-13 lh-xs black_300 ">12-04-2012</td>
-                      </tr>
+                          <td className="fs-13 lh-xs black_300 ">12-04-2012</td>
+                        </tr>
 
-                      {/* 1st row */}
-                    </tbody>
-                  </table>
+                        {/* 1st row */}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
                 <div className="align-items-center d-flex justify-content-between row text-center text-sm-start">
                   <div className="col-sm">

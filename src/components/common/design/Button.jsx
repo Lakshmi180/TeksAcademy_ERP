@@ -2,9 +2,9 @@ import React from "react";
 import "../../../assets/css/common/Button.css";
 import { FaArrowRight } from "react-icons/fa";
 function Button({ type, disabled, onClick, children, className, icon }) {
-    return (
-        <div>
-            {/* <div class="container mt-5">
+  return (
+    <>
+      {/* <div class="container mt-5">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="hstack flex-wrap gap-2 mb-3 mb-lg-0">
@@ -25,17 +25,17 @@ function Button({ type, disabled, onClick, children, className, icon }) {
                     </div>
                 </div>
             </div> */}
-            <div className=" ">
-                <button
-                    type={"button" || type}
-                    class={`${className} btn`}
-                    onClick={onClick}
-                >
-                    {children}
-                    {icon && <span className="label-icon">{icon}</span>}
-                </button>
-            </div>
-        </div>
-    );
+      <div className=" ">
+        <button
+          type={"button" || type}
+          class={`${className} btn`}
+          onClick={onClick}
+        >
+          {children}
+          {icon && <span className="label-icon">{icon}</span>}
+        </button>
+      </div>
+    </>
+  );
 }
 export default Button;

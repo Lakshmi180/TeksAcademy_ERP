@@ -32,8 +32,9 @@ const LeadSourceContextProvider = ({ children }) => {
       const { data, status } = await axios.get(
         `${process.env.REACT_APP_API_URL}/getleadsource`
       );
+      console.log(data, "lsknfsgvjfdb");
 
-      if (status === 201) {
+      if (status === 200) {
         DispatchLeadSource({ type: "SET_LEAD_SOURCE", payload: data });
         console.log(data, status, "lsknfsgvjfdb");
       }

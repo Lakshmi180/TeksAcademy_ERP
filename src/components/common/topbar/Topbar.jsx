@@ -21,8 +21,8 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
   const { userLogout, LockTheScreen } = useContext(AuthContext);
   const { setDarkMode, theme } = useTheme();
 
-  const {AuthState}=useAuthContext();
-  console.log(AuthState.user.fullname , "AuthStatehere")
+  const { AuthState } = useAuthContext();
+  console.log(AuthState.user.fullname, "AuthStatehere");
 
   const [isDropdownActive, setIsDropdownActive] = useState(false);
 
@@ -30,21 +30,18 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
     setIsDropdownActive((dropdown) => !dropdown);
   };
 
-  const[userDetail, setUserDetail] = useState({
-    fullname:"",
-    profile:""
+  const [userDetail, setUserDetail] = useState({
+    fullname: "",
+    profile: "",
   });
 
-  console.log(userDetail, "userDetailHERERD" )
+  console.log(userDetail, "userDetailHERERD");
 
-  useEffect(() => {
-    if (AuthState.user.fullname) {
-      setUserDetail({ fullname: AuthState.user.fullname.substring(0,5), profile: AuthState.user.profile.substring(0,5) })
-    }
-  }, [AuthState?.user?.fullname])
-
- 
-
+  // useEffect(() => {
+  //   if (AuthState.user.fullname) {
+  //     setUserDetail({ fullname: AuthState.user.fullname.substring(0,5), profile: AuthState.user.profile.substring(0,5) })
+  //   }
+  // }, [AuthState?.user?.fullname])
 
   return (
     <div className="">
@@ -88,8 +85,12 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
                   alt="User Avatar"
                 />
                 <div className="details d-flex flex-column position-relative">
-                  <span className="navbar_username">{userDetail.fullname}..</span>
-                  <span className="navbar_userrole">{userDetail.profile}..</span>
+                  <span className="navbar_username">
+                    {userDetail.fullname}..
+                  </span>
+                  <span className="navbar_userrole">
+                    {userDetail.profile}..
+                  </span>
                 </div>
                 {isDropdownActive && (
                   <div className="dropdown-card show">
