@@ -72,7 +72,10 @@ import { ViewCourse } from "./components/pages/Leads/ViewCourse";
 import { ContactUs } from "./components/pages/Leads/ContactUs";
 import { HLPEnquireLeads } from "./components/pages/Leads/HLPEnquireLeads";
 import { SLPEnquireLeads } from "./components/pages/Leads/SLPEnquireLeads";
+import { Input } from "./components/common/design/Input";
 function App() {
+  
+
   return (
     <Routes>
       <Route element={<ReqireAuth />}>
@@ -97,11 +100,20 @@ function App() {
         <Route path="/branch" element={<Branch />} />
         <Route path="/createbranch" element={<CreateBranch />} />
         <Route path="/department" element={<Department />} />
+        <Route path="/updatedepartment/:id" element={<CreateDepartment />} />
         <Route path="/createdepartment" element={<CreateDepartment />} />
+
         <Route path="/coursepackage" element={<CoursePackage />} />
+        <Route
+          path="/updatecoursepackage/:id"
+          element={<CreateCoursePackage />}
+        />
         <Route path="/createcoursepackage" element={<CreateCoursePackage />} />
+
         <Route path="/leadsource" element={<LeadSource />} />
+        <Route path="/updateleadsource/:id" element={<CreateLeadSource />} />
         <Route path="/createleadsource" element={<CreateLeadSource />} />
+
         <Route path="/createadmissionfee" element={<CreateAdmissionFee />} />
         <Route path="/admissionfee" element={<AdmissionFee />} />
         <Route path="/addvendor" element={<AddVendor />} />
@@ -114,7 +126,11 @@ function App() {
         />
         <Route path="/issuedcertificates" element={<IssuedCertificates />} />
         <Route path="/updatecourse/:courseId" element={<CreateCourse />} />
-        <Route path="/requestedcertificate" element={<RequestedCertificate />}
+        <Route path="/editbranch/:branchId" element={<CreateBranch />} />
+
+        <Route
+          path="/requestedcertificate"
+          element={<RequestedCertificate />}
         />
         <Route path="/issuedcertificates" element={<IssuedCertificates />} />
         <Route path="/userview/:courseId" element={<UserView />} />
@@ -132,6 +148,20 @@ function App() {
           element={<StudentApplicationPrint />}
         />
         <Route path="/userview/:courseId" element={<UserView />} />
+
+        <Route
+          path="/demo"
+          element={
+            <Input
+              type={"password"}
+              id={"name"}
+              placeholder={"Enter your password"}
+              required={true}
+              // element={"textarea"}
+              label={"Name"}
+            />
+          }
+        />
 
         {/* <Route path="/updatecourse/:courseId" element={<CreateCourse />} /> */}
         <Route path="/feedetailspage" element={<FeeDetailsPage />} />
@@ -167,20 +197,9 @@ function App() {
     </Routes >
   );
 }
-
-{
-  /* 
-  <Routes>
-        <Route element={<ReqireAuth />}>
-          <Route path="/" element={<Dashboard />} />
-        </Route>
-        <Route element={<PublicLayout />}>
-          <Route path="/login" element={<Login />} />
-          <Route path="/forgotpassword" element={<ForgotPassword />} />
-          <Route path="/changepassword" element={<ChangePassword />} />
-          <Route path="/lockscreen" element={<LockScreen />} />
-        </Route>
-      </Routes> */
-}
-
 export default App;
+
+
+
+
+

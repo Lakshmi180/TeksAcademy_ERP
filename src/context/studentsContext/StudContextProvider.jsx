@@ -10,16 +10,16 @@ export const StudentsContext = createContext();
 const StudentsContextProvider = ({ children }) => {
 
   const [studentState, Dispatchstudents] = useReducer(StudentsReducer, InitialState)
-  
+
   console.log(studentState, "secondredf")
 
-  const {  perPage, search, filters,currentPage } = studentState.EnrolledStudents;
-  console.log(currentPage, perPage, search, filters,"ggggggg")
-  
+  const { perPage, search, filters, currentPage } = studentState.EnrolledStudents;
+  console.log(currentPage, perPage, search, filters, "ggggggg")
+
 
   const getAllStudents = async () => {
     const { status, data } = await api.getAllStudents();
-    console.log("Totalstudentsdatayy", data,status)
+    console.log("Totalstudentsdatayy", data, status)
     if (status === 201) {
       Dispatchstudents(Actions.setStudentsData(data, "ALL_STUDENTS"))
     }
@@ -36,7 +36,7 @@ const StudentsContextProvider = ({ children }) => {
     Dispatchstudents(Actions.setLoading("ENROLLED_STUDENTS"))
     try {
       const { data, status } = await api.getEnrolledStudents(currentPage, perPage, search, filters);
-      console.log(data,status, "paginateddata")
+      console.log(data, status, "paginateddata")
       if (status == 200) {
         Dispatchstudents(Actions.getEnrolledStudents(data, "ENROLLED_STUDENTS"))
       }
@@ -50,11 +50,12 @@ const StudentsContextProvider = ({ children }) => {
   }
 
   const getPaginatedCertificateData = async () => {
-    const { currentPage, perPage, search, filters } = studentState.CeritificateStudents;
+    const { currentPage, perPage, search, filters } = studentState.CertificateStudents;
+    console.log(currentPage, perPage, search, filters, "herethefilters")
     Dispatchstudents(Actions.setLoading("CERTIFICATE_STUDENTS"))
     try {
       const { data, status } = await api.getCertificateStudents(currentPage, perPage, search, filters);
-      if (status == 200) {
+      if (status === 200) {
         Dispatchstudents(Actions.getCertificateStudents(data, "CERTIFICATE_STUDENTS"))
       }
     }
@@ -63,6 +64,27 @@ const StudentsContextProvider = ({ children }) => {
     }
     finally {
       Dispatchstudents(Actions.setLoading("CERTIFICATE_STUDENTS"))
+    }
+  }
+
+  const getPaginated_Requested_CertificateStudents = async () => {
+    const { currentPage, perPage, search, filters } = studentState.Requested_CertificateStudents;
+    Dispatchstudents(Actions.setLoading("REQUESTED_CERTIFICATE_STUDENTS"))
+
+    try {
+      const { data, status } = await api.getRequested_CertificateStudents(currentPage, perPage, search, filters);
+
+      if (status === 200) {
+        Dispatchstudents(Actions.getRequested_CertificateStudents(data, "REQUESTED_CERTIFICATE_STUDENTS"))
+      }
+    }
+    catch (error) {
+      console.log(error);
+
+    }
+    finally {
+      Dispatchstudents(Actions.setLoading("REQUESTED_CERTIFICATE_STUDENTS"))
+
     }
   }
 
@@ -109,12 +131,12 @@ const StudentsContextProvider = ({ children }) => {
     console.log("Create------------------- studentdata ", studentdata);
     try {
       const { data, status } = await api.createStudentRecord(studentdata)
-    
-    
+
+
       if (status === "200") {
         Dispatchstudents(Actions.createStudentRecord(data, "CREATE_STUDENT"))
-   
-      
+
+
       }
       return { data, status };
 
@@ -152,8 +174,28 @@ const StudentsContextProvider = ({ children }) => {
 
   useEffect(() => {
     getPaginatedStudentsData();
+    getPaginatedCertificateData();
+    getPaginated_Requested_CertificateStudents();
     getAllStudents();
+
   }, []);
+
+  useEffect(() => {
+    getPaginated_Requested_CertificateStudents();
+  }, [
+    studentState?.Requested_CertificateStudents?.search,
+    studentState?.Requested_CertificateStudents?.currentPage,
+    studentState?.Requested_CertificateStudents?.perPage,
+    studentState?.Requested_CertificateStudents?.filters,])
+
+
+  useEffect(() => {
+    getPaginatedCertificateData();
+  }, [studentState?.CertificateStudents?.search,
+  studentState?.CertificateStudents?.currentPage,
+  studentState?.CertificateStudents?.perPage,
+  studentState?.CertificateStudents?.filters
+  ])
 
 
 
@@ -167,10 +209,20 @@ const StudentsContextProvider = ({ children }) => {
   studentState?.EnrolledStudents?.filters.enquiryTakenby,
   studentState?.EnrolledStudents?.filters.modeOfTraining,
   studentState?.EnrolledStudents?.filters.branch,
-]);
+  ]);
 
   return (
-    <StudentsContext.Provider value={{ studentState, Dispatchstudents, getPaginatedStudentsData, createStudentRecord, getAllStudents, getStudent, UpdateStudent }}>
+    <StudentsContext.Provider value={{
+      studentState,
+      Dispatchstudents,
+      getPaginatedStudentsData,
+      createStudentRecord,
+      getAllStudents,
+      getStudent,
+      UpdateStudent,
+      getPaginatedCertificateData,
+      getPaginated_Requested_CertificateStudents
+    }}>
       {children}
     </StudentsContext.Provider>
   )

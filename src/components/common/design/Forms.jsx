@@ -49,98 +49,98 @@ function Form() {
 
   return (
     <div>
-      <div class="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
-        <div class="row ">
-          <div class="col-lg-12">
-            <div class="card border-0 bg_transparent ">
+      <div className="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
+        <div className="row ">
+          <div className="col-lg-12">
+            <div className="card border-0 bg_transparent ">
               <div className="text-start ms-4 fs-16">
                 <p className="txt-color">Input Example</p>
               </div>
               <div>
-                <div class="card-body m-3 fs-s">
-                  <div class="live-preview">
-                    <div class="row gy-4 ">
-                      <div class="col-xxl-3 col-md-6">
+                <div className="card-body m-3 fs-s">
+                  <div className="live-preview">
+                    <div className="row gy-4 ">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
                           <div className="form-group text-start">
                             <label
                               className="form-label fs-s txt-color"
-                              for="example-text-input"
+                              htmlFor="example-text-input"
                             >
                               Basic Input
                             </label>
                             <input
-                              class="form-control bg-form"
+                              className="form-control bg-form"
                               type="text"
                               id="example-text-input"
                             />
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-3 col-md-6">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
-                          <div class="form-group text-start">
+                          <div className="form-group text-start">
                             <label
-                              class="form-label fs-s txt-color"
-                              for="example-text-input "
+                              className="form-label fs-s txt-color"
+                              htmlFor="example-text-input "
                             >
                               {" "}
                               Input with Label
                             </label>
                             <input
-                              class="form-control  bg-form"
+                              className="form-control  bg-form"
                               type="text"
                               id="example-text-input"
                             />
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-3 col-md-6">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
-                          <div class="form-group text-start">
+                          <div className="form-group text-start">
                             <label
-                              class="form-label fs-stxt-color"
-                              for="example-text-input"
+                              className="form-label fs-stxt-color"
+                              htmlFor="example-text-input"
                             >
                               {" "}
                               Input with Placeholder
                             </label>
                             <input
-                              class="form-control bg-form"
+                              className="form-control bg-form"
                               type="text"
                               id="example-text-input"
                             />
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-3 col-md-6">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
-                          <div class="form-group text-start">
+                          <div className="form-group text-start">
                             <label
-                              class="form-label fs-s txt-color"
-                              for="example-text-input "
+                              className="form-label fs-s txt-color"
+                              htmlFor="example-text-input "
                             >
                               Text Input
                             </label>
                             <input
-                              class="form-control bg-form"
+                              className="form-control bg-form"
                               type="text"
                               id="example-text-input"
                             />
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-3 col-md-6">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
-                          <div class="form-group text-start">
+                          <div className="form-group text-start">
                             <label
-                              class="form-label fs-s txt-color"
-                              for="example-text-input "
+                              className="form-label fs-s txt-color"
+                              htmlFor="example-text-input "
                             >
                               Readonly plain Text Input
                             </label>
                             <input
-                              class="form-control-plaintext fs-s  bg-form"
+                              className="form-control-plaintext fs-s  bg-form"
                               type="text"
                               id="readonlyPlaintext"
                               value="Readonly input"
@@ -149,17 +149,17 @@ function Form() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-3 col-md-6">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
-                          <div class="form-group text-start">
+                          <div className="form-group text-start">
                             <label
-                              class="form-label  fs-s txt-color"
-                              for="readonlyInput"
+                              className="form-label  fs-s txt-color"
+                              htmlFor="readonlyInput"
                             >
                               Readonly Input
                             </label>
                             <input
-                              class="form-control fs-s  bg-form"
+                              className="form-control fs-s  bg-form"
                               type="text"
                               id="readonlyInput"
                               value="Readonly input"
@@ -168,17 +168,17 @@ function Form() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-3 col-md-6">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
-                          <div class="form-group text-start">
+                          <div className="form-group text-start">
                             <label
-                              class="form-label fs-s txt-color"
-                              for="disabledInput"
+                              className="form-label fs-s txt-color"
+                              htmlFor="disabledInput"
                             >
                               Disabled Input
                             </label>
                             <input
-                              class="form-control fs-s bg-form"
+                              className="form-control fs-s bg-form"
                               type="text"
                               id="disabledInput"
                               value="Disabled input"
@@ -188,18 +188,18 @@ function Form() {
                         </div>
                       </div>
 
-                      <div class="col-xxl-3 col-md-6">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
-                          <div class="text-start">
+                          <div className="text-start">
                             <label
-                              class="form-label fs-s txt-color"
-                              for="iconInput"
+                              className="form-label fs-s txt-color"
+                              htmlFor="iconInput"
                             >
                               Input with Icon
                             </label>
-                            <div class="form-icon d-flex">
+                            <div className="form-icon d-flex">
                               <input
-                                class="form-control form-control-icon fs-s bg-form"
+                                className="form-control form-control-icon fs-s bg-form"
                                 type="email"
                                 id="iconInput"
                                 placeholder="example@gmail.com"
@@ -208,23 +208,23 @@ function Form() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-3 col-md-6">
-                        <div class=" text-start">
+                      <div className="col-xxl-3 col-md-6">
+                        <div className=" text-start">
                           <label
-                            class="form-label fs-s txt-color"
-                            for="example-text-input"
+                            className="form-label fs-s txt-color"
+                            htmlFor="example-text-input"
                           >
                             {" "}
                             Input with Icon right
                           </label>
-                          <div class="form-icon right">
+                          <div className="form-icon right">
                             <input
-                              class="form-control fs-s bg-form"
+                              className="form-control fs-s bg-form"
                               type="email"
                               id="example-text-input"
                               placeholder="example@gmail.com"
                             />
-                            <i class="ri-mail-unread-line"></i>
+                            <i className="ri-mail-unread-line"></i>
                           </div>
                         </div>
                       </div>
@@ -251,35 +251,35 @@ function Form() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-3 col-md-6">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
-                          <div class="form-group text-start">
+                          <div className="form-group text-start">
                             <label
-                              class="form-label fs-s txt-color"
-                              for="example-text-input "
+                              className="form-label fs-s txt-color"
+                              htmlFor="example-text-input "
                             >
                               Input Time
                             </label>
                             <input
-                              class="form-control bg-form"
+                              className="form-control bg-form"
                               type="time"
                               id="exampleInputtime"
                             />
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-3 col-md-6">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
-                          <div class="form-group text-start">
+                          <div className="form-group text-start">
                             <label
-                              class="form-label fs-s txt-color"
-                              for="example-text-input "
+                              className="form-label fs-s txt-color"
+                              htmlFor="example-text-input "
                             >
                               {" "}
                               Input Password
                             </label>
                             <input
-                              class="form-control bg-form"
+                              className="form-control bg-form"
                               type="password"
                               id="example-text-input"
                               value="44512465"
@@ -287,57 +287,57 @@ function Form() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-3 col-md-6">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
-                          <div class="form-group text-start">
+                          <div className="form-group text-start">
                             <label
-                              class="form-label fs-s txt-color"
-                              for="example-text-input "
+                              className="form-label fs-s txt-color"
+                              htmlFor="example-text-input "
                             >
                               Example TextArea
                             </label>
                             <textarea
-                              class="form-control bg-form"
+                              className="form-control bg-form"
                               id="exampleFormContro;Textarea5"
                               rows="3"
                             ></textarea>
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-3 col-md-6">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
-                          <div class="form-group text-start">
+                          <div className="form-group text-start">
                             <label
-                              class="form-label fs-s txt-color"
-                              for="example-text-input"
+                              className="form-label fs-s txt-color"
+                              htmlFor="example-text-input"
                             >
                               Form Text{" "}
                             </label>
                             <input
-                              class="form-control bg-form"
+                              className="form-control bg-form"
                               type="password"
                               id="formtextinput"
                             />
                             <div
                               id="passwordHelpBlock"
-                              class="form-text txt-color"
+                              className="form-text txt-color"
                             >
                               "Must be 8-20 characters long"
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-3 col-md-6">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
-                          <div class="form-group text-start">
+                          <div className="form-group text-start">
                             <label
-                              class="form-label fs-s txt-color"
-                              for="colorPicker "
+                              className="form-label fs-s txt-color"
+                              htmlFor="colorPicker "
                             >
                               Color Picker
                             </label>
                             <input
-                              class="form-control form-control-color w-100 bg-form"
+                              className="form-control form-control-color w-100 bg-form"
                               type="color"
                               id="colorpicker"
                               value="#364574"
@@ -345,17 +345,17 @@ function Form() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-3 col-md-6">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
-                          <div class="form-group text-start">
+                          <div className="form-group text-start">
                             <label
-                              class="form-label fs-s txt-color"
-                              for="example-text-input "
+                              className="form-label fs-s txt-color"
+                              htmlFor="example-text-input "
                             >
                               Input Border Style
                             </label>
                             <input
-                              class="form-control border-dashed fs-s  bg-form"
+                              className="form-control border-dashed fs-s  bg-form"
                               type="text"
                               id="borderInput"
                               placeholder="Enter your name"
@@ -363,17 +363,17 @@ function Form() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-3 col-md-6">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
-                          <div class="form-group text-start">
+                          <div className="form-group text-start">
                             <label
-                              class="form-label fs-s txt-color"
-                              for="exampleDataList "
+                              className="form-label fs-s txt-color"
+                              htmlFor="exampleDataList "
                             >
                               Datalist example
                             </label>
                             <input
-                              class="form-control fs-s  bg-form"
+                              className="form-control fs-s  bg-form"
                               type="text"
                               id="example-text-input"
                               list="datalistOptions"
@@ -389,17 +389,17 @@ function Form() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-3 col-md-6">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
-                          <div class="form-group text-start">
+                          <div className="form-group text-start">
                             <label
-                              class="form-label fs-s txt-color"
-                              for="example-text-input "
+                              className="form-label fs-s txt-color"
+                              htmlFor="example-text-input "
                             >
                               Rounded Input
                             </label>
                             <input
-                              class="form-control rounded-pill fs-s bg-form"
+                              className="form-control rounded-pill fs-s bg-form"
                               type="text"
                               id="example-text-input"
                               placeholder="enter your name"
@@ -407,18 +407,18 @@ function Form() {
                           </div>
                         </div>
                       </div>
-                      <div class="col-xxl-3 col-md-6">
+                      <div className="col-xxl-3 col-md-6">
                         <div>
-                          <div class="form-floating">
+                          <div className="form-floating">
                             <input
-                              class="form-control fs-s bg-form"
+                              className="form-control fs-s bg-form"
                               type="text"
                               id="example-text-input"
                               placeholder="Enter your firstname"
                             />
                             <label
-                              class="form-label fs-s txt-color"
-                              for="example-text-input "
+                              className="form-label fs-s txt-color"
+                              htmlFor="example-text-input "
                             >
                               Floating Input
                             </label>
@@ -428,13 +428,13 @@ function Form() {
                     </div>
                   </div>
                 </div>
-                <div class="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
-                  <div class="row">
-                    <div class="col-lg-12">
-                      <div class="card-body">
-                        <div class="col-lg-6">
+                <div className="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
+                  <div className="row">
+                    <div className="col-lg-12">
+                      <div className="card-body">
+                        <div className="col-lg-6">
                           <select
-                            class="form-select mb-3 bg-form form-control"
+                            className="form-select mb-3 bg-form form-control"
                             aria-label="Default select example"
                           >
                             <option selected="">Select your Status </option>
@@ -445,9 +445,9 @@ function Form() {
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div className="col-lg-6">
                       <select
-                        class="form-select select-scrl bg-form"
+                        className="form-select select-scrl bg-form"
                         size="3"
                         aria-label="size 3 select example"
                       >
@@ -461,9 +461,9 @@ function Form() {
                         <option value="5">Five</option>
                       </select>
                     </div>
-                    <div class="col-lg-6">
-                      <div class="row">
-                        <div class="col-md-6 w-100">
+                    <div className="col-lg-6">
+                      <div className="row">
+                        <div className="col-md-6 w-100">
                           <div className="container mt-5">
                             <div className="row">
                               <div className="col-md-6 ">
@@ -508,35 +508,35 @@ function Form() {
                     </div>
                   </div>
                 </div>
-                <div class="container mt-4 bg_white">
-                  <div class=" row fs-16 p-3 ">
+                <div className="container mt-4 bg_white">
+                  <div className=" row fs-16 p-3 ">
                     <h5 className="txt-color">Pagination</h5>
 
                     <nav aria-label="...">
-                      <ul class="pagination pagination-md">
-                        <li class="page-item disabled ">
-                          <a class="page-linkbg-form" href="#" tabindex="-1">
+                      <ul className="pagination pagination-md">
+                        <li className="page-item disabled ">
+                          <a className="page-linkbg-form" href="#" tabindex="-1">
                             {" "}
                             <IoIosArrowRoundBack /> Prev
                           </a>
                         </li>
-                        <li class="page-itembg-form">
-                          <a class="page-link bg-form" href="#">
+                        <li className="page-itembg-form">
+                          <a className="page-link bg-form" href="#">
                             1
                           </a>
                         </li>
-                        <li class="page-item active square  bg-form">
-                          <a class="page-link bg-form" href="#">
+                        <li className="page-item active square  bg-form">
+                          <a className="page-link bg-form" href="#">
                             2{" "}
                           </a>
                         </li>
-                        <li class="page-item bg-form">
-                          <a class="page-link bg-form" href="#">
+                        <li className="page-item bg-form">
+                          <a className="page-link bg-form" href="#">
                             3
                           </a>
                         </li>
-                        <li class="page-item bg-form">
-                          <a class="page-link bg-form" href="#">
+                        <li className="page-item bg-form">
+                          <a className="page-link bg-form" href="#">
                             Next <IoIosArrowRoundForward />
                           </a>
                         </li>
@@ -544,66 +544,66 @@ function Form() {
                     </nav>
 
                     <nav aria-label="...">
-                      <ul class="pagination pagination-sm">
-                        <li class="page-item disabled">
-                          <span class="page-link bg-form">
+                      <ul className="pagination pagination-sm">
+                        <li className="page-item disabled">
+                          <span className="page-link bg-form">
                             <IoIosArrowBack />
                           </span>
                         </li>
-                        <li class="page-item">
-                          <a class="page-link bg-form" href="#">
+                        <li className="page-item">
+                          <a className="page-link bg-form" href="#">
                             1
                           </a>
                         </li>
-                        <li class="page-item active square">
-                          <span class="page-link bg-form">2</span>
+                        <li className="page-item active square">
+                          <span className="page-link bg-form">2</span>
                         </li>
-                        <li class="page-item">
-                          <a class="page-link bg-form" href="#">
+                        <li className="page-item">
+                          <a className="page-link bg-form" href="#">
                             3
                           </a>
                         </li>
-                        <li class="page-item">
-                          <a class="page-link bg-form" href="#">
+                        <li className="page-item">
+                          <a className="page-link bg-form" href="#">
                             <IoIosArrowForward />
                           </a>
                         </li>
                       </ul>
                     </nav>
                     <nav aria-label="Page navigation example">
-                      <ul class="pagination pagination-rounded pagination-sm">
-                        <li class="page-item disabled p-1">
-                          <a href="#" class="page-link rounded bg-form">
+                      <ul className="pagination pagination-rounded pagination-sm">
+                        <li className="page-item disabled p-1">
+                          <a href="#" className="page-link rounded bg-form">
                             <IoIosArrowRoundBack />
                           </a>
                         </li>
-                        <li class="page-item p-1">
-                          <a href="#" class="page-link rounded bg-form">
+                        <li className="page-item p-1">
+                          <a href="#" className="page-link rounded bg-form">
                             1
                           </a>
                         </li>
-                        <li class="page-item active p-1">
-                          <a href="#" class="page-link rounded col bg-form">
+                        <li className="page-item active p-1">
+                          <a href="#" className="page-link rounded col bg-form">
                             2
                           </a>
                         </li>
-                        <li class="page-item p-1">
-                          <a href="#" class="page-link rounded bg-form">
+                        <li className="page-item p-1">
+                          <a href="#" className="page-link rounded bg-form">
                             3
                           </a>
                         </li>
-                        <li class="page-item p-1">
-                          <a href="#" class="page-link rounded bg-form">
+                        <li className="page-item p-1">
+                          <a href="#" className="page-link rounded bg-form">
                             4
                           </a>
                         </li>
-                        <li class="page-item p-1">
-                          <a href="#" class="page-link rounded bg-form">
+                        <li className="page-item p-1">
+                          <a href="#" className="page-link rounded bg-form">
                             5
                           </a>
                         </li>
-                        <li class="page-item p-1">
-                          <a href="#" class="page-link rounded bg-form">
+                        <li className="page-item p-1">
+                          <a href="#" className="page-link rounded bg-form">
                             <IoIosArrowRoundForward />
                           </a>
                         </li>
@@ -611,33 +611,33 @@ function Form() {
                     </nav>
                     <nav arial-label="page navigation example">
                       <nav aria-label="...">
-                        <ul class="pagination pagination-sm">
-                          <li class="page-item disabled p-1">
+                        <ul className="pagination pagination-sm">
+                          <li className="page-item disabled p-1">
                             <a
-                              class="page-link rounded bg-form"
+                              className="page-link rounded bg-form"
                               href="#"
                               tabindex="-1"
                             >
                               <IoIosArrowRoundBack />{" "}
                             </a>
                           </li>
-                          <li class="page-item p-1 ">
-                            <a class="page-link rounded bg-form" href="#">
+                          <li className="page-item p-1 ">
+                            <a className="page-link rounded bg-form" href="#">
                               1
                             </a>
                           </li>
-                          <li class="page-item active p-1 ">
-                            <a class="page-link rounded col bg-form" href="#">
+                          <li className="page-item active p-1 ">
+                            <a className="page-link rounded col bg-form" href="#">
                               2
                             </a>
                           </li>
-                          <li class="page-item p-1 ">
-                            <a class="page-link rounded bg-form" href="#">
+                          <li className="page-item p-1 ">
+                            <a className="page-link rounded bg-form" href="#">
                               3
                             </a>
                           </li>
-                          <li class="page-item p-1 ">
-                            <a class="page-link rounded bg-form" href="#">
+                          <li className="page-item p-1 ">
+                            <a className="page-link rounded bg-form" href="#">
                               {" "}
                               <IoIosArrowRoundForward />
                             </a>
@@ -647,10 +647,10 @@ function Form() {
                     </nav>
                   </div>
                 </div>
-                <div class="container mt-4 bg_white ">
-                  <div class=" row fs-16 p-3 ">
-                    <h5 class="text-center">Picker</h5>
-                    <div class="col text-center">
+                <div className="container mt-4 bg_white ">
+                  <div className=" row fs-16 p-3 ">
+                    <h5 className="text-center">Picker</h5>
+                    <div className="col text-center">
                       <DatePicker
                         selected={selectedDate}
                         onChange={(date) => setSelectedDate(date)}
@@ -665,42 +665,42 @@ function Form() {
           </div>
         </div>
       </div>
-      <div class="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
-        <div class="row fs-16">
-          <div class="col-lg-12">
-            <div class="card border-0 bg_transparent ">
-              <div class="">
-                <p class="text-start fs-16 txt-color"> Input Sizing </p>
+      <div className="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
+        <div className="row fs-16">
+          <div className="col-lg-12">
+            <div className="card border-0 bg_transparent ">
+              <div className="">
+                <p className="text-start fs-16 txt-color"> Input Sizing </p>
               </div>
             </div>
           </div>
-          <div class="card-body m-3">
-            <p class="text-muted text-start fs-s txt-color">
+          <div className="card-body m-3">
+            <p className="text-muted text-start fs-s txt-color">
               use <code>form-control-lg</code> class to set small large size
               input and use <code>form-control-sm</code> class to set small size
               input. No class is needed for default size input
             </p>
             <div>
-              <div class="row  g-3">
-                <div class="col-lg-4">
+              <div className="row  g-3">
+                <div className="col-lg-4">
                   <input
-                    class="form-control form-control-sm bg-form"
+                    className="form-control form-control-sm bg-form"
                     type="text"
                     id="example-text-input"
                     placeholder=".form-control-sm"
                   />
                 </div>
-                <div class="col-lg-4">
+                <div className="col-lg-4">
                   <input
-                    class="form-control"
+                    className="form-control"
                     type="text"
                     id="example-text-input"
                     placeholder=".form-control-sm bg-form"
                   />
                 </div>
-                <div class="col-lg-4">
+                <div className="col-lg-4">
                   <input
-                    class="form-control form-control-lg bg-form"
+                    className="form-control form-control-lg bg-form"
                     type="text"
                     id="example-text-input"
                     placeholder=".form-control-sm"
@@ -711,63 +711,63 @@ function Form() {
           </div>
         </div>
       </div>
-      <div class="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
-        <div class="row fs-16">
-          <div class="col-lg-12">
-            <div class="card border-0 bg-transparent ">
-              <div class="align-items-center   ">
-                <p class="text-start fs-16 txt-color">File Input </p>
+      <div className="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
+        <div className="row fs-16">
+          <div className="col-lg-12">
+            <div className="card border-0 bg-transparent ">
+              <div className="align-items-center   ">
+                <p className="text-start fs-16 txt-color">File Input </p>
               </div>
             </div>
           </div>
-          <div class="card-body m-3">
-            <div class="row align-items-center text-start g-3 fs-s">
-              <div class="col-lg-4">
+          <div className="card-body m-3">
+            <div className="row align-items-center text-start g-3 fs-s">
+              <div className="col-lg-4">
                 <div>
-                  <label for="formfile" class="form-label fs-s txt-color">
+                  <label htmlFor="formfile" className="form-label fs-s txt-color">
                     Default File Input Example
                   </label>
-                  <p class="text-muted fs-s txt-color">
+                  <p className="text-muted fs-s txt-color">
                     use <code>input</code> attribute with
                     <code>type="file</code> tag for default file input{" "}
                   </p>
                   <input
-                    class="form-control fs-s bg-form"
+                    className="form-control fs-s bg-form"
                     type="file"
                     id="formfile"
                   />
                 </div>
               </div>
-              <div class="col-lg-4 ">
+              <div className="col-lg-4 ">
                 <div>
                   <label
-                    for="formFileMultiple txt-color"
-                    class="form-label fs-s"
+                    htmlFor="formFileMultiple txt-color"
+                    className="form-label fs-s"
                   >
                     Multiple File Input Example
                   </label>
-                  <p class="text-muted fs-s">
+                  <p className="text-muted fs-s">
                     use <code>multiple</code> attribute within the input
                     attribute to select multiple files
                   </p>
                   <input
-                    class="form-control fs-s bg-form"
+                    className="form-control fs-s bg-form"
                     type="file"
                     id="formFileMultiple"
                   />
                 </div>
               </div>
-              <div class="col-lg-4">
+              <div className="col-lg-4">
                 <div>
-                  <label for="formFileDisabled" class="form-label fs-s">
+                  <label htmlFor="formFileDisabled" className="form-label fs-s">
                     Disabled File Input Example
                   </label>
-                  <p class="text-muted fs-s">
+                  <p className="text-muted fs-s">
                     use <code>Disabled</code> attribute within the input
                     attribute to disable the file input.
                   </p>
                   <input
-                    class="form-control fs-s bg-form"
+                    className="form-control fs-s bg-form"
                     type="file"
                     id="formFileDisabled"
                     disabled
@@ -775,52 +775,52 @@ function Form() {
                 </div>
               </div>
             </div>
-            <div class="row mt-4 align-items-center text-start g-3">
-              <h5 class="fs-16 para">File Input Sizing</h5>
-              <div class="col-lg-4 fs-s">
+            <div className="row mt-4 align-items-center text-start g-3">
+              <h5 className="fs-16 para">File Input Sizing</h5>
+              <div className="col-lg-4 fs-s">
                 <div>
-                  <label for="formSizeSmall" class="form-label">
+                  <label htmlFor="formSizeSmall" className="form-label">
                     small size file input example
                   </label>
-                  <p class="text-muted">
+                  <p className="text-muted">
                     use <code>form-control-sm</code> class within the
                     form-control class to set a small size file input.
                   </p>
                   <input
-                    class="form-control form-control-sm bg-form"
+                    className="form-control form-control-sm bg-form"
                     type="file"
                     id="formSizeSmall"
                   />
                 </div>
               </div>
-              <div class="col-lg-4 fs-s">
+              <div className="col-lg-4 fs-s">
                 <div>
-                  <label for="formSizeDefault" class="form-label">
+                  <label htmlFor="formSizeDefault" className="form-label">
                     Default size file input example
                   </label>
-                  <p class="text-muted">
+                  <p className="text-muted">
                     use <code>form-control</code> class and{" "}
                     <code>type="file"</code> attribute within the input
                     attribute to set a default size file input.
                   </p>
                   <input
-                    class="form-control bg-form "
+                    className="form-control bg-form "
                     type="file"
                     id="formSizeDefault"
                   />
                 </div>
               </div>
-              <div class="col-lg-4 fs-s">
+              <div className="col-lg-4 fs-s">
                 <div>
-                  <label for="formSizeLarge" class="form-label">
+                  <label htmlFor="formSizeLarge" className="form-label">
                     Large size file input example
                   </label>
-                  <p class="text-muted">
+                  <p className="text-muted">
                     use <code>form-control-lg</code> class within the
                     form-control class to set a large size file input.
                   </p>
                   <input
-                    class="form-control form-control-lg bg-form"
+                    className="form-control form-control-lg bg-form"
                     type="file"
                     id="formSizeLarge"
                   />
@@ -830,120 +830,120 @@ function Form() {
           </div>
         </div>
       </div>
-      <div class="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
-        <div class="row fs-16 p-3">
-          <div class="col-lg-12 ">
-            <div class="card border-0 bg-transparent ">
-              <div class="align-items-center  ">
-                <p class="text-start"> Input Group</p>
+      <div className="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
+        <div className="row fs-16 p-3">
+          <div className="col-lg-12 ">
+            <div className="card border-0 bg-transparent ">
+              <div className="align-items-center  ">
+                <p className="text-start"> Input Group</p>
               </div>
             </div>
           </div>
-          <div class="card-body text-start fs-s">
+          <div className="card-body text-start fs-s">
             <div>
-              <p class="fs-16">Basic example</p>
-              <p class="text-muted">
+              <p className="fs-16">Basic example</p>
+              <p className="text-muted">
                 use <code> input-group</code> class to div element which
                 contains input attribute to wrap a default input in the group.
               </p>
             </div>
-            <div class="row g-3">
-              <div class="col-lg-6 fs-s">
-                <div class="input-group ">
-                  <span class="input-group-text" id="basic-addon1">
+            <div className="row g-3">
+              <div className="col-lg-6 fs-s">
+                <div className="input-group ">
+                  <span className="input-group-text" id="basic-addon1">
                     @
                   </span>
                   <input
                     type="text"
-                    class="form-control bg-form"
+                    className="form-control bg-form"
                     placeholder="Username"
                     aria-label="Username"
                     aria-describedby="basic-addon1"
                   />
                 </div>
               </div>
-              <div class="col-lg-6 fs-s">
-                <div class="input-group mb-3">
+              <div className="col-lg-6 fs-s">
+                <div className="input-group mb-3">
                   <input
                     type="text"
-                    class="form-control bg-form"
+                    className="form-control bg-form"
                     placeholder="Recipient's username"
                     aria-label="Recipient's username"
                     aria-describedby="basic-addon2"
                   />
-                  <span class="input-group-text" id="basic-addon2">
+                  <span className="input-group-text" id="basic-addon2">
                     @example.com
                   </span>
                 </div>
               </div>
-              <div class="col-lg-12 fs-s">
-                <div class="input-group mb-3">
-                  <span class="input-group-text">$</span>
+              <div className="col-lg-12 fs-s">
+                <div className="input-group mb-3">
+                  <span className="input-group-text">$</span>
                   <input
                     type="text"
-                    class="form-control bg-form"
+                    className="form-control bg-form"
                     aria-label="Amount (to the nearest dollar)"
                   />
-                  <span class="input-group-text">.00</span>
+                  <span className="input-group-text">.00</span>
                 </div>
               </div>
-              <div class="col-lg-12 fs-s">
-                <div class="input-group mb-3">
+              <div className="col-lg-12 fs-s">
+                <div className="input-group mb-3">
                   <input
                     type="text"
-                    class="form-control bg-form"
+                    className="form-control bg-form"
                     placeholder="Username"
                     aria-label="Username"
                   />
-                  <span class="input-group-text">@</span>
+                  <span className="input-group-text">@</span>
                   <input
                     type="text"
-                    class="form-control bg-form"
+                    className="form-control bg-form"
                     placeholder="Server"
                     aria-label="Server"
                   />
                 </div>
               </div>
-              <div class="col-lg-6 fs-s">
-                <div class="input-group fs-s">
-                  <span class="input-group-text fs-s">With textarea</span>
+              <div className="col-lg-6 fs-s">
+                <div className="input-group fs-s">
+                  <span className="input-group-text fs-s">With textarea</span>
                   <textarea
-                    class="form-control"
+                    className="form-control"
                     aria-label="With textarea"
                   ></textarea>
                 </div>
               </div>
-              <div class="col-lg-6 fs-s">
-                <label for="basic-url" class="form-label">
+              <div className="col-lg-6 fs-s">
+                <label htmlFor="basic-url" className="form-label">
                   Your vanity URL
                 </label>
-                <div class="input-group mb-3 fs-s">
-                  <span class="input-group-text fs-s" id="basic-addon3">
+                <div className="input-group mb-3 fs-s">
+                  <span className="input-group-text fs-s" id="basic-addon3">
                     https://example.com/users/
                   </span>
                   <input
                     type="text"
-                    class="form-control bg-form"
+                    className="form-control bg-form"
                     id="basic-url"
                     aria-describedby="basic-addon3"
                   />
                 </div>
               </div>
-              <div class="mt-4">
-                <p class="fs-16 para">Wrapping</p>
-                <p class="text-muted">
+              <div className="mt-4">
+                <p className="fs-16 para">Wrapping</p>
+                <p className="text-muted">
                   Input groups wrap by default via <code>flex-wrap:wrap</code>{" "}
                   in order to accommodate custom form field validation within an
                   input group. You may disable this with{" "}
                   <code>flex-nowwrap</code> class
                 </p>
-                <div class="input-group ">
-                  <span class="input-group-text" id="basic-addon1">
+                <div className="input-group ">
+                  <span className="input-group-text" id="basic-addon1">
                     @
                   </span>
                   <input
                     type="text"
-                    class="form-control bg-form"
+                    className="form-control bg-form"
                     placeholder="Username"
                     aria-label="Username"
                     aria-describedby="basic-addon1"
@@ -954,59 +954,59 @@ function Form() {
           </div>
         </div>
       </div>
-      <div class="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
-        <div class="row fs-16 p-3">
-          <div class="col-lg-12 fs-s">
-            <div class="card border-0 bg-transparent ">
-              <div class="align-items-center  ">
-                <p class="text-start fs-16">Input Group sizing</p>
+      <div className="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
+        <div className="row fs-16 p-3">
+          <div className="col-lg-12 fs-s">
+            <div className="card border-0 bg-transparent ">
+              <div className="align-items-center  ">
+                <p className="text-start fs-16">Input Group sizing</p>
               </div>
             </div>
           </div>
-          <div class="card-body text-start fs-s">
+          <div className="card-body text-start fs-s">
             <div>
-              <p class="text-muted">
+              <p className="text-muted">
                 use <code> input-group-sm</code> class to set a small size input
                 group and v<code>input-group-lg</code> " class to input-group
                 class to set a large size input group respectively. no such
                 class is required for a default size input group."
               </p>
             </div>
-            <div class="row align-items-center g-3 fs-s">
-              <div class="col-lg-4">
-                <div class="input-group input-group-sm mb-3">
-                  <span class="input-group-text" id="inputGroup-sizing-sm">
+            <div className="row align-items-center g-3 fs-s">
+              <div className="col-lg-4">
+                <div className="input-group input-group-sm mb-3">
+                  <span className="input-group-text" id="inputGroup-sizing-sm">
                     Small
                   </span>
                   <input
                     type="text"
-                    class="form-control bg-form"
+                    className="form-control bg-form"
                     aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-sm"
                   />
                 </div>
               </div>
-              <div class="col-lg-4 ">
-                <div class="input-group mb-3">
-                  <span class="input-group-text" id="inputGroup-sizing-default">
+              <div className="col-lg-4 ">
+                <div className="input-group mb-3">
+                  <span className="input-group-text" id="inputGroup-sizing-default">
                     Default
                   </span>
                   <input
                     type="text"
-                    class="form-control bg-form"
+                    className="form-control bg-form"
                     aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-default"
                   />
                 </div>
               </div>
-              <div class="col-lg-4">
-                <div class="input-group input-group-lg mb-3">
-                  <span class="input-group-text" id="inputGroup-sizing-lg fs-s">
+              <div className="col-lg-4">
+                <div className="input-group input-group-lg mb-3">
+                  <span className="input-group-text" id="inputGroup-sizing-lg fs-s">
                     Large
                   </span>
                   <input
                     type="text"
-                    class="form-control bg-form"
+                    className="form-control bg-form"
                     aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-lg"
                   />
@@ -1016,17 +1016,17 @@ function Form() {
           </div>
         </div>
       </div>
-      <div class="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
-        <div class="row fs-16 p-3">
-          <div class="col-lg-12 fs-s">
-            <div class="card border-0 bg-transparent ">
-              <div class="align-items-center  ">
-                <p class="text-start fs-16"> Multiple Input </p>
+      <div className="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
+        <div className="row fs-16 p-3">
+          <div className="col-lg-12 fs-s">
+            <div className="card border-0 bg-transparent ">
+              <div className="align-items-center  ">
+                <p className="text-start fs-16"> Multiple Input </p>
               </div>
             </div>
           </div>
-          <div class="card-body text-start fs-s">
-            <p class="text-muted">
+          <div className="card-body text-start fs-s">
+            <p className="text-muted">
               Input groups wrap by default via <code>{`<input>`} </code>
               in order to accommodate custom form field validation within an
               input group. You may disable this with <code>
@@ -1034,69 +1034,69 @@ function Form() {
               </code>{" "}
               class
             </p>
-            <div class="col-lg-12 fs-s">
-              <div class="input-group">
-                <span class="input-group-text">First and last name</span>
+            <div className="col-lg-12 fs-s">
+              <div className="input-group">
+                <span className="input-group-text">First and last name</span>
                 <input
                   type="text"
                   aria-label="First name"
-                  class="form-controlbg-form"
+                  className="form-controlbg-form"
                 />
                 <input
                   type="text"
                   aria-label="Last name"
-                  class="form-control bg-form"
+                  className="form-control bg-form"
                 />
               </div>
             </div>
-            <div class="col-lg-12 mt-3 fs-s">
-              <div class="input-group mb-3">
-                <span class="input-group-text">$</span>
-                <span class="input-group-text">0.00</span>
+            <div className="col-lg-12 mt-3 fs-s">
+              <div className="input-group mb-3">
+                <span className="input-group-text">$</span>
+                <span className="input-group-text">0.00</span>
                 <input
                   type="text"
-                  class="form-controlbg-form"
+                  className="form-controlbg-form"
                   aria-label="Dollar amount (with dot and two decimal places)"
                 />
               </div>
             </div>
-            <div class="col-lg-12 fs-s">
-              <div class="input-group">
+            <div className="col-lg-12 fs-s">
+              <div className="input-group">
                 <input
                   type="text"
-                  class="form-controlbg-form"
+                  className="form-controlbg-form"
                   aria-label="Dollar amount (with dot and two decimal places)"
                 />
-                <span class="input-group-text">$</span>
-                <span class="input-group-text">0.00</span>
+                <span className="input-group-text">$</span>
+                <span className="input-group-text">0.00</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
-        <div class="row fs-16 p-3">
-          <div class="col-lg-12">
-            <div class="card border-0 bg-transparent fs-s ">
-              <div class="align-items-center  ">
-                <p class="text-start fs-16">
+      <div className="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
+        <div className="row fs-16 p-3">
+          <div className="col-lg-12">
+            <div className="card border-0 bg-transparent fs-s ">
+              <div className="align-items-center  ">
+                <p className="text-start fs-16">
                   Buttons, Checkbox and Radio groups{" "}
                 </p>
               </div>
-              <div class="card-body text-start fs-s">
-                <p class="text-muted">
+              <div className="card-body text-start fs-s">
+                <p className="text-muted">
                   Use any checkbox, radio, or button option within an input
                   group’s addon instead of text. We recommend adding{" "}
                   <code>mt-0</code>
                   class to the <code>form-check-input</code> when there’s no
                   visible text next to the input.
                 </p>
-                <div class="row g-3 fs-s">
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-text">
+                <div className="row g-3 fs-s">
+                  <div className="col-lg-6">
+                    <div className="input-group">
+                      <div className="input-group-text">
                         <input
-                          class="form-check-input mt-0bg-form "
+                          className="form-check-input mt-0bg-form "
                           type="checkbox"
                           value
                           aria-label="checkbox for following text input"
@@ -1104,16 +1104,16 @@ function Form() {
                       </div>
                       <input
                         type="text"
-                        class="form-control bg-form"
+                        className="form-control bg-form"
                         arial-label="Text input with checkbox"
                       />
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-text">
+                  <div className="col-lg-6">
+                    <div className="input-group">
+                      <div className="input-group-text">
                         <input
-                          class="form-check-input mt-0 bg-form"
+                          className="form-check-input mt-0 bg-form"
                           type="checkbox"
                           value
                           aria-label="checkbox for following text input"
@@ -1121,15 +1121,15 @@ function Form() {
                       </div>
                       <input
                         type="text"
-                        class="form-control bg-form"
+                        className="form-control bg-form"
                         arial-label="Text input with checkbox"
                       />
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-group">
+                  <div className="col-lg-6">
+                    <div className="input-group">
                       <button
-                        class="btn primary_outline bg-form "
+                        className="btn primary_outline bg-form "
                         type="button"
                         id="button-addon1"
                       >
@@ -1138,24 +1138,24 @@ function Form() {
 
                       <input
                         type="text"
-                        class="form-control bg-form"
+                        className="form-control bg-form"
                         placeholder=""
                         arial-label="Example text with button addon"
                         aria-describedby="button-addon1"
                       />
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-group">
+                  <div className="col-lg-6">
+                    <div className="input-group">
                       <input
                         type="text"
-                        class="form-control bg-form"
+                        className="form-control bg-form"
                         placeholder=""
                         arial-label="Recipient's username"
                         aria-describedby="button-addon2"
                       />
                       <button
-                        class="btn btn-outline-success success_outline "
+                        className="btn btn-outline-success success_outline "
                         type="button"
                         id="button-addon2"
                       >
@@ -1163,13 +1163,13 @@ function Form() {
                       </button>
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <button class="btn btn_primary" type="button">
+                  <div className="col-lg-6">
+                    <div className="input-group">
+                      <button className="btn btn_primary" type="button">
                         Button
                       </button>
                       <button
-                        class="btn btn_sucess "
+                        className="btn btn_sucess "
                         type="button"
                         id="button-addon2"
                       >
@@ -1177,27 +1177,27 @@ function Form() {
                       </button>
                       <input
                         type="text"
-                        class="form-control bg-form"
+                        className="form-control bg-form"
                         placeholder=""
                         arial-label="Example text with two button addons"
                         aria-describedby="button-addon2"
                       />
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-group">
+                  <div className="col-lg-6">
+                    <div className="input-group">
                       <input
                         type="text"
-                        class="form-control bg-form"
+                        className="form-control bg-form"
                         placeholder=""
                         arial-label="Example text with two button addons"
                         aria-describedby="button-addon2"
                       />
-                      <button class="btn btn_primary" type="button">
+                      <button className="btn btn_primary" type="button">
                         Button
                       </button>
                       <button
-                        class="btn btn_sucess "
+                        className="btn btn_sucess "
                         type="button"
                         id="button-addon2"
                       >
@@ -1211,24 +1211,24 @@ function Form() {
           </div>
         </div>
       </div>
-      <div class="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
-        <div class="row fs-16 p-3">
-          <div class="col-lg-12">
-            <div class="card border-0 bg-transparent fs-s ">
-              <div class="align-items-center  ">
-                <p class="text-start fs-16">Buttons with dropdowns</p>
+      <div className="container mt-4  shadow-sm p-3 mb-5 bg-body rounded bg_white">
+        <div className="row fs-16 p-3">
+          <div className="col-lg-12">
+            <div className="card border-0 bg-transparent fs-s ">
+              <div className="align-items-center  ">
+                <p className="text-start fs-16">Buttons with dropdowns</p>
               </div>
-              <div class="card-body text-start fs-s">
-                <p class="text-muted">
+              <div className="card-body text-start fs-s">
+                <p className="text-muted">
                   You can use a button with the dropdown toggle to set the file
                   input group.
                 </p>
-                <div class="row g-3">
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="dropdown">
+                <div className="row g-3">
+                  <div className="col-lg-6">
+                    <div className="input-group">
+                      <div className="dropdown">
                         <button
-                          class="btn btn_primary dropdown-toggle "
+                          className="btn btn_primary dropdown-toggle "
                           type="button"
                           id="dropdownMenuButton1"
                           data-bs-toggle="dropdown"
@@ -1237,21 +1237,21 @@ function Form() {
                           Dropdown button
                         </button>
                         <ul
-                          class="dropdown-menu"
+                          className="dropdown-menu"
                           aria-labelledby="dropdownMenuButton1"
                         >
                           <li>
-                            <a class="dropdown-item" href="#">
+                            <a className="dropdown-item" href="#">
                               Action
                             </a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#">
+                            <a className="dropdown-item" href="#">
                               Another action
                             </a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#">
+                            <a className="dropdown-item" href="#">
                               Something else here
                             </a>
                           </li>
@@ -1259,21 +1259,21 @@ function Form() {
                       </div>
                       <input
                         type="text"
-                        class="form-control "
+                        className="form-control "
                         aria-label="Text input with dropdown button"
                       />
                     </div>
                   </div>
-                  <div class="col-lg-6">
-                    <div class="input-group">
+                  <div className="col-lg-6">
+                    <div className="input-group">
                       <input
                         type="text"
-                        class="form-control bg-form"
+                        className="form-control bg-form"
                         aria-label="Text input with dropdown button"
                       />
-                      <div class="dropdown">
+                      <div className="dropdown">
                         <button
-                          class="btn btn_success dropdown-toggle"
+                          className="btn btn_success dropdown-toggle"
                           type="button"
                           id="dropdownMenuButton1"
                           data-bs-toggle="dropdown"
@@ -1282,21 +1282,21 @@ function Form() {
                           Dropdown button
                         </button>
                         <ul
-                          class="dropdown-menu"
+                          className="dropdown-menu"
                           aria-labelledby="dropdownMenuButton1"
                         >
                           <li>
-                            <a class="dropdown-item" href="#">
+                            <a className="dropdown-item" href="#">
                               Action
                             </a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#">
+                            <a className="dropdown-item" href="#">
                               Another action
                             </a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href="#">
+                            <a className="dropdown-item" href="#">
                               Something else here
                             </a>
                           </li>
@@ -1305,69 +1305,69 @@ function Form() {
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-12 mt-3">
-                  <div class="input-group">
+                <div className="col-lg-12 mt-3">
+                  <div className="input-group">
                     <button
-                      class="btn primary_outline dropdown-toggle"
+                      className="btn primary_outline dropdown-toggle"
                       type="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
                       Dropdown
                     </button>
-                    <ul class="dropdown-menu">
+                    <ul className="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Action before
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Another action before
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Something else here
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Separated link
                         </a>
                       </li>
                     </ul>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       aria-label="Text input with 2 dropdown buttons"
                     />
                     <button
-                      class="btn success_outline dropdown-toggle"
+                      className="btn success_outline dropdown-toggle"
                       type="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
                       Dropdown
                     </button>
-                    <ul class="dropdown-menu dropdown-menu-end">
+                    <ul className="dropdown-menu dropdown-menu-end">
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Action
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Another action
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Something else here
                         </a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <a className="dropdown-item" href="#">
                           Separated link
                         </a>
                       </li>
@@ -1401,7 +1401,7 @@ function Form() {
                     <h4>Drop files here or click to upload.</h4>
                   </div>
                 </div>
-                <label for="customFileInput" className="form-label"></label>
+                <label htmlFor="customFileInput" className="form-label"></label>
                 <input
                   type="file"
                   className="form-control bg-form "
@@ -1412,7 +1412,7 @@ function Form() {
             </div>
           </div>
         </div>
-        <div class="row mt-4 p-3 mb-3 bg-body rounded bg_white ">
+        <div className="row mt-4 p-3 mb-3 bg-body rounded bg_white ">
           <div className="col-lg-6 mb-2">
             <div className="card d-flex">
               <div className="card-header">
@@ -1426,7 +1426,7 @@ function Form() {
                 </p>
 
                 <div
-                  class="filepond--root filepond filepond-input-multiple filepond--hopper text-center d-flex justify-content-center align-items-center "
+                  className="filepond--root filepond filepond-input-multiple filepond--hopper text-center d-flex justify-content-center align-items-center "
                   data-style-button-remove-item-position="left"
                   data-style-button-process-item-position="right"
                   data-style-load-indicator-position="right"
@@ -1439,7 +1439,7 @@ function Form() {
                     <div className="img-box-fs-s">
                       Drag &amp; Drop your files or{" "}
                       <span
-                        class="filepond--label-action fw-medium"
+                        className="filepond--label-action fw-medium"
                         tabindex="0"
                       >
                         Browse
@@ -1447,7 +1447,7 @@ function Form() {
                     </div>
                   </div>
                 </div>
-                <label for="customFileInput" className="form-label"></label>
+                <label htmlFor="customFileInput" className="form-label"></label>
                 <input
                   type="file"
                   className="form-control bg-form"
@@ -1470,7 +1470,7 @@ function Form() {
                 </p>
                 <div className="avatar-xl mx-auto d-flex flex-column justify-content-center align-items-center text-center">
                   <div
-                    class="filepond--root filepond filepond-input-multiple filepond--hopper text-center filepond-profile-picture d-flex justify-content-center align-items-center "
+                    className="filepond--root filepond filepond-input-multiple filepond--hopper text-center filepond-profile-picture d-flex justify-content-center align-items-center "
                     data-style-button-remove-item-position="left"
                     data-style-button-process-item-position="right"
                     data-style-load-indicator-position="right"
@@ -1483,7 +1483,7 @@ function Form() {
                       <div className="img-box-fs-s">
                         Drag &amp; Drop your files or{" "}
                         <span
-                          class="filepond--label-action fw-medium"
+                          className="filepond--label-action fw-medium"
                           tabindex="0"
                         >
                           Browse
@@ -1491,7 +1491,7 @@ function Form() {
                       </div>
                     </div>
                   </div>
-                  <label for="customFileInput" className="form-label"></label>
+                  <label htmlFor="customFileInput" className="form-label"></label>
                   <input
                     type="file"
                     className="form-control bg-form "
@@ -1517,7 +1517,7 @@ function Form() {
                   More complex forms can be built using our grid classes. Use
                   these for form layouts that require multiple columns, varied
                   widths, and additional alignment options.{" "}
-                  <span class="fw-medium">
+                  <span className="fw-medium">
                     Requires the <code>$enable-grid-classes</code> Sass variable
                     to be enabled
                   </span>{" "}
@@ -1527,9 +1527,9 @@ function Form() {
                   <form action="javascript:void(0)">
                     <div className="row d-flex">
                       <div className="col-md-6">
-                        <div class="mb-3">
+                        <div className="mb-3">
                           <label
-                            for="firstNameinput"
+                            htmlFor="firstNameinput"
                             className="form-label form-fs-s fw-medium"
                           >
                             First Name
@@ -1545,7 +1545,7 @@ function Form() {
                       <div className="col-md-6">
                         <div className="mb-3">
                           <label
-                            for="lastNameinput"
+                            htmlFor="lastNameinput"
                             className="form-label form-fs-s fw-medium"
                           >
                             Last Name
@@ -1561,7 +1561,7 @@ function Form() {
                       <div className="col-md-12">
                         <div className="mb-3">
                           <label
-                            for="lastNameinput"
+                            htmlFor="lastNameinput"
                             className="form-label form-fs-s fw-medium"
                           >
                             Company Name
@@ -1577,7 +1577,7 @@ function Form() {
                       <div className="col-md-6">
                         <div className="mb-3">
                           <label
-                            for="phonenumberInput"
+                            htmlFor="phonenumberInput"
                             className="form-label form-fs-s fw-medium"
                           >
                             Phone Number
@@ -1593,7 +1593,7 @@ function Form() {
                       <div className="col-md-6">
                         <div className="mb-3">
                           <label
-                            for="emailInput"
+                            htmlFor="emailInput"
                             className="form-label form-fs-s fw-medium"
                           >
                             Email Address
@@ -1609,7 +1609,7 @@ function Form() {
                       <div className="col-md-12">
                         <div className="mb-3">
                           <label
-                            for="address1ControlTextarea "
+                            htmlFor="address1ControlTextarea "
                             className="form-label form-fs-s fw-medium"
                           >
                             Address
@@ -1625,7 +1625,7 @@ function Form() {
                       <div className="col-md-6">
                         <div className="mb-3">
                           <label
-                            for="citynameInput"
+                            htmlFor="citynameInput"
                             className="form-label form-fs-s fw-medium"
                           >
                             City
@@ -1641,7 +1641,7 @@ function Form() {
                       <div className="col-md-6">
                         <div className="mb-3">
                           <label
-                            for="ForminputState"
+                            htmlFor="ForminputState"
                             className="form-label fw-medium form-fs-s"
                           >
                             State
@@ -1692,7 +1692,7 @@ function Form() {
                   <form action="javascript:void(0);">
                     <div className="mb-3">
                       <label
-                        for="employeeName "
+                        htmlFor="employeeName "
                         className="form-label fw-medium form-fs-s"
                       >
                         Employee Name
@@ -1706,7 +1706,7 @@ function Form() {
                     </div>
                     <div className="mb-3">
                       <label
-                        for="employeeUrl"
+                        htmlFor="employeeUrl"
                         className="form-label fw-medium form-fs-s"
                       >
                         Employee Department URL
@@ -1720,7 +1720,7 @@ function Form() {
                     </div>
                     <div className="mb-3">
                       <label
-                        for="StartleaveDate"
+                        htmlFor="StartleaveDate"
                         className="form-label fw-medium form-fs-s"
                       >
                         Start Leave Date
@@ -1735,7 +1735,7 @@ function Form() {
                     </div>
                     <div className="mb-3">
                       <label
-                        for="EndleaveDate"
+                        htmlFor="EndleaveDate"
                         className="form-label fw-medium form-fs-s bg-form"
                       >
                         End Leave Date
@@ -1750,7 +1750,7 @@ function Form() {
                     </div>
                     <div className="mb-3">
                       <label
-                        for="VertimeassageInput"
+                        htmlFor="VertimeassageInput"
                         className="form-label fw-medium form-fs-s"
                       >
                         Message
@@ -1792,10 +1792,10 @@ function Form() {
                 </p>
                 <div className="live-preview">
                   <form action="javascript:void(0);">
-                    <div class="row mb-3">
+                    <div className="row mb-3">
                       <div className="col-lg-3">
                         <label
-                          for="nameInput"
+                          htmlFor="nameInput"
                           className="form-label fw-medium form-fs-s"
                         >
                           Name
@@ -1813,7 +1813,7 @@ function Form() {
                     <div className="row mb-3">
                       <div className="col-lg-3">
                         <label
-                          for="websiteUrl"
+                          htmlFor="websiteUrl"
                           className="form-label fw-medium form-fs-s"
                         >
                           Website URL
@@ -1831,7 +1831,7 @@ function Form() {
                     <div className="row mb-3">
                       <div className="col-lg-3">
                         <label
-                          for="dateInput"
+                          htmlFor="dateInput"
                           className="form-label fw-medium form-fs-s"
                         >
                           Date
@@ -1850,7 +1850,7 @@ function Form() {
                     <div className="row mb-3">
                       <div className="col-lg-3">
                         <label
-                          for="timeInput"
+                          htmlFor="timeInput"
                           className="form-label fw-medium form-fs-s"
                         >
                           Time
@@ -1870,7 +1870,7 @@ function Form() {
                     <div className="row mb-3">
                       <div className="col-lg-3">
                         <label
-                          for="leaveemails"
+                          htmlFor="leaveemails"
                           className="form-label fw-medium form-fs-s"
                         >
                           Email Id
@@ -1888,7 +1888,7 @@ function Form() {
                     <div className="row mb-3">
                       <div className="col-lg-3">
                         <label
-                          for="contactNumber"
+                          htmlFor="contactNumber"
                           className="form-label fw-medium form-fs-s"
                         >
                           Contact Number
@@ -1907,7 +1907,7 @@ function Form() {
                     <div className="row mb-3">
                       <div className="col-lg-3">
                         <label
-                          for="meassageInput"
+                          htmlFor="meassageInput"
                           className="form-label fw-medium form-fs-s"
                         >
                           Message

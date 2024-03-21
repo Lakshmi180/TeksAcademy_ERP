@@ -112,7 +112,7 @@ body,
   --erp-indigo-400: #818cf8;
   --erp-indigo-500: #6366f1;
   --erp-indigo-600: #4f46e5;
-  --erp-indigo-700: #4338ca;
+  --erp-indigo-700: #405189;
   --erp-indigo-800: #3730a3;
   --erp-indigo-900: #312e81;
 
@@ -382,7 +382,6 @@ a {
   box-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
   border: 0px;
   background-color: var(--erp-card-color);
-
 }
 
 .card-header {
@@ -410,7 +409,7 @@ a {
   border-bottom: 1px solid var(--erp-gray-200);
 }
 
-.table>:not(caption) {
+.table > :not(caption) {
   border-bottom: var(--erp-table-bottom-border) !important;
 }
 
@@ -419,7 +418,7 @@ a {
   padding-left: 16px;
 }
 
-.table>thead {
+.table > thead {
   background-color: #f3f6f9;
 }
 
@@ -447,12 +446,10 @@ a {
 
 .form-control.search {
   background-color: var(--erp-input-bg-color) !important;
-
 }
 
 .form-control.search::placeholder {
   color: var(--erp-text-mute) !important;
-  ;
 }
 
 form input {
@@ -461,12 +458,10 @@ form input {
 
 form input::placeholder {
   color: var(--erp-text-mute) !important;
-
 }
 
 .form-select {
   background-color: var(--erp-input-bg-color) !important;
-
 }
 
 .form-select::placeholder {
@@ -479,7 +474,6 @@ form textarea {
 
 form textarea::placeholder {
   color: var(--erp-text-mute) !important;
-
 }
 
 li {
@@ -572,8 +566,8 @@ h1 {
   left: 0px;
   top: 0px;
   bottom: 0px;
-  border-color: #0ab39c;
-  background-color: #0ab39c;
+  /* border-color: #0ab39c; */
+  /* background-color: #0ab39c; */
   color: #fff;
   font-size: 16px;
   display: flex;
@@ -589,22 +583,22 @@ h1 {
   right: 0px;
   left: auto;
 }
-
+/* 
 .btn-label:hover {
   color: #fff;
   background-color: #2da494 !important;
   border-color: #2da494;
-}
+} */
 
-.btn_primary {
-  background-color: var(--erp-sidebar-color);
+/* .btn_primary {
+  background-color: var(--erp-sidebar-color) !important;
   color: white !important;
 }
 
 .btn_primary:hover {
   background-color: var(--erp-sidebar-color);
   color: #fff;
-}
+} */
 
 /* settings tabs */
 .bg-danger-subtle {
@@ -663,4 +657,19 @@ h1 {
   /* Set the height of the container */
   overflow-y: auto;
   /* Enable vertical scrolling */
+}
+
+/* table */
+.action-column {
+  /* position: sticky; */
+  /* right: 0; */
+  /* background-color: #fff; */
+  /* z-index: 1; Ensure action column is above other columns */
+  /* min-width: 100px; Set minimum width for action column */
+  /* padding: 0 10px; Add padding for better appearance */
+  position: sticky !important;
+  right: 0 !important;
+  background-color: #fff !important;
+  z-index: 1 !important;
+  background: var(--erp-gray-100) !important;
 }

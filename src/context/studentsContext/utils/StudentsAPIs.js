@@ -26,14 +26,17 @@ export const getEnrolledStudents = async(currentPage,perPage,search,filters)=>{
 }
 
 
-
-
-
-
 export const getCertificateStudents = async(currentPage,perPage,search,filters)=>{
+    console.log(currentPage,perPage,search,filters, "jvjfvjf" )
     const url =""
     return axios.get(url)
 }
+
+export const getRequested_CertificateStudents = async (currentPage,perPage,search,filters) => {
+    const url =""
+    return axios.get(url)
+}
+
 export const getFeeDetailsStudents=async(currentPage,perPage,search,filters)=>{
     const url =""
     return axios.get(url)

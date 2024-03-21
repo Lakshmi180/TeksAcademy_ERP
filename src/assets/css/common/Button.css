@@ -1,24 +1,14 @@
-/* .btn_primary {
-  background-color: var(--erp-sidebar-color);
-}
-.btn_outline_primary {
-  color: var(--erp-sidebar-color);
-  border-color: var(--erp-sidebar-color);
+.btn_primary {
+  background-color: var(--erp-indigo-700) !important;
+  color: white !important;
 }
 
-.btn_outline_primary:hover {
-  background-color: var(--erp-sidebar-color);
-  border: var(--erp-sidebar-color);
-  color: var(--erp-card-color);
+.btn {
+  transition: all 0.3s linear forwards !important;
+  font-size: var(--erp-fs-14) !important;
 }
 
-
-
-.btn-success {
-  background-color: var(--erp-green-500);
+.btn:active {
+  transform: translateY(2px) !important;
+  outline: none !important;
 }
-
-.btn-load .spinner-border {
-  height: 19px;
-  width: 19px;
-} */

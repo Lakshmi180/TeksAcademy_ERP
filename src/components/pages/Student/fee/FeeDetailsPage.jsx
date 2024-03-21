@@ -1,5 +1,5 @@
-import React from 'react'
-import "../../../../assets/css/common/Table.css"
+import React from "react";
+import "../../../../assets/css/common/Table.css";
 import { AiFillEye } from "react-icons/ai";
 import { MdEdit } from "react-icons/md";
 import { FaRupeeSign } from "react-icons/fa";
@@ -12,27 +12,43 @@ import { Link } from "react-router-dom";
 import { HiMiniPlus } from "react-icons/hi2";
 import { FaArrowRight } from "react-icons/fa6";
 import cc from "../../../../images/setting_tabs_icons/cc.svg";
-import FeeFollowUps from './FeeFollowUps';
+import FeeFollowUps from "./FeeFollowUps";
 function FeeDetailsPage() {
   return (
     <div>
       <div className="container d-flex justify-content-center">
         <ul class="nav gap-3" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active card card_animate" id="pills-feerecords-tab" data-bs-toggle="pill" data-bs-target="#pills-feerecords"
-              type="button" role="tab" aria-controls="pills-feerecords" aria-selected="true">
-              <div className='text-start p-2'>
+            <button
+              class="nav-link active card card_animate"
+              id="pills-feerecords-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-feerecords"
+              type="button"
+              role="tab"
+              aria-controls="pills-feerecords"
+              aria-selected="true"
+            >
+              <div className="text-start p-2">
                 <div className="d-flex justify-content-between">
                   <div>
-                    <span className="fs_20 fw-500"> Fee Records</span>
-                    <div className='mt-3 fs_14 lh-100 text_underline black_300'>
-                      <p>12,000 <FaArrowRight /></p>
+                    <span className="fs_20 fw-500">Fee Records</span>
+                    <div className="mt-3 fs_14 lh-100 text_underline black_300">
+                      <p>
+                        12,000 <FaArrowRight />
+                      </p>
                     </div>
                   </div>
                   <div className="flex-shrink-0">
                     <div className="avatar-md me-3">
                       <span className="avatar-title bg-danger-subtle rounded-circle fs-1">
-                        <img src={cc} className='img-fluid' width="100px" height="100px" alt="" />
+                        <img
+                          src={cc}
+                          className="img-fluid"
+                          width="100px"
+                          height="100px"
+                          alt=""
+                        />
                       </span>
                     </div>
                   </div>
@@ -41,20 +57,36 @@ function FeeDetailsPage() {
             </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link card card_animate" id="pills-duerecords-tab" data-bs-toggle="pill" data-bs-target="#pills-duerecords"
-              type="button" role="tab" aria-controls="pills-duerecords" aria-selected="false">
-              <div className='text-start p-2'>
+            <button
+              class="nav-link card card_animate"
+              id="pills-duerecords-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-duerecords"
+              type="button"
+              role="tab"
+              aria-controls="pills-duerecords"
+              aria-selected="false"
+            >
+              <div className="text-start p-2">
                 <div className="d-flex justify-content-between">
                   <div>
                     <span className="fs_20 fw-500">No Due Records</span>
-                    <div className='mt-3 fs_14 lh-100 text_underline black_300'>
-                      <p>5000 <FaArrowRight /></p>
+                    <div className="mt-3 fs_14 lh-100 text_underline black_300">
+                      <p>
+                        5000 <FaArrowRight />
+                      </p>
                     </div>
                   </div>
                   <div className="flex-shrink-0">
                     <div className="avatar-md me-3">
                       <span className="avatar-title bg-danger-subtle rounded-circle fs-1">
-                        <img src={cc} className='img-fluid' width="100px" height="100px" alt="" />
+                        <img
+                          src={cc}
+                          className="img-fluid"
+                          width="100px"
+                          height="100px"
+                          alt=""
+                        />
                       </span>
                     </div>
                   </div>
@@ -63,55 +95,94 @@ function FeeDetailsPage() {
             </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link card card_animate" id="pills-feefollow-tab" data-bs-toggle="pill" data-bs-target="#pills-feefollow"
-              type="button" role="tab" aria-controls="pills-feefollow" aria-selected="false">
+            <button
+              class="nav-link card card_animate"
+              id="pills-feefollow-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-feefollow"
+              type="button"
+              role="tab"
+              aria-controls="pills-feefollow"
+              aria-selected="false"
+            >
               <Link to="/feefollowups">
-                <div className='p-2 text-start'>
-                <div className="d-flex justify-content-between">
-                  <div>
-                    <span className="fs_20 fw-500">Fee FollowUps</span>
-                    <div className='mt-3 fs_14 lh-100 text_underline black_300'>
-                      <p>1100 <FaArrowRight /></p>
+                <div className="p-2 text-start">
+                  <div className="d-flex justify-content-between">
+                    <div>
+                      <span className="fs_20 fw-500">Fee FollowUps</span>
+                      <div className="mt-3 fs_14 lh-100 text_underline black_300">
+                        <p>
+                          1100 <FaArrowRight />
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <div className="avatar-md me-3">
-                      <span className="avatar-title bg-danger-subtle rounded-circle fs-1">
-                        <img src={cc} className='img-fluid' width="100px" height="100px" alt="" />
-                      </span>
+                    <div className="flex-shrink-0">
+                      <div className="avatar-md me-3">
+                        <span className="avatar-title bg-danger-subtle rounded-circle fs-1">
+                          <img
+                            src={cc}
+                            className="img-fluid"
+                            width="100px"
+                            height="100px"
+                            alt=""
+                          />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
               </Link>
             </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link card card_animate" id="pills-feereceived-tab" data-bs-toggle="pill" data-bs-target="#pills-feereceived"
-              type="button" role="tab" aria-controls="pills-feereceived" aria-selected="false">
-              <div className='p-2 text-start'>
+            <button
+              class="nav-link card card_animate"
+              id="pills-feereceived-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-feereceived"
+              type="button"
+              role="tab"
+              aria-controls="pills-feereceived"
+              aria-selected="false"
+            >
+              <div className="p-2 text-start">
                 <div className="d-flex justify-content-between">
                   <div>
                     <span className="fs_20 fw-500">Fee Received</span>
-                    <div className='mt-3 fs_14 lh-100 text_underline black_300'>
-                      <p>2345 <FaArrowRight /></p>
+                    <div className="mt-3 fs_14 lh-100 text_underline black_300">
+                      <p>
+                        2345 <FaArrowRight />
+                      </p>
                     </div>
                   </div>
                   <div className="flex-shrink-0">
                     <div className="avatar-md me-3">
                       <span className="avatar-title bg-danger-subtle rounded-circle fs-1">
-                        <img src={cc} className='img-fluid' width="100px" height="100px" alt="" />
+                        <img
+                          src={cc}
+                          className="img-fluid"
+                          width="100px"
+                          height="100px"
+                          alt=""
+                        />
                       </span>
                     </div>
                   </div>
                 </div>
-              </div></button>
+              </div>
+            </button>
           </li>
         </ul>
       </div>
       <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-feerecords" role="tabpanel" aria-labelledby="pills-feerecords-tab" tabindex="0">
-          <div className='container-fluid'>
+        <div
+          class="tab-pane fade show active"
+          id="pills-feerecords"
+          role="tabpanel"
+          aria-labelledby="pills-feerecords-tab"
+          tabindex="0"
+        >
+          <div className="container-fluid">
             <div className="row">
               <div className="col-xl-12">
                 <div className="card border-0">
@@ -119,7 +190,11 @@ function FeeDetailsPage() {
                     <div className="row justify-content-between">
                       <div className="col-sm-4">
                         <div className="search-box">
-                          <input type="text" className="form-control search" placeholder="Search for..." />
+                          <input
+                            type="text"
+                            className="form-control search"
+                            placeholder="Search for..."
+                          />
                         </div>
                       </div>
                       <div className="col-sm-6">
@@ -144,14 +219,36 @@ function FeeDetailsPage() {
                               <option value="8">1000</option>
                             </select>
                           </div>
-                          <button className="btn btn_primary fs-13 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Filters</button>
+                          <button
+                            className="btn btn_primary fs-13 me-2"
+                            type="button"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight"
+                            aria-controls="offcanvasRight"
+                          >
+                            Filters
+                          </button>
                         </div>
                       </div>
                     </div>
-                    <div className="offcanvas offcanvas-end mt-5 pt-2" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div
+                      className="offcanvas offcanvas-end mt-5 pt-2 bg_white text_color"
+                      id="offcanvasRight"
+                      aria-labelledby="offcanvasRightLabel"
+                    >
                       <div className="offcanvas-header">
-                        <h5 className="offcanvas-title" id="offcanvasRightLabel">Filters</h5>
-                        <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <h5
+                          className="offcanvas-title"
+                          id="offcanvasRightLabel"
+                        >
+                          Filters
+                        </h5>
+                        <button
+                          type="button"
+                          className="btn-close"
+                          data-bs-dismiss="offcanvas"
+                          aria-label="Close"
+                        ></button>
                       </div>
                       <div className="offcanvas-body p-2">
                         {/* from calendar */}
@@ -184,7 +281,9 @@ function FeeDetailsPage() {
                         </div>
                         {/* branch */}
                         <div className="mt-2">
-                          <label className="form-label fs-s fw-medium txt-color">Branch</label>
+                          <label className="form-label fs-s fw-medium txt-color">
+                            Branch
+                          </label>
                           <select
                             className="form-select form-control"
                             aria-label="Default select example"
@@ -203,7 +302,9 @@ function FeeDetailsPage() {
                         </div>
                         {/* department */}
                         <div className="mt-2">
-                          <label className="form-label fs-s fw-medium txt-color">Mode Of Training</label>
+                          <label className="form-label fs-s fw-medium txt-color">
+                            Mode Of Training
+                          </label>
                           <select
                             className="form-select form-control"
                             aria-label="Default select example"
@@ -231,10 +332,11 @@ function FeeDetailsPage() {
                   </div>
                   <div className="card-body">
                     <div class="table-responsive table-card border-0">
-                      <table className="table table-centered align-middle table-nowrap equal-cell-table">
-                        <thead>
-                          <tr className=''>
-                            {/* <th scope="col">
+                      <div className="table-container">
+                        <table className="table table-centered align-middle table-nowrap equal-cell-table">
+                          <thead>
+                            <tr className="">
+                              {/* <th scope="col">
                           <div className="form-check">
                             <input
                               className="form-check-input"
@@ -248,80 +350,111 @@ function FeeDetailsPage() {
                             ></label>
                           </div>
                         </th> */}
-                            <th scope="col" className="fs_13 lh_xs fw_600 black_color ">
-                              S.No
-                            </th>
-                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                              Name <br />
-                              Branch<br />
-                              Counsellor
-                            </th>
-                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                              Contact <br />
-                              Email
-                            </th>
-                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                              Course<br />
-                              Date of Joining<br />
-                              Total Fee
-                            </th>
-                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                              Paid Fee<br />
-                              Due Amount<br />
-                              Next Due Date
-                            </th>
-                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                              Total
-                              Installments
-                            </th>
-                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                              Paid
-                              Installments
-                            </th>
-                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                              Action
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody className=''>
-                          {/* 1st row */}
-                          <tr>
-                            <td className='fs_13 black_color fw_500 lh_xs bg_light '>
-                              01
-                            </td>
-                            <td className='fs_13 black_color  lh_xs bg_light'>
-                              K.Sadik<br />
-                              Ameerpet<br />
-                              Mohammed Afeeza
-                            </td>
-                            <td className='fs_13 black_color  lh_xs bg_light'>
-                              9347690554<br />
-                              kamulurisadik@gmail.com
-                            </td>
-                            <td className='fs_13 black_color  lh_xs bg_light'>
-                              AutoCad + Sketchup With Vray<br />
-                              18-Mar-2024<br />
-                              8,500
-                            </td>
-                            <td className='fs_13 black_color  lh_xs bg_light'>
-                              8,500<br />
-                              0<br />
-                              No NextDue Date
-                            </td>
-                            <td className='fs_13 black_color  lh_xs bg_light '>
-                              1
-                            </td>
-                            <td className='fs_13 black_color  lh_xs  bg_light'>
-                              1
-                            </td>
-                            <td className='fs_14 text_mute bg_light   lh_xs'>
-                              <Link to="/feeview">
-                              <AiFillEye className='text-mute table_icons me-3' />
-                              </Link>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                              <th
+                                scope="col"
+                                className="fs_13 lh_xs fw_600 black_color "
+                              >
+                                S.No
+                              </th>
+                              <th
+                                scope="col"
+                                className="fs_13 lh_xs black_color fw_600  "
+                              >
+                                Name <br />
+                                Branch
+                                <br />
+                                Counsellor
+                              </th>
+                              <th
+                                scope="col"
+                                className="fs_13 lh_xs black_color fw_600  "
+                              >
+                                Contact
+                              </th>
+                              <th
+                                scope="col"
+                                className="fs_13 lh_xs black_color fw_600  "
+                              >
+                                Course
+                                <br />
+                                Date of Joining
+                                <br />
+                                Total Fee
+                              </th>
+                              <th
+                                scope="col"
+                                className="fs_13 lh_xs black_color fw_600 "
+                              >
+                                Paid Fee
+                                <br />
+                                Due Amount
+                                <br />
+                                Next Due Date
+                              </th>
+                              <th
+                                scope="col"
+                                className="fs_13 lh_xs black_color fw_600 "
+                              >
+                                Total Installments
+                              </th>
+                              <th
+                                scope="col"
+                                className="fs_13 lh_xs black_color fw_600 "
+                              >
+                                Paid Installments
+                              </th>
+                              <th
+                                scope="col"
+                                className="fs_13 lh_xs black_color fw_600 "
+                              >
+                                Action
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody className="">
+                            {/* 1st row */}
+                            <tr>
+                              <td className="fs_13 black_color fw_500 lh_xs bg_light ">
+                                01
+                              </td>
+                              <td className="fs_13 black_color  lh_xs bg_light">
+                                K.Sadik
+                                <br />
+                                Ameerpet
+                                <br />
+                                Mohammed Afeeza
+                              </td>
+                              <td className="fs_13 black_color  lh_xs bg_light">
+                                9347690554
+                              </td>
+                              <td className="fs_13 black_color  lh_xs bg_light">
+                                AutoCad + Sketchup With Vray
+                                <br />
+                                18-Mar-2024
+                                <br />
+                                8,500
+                              </td>
+                              <td className="fs_13 black_color  lh_xs bg_light">
+                                8,500
+                                <br />
+                                0<br />
+                                No NextDue Date
+                              </td>
+                              <td className="fs_13 black_color  lh_xs bg_light ">
+                                1
+                              </td>
+                              <td className="fs_13 black_color  lh_xs  bg_light">
+                                1
+                              </td>
+                              <td className="fs_14 text_mute bg_light   lh_xs">
+                                <Link to="/feeview">
+                                  <AiFillEye className="text-mute table_icons me-3" />
+                                </Link>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                     <div className="align-items-center d-flex justify-content-between row text-center text-sm-start">
                       <div className="col-sm">
@@ -366,8 +499,14 @@ function FeeDetailsPage() {
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="pills-duerecords" role="tabpanel" aria-labelledby="pills-duerecords-tab" tabindex="0">
-          <div className='container-fluid'>
+        <div
+          class="tab-pane fade"
+          id="pills-duerecords"
+          role="tabpanel"
+          aria-labelledby="pills-duerecords-tab"
+          tabindex="0"
+        >
+          <div className="container-fluid">
             <div className="row">
               <div className="col-xl-12">
                 <div className="card border-0">
@@ -375,7 +514,11 @@ function FeeDetailsPage() {
                     <div className="row justify-content-between">
                       <div className="col-sm-4">
                         <div className="search-box">
-                          <input type="text" className="form-control search" placeholder="Search for..." />
+                          <input
+                            type="text"
+                            className="form-control search"
+                            placeholder="Search for..."
+                          />
                         </div>
                       </div>
                       <div className="col-sm-6">
@@ -400,14 +543,36 @@ function FeeDetailsPage() {
                               <option value="8">1000</option>
                             </select>
                           </div>
-                          <button className="btn btn_primary fs-13 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Filters</button>
+                          <button
+                            className="btn btn_primary fs-13 me-2"
+                            type="button"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight"
+                            aria-controls="offcanvasRight"
+                          >
+                            Filters
+                          </button>
                         </div>
                       </div>
                     </div>
-                    <div className="offcanvas offcanvas-end mt-5 pt-2" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div
+                      className="offcanvas offcanvas-end mt-5 pt-2"
+                      id="offcanvasRight"
+                      aria-labelledby="offcanvasRightLabel"
+                    >
                       <div className="offcanvas-header">
-                        <h5 className="offcanvas-title" id="offcanvasRightLabel">Filters</h5>
-                        <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <h5
+                          className="offcanvas-title"
+                          id="offcanvasRightLabel"
+                        >
+                          Filters
+                        </h5>
+                        <button
+                          type="button"
+                          className="btn-close"
+                          data-bs-dismiss="offcanvas"
+                          aria-label="Close"
+                        ></button>
                       </div>
                       <div className="offcanvas-body p-2">
                         {/* from calendar */}
@@ -440,7 +605,9 @@ function FeeDetailsPage() {
                         </div>
                         {/* branch */}
                         <div className="mt-2">
-                          <label className="form-label fs-s fw-medium txt-color">Branch</label>
+                          <label className="form-label fs-s fw-medium txt-color">
+                            Branch
+                          </label>
                           <select
                             className="form-select form-control"
                             aria-label="Default select example"
@@ -459,7 +626,9 @@ function FeeDetailsPage() {
                         </div>
                         {/* department */}
                         <div className="mt-2">
-                          <label className="form-label fs-s fw-medium txt-color">Mode Of Training</label>
+                          <label className="form-label fs-s fw-medium txt-color">
+                            Mode Of Training
+                          </label>
                           <select
                             className="form-select form-control"
                             aria-label="Default select example"
@@ -489,77 +658,109 @@ function FeeDetailsPage() {
                     <div class="table-responsive table-card border-0">
                       <table className="table table-centered align-middle table-nowrap equal-cell-table">
                         <thead>
-                          <tr className=''>
-                      
-                            <th scope="col" className="fs_13 lh_xs fw_600 black_color ">
+                          <tr className="">
+                            <th
+                              scope="col"
+                              className="fs_13 lh_xs fw_600 black_color "
+                            >
                               S.No
                             </th>
-                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                            <th
+                              scope="col"
+                              className="fs_13 lh_xs black_color fw_600  "
+                            >
                               Name <br />
-                              Branch<br />
+                              Branch
+                              <br />
                               Counsellor
                             </th>
-                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                            <th
+                              scope="col"
+                              className="fs_13 lh_xs black_color fw_600  "
+                            >
                               Contact <br />
                               Email
                             </th>
-                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                              Course<br />
-                              Date of Joining<br />
+                            <th
+                              scope="col"
+                              className="fs_13 lh_xs black_color fw_600  "
+                            >
+                              Course
+                              <br />
+                              Date of Joining
+                              <br />
                               Total Fee
                             </th>
-                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                              Paid Fee<br />
-                              Due Amount<br />
+                            <th
+                              scope="col"
+                              className="fs_13 lh_xs black_color fw_600 "
+                            >
+                              Paid Fee
+                              <br />
+                              Due Amount
+                              <br />
                               Next Due Date
                             </th>
-                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                              Total
-                              Installments
+                            <th
+                              scope="col"
+                              className="fs_13 lh_xs black_color fw_600 "
+                            >
+                              Total Installments
                             </th>
-                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                              Paid
-                              Installments
+                            <th
+                              scope="col"
+                              className="fs_13 lh_xs black_color fw_600 "
+                            >
+                              Paid Installments
                             </th>
-                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                            <th
+                              scope="col"
+                              className="fs_13 lh_xs black_color fw_600 "
+                            >
                               Action
                             </th>
                           </tr>
                         </thead>
-                        <tbody className=''>
+                        <tbody className="">
                           {/* 1st row */}
                           <tr>
-                            <td className='fs_13 black_color fw_500 lh_xs bg_light '>
+                            <td className="fs_13 black_color fw_500 lh_xs bg_light ">
                               01
                             </td>
-                            <td className='fs_13 black_color  lh_xs bg_light'>
-                              K.Sadik<br />
-                              Ameerpet<br />
+                            <td className="fs_13 black_color  lh_xs bg_light">
+                              K.Sadik
+                              <br />
+                              Ameerpet
+                              <br />
                               Mohammed Afeeza
                             </td>
-                            <td className='fs_13 black_color  lh_xs bg_light'>
-                              9347690554<br />
+                            <td className="fs_13 black_color  lh_xs bg_light">
+                              9347690554
+                              <br />
                               kamulurisadik@gmail.com
                             </td>
-                            <td className='fs_13 black_color  lh_xs bg_light'>
-                              AutoCad + Sketchup With Vray<br />
-                              18-Mar-2024<br />
+                            <td className="fs_13 black_color  lh_xs bg_light">
+                              AutoCad + Sketchup With Vray
+                              <br />
+                              18-Mar-2024
+                              <br />
                               8,500
                             </td>
-                            <td className='fs_13 black_color  lh_xs bg_light'>
-                              8,500<br />
+                            <td className="fs_13 black_color  lh_xs bg_light">
+                              8,500
+                              <br />
                               0<br />
                               No NextDue Date
                             </td>
-                            <td className='fs_13 black_color  lh_xs bg_light '>
+                            <td className="fs_13 black_color  lh_xs bg_light ">
                               1
                             </td>
-                            <td className='fs_13 black_color  lh_xs  bg_light'>
+                            <td className="fs_13 black_color  lh_xs  bg_light">
                               1
                             </td>
-                            <td className='fs_14 text_mute bg_light   lh_xs'>
+                            <td className="fs_14 text_mute bg_light   lh_xs">
                               <Link to="/noduerecords">
-                              <AiFillEye className='text-mute table_icons me-3' />
+                                <AiFillEye className="text-mute table_icons me-3" />
                               </Link>
                             </td>
                           </tr>
@@ -609,13 +810,25 @@ function FeeDetailsPage() {
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="pills-feefollow" role="tabpanel" aria-labelledby="pills-feefollow-tab" tabindex="0">
-      
+        <div
+          class="tab-pane fade"
+          id="pills-feefollow"
+          role="tabpanel"
+          aria-labelledby="pills-feefollow-tab"
+          tabindex="0"
+        ></div>
+        <div
+          class="tab-pane fade"
+          id="pills-feereceived"
+          role="tabpanel"
+          aria-labelledby="pills-feereceived-tab"
+          tabindex="0"
+        >
+          ...
         </div>
-        <div class="tab-pane fade" id="pills-feereceived" role="tabpanel" aria-labelledby="pills-feereceived-tab" tabindex="0">...</div>
       </div>
     </div>
-  )
+  );
 }
 
-export default FeeDetailsPage
+export default FeeDetailsPage;

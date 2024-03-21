@@ -1,5 +1,5 @@
-import React from 'react'
-import "../../../../assets/css/common/Table.css"
+import React from "react";
+import "../../../../assets/css/common/Table.css";
 import { AiFillEye } from "react-icons/ai";
 import { MdEdit } from "react-icons/md";
 import { FaRupeeSign } from "react-icons/fa";
@@ -14,8 +14,7 @@ import { HiMiniPlus } from "react-icons/hi2";
 function RefundData() {
   return (
     <div>
-      
-      <div className='container-fluid'>
+      <div className="container-fluid">
         <div className="row">
           <div className="col-xl-12">
             <div className="card border-0">
@@ -23,7 +22,11 @@ function RefundData() {
                 <div className="row justify-content-between">
                   <div className="col-sm-4">
                     <div className="search-box">
-                      <input type="text" className="form-control search" placeholder="Search for..." />
+                      <input
+                        type="text"
+                        className="form-control search"
+                        placeholder="Search for..."
+                      />
                     </div>
                   </div>
                   <div className="col-sm-6">
@@ -48,27 +51,48 @@ function RefundData() {
                           <option value="8">1000</option>
                         </select>
                       </div>
-                      <button className="btn btn_primary fs-13 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Filters</button>
-                     
+                      <button
+                        className="btn btn_primary fs-13 me-2 "
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight"
+                      >
+                        Filters
+                      </button>
                     </div>
                   </div>
                 </div>
-                <div className="offcanvas offcanvas-end mt-5 pt-2" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div
+                  className="offcanvas offcanvas-end mt-5 pt-2 bg_white"
+                  id="offcanvasRight"
+                  aria-labelledby="offcanvasRightLabel"
+                >
                   <div className="offcanvas-header">
-                    <h5 className="offcanvas-title" id="offcanvasRightLabel">Filters</h5>
-                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h5
+                      className="offcanvas-title text_color"
+                      id="offcanvasRightLabel"
+                    >
+                      Filters
+                    </h5>
+                    <button
+                      type="button"
+                      className="btn-close btn_primary"
+                      data-bs-dismiss="offcanvas"
+                      aria-label="Close"
+                    ></button>
                   </div>
                   <div className="offcanvas-body p-2">
                     {/* from calendar */}
                     <div class="form-group text-start">
                       <label
-                        class="form-label fs-s txt-color"
+                        class="form-label fs-s text_color"
                         for="example-text-input "
                       >
                         From Date
                       </label>
                       <input
-                        class="form-control fs-s bg-form"
+                        class="form-control fs-s bg-form bg_input_color text_color"
                         type="date"
                         id="exampleInputdate"
                       />
@@ -76,22 +100,24 @@ function RefundData() {
                     {/* to calendar */}
                     <div class="form-group text-start mt-2">
                       <label
-                        class="form-label fs-s txt-color"
+                        class="form-label fs-s text_color"
                         for="example-text-input "
                       >
                         To Date
                       </label>
                       <input
-                        class="form-control fs-s bg-form"
+                        class="form-control fs-s bg-form bg_input_color text_color"
                         type="date"
                         id="exampleInputdate"
                       />
                     </div>
                     {/* profile */}
                     <div className="">
-                      <label className="form-label fs-s fw-medium txt-color">Consellors</label>
+                      <label className="form-label fs-s fw-medium text_color">
+                        Consellors
+                      </label>
                       <select
-                        className="form-select form-control"
+                        className="form-select form-control bg_input_color text_color"
                         aria-label="Default select example"
                         placeholder="Branch*"
                         name="branch"
@@ -108,9 +134,11 @@ function RefundData() {
                     </div>
                     {/* branch */}
                     <div className="mt-2">
-                      <label className="form-label fs-s fw-medium txt-color">Branch</label>
+                      <label className="form-label fs-s fw-medium text_color">
+                        Branch
+                      </label>
                       <select
-                        className="form-select form-control"
+                        className="form-select form-control bg_input_color text_color"
                         aria-label="Default select example"
                         placeholder="Branch*"
                         name="branch"
@@ -127,9 +155,11 @@ function RefundData() {
                     </div>
                     {/* department */}
                     <div className="mt-2">
-                      <label className="form-label fs-s fw-medium txt-color">Mode Of Training</label>
+                      <label className="form-label fs-s fw-medium text_color">
+                        Mode Of Training
+                      </label>
                       <select
-                        className="form-select form-control"
+                        className="form-select form-control bg_input_color text_color"
                         aria-label="Default select example"
                         placeholder="Branch*"
                         name="branch"
@@ -157,7 +187,7 @@ function RefundData() {
                 <div class="table-responsive table-card border-0">
                   <table className="table table-centered align-middle table-nowrap equal-cell-table">
                     <thead>
-                      <tr className=''>
+                      <tr className="">
                         {/* <th scope="col">
                           <div className="form-check">
                             <input
@@ -172,212 +202,277 @@ function RefundData() {
                             ></label>
                           </div>
                         </th> */}
-                        <th scope="col" className="fs_13 lh_xs fw_600 black_color ">
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs fw_600 black_color "
+                        >
                           S.No
                         </th>
-                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                          Student Name 
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs black_color fw_600  "
+                        >
+                          Student Name
                         </th>
-                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                       Registration Number
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs black_color fw_600  "
+                        >
+                          Registration Number
                         </th>
-                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                     Branch
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs black_color fw_600  "
+                        >
+                          Branch
                         </th>
-                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                        Course
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs black_color fw_600 "
+                        >
+                          Course
                         </th>
-                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                         
-                         Support Status
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs black_color fw_600 "
+                        >
+                          Support Status
                         </th>
-                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                         Rm Status
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs black_color fw_600 "
+                        >
+                          Rm Status
                         </th>
-                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                       Account Status
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs black_color fw_600 "
+                        >
+                          Account Status
                         </th>
-                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                        <th
+                          scope="col"
+                          className="fs_13 lh_xs black_color fw_600 "
+                        >
                           Action
                         </th>
                       </tr>
                     </thead>
-                    <tbody className=''>
+                    <tbody className="">
                       {/* 1st row */}
                       <tr>
-                        <td className='fs_13 black_color fw_500 lh_xs bg_light '>
+                        <td className="fs_13 black_color fw_500 lh_xs bg_light ">
                           01
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
+                        <td className="fs_13 black_color  lh_xs bg_light">
                           Vishakha chachane <br />
-                         
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                        TK7689375826572938
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          TK7689375826572938
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                        Kukkatpally
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          Kukkatpally
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                        Data science
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          Data science
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light '>
-                  None
+                        <td className="fs_13 black_color  lh_xs bg_light ">
+                          None
                         </td>
-                        <td className='fs_13 black_color  lh_xs  bg_light'>
-                        None
+                        <td className="fs_13 black_color  lh_xs  bg_light">
+                          None
                         </td>
-                        <td className='fs_13 black_color  lh_xs  bg_light'>
-                        None
+                        <td className="fs_13 black_color  lh_xs  bg_light">
+                          None
                         </td>
-                        <td className='fs_14 text_mute bg_light   lh_xs'>
-                        <Link to="/studentdataview"> <AiFillEye className='eye_icon table_icons me-3' /></Link>
-                        <Link to="/createuser" > <MdEdit className='edit_icon table_icons me-3' /> </Link> 
-                          <FaRupeeSign className='rupee_icon table_icons me-3' />
-                          <Link to="/studentapplicationprint"> <MdLocalPrintshop className='text-mute table_icons me-3' /> </Link>
-                          <FaRegIdCard className='id_card table_icons ' />
+                        <td className="fs_14 text_mute bg_light   lh_xs">
+                          <Link to="/studentdataview">
+                            {" "}
+                            <AiFillEye className="eye_icon table_icons me-3" />
+                          </Link>
+                          <Link to="/createuser">
+                            {" "}
+                            <MdEdit className="edit_icon table_icons me-3" />{" "}
+                          </Link>
+                          <FaRupeeSign className="rupee_icon table_icons me-3" />
+                          <Link to="/studentapplicationprint">
+                            {" "}
+                            <MdLocalPrintshop className="text-mute table_icons me-3" />{" "}
+                          </Link>
+                          <FaRegIdCard className="id_card table_icons " />
                         </td>
                       </tr>
-                        {/* 2nd row */}
-                        <tr>
-                        <td className='fs_13 black_color fw_500 lh_xs bg_light '>
-                          01
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                          Vishakha chachane <br />
-                         
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                        TK7689375826572938
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                        Kukkatpally
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                        Data science
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light '>
-                  None
-                        </td>
-                        <td className='fs_13 black_color  lh_xs  bg_light'>
-                        None
-                        </td>
-                        <td className='fs_13 black_color  lh_xs  bg_light'>
-                        None
-                        </td>
-                     
-                        <td className='fs_14 text_mute bg_light   lh_xs'>
-                        <Link to="/studentdataview"> <AiFillEye className='eye_icon table_icons me-3' /></Link>
-                        <Link to="/createuser" > <MdEdit className='edit_icon table_icons me-3' /> </Link> 
-                          <FaRupeeSign className='rupee_icon table_icons me-3' />
-                          <Link to="/studentapplicationprint"> <MdLocalPrintshop className='text-mute table_icons me-3' /> </Link>
-                          <FaRegIdCard className='id_card table_icons ' />
-                        </td>
-                      
-                      </tr>
-                       {/* 3rd row */}
-                       <tr>
-                        <td className='fs_13 black_color fw_500 lh_xs bg_light '>
-                          01
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                          Vishakha chachane <br />
-                         
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                        TK7689375826572938
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                        Kukkatpally
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                        Data science
-                        </td>
-                        <td className='fs_13 black_color  lh_xs bg_light '>
-                  None
-                        </td>
-                        <td className='fs_13 black_color  lh_xs  bg_light'>
-                        None
-                        </td>
-                        <td className='fs_13 black_color  lh_xs  bg_light'>
-                        None
-                        </td>
-                        <td className='fs_14 text_mute bg_light   lh_xs'>
-                        <Link to="/studentdataview"> <AiFillEye className='eye_icon table_icons me-3' /></Link>
-                        <Link to="/createuser" > <MdEdit className='edit_icon table_icons me-3' /> </Link> 
-                          <FaRupeeSign className='rupee_icon table_icons me-3' />
-                          <Link to="/studentapplicationprint"> <MdLocalPrintshop className='text-mute table_icons me-3' /> </Link>
-                          <FaRegIdCard className='id_card table_icons ' />
-                        </td>
-                      </tr>
-                       {/*4rth  row */}
+                      {/* 2nd row */}
                       <tr>
-                        <td className='fs_13 black_color fw_500 lh_xs bg_light '>
+                        <td className="fs_13 black_color fw_500 lh_xs bg_light ">
                           01
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
+                        <td className="fs_13 black_color  lh_xs bg_light">
                           Vishakha chachane <br />
-                         
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                        TK7689375826572938
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          TK7689375826572938
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                        Kukkatpally
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          Kukkatpally
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                        Data science
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          Data science
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light '>
-                  None
+                        <td className="fs_13 black_color  lh_xs bg_light ">
+                          None
                         </td>
-                        <td className='fs_13 black_color  lh_xs  bg_light'>
-                        None
+                        <td className="fs_13 black_color  lh_xs  bg_light">
+                          None
                         </td>
-                        <td className='fs_13 black_color  lh_xs  bg_light'>
-                        None
+                        <td className="fs_13 black_color  lh_xs  bg_light">
+                          None
                         </td>
-                        <td className='fs_14 text_mute bg_light   lh_xs'>
-                        <Link to="/studentdataview"> <AiFillEye className='eye_icon table_icons me-3' /></Link>
-                        <Link to="/createuser" > <MdEdit className='edit_icon table_icons me-3' /> </Link> 
-                          <FaRupeeSign className='rupee_icon table_icons me-3' />
-                          <Link to="/studentapplicationprint"> <MdLocalPrintshop className='text-mute table_icons me-3' /> </Link>
-                          <FaRegIdCard className='id_card table_icons ' />
+
+                        <td className="fs_14 text_mute bg_light   lh_xs">
+                          <Link to="/studentdataview">
+                            {" "}
+                            <AiFillEye className="eye_icon table_icons me-3" />
+                          </Link>
+                          <Link to="/createuser">
+                            {" "}
+                            <MdEdit className="edit_icon table_icons me-3" />{" "}
+                          </Link>
+                          <FaRupeeSign className="rupee_icon table_icons me-3" />
+                          <Link to="/studentapplicationprint">
+                            {" "}
+                            <MdLocalPrintshop className="text-mute table_icons me-3" />{" "}
+                          </Link>
+                          <FaRegIdCard className="id_card table_icons " />
                         </td>
                       </tr>
-                           {/*5th  row */}
+                      {/* 3rd row */}
                       <tr>
-                        <td className='fs_13 black_color fw_500 lh_xs bg_light '>
+                        <td className="fs_13 black_color fw_500 lh_xs bg_light ">
                           01
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
+                        <td className="fs_13 black_color  lh_xs bg_light">
                           Vishakha chachane <br />
-                         
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                        TK7689375826572938
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          TK7689375826572938
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                        Kukkatpally
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          Kukkatpally
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light'>
-                        Data science
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          Data science
                         </td>
-                        <td className='fs_13 black_color  lh_xs bg_light '>
-                  None
+                        <td className="fs_13 black_color  lh_xs bg_light ">
+                          None
                         </td>
-                        <td className='fs_13 black_color  lh_xs  bg_light'>
-                        None
+                        <td className="fs_13 black_color  lh_xs  bg_light">
+                          None
                         </td>
-                        <td className='fs_13 black_color  lh_xs  bg_light'>
-                        None
+                        <td className="fs_13 black_color  lh_xs  bg_light">
+                          None
                         </td>
-                        <td className='fs_14 text_mute bg_light   lh_xs'>
-                        <Link to="/studentdataview"> <AiFillEye className='eye_icon table_icons me-3' /></Link>
-                        <Link to="/createuser" > <MdEdit className='edit_icon table_icons me-3' /> </Link> 
-                          <FaRupeeSign className='rupee_icon table_icons me-3' />
-                          <Link to="/studentapplicationprint"> <MdLocalPrintshop className='text-mute table_icons me-3' /> </Link>
-                          <FaRegIdCard className='id_card table_icons ' />
+                        <td className="fs_14 text_mute bg_light   lh_xs">
+                          <Link to="/studentdataview">
+                            {" "}
+                            <AiFillEye className="eye_icon table_icons me-3" />
+                          </Link>
+                          <Link to="/createuser">
+                            {" "}
+                            <MdEdit className="edit_icon table_icons me-3" />{" "}
+                          </Link>
+                          <FaRupeeSign className="rupee_icon table_icons me-3" />
+                          <Link to="/studentapplicationprint">
+                            {" "}
+                            <MdLocalPrintshop className="text-mute table_icons me-3" />{" "}
+                          </Link>
+                          <FaRegIdCard className="id_card table_icons " />
+                        </td>
+                      </tr>
+                      {/*4rth  row */}
+                      <tr>
+                        <td className="fs_13 black_color fw_500 lh_xs bg_light ">
+                          01
+                        </td>
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          Vishakha chachane <br />
+                        </td>
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          TK7689375826572938
+                        </td>
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          Kukkatpally
+                        </td>
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          Data science
+                        </td>
+                        <td className="fs_13 black_color  lh_xs bg_light ">
+                          None
+                        </td>
+                        <td className="fs_13 black_color  lh_xs  bg_light">
+                          None
+                        </td>
+                        <td className="fs_13 black_color  lh_xs  bg_light">
+                          None
+                        </td>
+                        <td className="fs_14 text_mute bg_light   lh_xs">
+                          <Link to="/studentdataview">
+                            {" "}
+                            <AiFillEye className="eye_icon table_icons me-3" />
+                          </Link>
+                          <Link to="/createuser">
+                            {" "}
+                            <MdEdit className="edit_icon table_icons me-3" />{" "}
+                          </Link>
+                          <FaRupeeSign className="rupee_icon table_icons me-3" />
+                          <Link to="/studentapplicationprint">
+                            {" "}
+                            <MdLocalPrintshop className="text-mute table_icons me-3" />{" "}
+                          </Link>
+                          <FaRegIdCard className="id_card table_icons " />
+                        </td>
+                      </tr>
+                      {/*5th  row */}
+                      <tr>
+                        <td className="fs_13 black_color fw_500 lh_xs bg_light ">
+                          01
+                        </td>
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          Vishakha chachane <br />
+                        </td>
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          TK7689375826572938
+                        </td>
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          Kukkatpally
+                        </td>
+                        <td className="fs_13 black_color  lh_xs bg_light">
+                          Data science
+                        </td>
+                        <td className="fs_13 black_color  lh_xs bg_light ">
+                          None
+                        </td>
+                        <td className="fs_13 black_color  lh_xs  bg_light">
+                          None
+                        </td>
+                        <td className="fs_13 black_color  lh_xs  bg_light">
+                          None
+                        </td>
+                        <td className="fs_14 text_mute bg_light   lh_xs">
+                          <Link to="/studentdataview">
+                            {" "}
+                            <AiFillEye className="eye_icon table_icons me-3" />
+                          </Link>
+                          <Link to="/createuser">
+                            {" "}
+                            <MdEdit className="edit_icon table_icons me-3" />{" "}
+                          </Link>
+                          <FaRupeeSign className="rupee_icon table_icons me-3" />
+                          <Link to="/studentapplicationprint">
+                            {" "}
+                            <MdLocalPrintshop className="text-mute table_icons me-3" />{" "}
+                          </Link>
+                          <FaRegIdCard className="id_card table_icons " />
                         </td>
                       </tr>
                     </tbody>
@@ -426,7 +521,7 @@ function RefundData() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default RefundData
+export default RefundData;
