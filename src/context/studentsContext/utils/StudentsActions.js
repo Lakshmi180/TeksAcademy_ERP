@@ -17,6 +17,12 @@ export const getCertificateStudents=(data,context)=>({
     type: ActionTypes.SET_PAGINATED_STUDENTS,
     payload:{data:data, context:context}
 })
+
+export const getRequested_CertificateStudents=(data,context)=>({
+    type: ActionTypes.SET_PAGINATED_STUDENTS,
+    payload:{data:data, context:context}
+})
+
 export const getFeeDetailsStudents=(data, context)=>({
     type: ActionTypes.SET_PAGINATED_STUDENTS,
     payload:{data:data, context:context}
