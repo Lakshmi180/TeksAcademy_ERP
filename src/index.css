@@ -156,28 +156,31 @@ body,
   /* Changing colors */
 
   --erp-bg-color: #f3f3f9;
-  
+
   --erp-card-color: #fff;
   --erp-navbar-color: #fff;
   --erp-sidebar-color: #405189;
   --erp-text-color: #000;
   --erp-link-color: #4682b4;
   --erp-input-bg-color: #f3f6f9;
-
-  /* font-size */
-  --erp-fs-xxs: 10px;
+  --erp-bg-red: #fde8e4;
+  --erp-subtle: #daf4f0;
+  --erp-bg-yellow: #fef4e4;
+  --erp-bg-infosubtle: #dff0fa;
+  --erp-bg-secondary: #daf4f0;
+  --erp-bg-infolight:#bbf7d0;
+    /* font-size */
+    --erp-fs-xxs: 10px;
   --erp-fs-xs: 12px;
   --erp-fs-s: 0.8125rem;
   --erp-fs-m: 0.9375rem;
   --erp-fs-lg: 1.25rem;
   --erp-fs-7: 0.775rem;
   --erp-fs-13: 13px;
-
   --erp-fs-14: 14px;
   --erp-fs-16: 1rem;
   --erp-fs-17: 17px;
   --erp-fs-18: 18px;
-  --erp-fs-20: 20px;
   --erp-fs-22: 22px;
   --erp-fs-24: 24px;
 
@@ -214,6 +217,12 @@ body,
   --erp-text-color: #fff;
   --erp-link-color: #fff;
   --erp-input-bg-color: #282b2e;
+  --erp-bg-red: #f0654826;
+  --erp-subtle: #0ab39c26;
+  --erp-bg-yellow: #f7b84b26;
+  --erp-bg-infosubtle: #299cdb26;
+  --erp-bg-secondary: #3577f126;
+  --erp-bg-infolight: #0c4a6e;
 }
 
 /* .wrap {
@@ -346,11 +355,7 @@ a {
 }
 
 .black_300 {
-  color: var(--erp-black-300);
-}
-
-.text_black {
-  color: var(--erp-black-color);
+  color: var(--erp-text-color);
 }
 
 .text-mute {
@@ -492,10 +497,6 @@ h1 {
 .list_bg_white {
   background-color: var(--erp-card-color) !important;
   color: var(--erp-text-color) !important;
-}
-
-.error-input {
-  border: 1px solid var(--erp-red-500) !important;
 }
 
 .text_danger {

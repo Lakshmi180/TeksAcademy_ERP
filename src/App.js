@@ -58,6 +58,9 @@ import Addassets from "./components/pages/Inventory/Addassets";
 import Assignassets from "./components/pages/Inventory/Assignassets";
 import RefundData from "./components/pages/Student/refund/RefundData";
 import RefundForm from "./components/pages/Student/refund/RefundForm";
+import CreateReport from "./components/pages/Reports/CreateReport";
+import Addassetsform from "./components/pages/Inventory/Addassetsform";
+import Register from "./components/pages/Inventory/Register";
 function App() {
   const [isExpanded, setIsExpanded] = useState(true);
   const { theme } = useTheme();
@@ -140,7 +143,10 @@ function App() {
             <Route path="/feedetailspage" element={<FeeDetailsPage />} />
             <Route path="/refunddata" element={<RefundData />} />
             <Route path="/refundform" element={<RefundForm />} />
-           
+            <Route path="/reports" element={<CreateReport />} />
+            <Route path="/addassetsform" element={<Addassetsform/>} />
+
+   <Route path="/register" element={<Register/>} />
           </Routes>
         </div>
       </main>
