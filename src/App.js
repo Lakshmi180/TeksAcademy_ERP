@@ -98,43 +98,28 @@ function App() {
         <Route path="/department" element={<Department />} />
         <Route path="/createdepartment" element={<CreateDepartment />} />
         <Route path="/coursepackage" element={<CoursePackage />} />
-        <Route
-          path="/createcoursepackage"
-          element={<CreateCoursePackage />}
-        />
+        <Route path="/createcoursepackage" element={<CreateCoursePackage />} />
         <Route path="/leadsource" element={<LeadSource />} />
         <Route path="/createleadsource" element={<CreateLeadSource />} />
-        <Route
-          path="/createadmissionfee"
-          element={<CreateAdmissionFee />}
-        />
+        <Route path="/createadmissionfee" element={<CreateAdmissionFee />} />
         <Route path="/admissionfee" element={<AdmissionFee />} />
         <Route path="/addvendor" element={<AddVendor />} />
         <Route path="/createaddvendor" element={<CreateAddVendor />} />
         <Route path="/addassetstype" element={<AddAssetsType />} />
-        <Route
-          path="/createaddassetstype"
-          element={<CreateAddAssetsType />}
-        />
+        <Route path="/createaddassetstype" element={<CreateAddAssetsType />} />
         <Route path="/userdata" element={<UserData />} />
         <Route path="/certificate" element={<Certificate />} />
         <Route
           path="/requestedcertificate"
           element={<RequestedCertificate />}
         />
-        <Route
-          path="/issuedcertificates"
-          element={<IssuedCertificates />}
-        />
+        <Route path="/issuedcertificates" element={<IssuedCertificates />} />
         <Route path="/updatecourse/:courseId" element={<CreateCourse />} />
         <Route
           path="/requestedcertificate"
           element={<RequestedCertificate />}
         />
-        <Route
-          path="/issuedcertificates"
-          element={<IssuedCertificates />}
-        />
+        <Route path="/issuedcertificates" element={<IssuedCertificates />} />
 
         <Route path="/userview/:courseId" element={<UserView />} />
 
@@ -162,10 +147,7 @@ function App() {
 
         <Route path="/webinarleads" element={<Webinar />} />
         <Route path="/whatsappleads" element={<WhatsApp />} />
-        <Route
-          path="/downloadsyllabusleads"
-          element={<DownloadSyllabus />}
-        />
+        <Route path="/downloadsyllabusleads" element={<DownloadSyllabus />} />
         <Route path="/viewcourseleads" element={<ViewCourse />} />
         <Route path="/contactusleads" element={<ContactUs />} />
         <Route path="/hlpenquireleads" element={<HLPEnquireLeads />} />
@@ -183,19 +165,7 @@ function App() {
 }
 export default App;
 
-{
-  /* 
-  <Routes>
-        <Route element={<ReqireAuth />}>
-          <Route path="/" element={<Dashboard />} />
-        </Route>
-        <Route element={<PublicLayout />}>
-          <Route path="/login" element={<Login />} />
-          <Route path="/forgotpassword" element={<ForgotPassword />} />
-          <Route path="/changepassword" element={<ChangePassword />} />
-          <Route path="/lockscreen" element={<LockScreen />} />
-        </Route>
-      </Routes> */
-}
+
+
 
 

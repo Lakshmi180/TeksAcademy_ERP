@@ -187,7 +187,7 @@ useEffect(() => {
       <div className="container-fluid">
         <div className="card border-0">
           <div className="align-items-center">
-            <h5 className="mt-4 fs-16 txt-color ms-3">
+            <h5 className="mt-4 fs-16 black_color ms-3">
               User Creation Form
             </h5>
           </div>
@@ -199,13 +199,13 @@ useEffect(() => {
                     <div class="mb-3">
                       <label
                         for="firstNameinput"
-                        className="form-label fs-s fw-medium txt-color"
+                        className="form-label fs-s fw-medium black_color"
                       >
                         Full Name
                       </label>
                       <input
                         type="text"
-                        className="form-control fs-s bg-form txt-color"
+                        className="form-control fs-s bg-form black_color"
                         placeholder="Enter Full Name"
                         id="firstNameinput"
                         name="fullname"
@@ -219,7 +219,7 @@ useEffect(() => {
                     <div className="mb-3">
                       <label
                         for="email"
-                        className="form-label fs-s fw-medium txt-color"
+                        className="form-label fs-s fw-medium black_color"
                       >
                         Email Id
                       </label>
@@ -238,7 +238,7 @@ useEffect(() => {
                     <div className="mb-3">
                       <label
                         for="lastNameinput"
-                        className="form-label fs-s fw-medium txt-color"
+                        className="form-label fs-s fw-medium black_color"
                       >
                         Phone Number
                       </label>
@@ -257,7 +257,7 @@ useEffect(() => {
                     <div className="mb-3">
                       <label
                         for="lastNameinput"
-                        className="form-label fs-s fw-medium txt-color"
+                        className="form-label fs-s fw-medium black_color"
                       >
                         Designation
                       </label>
@@ -273,7 +273,7 @@ useEffect(() => {
                     </div>
                   </div>
                   <div className=" col-md-4 ">
-                    <label className="form-label fs-s fw-medium txt-color">
+                    <label className="form-label fs-s fw-medium black_color">
                       Department
                     </label>
                     <select
@@ -296,7 +296,7 @@ useEffect(() => {
                     </select>
                   </div>
                   <div className=" col-md-4 ">
-                    <label className="form-label fs-s fw-medium txt-color">
+                    <label className="form-label fs-s fw-medium black_color">
                       Report To
                     </label>
                     <select
@@ -321,7 +321,7 @@ useEffect(() => {
                     </select>
                   </div>
                   <div className=" col-md-4 ">
-                    <label className="form-label fs-s fw-medium txt-color">
+                    <label className="form-label fs-s fw-medium black_color">
                       Role
                     </label>
                     <select
@@ -344,7 +344,7 @@ useEffect(() => {
                     </select>
                   </div>
                   <div className=" col-md-4 ">
-                    <label className="form-label fs-s fw-medium txt-color">
+                    <label className="form-label fs-s fw-medium black_color">
                       Branch
                     </label>
                     <select

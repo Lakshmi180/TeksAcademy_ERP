@@ -11,19 +11,19 @@ function StudentApplicationPrint() {
           <div className="application">
             <div className="row">
               <div className="col-12 col-md-5 col-lg-5 col-xl-5">
-                <h5 className="text_black fw-600 fs_18 p-0">
+                <h5 className="black_color fw-600 fs_18 p-0">
                   Kapil Knowledge Hub Private Limited
                 </h5>
-                <p className="p-0 fs-14"> CIN: U80100TG2018PTC123853</p>
-                <p className="p-0 fs-14">
+                <p className="p-0 fs-14 black_color"> CIN: U80100TG2018PTC123853</p>
+                <p className="p-0 fs-14 black_color">
                   {" "}
                   <IoMdMail className="fs-16" /> info@teksacademy.com
                 </p>
-                <p className="p-0 fs-14">
+                <p className="p-0 fs-14 black_color">
                   <IoCall className="fs-16" />
                   1800-120-4748{" "}
                 </p>
-                <p className="p-0 fs-14">
+                <p className="p-0 fs-14 black_color">
                   {" "}
                   <PiAtBold className="fs-16" />
                   www.teksacademy.com
@@ -35,8 +35,8 @@ function StudentApplicationPrint() {
                   className=" w-75 "
                   alt=""
                 />
-                <p className="fs-15 mt-4">
-                  <b>Branch:</b> Kukatpally
+                <p className="fs-15 mt-4 black_color">
+                  <b className="">Branch:</b> Kukatpally
                 </p>
               </div>
             </div>
@@ -59,7 +59,7 @@ function StudentApplicationPrint() {
                             >
                               Name
                             </th>
-                            <td className="fs_13 black_color bg-light ">
+                            <td className="fs_13 black_color  ">
                               07 Oct, 2021
                             </td>
                           </tr>
@@ -501,7 +501,7 @@ function StudentApplicationPrint() {
                   </div>
                   <div className="card-body p-4">
                     <div>
-                      <h5 className="fs-14 fw-600"> 1.Admission:</h5>
+                      <h5 className="fs-14 fw-600 black_color"> 1.Admission:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         1. Students must provide all required documents and
@@ -515,7 +515,7 @@ function StudentApplicationPrint() {
                     </div>
 
                     <div>
-                      <h5 className="fs-14 fw-600"> 2. Fees:</h5>
+                      <h5 className="fs-14 fw-600 black_color"> 2. Fees:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         1. Students shall pay the course fees as per the due
@@ -540,7 +540,7 @@ function StudentApplicationPrint() {
                       </p>
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600"> 3. Course Material:</h5>
+                      <h5 className="fs-14 fw-600 black_color"> 3. Course Material:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         1. The course material provided by the Academy is the
@@ -557,7 +557,7 @@ function StudentApplicationPrint() {
                       </p>
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600"> 4. Attendence:</h5>
+                      <h5 className="fs-14 fw-600 black_color"> 4. Attendence:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         1. Regular attendance is essential for successfully
@@ -576,7 +576,7 @@ function StudentApplicationPrint() {
                       </p>
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">5. Conduct</h5>
+                      <h5 className="fs-14 fw-600 black_color">5. Conduct</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         1.Students must conduct themselves respectfully towards
@@ -595,7 +595,7 @@ function StudentApplicationPrint() {
                       </p>
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">6. Certification :</h5>
+                      <h5 className="fs-14 fw-600 black_color">6. Certification :</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         1.Certificates will be awarded to students who
@@ -610,7 +610,7 @@ function StudentApplicationPrint() {
                       </p>
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">7. Liablity:</h5>
+                      <h5 className="fs-14 fw-600 black_color">7. Liablity:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         1.The Academy is not responsible for any injury, loss,
@@ -624,7 +624,7 @@ function StudentApplicationPrint() {
                       </p>
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">8. Change in Policies:</h5>
+                      <h5 className="fs-14 fw-600 black_color">8. Change in Policies:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         1.The Academy may revise its policies, rules and
@@ -638,7 +638,7 @@ function StudentApplicationPrint() {
                       </p>
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">9. Dispute Resolutions:</h5>
+                      <h5 className="fs-14 fw-600 black_color">9. Dispute Resolutions:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         1.Any dispute arising out of or related to these terms
@@ -650,7 +650,7 @@ function StudentApplicationPrint() {
                       </p>
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">
+                      <h5 className="fs-14 fw-600 black_color">
                         10. Termination of Admission:
                       </h5>
                       <p class="text-mute fs-14 ms-3">
@@ -667,7 +667,7 @@ function StudentApplicationPrint() {
                       </p>
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">
+                      <h5 className="fs-14 fw-600 black_color">
                         11. No Placemets Guarantee
                       </h5>
                       <p class="text-mute fs-14 ms-3">
@@ -678,7 +678,7 @@ function StudentApplicationPrint() {
                       </p>
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">12. Using Id Card</h5>
+                      <h5 className="fs-14 fw-600 black_color">12. Using Id Card</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         1.Each student will be issued an identification card (ID
@@ -688,7 +688,7 @@ function StudentApplicationPrint() {
                       </p>
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">
+                      <h5 className="fs-14 fw-600 black_color ">
                         13. Copiying Institute Content
                       </h5>
                       <p class="text-mute fs-14 ms-3">
@@ -703,7 +703,7 @@ function StudentApplicationPrint() {
                       </p>
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">14. Teaching Staff:</h5>
+                      <h5 className="fs-14 fw-600 black_color">14. Teaching Staff:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         1.While the Academy will endeavor to provide training
@@ -717,7 +717,7 @@ function StudentApplicationPrint() {
                       </p>
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">15. Course Curriculum</h5>
+                      <h5 className="fs-14 fw-600 black_color">15. Course Curriculum</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         1. The Academy reserves the right to update the course
@@ -730,7 +730,7 @@ function StudentApplicationPrint() {
                       </p>
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">16. Course Duration:</h5>
+                      <h5 className="fs-14 fw-600 black_color">16. Course Duration:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         1. The course duration may vary from batch to batch, depending on factors such as students' attendance, training methodology, and other relevant factors as determined by the Academy.
@@ -740,7 +740,7 @@ function StudentApplicationPrint() {
                       </p>
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">17. Paid Internship Support:</h5>
+                      <h5 className="fs-14 fw-600 black_color">17. Paid Internship Support:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         1. The Academy may assist students in finding suitable paid internships based on their skills and interests.
@@ -756,7 +756,7 @@ function StudentApplicationPrint() {
                       </p>
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">18. Project Assignment:</h5>
+                      <h5 className="fs-14 fw-600 black_color">18. Project Assignment:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         1.The Academy may provide practice projects to the students for upgrading their learning and skill development.
@@ -770,7 +770,7 @@ function StudentApplicationPrint() {
                      
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">19. Intellectual Property:</h5>
+                      <h5 className="fs-14 fw-600 black_color">19. Intellectual Property:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         1.All intellectual property created by students during the live project or internship belongs to the Academy.
@@ -784,11 +784,11 @@ function StudentApplicationPrint() {
                      
                     </div>
 
-                    <div> <h5 className="fs-14 fw-600 p-3">Privacy Policy:</h5></div>
+                    <div> <h5 className="fs-14 fw-600 p-3 black_color">Privacy Policy:</h5></div>
                     
 
                     <div>
-                      <h5 className="fs-14 fw-600">1.  Information Collection :</h5>
+                      <h5 className="fs-14 fw-600 black_color">1.  Information Collection :</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         We collect personal information such as name, email address, phone number, and other details from students at the time of enrollment.
@@ -796,7 +796,7 @@ function StudentApplicationPrint() {
                       
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">2.  Use Of Information:</h5>
+                      <h5 className="fs-14 fw-600 black_color">2.  Use Of Information:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         We use the information collected to contact students regarding course updates, provide course materials, and issue certificates of completion.
@@ -804,7 +804,7 @@ function StudentApplicationPrint() {
                       
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">3. Information Sharing:</h5>
+                      <h5 className="fs-14 fw-600 black_color">3. Information Sharing:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         We do not share personal information with any third parties without the student's consent, except as required by law.
@@ -812,7 +812,7 @@ function StudentApplicationPrint() {
                       
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">4. Security:</h5>
+                      <h5 className="fs-14 fw-600 black_color">4. Security:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         We take reasonable measures to ensure the security of the personal information collected from students.
@@ -820,7 +820,7 @@ function StudentApplicationPrint() {
                       
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">5. Cookies:</h5>
+                      <h5 className="fs-14 fw-600 black_color">5. Cookies:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         We use cookies on our website to track user behavior and improve the user experience. Students can disable cookies in their web browser if they choose to do so.
@@ -828,7 +828,7 @@ function StudentApplicationPrint() {
                       
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">6. Data Retention :</h5>
+                      <h5 className="fs-14 fw-600 black_color">6. Data Retention :</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         We retain personal information for as long as necessary to provide the course and related services, or until the student requests that their information be deleted.
@@ -836,7 +836,7 @@ function StudentApplicationPrint() {
                       
                     </div>
                     <div>
-                      <h5 className="fs-14 fw-600">7.Modification:</h5>
+                      <h5 className="fs-14 fw-600 black_color">7.Modification:</h5>
                       <p class="text-mute fs-14 ms-3">
                         {" "}
                         We reserve the right to modify this privacy policy at any time without prior notice.
@@ -855,8 +855,8 @@ function StudentApplicationPrint() {
                       
                     </div>
                     <div className="row">
-                    <div className="col-6"><h6 className="fs-14 fw-600 p-2">Date :</h6><h6 className="fs-14 fw-600 p-2"> Place :</h6></div>
-                    <div className="col-6"><h6 className="fs-14 fw-600 p-2">Counsellor Signature : </h6><h6 className="fs-14 fw-600 p-2"> Student Signature : </h6></div></div>
+                    <div className="col-6"><h6 className="fs-14 fw-600 p-2 black_color">Date :</h6><h6 className="fs-14 fw-600 p-2 black_color"> Place :</h6></div>
+                    <div className="col-6"><h6 className="fs-14 fw-600 p-2 black_color">Counsellor Signature : </h6><h6 className="fs-14 fw-600 p-2 black_color"> Student Signature : </h6></div></div>
                   </div>
                 </div>
               </div>
