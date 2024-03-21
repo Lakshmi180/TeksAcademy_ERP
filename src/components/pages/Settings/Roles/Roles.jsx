@@ -22,7 +22,7 @@ export const Roles = () => {
                                 Roles
                             </h5>
                             <div>
-                                <button type="button" class="btn btn_success add-btn fs_13 ">
+                                <button type="button" class="btn btn_primary add-btn fs_13 ">
                                     <Link to="/createrole" className="button_color"><HiMiniPlus /> Add Role <i class="fas fa-critical-role    "></i></Link>
                                 </button>
                             </div>

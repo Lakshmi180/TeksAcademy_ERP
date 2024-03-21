@@ -109,9 +109,9 @@
     background-color: var(--erp-sky-500);
 }
 
-.nav-link.active {
+/* .nav-link.active {
     border-bottom: none;
-}
+} */
 .bg_light{
     background-color: var(--erp-white-color);
 }

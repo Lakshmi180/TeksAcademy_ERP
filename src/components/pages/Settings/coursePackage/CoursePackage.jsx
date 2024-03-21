@@ -19,7 +19,7 @@ const CoursePackage = () => {
                                 <div className="d-flex justify-content-between">
                                     <h5 className="fs-16 txt-color">Course Packages</h5>
                                     <div>
-                                        <button type="button" class="btn btn_success add-btn fs_13 ">
+                                        <button type="button" class="btn btn_primary add-btn fs_13 ">
                                             <Link to="/createcoursepackage" className="button_color"><HiMiniPlus /> Add Course Package</Link>
                                         </button>
                                     </div>

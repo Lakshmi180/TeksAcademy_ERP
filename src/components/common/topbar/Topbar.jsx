@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { MdFullscreen } from "react-icons/md";
 import { IoMdNotificationsOutline, IoIosSettings } from "react-icons/io";
 import { CgMenuLeft } from "react-icons/cg";
@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context/authContext/AuthContextProvider";
 import { CiMenuFries } from "react-icons/ci";
 import { useTheme } from "../../../context/themeContext/ThemeContext";
+import { useAuthContext } from "../../../hooks/useAuthContext";
 
 // export const Topbar = ({ setOpen, open }) => {
 
@@ -20,11 +21,31 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
   const { userLogout, LockTheScreen } = useContext(AuthContext);
   const { setDarkMode, theme } = useTheme();
 
+  const {AuthState}=useAuthContext();
+
+  console.log(AuthState.user.fullname , "AuthStatehere")
+
   const [isDropdownActive, setIsDropdownActive] = useState(false);
 
   const dropdownHandler = () => {
     setIsDropdownActive((dropdown) => !dropdown);
   };
+
+  const[userDetail, setUserDetail] = useState({
+    fullname:"",
+    profile:""
+  });
+
+  console.log(userDetail, "userDetailHERERD" )
+
+  // useEffect(() => {
+  //   if (AuthState.user.fullname) {
+  //     setUserDetail({ fullname: AuthState.user.fullname.substring(0,5), profile: AuthState.user.profile.substring(0,5) })
+  //   }
+  // }, [AuthState?.user?.fullname])
+
+ 
+
 
   return (
     <div className="">
@@ -68,8 +89,8 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
                   alt="User Avatar"
                 />
                 <div className="details d-flex flex-column position-relative">
-                  <span className="navbar_username">John Doe</span>
-                  <span className="navbar_userrole">Admin</span>
+                  <span className="navbar_username">{userDetail?.fullname}..</span>
+                  <span className="navbar_userrole">{userDetail?.profile}..</span>
                 </div>
                 {isDropdownActive && (
                   <div className="dropdown-card show">
