@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../../../../assets/css/common/Table.css";
+import "../../../../assets/css/common/Table.css"
 import { AiFillEye } from "react-icons/ai";
 import { MdEdit } from "react-icons/md";
 import { FaRupeeSign } from "react-icons/fa";
@@ -14,22 +14,19 @@ import { useBranchContext } from "../../../../hooks/useBranchContext";
 import { useDepartmentContext } from "../../../../hooks/useDepartmentContext";
 
 function UserData() {
+
   // here the adding the filters and pagination------------------------
-  const {
-    UsersState,
-    UsersState: { EnrolledUsers },
-    DispatchUsers,
-  } = useUserContext();
+  const { UsersState, UsersState: { EnrolledUsers }, DispatchUsers } = useUserContext();
   const { RoleState, createRole } = useRoleContext();
   const { DispatchBranch, BranchState, getAllBranches } = useBranchContext();
-  const { DispatchDepartment, DepartmentState, getAllDeparments } =
-    useDepartmentContext();
-  console.log(UsersState.EnrolledUsers, "bvjhjkbjbvjb");
+  const { DispatchDepartment, DepartmentState, getAllDeparments } = useDepartmentContext();
+
+  console.log(UsersState.EnrolledUsers, "bvjhjkbjbvjb")
   const { debouncesetSearch, debouncesetPage } = Usedebounce(DispatchUsers);
 
   const handleSearch = (e) => {
-    debouncesetSearch({ context: "ENROLLED_USERS", data: e.target.value });
-  };
+    debouncesetSearch({ context: "ENROLLED_USERS", data: e.target.value })
+  }
   const HandlePerPage = (e) => {
     const selectedValue = e.target.value;
     DispatchUsers({
@@ -37,25 +34,27 @@ function UserData() {
       payload: {
         context: "ENROLLED_USERS",
         data: selectedValue,
-      },
-    });
-  };
+      }
+    })
+  }
 
   const [filterCriteria, setfilterCriteria] = useState({
     profile: "",
     department: "",
     branch: "",
-  });
+  })
+
+
 
   const HandleFilterCertria = (e) => {
     const { name, value } = e.target;
     setfilterCriteria((prev) => ({
       ...prev,
       [name]: value,
-    }));
-  };
+    }))
+  }
   const filterSubmit = () => {
-    console.log("filterCriteriaram", filterCriteria);
+    console.log("filterCriteriaram", filterCriteria)
     DispatchUsers({
       type: "SET_FILTERS",
       payload: {
@@ -65,18 +64,18 @@ function UserData() {
           department: filterCriteria.department,
           branch: filterCriteria.branch,
         },
-      },
-    });
-  };
+      }
+    })
+  }
 
   const FilterReset = () => {
     setfilterCriteria({
       profile: "",
       department: "",
       branch: "",
-    });
+    })
     filterSubmit();
-  };
+  }
 
   useEffect(() => {
     DispatchUsers({
@@ -88,29 +87,33 @@ function UserData() {
           department: "",
           branch: "",
         },
-      },
-    });
-    debouncesetSearch({ context: "ENROLLED_USERS", data: "" });
-    debouncesetPage({ context: "ENROLLED_USERS", data: 1 });
+      }
+    })
+    debouncesetSearch({ context: "ENROLLED_USERS", data: "" })
+    debouncesetPage({ context: "ENROLLED_USERS", data: 1 })
     DispatchUsers({
       type: "SET_PER_PAGE",
       payload: {
         context: "ENROLLED_USERS",
         data: 10,
-      },
-    });
-  }, []);
+      }
+    })
 
-  const [currentPage, setCurrentPage] = useState(EnrolledUsers.currentPage);
+  }, [ ])
 
+  // const [currentPage, setCurrentPage] = useState(EnrolledUsers.currentPage);
+
+  let currentPage =EnrolledUsers.currentPage;
   const totalPages = EnrolledUsers.totalPages;
 
   const changePage = (page) => {
-    debouncesetPage({ context: "ENROLLED_USERS", data: page });
-    setCurrentPage(page);
+    debouncesetPage({ context: "ENROLLED_USERS", data: page })
+    currentPage=page
+    // setCurrentPage(page);
     // Add your logic here to handle page change
     console.log("Current page:", page);
   };
+
 
   const previousPage = () => {
     if (currentPage > 1) {
@@ -130,9 +133,10 @@ function UserData() {
     startPage = Math.max(1, endPage - 2);
   }
 
+
   return (
     <div>
-      <div className="container-fluid">
+      <div className='container-fluid'>
         <div className="row">
           <div className="col-xl-12">
             <div className="card border-0">
@@ -140,21 +144,21 @@ function UserData() {
                 <div className="row justify-content-between">
                   <div className="col-sm-4">
                     <div className="search-box">
-                      <input
-                        type="text"
+                      <input type="text"
                         className="form-control search"
                         placeholder="Search for..."
                         name="search"
                         required
                         onChange={handleSearch}
+
                       />
                     </div>
                   </div>
                   <div className="col-sm-6">
                     <div className="d-flex justify-content-end">
                       <div className="fs-13 me-3 mt-2">
-                        {EnrolledUsers.searchResultUsers} /{" "}
-                        {EnrolledUsers.totalUsers}
+                        {/* {EnrolledUsers.searchResultUsers} / {EnrolledUsers.totalUsers} */}
+
                       </div>
                       <div className="me-2">
                         <select
@@ -176,46 +180,22 @@ function UserData() {
                           <option value="500">500</option>
                         </select>
                       </div>
-                      <button
-                        className="btn btn_primary fs-13 me-2"
-                        type="button"
-                        data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight"
-                        aria-controls="offcanvasRight"
-                      >
-                        Filters
-                      </button>
+                      <button className="btn btn_primary fs-13 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Filters</button>
                       <button type="button" className="btn btn_primary fs-13">
-                        <Link to="/createuser" className="btn_primary">
-                          <HiMiniPlus />
-                          Add User
-                        </Link>
+                        <Link to="/createuser" className="btn_primary"><HiMiniPlus />Add User</Link>
                       </button>
                     </div>
                   </div>
                 </div>
-                <div
-                  className="offcanvas offcanvas-end mt-5 pt-2"
-                  id="offcanvasRight"
-                  aria-labelledby="offcanvasRightLabel"
-                >
+                <div className="offcanvas offcanvas-end mt-5 pt-2" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                   <div className="offcanvas-header">
-                    <h5 className="offcanvas-title" id="offcanvasRightLabel">
-                      Filters
-                    </h5>
-                    <button
-                      type="button"
-                      className="btn-close"
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close"
-                    ></button>
+                    <h5 className="offcanvas-title" id="offcanvasRightLabel">Filters</h5>
+                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                   <div className="offcanvas-body p-2">
                     {/* profile */}
                     <div className="">
-                      <label className="form-label fs-s fw-medium txt-color">
-                        Profile
-                      </label>
+                      <label className="form-label fs-s fw-medium txt-color">Profile</label>
                       <select
                         className="form-select form-control"
                         aria-label="Default select example"
@@ -226,22 +206,20 @@ function UserData() {
                         value={filterCriteria.profile}
                         onChange={HandleFilterCertria}
                       >
-                        <option value="" disabled selected>
-                          {" "}
-                          Select Role{" "}
-                        </option>
-                        {RoleState?.roles && RoleState?.roles.length > 0
-                          ? RoleState.roles.map((item, index) => (
-                              <option key={index}>{item.role}</option>
-                            ))
-                          : null}
+
+
+                        <option value="" disabled selected> Select Role </option>
+                        {
+                          RoleState?.roles && RoleState?.roles.length > 0 ? RoleState.roles.map((item, index) => (
+                            <option key={index}>{item.role}</option>
+                          )) : null
+                        }
+
                       </select>
                     </div>
                     {/* branch */}
                     <div className="mt-2">
-                      <label className="form-label fs-s fw-medium txt-color">
-                        Branch
-                      </label>
+                      <label className="form-label fs-s fw-medium txt-color">Branch</label>
                       <select
                         className="form-select form-control"
                         aria-label="Default select example"
@@ -252,22 +230,17 @@ function UserData() {
                         value={filterCriteria.branch}
                         onChange={HandleFilterCertria}
                       >
-                        <option value="" disabled selected>
-                          {" "}
-                          Enter Branch{" "}
-                        </option>
-                        {BranchState.branches &&
-                          BranchState.branches.length > 0 &&
-                          BranchState.branches.map((item) => (
-                            <option>{item.branch_name}</option>
-                          ))}
+                        <option value="" disabled selected> Enter Branch </option>
+                        {
+                          BranchState.branches && BranchState.branches.length > 0 && BranchState.branches.map((item) => (
+                            <option >{item.branch_name}</option>
+                          ))
+                        }
                       </select>
                     </div>
                     {/* department */}
                     <div className="mt-2">
-                      <label className="form-label fs-s fw-medium txt-color">
-                        Department
-                      </label>
+                      <label className="form-label fs-s fw-medium txt-color">Department</label>
                       <select
                         className="form-select form-control"
                         aria-label="Default select example"
@@ -278,32 +251,25 @@ function UserData() {
                         value={filterCriteria.department}
                         onChange={HandleFilterCertria}
                       >
-                        <option value="" disabled selected>
-                          {" "}
-                          Enter Department{" "}
-                        </option>
-                        {DepartmentState.departments &&
-                          DepartmentState.departments.length > 0 &&
-                          DepartmentState.departments.map((item, index) => (
+                        <option value="" disabled selected> Enter  Department </option>
+                        {
+                          DepartmentState.departments && DepartmentState.departments.length > 0 && DepartmentState.departments.map((item, index) => (
                             <option key={index}>{item.department_name}</option>
-                          ))}
+                          ))
+                        }
                       </select>
                     </div>
                     <div>
                       <div className="position-absolute bottom-0 start-0 ms-2 mb-2">
-                        <button
-                          className="btn btn_primary"
+                        <button className="btn btn_primary"
                           onClick={FilterReset}
-                        >
-                          Clear
+                        >Clear
                         </button>
                       </div>
                       <div className="position-absolute bottom-0 end-0 me-2 mb-2">
-                        <button
-                          className="btn btn_primary"
+                        <button className="btn btn_primary"
                           onClick={filterSubmit}
-                        >
-                          Save
+                        >Save
                         </button>
                       </div>
                     </div>
@@ -312,11 +278,10 @@ function UserData() {
               </div>
               <div className="card-body">
                 <div className="table-responsive table-card border-0">
-                  <div className="table-container">
-                    <table className="table table-centered align-middle table-nowrap equal-cell-table">
-                      <thead>
-                        <tr className="">
-                          {/* <th scope="col">
+                  <table className="table table-centered align-middle table-nowrap equal-cell-table">
+                    <thead>
+                      <tr className=''>
+                        {/* <th scope="col">
                           <div className="form-check">
                             <input
                               className="form-check-input"
@@ -330,215 +295,232 @@ function UserData() {
                             ></label>
                           </div>
                         </th> */}
-                          <th
-                            scope="col"
-                            className="fs_13 lh_xs fw_600 black_color "
-                          >
-                            S.No
-                          </th>
-                          <th
-                            scope="col"
-                            className="fs_13 lh_xs black_color fw_600  "
-                          >
-                            Name
-                          </th>
-                          <th
-                            scope="col"
-                            className="fs_13 lh_xs black_color fw_600  "
-                          >
-                            Email
-                          </th>
-                          <th
-                            scope="col"
-                            className="fs_13 lh_xs black_color fw_600  "
-                          >
-                            Phone No
-                          </th>
-                          <th
-                            scope="col"
-                            className="fs_13 lh_xs black_color fw_600 "
-                          >
-                            Designation
-                          </th>
-                          <th
-                            scope="col"
-                            className="fs_13 lh_xs black_color fw_600 "
-                          >
-                            Department
-                          </th>
-                          <th
-                            scope="col"
-                            className="fs_13 lh_xs black_color fw_600 "
-                          >
-                            Report To
-                          </th>
-                          <th
-                            scope="col"
-                            className="fs_13 lh_xs black_color fw_600 "
-                          >
-                            Profile
-                          </th>
-                          <th
-                            scope="col"
-                            className="fs_13 lh_xs black_color fw_600 "
-                          >
-                            Branch
-                          </th>
-                          <th
-                            scope="col"
-                            className="fs_13 lh_xs black_color fw_600 "
-                          >
-                            Action
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody className="">
-                        {EnrolledUsers.PaginatedUsers &&
-                        EnrolledUsers.PaginatedUsers.length > 0 ? (
-                          EnrolledUsers.PaginatedUsers.map((item, index) => {
-                            return (
-                              <tr>
-                                <td className="fs_13 black_color fw_500 lh_xs bg_light ">
-                                  {(currentPage - 1) * EnrolledUsers.perPage +
-                                    index +
-                                    1}
-                                </td>
-                                <td className="fs_13 black_color  lh_xs bg_light">
-                                  {item.fullname}
-                                </td>
-                                <td className="fs_13 black_color  lh_xs bg_light">
-                                  {item.email}
-                                </td>
-                                <td className="fs_13 black_color  lh_xs bg_light">
-                                  {item.phonenumber}
-                                </td>
-                                <td className="fs_13 black_color  lh_xs bg_light">
-                                  {item.designation}
-                                </td>
-                                <td className="fs_13 black_color  lh_xs bg_light ">
-                                  {item.department}
-                                </td>
-                                <td className="fs_13 black_color  lh_xs  bg_light">
-                                  {item.reportto}
-                                </td>
-                                <td className="fs_13 black_color  lh_xs  bg_light">
-                                  {item.profile}
-                                </td>
-                                <td className="fs_13 black_color  lh_xs  bg_light">
-                                  {item.branch}
-                                </td>
-                                <td className="fs_14 text_mute bg_light lh_xs d-flex mt-3">
-                                  <Link to={`/userview/${item.id}`}>
-                                    <AiFillEye className=" table_icons me-3 eye_icon" />
-                                  </Link>
+                        <th scope="col" className="fs_13 lh_xs fw_600 black_color ">
+                          S.No
+                        </th>
+                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                          Name
+                        </th>
+                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                          Email
+                        </th>
+                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                          Phone No
+                        </th>
+                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                          Designation
+                        </th>
+                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                          Department
+                        </th>
+                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                          Report To
+                        </th>
+                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                          Profile
+                        </th>
+                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                          Branch
+                        </th>
+                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                          Action
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className=''>
 
-                                  <Link to="/createuser">
-                                    <MdEdit className=" edit_icon me-3" />
-                                  </Link>
 
-                                  <div className="form-check form-switch form-switch-right form-switch-md ">
-                                    {/* <label for="FormValidationDefault" className="form-label text-muted">Show Code</label> */}
-                                    <input
-                                      className="form-check-input code-switcher toggle_btn"
-                                      type="checkbox"
-                                      id="FormValidationDefault"
-                                    />
-                                  </div>
-                                </td>
-                              </tr>
-                            );
-                          })
-                        ) : (
+                      {
+                        EnrolledUsers?.PaginatedUsers && EnrolledUsers?.PaginatedUsers?.length > 0 ? EnrolledUsers?.looading ? "loading"  : EnrolledUsers.PaginatedUsers.map((item, index) => {
+
+                          return (
+                            <tr>
+                              <td className='fs_13 black_color fw_500 lh_xs bg_light '>
+                                {(currentPage - 1) * EnrolledUsers.perPage + index + 1}
+                              </td>
+                              <td className='fs_13 black_color  lh_xs bg_light'>
+
+                                {item.fullname}
+                              </td>
+                              <td className='fs_13 black_color  lh_xs bg_light'>
+                                {item.email}
+
+                              </td>
+                              <td className='fs_13 black_color  lh_xs bg_light'>
+                                {item.phonenumber}
+
+                              </td>
+                              <td className='fs_13 black_color  lh_xs bg_light'>
+                                {item.designation}
+                              </td>
+                              <td className='fs_13 black_color  lh_xs bg_light '>
+                                {item.department}
+                              </td>
+                              <td className='fs_13 black_color  lh_xs  bg_light'>
+                                {item.reportto}
+                              </td>
+                              <td className='fs_13 black_color  lh_xs  bg_light'>
+                                {item.profile}
+                              </td>
+                              <td className='fs_13 black_color  lh_xs  bg_light'>
+                                {item.branch}
+                              </td>
+                              <td className='fs_14 text_mute bg_light lh_xs d-flex mt-3'>
+                                <Link to={`/userview/${item.id}`}>
+                                  <AiFillEye className=' table_icons me-3 eye_icon' />
+                                </Link>
+
+                                <Link to="/createuser">
+                                  <MdEdit className=' edit_icon me-3' />
+                                </Link>
+
+                                <div className="form-check form-switch form-switch-right form-switch-md ">
+                                  {/* <label for="FormValidationDefault" className="form-label text-muted">Show Code</label> */}
+                                  <input className="form-check-input code-switcher toggle_btn" type="checkbox" id="FormValidationDefault" />
+                                </div>
+                              </td>
+                            </tr>
+
+                          )
+                        }) :
                           <tr>
-                            <td>no data found</td>
+                            <td>
+                              no data found
+                            </td>
                           </tr>
-                        )}
-                        {/* 1st row */}
-                      </tbody>
-                    </table>
-                  </div>
+                      }
+                      {/* 1st row */}
+
+
+
+
+                    </tbody>
+                  </table>
                 </div>
                 <div className="align-items-center d-flex justify-content-between row text-center text-sm-start">
                   <div className="col-sm">
-                    <div className="text_mute pagination-text">
-                      Showing{" "}
-                      <span className="fw-semibold">
-                        {EnrolledUsers.startUser}
-                      </span>
-                      {"  "}
+
+                    {
+                      EnrolledUsers.PaginatedUsers && EnrolledUsers.PaginatedUsers.length > 0 ?
+                        EnrolledUsers?.loading ?
+                          <div className="text_mute pagination-text">
+                            Showing data is Loading ....
+                          </div>
+                          :
+                          <div className="text_mute pagination-text">
+                            Showing {" "}
+                            <span className="fw-semibold">{EnrolledUsers.startUser}</span>{"  "}
+                            to{"  "}
+                            <span className="fw-semibold">{EnrolledUsers.endUser}</span>{"  "}
+                            of{"  "}
+                            <span className="fw-semibold">{"  "}
+                              {EnrolledUsers.searchResultUsers}
+                            </span> Results
+                          </div>
+                        :
+                        <div className="text_mute pagination-text">
+                          Showing {" "}
+                          <span className="fw-semibold">0</span>{"  "}
+                          to{"  "}
+                          <span className="fw-semibold">0</span>{"  "}
+                          of{"  "}
+                          <span className="fw-semibold">{"  "}
+                            {EnrolledUsers.searchResultUsers}
+                          </span> Results
+                        </div>
+                    }
+
+
+
+                    {/* <div className="text_mute pagination-text">
+                      Showing {" "}
+                      <span className="fw-semibold">{EnrolledUsers.startUser}</span>{"  "}
                       to{"  "}
-                      <span className="fw-semibold">
-                        {EnrolledUsers.endUser}
-                      </span>
-                      {"  "}
+                      <span className="fw-semibold">{EnrolledUsers.endUser}</span>{"  "}
                       of{"  "}
-                      <span className="fw-semibold">
-                        {"  "}
+                      <span className="fw-semibold">{"  "}
                         {EnrolledUsers.totalUsers}
-                      </span>{" "}
-                      Results
-                    </div>
+                      </span> Results
+                    </div> */}
+
                   </div>
                   <div className="col-sm-auto mt-3 mt-sm-0">
                     <ul className="mt-2 pagination pagination-separated pagination-sm mb-0 justify-content-center">
-                      <li
-                        className={`page-item ${
-                          currentPage === 1 ? "cursor-crosshair" : " "
-                        }  p-1`}
-                      >
-                        <span
-                          className={`page-link ${
-                            currentPage > 1 ? "cursor-pointer" : ""
-                          } `}
+
+
+                      {/* <li className={`page-item ${currentPage === 1 ? 'cursor-crosshair' : ' '}  p-1`}>
+                        <span  className={`page-link ${currentPage > 1 ? 'cursor-pointer' : ''} `}
                           onClick={previousPage}
                         >
                           ←
                         </span>
+                    </li> */}
+
+                      <li className='page-item p-1'>
+                        <button
+                          onClick={previousPage}
+                          disabled={EnrolledUsers.loading ? true : false || EnrolledUsers.currentPage === 1}
+                          style={{ cursor: EnrolledUsers.loading || EnrolledUsers.currentPage === 1 ? 'not-allowed' : 'auto' }}
+                          className={`border border-1 ${EnrolledUsers.loading ? 'disabled' : EnrolledUsers.currentPage === 1 ? 'disabled' : 'cursor-auto'}`}
+                        >
+                          <span className="">
+                            ←
+                          </span>
+                        </button>
                       </li>
 
-                      {/* here the pagintation  */}
-                      {/* <li className="page-item p-1">
-                        <span href="#" className="page-link">
-                          1
-                        </span>
-                      </li>
-                      <li className="page-item active p-1">
-                        <span href="#" className="page-link ">
-                          2
-                        </span>
-                      </li>
-                      <li className="page-item p-1">
-                        <span href="#" className="page-link">
-                          3
-                        </span>
-                      </li> */}
-                      {/* ---------- */}
+
+
+                      {/* {[...Array(endPage - startPage + 1)].map((_, index) => {
+                        const page = startPage + index;
+                        return (
+                          <li key={page} className={`page-item p-1 ${currentPage === page ? 'active' : ''}`}>
+                            <span className="page-link" style={{ cursor: 'pointer' }} onClick={() => changePage(page)}>{page}</span>
+                          </li>
+                        );
+                      })} */}
 
                       {[...Array(endPage - startPage + 1)].map((_, index) => {
                         const page = startPage + index;
                         return (
-                          <li
-                            key={page}
-                            className={`page-item p-1 ${
-                              currentPage === page ? "active" : ""
-                            }`}
-                          >
-                            <span
-                              className="page-link"
-                              style={{ cursor: "pointer" }}
-                              onClick={() => changePage(page)}
+
+                          <li className={`page-item p-1`}>
+                            <button key={page}
+                              // onClick={() => changePage(page)}
+                              onClick={() => changePage(currentPage === 1 && page === startPage ? 1 : page)}
+                              disabled={EnrolledUsers.loading ? true : false}
+                              className={`border page-link border-1 ${currentPage === page || (currentPage === 1 && page === startPage) ? 'active' : ''}`}
                             >
-                              {page}
-                            </span>
+                              <span className=''>{page} </span>
+                            </button>
                           </li>
                         );
                       })}
 
-                      <li className="page-item p-1">
-                        <span href="#" className="page-link" onClick={nextPage}>
+
+                      {/* <li className="page-item p-1">
+                        <span href="#" className="page-link"
+                          onClick={nextPage}
+                        >
                           →
                         </span>
+                      </li> */}
+
+                      <li className='page-item p-1'>
+                        <button
+                          onClick={nextPage}
+                          disabled={EnrolledUsers.loading ? true : false || EnrolledUsers.currentPage ===
+                            EnrolledUsers.totalPages}
+                          style={{ cursor: EnrolledUsers.loading || EnrolledUsers.currentPage === EnrolledUsers.totalPages ? 'not-allowed' : 'auto' }}
+                          className={`border border-1${EnrolledUsers.loading ? 'disabled' : EnrolledUsers.currentPage === EnrolledUsers.totalPages ? 'disabled' : 'cursor-auto'}`}
+                        >
+                          <span className="">
+                            →
+                          </span>
+                        </button>
                       </li>
+
+
                     </ul>
                   </div>
                 </div>
@@ -548,7 +530,25 @@ function UserData() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default UserData;
+
+
+
+//  <li className="page-item p-1">
+//   <span href="#" className="page-link">
+//     1
+//   </span>
+// </li>
+// <li className="page-item active p-1">
+//   <span href="#" className="page-link ">
+//     2
+//   </span>
+// </li>
+// <li className="page-item p-1">
+//   <span href="#" className="page-link">
+//     3
+//   </span>
+// </li>

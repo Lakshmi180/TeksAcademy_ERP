@@ -71,6 +71,8 @@ import { HLPEnquireLeads } from "./components/pages/Leads/HLPEnquireLeads";
 import { SLPEnquireLeads } from "./components/pages/Leads/SLPEnquireLeads";
 import { Input } from "./components/common/design/Input";
 function App() {
+  
+
   return (
     <Routes>
       <Route element={<ReqireAuth />}>
@@ -187,20 +189,9 @@ function App() {
     </Routes>
   );
 }
-
-{
-  /* 
-  <Routes>
-        <Route element={<ReqireAuth />}>
-          <Route path="/" element={<Dashboard />} />
-        </Route>
-        <Route element={<PublicLayout />}>
-          <Route path="/login" element={<Login />} />
-          <Route path="/forgotpassword" element={<ForgotPassword />} />
-          <Route path="/changepassword" element={<ChangePassword />} />
-          <Route path="/lockscreen" element={<LockScreen />} />
-        </Route>
-      </Routes> */
-}
-
 export default App;
+
+
+
+
+

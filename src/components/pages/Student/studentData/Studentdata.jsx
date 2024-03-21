@@ -10,16 +10,41 @@ import { RiDeleteBin2Line } from "react-icons/ri";
 import { IoSettingsOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { HiMiniPlus } from "react-icons/hi2";
-import { useStudentsContext } from "../../../../hooks/useStudentsContext";
-import Usedebounce from "../../../../hooks/useDebounce/Usedebounce";
+import { useStudentsContext } from '../../../../hooks/useStudentsContext';
+import Usedebounce from '../../../../hooks/useDebounce/Usedebounce';
+import { useUserContext } from '../../../../hooks/useUserContext';
+import { useBranchContext } from '../../../../hooks/useBranchContext';
+
+
+
+ 
 
 function Studentdata() {
   //here the filters of the student data------------------------
-  const {
-    studentState,
-    studentState: { EnrolledStudents },
-    Dispatchstudents,
-  } = useStudentsContext();
+  const { studentState, studentState: { EnrolledStudents }, Dispatchstudents } = useStudentsContext();
+  const { DispatchBranch, BranchState, getAllBranches } = useBranchContext();
+  const {UsersState} =useUserContext();
+  
+  console.log(BranchState,"ramkrish")
+  
+ 
+
+  const [councellerDropDown, setCouncellerDropDown] = useState();
+  console.log(councellerDropDown, "UsersStatehereram")
+
+  useEffect(() => {
+    if (UsersState.TotalUsers) {
+      
+      const filteredUsers = UsersState.TotalUsers.filter(user =>{
+        return user.profile && user.profile.toLowerCase() === "counsellor";
+      })
+
+      setCouncellerDropDown(filteredUsers)
+    }
+  }, [UsersState?.TotalUsers])
+
+ 
+
   const { debouncesetSearch, debouncesetPage } = Usedebounce(Dispatchstudents);
 
   const handleSearch = (e) => {
@@ -44,6 +69,8 @@ function Studentdata() {
     enquiryTakenBy: "",
     modeOfTraining: "",
   });
+
+  console.log(filterCriteria, "hereradvvcvm")
 
   const HandleFilterCertria = (e) => {
     const { name, value } = e.target;
@@ -82,14 +109,19 @@ function Studentdata() {
 
   // here the Pagination-------------------------------------
 
-  const [currentPage, setCurrentPage] = useState(EnrolledStudents.currentPage);
+  // const [currentPage, setCurrentPage] = useState(EnrolledStudents.currentPage);
+
+  let currentPage = EnrolledStudents.currentPage
   const totalPages = EnrolledStudents.totalPages;
 
-  console.log(currentPage, "cuurentpagehere");
+  console.log(currentPage, "cuurentpagehere ",EnrolledStudents.currentPage )
+
+
 
   const changePage = (page) => {
-    debouncesetPage({ context: "ENROLLED_STUDENTS", data: page });
-    setCurrentPage(page);
+    debouncesetPage({ context: "ENROLLED_STUDENTS", data: page })
+    currentPage = page;
+    // setCurrentPage(page);
     // Add your logic here to handle page change
     console.log("Currentpage:", page);
   };
@@ -135,8 +167,9 @@ function Studentdata() {
                   <div className="col-sm-6">
                     <div className="d-flex justify-content-end">
                       <div className="fs-13 me-3 mt-2">
-                        {EnrolledStudents.searchResultStudents}/
-                        {EnrolledStudents.totalStudents}
+
+                        {/* {EnrolledStudents.searchResultStudents}/{EnrolledStudents.totalStudents} */}
+
                       </div>
                       <div className="me-2">
                         <select
@@ -246,12 +279,20 @@ function Studentdata() {
                         onChange={HandleFilterCertria}
                         required
                       >
-                        <option value="1">Select Consellors</option>
+                      <option value="" disabled selected> Select the Counceller </option>
+                      {
+                        councellerDropDown && councellerDropDown.length>0 ? councellerDropDown.map((item,index)=>{
+                          return(
+                            <option key={index} value={item.fullname}>{item.fullname}</option>
+                          )
+                        }):null
+                      }
+                        {/* <option value="1">Select Consellors</option>
                         <option value="2">Sr. Associate</option>
                         <option value="3">Regional Manager</option>
                         <option value="4">Branch Manager</option>
                         <option value="5">Counsellor</option>
-                        <option value="6">Admin</option>
+                        <option value="6">Admin</option> */}
                       </select>
                     </div>
                     {/* branch */}
@@ -269,12 +310,12 @@ function Studentdata() {
                         onChange={HandleFilterCertria}
                         required
                       >
-                        <option value="1">Select Branch</option>
-                        <option value="2">Hitech City</option>
-                        <option value="3">Kukkatpally</option>
-                        <option value="4">Dilsukhnagar</option>
-                        <option value="5">Secunderabad</option>
-                        <option value="6">Testing</option>
+                       <option value="" disabled selected> Select the Branch </option>
+                      {
+                        BranchState.branches && BranchState.branches.length > 0 ? BranchState.branches.map((item,index) => (
+                          <option key={index} value={item.fullname} >{item.branch_name}</option>
+                        )):null
+                      }
                       </select>
                     </div>
                     {/* department */}
@@ -559,47 +600,37 @@ function Studentdata() {
                 </div>
                 <div className="mt-2 bg-white align-items-center d-flex justify-content-between row text-center text-sm-start">
                   <div className="col-sm">
-                    {EnrolledStudents.PaginatedStudents &&
-                    EnrolledStudents.PaginatedStudents.length > 0 ? (
-                      EnrolledStudents?.loading ? (
-                        <div className="text_mute pagination-text">
-                          Showing data is Loading ....
-                        </div>
-                      ) : (
-                        <div className="text_mute pagination-text">
-                          Showing{" "}
-                          <span className="fw-semibold">
-                            {EnrolledStudents.startStudent}
-                          </span>
-                          {"  "}
-                          to{"  "}
-                          <span className="fw-semibold">
-                            {EnrolledStudents.endStudent}
-                          </span>
-                          {"  "}
-                          of{"  "}
-                          <span className="fw-semibold">
-                            {"  "}
-                            {EnrolledStudents.totalStudents}
-                          </span>{" "}
-                          Results
-                        </div>
-                      )
-                    ) : (
+              
+
+                    {
+                      EnrolledStudents.PaginatedStudents && EnrolledStudents.PaginatedStudents.length > 0?
+                       EnrolledStudents?.loading ?
+                       <div className="text_mute pagination-text">
+                       Showing data is Loading ....
+                       </div>
+                       :
                       <div className="text_mute pagination-text">
-                        Showing <span className="fw-semibold">0</span>
-                        {"  "}
-                        to{"  "}
-                        <span className="fw-semibold">0</span>
-                        {"  "}
-                        of{"  "}
-                        <span className="fw-semibold">
-                          {"  "}
-                          {EnrolledStudents.totalStudents}
-                        </span>{" "}
-                        Results
-                      </div>
-                    )}
+                      Showing {" "}
+                      <span className="fw-semibold">{EnrolledStudents.startStudent}</span>{"  "}
+                      to{"  "}
+                      <span className="fw-semibold">{EnrolledStudents.endStudent}</span>{"  "}
+                      of{"  "}
+                      <span className="fw-semibold">{"  "}
+                        {EnrolledStudents.searchResultStudents}
+                      </span> Results
+                    </div>
+                      :
+                      <div className="text_mute pagination-text">
+                      Showing {" "}
+                      <span className="fw-semibold">0</span>{"  "}
+                      to{"  "}
+                      <span className="fw-semibold">0</span>{"  "}
+                      of{"  "}
+                      <span className="fw-semibold">{"  "}
+                      {EnrolledStudents.searchResultStudents}
+                      </span> Results
+                    </div>
+                    }
 
                     {/* <div className="text_mute pagination-text">
                       Showing {" "}

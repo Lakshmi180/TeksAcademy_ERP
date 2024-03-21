@@ -6,7 +6,7 @@ import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { GoArrowRight } from "react-icons/go";
 import { HiUserCircle, HiOutlineLogout } from "react-icons/hi";
 import { FaLock } from "react-icons/fa";
-
+  
 import "../../../assets/css/common/Topbar.css";
 import { Button } from "../design/Button";
 import { Link } from "react-router-dom";
@@ -42,6 +42,9 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
   //     setUserDetail({ fullname: AuthState.user.fullname.substring(0,5), profile: AuthState.user.profile.substring(0,5) })
   //   }
   // }, [AuthState?.user?.fullname])
+
+ 
+
 
   return (
     <div className="">
