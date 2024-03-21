@@ -24,6 +24,7 @@ const StudentsReducer = (state, action) => {
                 ...state,
                 TotalStudents: [...state.TotalStudents, action?.payload.data]
             }
+            
             break;
 
         case ActionTypes.SET_LOADING:
@@ -46,6 +47,18 @@ const StudentsReducer = (state, action) => {
                     }
                 }
             }
+            
+            else if(action.payload.context === "REQUESTED_CERTIFICATE_STUDENTS"){
+                return{
+                    ...state,
+                    Requested_CertificateStudents:{
+                        ...state.Requested_CertificateStudents,
+                        loading:!state.Requested_CertificateStudents.loading
+                    }
+                }
+            }
+
+
             else if (action.payload.context === "FEE_DETAILS_STUDENTS") {
                 return {
                     ...state,
@@ -65,7 +78,9 @@ const StudentsReducer = (state, action) => {
                     }
                 }
             }
-            break
+            break;
+
+            // here the PAGINATED DATA;
 
         case ActionTypes.SET_PAGINATED_STUDENTS:
 
@@ -99,6 +114,25 @@ const StudentsReducer = (state, action) => {
                         startStudent: reducerData.startStudent,
                         endStudent: reducerData.endStudent,
                         totalStudents: reducerData.totalStudents,
+                        searchResultStudents: reducerData.searchResultStudents,
+                    }
+                }
+            }
+
+            else if (action.payload.context === "REQUESTED_CERTIFICATE_STUDENTS") {
+                const reducerData = action.payload.data
+                return {
+                    ...state,
+                    Requested_CertificateStudents: {
+                        ...state.Requested_CertificateStudents,
+                        Paginated_Requested_CertificateStudents: reducerData.TotalStudents,
+                        currentPage: reducerData.currentPage,
+                        totalPages: reducerData.totalPages,
+                        perPage: reducerData.perPage,
+                        startStudent: reducerData.startStudent,
+                        endStudent: reducerData.endStudent,
+                        totalStudents: reducerData.totalStudents,
+                        searchResultStudents: reducerData.searchResultStudents,
                     }
                 }
             }
@@ -134,7 +168,9 @@ const StudentsReducer = (state, action) => {
                 }
 
             }
-            break
+            break;
+
+            //  Here the handle Search 
 
         case ActionTypes.SET_SEARCH:
             if (action.payload.context === "ENROLLED_STUDENTS") {
@@ -158,6 +194,17 @@ const StudentsReducer = (state, action) => {
                 }
             }
 
+            else if (action.payload.context === "REQUESTED_CERTIFICATE_STUDENTS") {
+                return {
+                    ...state,
+                    Requested_CertificateStudents: {
+                        ...state.Requested_CertificateStudents,
+                        search: action.payload.data,
+                        currentPage: 1,
+                    }
+                }
+            }
+
             else if (action.payload.context === "FEE_DETAILS_STUDENTS") {
                 return {
                     ...state,
@@ -169,7 +216,9 @@ const StudentsReducer = (state, action) => {
                 }
             }
 
-            break
+            break;
+
+            // here the Handle PerPage
 
         case ActionTypes.SET_PER_PAGE:
             if (action.payload.context === "ENROLLED_STUDENTS") {
@@ -188,6 +237,15 @@ const StudentsReducer = (state, action) => {
                     ...state,
                     CertificateStudents: {
                         ...state.CertificateStudents,
+                        perPage: action.payload.data,
+                    }
+                }
+            }
+            else if (action.payload.context === "REQUESTED_CERTIFICATE_STUDENTS") {
+                return {
+                    ...state,
+                    Requested_CertificateStudents: {
+                        ...state.Requested_CertificateStudents,
                         perPage: action.payload.data,
                     }
                 }
@@ -213,11 +271,8 @@ const StudentsReducer = (state, action) => {
                     EnrolledStudents: {
                         ...state.EnrolledStudents,
                         currentPage: action.payload.data,
-
                     }
-
                 }
-
             }
 
             else if (action.payload.context === "CERTIFICATE_STUDENTS") {
@@ -225,6 +280,16 @@ const StudentsReducer = (state, action) => {
                     ...state,
                     CertificateStudents: {
                         ...state.CertificateStudents,
+                        currentPage: action.payload.data
+                    }
+                }
+            }
+
+            else if (action.payload.context === "REQUESTED_CERTIFICATE_STUDENTS") {
+                return {
+                    ...state,
+                    Requested_CertificateStudents: {
+                        ...state.Requested_CertificateStudents,
                         currentPage: action.payload.data
                     }
                 }
@@ -267,6 +332,19 @@ const StudentsReducer = (state, action) => {
                     }
                 }
             }
+
+            else if (action.payload.context === "REQUESTED_CERTIFICATE_STUDENTS") {
+                return {
+                    ...state,
+                    Requested_CertificateStudents: {
+                        ...state.Requested_CertificateStudents,
+                        filters: action.payload.data,
+                        currentPage: 1,
+                    }
+                }
+            }
+
+
             else if (action.payload.context === "FEE_DETAILS_STUDENTS") {
                 return {
                     ...state,

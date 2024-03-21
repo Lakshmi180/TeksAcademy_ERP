@@ -49,6 +49,26 @@ export const InitialState ={
         search:"",
     },
 
+    Requested_CertificateStudents:{
+        Paginated_Requested_CertificateStudents:[],
+        filters:{
+            fromDate:"",
+            toDate:"",
+            branch:"",
+            course:"",
+        },
+        currentPage:1,
+        perPage:10,
+        filteredSearchstudents:null,
+        totalStudents:null,
+        totalPages:null,
+        loading:false,
+        startStudent:null,
+        endStudent:null,
+        search:"",
+    },
+
+
     FeeDetailsStudents:{
         PaginatedFeeDetailsStudents:[],
         filters:{

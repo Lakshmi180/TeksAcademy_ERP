@@ -20,6 +20,7 @@ function UserData() {
   const { RoleState, createRole } = useRoleContext();
   const { DispatchBranch, BranchState, getAllBranches } = useBranchContext();
   const { DispatchDepartment, DepartmentState, getAllDeparments } = useDepartmentContext();
+
   console.log(UsersState.EnrolledUsers, "bvjhjkbjbvjb")
   const { debouncesetSearch, debouncesetPage } = Usedebounce(DispatchUsers);
 
@@ -98,21 +99,21 @@ function UserData() {
       }
     })
 
-  }, [])
+  }, [ ])
 
-  const [currentPage, setCurrentPage] = useState(EnrolledUsers.currentPage);
-  
+  // const [currentPage, setCurrentPage] = useState(EnrolledUsers.currentPage);
 
-
+  let currentPage =EnrolledUsers.currentPage;
   const totalPages = EnrolledUsers.totalPages;
 
   const changePage = (page) => {
-    debouncesetPage({ context: "ENROLLED_USERS", data:page })
-    setCurrentPage(page);
+    debouncesetPage({ context: "ENROLLED_USERS", data: page })
+    currentPage=page
+    // setCurrentPage(page);
     // Add your logic here to handle page change
     console.log("Current page:", page);
   };
-  
+
 
   const previousPage = () => {
     if (currentPage > 1) {
@@ -156,7 +157,7 @@ function UserData() {
                   <div className="col-sm-6">
                     <div className="d-flex justify-content-end">
                       <div className="fs-13 me-3 mt-2">
-                        {EnrolledUsers.searchResultUsers} / {EnrolledUsers.totalUsers}
+                        {/* {EnrolledUsers.searchResultUsers} / {EnrolledUsers.totalUsers} */}
 
                       </div>
                       <div className="me-2">
@@ -205,14 +206,14 @@ function UserData() {
                         value={filterCriteria.profile}
                         onChange={HandleFilterCertria}
                       >
-                        
+
 
                         <option value="" disabled selected> Select Role </option>
-                      {
-                        RoleState?.roles && RoleState?.roles.length > 0 ? RoleState.roles.map((item, index) => (
-                          <option key={index}>{item.role}</option>
-                        )) : null
-                      }
+                        {
+                          RoleState?.roles && RoleState?.roles.length > 0 ? RoleState.roles.map((item, index) => (
+                            <option key={index}>{item.role}</option>
+                          )) : null
+                        }
 
                       </select>
                     </div>
@@ -228,13 +229,13 @@ function UserData() {
                         name="branch"
                         value={filterCriteria.branch}
                         onChange={HandleFilterCertria}
-                      >                
+                      >
                         <option value="" disabled selected> Enter Branch </option>
-                      {
-                        BranchState.branches && BranchState.branches.length > 0 && BranchState.branches.map((item) => (
-                          <option >{item.branch_name}</option>
-                        ))
-                      }
+                        {
+                          BranchState.branches && BranchState.branches.length > 0 && BranchState.branches.map((item) => (
+                            <option >{item.branch_name}</option>
+                          ))
+                        }
                       </select>
                     </div>
                     {/* department */}
@@ -251,11 +252,11 @@ function UserData() {
                         onChange={HandleFilterCertria}
                       >
                         <option value="" disabled selected> Enter  Department </option>
-                      {
-                        DepartmentState.departments && DepartmentState.departments.length > 0 && DepartmentState.departments.map((item, index) => (
-                          <option key={index}>{item.department_name}</option>
-                        ))
-                      }
+                        {
+                          DepartmentState.departments && DepartmentState.departments.length > 0 && DepartmentState.departments.map((item, index) => (
+                            <option key={index}>{item.department_name}</option>
+                          ))
+                        }
                       </select>
                     </div>
                     <div>
@@ -330,12 +331,12 @@ function UserData() {
 
 
                       {
-                        EnrolledUsers.PaginatedUsers && EnrolledUsers.PaginatedUsers.length > 0 ? EnrolledUsers.PaginatedUsers.map((item, index) => {
+                        EnrolledUsers?.PaginatedUsers && EnrolledUsers?.PaginatedUsers?.length > 0 ? EnrolledUsers?.looading ? "loading"  : EnrolledUsers.PaginatedUsers.map((item, index) => {
 
                           return (
                             <tr>
                               <td className='fs_13 black_color fw_500 lh_xs bg_light '>
-                              {(currentPage-1)*EnrolledUsers.perPage+index+1}
+                                {(currentPage - 1) * EnrolledUsers.perPage + index + 1}
                               </td>
                               <td className='fs_13 black_color  lh_xs bg_light'>
 
@@ -387,7 +388,6 @@ function UserData() {
                               no data found
                             </td>
                           </tr>
-
                       }
                       {/* 1st row */}
 
@@ -399,8 +399,40 @@ function UserData() {
                 </div>
                 <div className="align-items-center d-flex justify-content-between row text-center text-sm-start">
                   <div className="col-sm">
-                    <div className="text_mute pagination-text">
 
+                    {
+                      EnrolledUsers.PaginatedUsers && EnrolledUsers.PaginatedUsers.length > 0 ?
+                        EnrolledUsers?.loading ?
+                          <div className="text_mute pagination-text">
+                            Showing data is Loading ....
+                          </div>
+                          :
+                          <div className="text_mute pagination-text">
+                            Showing {" "}
+                            <span className="fw-semibold">{EnrolledUsers.startUser}</span>{"  "}
+                            to{"  "}
+                            <span className="fw-semibold">{EnrolledUsers.endUser}</span>{"  "}
+                            of{"  "}
+                            <span className="fw-semibold">{"  "}
+                              {EnrolledUsers.searchResultUsers}
+                            </span> Results
+                          </div>
+                        :
+                        <div className="text_mute pagination-text">
+                          Showing {" "}
+                          <span className="fw-semibold">0</span>{"  "}
+                          to{"  "}
+                          <span className="fw-semibold">0</span>{"  "}
+                          of{"  "}
+                          <span className="fw-semibold">{"  "}
+                            {EnrolledUsers.searchResultUsers}
+                          </span> Results
+                        </div>
+                    }
+
+
+
+                    {/* <div className="text_mute pagination-text">
                       Showing {" "}
                       <span className="fw-semibold">{EnrolledUsers.startUser}</span>{"  "}
                       to{"  "}
@@ -409,54 +441,83 @@ function UserData() {
                       <span className="fw-semibold">{"  "}
                         {EnrolledUsers.totalUsers}
                       </span> Results
-                    </div>
+                    </div> */}
+
                   </div>
                   <div className="col-sm-auto mt-3 mt-sm-0">
                     <ul className="mt-2 pagination pagination-separated pagination-sm mb-0 justify-content-center">
 
 
-                    <li className={`page-item ${currentPage === 1 ? 'cursor-crosshair' : ' '}  p-1`}>
+                      {/* <li className={`page-item ${currentPage === 1 ? 'cursor-crosshair' : ' '}  p-1`}>
                         <span  className={`page-link ${currentPage > 1 ? 'cursor-pointer' : ''} `}
                           onClick={previousPage}
                         >
                           ←
                         </span>
-                    </li>
+                    </li> */}
 
-                      {/* here the pagintation  */}
-                      {/* <li className="page-item p-1">
-                        <span href="#" className="page-link">
-                          1
-                        </span>
+                      <li className='page-item p-1'>
+                        <button
+                          onClick={previousPage}
+                          disabled={EnrolledUsers.loading ? true : false || EnrolledUsers.currentPage === 1}
+                          style={{ cursor: EnrolledUsers.loading || EnrolledUsers.currentPage === 1 ? 'not-allowed' : 'auto' }}
+                          className={`border border-1 ${EnrolledUsers.loading ? 'disabled' : EnrolledUsers.currentPage === 1 ? 'disabled' : 'cursor-auto'}`}
+                        >
+                          <span className="">
+                            ←
+                          </span>
+                        </button>
                       </li>
-                      <li className="page-item active p-1">
-                        <span href="#" className="page-link ">
-                          2
-                        </span>
-                      </li>
-                      <li className="page-item p-1">
-                        <span href="#" className="page-link">
-                          3
-                        </span>
-                      </li> */}
-                      {/* ---------- */}
 
-                      {[...Array(endPage - startPage + 1)].map((_, index) => {
+
+
+                      {/* {[...Array(endPage - startPage + 1)].map((_, index) => {
                         const page = startPage + index;
                         return (
                           <li key={page} className={`page-item p-1 ${currentPage === page ? 'active' : ''}`}>
                             <span className="page-link" style={{ cursor: 'pointer' }} onClick={() => changePage(page)}>{page}</span>
                           </li>
                         );
+                      })} */}
+
+                      {[...Array(endPage - startPage + 1)].map((_, index) => {
+                        const page = startPage + index;
+                        return (
+
+                          <li className={`page-item p-1`}>
+                            <button key={page}
+                              // onClick={() => changePage(page)}
+                              onClick={() => changePage(currentPage === 1 && page === startPage ? 1 : page)}
+                              disabled={EnrolledUsers.loading ? true : false}
+                              className={`border page-link border-1 ${currentPage === page || (currentPage === 1 && page === startPage) ? 'active' : ''}`}
+                            >
+                              <span className=''>{page} </span>
+                            </button>
+                          </li>
+                        );
                       })}
 
 
-                      <li className="page-item p-1">
+                      {/* <li className="page-item p-1">
                         <span href="#" className="page-link"
                           onClick={nextPage}
                         >
                           →
                         </span>
+                      </li> */}
+
+                      <li className='page-item p-1'>
+                        <button
+                          onClick={nextPage}
+                          disabled={EnrolledUsers.loading ? true : false || EnrolledUsers.currentPage ===
+                            EnrolledUsers.totalPages}
+                          style={{ cursor: EnrolledUsers.loading || EnrolledUsers.currentPage === EnrolledUsers.totalPages ? 'not-allowed' : 'auto' }}
+                          className={`border border-1${EnrolledUsers.loading ? 'disabled' : EnrolledUsers.currentPage === EnrolledUsers.totalPages ? 'disabled' : 'cursor-auto'}`}
+                        >
+                          <span className="">
+                            →
+                          </span>
+                        </button>
                       </li>
 
 
@@ -473,6 +534,24 @@ function UserData() {
 }
 
 export default UserData;
+
+
+
+//  <li className="page-item p-1">
+//   <span href="#" className="page-link">
+//     1
+//   </span>
+// </li>
+// <li className="page-item active p-1">
+//   <span href="#" className="page-link ">
+//     2
+//   </span>
+// </li>
+// <li className="page-item p-1">
+//   <span href="#" className="page-link">
+//     3
+//   </span>
+// </li> 
 
 
 
