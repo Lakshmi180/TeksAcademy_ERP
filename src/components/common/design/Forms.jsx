@@ -229,19 +229,25 @@ function Form() {
                         </div>
                       </div>
                       <div class="col-xxl-3 col-md-6">
-                        <div>
-                          <div class="form-group text-start">
-                            <label
-                              class="form-label fs-s txt-color"
-                              for="example-text-input "
-                            >
-                              Input Date
-                            </label>
-                            <input
-                              class="form-control fs-s bg-form"
-                              type="date"
-                              id="exampleInputdate"
-                            />
+                        <div class="container mt-4 bg_white ">
+                          <div class=" row fs-16 p-3 ">
+                          <label
+                            class="form-label fs-s txt-color"
+                            for="example-text-input"
+                          >
+                            {" "}
+                            Input date
+                          </label>
+                            <div class="col fs-s">
+                              <DatePicker
+                                selected={selectedDate}
+                                onChange={(date) => setSelectedDate(date)}
+                                dateFormat="MM-dd-yyyy"
+                                className="date-pic"
+                                placeholderText="mm-dd-yyyy"
+                              
+                              />
+                            </div>
                           </div>
                         </div>
                       </div>
