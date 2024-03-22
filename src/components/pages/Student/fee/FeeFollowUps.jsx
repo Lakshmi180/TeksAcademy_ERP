@@ -1,8 +1,9 @@
+
 import { FaArrowRight } from "react-icons/fa6";
 import cc from "../../../../images/setting_tabs_icons/cc.svg";
 import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import "../../../../assets/css/common/Table.css";
+import "../../../../assets/css/common/Table.css"
 import { AiFillEye } from "react-icons/ai";
 import { MdEdit } from "react-icons/md";
 import { FaRupeeSign } from "react-icons/fa";
@@ -12,39 +13,23 @@ import { HiMiniPlus } from "react-icons/hi2";
 const FeeFollowUps = () => {
   return (
     <div>
-      <div className="container d-flex justify-content-center">
-        <ul className="nav gap-3 nav-pills mb-3" id="pills-tab" role="tablist">
-          <li className="nav-item bg_white" role="presentation">
-            <button
-              className=" nav-link active "
-              id="pills-overdue-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-overdue"
-              type="button"
-              role="tab"
-              aria-controls="pills-overdue"
-              aria-selected="true"
-            >
-              <div className="text-start p-2">
+      <div className='container d-flex justify-content-center'>
+        <ul class="nav gap-3 nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-overdue-tab" data-bs-toggle="pill"
+              data-bs-target="#pills-overdue" type="button" role="tab" aria-controls="pills-overdue" aria-selected="true">
+              <div className='text-start p-2'>
                 <div className="d-flex justify-content-between">
-                  <div className="">
-                    <span className="fs_20 fw-500 me-3 ">Today</span>
-                    <div className="mt-3 fs_14 lh-100 text_underline black_300">
-                      <p className="">
-                        5000 <FaArrowRight />
-                      </p>
+                  <div>
+                    <span className="fs_20 fw-500 me-3">Today</span>
+                    <div className='mt-3 fs_14 lh-100 black_300'>
+                      <p>5000 /-</p>
                     </div>
                   </div>
                   <div className="flex-shrink-0">
                     <div className="avatar-md me-3">
                       <span className="avatar-title bg-danger-subtle rounded-circle fs-1">
-                        <img
-                          src={cc}
-                          className="img-fluid"
-                          width="100px"
-                          height="100px"
-                          alt=""
-                        />
+                        <img src={cc} className='img-fluid' width="100px" height="100px" alt="" />
                       </span>
                     </div>
                   </div>
@@ -52,37 +37,21 @@ const FeeFollowUps = () => {
               </div>
             </button>
           </li>
-          <li className="nav-item" role="presentation">
-            <button
-              className="nav-link"
-              id="pills-today-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-today"
-              type="button"
-              role="tab"
-              aria-controls="pills-today"
-              aria-selected="false"
-            >
-              <div className="text-start p-2">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-today-tab" data-bs-toggle="pill" data-bs-target="#pills-today"
+              type="button" role="tab" aria-controls="pills-today" aria-selected="false">
+              <div className='text-start p-2'>
                 <div className="d-flex justify-content-between">
                   <div>
                     <span className="fs_20 fw-500">Upcoming</span>
-                    <div className="mt-3 fs_14 lh-100 text_underline black_300">
-                      <p>
-                        5000 <FaArrowRight />
-                      </p>
+                    <div className='mt-3 fs_14 lh-100 black_300'>
+                      <p>5000 /-</p>
                     </div>
                   </div>
                   <div className="flex-shrink-0">
                     <div className="avatar-md me-3">
                       <span className="avatar-title bg-danger-subtle rounded-circle fs-1">
-                        <img
-                          src={cc}
-                          className="img-fluid"
-                          width="100px"
-                          height="100px"
-                          alt=""
-                        />
+                        <img src={cc} className='img-fluid' width="100px" height="100px" alt="" />
                       </span>
                     </div>
                   </div>
@@ -90,37 +59,21 @@ const FeeFollowUps = () => {
               </div>
             </button>
           </li>
-          <li className="nav-item" role="presentation">
-            <button
-              className="nav-link"
-              id="pills-upcoming-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-upcoming"
-              type="button"
-              role="tab"
-              aria-controls="pills-upcoming"
-              aria-selected="false"
-            >
-              <div className="text-start p-2">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-upcoming-tab" data-bs-toggle="pill" data-bs-target="#pills-upcoming"
+              type="button" role="tab" aria-controls="pills-upcoming" aria-selected="false">
+              <div className='text-start p-2'>
                 <div className="d-flex justify-content-between">
                   <div>
                     <span className="fs_20 fw-500">Over Due</span>
-                    <div className="mt-3 fs_14 lh-100 text_underline black_300">
-                      <p>
-                        5000 <FaArrowRight />
-                      </p>
+                    <div className='mt-3 fs_14 lh-100 black_300'>
+                      <p>5000 /-</p>
                     </div>
                   </div>
                   <div className="flex-shrink-0">
                     <div className="avatar-md me-3">
                       <span className="avatar-title bg-danger-subtle rounded-circle fs-1">
-                        <img
-                          src={cc}
-                          className="img-fluid"
-                          width="100px"
-                          height="100px"
-                          alt=""
-                        />
+                        <img src={cc} className='img-fluid' width="100px" height="100px" alt="" />
                       </span>
                     </div>
                   </div>
@@ -130,7 +83,7 @@ const FeeFollowUps = () => {
           </li>
         </ul>
       </div>
-      <div className="container-fluid">
+      <div className='container-fluid'>
         <div className="row">
           <div className="col-xl-12">
             <div className="card border-0">
@@ -138,8 +91,7 @@ const FeeFollowUps = () => {
                 <div className="row justify-content-between">
                   <div className="col-sm-4">
                     <div className="search-box">
-                      <input
-                        type="text"
+                      <input type="text"
                         className="form-control search"
                         placeholder="Search for..."
                         name="search"
@@ -149,7 +101,9 @@ const FeeFollowUps = () => {
                   </div>
                   <div className="col-sm-6">
                     <div className="d-flex justify-content-end">
-                      <div className="fs-13 me-3 mt-2">1/5</div>
+                      <div className="fs-13 me-3 mt-2">
+                        1/5
+                      </div>
                       <div className="me-2">
                         <select
                           className="form-select form-control me-3"
@@ -166,40 +120,20 @@ const FeeFollowUps = () => {
                           <option value="500">500</option>
                         </select>
                       </div>
-                      <button
-                        className="btn btn_primary fs-13 me-2"
-                        type="button"
-                        data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasRight"
-                        aria-controls="offcanvasRight"
-                      >
-                        Filters
-                      </button>
+                      <button className="btn btn_primary fs-13 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Filters</button>
+
                     </div>
                   </div>
                 </div>
-                <div
-                  className="offcanvas offcanvas-end mt-5 pt-2"
-                  id="offcanvasRight"
-                  aria-labelledby="offcanvasRightLabel"
-                >
+                <div className="offcanvas offcanvas-end mt-5 pt-2" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                   <div className="offcanvas-header">
-                    <h5 className="offcanvas-title" id="offcanvasRightLabel">
-                      Filters
-                    </h5>
-                    <button
-                      type="button"
-                      className="btn-close"
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close"
-                    ></button>
+                    <h5 className="offcanvas-title" id="offcanvasRightLabel">Filters</h5>
+                    <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
                   <div className="offcanvas-body p-2">
                     {/* profile */}
                     <div className="">
-                      <label className="form-label fs-s fw-medium txt-color">
-                        Profile
-                      </label>
+                      <label className="form-label fs-s fw-medium txt-color">Profile</label>
                       <select
                         className="form-select form-control"
                         aria-label="Default select example"
@@ -218,9 +152,7 @@ const FeeFollowUps = () => {
                     </div>
                     {/* branch */}
                     <div className="mt-2">
-                      <label className="form-label fs-s fw-medium txt-color">
-                        Branch
-                      </label>
+                      <label className="form-label fs-s fw-medium txt-color">Branch</label>
                       <select
                         className="form-select form-control"
                         aria-label="Default select example"
@@ -228,6 +160,7 @@ const FeeFollowUps = () => {
                         id="branch"
                         required
                         name="branch"
+
                       >
                         <option value="1">Select Branch</option>
                         <option value="2">Hitech City</option>
@@ -239,9 +172,7 @@ const FeeFollowUps = () => {
                     </div>
                     {/* department */}
                     <div className="mt-2">
-                      <label className="form-label fs-s fw-medium txt-color">
-                        Department
-                      </label>
+                      <label className="form-label fs-s fw-medium txt-color">Department</label>
                       <select
                         className="form-select form-control"
                         aria-label="Default select example"
@@ -249,6 +180,7 @@ const FeeFollowUps = () => {
                         id="department"
                         required
                         name="department"
+
                       >
                         <option value="1">Select Department</option>
                         <option value="2">Counsellor</option>
@@ -258,332 +190,259 @@ const FeeFollowUps = () => {
                     </div>
                     <div>
                       <div className="position-absolute bottom-0 start-0 ms-2 mb-2">
-                        <button className="btn btn_primary">Clear</button>
+                        <button className="btn btn_primary"
+
+                        >Clear
+                        </button>
                       </div>
                       <div className="position-absolute bottom-0 end-0 me-2 mb-2">
-                        <button className="btn btn_primary">Save</button>
+                        <button className="btn btn_primary"
+
+                        >Save
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="tab-content" id="pills-tabContent">
+              <div class="tab-content" id="pills-tabContent">
                 {/* overdue */}
-                <div
-                  className="tab-pane fade show active"
-                  id="pills-overdue"
-                  role="tabpanel"
-                  aria-labelledby="pills-overdue-tab"
-                  tabindex="0"
-                >
+                <div class="tab-pane fade show active" id="pills-overdue" role="tabpanel" aria-labelledby="pills-overdue-tab" tabindex="0">
                   <div className="card-body">
                     <div className="table-responsive table-card border-0">
                       <table className="table table-centered align-middle table-nowrap equal-cell-table">
                         <thead>
-                          <tr className="">
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs fw_600 black_color "
-                            >
+                          <tr className=''>
+                            <th scope="col" className="fs_13 lh_xs fw_600 black_color ">
                               S.No
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600  "
-                            >
-                              Name/ Branch/ Counsellor
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Name
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600  "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Branch
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Counsellor
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
                               Contact
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600  "
-                            >
-                              Email
-                            </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                               Course
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                               Due Date
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                               Due Amount
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                               Paid Status
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                               View
                             </th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td className="fs_13 black_color fw_500 lh_xs bg_light ">
+                            <td className='fs_13 black_color fw_500 lh_xs bg_light '>
                               1
                             </td>
-                            <td className="fs_13 black_color  lh_xs bg_light">
-                              Karemgar Vaibhav/ Secunderabad/ Usha Kiran
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              Karemgar Vaibhav
                             </td>
-                            <td className="fs_13 black_color  lh_xs bg_light">
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              Secunderabad
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              Usha Kiran
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
                               9067373129
                             </td>
-                            <td className="fs_13 black_color  lh_xs bg_light">
-                              karemgarvaibhav@gmail.com
-                            </td>
-                            <td className="fs_13 black_color  lh_xs bg_light">
+                            <td className='fs_13 black_color  lh_xs bg_light'>
                               AWS + Devops
                             </td>
-                            <td className="fs_13 black_color  lh_xs bg_light ">
+                            <td className='fs_13 black_color  lh_xs bg_light '>
                               2024-03-19
                             </td>
-                            <td className="fs_13 black_color  lh_xs  bg_light">
+                            <td className='fs_13 black_color  lh_xs  bg_light'>
                               17,000
                             </td>
-                            <td className="fs_13 black_color  lh_xs  bg_light">
+                            <td className='fs_13 black_color  lh_xs  bg_light'>
                               -
                             </td>
 
-                            <td className="fs_14 text_mute bg_light lh_xs d-flex mt-2">
+                            <td className='fs_14 text_mute bg_light lh_xs d-flex mt-2'>
                               <Link to="/feeview">
-                                <AiFillEye className="text-mute table_icons me-3" />
+                                <AiFillEye className='text-mute table_icons me-3' />
                               </Link>
                             </td>
                           </tr>
+
                         </tbody>
                       </table>
                     </div>
                   </div>
                 </div>
                 {/* today */}
-                <div
-                  className="tab-pane fade"
-                  id="pills-today"
-                  role="tabpanel"
-                  aria-labelledby="pills-today-tab"
-                  tabindex="0"
-                >
+                <div class="tab-pane fade" id="pills-today" role="tabpanel" aria-labelledby="pills-today-tab" tabindex="0">
                   <div className="card-body">
                     <div className="table-responsive table-card border-0">
                       <table className="table table-centered align-middle table-nowrap equal-cell-table">
                         <thead>
-                          <tr className="">
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs fw_600 black_color "
-                            >
+                          <tr className=''>
+                            <th scope="col" className="fs_13 lh_xs fw_600 black_color ">
                               S.No
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600  "
-                            >
-                              Name/ Branch/ Counsellor
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Name
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600  "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Branch
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Counsellor
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
                               Contact
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600  "
-                            >
-                              Email
-                            </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                               Course
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                               Due Date
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                               Due Amount
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                               Paid Status
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600">
                               View
                             </th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td className="fs_13 black_color fw_500 lh_xs bg_light ">
+                            <td className='fs_13 black_color fw_500 lh_xs bg_light '>
                               1
                             </td>
-                            <td className="fs_13 black_color  lh_xs bg_light">
-                              Karemgar Vaibhav/ Secunderabad/ Usha Kiran
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              Karemgar Vaibhav
                             </td>
-                            <td className="fs_13 black_color  lh_xs bg_light">
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              Secunderabad
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              Usha Kiran
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
                               9067373129
                             </td>
-                            <td className="fs_13 black_color  lh_xs bg_light">
-                              karemgarvaibhav@gmail.com
-                            </td>
-                            <td className="fs_13 black_color  lh_xs bg_light">
+                            <td className='fs_13 black_color  lh_xs bg_light'>
                               AWS + Devops
                             </td>
-                            <td className="fs_13 black_color  lh_xs bg_light ">
+                            <td className='fs_13 black_color  lh_xs bg_light '>
                               2024-03-19
                             </td>
-                            <td className="fs_13 black_color  lh_xs  bg_light">
+                            <td className='fs_13 black_color  lh_xs  bg_light'>
                               17,000
                             </td>
-                            <td className="fs_13 black_color  lh_xs  bg_light">
+                            <td className='fs_13 black_color  lh_xs  bg_light'>
                               -
                             </td>
-
-                            <td className="fs_14 text_mute bg_light lh_xs d-flex mt-2">
+                            <td className='fs_14 text_mute bg_light lh_xs d-flex mt-2'>
                               <Link to="/feeview">
-                                <AiFillEye className="text-mute table_icons me-3" />
+                                <AiFillEye className='text-mute table_icons me-3' />
                               </Link>
                             </td>
                           </tr>
+
                         </tbody>
                       </table>
                     </div>
                   </div>
                 </div>
                 {/* upcoming */}
-                <div
-                  className="tab-pane fade"
-                  id="pills-upcoming"
-                  role="tabpanel"
-                  aria-labelledby="pills-upcoming-tab"
-                  tabindex="0"
-                >
+                <div class="tab-pane fade" id="pills-upcoming" role="tabpanel" aria-labelledby="pills-upcoming-tab" tabindex="0">
                   <div className="card-body">
                     <div className="table-responsive table-card border-0">
                       <table className="table table-centered align-middle table-nowrap equal-cell-table">
                         <thead>
-                          <tr className="">
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs fw_600 black_color "
-                            >
+                          <tr className=''>
+                            <th scope="col" className="fs_13 lh_xs fw_600 black_color ">
                               S.No
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600  "
-                            >
-                              Name/ Branch/ Counsellor
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Name
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600  "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Branch
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Counsellor
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
                               Contact
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600  "
-                            >
-                              Email
-                            </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                               Course
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                               Due Date
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                               Due Amount
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                               Paid Status
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                               View
                             </th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td className="fs_13 black_color fw_500 lh_xs bg_light ">
+                            <td className='fs_13 black_color fw_500 lh_xs bg_light '>
                               1
                             </td>
-                            <td className="fs_13 black_color  lh_xs bg_light">
-                              Karemgar Vaibhav/ Secunderabad/ Usha Kiran
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              Karemgar Vaibhav
                             </td>
-                            <td className="fs_13 black_color  lh_xs bg_light">
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              Secunderabad
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              Usha Kiran
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
                               9067373129
                             </td>
-                            <td className="fs_13 black_color  lh_xs bg_light">
-                              karemgarvaibhav@gmail.com
-                            </td>
-                            <td className="fs_13 black_color  lh_xs bg_light">
+                            <td className='fs_13 black_color  lh_xs bg_light'>
                               AWS + Devops
                             </td>
-                            <td className="fs_13 black_color  lh_xs bg_light ">
+                            <td className='fs_13 black_color  lh_xs bg_light '>
                               2024-03-19
                             </td>
-                            <td className="fs_13 black_color  lh_xs  bg_light">
+                            <td className='fs_13 black_color  lh_xs  bg_light'>
                               17,000
                             </td>
-                            <td className="fs_13 black_color  lh_xs  bg_light">
+                            <td className='fs_13 black_color  lh_xs  bg_light'>
                               -
                             </td>
 
-                            <td className="fs_14 text_mute bg_light lh_xs d-flex mt-2">
+                            <td className='fs_14 text_mute bg_light lh_xs d-flex mt-2'>
                               <Link to="/feeview">
-                                <AiFillEye className="text-mute table_icons me-3" />
+                                <AiFillEye className='text-mute table_icons me-3' />
                               </Link>
                             </td>
                           </tr>
+
                         </tbody>
                       </table>
                     </div>
@@ -596,6 +455,6 @@ const FeeFollowUps = () => {
       </div>
     </div>
   );
-};
+}
 
 export default FeeFollowUps;

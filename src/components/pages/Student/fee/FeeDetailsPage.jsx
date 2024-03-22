@@ -1,5 +1,6 @@
-import React from "react";
-import "../../../../assets/css/common/Table.css";
+import React from 'react'
+import "../../../../assets/css/common/Table.css"
+import "../../../../assets/css/common/FeeDetails.css"
 import { AiFillEye } from "react-icons/ai";
 import { MdEdit } from "react-icons/md";
 import { FaRupeeSign } from "react-icons/fa";
@@ -12,35 +13,26 @@ import { Link } from "react-router-dom";
 import { HiMiniPlus } from "react-icons/hi2";
 import { FaArrowRight } from "react-icons/fa6";
 import cc from "../../../../images/setting_tabs_icons/cc.svg";
-import FeeFollowUps from "./FeeFollowUps";
+import FeeFollowUps from './FeeFollowUps';
+
 function FeeDetailsPage() {
   return (
     <div>
       <div className="container d-flex justify-content-center">
         <ul class="nav gap-3" id="pills-tab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button
-              class="nav-link active card card_animate"
-              id="pills-feerecords-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-feerecords"
-              type="button"
-              role="tab"
-              aria-controls="pills-feerecords"
-              aria-selected="true"
-            >
-              <div className="text-start p-2">
-                <div className="d-flex justify-content-between">
+            <button class="nav-link active card card_animate" id="pills-feerecords-tab" data-bs-toggle="pill" data-bs-target="#pills-feerecords"
+              type="button" role="tab" aria-controls="pills-feerecords" aria-selected="true">
+              <div className='text-start'>
+                <div className="d-flex justify-content-between align-items-center">
                   <div>
-                    <span className="fs_20 fw-500">Fee Records</span>
-                    <div className="mt-3 fs_14 lh-100 text_underline black_300">
-                      <p>
-                        12,000 <FaArrowRight />
-                      </p>
-                    </div>
+                    <span className="fs_20 fw-500 me-2"> Fee Records</span>
+                    {/* <div className='mt-3 fs_14 lh-100 text_underline black_300'>
+                      <p>12,000 <FaArrowRight /></p>
+                    </div> */}
                   </div>
                   <div className="flex-shrink-0">
-                    <div className="avatar-md me-3">
+                    <div className="avatar-sm">
                       <span className="avatar-title bg-danger-subtle rounded-circle fs-1">
                         <img
                           src={cc}
@@ -57,28 +49,18 @@ function FeeDetailsPage() {
             </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button
-              class="nav-link card card_animate"
-              id="pills-duerecords-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-duerecords"
-              type="button"
-              role="tab"
-              aria-controls="pills-duerecords"
-              aria-selected="false"
-            >
-              <div className="text-start p-2">
-                <div className="d-flex justify-content-between">
+            <button class="nav-link card card_animate" id="pills-duerecords-tab" data-bs-toggle="pill" data-bs-target="#pills-duerecords"
+              type="button" role="tab" aria-controls="pills-duerecords" aria-selected="false">
+              <div className='text-start'>
+                <div className="d-flex justify-content-between align-items-center">
                   <div>
-                    <span className="fs_20 fw-500">No Due Records</span>
-                    <div className="mt-3 fs_14 lh-100 text_underline black_300">
-                      <p>
-                        5000 <FaArrowRight />
-                      </p>
-                    </div>
+                    <span className="fs_20 fw-500 me-2">No Due Records</span>
+                    {/* <div className='mt-3 fs_14 lh-100 text_underline black_300'>
+                      <p>5000 <FaArrowRight /></p>
+                    </div> */}
                   </div>
                   <div className="flex-shrink-0">
-                    <div className="avatar-md me-3">
+                    <div className="avatar-sm">
                       <span className="avatar-title bg-danger-subtle rounded-circle fs-1">
                         <img
                           src={cc}
@@ -106,26 +88,18 @@ function FeeDetailsPage() {
               aria-selected="false"
             >
               <Link to="/feefollowups">
-                <div className="p-2 text-start">
-                  <div className="d-flex justify-content-between">
+                <div className='text-start'>
+                  <div className="d-flex justify-content-between align-items-center">
                     <div>
-                      <span className="fs_20 fw-500">Fee FollowUps</span>
-                      <div className="mt-3 fs_14 lh-100 text_underline black_300">
-                        <p>
-                          1100 <FaArrowRight />
-                        </p>
-                      </div>
+                      <span className="fs_20 fw-500 me-2">Fee FollowUps</span>
+                      {/* <div className='mt-3 fs_14 lh-100 text_underline black_300'>
+                        <p>1100 <FaArrowRight /></p>
+                      </div> */}
                     </div>
                     <div className="flex-shrink-0">
-                      <div className="avatar-md me-3">
+                      <div className="avatar-sm">
                         <span className="avatar-title bg-danger-subtle rounded-circle fs-1">
-                          <img
-                            src={cc}
-                            className="img-fluid"
-                            width="100px"
-                            height="100px"
-                            alt=""
-                          />
+                          <img src={cc} className='img-fluid' width="100px" height="100px" alt="" />
                         </span>
                       </div>
                     </div>
@@ -135,28 +109,18 @@ function FeeDetailsPage() {
             </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button
-              class="nav-link card card_animate"
-              id="pills-feereceived-tab"
-              data-bs-toggle="pill"
-              data-bs-target="#pills-feereceived"
-              type="button"
-              role="tab"
-              aria-controls="pills-feereceived"
-              aria-selected="false"
-            >
-              <div className="p-2 text-start">
-                <div className="d-flex justify-content-between">
+            <button class="nav-link card card_animate" id="pills-feereceived-tab" data-bs-toggle="pill" data-bs-target="#pills-feereceived"
+              type="button" role="tab" aria-controls="pills-feereceived" aria-selected="false">
+              <div className='text-start'>
+                <div className="d-flex justify-content-between align-items-center">
                   <div>
-                    <span className="fs_20 fw-500">Fee Received</span>
-                    <div className="mt-3 fs_14 lh-100 text_underline black_300">
-                      <p>
-                        2345 <FaArrowRight />
-                      </p>
-                    </div>
+                    <span className="fs_20 fw-500 me-2">Fee Received</span>
+                    {/* <div className='mt-3 fs_14 lh-100 text_underline black_300'>
+                      <p>2345 <FaArrowRight /></p>
+                    </div> */}
                   </div>
                   <div className="flex-shrink-0">
-                    <div className="avatar-md me-3">
+                    <div className="avatar-sm">
                       <span className="avatar-title bg-danger-subtle rounded-circle fs-1">
                         <img
                           src={cc}
@@ -332,129 +296,92 @@ function FeeDetailsPage() {
                   </div>
                   <div className="card-body">
                     <div class="table-responsive table-card border-0">
-                      <div className="table-container">
-                        <table className="table table-centered align-middle table-nowrap equal-cell-table">
-                          <thead>
-                            <tr className="">
-                              {/* <th scope="col">
-                          <div className="form-check">
-                            <input
-                              className="form-check-input"
-                              type="checkbox"
-                              value=""
-                              id="cardtableCheck"
-                            />
-                            <label
-                              className="form-check-label"
-                              for="cardtableCheck"
-                            ></label>
-                          </div>
-                        </th> */}
-                              <th
-                                scope="col"
-                                className="fs_13 lh_xs fw_600 black_color "
-                              >
-                                S.No
-                              </th>
-                              <th
-                                scope="col"
-                                className="fs_13 lh_xs black_color fw_600  "
-                              >
-                                Name <br />
-                                Branch
-                                <br />
-                                Counsellor
-                              </th>
-                              <th
-                                scope="col"
-                                className="fs_13 lh_xs black_color fw_600  "
-                              >
-                                Contact
-                              </th>
-                              <th
-                                scope="col"
-                                className="fs_13 lh_xs black_color fw_600  "
-                              >
-                                Course
-                                <br />
-                                Date of Joining
-                                <br />
-                                Total Fee
-                              </th>
-                              <th
-                                scope="col"
-                                className="fs_13 lh_xs black_color fw_600 "
-                              >
-                                Paid Fee
-                                <br />
-                                Due Amount
-                                <br />
-                                Next Due Date
-                              </th>
-                              <th
-                                scope="col"
-                                className="fs_13 lh_xs black_color fw_600 "
-                              >
-                                Total Installments
-                              </th>
-                              <th
-                                scope="col"
-                                className="fs_13 lh_xs black_color fw_600 "
-                              >
-                                Paid Installments
-                              </th>
-                              <th
-                                scope="col"
-                                className="fs_13 lh_xs black_color fw_600 "
-                              >
-                                Action
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody className="">
-                            {/* 1st row */}
-                            <tr>
-                              <td className="fs_13 black_color fw_500 lh_xs bg_light ">
-                                01
-                              </td>
-                              <td className="fs_13 black_color  lh_xs bg_light">
-                                K.Sadik
-                                <br />
-                                Ameerpet
-                                <br />
-                                Mohammed Afeeza
-                              </td>
-                              <td className="fs_13 black_color  lh_xs bg_light">
-                                9347690554
-                              </td>
-                              <td className="fs_13 black_color  lh_xs bg_light">
-                                AutoCad + Sketchup With Vray
-                                <br />
-                                18-Mar-2024
-                                <br />
-                                8,500
-                              </td>
-                              <td className="fs_13 black_color  lh_xs bg_light">
-                                8,500
-                                <br />
-                                0<br />
-                                No NextDue Date
-                              </td>
-                              <td className="fs_13 black_color  lh_xs bg_light ">
-                                1
-                              </td>
-                              <td className="fs_13 black_color  lh_xs  bg_light">
-                                1
-                              </td>
-                              <td className="fs_14 text_mute bg_light   lh_xs">
-                                <Link to="/feeview">
-                                  <AiFillEye className="text-mute table_icons me-3" />
-                                </Link>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
+                      <table className="table table-centered align-middle table-nowrap equal-cell-table overflow-scroll">
+                        <thead>
+                          <tr className=''>
+                            <th scope="col" className="fs_13 lh_xs fw_600 black_color ">
+                              S.No
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Name
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Branch
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Counsellor
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Contact
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Course
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Date of Joining
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Total Fee
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                              Fee Paid
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                              Due Amount
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                              Installments
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                              Action
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody className=''>
+                          {/* 1st row */}
+                          <tr>
+                            <td className='fs_13 black_color fw_500 lh_xs bg_light '>
+                              01
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              K.Sadik
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              Ameerpet
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              Mohammed Afeeza
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              9347690554
+
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              AutoCad + Sketchup With Vray
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              18-Mar-2024
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              8,500
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              8,500
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
+                              0
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light '>
+                              1/2
+                            </td>
+                            <td className='fs_14 text_mute bg_light   lh_xs'>
+                              <Link to="/feeview">
+                                <AiFillEye className='text-mute table_icons me-3' />
+                              </Link>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                     <div className="align-items-center d-flex justify-content-between row text-center text-sm-start">
                       <div className="col-sm">
@@ -658,60 +585,34 @@ function FeeDetailsPage() {
                     <div class="table-responsive table-card border-0">
                       <table className="table table-centered align-middle table-nowrap equal-cell-table">
                         <thead>
-                          <tr className="">
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs fw_600 black_color "
-                            >
+                          <tr className=''>
+
+                            <th scope="col" className="fs_13 lh_xs fw_600 black_color ">
                               S.No
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600  "
-                            >
-                              Name <br />
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Name
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
                               Branch
-                              <br />
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
                               Counsellor
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600  "
-                            >
-                              Contact <br />
-                              Email
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                              Contact
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600  "
-                            >
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
                               Course
-                              <br />
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
                               Date of Joining
-                              <br />
+                            </th>
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
                               Total Fee
                             </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
-                              Paid Fee
-                              <br />
-                              Due Amount
-                              <br />
-                              Next Due Date
-                            </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
-                              Total Installments
-                            </th>
-                            <th
-                              scope="col"
-                              className="fs_13 lh_xs black_color fw_600 "
-                            >
-                              Paid Installments
+                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                              Installments
                             </th>
                             <th
                               scope="col"
@@ -727,40 +628,33 @@ function FeeDetailsPage() {
                             <td className="fs_13 black_color fw_500 lh_xs bg_light ">
                               01
                             </td>
-                            <td className="fs_13 black_color  lh_xs bg_light">
+                            <td className='fs_13 black_color  lh_xs bg_light'>
                               K.Sadik
-                              <br />
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
                               Ameerpet
-                              <br />
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
                               Mohammed Afeeza
                             </td>
-                            <td className="fs_13 black_color  lh_xs bg_light">
+                            <td className='fs_13 black_color  lh_xs bg_light'>
                               9347690554
-                              <br />
-                              kamulurisadik@gmail.com
                             </td>
-                            <td className="fs_13 black_color  lh_xs bg_light">
+                            <td className='fs_13 black_color  lh_xs bg_light'>
                               AutoCad + Sketchup With Vray
-                              <br />
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
                               18-Mar-2024
-                              <br />
+                            </td>
+                            <td className='fs_13 black_color  lh_xs bg_light'>
                               8,500
                             </td>
-                            <td className="fs_13 black_color  lh_xs bg_light">
-                              8,500
-                              <br />
-                              0<br />
-                              No NextDue Date
-                            </td>
-                            <td className="fs_13 black_color  lh_xs bg_light ">
+                            <td className='fs_13 black_color  lh_xs bg_light '>
                               1
                             </td>
-                            <td className="fs_13 black_color  lh_xs  bg_light">
-                              1
-                            </td>
-                            <td className="fs_14 text_mute bg_light   lh_xs">
+                            <td className='fs_14 text_mute bg_light   lh_xs'>
                               <Link to="/noduerecords">
-                                <AiFillEye className="text-mute table_icons me-3" />
+                                <AiFillEye className='text-mute table_icons me-3' />
                               </Link>
                             </td>
                           </tr>
@@ -810,21 +704,8 @@ function FeeDetailsPage() {
             </div>
           </div>
         </div>
-        <div
-          class="tab-pane fade"
-          id="pills-feefollow"
-          role="tabpanel"
-          aria-labelledby="pills-feefollow-tab"
-          tabindex="0"
-        ></div>
-        <div
-          class="tab-pane fade"
-          id="pills-feereceived"
-          role="tabpanel"
-          aria-labelledby="pills-feereceived-tab"
-          tabindex="0"
-        >
-          ...
+        <div class="tab-pane fade" id="pills-feefollow" role="tabpanel" aria-labelledby="pills-feefollow-tab" tabindex="0">
+
         </div>
       </div>
     </div>

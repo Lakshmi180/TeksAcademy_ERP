@@ -448,6 +448,16 @@ a {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
   width: 100%;
 }
+.form-control.search {
+  background-color: var(--erp-input-bg-color) !important;
+}
+.form-control.search::placeholder {
+  color: var(--erp-text-mute) !important;
+}
+form input {
+  background-color: var(--erp-input-bg-color) !important;
+}
+form input::placeholder {
 
 .form-control.search {
   background-color: var(--erp-input-bg-color) !important;
@@ -475,6 +485,9 @@ form input::placeholder {
 
 form textarea {
   background-color: var(--erp-input-bg-color) !important;
+}
+form textarea::placeholder {
+  color: var(--erp-text-mute) !important;
 }
 
 form textarea::placeholder {
@@ -626,6 +639,8 @@ h1 {
   border-left: 3px solid var(--erp-bg-color) !important;
   border-bottom: 3px solid var(--erp-bg-color) !important;
   background-color: #fff;
+  color: #000 !important;
+}
 } 
 
 .nav-link.active {
@@ -678,3 +693,38 @@ h1 {
   z-index: 1 !important;
   background: var(--erp-gray-100) !important;
 }
+/* table */
+
+.table {
+  border-radius: 0.2rem;
+  width: 100%;
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+}
+.table tr td {
+  border-collapse: separate;
+  border-spacing: 20px; /* Adjust this value to increase or decrease the space between columns */
+}
+
+.table th:last-child,
+.table td:last-child {
+  position: sticky;
+  right: 0;
+  background-color: red;
+  color: #373737;
+}
+
+.table td {
+  white-space: nowrap;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.accordion-button:not(.collapsed){
+    background-color:#a0add8 !important;
+    box-shadow: none !important;
+} 

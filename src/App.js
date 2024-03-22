@@ -72,6 +72,7 @@ import { ViewCourse } from "./components/pages/Leads/ViewCourse";
 import { ContactUs } from "./components/pages/Leads/ContactUs";
 import { HLPEnquireLeads } from "./components/pages/Leads/HLPEnquireLeads";
 import { SLPEnquireLeads } from "./components/pages/Leads/SLPEnquireLeads";
+import GaugeChart from "./components/pages/Student/fee/GaugeChart";
 import FeeAdminInvoice from "./components/pages/Student/fee/FeeAdminInvoice";
 import StudentIdCard from "./components/pages/Student/studentData/StudentIdCard";
 import OrganizationProfile from "./components/pages/Settings/OrganizationProfile";
@@ -126,8 +127,12 @@ function App() {
         <Route path="/createaddassetstype" element={<CreateAddAssetsType />} />
         <Route path="/userdata" element={<UserData />} />
         <Route path="/certificate" element={<Certificate />} />
-        <Route path="/requestedcertificate" element={<RequestedCertificate />}
-        />
+        <Route path="/chart" element={<GaugeChart/>}/>
+        <Route
+          path="/requestedcertificate"
+          element={<RequestedCertificate />}/>
+        <Route path="/requestedcertificate" element={<RequestedCertificate />}/>
+        
         <Route path="/issuedcertificates" element={<IssuedCertificates />} />
         <Route path="/updatecourse/:courseId" element={<CreateCourse />} />
         <Route path="/editbranch/:branchId" element={<CreateBranch />} />
