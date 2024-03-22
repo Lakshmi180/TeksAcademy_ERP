@@ -112,7 +112,7 @@ export const Sidemenu = ({ isExpanded }) => {
                 className="sidebar-dropdown list-unstyled collapse"
                 data-bs-parent="#sidebar"
               >
-                <li
+                {/* <li
                   className={`sidebar-item ${
                     active === "registrationform" ? "text-white" : ""
                   }`}
@@ -125,7 +125,7 @@ export const Sidemenu = ({ isExpanded }) => {
                     <AiOutlineLine className="sub_icon" />
                     Registration Form
                   </Link>
-                </li>
+                </li> */}
                 <li
                   className={`sidebar-item ${
                     active === "enrolledstudents" ? "text-white" : ""

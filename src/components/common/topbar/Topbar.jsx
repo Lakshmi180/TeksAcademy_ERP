@@ -37,11 +37,11 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
 
   console.log(userDetail, "userDetailHERERD" )
 
-  useEffect(() => {
-    if (AuthState.user.fullname) {
-      setUserDetail({ fullname: AuthState.user.fullname.substring(0,5), profile: AuthState.user.profile.substring(0,5) })
-    }
-  }, [AuthState?.user?.fullname])
+  // useEffect(() => {
+  //   if (AuthState.user.fullname) {
+  //     setUserDetail({ fullname: AuthState.user.fullname.substring(0,5), profile: AuthState.user.profile.substring(0,5) })
+  //   }
+  // }, [AuthState?.user?.fullname])
 
  
 

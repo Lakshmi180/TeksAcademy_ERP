@@ -69,6 +69,7 @@ import { ViewCourse } from "./components/pages/Leads/ViewCourse";
 import { ContactUs } from "./components/pages/Leads/ContactUs";
 import { HLPEnquireLeads } from "./components/pages/Leads/HLPEnquireLeads";
 import { SLPEnquireLeads } from "./components/pages/Leads/SLPEnquireLeads";
+import GaugeChart from "./components/pages/Student/fee/GaugeChart";
 function App() {
   return (
     <Routes>
@@ -107,6 +108,7 @@ function App() {
         <Route path="/createaddassetstype" element={<CreateAddAssetsType />} />
         <Route path="/userdata" element={<UserData />} />
         <Route path="/certificate" element={<Certificate />} />
+        <Route path="/chart" element={<GaugeChart/>}/>
         <Route
           path="/requestedcertificate"
           element={<RequestedCertificate />}

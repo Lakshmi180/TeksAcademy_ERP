@@ -22,8 +22,8 @@ const FeeFollowUps = () => {
                                 <div className="d-flex justify-content-between">
                                     <div>
                                         <span className="fs_20 fw-500 me-3">Today</span>
-                                        <div className='mt-3 fs_14 lh-100 text_underline black_300'>
-                                            <p>5000 <FaArrowRight /></p>
+                                        <div className='mt-3 fs_14 lh-100 black_300'>
+                                            <p>5000 /-</p>
                                         </div>
                                     </div>
                                     <div className="flex-shrink-0">
@@ -44,8 +44,8 @@ const FeeFollowUps = () => {
                                 <div className="d-flex justify-content-between">
                                     <div>
                                         <span className="fs_20 fw-500">Upcoming</span>
-                                        <div className='mt-3 fs_14 lh-100 text_underline black_300'>
-                                            <p>5000 <FaArrowRight /></p>
+                                        <div className='mt-3 fs_14 lh-100 black_300'>
+                                            <p>5000 /-</p>
                                         </div>
                                     </div>
                                     <div className="flex-shrink-0">
@@ -66,8 +66,8 @@ const FeeFollowUps = () => {
                                 <div className="d-flex justify-content-between">
                                     <div>
                                         <span className="fs_20 fw-500">Over Due</span>
-                                        <div className='mt-3 fs_14 lh-100 text_underline black_300'>
-                                            <p>5000 <FaArrowRight /></p>
+                                        <div className='mt-3 fs_14 lh-100 black_300'>
+                                            <p>5000 /-</p>
                                         </div>
                                     </div>
                                     <div className="flex-shrink-0">
@@ -217,13 +217,16 @@ const FeeFollowUps = () => {
                                                             S.No
                                                         </th>
                                                         <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                                                            Name/ Branch/ Counsellor
+                                                            Name
+                                                        </th>
+                                                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                                                            Branch
+                                                        </th>
+                                                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                                                            Counsellor
                                                         </th>
                                                         <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
                                                             Contact
-                                                        </th>
-                                                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                                                            Email
                                                         </th>
                                                         <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                                                             Course
@@ -248,15 +251,16 @@ const FeeFollowUps = () => {
                                                             1
                                                         </td>
                                                         <td className='fs_13 black_color  lh_xs bg_light'>
-                                                            Karemgar Vaibhav/
-                                                            Secunderabad/
+                                                            Karemgar Vaibhav
+                                                        </td>
+                                                        <td className='fs_13 black_color  lh_xs bg_light'>
+                                                            Secunderabad
+                                                        </td>
+                                                        <td className='fs_13 black_color  lh_xs bg_light'>
                                                             Usha Kiran
                                                         </td>
                                                         <td className='fs_13 black_color  lh_xs bg_light'>
                                                             9067373129
-                                                        </td>
-                                                        <td className='fs_13 black_color  lh_xs bg_light'>
-                                                            karemgarvaibhav@gmail.com
                                                         </td>
                                                         <td className='fs_13 black_color  lh_xs bg_light'>
                                                             AWS + Devops
@@ -294,13 +298,16 @@ const FeeFollowUps = () => {
                                                             S.No
                                                         </th>
                                                         <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                                                            Name/ Branch/ Counsellor
+                                                            Name
+                                                        </th>
+                                                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                                                            Branch
+                                                        </th>
+                                                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                                                            Counsellor
                                                         </th>
                                                         <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
                                                             Contact
-                                                        </th>
-                                                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                                                            Email
                                                         </th>
                                                         <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                                                             Course
@@ -314,7 +321,7 @@ const FeeFollowUps = () => {
                                                         <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                                                             Paid Status
                                                         </th>
-                                                        <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                                                        <th scope="col" className="fs_13 lh_xs black_color fw_600">
                                                             View
                                                         </th>
                                                     </tr>
@@ -325,15 +332,16 @@ const FeeFollowUps = () => {
                                                             1
                                                         </td>
                                                         <td className='fs_13 black_color  lh_xs bg_light'>
-                                                            Karemgar Vaibhav/
-                                                            Secunderabad/
+                                                            Karemgar Vaibhav
+                                                        </td>
+                                                        <td className='fs_13 black_color  lh_xs bg_light'>
+                                                            Secunderabad
+                                                        </td>
+                                                        <td className='fs_13 black_color  lh_xs bg_light'>
                                                             Usha Kiran
                                                         </td>
                                                         <td className='fs_13 black_color  lh_xs bg_light'>
                                                             9067373129
-                                                        </td>
-                                                        <td className='fs_13 black_color  lh_xs bg_light'>
-                                                            karemgarvaibhav@gmail.com
                                                         </td>
                                                         <td className='fs_13 black_color  lh_xs bg_light'>
                                                             AWS + Devops
@@ -347,7 +355,6 @@ const FeeFollowUps = () => {
                                                         <td className='fs_13 black_color  lh_xs  bg_light'>
                                                             -
                                                         </td>
-
                                                         <td className='fs_14 text_mute bg_light lh_xs d-flex mt-2'>
                                                             <Link to="/feeview">
                                                                 <AiFillEye className='text-mute table_icons me-3' />
@@ -371,13 +378,16 @@ const FeeFollowUps = () => {
                                                             S.No
                                                         </th>
                                                         <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                                                            Name/ Branch/ Counsellor
+                                                            Name
+                                                        </th>
+                                                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                                                            Branch
+                                                        </th>
+                                                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                                                            Counsellor
                                                         </th>
                                                         <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
                                                             Contact
-                                                        </th>
-                                                        <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                                                            Email
                                                         </th>
                                                         <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                                                             Course
@@ -402,15 +412,16 @@ const FeeFollowUps = () => {
                                                             1
                                                         </td>
                                                         <td className='fs_13 black_color  lh_xs bg_light'>
-                                                            Karemgar Vaibhav/
-                                                            Secunderabad/
+                                                            Karemgar Vaibhav
+                                                        </td>
+                                                        <td className='fs_13 black_color  lh_xs bg_light'>
+                                                            Secunderabad
+                                                        </td>
+                                                        <td className='fs_13 black_color  lh_xs bg_light'>
                                                             Usha Kiran
                                                         </td>
                                                         <td className='fs_13 black_color  lh_xs bg_light'>
                                                             9067373129
-                                                        </td>
-                                                        <td className='fs_13 black_color  lh_xs bg_light'>
-                                                            karemgarvaibhav@gmail.com
                                                         </td>
                                                         <td className='fs_13 black_color  lh_xs bg_light'>
                                                             AWS + Devops

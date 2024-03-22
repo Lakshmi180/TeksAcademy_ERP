@@ -14,7 +14,7 @@ import { useStudentsContext } from '../../../../hooks/useStudentsContext';
 import Usedebounce from '../../../../hooks/useDebounce/Usedebounce';
 
 
- 
+
 
 function Studentdata() {
 
@@ -97,7 +97,7 @@ function Studentdata() {
     console.log("Currentpage:", page);
   };
 
- 
+
 
   const previousPage = () => {
     if (currentPage > 1) {
@@ -325,8 +325,10 @@ function Studentdata() {
                             S.No
                           </th>
                           <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
-                            Student Name /<br />
-                            Registration Number
+                            Student Name
+                          </th>
+                          <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
+                            Registration&nbsp;No.
                           </th>
                           <th scope="col" className="fs_13 lh_xs black_color fw_600  ">
                             Branch
@@ -335,16 +337,22 @@ function Studentdata() {
                             Course
                           </th>
                           <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                            Counsellor<br />
+                            Counsellor
+                          </th>
+                          <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                             Source
                           </th>
                           <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                            Mobile{" "}/ <br />
+                            Mobile
+                          </th>
+                          <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                             Email
                           </th>
                           <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
-                            Joining Date<br />
-                            Traning Mode
+                            Joining Date
+                          </th>
+                          <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                            Traning&nbsp;Mode
                           </th>
                           <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                             Action
@@ -425,78 +433,87 @@ function Studentdata() {
                         } */}
 
                         {
-                          EnrolledStudents.PaginatedStudents && EnrolledStudents.PaginatedStudents.length > 0 ? 
-                          EnrolledStudents.loading? <tr>
-                            <td className='fs_13 black_color fw_500 lh_xs bg_light '>
-                              Loading...
-                            </td>
-                          </tr>
-                          
-                          : EnrolledStudents.PaginatedStudents.map((item, index)=>{
-                            let date = new Date(item.admissiondate);
-                            const day = date.getUTCDate();
-                            const monthIndex = date.getUTCMonth();
-                            const year = date.getUTCFullYear();
-                            const monthAbbreviations = [
-                              "Jan",
-                              "Feb",
-                              "Mar",
-                              "Apr",
-                              "May",
-                              "Jun",
-                              "Jul",
-                              "Aug",
-                              "Sep",
-                              "Oct",
-                              "Nov",
-                              "Dec",
-                            ];
-                            // Formatting the date
+                          EnrolledStudents.PaginatedStudents && EnrolledStudents.PaginatedStudents.length > 0 ?
+                            EnrolledStudents.loading ? <tr>
+                              <td className='fs_13 black_color fw_500 lh_xs bg_light '>
+                                Loading...
+                              </td>
+                            </tr>
 
-                            date = `${day < 10 ? "0" : ""}${day}-${monthAbbreviations[monthIndex]
-                              }-${year}`;
+                              : EnrolledStudents.PaginatedStudents.map((item, index) => {
+                                let date = new Date(item.admissiondate);
+                                const day = date.getUTCDate();
+                                const monthIndex = date.getUTCMonth();
+                                const year = date.getUTCFullYear();
+                                const monthAbbreviations = [
+                                  "Jan",
+                                  "Feb",
+                                  "Mar",
+                                  "Apr",
+                                  "May",
+                                  "Jun",
+                                  "Jul",
+                                  "Aug",
+                                  "Sep",
+                                  "Oct",
+                                  "Nov",
+                                  "Dec",
+                                ];
+                                // Formatting the date
 
-                            return(
-                              <tr key={item.id}>
-                                <td className='fs_13 black_color fw_500 lh_xs bg_light '>
-                                  {(currentPage - 1) * EnrolledStudents.perPage + index + 1}
-                                </td>
-                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                  {item.name} <br />
-                                  {item.registrationnumber}
-                                </td>
-                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                  {item.branch}
-                                </td>
-                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                  {item.courses}
-                                </td>
-                                <td className='fs_13 black_color  lh_xs bg_light'>
-                                  {item.enquirytakenby}
-                                </td>
-                                <td className='fs_13 black_color  lh_xs bg_light '>
-                                  {item.mobilenumber} <br />
-                                  {item.email}
-                                </td>
-                                <td className='fs_13 black_color  lh_xs  bg_light'>
-                                  {date ? date : "No Date"}<br />
-                                  {item.modeoftraining}
-                                </td>
-                                <td className='fs_14 text_mute bg_light   lh_xs'>
-                                  <AiFillEye className='text-mute table_icons me-3' />
-                                  <MdEdit className='text-mute table_icons me-3' />
-                                  <FaRupeeSign className='text-mute table_icons me-3' />
-                                  <MdLocalPrintshop className='text-mute table_icons me-3' />
-                                  <FaRegIdCard className='text-mute table_icons ' />
-                                </td>
-                              </tr>
-                              
-                            )
-                          }) : <tr>
-                          <td className='fs_13 black_color fw_500 lh_xs bg_light '>
-                            Sorry!  No data found
-                          </td>
-                        </tr>
+                                date = `${day < 10 ? "0" : ""}${day}-${monthAbbreviations[monthIndex]
+                                  }-${year}`;
+
+                                return (
+                                  <tr key={item.id}>
+                                    <td className='fs_13 black_color fw_500 lh_xs bg_light '>
+                                      {(currentPage - 1) * EnrolledStudents.perPage + index + 1}
+                                    </td>
+                                    <td className='fs_13 black_color  lh_xs bg_light'>
+                                      {item.name}
+                                    </td>
+                                    <td className='fs_13 black_color  lh_xs bg_light'>
+                                      {item.registrationnumber}
+                                    </td>
+                                    <td className='fs_13 black_color  lh_xs bg_light'>
+                                      {item.branch}
+                                    </td>
+                                    <td className='fs_13 black_color  lh_xs bg_light'>
+                                      {item.courses}
+                                    </td>
+                                    <td className='fs_13 black_color  lh_xs bg_light'>
+                                      {item.enquirytakenby}
+                                    </td>
+                                    <td className='fs_13 black_color  lh_xs bg_light'>
+                                    -
+                                    </td>
+                                    <td className='fs_13 black_color  lh_xs bg_light '>
+                                      {item.mobilenumber}
+                                    </td>
+                                    <td className='fs_13 black_color  lh_xs bg_light '>
+                                      {item.email}
+                                    </td>
+                                    <td className='fs_13 black_color  lh_xs  bg_light'>
+                                      {date ? date : "No Date"}
+                                    </td>
+                                    <td className='fs_13 black_color  lh_xs  bg_light'>
+                                      {item.modeoftraining}
+                                    </td>
+                                    <td className='fs_14 text_mute bg_light   lh_xs'>
+                                      <AiFillEye className='text-mute table_icons me-3' />
+                                      <MdEdit className='text-mute table_icons me-3' />
+                                      <FaRupeeSign className='text-mute table_icons me-3' />
+                                      <MdLocalPrintshop className='text-mute table_icons me-3' />
+                                      <FaRegIdCard className='text-mute table_icons ' />
+                                    </td>
+                                  </tr>
+
+                                )
+                              }) : <tr>
+                              <td className='fs_13 black_color fw_500 lh_xs bg_light '>
+                                Sorry!  No data found
+                              </td>
+                            </tr>
 
                         }
 
@@ -507,37 +524,37 @@ function Studentdata() {
                 </div>
                 <div className="mt-2 bg-white align-items-center d-flex justify-content-between row text-center text-sm-start">
                   <div className="col-sm">
-                    
+
                     {
-                      EnrolledStudents.PaginatedStudents && EnrolledStudents.PaginatedStudents.length > 0?
+                      EnrolledStudents.PaginatedStudents && EnrolledStudents.PaginatedStudents.length > 0 ?
 
-                       EnrolledStudents?.loading ?
-                       <div className="text_mute pagination-text">
-                       Showing data is Loading ....
-                       </div>
+                        EnrolledStudents?.loading ?
+                          <div className="text_mute pagination-text">
+                            Showing data is Loading ....
+                          </div>
 
-                       :
-                      <div className="text_mute pagination-text">
-                      Showing {" "}
-                      <span className="fw-semibold">{EnrolledStudents.startStudent}</span>{"  "}
-                      to{"  "}
-                      <span className="fw-semibold">{EnrolledStudents.endStudent}</span>{"  "}
-                      of{"  "}
-                      <span className="fw-semibold">{"  "}
-                        {EnrolledStudents.totalStudents}
-                      </span> Results
-                    </div>
-                      :
-                      <div className="text_mute pagination-text">
-                      Showing {" "}
-                      <span className="fw-semibold">0</span>{"  "}
-                      to{"  "}
-                      <span className="fw-semibold">0</span>{"  "}
-                      of{"  "}
-                      <span className="fw-semibold">{"  "}
-                        {EnrolledStudents.totalStudents}
-                      </span> Results
-                    </div>
+                          :
+                          <div className="text_mute pagination-text">
+                            Showing {" "}
+                            <span className="fw-semibold">{EnrolledStudents.startStudent}</span>{"  "}
+                            to{"  "}
+                            <span className="fw-semibold">{EnrolledStudents.endStudent}</span>{"  "}
+                            of{"  "}
+                            <span className="fw-semibold">{"  "}
+                              {EnrolledStudents.totalStudents}
+                            </span> Results
+                          </div>
+                        :
+                        <div className="text_mute pagination-text">
+                          Showing {" "}
+                          <span className="fw-semibold">0</span>{"  "}
+                          to{"  "}
+                          <span className="fw-semibold">0</span>{"  "}
+                          of{"  "}
+                          <span className="fw-semibold">{"  "}
+                            {EnrolledStudents.totalStudents}
+                          </span> Results
+                        </div>
                     }
 
                     {/* <div className="text_mute pagination-text">
@@ -555,7 +572,7 @@ function Studentdata() {
                   <div className="col-sm-auto mt-3 mt-sm-0">
                     <ul className="mt-2 pagination pagination-separated pagination-sm mb-0 justify-content-center">
 
-                      
+
 
                       <li className='page-item p-1'>
                         <button
@@ -573,13 +590,13 @@ function Studentdata() {
                       {[...Array(endPage - startPage + 1)].map((_, index) => {
                         const page = startPage + index;
                         return (
-                          
+
                           <li className={`page-item p-1`}>
                             <button key={page}
-                            // onClick={() => changePage(page)}
-                            onClick={() => changePage(currentPage === 1 && page === startPage ? 1 : page)}
-                            disabled={EnrolledStudents.loading? true : false}
-                            className={`border page-link border-1 ${currentPage === page || (currentPage === 1 && page === startPage)? 'active' : ''}`}
+                              // onClick={() => changePage(page)}
+                              onClick={() => changePage(currentPage === 1 && page === startPage ? 1 : page)}
+                              disabled={EnrolledStudents.loading ? true : false}
+                              className={`border page-link border-1 ${currentPage === page || (currentPage === 1 && page === startPage) ? 'active' : ''}`}
                             >
                               <span className=''>{page} </span>
                             </button>
@@ -602,7 +619,7 @@ function Studentdata() {
                         </button>
                       </li>
 
-                      
+
 
                     </ul>
                   </div>
