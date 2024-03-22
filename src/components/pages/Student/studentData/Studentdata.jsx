@@ -144,6 +144,37 @@ function Studentdata() {
     startPage = Math.max(1, endPage - 2);
   }
 
+  // here the reset the search, filters, perpage and current page----
+
+  useEffect(()=>{
+    debouncesetPage({ context: "ENROLLED_STUDENTS", data:1 })
+    debouncesetSearch({ context: "ENROLLED_STUDENTS", data:"" });
+
+    Dispatchstudents({
+      type: "SET_FILTERS",
+      payload: {
+        context: "ENROLLED_STUDENTS",
+        data: {
+          fromDate: "",
+          toDate: "",
+          branch: "",
+          enquiryTakenBy: "",
+          modeOfTraining: "",
+        },
+      },
+    });
+
+    Dispatchstudents({
+      type: "SET_PER_PAGE",
+      payload: {
+        context: "ENROLLED_STUDENTS",
+        data: 10,
+      },
+    });
+
+  },[])
+
+
   return (
     <div>
       <div className="container-fluid">
