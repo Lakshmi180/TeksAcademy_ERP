@@ -62,6 +62,9 @@ import Addassets from "./components/pages/Inventory/Addassets";
 import Assignassets from "./components/pages/Inventory/Assignassets";
 import RefundData from "./components/pages/Student/refund/RefundData";
 import RefundForm from "./components/pages/Student/refund/RefundForm";
+import CreateReport from "./components/pages/Reports/CreateReport";
+import Addassetsform from "./components/pages/Inventory/Addassetsform";
+import Register from "./components/pages/Inventory/Register";
 import { Webinar } from "./components/pages/Leads/Webinar";
 import { WhatsApp } from "./components/pages/Leads/WhatsApp";
 import { DownloadSyllabus } from "./components/pages/Leads/DownloadSyllabus";
@@ -70,7 +73,13 @@ import { ContactUs } from "./components/pages/Leads/ContactUs";
 import { HLPEnquireLeads } from "./components/pages/Leads/HLPEnquireLeads";
 import { SLPEnquireLeads } from "./components/pages/Leads/SLPEnquireLeads";
 import GaugeChart from "./components/pages/Student/fee/GaugeChart";
+import FeeAdminInvoice from "./components/pages/Student/fee/FeeAdminInvoice";
+import StudentIdCard from "./components/pages/Student/studentData/StudentIdCard";
+import OrganizationProfile from "./components/pages/Settings/OrganizationProfile";
+import { Input } from "./components/common/design/Input";
 function App() {
+  
+
   return (
     <Routes>
       <Route element={<ReqireAuth />}>
@@ -90,16 +99,26 @@ function App() {
         <Route path="/createrole" element={<CreateRole />} />
         <Route path="/studentdata" element={<Studentdata />} />
         <Route path="/createuser" element={<CreateUserForm />} />
+        <Route path="/userupdate/:id" element={<CreateUserForm />} />
         <Route path="/course" element={<Course />} />
         <Route path="/createcourse" element={<CreateCourse />} />
         <Route path="/branch" element={<Branch />} />
         <Route path="/createbranch" element={<CreateBranch />} />
         <Route path="/department" element={<Department />} />
+        <Route path="/updatedepartment/:id" element={<CreateDepartment />} />
         <Route path="/createdepartment" element={<CreateDepartment />} />
+
         <Route path="/coursepackage" element={<CoursePackage />} />
+        <Route
+          path="/updatecoursepackage/:id"
+          element={<CreateCoursePackage />}
+        />
         <Route path="/createcoursepackage" element={<CreateCoursePackage />} />
+
         <Route path="/leadsource" element={<LeadSource />} />
+        <Route path="/updateleadsource/:id" element={<CreateLeadSource />} />
         <Route path="/createleadsource" element={<CreateLeadSource />} />
+
         <Route path="/createadmissionfee" element={<CreateAdmissionFee />} />
         <Route path="/admissionfee" element={<AdmissionFee />} />
         <Route path="/addvendor" element={<AddVendor />} />
@@ -111,18 +130,19 @@ function App() {
         <Route path="/chart" element={<GaugeChart/>}/>
         <Route
           path="/requestedcertificate"
-          element={<RequestedCertificate />}
-        />
+          element={<RequestedCertificate />}/>
+        <Route path="/requestedcertificate" element={<RequestedCertificate />}/>
+        
         <Route path="/issuedcertificates" element={<IssuedCertificates />} />
         <Route path="/updatecourse/:courseId" element={<CreateCourse />} />
+        <Route path="/editbranch/:branchId" element={<CreateBranch />} />
+
         <Route
           path="/requestedcertificate"
           element={<RequestedCertificate />}
         />
         <Route path="/issuedcertificates" element={<IssuedCertificates />} />
-
         <Route path="/userview/:courseId" element={<UserView />} />
-
         {/* <Route path="/updatecourse/:courseId" element={<CreateCourse />} /> */}
         <Route path="/feedetailspage" element={<FeeDetailsPage />} />
         <Route path="/feefollowups" element={<FeeFollowUps />} />
@@ -137,14 +157,34 @@ function App() {
           element={<StudentApplicationPrint />}
         />
         <Route path="/userview/:courseId" element={<UserView />} />
+        <Route path="/feeadmininvoice" element={<FeeAdminInvoice />} />
+
+        <Route
+          path="/demo"
+          element={
+            <Input
+              type={"password"}
+              id={"name"}
+              placeholder={"Enter your password"}
+              required={true}
+              // element={"textarea"}
+              label={"Name"}
+            />
+          }
+        />
 
         {/* <Route path="/updatecourse/:courseId" element={<CreateCourse />} /> */}
         <Route path="/feedetailspage" element={<FeeDetailsPage />} />
         <Route path="/refunddata" element={<RefundData />} />
         <Route path="/refundform" element={<RefundForm />} />
+        <Route path="/studentidcard" element={<StudentIdCard />} />
+        <Route path="/organizationprofile" element={<OrganizationProfile />} />
 
-        {/* Leads */}
+        <Route path="/reports" element={<CreateReport />} />
+        <Route path="/addassetsform" element={<Addassetsform />} />
 
+        <Route path="/register" element={<Register />} />
+        {/* leads */}
         <Route path="/webinarleads" element={<Webinar />} />
         <Route path="/whatsappleads" element={<WhatsApp />} />
         <Route path="/downloadsyllabusleads" element={<DownloadSyllabus />} />
@@ -152,7 +192,14 @@ function App() {
         <Route path="/contactusleads" element={<ContactUs />} />
         <Route path="/hlpenquireleads" element={<HLPEnquireLeads />} />
         <Route path="/slpenquireleads" element={<SLPEnquireLeads />} />
+        {/* did by lipika */}
+        <Route path="/updatecourse/:courseId" element={<CreateCourse />} />
+        < Route path="/feedetailspage" element={< FeeDetailsPage />} />
+        < Route path="/refunddata" element={< RefundData />} />
+        < Route path="/refundform" element={< RefundForm />} />
+
       </Route>
+
 
       <Route element={<PublicLayout />}>
         <Route path="/login" element={<Login />} />
@@ -160,23 +207,12 @@ function App() {
         <Route path="/changepassword" element={<ChangePassword />} />
         <Route path="/lockscreen" element={<LockScreen />} />
       </Route>
-    </Routes>
+    </Routes >
   );
 }
-
-{
-  /* 
-  <Routes>
-        <Route element={<ReqireAuth />}>
-          <Route path="/" element={<Dashboard />} />
-        </Route>
-        <Route element={<PublicLayout />}>
-          <Route path="/login" element={<Login />} />
-          <Route path="/forgotpassword" element={<ForgotPassword />} />
-          <Route path="/changepassword" element={<ChangePassword />} />
-          <Route path="/lockscreen" element={<LockScreen />} />
-        </Route>
-      </Routes> */
-}
-
 export default App;
+
+
+
+
+

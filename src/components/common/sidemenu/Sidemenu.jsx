@@ -485,7 +485,7 @@ export const Sidemenu = ({ isExpanded }) => {
                 data-bs-parent="#sidebar"
               >
                 <li className="sidebar-item">
-                  <Link
+                  <Link  to="./reports"
                     className="sidebar-link"
                     onClick={() => handleActiveClick("reportsdata")}
                   >

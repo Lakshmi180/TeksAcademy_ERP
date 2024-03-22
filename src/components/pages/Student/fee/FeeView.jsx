@@ -9,7 +9,7 @@ const FeeView = () => {
                 <div className="card border-0">
                     <div className="card-header">
                         <div className="row">
-                            <div className="col-lg-8 mt-3">
+                            <div className="col-lg-7 mt-3">
                                 <div className="row d-flex justify-content-between">
                                     <div className="col-6">
                                         <label
@@ -151,7 +151,7 @@ const FeeView = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-lg-4 p-0 mt-3">
+                            <div className="col-lg-5 p-0">
                                 <div className='d-flex justify-content-center'>
                                     <GaugeChart />
                                 </div>

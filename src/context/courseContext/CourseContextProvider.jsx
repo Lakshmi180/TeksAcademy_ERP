@@ -18,7 +18,7 @@ const CourseContextProvider = ({ children }) => {
         `${process.env.REACT_APP_API_URL}/getcourses`
       );
 
-      if (status === 201) {
+      if (status === 200) {
         console.log(data, "courseresponsedata");
         DispatchCourse({ type: "SET_COURSES", payload: data });
       }

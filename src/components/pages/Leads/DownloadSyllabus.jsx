@@ -300,56 +300,44 @@ export const DownloadSyllabus = () => {
               </div>
               <div className="card-body bg_white">
                 <div className="table-responsive table-card border-0 bg_white">
+                <div className="table-container">
+
                   <table className="bg_white table table-centered align-middle table-nowrap equal-cell-table ">
                     <thead>
                       <tr className="">
-                        {/* <th scope="col">
-                        <div className="form-check">
-                          <input
-                            className="form-check-input"
-                            type="checkbox"
-                            value=""
-                            id="cardtableCheck"
-                          />
-                          <label
-                            className="form-check-label"
-                            for="cardtableCheck"
-                          ></label>
-                        </div>
-                      </th> */}
                         <th
                           scope="col"
-                          className="fs_13 lh_xs fw_600 text_black "
+                          className="fs_13 lh_xs fw_600 black_300 "
                         >
                           S.No
                         </th>
                         <th
                           scope="col"
-                          className="fs_13 lh_xs text_black fw_600  "
+                          className="fs_13 lh_xs black_300  fw_600  "
                         >
                           Name
                         </th>
                         <th
                           scope="col"
-                          className="fs_13 lh_xs text_black fw_600  "
+                          className="fs_13 lh_xs black_300  fw_600  "
                         >
                           Email
                         </th>
                         <th
                           scope="col"
-                          className="fs_13 lh_xs text_black fw_600  "
+                          className="fs_13 lh_xs black_300  fw_600  "
                         >
                           City
                         </th>
                         <th
                           scope="col"
-                          className="fs_13 lh_xs text_black fw_600  "
+                          className="fs_13 lh_xs black_300  fw_600  "
                         >
                           Contact Number
                         </th>
                         <th
                           scope="col"
-                          className="fs_13 lh_xs text_black fw_600  "
+                          className="fs_13 lh_xs black_300  fw_600  "
                         >
                           Date
                         </th>
@@ -357,23 +345,24 @@ export const DownloadSyllabus = () => {
                     </thead>
                     <tbody className="bg_white">
                       <tr>
-                        <td className="fs-13 lh-xs fw-semibold text_black">
+                        <td className="fs-13 lh-xs fw-semibold black_300 ">
                           01
                         </td>
-                        <td className="fs-13 lh-xs text_black">Rahul</td>
-                        <td className="fs-13 lh-xs  text_black">
+                        <td className="fs-13 lh-xs black_300 ">Rahul</td>
+                        <td className="fs-13 lh-xs  black_300">
                           Rahul@Rahul.com
                         </td>
-                        <td className="fs-13 lh-xs  text_black">Hyderabad</td>
+                        <td className="fs-13 lh-xs  black_300">Hyderabad</td>
 
-                        <td className="fs-13 lh-xs  text_black">1234567890</td>
+                        <td className="fs-13 lh-xs  black_300">1234567890</td>
 
-                        <td className="fs-13 lh-xs text_black">12-04-2012</td>
+                        <td className="fs-13 lh-xs black_300 ">12-04-2012</td>
                       </tr>
 
                       {/* 1st row */}
                     </tbody>
                   </table>
+                </div>
                 </div>
                 <div className="align-items-center d-flex justify-content-between row text-center text-sm-start">
                   <div className="col-sm">
@@ -397,7 +386,7 @@ export const DownloadSyllabus = () => {
                     </div>
                   </div>
                   <div className="col-sm-auto mt-3 mt-sm-0 bg_white">
-                    <ul className="mt-2 pagination pagination-separated pagination-sm mb-0 justify-content-center">
+                    <ul className="bg_white mt-2 pagination pagination-separated pagination-sm mb-0 justify-content-center ">
                       <li
                         className={`page-item ${
                           currentPage === 1 ? "cursor-crosshair" : " "

@@ -12,28 +12,27 @@ import { useUserContext } from "../../../../hooks/useUserContext";
 import { useNavigate, useParams } from "react-router";
 function CreateUserForm() {
   const { DispatchBranch, BranchState, getAllBranches } = useBranchContext();
-  const { DispatchDepartment, DepartmentState, getAllDeparments } = useDepartmentContext();
+  const { DispatchDepartment, DepartmentState, getAllDeparments } =
+    useDepartmentContext();
   const { RoleState, createRole } = useRoleContext();
-  const { UsersState, getAllUsers,DispatchUsers } = useUserContext();
+  const { UsersState, getAllUsers, DispatchUsers } = useUserContext();
 
   const navigate = useNavigate();
   const { id } = useParams();
 
-
-  console.log(UsersState, "showusersatevvf")
+  console.log(UsersState, "showusersatevvf");
 
   const [UsersDropDown, setUsersDropDown] = useState();
 
   useEffect(() => {
     if (UsersState.TotalUsers) {
-      const filteredUsers = UsersState.TotalUsers.filter(user =>{
+      const filteredUsers = UsersState.TotalUsers.filter((user) => {
         return user.profile && user.profile.toLowerCase() !== "counsellor";
-      })
+      });
 
-      setUsersDropDown(filteredUsers)
+      setUsersDropDown(filteredUsers);
     }
-  }, [UsersState?.TotalUsers])
-
+  }, [UsersState?.TotalUsers]);
 
   // useEffect(() => {
   //   if (id) {
@@ -43,41 +42,37 @@ function CreateUserForm() {
   //   }
   // }, [id]);
 
+  //   useEffect(() => {
+  //     if (id && UsersState.TotalUsers.length > 0) {
 
+  //       id = parseInt(id);
+  //         const filteredUser = UsersState.TotalUsers.find(user => user.id === id);
+  //         console.log(filteredUser, "FilteredUser");
+  //         if (filteredUser) {
+  //             console.log(filteredUser, "FilteredUser");
+  //             setFormData(filteredUser);
+  //         } else {
+  //             console.log("No user found with the id:", id);
+  //         }
+  //     }
 
-//   useEffect(() => {
-//     if (id && UsersState.TotalUsers.length > 0) {
-      
-//       id = parseInt(id);
-//         const filteredUser = UsersState.TotalUsers.find(user => user.id === id);
-//         console.log(filteredUser, "FilteredUser");
-//         if (filteredUser) {
-//             console.log(filteredUser, "FilteredUser"); 
-//             setFormData(filteredUser);
-//         } else {  
-//             console.log("No user found with the id:", id); 
-//         }
-//     }
+  // }, [id]);
 
-// }, [id]);
-
-useEffect(() => {
-  console.log(id,"getuserdata")
-  if (id) {
-    // Fetch course details for editing
-    axios.get(`${process.env.REACT_APP_API_URL}/userdata/${id}`)
-      .then(response => {
-        setFormData(response.data);
+  useEffect(() => {
+    console.log(id, "getuserdata");
+    if (id) {
+      // Fetch course details for editing
+      axios
+        .get(`${process.env.REACT_APP_API_URL}/userdata/${id}`)
+        .then((response) => {
+          setFormData(response.data);
           console.log(response.data, "userresponceid");
-      })
-      .catch(error => {
-        console.error("Error fetching course details:", error);
-      });
-  }
-}, [id]);
-
-
-
+        })
+        .catch((error) => {
+          console.error("Error fetching course details:", error);
+        });
+    }
+  }, [id]);
 
   const [formData, setFormData] = useState({
     branch: "",
@@ -88,16 +83,16 @@ useEffect(() => {
     department: "",
     reportto: "",
     branch: "",
-  })
+  });
 
   const handleChange = (e) => {
     setFormData((prev) => {
       return {
         ...prev,
-        [e.target.name]: e.target.value
-      }
-    })
-  }
+        [e.target.name]: e.target.value,
+      };
+    });
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     let user = {
@@ -108,7 +103,7 @@ useEffect(() => {
       designation: formData.designation,
       department: formData.department,
       reportto: formData.reportto,
-    }
+    };
     user = [user];
     const dataWithTitleCase = user.map((item) => {
       const newItem = {};
@@ -129,67 +124,59 @@ useEffect(() => {
       return newItem;
     });
     user = dataWithTitleCase[0];
-    console.log(user, "ibdcjsbjvgfjv")
+    console.log(user, "ibdcjsbjvgfjv");
 
+    if (!id) {
+      try {
+        const { data, status } = await toast.promise(
+          axios.post(`${process.env.REACT_APP_API_URL}/createUser`, user),
+          {
+            loading: "Loading...",
+            success: "User created Successfully",
+            error: "User not Created",
+          }
+        );
 
-   if(!id){
-    try {
-      const { data, status } = await toast.promise(axios.post(`${process.env.REACT_APP_API_URL}/createUser`, user), {
-          loading: "Loading...",
-          success: "User created Successfully",
-          error: "User not Created"
-        })
-
-      if (status === 201) {
-        console.log(data, "hellobb")
-        getAllUsers();
-        DispatchUsers({type:"CREATE_USER", payload:data})
-        getAllUsers();
-        navigate("/userdata")
-        
+        if (status === 201) {
+          console.log(data, "hellobb");
+          getAllUsers();
+          DispatchUsers({ type: "CREATE_USER", payload: data });
+          getAllUsers();
+          navigate("/userdata");
+        }
+      } catch (error) {
+        console.log(error);
       }
     }
-    catch (error) {
-      console.log(error)
-    }
 
-   }
-    
+    if (id) {
+      try {
+        const { data, status } = await toast.promise(
+          axios.put(`${process.env.REACT_APP_API_URL}/updateuser/${id}`, user),
+          {
+            loading: "Loading...",
+            success: "User created Successfully",
+            error: "User not Created",
+          }
+        );
 
-   
-      
-    
-
-  if(id){
-    try {
-      const { data, status } = await
-        toast.promise(axios.put(`${process.env.REACT_APP_API_URL}/updateuser/${id}`, user), {
-          loading: "Loading...",
-          success: "User created Successfully",
-          error: "User not Created"
-        })
-
-      if (status === 200) {
-        getAllUsers();
-        navigate("/userdata")
-        DispatchUsers({type:"CREATE_USER", payload:data})
+        if (status === 200) {
+          getAllUsers();
+          navigate("/userdata");
+          DispatchUsers({ type: "CREATE_USER", payload: data });
+        }
+      } catch (error) {
+        console.log(error);
       }
     }
-    catch (error) {
-      console.log(error)
-    }
-  }  
-     
-  }
+  };
 
   return (
     <div>
       <div className="container-fluid">
         <div className="card border-0">
           <div className="align-items-center">
-            <h5 className="mt-4 fs-16 black_color ms-3">
-              User Creation Form
-            </h5>
+            <h5 className="mt-4 fs-16 black_color ms-3">User Creation Form</h5>
           </div>
           <div className="card-body">
             <div className="live-prieview">
@@ -211,7 +198,6 @@ useEffect(() => {
                         name="fullname"
                         value={formData.fullname}
                         onChange={handleChange}
-
                       />
                     </div>
                   </div>
@@ -286,13 +272,15 @@ useEffect(() => {
                       onChange={handleChange}
                       required
                     >
-                      <option value="" disabled selected> Enter the Department </option>
-                      {
-                        DepartmentState.departments && DepartmentState.departments.length > 0 && DepartmentState.departments.map((item, index) => (
+                      <option value="" disabled selected>
+                        {" "}
+                        Enter the Department{" "}
+                      </option>
+                      {DepartmentState.departments &&
+                        DepartmentState.departments.length > 0 &&
+                        DepartmentState.departments.map((item, index) => (
                           <option key={index}>{item.department_name}</option>
-                        ))
-
-                      }
+                        ))}
                     </select>
                   </div>
                   <div className=" col-md-4 ">
@@ -309,12 +297,15 @@ useEffect(() => {
                       onChange={handleChange}
                       required
                     >
-                      <option value="" disabled selected> Enter Report To </option>
-                      {
-                        UsersDropDown && UsersDropDown.length > 0 ? UsersDropDown.map((item, index) => (
-                          <option key={index}>{item.fullname}</option>
-                        )) : null
-                      }
+                      <option value="" disabled selected>
+                        {" "}
+                        Enter Report To{" "}
+                      </option>
+                      {UsersDropDown && UsersDropDown.length > 0
+                        ? UsersDropDown.map((item, index) => (
+                            <option key={index}>{item.fullname}</option>
+                          ))
+                        : null}
                       {/* <option >Select Report</option>
                       <option >Report 1</option>
                       <option >Report 2</option> */}
@@ -334,13 +325,17 @@ useEffect(() => {
                       onChange={handleChange}
                       required
                     >
-                      <option value="" disabled selected> Enter Role </option>
-                      {
-                        RoleState?.roles && RoleState?.roles.length > 0 && RoleState.roles.map((item, index) => (
-                          <option key={index} value={item.role}>{item.role}</option>
-                        )) 
-                      }
-
+                      <option value="" disabled selected>
+                        {" "}
+                        Enter Role{" "}
+                      </option>
+                      {RoleState?.roles &&
+                        RoleState?.roles.length > 0 &&
+                        RoleState.roles.map((item, index) => (
+                          <option key={index} value={item.role}>
+                            {item.role}
+                          </option>
+                        ))}
                     </select>
                   </div>
                   <div className=" col-md-4 ">
@@ -357,18 +352,23 @@ useEffect(() => {
                       onChange={handleChange}
                       required
                     >
-                      <option value="" disabled selected> Enter Branch </option>
-                      {
-                        BranchState.branches && BranchState.branches.length > 0 && BranchState.branches.map((item) => (
-                          <option >{item.branch_name}</option>
-                        ))
-                      }
+                      <option value="" disabled selected>
+                        {" "}
+                        Enter Branch{" "}
+                      </option>
+                      {BranchState.branches &&
+                        BranchState.branches.length > 0 &&
+                        BranchState.branches.map((item) => (
+                          <option>{item.branch_name}</option>
+                        ))}
                     </select>
                   </div>
                 </div>
                 <div className=" ">
                   <div className="d-flex justify-content-end">
-                    <Button className={"btn_primary btn-label right"} icon={<FaArrowRight />}
+                    <Button
+                      className={"btn btn_primary right"}
+                      icon={<FaArrowRight />}
                       onClick={handleSubmit}
                     >
                       Submit

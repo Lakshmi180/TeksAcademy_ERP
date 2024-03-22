@@ -2,10 +2,17 @@ import React from 'react'
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
+import "./UserView.css";
 import axios from "axios";
+// import "./UserView.css";
 // import {UserPhoto} from "../../../../images/profile.jpg"
 function UserView() {
+  const [activeTab, setActiveTab] = useState('overview'); // State to manage active tab
 
+  // Function to handle tab change
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+  };
   const navigate = useNavigate();
   const { courseId } = useParams();
   const [singleUser, setUser] = useState("");
@@ -27,294 +34,548 @@ function UserView() {
       });
   }, [courseId]);
 
+  const renderTabContent = () => {
+    switch (activeTab) {
+      case 'activities':
+        return (
+          <div className="tab-pane fade active show" id="activities" role="tabpanel">
+            <div className="card cards">
+              <div className="card-body">
+                <h5 className="card-title mb-3">Activities</h5>
+                <div className="acitivity-timeline">
+                  <div className="acitivity-item d-flex">
 
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Oliver Phillips <span className="badge bg-primary-subtle text-primary align-middle">New</span></h6>
+                      <p className="text-muted mb-2">We talked about a project on linkedin.</p>
+                      <small className="mb-0 text-muted">Today</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+                    <div className="flex-shrink-0 avatar-xs acitivity-avatar">
+
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Nancy Martino <span className="badge bg-secondary-subtle text-secondary align-middle">In Progress</span></h6>
+                      <p className="text-muted mb-2"><i className="ri-file-text-line align-middle ms-2"></i> Create new project Buildng product</p>
+                      <div className="avatar-group mb-2">
+
+                        <a href="javascript: void(0);" className="avatar-group-item" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title=" Ruby">
+                          <div className="avatar-xs">
+
+                          </div>
+                        </a>
+                        <a href="javascript: void(0);" className="avatar-group-item" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="more">
+                          <div className="avatar-xs">
+                            <div className="avatar-title rounded-circle">
+                              2+
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <small className="mb-0 text-muted">Yesterday</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Natasha Carey <span className="badge bg-success-subtle text-success align-middle">Completed</span>
+                      </h6>
+                      <p className="text-muted mb-2">Adding a new event with attachments</p>
+                      <div className="row">
+                        <div className="col-xxl-4">
+                          <div className="row border border-dashed gx-2 p-2 mb-2">
+
+
+
+                          </div>
+
+                        </div>
+                      </div>
+                      <small className="mb-0 text-muted">25 Nov</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+                    <div className="flex-shrink-0">
+
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Bethany Johnson</h6>
+                      <p className="text-muted mb-2">added a new member to velzon dashboard</p>
+                      <small className="mb-0 text-muted">19 Nov</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+                    <div className="flex-shrink-0">
+                      <div className="avatar-xs acitivity-avatar">
+                        <div className="avatar-title rounded-circle bg-danger-subtle text-danger">
+                          <i className="ri-shopping-bag-line"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Your order is placed <span className="badge bg-danger-subtle text-danger align-middle ms-1">Out of Delivery</span></h6>
+                      <p className="text-muted mb-2">These customers can rest assured their order has been placed.</p>
+                      <small className="mb-0 text-muted">16 Nov</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+                    <div className="flex-shrink-0">
+
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Lewis Pratt</h6>
+                      <p className="text-muted mb-2">They all have something to say
+                        beyond the words on the page. They can come across as
+                        casual or neutral, exotic or graphic. </p>
+                      <small className="mb-0 text-muted">22 Oct</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+                    <div className="flex-shrink-0">
+                      <div className="avatar-xs acitivity-avatar">
+                        <div className="avatar-title rounded-circle bg-info-subtle text-info">
+                          <i className="ri-line-chart-line"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Monthly sales report</h6>
+                      <p className="text-muted mb-2">
+                        <span className="text-danger">2 days left</span> notification to submit the monthly sales report. <a href="javascript:void(0);" className="link-warning text-decoration-underline">Reports Builder</a>
+                      </p>
+                      <small className="mb-0 text-muted">15 Oct</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item d-flex">
+                    <div className="flex-shrink-0">
+
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">New ticket received <span className="badge bg-success-subtle text-success align-middle">Completed</span></h6>
+                      <p className="text-muted mb-2">User <span className="text-secondary">Erica245</span> submitted a ticket.</p>
+                      <small className="mb-0 text-muted">26 Aug</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        );
+      case 'projects':
+        return (
+          <div className='' >
+            <div className="card cards ">
+              <div className="card-body">
+                <h5 className="card-title mb-3">Projects</h5>
+                <div className="acitivity-timeline">
+                  <div className="acitivity-item d-flex">
+
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Oliver Phillips <span className="badge bg-primary-subtle text-primary align-middle">New</span></h6>
+                      <p className="text-muted mb-2">We talked about a project on linkedin.</p>
+                      <small className="mb-0 text-muted">Today</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+                    <div className="flex-shrink-0 avatar-xs acitivity-avatar">
+
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Nancy Martino <span className="badge bg-secondary-subtle text-secondary align-middle">In Progress</span></h6>
+                      <p className="text-muted mb-2"><i className="ri-file-text-line align-middle ms-2"></i> Create new project Buildng product</p>
+                      <div className="avatar-group mb-2">
+
+                        <a href="javascript: void(0);" className="avatar-group-item" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title=" Ruby">
+                          <div className="avatar-xs">
+
+                          </div>
+                        </a>
+                        <a href="javascript: void(0);" className="avatar-group-item" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="more">
+                          <div className="avatar-xs">
+                            <div className="avatar-title rounded-circle">
+                              2+
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <small className="mb-0 text-muted">Yesterday</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Natasha Carey <span className="badge bg-success-subtle text-success align-middle">Completed</span>
+                      </h6>
+                      <p className="text-muted mb-2">Adding a new event with attachments</p>
+                      <div className="row">
+                        <div className="col-xxl-4">
+                          <div className="row border border-dashed gx-2 p-2 mb-2">
+
+
+
+                          </div>
+
+                        </div>
+                      </div>
+                      <small className="mb-0 text-muted">25 Nov</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+                    <div className="flex-shrink-0">
+
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Bethany Johnson</h6>
+                      <p className="text-muted mb-2">added a new member to velzon dashboard</p>
+                      <small className="mb-0 text-muted">19 Nov</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+                    <div className="flex-shrink-0">
+                      <div className="avatar-xs acitivity-avatar">
+                        <div className="avatar-title rounded-circle bg-danger-subtle text-danger">
+                          <i className="ri-shopping-bag-line"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Your order is placed <span className="badge bg-danger-subtle text-danger align-middle ms-1">Out of Delivery</span></h6>
+                      <p className="text-muted mb-2">These customers can rest assured their order has been placed.</p>
+                      <small className="mb-0 text-muted">16 Nov</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+                    <div className="flex-shrink-0">
+
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Lewis Pratt</h6>
+                      <p className="text-muted mb-2">They all have something to say
+                        beyond the words on the page. They can come across as
+                        casual or neutral, exotic or graphic. </p>
+                      <small className="mb-0 text-muted">22 Oct</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+                    <div className="flex-shrink-0">
+                      <div className="avatar-xs acitivity-avatar">
+                        <div className="avatar-title rounded-circle bg-info-subtle text-info">
+                          <i className="ri-line-chart-line"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Monthly sales report</h6>
+                      <p className="text-muted mb-2">
+                        <span className="text-danger">2 days left</span> notification to submit the monthly sales report. <a href="javascript:void(0);" className="link-warning text-decoration-underline">Reports Builder</a>
+                      </p>
+                      <small className="mb-0 text-muted">15 Oct</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item d-flex">
+                    <div className="flex-shrink-0">
+
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">New ticket received <span className="badge bg-success-subtle text-success align-middle">Completed</span></h6>
+                      <p className="text-muted mb-2">User <span className="text-secondary">Erica245</span> submitted a ticket.</p>
+                      <small className="mb-0 text-muted">26 Aug</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        );
+      case 'documents':
+        return (
+          <div className='' >
+            <div className="card cards ">
+              <div className="card-body">
+                <h5 className="card-title mb-3">Documents</h5>
+                <div className="acitivity-timeline">
+                  <div className="acitivity-item d-flex">
+
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Oliver Phillips <span className="badge bg-primary-subtle text-primary align-middle">New</span></h6>
+                      <p className="text-muted mb-2">We talked about a project on linkedin.</p>
+                      <small className="mb-0 text-muted">Today</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+                    <div className="flex-shrink-0 avatar-xs acitivity-avatar">
+
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Nancy Martino <span className="badge bg-secondary-subtle text-secondary align-middle">In Progress</span></h6>
+                      <p className="text-muted mb-2"><i className="ri-file-text-line align-middle ms-2"></i> Create new project Buildng product</p>
+                      <div className="avatar-group mb-2">
+
+                        <a href="javascript: void(0);" className="avatar-group-item" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title=" Ruby">
+                          <div className="avatar-xs">
+
+                          </div>
+                        </a>
+                        <a href="javascript: void(0);" className="avatar-group-item" data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="more">
+                          <div className="avatar-xs">
+                            <div className="avatar-title rounded-circle">
+                              2+
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <small className="mb-0 text-muted">Yesterday</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Natasha Carey <span className="badge bg-success-subtle text-success align-middle">Completed</span>
+                      </h6>
+                      <p className="text-muted mb-2">Adding a new event with attachments</p>
+                      <div className="row">
+                        <div className="col-xxl-4">
+                          <div className="row border border-dashed gx-2 p-2 mb-2">
+
+
+
+                          </div>
+
+                        </div>
+                      </div>
+                      <small className="mb-0 text-muted">25 Nov</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+                    <div className="flex-shrink-0">
+
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Bethany Johnson</h6>
+                      <p className="text-muted mb-2">added a new member to velzon dashboard</p>
+                      <small className="mb-0 text-muted">19 Nov</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+                    <div className="flex-shrink-0">
+                      <div className="avatar-xs acitivity-avatar">
+                        <div className="avatar-title rounded-circle bg-danger-subtle text-danger">
+                          <i className="ri-shopping-bag-line"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Your order is placed <span className="badge bg-danger-subtle text-danger align-middle ms-1">Out of Delivery</span></h6>
+                      <p className="text-muted mb-2">These customers can rest assured their order has been placed.</p>
+                      <small className="mb-0 text-muted">16 Nov</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+                    <div className="flex-shrink-0">
+
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Lewis Pratt</h6>
+                      <p className="text-muted mb-2">They all have something to say
+                        beyond the words on the page. They can come across as
+                        casual or neutral, exotic or graphic. </p>
+                      <small className="mb-0 text-muted">22 Oct</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item py-3 d-flex">
+                    <div className="flex-shrink-0">
+                      <div className="avatar-xs acitivity-avatar">
+                        <div className="avatar-title rounded-circle bg-info-subtle text-info">
+                          <i className="ri-line-chart-line"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">Monthly sales report</h6>
+                      <p className="text-muted mb-2">
+                        <span className="text-danger">2 days left</span> notification to submit the monthly sales report. <a href="javascript:void(0);" className="link-warning text-decoration-underline">Reports Builder</a>
+                      </p>
+                      <small className="mb-0 text-muted">15 Oct</small>
+                    </div>
+                  </div>
+                  <div className="acitivity-item d-flex">
+                    <div className="flex-shrink-0">
+
+                    </div>
+                    <div className="flex-grow-1 ms-3">
+                      <h6 className="mb-1">New ticket received <span className="badge bg-success-subtle text-success align-middle">Completed</span></h6>
+                      <p className="text-muted mb-2">User <span className="text-secondary">Erica245</span> submitted a ticket.</p>
+                      <small className="mb-0 text-muted">26 Aug</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        );
+      default:
+        return (
+          <div className='container'>
+            <div className='row'>
+              <div className="col-xxl-4 col-lg-4 ">
+                <div className="card cards">
+                  <div className="card-body">
+                    <h5 className="card-title mb-3">Info</h5>
+                    <div className="table-responsive">
+                      <table className="table table-borderless mb-0">
+                        <tbody>
+                          <tr>
+                            <th className="ps-0" scope="row">Full Name :</th>
+                            <td className="text-muted">Anna Adame</td>
+                          </tr>
+                          <tr>
+                            <th className="ps-0" scope="row">Mobile :</th>
+                            <td className="text-muted">+(1) 987 6543</td>
+                          </tr>
+                          <tr>
+                            <th className="ps-0" scope="row">E-mail :</th>
+                            <td className="text-muted">daveadame@velzon.com</td>
+                          </tr>
+                          <tr>
+                            <th className="ps-0" scope="row">Location :</th>
+                            <td className="text-muted">California, United States
+                            </td>
+                          </tr>
+                          <tr>
+                            <th className="ps-0" scope="row">Joining Date</th>
+                            <td className="text-muted">24 Nov 2021</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xxl-8 col-lg-12 pe-4">
+                <div className='card cards '>
+                  <div className="card-body fs-s ">
+                    <h5 className="card-title mb-3">About</h5>
+                    <p>Hi I'm Anna Adame, It will be as simple as Occidental; in fact, it will be Occidental. To an English person, it will seem like simplified English, as a skeptical Cambridge friend of mine told me what Occidental is European languages are members of the same family.</p>
+                    <p>You always want to make sure that your fonts work well together and try to limit the number of fonts you use to three or less. Experiment and play around with the fonts that you already have in the software you’re working with reputable font websites. This may be the most commonly encountered tip I received from the designers I spoke with. They highly encourage that you use different fonts in one design, but do not over-exaggerate and go overboard.</p>
+                    <div className="row">
+                      <div className="col-6 col-md-4">
+                        <div className="d-flex mt-4">
+                          <div className="flex-shrink-0 avatar-xs align-self-center me-3">
+                            <div className="avatar-title bg-light rounded-circle fs-16 text-primary">
+                              <i className="ri-user-2-fill"></i>
+                            </div>
+                          </div>
+                          <div className="flex-grow-1 overflow-hidden">
+                            <p className="mb-1">Designation :</p>
+                            <h6 className="text-truncate mb-0">Lead Designer / Developer</h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="col-6 col-md-4">
+                        <div className="d-flex mt-4">
+                          <div className="flex-shrink-0 avatar-xs align-self-center me-3">
+                            <div className="avatar-title bg-light rounded-circle fs-16 text-primary">
+                              <i className="ri-global-line"></i>
+                            </div>
+                          </div>
+                          <div className="flex-grow-1 overflow-hidden">
+                            <p className="mb-1">Website :</p>
+                            <a href="#" className="fw-semibold">www.velzon.com</a>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+    }
+  };
 
   return (
+    <div className='container'>
 
-    <div className="container-fluid ">
-
-      <div className='card'>
-
-        <div className="card-border-0">
-          <div className=''>
-            <h5 className="mt-5 fs-16 txt-color ms-3 text-center "> User View</h5>
+      <div className=''>
+        <div className='student-bg-position bg-imges '></div>
+        <div className='position-absolute text-white' style={{ zIndex: 2 }}>
+          <div className='row g-4'>
+            <div className="col-auto">
+              <div className="avatar-lg mt-4 ms-4">
+                <img src="https://themesbrand.com/velzon/html/master/assets/images/users/avatar-1.jpg" alt="user-img" className="img-thumbnail rounded-circle" />
+              </div>
+            </div>
           </div>
-          <div className='card-body '>
-            <div className="row">
-              <div className="col-12 col-md-4 col-lg-3 col-xl-3">
-                <img
-                  src="data:image/jpeg;base64,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"
-                  alt=""
-
-                />
-
-              </div>
-              <div className="col-12 col-md-4 col-lg-5 col-xl-5 ">
-                <tr className="lh-500">
-                  <td class="ps-0 black_300  fs-13  " scope="row">
-                    User Name
-                  </td>
-                  <td class="text_black fs-14 ps-2  fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b> {singleUser.fullname}</td>
-                </tr>
-                <tr className="lh-500">
-                  <td class="ps-0 black_300  fs-13  " scope="row">
-                   Email
-                  </td>
-                  <td class="text_black fs-14 ps-2  fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b> {singleUser.email}</td>
-                </tr>
-                <tr className="lh-500">
-                  <td class="ps-0 black_300  fs-13  " scope="row">
-                  Phone No
-                  </td>
-                  <td class="text_black fs-14 ps-2  fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b>{singleUser.phonenumber}</td>
-                </tr>
-                <tr className="lh-500">
-                  <td class="ps-0 black_300  fs-13  " scope="row">
-                Designation
-                  </td>
-                  <td class="text_black fs-14 ps-2  fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b> {singleUser.designation}</td>
-                </tr>
-              </div>
-              <div className="col-12 col-md-4 col-lg-4 col-xl-4  ">
-              <tr className="lh-500">
-                  <td class="ps-0 black_300  fs-13  " scope="row">
-                  Department
-                  </td>
-                  <td class="text_black fs-14 ps-2  fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b>{singleUser.department}</td>
-                </tr>
-                <tr className="lh-500">
-                  <td class="ps-0 black_300  fs-13  " scope="row">
-                 Report To
-                  </td>
-                  <td class="text_black fs-14 ps-2  fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b>{singleUser.reportto}</td>
-                </tr>
-                <tr className="lh-500">
-                  <td class="ps-0 black_300  fs-13  " scope="row">
-               Profile
-                  </td>
-                  <td class="text_black fs-14 ps-2  fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b>{singleUser.profile}</td>
-                </tr>
-                <tr className="lh-500">
-                  <td class="ps-0 black_300  fs-13  " scope="row">
-                  Branch
-                  </td>
-                  <td class="text_black fs-14 ps-2  fw-500  ">  <b className=" fw-500 fs-13 pe-2"> :</b>{singleUser.branch}</td>
-                </tr>
-                {/* <Link to={`/resetpassword/${id}`}>
-                  Change Password
-                </Link> */}
+          <div className='pt-2 mb-4 mb-lg-3 pb-lg-4  profile-wrapper'>
+            <div className='position-absolute text-white' style={{ zIndex: 2, top: 25, left: 50 }}>
+              <div className="col ms-5">
+                <div className="ps-5">
+                  <h3 className="text-white mb-1  ">Anna Adame</h3>
+                  <p className="text-white mb-1 fs-s ms-1 ">Owner &amp; Founder</p>
+                  <div className="text-mute fs-s mb-1 hstack gap-1">
+                    <div className="me-2"><i className="ri-map-pin-user-line me-1 text-white text-opacity-75 fs-16 align-middle"></i>California, United States</div>
+                    <div>
+                      <i className="ri-building-line me-1 text-mute text-opacity-75 fs-16 align-middle"></i>Themesbrand
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="" style={{ overflow: "hidden" }}>
-              <table size="large" aria-label="a dense table">
-                <table>
-                  {/* <tr>
-                                    <td className="table-cell-heading">
-                                        Date
-                                    </td>
-                                    <td className="table-cell-heading">
-                                        Status
-                                    </td>
-                                    <td className="table-cell-heading">
-                                        Remarks
-                                    </td>
-                                </tr> */}
-                </table>
-                <tbody>
-                  {singleUser.user_remarks_history &&
-                    singleUser.user_remarks_history.map((userstatus, index) => {
-                      // let date = useFormattedDate(userstatus.date);
-                      // const originalDate = new Date(userstatus.date);
-                      // const day = String(originalDate.getDate()).padStart(2, "0");
-                      // const month = String(originalDate.getMonth() + 1).padStart(
-                      //   2,
-                      //   "0"
-                      // ); // Month is zero-based, so we add 1.
-                      // const year = originalDate.getFullYear();
-
-                      // const formattedDate = `${day}-${month}-${year}`;
-                      const date = new Date(userstatus.date);
-                      const day = date.getUTCDate();
-                      const monthIndex = date.getUTCMonth();
-                      const year = date.getUTCFullYear();
-
-                      const monthAbbreviations = [
-                        "Jan",
-                        "Feb",
-                        "Mar",
-                        "Apr",
-                        "May",
-                        "Jun",
-                        "Jul",
-                        "Aug",
-                        "Sep",
-                        "Oct",
-                        "Nov",
-                        "Dec",
-                      ];
-
-                      // Formatting the date
-                      const Formatteddate = `${day < 10 ? "0" : ""}${day}-${monthAbbreviations[monthIndex]
-                        }-${year}`;
-
-                      return (
-                        <tr
-                          sx={{
-                            "&:last-child td, &:last-child th": { border: 0 },
-                          }}
-                          key={index}
-                        >
-                          <td className="table-cell-heading">
-                            {" "}
-                            {Formatteddate}
-                          </td>
-
-                          {userstatus.Activate_remarks && (
-                            <td className="table-cell-heading">
-                              Active
-                            </td>
-                          )}
-                          {userstatus.Inactivate_remarks && (
-                            <td className="table-cell-heading">
-                              Inactive
-                            </td>
-                          )}
-                          {userstatus.Activate_remarks && (
-                            <td className="table-cell-heading">
-                              {userstatus.Activate_remarks}
-                            </td>
-                          )}
-                          {userstatus.Inactivate_remarks && (
-                            <td className="table-cell-heading">
-                              {userstatus.Inactivate_remarks}
-                            </td>
-                          )}
-                        </tr>
-                      );
-                    })}
-                </tbody>
-              </table>
-            </div>
-
-            {/* <div className="backimg">
-              <img className="pic" src={profilepic} alt="pic" />
-            </div>
-            <div className="row">
-              <div className="col-12 col-md-6 col-xl-6 col-lg-6">
-                <p className="text-start"> User Name :{singleUser.fullname}</p>
-                <p className="text-start"> Email: {singleUser.email}</p>
-                <p className="text-start"> Phone No: {singleUser.phonenumber}</p>
-                <p className="text-start"> Designation: {singleUser.designation}</p>
-              </div>
-              <div className="col-12 col-md-6 col-lg-6 col-xl-6  text-start ">
-                <p >Department : {singleUser.department}</p>
-                <p > Report To : {singleUser.reportto}</p>
-                <p > Profile : {singleUser.profile} </p>
-                <p > Branch: {singleUser.branch}</p>
-              </div>
-    
-              <TableContainer component={Paper} className="my-4">
-                <Table
-                  sx={{ minWidth: 650 }}
-                  size="large"
-                  aria-label="a dense table"
-                >
-                  <TableHead>
-                    <TableRow>
-                      <TableCell className="fs-6 text-center border border-2">
-                        Date
-                      </TableCell>
-                      <TableCell className="fs-6 text-center border border-2">
-                        Status
-                      </TableCell>
-                      <TableCell className="fs-6 text-center border border-2">
-                        Remarks
-                      </TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {singleUser.user_remarks_history &&
-                      singleUser.user_remarks_history.map((userstatus, index) => {
-                        // let date = useFormattedDate(userstatus.date);
-                        // const originalDate = new Date(userstatus.date);
-                        // const day = String(originalDate.getDate()).padStart(2, "0");
-                        // const month = String(originalDate.getMonth() + 1).padStart(
-                        //   2,
-                        //   "0"
-                        // ); // Month is zero-based, so we add 1.
-                        // const year = originalDate.getFullYear();
-    
-                        // const formattedDate = `${day}-${month}-${year}`;
-                        const date = new Date(userstatus.date);
-                        const day = date.getUTCDate();
-                        const monthIndex = date.getUTCMonth();
-                        const year = date.getUTCFullYear();
-    
-                        const monthAbbreviations = [
-                          "Jan",
-                          "Feb",
-                          "Mar",
-                          "Apr",
-                          "May",
-                          "Jun",
-                          "Jul",
-                          "Aug",
-                          "Sep",
-                          "Oct",
-                          "Nov",
-                          "Dec",
-                        ];
-    
-                        // Formatting the date
-                        const Formatteddate = `${day < 10 ? "0" : ""}${day}-${
-                          monthAbbreviations[monthIndex]
-                        }-${year}`;
-    
-                        return (
-                          <TableRow
-                            sx={{
-                              "&:last-child td, &:last-child th": { border: 0 },
-                            }}
-                            key={index}
-                          >
-                            <TableCell className="text-center border border-2">
-                              {" "}
-                              {Formatteddate}
-                            </TableCell>
-    
-                            {userstatus.Activate_remarks && (
-                              <TableCell className="text-center border border-2">
-                                Active
-                              </TableCell>
-                            )}
-                            {userstatus.Inactivate_remarks && (
-                              <TableCell className="text-center border border-2">
-                                Inactive
-                              </TableCell>
-                            )}
-                            {userstatus.Activate_remarks && (
-                              <TableCell className="text-center border border-2">
-                                {userstatus.Activate_remarks}
-                              </TableCell>
-                            )}
-                            {userstatus.Inactivate_remarks && (
-                              <TableCell className="text-center border border-2">
-                                {userstatus.Inactivate_remarks}
-                              </TableCell>
-                            )}
-                          </TableRow>
-                        );
-                      })}
-                  </TableBody>
-                </Table>
-              </TableContainer>
-            </div> */}
           </div>
+          <div className="d-flex justify-content-between  ">
+            <div className='ms-5'>
+              <ul className="nav nav-pills animation-nav profile-nav gap-2 gap-lg-3 flex-grow-1 mt-4" role="tablist">
+                <li className="nav-item" role="presentation">
+                  <button className={`nav-link fs-14 ${activeTab === 'overview' ? 'active' : ''}`} onClick={() => handleTabChange('overview')}>
+                    Overview
+                  </button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button className={`nav-link fs-14 ${activeTab === 'activities' ? 'active' : ''}`} onClick={() => handleTabChange('activities')}>
+                    Activities
+                  </button>
+
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button className={`nav-link fs-14 ${activeTab === 'projects' ? 'active' : ''}`} onClick={() => handleTabChange('projects')}>
+                    Projects
+                  </button>
+                </li>
+                <li className="nav-item" role="presentation">
+                  <button className={`nav-link fs-14 ${activeTab === 'documents' ? 'active' : ''}`} onClick={() => handleTabChange('documents')}>
+                    Documents
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div className='container '>
+        <div className=" position-absolute ms-2 " style={{ zIndex: 1 }}>
+          <div className="col">
+            {renderTabContent()}
+          </div>
+        </div>
+        <div>
+
         </div>
       </div>
     </div>
-  )
+
+  );
 
 }
 
-export default UserView
+export default UserView;

@@ -73,7 +73,7 @@ export const SettingsTabs = () => {
         }, {
             name: "Organization Profile",
             icon: oraganisation,
-            link: "/"
+            link: "/organizationprofile"
         },
     ]
 

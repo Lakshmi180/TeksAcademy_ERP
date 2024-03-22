@@ -68,7 +68,7 @@ input::-webkit-inner-spin-button {
 }
 
 .reg_btn {
-  font-size: var(--erp-fs-s);
+  /* font-size: var(--erp-fs-s); */
   box-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
   padding: 5px;
   border: none;
@@ -80,19 +80,6 @@ input::-webkit-inner-spin-button {
   gap: 10px;
   position: relative;
 }
-
-.controls .control_next_btn {
-  background-color: var(--erp-green-500);
-  color: #fff;
-  order: 2;
-}
-
-.control_prev_btn {
-  order: 1;
-  background-color: var(--erp-input-bg-color);
-  color: var(--erp-text-color);
-}
-
 .prev_bold {
   color: var(--erp-gray-500) !important;
   font-weight: 600;

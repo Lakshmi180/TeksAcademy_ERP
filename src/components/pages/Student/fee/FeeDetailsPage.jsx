@@ -34,7 +34,13 @@ function FeeDetailsPage() {
                   <div className="flex-shrink-0">
                     <div className="avatar-sm">
                       <span className="avatar-title bg-danger-subtle rounded-circle fs-1">
-                        <img src={cc} className='img-fluid' width="100px" height="100px" alt="" />
+                        <img
+                          src={cc}
+                          className="img-fluid"
+                          width="100px"
+                          height="100px"
+                          alt=""
+                        />
                       </span>
                     </div>
                   </div>
@@ -56,7 +62,13 @@ function FeeDetailsPage() {
                   <div className="flex-shrink-0">
                     <div className="avatar-sm">
                       <span className="avatar-title bg-danger-subtle rounded-circle fs-1">
-                        <img src={cc} className='img-fluid' width="100px" height="100px" alt="" />
+                        <img
+                          src={cc}
+                          className="img-fluid"
+                          width="100px"
+                          height="100px"
+                          alt=""
+                        />
                       </span>
                     </div>
                   </div>
@@ -65,8 +77,16 @@ function FeeDetailsPage() {
             </button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link card card_animate" id="pills-feefollow-tab" data-bs-toggle="pill" data-bs-target="#pills-feefollow"
-              type="button" role="tab" aria-controls="pills-feefollow" aria-selected="false">
+            <button
+              class="nav-link card card_animate"
+              id="pills-feefollow-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-feefollow"
+              type="button"
+              role="tab"
+              aria-controls="pills-feefollow"
+              aria-selected="false"
+            >
               <Link to="/feefollowups">
                 <div className='text-start'>
                   <div className="d-flex justify-content-between align-items-center">
@@ -102,18 +122,31 @@ function FeeDetailsPage() {
                   <div className="flex-shrink-0">
                     <div className="avatar-sm">
                       <span className="avatar-title bg-danger-subtle rounded-circle fs-1">
-                        <img src={cc} className='img-fluid' width="100px" height="100px" alt="" />
+                        <img
+                          src={cc}
+                          className="img-fluid"
+                          width="100px"
+                          height="100px"
+                          alt=""
+                        />
                       </span>
                     </div>
                   </div>
                 </div>
-              </div></button>
+              </div>
+            </button>
           </li>
         </ul>
       </div>
       <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-feerecords" role="tabpanel" aria-labelledby="pills-feerecords-tab" tabindex="0">
-          <div className='container-fluid'>
+        <div
+          class="tab-pane fade show active"
+          id="pills-feerecords"
+          role="tabpanel"
+          aria-labelledby="pills-feerecords-tab"
+          tabindex="0"
+        >
+          <div className="container-fluid">
             <div className="row">
               <div className="col-xl-12">
                 <div className="card border-0">
@@ -121,7 +154,11 @@ function FeeDetailsPage() {
                     <div className="row justify-content-between">
                       <div className="col-sm-4">
                         <div className="search-box">
-                          <input type="text" className="form-control search" placeholder="Search for..." />
+                          <input
+                            type="text"
+                            className="form-control search"
+                            placeholder="Search for..."
+                          />
                         </div>
                       </div>
                       <div className="col-sm-6">
@@ -146,14 +183,36 @@ function FeeDetailsPage() {
                               <option value="8">1000</option>
                             </select>
                           </div>
-                          <button className="btn btn_primary fs-13 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Filters</button>
+                          <button
+                            className="btn btn_primary fs-13 me-2"
+                            type="button"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight"
+                            aria-controls="offcanvasRight"
+                          >
+                            Filters
+                          </button>
                         </div>
                       </div>
                     </div>
-                    <div className="offcanvas offcanvas-end mt-5 pt-2" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div
+                      className="offcanvas offcanvas-end mt-5 pt-2 bg_white text_color"
+                      id="offcanvasRight"
+                      aria-labelledby="offcanvasRightLabel"
+                    >
                       <div className="offcanvas-header">
-                        <h5 className="offcanvas-title" id="offcanvasRightLabel">Filters</h5>
-                        <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <h5
+                          className="offcanvas-title"
+                          id="offcanvasRightLabel"
+                        >
+                          Filters
+                        </h5>
+                        <button
+                          type="button"
+                          className="btn-close"
+                          data-bs-dismiss="offcanvas"
+                          aria-label="Close"
+                        ></button>
                       </div>
                       <div className="offcanvas-body p-2">
                         {/* from calendar */}
@@ -186,7 +245,9 @@ function FeeDetailsPage() {
                         </div>
                         {/* branch */}
                         <div className="mt-2">
-                          <label className="form-label fs-s fw-medium txt-color">Branch</label>
+                          <label className="form-label fs-s fw-medium txt-color">
+                            Branch
+                          </label>
                           <select
                             className="form-select form-control"
                             aria-label="Default select example"
@@ -205,7 +266,9 @@ function FeeDetailsPage() {
                         </div>
                         {/* department */}
                         <div className="mt-2">
-                          <label className="form-label fs-s fw-medium txt-color">Mode Of Training</label>
+                          <label className="form-label fs-s fw-medium txt-color">
+                            Mode Of Training
+                          </label>
                           <select
                             className="form-select form-control"
                             aria-label="Default select example"
@@ -363,8 +426,14 @@ function FeeDetailsPage() {
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" id="pills-duerecords" role="tabpanel" aria-labelledby="pills-duerecords-tab" tabindex="0">
-          <div className='container-fluid'>
+        <div
+          class="tab-pane fade"
+          id="pills-duerecords"
+          role="tabpanel"
+          aria-labelledby="pills-duerecords-tab"
+          tabindex="0"
+        >
+          <div className="container-fluid">
             <div className="row">
               <div className="col-xl-12">
                 <div className="card border-0">
@@ -372,7 +441,11 @@ function FeeDetailsPage() {
                     <div className="row justify-content-between">
                       <div className="col-sm-4">
                         <div className="search-box">
-                          <input type="text" className="form-control search" placeholder="Search for..." />
+                          <input
+                            type="text"
+                            className="form-control search"
+                            placeholder="Search for..."
+                          />
                         </div>
                       </div>
                       <div className="col-sm-6">
@@ -397,14 +470,36 @@ function FeeDetailsPage() {
                               <option value="8">1000</option>
                             </select>
                           </div>
-                          <button className="btn btn_primary fs-13 me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Filters</button>
+                          <button
+                            className="btn btn_primary fs-13 me-2"
+                            type="button"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasRight"
+                            aria-controls="offcanvasRight"
+                          >
+                            Filters
+                          </button>
                         </div>
                       </div>
                     </div>
-                    <div className="offcanvas offcanvas-end mt-5 pt-2" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div
+                      className="offcanvas offcanvas-end mt-5 pt-2"
+                      id="offcanvasRight"
+                      aria-labelledby="offcanvasRightLabel"
+                    >
                       <div className="offcanvas-header">
-                        <h5 className="offcanvas-title" id="offcanvasRightLabel">Filters</h5>
-                        <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        <h5
+                          className="offcanvas-title"
+                          id="offcanvasRightLabel"
+                        >
+                          Filters
+                        </h5>
+                        <button
+                          type="button"
+                          className="btn-close"
+                          data-bs-dismiss="offcanvas"
+                          aria-label="Close"
+                        ></button>
                       </div>
                       <div className="offcanvas-body p-2">
                         {/* from calendar */}
@@ -437,7 +532,9 @@ function FeeDetailsPage() {
                         </div>
                         {/* branch */}
                         <div className="mt-2">
-                          <label className="form-label fs-s fw-medium txt-color">Branch</label>
+                          <label className="form-label fs-s fw-medium txt-color">
+                            Branch
+                          </label>
                           <select
                             className="form-select form-control"
                             aria-label="Default select example"
@@ -456,7 +553,9 @@ function FeeDetailsPage() {
                         </div>
                         {/* department */}
                         <div className="mt-2">
-                          <label className="form-label fs-s fw-medium txt-color">Mode Of Training</label>
+                          <label className="form-label fs-s fw-medium txt-color">
+                            Mode Of Training
+                          </label>
                           <select
                             className="form-select form-control"
                             aria-label="Default select example"
@@ -515,15 +614,18 @@ function FeeDetailsPage() {
                             <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
                               Installments
                             </th>
-                            <th scope="col" className="fs_13 lh_xs black_color fw_600 ">
+                            <th
+                              scope="col"
+                              className="fs_13 lh_xs black_color fw_600 "
+                            >
                               Action
                             </th>
                           </tr>
                         </thead>
-                        <tbody className=''>
+                        <tbody className="">
                           {/* 1st row */}
                           <tr>
-                            <td className='fs_13 black_color fw_500 lh_xs bg_light '>
+                            <td className="fs_13 black_color fw_500 lh_xs bg_light ">
                               01
                             </td>
                             <td className='fs_13 black_color  lh_xs bg_light'>
@@ -605,10 +707,9 @@ function FeeDetailsPage() {
         <div class="tab-pane fade" id="pills-feefollow" role="tabpanel" aria-labelledby="pills-feefollow-tab" tabindex="0">
 
         </div>
-        <div class="tab-pane fade" id="pills-feereceived" role="tabpanel" aria-labelledby="pills-feereceived-tab" tabindex="0">...</div>
       </div>
     </div>
-  )
+  );
 }
 
-export default FeeDetailsPage
+export default FeeDetailsPage;
