@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from "../../../../images/student_idCard_images";
-import detail from "../../../../images/student_idCard_images";
+import logo from "../../../../images/student_idCard_images/Tesks_Logo.png";
+import detail from "../../../../images/student_idCard_images/Courses&details.png";
 import { useReactToPrint } from 'react-to-print';
 import "./StudentIdCard.css"
 

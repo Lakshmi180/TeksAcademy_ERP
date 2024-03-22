@@ -1,6 +1,6 @@
 import React from 'react'
 import "./OrganizationProfile.css"
-import profilebgimg from "../../../images/web-images 1.png"
+import profilebgimg from "../../../images/student_idCard_images/web-images 1.png"
 import { FaCamera } from "react-icons/fa";
 import { TiEdit } from "react-icons/ti";
 import { IoMdAdd } from "react-icons/io";
