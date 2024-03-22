@@ -6,7 +6,7 @@ import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { GoArrowRight } from "react-icons/go";
 import { HiUserCircle, HiOutlineLogout } from "react-icons/hi";
 import { FaLock } from "react-icons/fa";
-
+  
 import "../../../assets/css/common/Topbar.css";
 import { Button } from "../design/Button";
 import { Link } from "react-router-dom";
@@ -21,8 +21,8 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
   const { userLogout, LockTheScreen } = useContext(AuthContext);
   const { setDarkMode, theme } = useTheme();
 
-  const {AuthState}=useAuthContext();
-  console.log(AuthState.user.fullname , "AuthStatehere")
+  const { AuthState } = useAuthContext();
+  console.log(AuthState.user.fullname, "AuthStatehere");
 
   const [isDropdownActive, setIsDropdownActive] = useState(false);
 
@@ -30,12 +30,12 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
     setIsDropdownActive((dropdown) => !dropdown);
   };
 
-  const[userDetail, setUserDetail] = useState({
-    fullname:"",
-    profile:""
+  const [userDetail, setUserDetail] = useState({
+    fullname: "",
+    profile: "",
   });
 
-  console.log(userDetail, "userDetailHERERD" )
+  console.log(userDetail, "userDetailHERERD");
 
   // useEffect(() => {
   //   if (AuthState.user.fullname) {
@@ -88,8 +88,12 @@ export const Topbar = ({ isExpanded, toggleSidebar }) => {
                   alt="User Avatar"
                 />
                 <div className="details d-flex flex-column position-relative">
-                  <span className="navbar_username">{userDetail.fullname}..</span>
-                  <span className="navbar_userrole">{userDetail.profile}..</span>
+                  <span className="navbar_username">
+                    {userDetail.fullname}..
+                  </span>
+                  <span className="navbar_userrole">
+                    {userDetail.profile}..
+                  </span>
                 </div>
                 {isDropdownActive && (
                   <div className="dropdown-card show">

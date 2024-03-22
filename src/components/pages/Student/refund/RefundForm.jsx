@@ -176,16 +176,7 @@ function RefundForm() {
                       >
                Admission Date*
                       </label>
-                      <input
-                        type="date"
-                        className="form-control fs-s bg-form"
-                      
-                        id="date"
-                        name="email"
-                        // value={formData.email}
-                        // onChange={handleChange}
-                      />
-                      
+                    s
 
 
 

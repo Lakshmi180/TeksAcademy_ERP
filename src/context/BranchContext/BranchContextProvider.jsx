@@ -18,7 +18,7 @@ const BranchContextProvider = ({ children }) => {
         `${process.env.REACT_APP_API_URL}/getbranch`
       );
       console.log(data, "dkhbfjsvbj");
-      if (status === 201) {
+      if (status === 200) {
         DispatchBranch({ type: "SET_BRANCHES", payload: data });
       }
     } catch (error) {

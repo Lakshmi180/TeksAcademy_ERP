@@ -1,13 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Dashboard() {
   return (
     <>
-      hi
+      <h1>Hello World!!</h1>
     </>
-   
-    
-  )
+  );
 }
 
-export default Dashboard
+export default Dashboard;

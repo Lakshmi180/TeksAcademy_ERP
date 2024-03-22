@@ -1,21 +1,24 @@
 .bg_red{
-    background-color:#fde8e4
+    background-color:var(--erp-bg-red)
 }
 .bg_subtle{
-    background-color: #daf4f0;
+    background-color: var( --erp-subtle);
 }
 .bg_yellow{
-    background-color: #fef4e4;
+    background-color: var( --erp-bg-yellow);
 }
 .bg_infosubtle{
-    background-color: #dff0fa;
+    background-color: var(--erp-bg-infosubtle);
 }
 .bg_secondary{
-    background-color: #daf4f0;
+    background-color: var( --erp-bg-secondary);
 }
 .bg_infolight{
-    background-color: var(--erp-green-200) ;
+    background-color: var(--erp-bg-infolight) ;
 }
 .bg_primary{
     background-color: var(--erp-green-400);
+}
+.bg_white{
+    background-color:var(--erp-card-color);
 }
