@@ -235,7 +235,7 @@ function RefundData() {
                         <Link to="/createuser" > <MdEdit className='edit_icon table_icons me-3' /> </Link> 
                           <FaRupeeSign className='rupee_icon table_icons me-3' />
                           <Link to="/studentapplicationprint"> <MdLocalPrintshop className='text-mute table_icons me-3' /> </Link>
-                          <FaRegIdCard className='id_card table_icons ' />
+                          <Link to="/studentidcard"> <FaRegIdCard className='id_card table_icons ' /></Link>
                         </td>
                       </tr>
                         {/* 2nd row */}
@@ -271,7 +271,7 @@ function RefundData() {
                         <Link to="/createuser" > <MdEdit className='edit_icon table_icons me-3' /> </Link> 
                           <FaRupeeSign className='rupee_icon table_icons me-3' />
                           <Link to="/studentapplicationprint"> <MdLocalPrintshop className='text-mute table_icons me-3' /> </Link>
-                          <FaRegIdCard className='id_card table_icons ' />
+                          <Link to="/studentidcard"> <FaRegIdCard className='id_card table_icons ' /></Link>
                         </td>
                       
                       </tr>
@@ -307,7 +307,7 @@ function RefundData() {
                         <Link to="/createuser" > <MdEdit className='edit_icon table_icons me-3' /> </Link> 
                           <FaRupeeSign className='rupee_icon table_icons me-3' />
                           <Link to="/studentapplicationprint"> <MdLocalPrintshop className='text-mute table_icons me-3' /> </Link>
-                          <FaRegIdCard className='id_card table_icons ' />
+                          <Link to="/studentidcard"> <FaRegIdCard className='id_card table_icons ' /></Link>
                         </td>
                       </tr>
                        {/*4rth  row */}
@@ -342,7 +342,7 @@ function RefundData() {
                         <Link to="/createuser" > <MdEdit className='edit_icon table_icons me-3' /> </Link> 
                           <FaRupeeSign className='rupee_icon table_icons me-3' />
                           <Link to="/studentapplicationprint"> <MdLocalPrintshop className='text-mute table_icons me-3' /> </Link>
-                          <FaRegIdCard className='id_card table_icons ' />
+                          <Link to="/studentidcard"> <FaRegIdCard className='id_card table_icons ' /></Link>
                         </td>
                       </tr>
                            {/*5th  row */}
@@ -377,7 +377,7 @@ function RefundData() {
                         <Link to="/createuser" > <MdEdit className='edit_icon table_icons me-3' /> </Link> 
                           <FaRupeeSign className='rupee_icon table_icons me-3' />
                           <Link to="/studentapplicationprint"> <MdLocalPrintshop className='text-mute table_icons me-3' /> </Link>
-                          <FaRegIdCard className='id_card table_icons ' />
+                         <Link to="/studentidcard"> <FaRegIdCard className='id_card table_icons ' /></Link>
                         </td>
                       </tr>
                     </tbody>

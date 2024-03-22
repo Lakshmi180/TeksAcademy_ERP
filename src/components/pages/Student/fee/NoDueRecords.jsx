@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaCheckCircle } from "react-icons/fa";
 import { FaFileInvoice } from "react-icons/fa";
 const NoDueRecords = () => {
@@ -125,14 +126,14 @@ const NoDueRecords = () => {
                           data-bs-placement="top"
                           title="Admin"
                         >
-                          <FaFileInvoice />
+                      <Link to="/feeadmininvoice"> <FaFileInvoice /> </Link> 
                         </div>
                         <div
                           data-bs-toggle="tooltip"
                           data-bs-placement="top"
                           title="Student"
                         >
-                          <FaFileInvoice />
+                          <Link to="/feeadmininvoice"> <FaFileInvoice /> </Link> 
                         </div>
                       </td>
                     </tr>
@@ -224,14 +225,14 @@ const NoDueRecords = () => {
                           data-bs-placement="top"
                           title="Admin"
                         >
-                          <FaFileInvoice />
+                          <Link to="/feeadmininvoice"> <FaFileInvoice /> </Link> 
                         </div>
                         <div
                           data-bs-toggle="tooltip"
                           data-bs-placement="top"
                           title="Student"
                         >
-                          <FaFileInvoice />
+                            <Link to="/feeadmininvoice"> <FaFileInvoice /> </Link> 
                         </div>
                       </td>
                     </tr>

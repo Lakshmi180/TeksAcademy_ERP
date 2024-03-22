@@ -155,7 +155,7 @@ body,
 
   --erp-bg-color: #f3f3f9;
   --erp-input-border :#ced4da;
-  --erp-table-bottom-border : #fff;
+  --erp-table-bottom-border :  #ced4da;
   --erp-card-color: #fff;
   --erp-navbar-color: #fff;
   --erp-sidebar-color: #405189;
@@ -329,6 +329,9 @@ body,
 a {
   text-decoration: none !important;
   color: var(--erp-black-300);
+}
+ .text-primary{
+  color: var(--erp-primary-color) !important;
 }
 .black_300 {
   color: var(--erp-text-color);

@@ -1,0 +1,27 @@
+.invoice-border{
+    border-bottom: 1.5px solid #000;
+}
+.invoice {
+    border: 1.5px solid #000;
+    margin: 15px;
+    overflow: hidden;
+}
+.invoice-sideborder {
+    border-left: 1.5px solid #000;
+}
+
+.th{
+    background-color: #4676a0 !important;
+    color: #fff !important;
+    border: 1px solid #fff !important;
+}
+.td{
+    border: 1px solid #b9b5b5 !important;
+}
+@media print{
+    @page{
+        size: A4;
+  margin: 0;
+  overflow: hidden;
+    }
+}
