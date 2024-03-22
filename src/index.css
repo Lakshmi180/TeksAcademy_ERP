@@ -616,12 +616,12 @@ h1 {
   box-shadow: 0 1px 2px rgba(56, 65, 74, 0.15);
 }
 
-/* tabs inside of fee details page */
-.nav-link {
+/*tabs inside of fee details page */
+ .nav-link {
   border-left: 3px solid var(--erp-bg-color) !important;
   border-bottom: 3px solid var(--erp-bg-color) !important;
   background-color: #fff;
-}
+} 
 
 .nav-link.active {
   border-left: 3px solid var(--erp-sidebar-color) !important;
