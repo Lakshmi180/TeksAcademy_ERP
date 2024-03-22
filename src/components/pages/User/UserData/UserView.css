@@ -1,9 +1,9 @@
-.coming-soon-text {
+/* .coming-soon-text {
     font-weight: var(--erp-fw-700);
     text-transform: uppercase;
     color: var(--erp-white-color);
 
-}
+} */
 
 .back-col {
     background-color: var(--erp-green-400);
@@ -11,13 +11,13 @@
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-    color: var(--bs-nav-pills-link-active-color);
-    background-color: var(--erp-sky-500);
+    color: var(--bs-nav-pills-link-active-color)!important;
+    background-color: var(--erp-sky-500)!important;
 }
 
-.nav-link.active {
+/* .nav-link.active {
     border-bottom: none;
-}
+} */
 
 .bg_light {
     background-color: var(--erp-white-color);
@@ -33,7 +33,7 @@
 
 }
 
-.bg-img {
+.bg-imges {
     background-image: url("https://themesbrand.com/velzon/html/master/assets/images/profile-bg.jpg");
     background-position: 50%;
     background-size: cover;
@@ -42,7 +42,7 @@
 
 
 
-.auth-one-bg-position {
+.student-bg-position {
     height: 380px;
     left: 0;
     position: absolute;
@@ -52,7 +52,7 @@
 
 }
 
-.bg-img::before {
+.bg-imges::before {
     content: "";
     /* Required for pseudo-elements */
     position: absolute;
@@ -69,7 +69,7 @@
     /* Ensure the overlay is on top of the background image */
 }
 
-.bg-img {
+.bg-imges {
     background-image: url("https://themesbrand.com/velzon/html/master/assets/images/profile-bg.jpg");
     background-position: 50%;
     background-size: cover;
@@ -112,6 +112,6 @@
     width: 6rem;
 }
 
-.profile-nav.nav-pills .nav-link {
+/* .profile-nav.nav-pills .nav-link {
     color: rgba(255, 255, 255, .8);
-}
+} */
