@@ -92,6 +92,7 @@ function App() {
         <Route path="/createrole" element={<CreateRole />} />
         <Route path="/studentdata" element={<Studentdata />} />
         <Route path="/createuser" element={<CreateUserForm />} />
+        <Route path="/userupdate/:id" element={<CreateUserForm />} />
         <Route path="/course" element={<Course />} />
         <Route path="/createcourse" element={<CreateCourse />} />
         <Route path="/branch" element={<Branch />} />

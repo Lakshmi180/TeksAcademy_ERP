@@ -370,7 +370,7 @@ function UserData() {
                                   <AiFillEye className=' table_icons me-3 eye_icon' />
                                 </Link>
 
-                                <Link to="/createuser">
+                                <Link to={`/userupdate/${item.id}`}>
                                   <MdEdit className=' edit_icon me-3' />
                                 </Link>
 
@@ -519,8 +519,6 @@ function UserData() {
                           </span>
                         </button>
                       </li>
-
-
                     </ul>
                   </div>
                 </div>
