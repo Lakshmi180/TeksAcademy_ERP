@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaCheckCircle } from "react-icons/fa";
 import { FaFileInvoice } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 const FeeView = () => {
     return (
         <div>
@@ -211,10 +212,10 @@ const FeeView = () => {
                                         </td>
                                         <td className='fs_13 black_color lh_xs bg_light flex-row d-flex'>
                                             <div className='me-2' data-bs-toggle="tooltip" data-bs-placement="top" title="Admin">
-                                                <FaFileInvoice />
+                                              <Link to="/feeadmininvoice"> <FaFileInvoice /> </Link> 
                                             </div>
                                             <div data-bs-toggle="tooltip" data-bs-placement="top" title="Student">
-                                                <FaFileInvoice />
+                                            <Link to="/feeadmininvoice"> <FaFileInvoice /> </Link> 
                                             </div>
                                         </td>
                                     </tr>
@@ -280,10 +281,10 @@ const FeeView = () => {
                                         </td>
                                         <td className='fs_13 black_color  lh_xs bg_light flex-row d-flex'>
                                             <div className='me-2' data-bs-toggle="tooltip" data-bs-placement="top" title="Admin">
-                                                <FaFileInvoice />
+                                            <Link to="/feeadmininvoice"> <FaFileInvoice /> </Link> 
                                             </div>
                                             <div data-bs-toggle="tooltip" data-bs-placement="top" title="Student">
-                                                <FaFileInvoice />
+                                            <Link to="/feeadmininvoice"> <FaFileInvoice /> </Link> 
                                             </div>
                                         </td>
                                     </tr>

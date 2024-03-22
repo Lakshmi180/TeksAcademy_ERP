@@ -72,6 +72,9 @@ import { ViewCourse } from "./components/pages/Leads/ViewCourse";
 import { ContactUs } from "./components/pages/Leads/ContactUs";
 import { HLPEnquireLeads } from "./components/pages/Leads/HLPEnquireLeads";
 import { SLPEnquireLeads } from "./components/pages/Leads/SLPEnquireLeads";
+import FeeAdminInvoice from "./components/pages/Student/fee/FeeAdminInvoice";
+import StudentIdCard from "./components/pages/Student/studentData/StudentIdCard";
+import OrganizationProfile from "./components/pages/Settings/OrganizationProfile";
 import { Input } from "./components/common/design/Input";
 function App() {
   
@@ -149,6 +152,7 @@ function App() {
           element={<StudentApplicationPrint />}
         />
         <Route path="/userview/:courseId" element={<UserView />} />
+        <Route path="/feeadmininvoice" element={<FeeAdminInvoice />} />
 
         <Route
           path="/demo"
@@ -168,6 +172,9 @@ function App() {
         <Route path="/feedetailspage" element={<FeeDetailsPage />} />
         <Route path="/refunddata" element={<RefundData />} />
         <Route path="/refundform" element={<RefundForm />} />
+        <Route path="/studentidcard" element={<StudentIdCard />} />
+        <Route path="/organizationprofile" element={<OrganizationProfile />} />
+
         <Route path="/reports" element={<CreateReport />} />
         <Route path="/addassetsform" element={<Addassetsform />} />
 
